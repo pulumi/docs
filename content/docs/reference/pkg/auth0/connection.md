@@ -57,28 +57,6 @@ class MyStack : Stack
             },
             Strategy = "auth0",
         });
-        var myWaadConnection = new Auth0.Connection("myWaadConnection", new Auth0.ConnectionArgs
-        {
-            Options = new Auth0.Inputs.ConnectionOptionsArgs
-            {
-                ApiEnableUsers = true,
-                AppDomain = "my-auth0-app.eu.auth0.com",
-                BasicProfile = true,
-                ClientId = "1234",
-                ClientSecret = "1234",
-                DomainAliases = 
-                {
-                    "example.io",
-                },
-                ExtGroups = true,
-                ExtProfile = true,
-                TenantDomain = "exmaple.onmicrosoft.com",
-                UseWsfed = false,
-                WaadCommonEndpoint = false,
-                WaadProtocol = "openid-connect",
-            },
-            Strategy = "waad",
-        });
     }
 
 }
@@ -123,28 +101,6 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = auth0.NewConnection(ctx, "myWaadConnection", &auth0.ConnectionArgs{
-			Options: &auth0.ConnectionOptionsArgs{
-				ApiEnableUsers: pulumi.Bool(true),
-				AppDomain:      pulumi.String("my-auth0-app.eu.auth0.com"),
-				BasicProfile:   pulumi.Bool(true),
-				ClientId:       pulumi.String("1234"),
-				ClientSecret:   pulumi.String("1234"),
-				DomainAliases: pulumi.StringArray{
-					pulumi.String("example.io"),
-				},
-				ExtGroups:          pulumi.Bool(true),
-				ExtProfile:         pulumi.Bool(true),
-				TenantDomain:       pulumi.String("exmaple.onmicrosoft.com"),
-				UseWsfed:           pulumi.Bool(false),
-				WaadCommonEndpoint: pulumi.Bool(false),
-				WaadProtocol:       pulumi.String("openid-connect"),
-			},
-			Strategy: pulumi.String("waad"),
-		})
-		if err != nil {
-			return err
-		}
 		return nil
 	})
 }
@@ -179,22 +135,6 @@ my_connection = auth0.Connection("myConnection",
         password_policy="excellent",
     ),
     strategy="auth0")
-my_waad_connection = auth0.Connection("myWaadConnection",
-    options=auth0.ConnectionOptionsArgs(
-        api_enable_users=True,
-        app_domain="my-auth0-app.eu.auth0.com",
-        basic_profile=True,
-        client_id="1234",
-        client_secret="1234",
-        domain_aliases=["example.io"],
-        ext_groups=True,
-        ext_profile=True,
-        tenant_domain="exmaple.onmicrosoft.com",
-        use_wsfed=False,
-        waad_common_endpoint=False,
-        waad_protocol="openid-connect",
-    ),
-    strategy="waad")
 ```
 
 {{% /example %}}
@@ -227,23 +167,6 @@ const myConnection = new auth0.Connection("my_connection", {
     },
     strategy: "auth0",
 });
-const myWaadConnection = new auth0.Connection("my_waad_connection", {
-    options: {
-        apiEnableUsers: true,
-        appDomain: "my-auth0-app.eu.auth0.com",
-        basicProfile: true,
-        clientId: "1234",
-        clientSecret: "1234",
-        domainAliases: ["example.io"],
-        extGroups: true,
-        extProfile: true,
-        tenantDomain: "exmaple.onmicrosoft.com",
-        useWsfed: false,
-        waadCommonEndpoint: false,
-        waadProtocol: "openid-connect",
-    },
-    strategy: "waad",
-});
 ```
 
 {{% /example %}}
@@ -260,7 +183,7 @@ const myWaadConnection = new auth0.Connection("my_waad_connection", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_auth0/#pulumi_auth0.Connection">Connection</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled_clients</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">is_domain_connection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[ConnectionOptionsArgs]</span> = None<span class="p">, </span><span class="nx">realms</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">strategy_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_auth0/#pulumi_auth0.Connection">Connection</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled_clients</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">is_domain_connection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[ConnectionOptionsArgs]</span> = None<span class="p">, </span><span class="nx">realms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">strategy_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -440,7 +363,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}String. Type of the connection, which indicates the identity provider. Options include `ad`, `adfs`, `amazon`, `aol`, `apple`, `auth0`, `auth0-adldap`, `auth0-oidc`, `baidu`, `bitbucket`, `bitly`, `box`, `custom`, `daccount`, `dropbox`, `dwolla`, `email`, `evernote`, `evernote-sandbox`, `exact`, `facebook`, `fitbit`, `flickr`, `github`, `google-apps`, `google-oauth2`, `guardian`, `instagram`, `ip`, `line`, `linkedin`, `miicard`, `oauth1`, `oauth2`, `office365`, `oidc`, `paypal`, `paypal-sandbox`, `pingfederate`, `planningcenter`, `renren`, `salesforce`, `salesforce-community`, `salesforce-sandbox` `samlp`, `sharepoint`, `shopify`, `sms`, `soundcloud`, `thecity`, `thecity-sandbox`, `thirtysevensignals`, `twitter`, `untappd`, `vkontakte`, `waad`, `weibo`, `windowslive`, `wordpress`, `yahoo`, `yammer`, `yandex`.
+    <dd>{{% md %}}Type of the connection, which indicates the identity provider. Options include `ad`, `adfs`, `amazon`, `aol`, `apple`, `auth0`, `auth0-adldap`, `auth0-oidc`, `baidu`, `bitbucket`, `bitly`, `box`, `custom`, `daccount`, `dropbox`, `dwolla`, `email`, `evernote`, `evernote-sandbox`, `exact`, `facebook`, `fitbit`, `flickr`, `github`, `google-apps`, `google-oauth2`, `guardian`, `instagram`, `ip`, `line`, `linkedin`, `miicard`, `oauth1`, `oauth2`, `office365`, `oidc`, `paypal`, `paypal-sandbox`, `pingfederate`, `planningcenter`, `renren`, `salesforce`, `salesforce-community`, `salesforce-sandbox` `samlp`, `sharepoint`, `shopify`, `sms`, `soundcloud`, `thecity`, `thecity-sandbox`, `thirtysevensignals`, `twitter`, `untappd`, `vkontakte`, `waad`, `weibo`, `windowslive`, `wordpress`, `yahoo`, `yammer`, `yandex`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -462,7 +385,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Set(String). IDs of the clients for which the connection is enabled. If not specified, no clients are enabled.
+    <dd>{{% md %}}IDs of the clients for which the connection is enabled. If not specified, no clients are enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -473,7 +396,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether or not the connection is domain level.
+    <dd>{{% md %}}Indicates whether or not the connection is domain level.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -484,7 +407,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}String. Name of the connection.
+    <dd>{{% md %}}Name of the connection.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -495,7 +418,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionoptions">Connection<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}List(Resource). Configuration settings for connection options. For details, see Options.
+    <dd>{{% md %}}Configuration settings for connection options. For details, see Options.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -506,7 +429,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List(String). Defines the realms for which the connection will be used (i.e., email domains). If not specified, the connection name is added as the realm.
+    <dd>{{% md %}}Defines the realms for which the connection will be used (i.e., email domains). If not specified, the connection name is added as the realm.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -517,7 +440,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Int. Version 1 is deprecated, use version 2.
+    <dd>{{% md %}}Version 1 is deprecated, use version 2.
 {{% /md %}}</dd>
 
 </dl>
@@ -535,7 +458,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}String. Type of the connection, which indicates the identity provider. Options include `ad`, `adfs`, `amazon`, `aol`, `apple`, `auth0`, `auth0-adldap`, `auth0-oidc`, `baidu`, `bitbucket`, `bitly`, `box`, `custom`, `daccount`, `dropbox`, `dwolla`, `email`, `evernote`, `evernote-sandbox`, `exact`, `facebook`, `fitbit`, `flickr`, `github`, `google-apps`, `google-oauth2`, `guardian`, `instagram`, `ip`, `line`, `linkedin`, `miicard`, `oauth1`, `oauth2`, `office365`, `oidc`, `paypal`, `paypal-sandbox`, `pingfederate`, `planningcenter`, `renren`, `salesforce`, `salesforce-community`, `salesforce-sandbox` `samlp`, `sharepoint`, `shopify`, `sms`, `soundcloud`, `thecity`, `thecity-sandbox`, `thirtysevensignals`, `twitter`, `untappd`, `vkontakte`, `waad`, `weibo`, `windowslive`, `wordpress`, `yahoo`, `yammer`, `yandex`.
+    <dd>{{% md %}}Type of the connection, which indicates the identity provider. Options include `ad`, `adfs`, `amazon`, `aol`, `apple`, `auth0`, `auth0-adldap`, `auth0-oidc`, `baidu`, `bitbucket`, `bitly`, `box`, `custom`, `daccount`, `dropbox`, `dwolla`, `email`, `evernote`, `evernote-sandbox`, `exact`, `facebook`, `fitbit`, `flickr`, `github`, `google-apps`, `google-oauth2`, `guardian`, `instagram`, `ip`, `line`, `linkedin`, `miicard`, `oauth1`, `oauth2`, `office365`, `oidc`, `paypal`, `paypal-sandbox`, `pingfederate`, `planningcenter`, `renren`, `salesforce`, `salesforce-community`, `salesforce-sandbox` `samlp`, `sharepoint`, `shopify`, `sms`, `soundcloud`, `thecity`, `thecity-sandbox`, `thirtysevensignals`, `twitter`, `untappd`, `vkontakte`, `waad`, `weibo`, `windowslive`, `wordpress`, `yahoo`, `yammer`, `yandex`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -557,7 +480,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}Set(String). IDs of the clients for which the connection is enabled. If not specified, no clients are enabled.
+    <dd>{{% md %}}IDs of the clients for which the connection is enabled. If not specified, no clients are enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -568,7 +491,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether or not the connection is domain level.
+    <dd>{{% md %}}Indicates whether or not the connection is domain level.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -579,7 +502,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}String. Name of the connection.
+    <dd>{{% md %}}Name of the connection.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -590,7 +513,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionoptions">Connection<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}List(Resource). Configuration settings for connection options. For details, see Options.
+    <dd>{{% md %}}Configuration settings for connection options. For details, see Options.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -601,7 +524,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}List(String). Defines the realms for which the connection will be used (i.e., email domains). If not specified, the connection name is added as the realm.
+    <dd>{{% md %}}Defines the realms for which the connection will be used (i.e., email domains). If not specified, the connection name is added as the realm.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -612,7 +535,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Int. Version 1 is deprecated, use version 2.
+    <dd>{{% md %}}Version 1 is deprecated, use version 2.
 {{% /md %}}</dd>
 
 </dl>
@@ -630,7 +553,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}String. Type of the connection, which indicates the identity provider. Options include `ad`, `adfs`, `amazon`, `aol`, `apple`, `auth0`, `auth0-adldap`, `auth0-oidc`, `baidu`, `bitbucket`, `bitly`, `box`, `custom`, `daccount`, `dropbox`, `dwolla`, `email`, `evernote`, `evernote-sandbox`, `exact`, `facebook`, `fitbit`, `flickr`, `github`, `google-apps`, `google-oauth2`, `guardian`, `instagram`, `ip`, `line`, `linkedin`, `miicard`, `oauth1`, `oauth2`, `office365`, `oidc`, `paypal`, `paypal-sandbox`, `pingfederate`, `planningcenter`, `renren`, `salesforce`, `salesforce-community`, `salesforce-sandbox` `samlp`, `sharepoint`, `shopify`, `sms`, `soundcloud`, `thecity`, `thecity-sandbox`, `thirtysevensignals`, `twitter`, `untappd`, `vkontakte`, `waad`, `weibo`, `windowslive`, `wordpress`, `yahoo`, `yammer`, `yandex`.
+    <dd>{{% md %}}Type of the connection, which indicates the identity provider. Options include `ad`, `adfs`, `amazon`, `aol`, `apple`, `auth0`, `auth0-adldap`, `auth0-oidc`, `baidu`, `bitbucket`, `bitly`, `box`, `custom`, `daccount`, `dropbox`, `dwolla`, `email`, `evernote`, `evernote-sandbox`, `exact`, `facebook`, `fitbit`, `flickr`, `github`, `google-apps`, `google-oauth2`, `guardian`, `instagram`, `ip`, `line`, `linkedin`, `miicard`, `oauth1`, `oauth2`, `office365`, `oidc`, `paypal`, `paypal-sandbox`, `pingfederate`, `planningcenter`, `renren`, `salesforce`, `salesforce-community`, `salesforce-sandbox` `samlp`, `sharepoint`, `shopify`, `sms`, `soundcloud`, `thecity`, `thecity-sandbox`, `thirtysevensignals`, `twitter`, `untappd`, `vkontakte`, `waad`, `weibo`, `windowslive`, `wordpress`, `yahoo`, `yammer`, `yandex`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -652,7 +575,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}Set(String). IDs of the clients for which the connection is enabled. If not specified, no clients are enabled.
+    <dd>{{% md %}}IDs of the clients for which the connection is enabled. If not specified, no clients are enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -663,7 +586,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether or not the connection is domain level.
+    <dd>{{% md %}}Indicates whether or not the connection is domain level.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -674,7 +597,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}String. Name of the connection.
+    <dd>{{% md %}}Name of the connection.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -685,7 +608,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionoptions">Connection<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}List(Resource). Configuration settings for connection options. For details, see Options.
+    <dd>{{% md %}}Configuration settings for connection options. For details, see Options.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -696,7 +619,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}List(String). Defines the realms for which the connection will be used (i.e., email domains). If not specified, the connection name is added as the realm.
+    <dd>{{% md %}}Defines the realms for which the connection will be used (i.e., email domains). If not specified, the connection name is added as the realm.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -707,7 +630,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Int. Version 1 is deprecated, use version 2.
+    <dd>{{% md %}}Version 1 is deprecated, use version 2.
 {{% /md %}}</dd>
 
 </dl>
@@ -725,7 +648,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}String. Type of the connection, which indicates the identity provider. Options include `ad`, `adfs`, `amazon`, `aol`, `apple`, `auth0`, `auth0-adldap`, `auth0-oidc`, `baidu`, `bitbucket`, `bitly`, `box`, `custom`, `daccount`, `dropbox`, `dwolla`, `email`, `evernote`, `evernote-sandbox`, `exact`, `facebook`, `fitbit`, `flickr`, `github`, `google-apps`, `google-oauth2`, `guardian`, `instagram`, `ip`, `line`, `linkedin`, `miicard`, `oauth1`, `oauth2`, `office365`, `oidc`, `paypal`, `paypal-sandbox`, `pingfederate`, `planningcenter`, `renren`, `salesforce`, `salesforce-community`, `salesforce-sandbox` `samlp`, `sharepoint`, `shopify`, `sms`, `soundcloud`, `thecity`, `thecity-sandbox`, `thirtysevensignals`, `twitter`, `untappd`, `vkontakte`, `waad`, `weibo`, `windowslive`, `wordpress`, `yahoo`, `yammer`, `yandex`.
+    <dd>{{% md %}}Type of the connection, which indicates the identity provider. Options include `ad`, `adfs`, `amazon`, `aol`, `apple`, `auth0`, `auth0-adldap`, `auth0-oidc`, `baidu`, `bitbucket`, `bitly`, `box`, `custom`, `daccount`, `dropbox`, `dwolla`, `email`, `evernote`, `evernote-sandbox`, `exact`, `facebook`, `fitbit`, `flickr`, `github`, `google-apps`, `google-oauth2`, `guardian`, `instagram`, `ip`, `line`, `linkedin`, `miicard`, `oauth1`, `oauth2`, `office365`, `oidc`, `paypal`, `paypal-sandbox`, `pingfederate`, `planningcenter`, `renren`, `salesforce`, `salesforce-community`, `salesforce-sandbox` `samlp`, `sharepoint`, `shopify`, `sms`, `soundcloud`, `thecity`, `thecity-sandbox`, `thirtysevensignals`, `twitter`, `untappd`, `vkontakte`, `waad`, `weibo`, `windowslive`, `wordpress`, `yahoo`, `yammer`, `yandex`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -745,9 +668,9 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#enabled_clients_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>clients</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}Set(String). IDs of the clients for which the connection is enabled. If not specified, no clients are enabled.
+    <dd>{{% md %}}IDs of the clients for which the connection is enabled. If not specified, no clients are enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -758,7 +681,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether or not the connection is domain level.
+    <dd>{{% md %}}Indicates whether or not the connection is domain level.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -769,7 +692,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}String. Name of the connection.
+    <dd>{{% md %}}Name of the connection.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -780,7 +703,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionoptions">Connection<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}List(Resource). Configuration settings for connection options. For details, see Options.
+    <dd>{{% md %}}Configuration settings for connection options. For details, see Options.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -789,9 +712,9 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#realms_python" style="color: inherit; text-decoration: inherit;">realms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}List(String). Defines the realms for which the connection will be used (i.e., email domains). If not specified, the connection name is added as the realm.
+    <dd>{{% md %}}Defines the realms for which the connection will be used (i.e., email domains). If not specified, the connection name is added as the realm.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -802,7 +725,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Int. Version 1 is deprecated, use version 2.
+    <dd>{{% md %}}Version 1 is deprecated, use version 2.
 {{% /md %}}</dd>
 
 </dl>
@@ -904,7 +827,7 @@ Get an existing Connection resource's state with the given name, ID, and optiona
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled_clients</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">is_domain_connection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[ConnectionOptionsArgs]</span> = None<span class="p">, </span><span class="nx">realms</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">strategy_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Connection</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled_clients</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">is_domain_connection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[ConnectionOptionsArgs]</span> = None<span class="p">, </span><span class="nx">realms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">strategy_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Connection</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1037,7 +960,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Set(String). IDs of the clients for which the connection is enabled. If not specified, no clients are enabled.
+    <dd>{{% md %}}IDs of the clients for which the connection is enabled. If not specified, no clients are enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1048,7 +971,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether or not the connection is domain level.
+    <dd>{{% md %}}Indicates whether or not the connection is domain level.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1059,7 +982,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}String. Name of the connection.
+    <dd>{{% md %}}Name of the connection.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1070,7 +993,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionoptions">Connection<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}List(Resource). Configuration settings for connection options. For details, see Options.
+    <dd>{{% md %}}Configuration settings for connection options. For details, see Options.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1081,7 +1004,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List(String). Defines the realms for which the connection will be used (i.e., email domains). If not specified, the connection name is added as the realm.
+    <dd>{{% md %}}Defines the realms for which the connection will be used (i.e., email domains). If not specified, the connection name is added as the realm.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1092,7 +1015,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}String. Type of the connection, which indicates the identity provider. Options include `ad`, `adfs`, `amazon`, `aol`, `apple`, `auth0`, `auth0-adldap`, `auth0-oidc`, `baidu`, `bitbucket`, `bitly`, `box`, `custom`, `daccount`, `dropbox`, `dwolla`, `email`, `evernote`, `evernote-sandbox`, `exact`, `facebook`, `fitbit`, `flickr`, `github`, `google-apps`, `google-oauth2`, `guardian`, `instagram`, `ip`, `line`, `linkedin`, `miicard`, `oauth1`, `oauth2`, `office365`, `oidc`, `paypal`, `paypal-sandbox`, `pingfederate`, `planningcenter`, `renren`, `salesforce`, `salesforce-community`, `salesforce-sandbox` `samlp`, `sharepoint`, `shopify`, `sms`, `soundcloud`, `thecity`, `thecity-sandbox`, `thirtysevensignals`, `twitter`, `untappd`, `vkontakte`, `waad`, `weibo`, `windowslive`, `wordpress`, `yahoo`, `yammer`, `yandex`.
+    <dd>{{% md %}}Type of the connection, which indicates the identity provider. Options include `ad`, `adfs`, `amazon`, `aol`, `apple`, `auth0`, `auth0-adldap`, `auth0-oidc`, `baidu`, `bitbucket`, `bitly`, `box`, `custom`, `daccount`, `dropbox`, `dwolla`, `email`, `evernote`, `evernote-sandbox`, `exact`, `facebook`, `fitbit`, `flickr`, `github`, `google-apps`, `google-oauth2`, `guardian`, `instagram`, `ip`, `line`, `linkedin`, `miicard`, `oauth1`, `oauth2`, `office365`, `oidc`, `paypal`, `paypal-sandbox`, `pingfederate`, `planningcenter`, `renren`, `salesforce`, `salesforce-community`, `salesforce-sandbox` `samlp`, `sharepoint`, `shopify`, `sms`, `soundcloud`, `thecity`, `thecity-sandbox`, `thirtysevensignals`, `twitter`, `untappd`, `vkontakte`, `waad`, `weibo`, `windowslive`, `wordpress`, `yahoo`, `yammer`, `yandex`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1103,7 +1026,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Int. Version 1 is deprecated, use version 2.
+    <dd>{{% md %}}Version 1 is deprecated, use version 2.
 {{% /md %}}</dd>
 
 </dl>
@@ -1132,7 +1055,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}Set(String). IDs of the clients for which the connection is enabled. If not specified, no clients are enabled.
+    <dd>{{% md %}}IDs of the clients for which the connection is enabled. If not specified, no clients are enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1143,7 +1066,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether or not the connection is domain level.
+    <dd>{{% md %}}Indicates whether or not the connection is domain level.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1154,7 +1077,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}String. Name of the connection.
+    <dd>{{% md %}}Name of the connection.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1165,7 +1088,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionoptions">Connection<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}List(Resource). Configuration settings for connection options. For details, see Options.
+    <dd>{{% md %}}Configuration settings for connection options. For details, see Options.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1176,7 +1099,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}List(String). Defines the realms for which the connection will be used (i.e., email domains). If not specified, the connection name is added as the realm.
+    <dd>{{% md %}}Defines the realms for which the connection will be used (i.e., email domains). If not specified, the connection name is added as the realm.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1187,7 +1110,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}String. Type of the connection, which indicates the identity provider. Options include `ad`, `adfs`, `amazon`, `aol`, `apple`, `auth0`, `auth0-adldap`, `auth0-oidc`, `baidu`, `bitbucket`, `bitly`, `box`, `custom`, `daccount`, `dropbox`, `dwolla`, `email`, `evernote`, `evernote-sandbox`, `exact`, `facebook`, `fitbit`, `flickr`, `github`, `google-apps`, `google-oauth2`, `guardian`, `instagram`, `ip`, `line`, `linkedin`, `miicard`, `oauth1`, `oauth2`, `office365`, `oidc`, `paypal`, `paypal-sandbox`, `pingfederate`, `planningcenter`, `renren`, `salesforce`, `salesforce-community`, `salesforce-sandbox` `samlp`, `sharepoint`, `shopify`, `sms`, `soundcloud`, `thecity`, `thecity-sandbox`, `thirtysevensignals`, `twitter`, `untappd`, `vkontakte`, `waad`, `weibo`, `windowslive`, `wordpress`, `yahoo`, `yammer`, `yandex`.
+    <dd>{{% md %}}Type of the connection, which indicates the identity provider. Options include `ad`, `adfs`, `amazon`, `aol`, `apple`, `auth0`, `auth0-adldap`, `auth0-oidc`, `baidu`, `bitbucket`, `bitly`, `box`, `custom`, `daccount`, `dropbox`, `dwolla`, `email`, `evernote`, `evernote-sandbox`, `exact`, `facebook`, `fitbit`, `flickr`, `github`, `google-apps`, `google-oauth2`, `guardian`, `instagram`, `ip`, `line`, `linkedin`, `miicard`, `oauth1`, `oauth2`, `office365`, `oidc`, `paypal`, `paypal-sandbox`, `pingfederate`, `planningcenter`, `renren`, `salesforce`, `salesforce-community`, `salesforce-sandbox` `samlp`, `sharepoint`, `shopify`, `sms`, `soundcloud`, `thecity`, `thecity-sandbox`, `thirtysevensignals`, `twitter`, `untappd`, `vkontakte`, `waad`, `weibo`, `windowslive`, `wordpress`, `yahoo`, `yammer`, `yandex`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1198,7 +1121,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Int. Version 1 is deprecated, use version 2.
+    <dd>{{% md %}}Version 1 is deprecated, use version 2.
 {{% /md %}}</dd>
 
 </dl>
@@ -1227,7 +1150,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}Set(String). IDs of the clients for which the connection is enabled. If not specified, no clients are enabled.
+    <dd>{{% md %}}IDs of the clients for which the connection is enabled. If not specified, no clients are enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1238,7 +1161,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether or not the connection is domain level.
+    <dd>{{% md %}}Indicates whether or not the connection is domain level.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1249,7 +1172,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}String. Name of the connection.
+    <dd>{{% md %}}Name of the connection.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1260,7 +1183,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionoptions">Connection<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}List(Resource). Configuration settings for connection options. For details, see Options.
+    <dd>{{% md %}}Configuration settings for connection options. For details, see Options.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1271,7 +1194,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}List(String). Defines the realms for which the connection will be used (i.e., email domains). If not specified, the connection name is added as the realm.
+    <dd>{{% md %}}Defines the realms for which the connection will be used (i.e., email domains). If not specified, the connection name is added as the realm.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1282,7 +1205,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}String. Type of the connection, which indicates the identity provider. Options include `ad`, `adfs`, `amazon`, `aol`, `apple`, `auth0`, `auth0-adldap`, `auth0-oidc`, `baidu`, `bitbucket`, `bitly`, `box`, `custom`, `daccount`, `dropbox`, `dwolla`, `email`, `evernote`, `evernote-sandbox`, `exact`, `facebook`, `fitbit`, `flickr`, `github`, `google-apps`, `google-oauth2`, `guardian`, `instagram`, `ip`, `line`, `linkedin`, `miicard`, `oauth1`, `oauth2`, `office365`, `oidc`, `paypal`, `paypal-sandbox`, `pingfederate`, `planningcenter`, `renren`, `salesforce`, `salesforce-community`, `salesforce-sandbox` `samlp`, `sharepoint`, `shopify`, `sms`, `soundcloud`, `thecity`, `thecity-sandbox`, `thirtysevensignals`, `twitter`, `untappd`, `vkontakte`, `waad`, `weibo`, `windowslive`, `wordpress`, `yahoo`, `yammer`, `yandex`.
+    <dd>{{% md %}}Type of the connection, which indicates the identity provider. Options include `ad`, `adfs`, `amazon`, `aol`, `apple`, `auth0`, `auth0-adldap`, `auth0-oidc`, `baidu`, `bitbucket`, `bitly`, `box`, `custom`, `daccount`, `dropbox`, `dwolla`, `email`, `evernote`, `evernote-sandbox`, `exact`, `facebook`, `fitbit`, `flickr`, `github`, `google-apps`, `google-oauth2`, `guardian`, `instagram`, `ip`, `line`, `linkedin`, `miicard`, `oauth1`, `oauth2`, `office365`, `oidc`, `paypal`, `paypal-sandbox`, `pingfederate`, `planningcenter`, `renren`, `salesforce`, `salesforce-community`, `salesforce-sandbox` `samlp`, `sharepoint`, `shopify`, `sms`, `soundcloud`, `thecity`, `thecity-sandbox`, `thirtysevensignals`, `twitter`, `untappd`, `vkontakte`, `waad`, `weibo`, `windowslive`, `wordpress`, `yahoo`, `yammer`, `yandex`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1293,7 +1216,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Int. Version 1 is deprecated, use version 2.
+    <dd>{{% md %}}Version 1 is deprecated, use version 2.
 {{% /md %}}</dd>
 
 </dl>
@@ -1320,9 +1243,9 @@ The following state arguments are supported:
 <a href="#state_enabled_clients_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>clients</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}Set(String). IDs of the clients for which the connection is enabled. If not specified, no clients are enabled.
+    <dd>{{% md %}}IDs of the clients for which the connection is enabled. If not specified, no clients are enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1333,7 +1256,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether or not the connection is domain level.
+    <dd>{{% md %}}Indicates whether or not the connection is domain level.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1344,7 +1267,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}String. Name of the connection.
+    <dd>{{% md %}}Name of the connection.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1355,7 +1278,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionoptions">Connection<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}List(Resource). Configuration settings for connection options. For details, see Options.
+    <dd>{{% md %}}Configuration settings for connection options. For details, see Options.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1364,9 +1287,9 @@ The following state arguments are supported:
 <a href="#state_realms_python" style="color: inherit; text-decoration: inherit;">realms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}List(String). Defines the realms for which the connection will be used (i.e., email domains). If not specified, the connection name is added as the realm.
+    <dd>{{% md %}}Defines the realms for which the connection will be used (i.e., email domains). If not specified, the connection name is added as the realm.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1377,7 +1300,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}String. Type of the connection, which indicates the identity provider. Options include `ad`, `adfs`, `amazon`, `aol`, `apple`, `auth0`, `auth0-adldap`, `auth0-oidc`, `baidu`, `bitbucket`, `bitly`, `box`, `custom`, `daccount`, `dropbox`, `dwolla`, `email`, `evernote`, `evernote-sandbox`, `exact`, `facebook`, `fitbit`, `flickr`, `github`, `google-apps`, `google-oauth2`, `guardian`, `instagram`, `ip`, `line`, `linkedin`, `miicard`, `oauth1`, `oauth2`, `office365`, `oidc`, `paypal`, `paypal-sandbox`, `pingfederate`, `planningcenter`, `renren`, `salesforce`, `salesforce-community`, `salesforce-sandbox` `samlp`, `sharepoint`, `shopify`, `sms`, `soundcloud`, `thecity`, `thecity-sandbox`, `thirtysevensignals`, `twitter`, `untappd`, `vkontakte`, `waad`, `weibo`, `windowslive`, `wordpress`, `yahoo`, `yammer`, `yandex`.
+    <dd>{{% md %}}Type of the connection, which indicates the identity provider. Options include `ad`, `adfs`, `amazon`, `aol`, `apple`, `auth0`, `auth0-adldap`, `auth0-oidc`, `baidu`, `bitbucket`, `bitly`, `box`, `custom`, `daccount`, `dropbox`, `dwolla`, `email`, `evernote`, `evernote-sandbox`, `exact`, `facebook`, `fitbit`, `flickr`, `github`, `google-apps`, `google-oauth2`, `guardian`, `instagram`, `ip`, `line`, `linkedin`, `miicard`, `oauth1`, `oauth2`, `office365`, `oidc`, `paypal`, `paypal-sandbox`, `pingfederate`, `planningcenter`, `renren`, `salesforce`, `salesforce-community`, `salesforce-sandbox` `samlp`, `sharepoint`, `shopify`, `sms`, `soundcloud`, `thecity`, `thecity-sandbox`, `thirtysevensignals`, `twitter`, `untappd`, `vkontakte`, `waad`, `weibo`, `windowslive`, `wordpress`, `yahoo`, `yammer`, `yandex`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1388,7 +1311,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Int. Version 1 is deprecated, use version 2.
+    <dd>{{% md %}}Version 1 is deprecated, use version 2.
 {{% /md %}}</dd>
 
 </dl>
@@ -1432,7 +1355,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}String. ADFS Metadata source.
+    <dd>{{% md %}}ADFS Metadata source.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1443,7 +1366,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of allowed audiences.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1453,8 +1377,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -1464,7 +1387,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}String. Azure AD domain name.
+    <dd>{{% md %}}Azure AD domain name.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use domain instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -1475,7 +1398,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}String
+    <dd>{{% md %}}Azure AD app ID.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1486,8 +1409,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}String.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1497,7 +1419,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether or not to enable brute force protection, which will limit the number of signups and failed logins from a suspicious IP address.
+    <dd>{{% md %}}Indicates whether or not to enable brute force protection, which will limit the number of signups and failed logins from a suspicious IP address.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1508,7 +1430,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}String. Client ID given by your OIDC provider.
+    <dd>{{% md %}}OIDC provider client ID.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1519,7 +1441,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}String, Case-sensitive. Client secret given by your OIDC provider.
+    <dd>{{% md %}}OIDC provider client secret.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1541,7 +1463,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Map(String), Case-sensitive.
+    <dd>{{% md %}}A case-sensitive map of key value pairs used as configuration variables for the `custom_script`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1552,7 +1474,29 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Map(String).
+    <dd>{{% md %}}Custom database action scripts. For more information, read [Custom Database Action Script Templates](https://auth0.com/docs/connections/database/custom-db/templates).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="debug_csharp">
+<a href="#debug_csharp" style="color: inherit; text-decoration: inherit;">Debug</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}(Boolean) When enabled additional debugging information will be generated.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="digestalgorithm_csharp">
+<a href="#digestalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Digest<wbr>Algorithm</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sign Request Algorithm Digest
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1584,7 +1528,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}String. Usually an URL ending with `/.well-known/openid-configuration`
+    <dd>{{% md %}}OpenID discovery URL. E.g. `https://auth.example.com/.well-known/openid-configuration`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1605,7 +1549,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List(String). List of the domains that can be authenticated using the Identity Provider. Only needed for Identifier First authentication flows.
+    <dd>{{% md %}}List of the domains that can be authenticated using the Identity Provider. Only needed for Identifier First authentication flows.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1616,7 +1560,17 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean.
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fieldsmap_csharp">
+<a href="#fieldsmap_csharp" style="color: inherit; text-decoration: inherit;">Fields<wbr>Map</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}SAML Attributes mapping. If you're configuring a SAML enterprise connection for a non-standard PingFederate Server, you must update the attribute mappings.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1627,7 +1581,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}String. SMS number for the sender. Used when SMS Source is From.
+    <dd>{{% md %}}SMS number for the sender. Used when SMS Source is From.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1652,13 +1606,23 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="idpinitiated_csharp">
+<a href="#idpinitiated_csharp" style="color: inherit; text-decoration: inherit;">Idp<wbr>Initiated</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionoptionsidpinitiated">Connection<wbr>Options<wbr>Idp<wbr>Initiated<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="importmode_csharp">
 <a href="#importmode_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether or not you have a legacy user store and want to gradually migrate those users to the Auth0 user store. [Learn more](https://auth0.com/docs/users/guides/configure-automatic-migration).
+    <dd>{{% md %}}Indicates whether or not you have a legacy user store and want to gradually migrate those users to the Auth0 user store. [Learn more](https://auth0.com/docs/users/guides/configure-automatic-migration).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1679,7 +1643,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}String. URL of the issuer.
+    <dd>{{% md %}}Issuer URL. E.g. `https://auth.example.com`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1690,8 +1654,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}String.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1701,7 +1664,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Key ID.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1711,7 +1675,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}String. Maximum number of groups to retrieve.
+    <dd>{{% md %}}Maximum number of groups to retrieve.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1722,7 +1686,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}String. SID for Copilot. Used when SMS Source is Copilot.
+    <dd>{{% md %}}SID for Copilot. Used when SMS Source is Copilot.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1733,7 +1697,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}String.
+    <dd>{{% md %}}Name of the connection.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1744,7 +1708,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionoptionspasswordcomplexityoptions">Connection<wbr>Options<wbr>Password<wbr>Complexity<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}List(Resource). Configuration settings for password complexity. For details, see Password Complexity Options.
+    <dd>{{% md %}}Configuration settings for password complexity. For details, see Password Complexity Options.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1755,7 +1719,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionoptionspassworddictionary">Connection<wbr>Options<wbr>Password<wbr>Dictionary<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}List(Resource). Configuration settings for the password dictionary check, which does not allow passwords that are part of the password dictionary. For details, see Password Dictionary.
+    <dd>{{% md %}}Configuration settings for the password dictionary check, which does not allow passwords that are part of the password dictionary. For details, see Password Dictionary.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1766,7 +1730,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionoptionspasswordhistory">List&lt;Connection<wbr>Options<wbr>Password<wbr>History<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List(Resource). Configuration settings for the password history that is maintained for each user to prevent the reuse of passwords. For details, see Password History.
+    <dd>{{% md %}}Configuration settings for the password history that is maintained for each user to prevent the reuse of passwords. For details, see Password History.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1777,7 +1741,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionoptionspasswordnopersonalinfo">Connection<wbr>Options<wbr>Password<wbr>No<wbr>Personal<wbr>Info<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}List(Resource). Configuration settings for the password personal info check, which does not allow passwords that contain any part of the user's personal data, including user's name, username, nickname, user_metadata.name, user_metadata.first, user_metadata.last, user's email, or first part of the user's email. For details, see Password No Personal Info.
+    <dd>{{% md %}}Configuration settings for the password personal info check, which does not allow passwords that contain any part of the user's personal data, including user's name, username, nickname, user_metadata.name, user_metadata.first, user_metadata.last, user's email, or first part of the user's email. For details, see Password No Personal Info.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1788,7 +1752,29 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}String. Indicates level of password strength to enforce during authentication. A strong password policy will make it difficult, if not improbable, for someone to guess a password through either manual or automated means. Options include `none`, `low`, `fair`, `good`, `excellent`.
+    <dd>{{% md %}}Indicates level of password strength to enforce during authentication. A strong password policy will make it difficult, if not improbable, for someone to guess a password through either manual or automated means. Options include `none`, `low`, `fair`, `good`, `excellent`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protocolbinding_csharp">
+<a href="#protocolbinding_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Binding</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The SAML Response Binding - how the SAML token is received by Auth0 from IdP. Two possible values are `urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect` (default) and `urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requesttemplate_csharp">
+<a href="#requesttemplate_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Template</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Template that formats the SAML request
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1799,7 +1785,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether or not the user is required to provide a username in addition to an email address.
+    <dd>{{% md %}}Indicates whether or not the user is required to provide a username in addition to an email address.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1810,7 +1796,72 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List(String). Value must be a list of scopes. For example `["openid", "profile", "email"]`
+    <dd>{{% md %}}Scopes required by the connection. The value must be a list, for example `["openid", "profile", "email"]`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scripts_csharp">
+<a href="#scripts_csharp" style="color: inherit; text-decoration: inherit;">Scripts</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signinendpoint_csharp">
+<a href="#signinendpoint_csharp" style="color: inherit; text-decoration: inherit;">Sign<wbr>In<wbr>Endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}SAML single login URL for the connection.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signoutendpoint_csharp">
+<a href="#signoutendpoint_csharp" style="color: inherit; text-decoration: inherit;">Sign<wbr>Out<wbr>Endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}SAML single logout URL for the connection.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signsamlrequest_csharp">
+<a href="#signsamlrequest_csharp" style="color: inherit; text-decoration: inherit;">Sign<wbr>Saml<wbr>Request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}(Boolean) When enabled, the SAML authentication request will be signed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signaturealgorithm_csharp">
+<a href="#signaturealgorithm_csharp" style="color: inherit; text-decoration: inherit;">Signature<wbr>Algorithm</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sign Request Algorithm
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signingcert_csharp">
+<a href="#signingcert_csharp" style="color: inherit; text-decoration: inherit;">Signing<wbr>Cert</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The X.509 signing certificate (encoded in PEM or CER) you retrieved from the IdP, Base64-encoded
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1821,7 +1872,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Int. Version 1 is deprecated, use version 2.
+    <dd>{{% md %}}Version 1 is deprecated, use version 2.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1842,7 +1893,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}String. Syntax of the SMS. Options include `markdown` and `liquid`.
+    <dd>{{% md %}}Syntax of the SMS. Options include `markdown` and `liquid`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1853,7 +1904,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Team ID.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1863,7 +1915,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}String. Template for the SMS. You can use `@@password@@` as a placeholder for the password value.
+    <dd>{{% md %}}Template for the SMS. You can use `@@password@@` as a placeholder for the password value.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1874,8 +1926,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}String
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1885,8 +1936,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}String.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1896,7 +1946,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionoptionstotp">Connection<wbr>Options<wbr>Totp<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Map(Resource). Configuration options for one-time passwords. For details, see TOTP.
+    <dd>{{% md %}}Configuration options for one-time passwords. For details, see TOTP.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1907,7 +1957,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}String. SID for your Twilio account.
+    <dd>{{% md %}}SID for your Twilio account.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1918,7 +1968,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}String, Case-sensitive. AuthToken for your Twilio account.
+    <dd>{{% md %}}AuthToken for your Twilio account.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1929,7 +1979,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}String. Value must be `back_channel` or `front_channel`
+    <dd>{{% md %}}Value can be `back_channel` or `front_channel`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1960,7 +2010,17 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Bool
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="useridattribute_csharp">
+<a href="#useridattribute_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Id<wbr>Attribute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Attribute in the SAML token that will be mapped to the user_id property in Auth0.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1971,8 +2031,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}String.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1982,7 +2041,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}String.
+    <dd>{{% md %}}A map defining the validation options.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1993,7 +2052,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether or not to use the common endpoint rather than the default endpoint. Typically enabled if you're using this for a multi-tenant application in Azure AD.
+    <dd>{{% md %}}Indicates whether or not to use the common endpoint rather than the default endpoint. Typically enabled if you're using this for a multi-tenant application in Azure AD.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2004,8 +2063,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}String
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2022,7 +2080,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}String. ADFS Metadata source.
+    <dd>{{% md %}}ADFS Metadata source.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2033,7 +2091,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of allowed audiences.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2043,8 +2102,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2054,7 +2112,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}String. Azure AD domain name.
+    <dd>{{% md %}}Azure AD domain name.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use domain instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -2065,7 +2123,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}String
+    <dd>{{% md %}}Azure AD app ID.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2076,8 +2134,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}String.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2087,7 +2144,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether or not to enable brute force protection, which will limit the number of signups and failed logins from a suspicious IP address.
+    <dd>{{% md %}}Indicates whether or not to enable brute force protection, which will limit the number of signups and failed logins from a suspicious IP address.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2098,7 +2155,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}String. Client ID given by your OIDC provider.
+    <dd>{{% md %}}OIDC provider client ID.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2109,7 +2166,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}String, Case-sensitive. Client secret given by your OIDC provider.
+    <dd>{{% md %}}OIDC provider client secret.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2131,7 +2188,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Map(String), Case-sensitive.
+    <dd>{{% md %}}A case-sensitive map of key value pairs used as configuration variables for the `custom_script`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2142,7 +2199,29 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Map(String).
+    <dd>{{% md %}}Custom database action scripts. For more information, read [Custom Database Action Script Templates](https://auth0.com/docs/connections/database/custom-db/templates).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="debug_go">
+<a href="#debug_go" style="color: inherit; text-decoration: inherit;">Debug</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}(Boolean) When enabled additional debugging information will be generated.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="digestalgorithm_go">
+<a href="#digestalgorithm_go" style="color: inherit; text-decoration: inherit;">Digest<wbr>Algorithm</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sign Request Algorithm Digest
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2174,7 +2253,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}String. Usually an URL ending with `/.well-known/openid-configuration`
+    <dd>{{% md %}}OpenID discovery URL. E.g. `https://auth.example.com/.well-known/openid-configuration`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2195,7 +2274,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}List(String). List of the domains that can be authenticated using the Identity Provider. Only needed for Identifier First authentication flows.
+    <dd>{{% md %}}List of the domains that can be authenticated using the Identity Provider. Only needed for Identifier First authentication flows.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2206,7 +2285,17 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean.
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fieldsmap_go">
+<a href="#fieldsmap_go" style="color: inherit; text-decoration: inherit;">Fields<wbr>Map</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}SAML Attributes mapping. If you're configuring a SAML enterprise connection for a non-standard PingFederate Server, you must update the attribute mappings.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2217,7 +2306,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}String. SMS number for the sender. Used when SMS Source is From.
+    <dd>{{% md %}}SMS number for the sender. Used when SMS Source is From.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2242,13 +2331,23 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="idpinitiated_go">
+<a href="#idpinitiated_go" style="color: inherit; text-decoration: inherit;">Idp<wbr>Initiated</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionoptionsidpinitiated">Connection<wbr>Options<wbr>Idp<wbr>Initiated</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="importmode_go">
 <a href="#importmode_go" style="color: inherit; text-decoration: inherit;">Import<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether or not you have a legacy user store and want to gradually migrate those users to the Auth0 user store. [Learn more](https://auth0.com/docs/users/guides/configure-automatic-migration).
+    <dd>{{% md %}}Indicates whether or not you have a legacy user store and want to gradually migrate those users to the Auth0 user store. [Learn more](https://auth0.com/docs/users/guides/configure-automatic-migration).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2269,7 +2368,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}String. URL of the issuer.
+    <dd>{{% md %}}Issuer URL. E.g. `https://auth.example.com`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2280,8 +2379,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}String.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2291,7 +2389,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Key ID.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2301,7 +2400,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}String. Maximum number of groups to retrieve.
+    <dd>{{% md %}}Maximum number of groups to retrieve.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2312,7 +2411,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}String. SID for Copilot. Used when SMS Source is Copilot.
+    <dd>{{% md %}}SID for Copilot. Used when SMS Source is Copilot.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2323,7 +2422,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}String.
+    <dd>{{% md %}}Name of the connection.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2334,7 +2433,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionoptionspasswordcomplexityoptions">Connection<wbr>Options<wbr>Password<wbr>Complexity<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}List(Resource). Configuration settings for password complexity. For details, see Password Complexity Options.
+    <dd>{{% md %}}Configuration settings for password complexity. For details, see Password Complexity Options.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2345,7 +2444,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionoptionspassworddictionary">Connection<wbr>Options<wbr>Password<wbr>Dictionary</a></span>
     </dt>
-    <dd>{{% md %}}List(Resource). Configuration settings for the password dictionary check, which does not allow passwords that are part of the password dictionary. For details, see Password Dictionary.
+    <dd>{{% md %}}Configuration settings for the password dictionary check, which does not allow passwords that are part of the password dictionary. For details, see Password Dictionary.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2356,7 +2455,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionoptionspasswordhistory">[]Connection<wbr>Options<wbr>Password<wbr>History</a></span>
     </dt>
-    <dd>{{% md %}}List(Resource). Configuration settings for the password history that is maintained for each user to prevent the reuse of passwords. For details, see Password History.
+    <dd>{{% md %}}Configuration settings for the password history that is maintained for each user to prevent the reuse of passwords. For details, see Password History.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2367,7 +2466,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionoptionspasswordnopersonalinfo">Connection<wbr>Options<wbr>Password<wbr>No<wbr>Personal<wbr>Info</a></span>
     </dt>
-    <dd>{{% md %}}List(Resource). Configuration settings for the password personal info check, which does not allow passwords that contain any part of the user's personal data, including user's name, username, nickname, user_metadata.name, user_metadata.first, user_metadata.last, user's email, or first part of the user's email. For details, see Password No Personal Info.
+    <dd>{{% md %}}Configuration settings for the password personal info check, which does not allow passwords that contain any part of the user's personal data, including user's name, username, nickname, user_metadata.name, user_metadata.first, user_metadata.last, user's email, or first part of the user's email. For details, see Password No Personal Info.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2378,7 +2477,29 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}String. Indicates level of password strength to enforce during authentication. A strong password policy will make it difficult, if not improbable, for someone to guess a password through either manual or automated means. Options include `none`, `low`, `fair`, `good`, `excellent`.
+    <dd>{{% md %}}Indicates level of password strength to enforce during authentication. A strong password policy will make it difficult, if not improbable, for someone to guess a password through either manual or automated means. Options include `none`, `low`, `fair`, `good`, `excellent`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protocolbinding_go">
+<a href="#protocolbinding_go" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Binding</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The SAML Response Binding - how the SAML token is received by Auth0 from IdP. Two possible values are `urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect` (default) and `urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requesttemplate_go">
+<a href="#requesttemplate_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Template</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Template that formats the SAML request
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2389,7 +2510,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether or not the user is required to provide a username in addition to an email address.
+    <dd>{{% md %}}Indicates whether or not the user is required to provide a username in addition to an email address.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2400,7 +2521,72 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}List(String). Value must be a list of scopes. For example `["openid", "profile", "email"]`
+    <dd>{{% md %}}Scopes required by the connection. The value must be a list, for example `["openid", "profile", "email"]`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scripts_go">
+<a href="#scripts_go" style="color: inherit; text-decoration: inherit;">Scripts</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signinendpoint_go">
+<a href="#signinendpoint_go" style="color: inherit; text-decoration: inherit;">Sign<wbr>In<wbr>Endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}SAML single login URL for the connection.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signoutendpoint_go">
+<a href="#signoutendpoint_go" style="color: inherit; text-decoration: inherit;">Sign<wbr>Out<wbr>Endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}SAML single logout URL for the connection.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signsamlrequest_go">
+<a href="#signsamlrequest_go" style="color: inherit; text-decoration: inherit;">Sign<wbr>Saml<wbr>Request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}(Boolean) When enabled, the SAML authentication request will be signed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signaturealgorithm_go">
+<a href="#signaturealgorithm_go" style="color: inherit; text-decoration: inherit;">Signature<wbr>Algorithm</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sign Request Algorithm
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signingcert_go">
+<a href="#signingcert_go" style="color: inherit; text-decoration: inherit;">Signing<wbr>Cert</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The X.509 signing certificate (encoded in PEM or CER) you retrieved from the IdP, Base64-encoded
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2411,7 +2597,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Int. Version 1 is deprecated, use version 2.
+    <dd>{{% md %}}Version 1 is deprecated, use version 2.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2432,7 +2618,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}String. Syntax of the SMS. Options include `markdown` and `liquid`.
+    <dd>{{% md %}}Syntax of the SMS. Options include `markdown` and `liquid`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2443,7 +2629,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Team ID.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2453,7 +2640,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}String. Template for the SMS. You can use `@@password@@` as a placeholder for the password value.
+    <dd>{{% md %}}Template for the SMS. You can use `@@password@@` as a placeholder for the password value.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2464,8 +2651,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}String
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2475,8 +2661,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}String.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2486,7 +2671,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionoptionstotp">Connection<wbr>Options<wbr>Totp</a></span>
     </dt>
-    <dd>{{% md %}}Map(Resource). Configuration options for one-time passwords. For details, see TOTP.
+    <dd>{{% md %}}Configuration options for one-time passwords. For details, see TOTP.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2497,7 +2682,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}String. SID for your Twilio account.
+    <dd>{{% md %}}SID for your Twilio account.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2508,7 +2693,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}String, Case-sensitive. AuthToken for your Twilio account.
+    <dd>{{% md %}}AuthToken for your Twilio account.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2519,7 +2704,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}String. Value must be `back_channel` or `front_channel`
+    <dd>{{% md %}}Value can be `back_channel` or `front_channel`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2550,7 +2735,17 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Bool
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="useridattribute_go">
+<a href="#useridattribute_go" style="color: inherit; text-decoration: inherit;">User<wbr>Id<wbr>Attribute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Attribute in the SAML token that will be mapped to the user_id property in Auth0.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2561,8 +2756,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}String.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2572,7 +2766,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}String.
+    <dd>{{% md %}}A map defining the validation options.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2583,7 +2777,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether or not to use the common endpoint rather than the default endpoint. Typically enabled if you're using this for a multi-tenant application in Azure AD.
+    <dd>{{% md %}}Indicates whether or not to use the common endpoint rather than the default endpoint. Typically enabled if you're using this for a multi-tenant application in Azure AD.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2594,8 +2788,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}String
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2612,7 +2805,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}String. ADFS Metadata source.
+    <dd>{{% md %}}ADFS Metadata source.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2623,7 +2816,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of allowed audiences.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2633,8 +2827,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2644,7 +2837,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}String. Azure AD domain name.
+    <dd>{{% md %}}Azure AD domain name.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use domain instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -2655,7 +2848,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}String
+    <dd>{{% md %}}Azure AD app ID.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2666,8 +2859,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}String.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2677,7 +2869,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether or not to enable brute force protection, which will limit the number of signups and failed logins from a suspicious IP address.
+    <dd>{{% md %}}Indicates whether or not to enable brute force protection, which will limit the number of signups and failed logins from a suspicious IP address.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2688,7 +2880,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}String. Client ID given by your OIDC provider.
+    <dd>{{% md %}}OIDC provider client ID.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2699,7 +2891,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}String, Case-sensitive. Client secret given by your OIDC provider.
+    <dd>{{% md %}}OIDC provider client secret.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2721,7 +2913,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Map(String), Case-sensitive.
+    <dd>{{% md %}}A case-sensitive map of key value pairs used as configuration variables for the `custom_script`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2732,7 +2924,29 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Map(String).
+    <dd>{{% md %}}Custom database action scripts. For more information, read [Custom Database Action Script Templates](https://auth0.com/docs/connections/database/custom-db/templates).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="debug_nodejs">
+<a href="#debug_nodejs" style="color: inherit; text-decoration: inherit;">debug</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}(Boolean) When enabled additional debugging information will be generated.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="digestalgorithm_nodejs">
+<a href="#digestalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">digest<wbr>Algorithm</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sign Request Algorithm Digest
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2764,7 +2978,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}String. Usually an URL ending with `/.well-known/openid-configuration`
+    <dd>{{% md %}}OpenID discovery URL. E.g. `https://auth.example.com/.well-known/openid-configuration`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2785,7 +2999,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}List(String). List of the domains that can be authenticated using the Identity Provider. Only needed for Identifier First authentication flows.
+    <dd>{{% md %}}List of the domains that can be authenticated using the Identity Provider. Only needed for Identifier First authentication flows.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2796,7 +3010,17 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean.
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fieldsmap_nodejs">
+<a href="#fieldsmap_nodejs" style="color: inherit; text-decoration: inherit;">fields<wbr>Map</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}SAML Attributes mapping. If you're configuring a SAML enterprise connection for a non-standard PingFederate Server, you must update the attribute mappings.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2807,7 +3031,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}String. SMS number for the sender. Used when SMS Source is From.
+    <dd>{{% md %}}SMS number for the sender. Used when SMS Source is From.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2832,13 +3056,23 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="idpinitiated_nodejs">
+<a href="#idpinitiated_nodejs" style="color: inherit; text-decoration: inherit;">idp<wbr>Initiated</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionoptionsidpinitiated">Connection<wbr>Options<wbr>Idp<wbr>Initiated</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="importmode_nodejs">
 <a href="#importmode_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether or not you have a legacy user store and want to gradually migrate those users to the Auth0 user store. [Learn more](https://auth0.com/docs/users/guides/configure-automatic-migration).
+    <dd>{{% md %}}Indicates whether or not you have a legacy user store and want to gradually migrate those users to the Auth0 user store. [Learn more](https://auth0.com/docs/users/guides/configure-automatic-migration).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2859,7 +3093,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}String. URL of the issuer.
+    <dd>{{% md %}}Issuer URL. E.g. `https://auth.example.com`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2870,8 +3104,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}String.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2881,7 +3114,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Key ID.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2891,7 +3125,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}String. Maximum number of groups to retrieve.
+    <dd>{{% md %}}Maximum number of groups to retrieve.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2902,7 +3136,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}String. SID for Copilot. Used when SMS Source is Copilot.
+    <dd>{{% md %}}SID for Copilot. Used when SMS Source is Copilot.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2913,7 +3147,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}String.
+    <dd>{{% md %}}Name of the connection.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2924,7 +3158,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionoptionspasswordcomplexityoptions">Connection<wbr>Options<wbr>Password<wbr>Complexity<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}List(Resource). Configuration settings for password complexity. For details, see Password Complexity Options.
+    <dd>{{% md %}}Configuration settings for password complexity. For details, see Password Complexity Options.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2935,7 +3169,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionoptionspassworddictionary">Connection<wbr>Options<wbr>Password<wbr>Dictionary</a></span>
     </dt>
-    <dd>{{% md %}}List(Resource). Configuration settings for the password dictionary check, which does not allow passwords that are part of the password dictionary. For details, see Password Dictionary.
+    <dd>{{% md %}}Configuration settings for the password dictionary check, which does not allow passwords that are part of the password dictionary. For details, see Password Dictionary.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2946,7 +3180,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionoptionspasswordhistory">Connection<wbr>Options<wbr>Password<wbr>History[]</a></span>
     </dt>
-    <dd>{{% md %}}List(Resource). Configuration settings for the password history that is maintained for each user to prevent the reuse of passwords. For details, see Password History.
+    <dd>{{% md %}}Configuration settings for the password history that is maintained for each user to prevent the reuse of passwords. For details, see Password History.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2957,7 +3191,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionoptionspasswordnopersonalinfo">Connection<wbr>Options<wbr>Password<wbr>No<wbr>Personal<wbr>Info</a></span>
     </dt>
-    <dd>{{% md %}}List(Resource). Configuration settings for the password personal info check, which does not allow passwords that contain any part of the user's personal data, including user's name, username, nickname, user_metadata.name, user_metadata.first, user_metadata.last, user's email, or first part of the user's email. For details, see Password No Personal Info.
+    <dd>{{% md %}}Configuration settings for the password personal info check, which does not allow passwords that contain any part of the user's personal data, including user's name, username, nickname, user_metadata.name, user_metadata.first, user_metadata.last, user's email, or first part of the user's email. For details, see Password No Personal Info.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2968,7 +3202,29 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}String. Indicates level of password strength to enforce during authentication. A strong password policy will make it difficult, if not improbable, for someone to guess a password through either manual or automated means. Options include `none`, `low`, `fair`, `good`, `excellent`.
+    <dd>{{% md %}}Indicates level of password strength to enforce during authentication. A strong password policy will make it difficult, if not improbable, for someone to guess a password through either manual or automated means. Options include `none`, `low`, `fair`, `good`, `excellent`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protocolbinding_nodejs">
+<a href="#protocolbinding_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Binding</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The SAML Response Binding - how the SAML token is received by Auth0 from IdP. Two possible values are `urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect` (default) and `urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requesttemplate_nodejs">
+<a href="#requesttemplate_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Template</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Template that formats the SAML request
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2979,7 +3235,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether or not the user is required to provide a username in addition to an email address.
+    <dd>{{% md %}}Indicates whether or not the user is required to provide a username in addition to an email address.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2990,7 +3246,72 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}List(String). Value must be a list of scopes. For example `["openid", "profile", "email"]`
+    <dd>{{% md %}}Scopes required by the connection. The value must be a list, for example `["openid", "profile", "email"]`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scripts_nodejs">
+<a href="#scripts_nodejs" style="color: inherit; text-decoration: inherit;">scripts</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signinendpoint_nodejs">
+<a href="#signinendpoint_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>In<wbr>Endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}SAML single login URL for the connection.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signoutendpoint_nodejs">
+<a href="#signoutendpoint_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>Out<wbr>Endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}SAML single logout URL for the connection.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signsamlrequest_nodejs">
+<a href="#signsamlrequest_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>Saml<wbr>Request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}(Boolean) When enabled, the SAML authentication request will be signed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signaturealgorithm_nodejs">
+<a href="#signaturealgorithm_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Algorithm</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sign Request Algorithm
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signingcert_nodejs">
+<a href="#signingcert_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Cert</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The X.509 signing certificate (encoded in PEM or CER) you retrieved from the IdP, Base64-encoded
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3001,7 +3322,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Int. Version 1 is deprecated, use version 2.
+    <dd>{{% md %}}Version 1 is deprecated, use version 2.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3022,7 +3343,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}String. Syntax of the SMS. Options include `markdown` and `liquid`.
+    <dd>{{% md %}}Syntax of the SMS. Options include `markdown` and `liquid`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3033,7 +3354,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Team ID.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3043,7 +3365,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}String. Template for the SMS. You can use `@@password@@` as a placeholder for the password value.
+    <dd>{{% md %}}Template for the SMS. You can use `@@password@@` as a placeholder for the password value.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3054,8 +3376,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}String
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3065,8 +3386,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}String.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3076,7 +3396,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionoptionstotp">Connection<wbr>Options<wbr>Totp</a></span>
     </dt>
-    <dd>{{% md %}}Map(Resource). Configuration options for one-time passwords. For details, see TOTP.
+    <dd>{{% md %}}Configuration options for one-time passwords. For details, see TOTP.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3087,7 +3407,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}String. SID for your Twilio account.
+    <dd>{{% md %}}SID for your Twilio account.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3098,7 +3418,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}String, Case-sensitive. AuthToken for your Twilio account.
+    <dd>{{% md %}}AuthToken for your Twilio account.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3109,7 +3429,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}String. Value must be `back_channel` or `front_channel`
+    <dd>{{% md %}}Value can be `back_channel` or `front_channel`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3140,7 +3460,17 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Bool
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="useridattribute_nodejs">
+<a href="#useridattribute_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Id<wbr>Attribute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Attribute in the SAML token that will be mapped to the user_id property in Auth0.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3151,8 +3481,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}String.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3162,7 +3491,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}String.
+    <dd>{{% md %}}A map defining the validation options.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3173,7 +3502,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether or not to use the common endpoint rather than the default endpoint. Typically enabled if you're using this for a multi-tenant application in Azure AD.
+    <dd>{{% md %}}Indicates whether or not to use the common endpoint rather than the default endpoint. Typically enabled if you're using this for a multi-tenant application in Azure AD.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3184,8 +3513,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}String
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3202,7 +3530,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}String. ADFS Metadata source.
+    <dd>{{% md %}}ADFS Metadata source.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3211,9 +3539,10 @@ The following state arguments are supported:
 <a href="#allowed_audiences_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>audiences</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of allowed audiences.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3223,8 +3552,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -3234,7 +3562,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}String. Azure AD domain name.
+    <dd>{{% md %}}Azure AD domain name.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use domain instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -3245,7 +3573,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}String
+    <dd>{{% md %}}Azure AD app ID.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3256,8 +3584,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}String.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3267,7 +3594,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether or not to enable brute force protection, which will limit the number of signups and failed logins from a suspicious IP address.
+    <dd>{{% md %}}Indicates whether or not to enable brute force protection, which will limit the number of signups and failed logins from a suspicious IP address.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3278,7 +3605,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}String. Client ID given by your OIDC provider.
+    <dd>{{% md %}}OIDC provider client ID.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3289,7 +3616,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}String, Case-sensitive. Client secret given by your OIDC provider.
+    <dd>{{% md %}}OIDC provider client secret.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3311,7 +3638,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Map(String), Case-sensitive.
+    <dd>{{% md %}}A case-sensitive map of key value pairs used as configuration variables for the `custom_script`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3322,7 +3649,29 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Map(String).
+    <dd>{{% md %}}Custom database action scripts. For more information, read [Custom Database Action Script Templates](https://auth0.com/docs/connections/database/custom-db/templates).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="debug_python">
+<a href="#debug_python" style="color: inherit; text-decoration: inherit;">debug</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}(Boolean) When enabled additional debugging information will be generated.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="digest_algorithm_python">
+<a href="#digest_algorithm_python" style="color: inherit; text-decoration: inherit;">digest_<wbr>algorithm</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Sign Request Algorithm Digest
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3354,7 +3703,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}String. Usually an URL ending with `/.well-known/openid-configuration`
+    <dd>{{% md %}}OpenID discovery URL. E.g. `https://auth.example.com/.well-known/openid-configuration`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3373,9 +3722,9 @@ The following state arguments are supported:
 <a href="#domain_aliases_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>aliases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}List(String). List of the domains that can be authenticated using the Identity Provider. Only needed for Identifier First authentication flows.
+    <dd>{{% md %}}List of the domains that can be authenticated using the Identity Provider. Only needed for Identifier First authentication flows.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3386,7 +3735,17 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean.
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fields_map_python">
+<a href="#fields_map_python" style="color: inherit; text-decoration: inherit;">fields_<wbr>map</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}SAML Attributes mapping. If you're configuring a SAML enterprise connection for a non-standard PingFederate Server, you must update the attribute mappings.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3397,7 +3756,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}String. SMS number for the sender. Used when SMS Source is From.
+    <dd>{{% md %}}SMS number for the sender. Used when SMS Source is From.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3422,13 +3781,23 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="idp_initiated_python">
+<a href="#idp_initiated_python" style="color: inherit; text-decoration: inherit;">idp_<wbr>initiated</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionoptionsidpinitiated">Connection<wbr>Options<wbr>Idp<wbr>Initiated<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="import_mode_python">
 <a href="#import_mode_python" style="color: inherit; text-decoration: inherit;">import_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether or not you have a legacy user store and want to gradually migrate those users to the Auth0 user store. [Learn more](https://auth0.com/docs/users/guides/configure-automatic-migration).
+    <dd>{{% md %}}Indicates whether or not you have a legacy user store and want to gradually migrate those users to the Auth0 user store. [Learn more](https://auth0.com/docs/users/guides/configure-automatic-migration).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3437,7 +3806,7 @@ The following state arguments are supported:
 <a href="#ips_python" style="color: inherit; text-decoration: inherit;">ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3449,7 +3818,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}String. URL of the issuer.
+    <dd>{{% md %}}Issuer URL. E.g. `https://auth.example.com`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3460,8 +3829,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}String.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3471,7 +3839,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Key ID.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3481,7 +3850,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}String. Maximum number of groups to retrieve.
+    <dd>{{% md %}}Maximum number of groups to retrieve.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3492,7 +3861,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}String. SID for Copilot. Used when SMS Source is Copilot.
+    <dd>{{% md %}}SID for Copilot. Used when SMS Source is Copilot.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3503,7 +3872,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}String.
+    <dd>{{% md %}}Name of the connection.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3514,7 +3883,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionoptionspasswordcomplexityoptions">Connection<wbr>Options<wbr>Password<wbr>Complexity<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}List(Resource). Configuration settings for password complexity. For details, see Password Complexity Options.
+    <dd>{{% md %}}Configuration settings for password complexity. For details, see Password Complexity Options.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3525,7 +3894,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionoptionspassworddictionary">Connection<wbr>Options<wbr>Password<wbr>Dictionary<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}List(Resource). Configuration settings for the password dictionary check, which does not allow passwords that are part of the password dictionary. For details, see Password Dictionary.
+    <dd>{{% md %}}Configuration settings for the password dictionary check, which does not allow passwords that are part of the password dictionary. For details, see Password Dictionary.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3534,9 +3903,9 @@ The following state arguments are supported:
 <a href="#password_histories_python" style="color: inherit; text-decoration: inherit;">password_<wbr>histories</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionoptionspasswordhistory">List[Connection<wbr>Options<wbr>Password<wbr>History<wbr>Args]</a></span>
+        <span class="property-type"><a href="#connectionoptionspasswordhistory">Sequence[Connection<wbr>Options<wbr>Password<wbr>History<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List(Resource). Configuration settings for the password history that is maintained for each user to prevent the reuse of passwords. For details, see Password History.
+    <dd>{{% md %}}Configuration settings for the password history that is maintained for each user to prevent the reuse of passwords. For details, see Password History.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3547,7 +3916,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionoptionspasswordnopersonalinfo">Connection<wbr>Options<wbr>Password<wbr>No<wbr>Personal<wbr>Info<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}List(Resource). Configuration settings for the password personal info check, which does not allow passwords that contain any part of the user's personal data, including user's name, username, nickname, user_metadata.name, user_metadata.first, user_metadata.last, user's email, or first part of the user's email. For details, see Password No Personal Info.
+    <dd>{{% md %}}Configuration settings for the password personal info check, which does not allow passwords that contain any part of the user's personal data, including user's name, username, nickname, user_metadata.name, user_metadata.first, user_metadata.last, user's email, or first part of the user's email. For details, see Password No Personal Info.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3558,7 +3927,29 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}String. Indicates level of password strength to enforce during authentication. A strong password policy will make it difficult, if not improbable, for someone to guess a password through either manual or automated means. Options include `none`, `low`, `fair`, `good`, `excellent`.
+    <dd>{{% md %}}Indicates level of password strength to enforce during authentication. A strong password policy will make it difficult, if not improbable, for someone to guess a password through either manual or automated means. Options include `none`, `low`, `fair`, `good`, `excellent`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protocol_binding_python">
+<a href="#protocol_binding_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>binding</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The SAML Response Binding - how the SAML token is received by Auth0 from IdP. Two possible values are `urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect` (default) and `urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="request_template_python">
+<a href="#request_template_python" style="color: inherit; text-decoration: inherit;">request_<wbr>template</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Template that formats the SAML request
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3569,7 +3960,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether or not the user is required to provide a username in addition to an email address.
+    <dd>{{% md %}}Indicates whether or not the user is required to provide a username in addition to an email address.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3578,9 +3969,74 @@ The following state arguments are supported:
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}List(String). Value must be a list of scopes. For example `["openid", "profile", "email"]`
+    <dd>{{% md %}}Scopes required by the connection. The value must be a list, for example `["openid", "profile", "email"]`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scripts_python">
+<a href="#scripts_python" style="color: inherit; text-decoration: inherit;">scripts</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sign_in_endpoint_python">
+<a href="#sign_in_endpoint_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>in_<wbr>endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}SAML single login URL for the connection.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sign_out_endpoint_python">
+<a href="#sign_out_endpoint_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>out_<wbr>endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}SAML single logout URL for the connection.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sign_saml_request_python">
+<a href="#sign_saml_request_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>saml_<wbr>request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}(Boolean) When enabled, the SAML authentication request will be signed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signature_algorithm_python">
+<a href="#signature_algorithm_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>algorithm</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Sign Request Algorithm
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signing_cert_python">
+<a href="#signing_cert_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>cert</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The X.509 signing certificate (encoded in PEM or CER) you retrieved from the IdP, Base64-encoded
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3589,9 +4045,9 @@ The following state arguments are supported:
 <a href="#strategy_version_python" style="color: inherit; text-decoration: inherit;">strategy_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}Int. Version 1 is deprecated, use version 2.
+    <dd>{{% md %}}Version 1 is deprecated, use version 2.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3612,7 +4068,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}String. Syntax of the SMS. Options include `markdown` and `liquid`.
+    <dd>{{% md %}}Syntax of the SMS. Options include `markdown` and `liquid`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3623,7 +4079,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Team ID.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3633,7 +4090,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}String. Template for the SMS. You can use `@@password@@` as a placeholder for the password value.
+    <dd>{{% md %}}Template for the SMS. You can use `@@password@@` as a placeholder for the password value.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3644,8 +4101,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}String
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3655,8 +4111,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}String.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3666,7 +4121,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionoptionstotp">Connection<wbr>Options<wbr>Totp<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Map(Resource). Configuration options for one-time passwords. For details, see TOTP.
+    <dd>{{% md %}}Configuration options for one-time passwords. For details, see TOTP.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3677,7 +4132,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}String. SID for your Twilio account.
+    <dd>{{% md %}}SID for your Twilio account.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3688,7 +4143,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}String, Case-sensitive. AuthToken for your Twilio account.
+    <dd>{{% md %}}AuthToken for your Twilio account.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3699,7 +4154,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}String. Value must be `back_channel` or `front_channel`
+    <dd>{{% md %}}Value can be `back_channel` or `front_channel`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3730,7 +4185,17 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Bool
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="user_id_attribute_python">
+<a href="#user_id_attribute_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id_<wbr>attribute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Attribute in the SAML token that will be mapped to the user_id property in Auth0.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3741,8 +4206,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}String.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3752,7 +4216,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}String.
+    <dd>{{% md %}}A map defining the validation options.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3763,7 +4227,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether or not to use the common endpoint rather than the default endpoint. Typically enabled if you're using this for a multi-tenant application in Azure AD.
+    <dd>{{% md %}}Indicates whether or not to use the common endpoint rather than the default endpoint. Typically enabled if you're using this for a multi-tenant application in Azure AD.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3774,8 +4238,177 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}String
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="connectionoptionsidpinitiated">Connection<wbr>Options<wbr>Idp<wbr>Initiated</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/input/#ConnectionOptionsIdpInitiated">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/output/#ConnectionOptionsIdpInitiated">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#ConnectionOptionsIdpInitiatedArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#ConnectionOptionsIdpInitiatedOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Inputs.ConnectionOptionsIdpInitiatedArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Outputs.ConnectionOptionsIdpInitiated.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientauthorizequery_csharp">
+<a href="#clientauthorizequery_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Authorize<wbr>Query</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientid_csharp">
+<a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Facebook client ID.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientprotocol_csharp">
+<a href="#clientprotocol_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientauthorizequery_go">
+<a href="#clientauthorizequery_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Authorize<wbr>Query</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientid_go">
+<a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Facebook client ID.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientprotocol_go">
+<a href="#clientprotocol_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientauthorizequery_nodejs">
+<a href="#clientauthorizequery_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Authorize<wbr>Query</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientid_nodejs">
+<a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Facebook client ID.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientprotocol_nodejs">
+<a href="#clientprotocol_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="client_authorize_query_python">
+<a href="#client_authorize_query_python" style="color: inherit; text-decoration: inherit;">client_<wbr>authorize_<wbr>query</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="client_id_python">
+<a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Facebook client ID.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="client_protocol_python">
+<a href="#client_protocol_python" style="color: inherit; text-decoration: inherit;">client_<wbr>protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3810,7 +4443,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Integer. Minimum number of characters allowed in passwords.
+    <dd>{{% md %}}Minimum number of characters allowed in passwords.
 {{% /md %}}</dd>
 
 </dl>
@@ -3828,7 +4461,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Integer. Minimum number of characters allowed in passwords.
+    <dd>{{% md %}}Minimum number of characters allowed in passwords.
 {{% /md %}}</dd>
 
 </dl>
@@ -3846,7 +4479,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Integer. Minimum number of characters allowed in passwords.
+    <dd>{{% md %}}Minimum number of characters allowed in passwords.
 {{% /md %}}</dd>
 
 </dl>
@@ -3862,9 +4495,9 @@ The following state arguments are supported:
 <a href="#min_length_python" style="color: inherit; text-decoration: inherit;">min_<wbr>length</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}Integer. Minimum number of characters allowed in passwords.
+    <dd>{{% md %}}Minimum number of characters allowed in passwords.
 {{% /md %}}</dd>
 
 </dl>
@@ -3900,7 +4533,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Set(String), (Maximum=2000 characters). Customized contents of the password dictionary. By default, the password dictionary contains a list of the [10,000 most common passwords](https://github.com/danielmiessler/SecLists/blob/master/Passwords/Common-Credentials/10k-most-common.txt); your customized content is used in addition to the default password dictionary. Matching is not case-sensitive.
+    <dd>{{% md %}}Customized contents of the password dictionary. By default, the password dictionary contains a list of the [10,000 most common passwords](https://github.com/danielmiessler/SecLists/blob/master/Passwords/Common-Credentials/10k-most-common.txt); your customized content is used in addition to the default password dictionary. Matching is not case-sensitive.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3911,7 +4544,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether password history is enabled for the connection. When enabled, any existing users in this connection will be unaffected; the system will maintain their password history going forward.
+    <dd>{{% md %}}Indicates whether password history is enabled for the connection. When enabled, any existing users in this connection will be unaffected; the system will maintain their password history going forward.
 {{% /md %}}</dd>
 
 </dl>
@@ -3929,7 +4562,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}Set(String), (Maximum=2000 characters). Customized contents of the password dictionary. By default, the password dictionary contains a list of the [10,000 most common passwords](https://github.com/danielmiessler/SecLists/blob/master/Passwords/Common-Credentials/10k-most-common.txt); your customized content is used in addition to the default password dictionary. Matching is not case-sensitive.
+    <dd>{{% md %}}Customized contents of the password dictionary. By default, the password dictionary contains a list of the [10,000 most common passwords](https://github.com/danielmiessler/SecLists/blob/master/Passwords/Common-Credentials/10k-most-common.txt); your customized content is used in addition to the default password dictionary. Matching is not case-sensitive.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3940,7 +4573,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether password history is enabled for the connection. When enabled, any existing users in this connection will be unaffected; the system will maintain their password history going forward.
+    <dd>{{% md %}}Indicates whether password history is enabled for the connection. When enabled, any existing users in this connection will be unaffected; the system will maintain their password history going forward.
 {{% /md %}}</dd>
 
 </dl>
@@ -3958,7 +4591,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}Set(String), (Maximum=2000 characters). Customized contents of the password dictionary. By default, the password dictionary contains a list of the [10,000 most common passwords](https://github.com/danielmiessler/SecLists/blob/master/Passwords/Common-Credentials/10k-most-common.txt); your customized content is used in addition to the default password dictionary. Matching is not case-sensitive.
+    <dd>{{% md %}}Customized contents of the password dictionary. By default, the password dictionary contains a list of the [10,000 most common passwords](https://github.com/danielmiessler/SecLists/blob/master/Passwords/Common-Credentials/10k-most-common.txt); your customized content is used in addition to the default password dictionary. Matching is not case-sensitive.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3969,7 +4602,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether password history is enabled for the connection. When enabled, any existing users in this connection will be unaffected; the system will maintain their password history going forward.
+    <dd>{{% md %}}Indicates whether password history is enabled for the connection. When enabled, any existing users in this connection will be unaffected; the system will maintain their password history going forward.
 {{% /md %}}</dd>
 
 </dl>
@@ -3985,9 +4618,9 @@ The following state arguments are supported:
 <a href="#dictionaries_python" style="color: inherit; text-decoration: inherit;">dictionaries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}Set(String), (Maximum=2000 characters). Customized contents of the password dictionary. By default, the password dictionary contains a list of the [10,000 most common passwords](https://github.com/danielmiessler/SecLists/blob/master/Passwords/Common-Credentials/10k-most-common.txt); your customized content is used in addition to the default password dictionary. Matching is not case-sensitive.
+    <dd>{{% md %}}Customized contents of the password dictionary. By default, the password dictionary contains a list of the [10,000 most common passwords](https://github.com/danielmiessler/SecLists/blob/master/Passwords/Common-Credentials/10k-most-common.txt); your customized content is used in addition to the default password dictionary. Matching is not case-sensitive.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3998,7 +4631,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether password history is enabled for the connection. When enabled, any existing users in this connection will be unaffected; the system will maintain their password history going forward.
+    <dd>{{% md %}}Indicates whether password history is enabled for the connection. When enabled, any existing users in this connection will be unaffected; the system will maintain their password history going forward.
 {{% /md %}}</dd>
 
 </dl>
@@ -4034,7 +4667,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether password history is enabled for the connection. When enabled, any existing users in this connection will be unaffected; the system will maintain their password history going forward.
+    <dd>{{% md %}}Indicates whether password history is enabled for the connection. When enabled, any existing users in this connection will be unaffected; the system will maintain their password history going forward.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4045,7 +4678,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Integer, (Maximum=24). Indicates the number of passwords to keep in history.
+    <dd>{{% md %}}Indicates the number of passwords to keep in history with a maximum of 24.
 {{% /md %}}</dd>
 
 </dl>
@@ -4063,7 +4696,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether password history is enabled for the connection. When enabled, any existing users in this connection will be unaffected; the system will maintain their password history going forward.
+    <dd>{{% md %}}Indicates whether password history is enabled for the connection. When enabled, any existing users in this connection will be unaffected; the system will maintain their password history going forward.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4074,7 +4707,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Integer, (Maximum=24). Indicates the number of passwords to keep in history.
+    <dd>{{% md %}}Indicates the number of passwords to keep in history with a maximum of 24.
 {{% /md %}}</dd>
 
 </dl>
@@ -4092,7 +4725,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether password history is enabled for the connection. When enabled, any existing users in this connection will be unaffected; the system will maintain their password history going forward.
+    <dd>{{% md %}}Indicates whether password history is enabled for the connection. When enabled, any existing users in this connection will be unaffected; the system will maintain their password history going forward.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4103,7 +4736,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Integer, (Maximum=24). Indicates the number of passwords to keep in history.
+    <dd>{{% md %}}Indicates the number of passwords to keep in history with a maximum of 24.
 {{% /md %}}</dd>
 
 </dl>
@@ -4121,7 +4754,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether password history is enabled for the connection. When enabled, any existing users in this connection will be unaffected; the system will maintain their password history going forward.
+    <dd>{{% md %}}Indicates whether password history is enabled for the connection. When enabled, any existing users in this connection will be unaffected; the system will maintain their password history going forward.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4130,9 +4763,9 @@ The following state arguments are supported:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}Integer, (Maximum=24). Indicates the number of passwords to keep in history.
+    <dd>{{% md %}}Indicates the number of passwords to keep in history with a maximum of 24.
 {{% /md %}}</dd>
 
 </dl>
@@ -4168,7 +4801,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether the password personal info check is enabled for this connection.
+    <dd>{{% md %}}Indicates whether the password personal info check is enabled for this connection.
 {{% /md %}}</dd>
 
 </dl>
@@ -4186,7 +4819,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether the password personal info check is enabled for this connection.
+    <dd>{{% md %}}Indicates whether the password personal info check is enabled for this connection.
 {{% /md %}}</dd>
 
 </dl>
@@ -4204,7 +4837,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether the password personal info check is enabled for this connection.
+    <dd>{{% md %}}Indicates whether the password personal info check is enabled for this connection.
 {{% /md %}}</dd>
 
 </dl>
@@ -4222,7 +4855,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean. Indicates whether the password personal info check is enabled for this connection.
+    <dd>{{% md %}}Indicates whether the password personal info check is enabled for this connection.
 {{% /md %}}</dd>
 
 </dl>
@@ -4343,7 +4976,7 @@ The following state arguments are supported:
 <a href="#length_python" style="color: inherit; text-decoration: inherit;">length</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Integer. Length of the one-time password.
 {{% /md %}}</dd>
@@ -4354,7 +4987,7 @@ The following state arguments are supported:
 <a href="#time_step_python" style="color: inherit; text-decoration: inherit;">time_<wbr>step</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Integer. Seconds between allowed generation of new passwords.
 {{% /md %}}</dd>
@@ -4377,6 +5010,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`auth0` Terraform Provider](https://github.com/terraform-providers/terraform-provider-auth0).</dd>
+	<dd>This Pulumi package is based on the [`auth0` Terraform Provider](https://github.com/alexkappa/terraform-provider-auth0).</dd>
 </dl>
 
