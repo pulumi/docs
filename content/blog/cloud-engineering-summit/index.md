@@ -55,7 +55,7 @@ It's time, as an industry, that we come to a consensus of how these complementar
 
 This month, Pulumi is launching the first-ever Cloud Engineering Summit, in partnership with industry and community experts. Our focus will be on  ways  modern teams are leveraging the cloud to innovate faster than ever before during a period of unprecedented disruption. We’ll also highlight the modern architectures and modern workflows that cloud engineering teams are using to collaborate better, manage complexity and achieve unprecedented scale
 
-The summit brings together cloud engineering leaders and practitioners to share best practices and end-user stories on a broad range of topics with over 23 sessions and 40+ speakers This summit will equip you and your organization to achieve the next level of cloud velocity, innovating faster than ever before, informed and inspired by real-world expertise.
+The summit brings together cloud engineering leaders and practitioners to share best practices and end-user stories on a broad range of topics with over 23 sessions and 40+ speakers. This summit will equip you and your organization to achieve the next level of cloud velocity, innovating faster than ever before, informed and inspired by real-world expertise.
 
 Here is just a sample of the sessions that you don't want to miss:
 
