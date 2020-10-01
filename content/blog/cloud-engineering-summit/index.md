@@ -59,8 +59,6 @@ The summit brings together cloud engineering leaders and practitioners to share 
 
 Here is just a sample of the sessions that you don't want to miss:
 
-
-
 <div style="clear:both;">
     <div style="float:left;clear:both;border-width:2px;">
         <div style="display:inline-block;vertical-align:top;">
