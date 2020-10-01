@@ -97,6 +97,10 @@ $ pulumi stack output BucketName
 
 {{% /choosable %}}
 
-Running that command will print out the name of your bucket. Now that your bucket has been provisioned, let's modify the bucket to host a static website.
+Running that command will print out the name of your bucket.
+
+{{< console-note >}}
+
+Now that your bucket has been provisioned, let's modify the bucket to host a static website.
 
 {{< get-started-stepper >}}
