@@ -81,10 +81,10 @@ Here is just a sample of the sessions that you don't want to miss:
     <div style="padding-left:225px;vertical-align:bottom;">
         <b>Future of Cloud Engineering: Architectures and Platforms</b>
         <ul style="list-style-type:none;">
-            <li><b>Joe Beda</b>, Principal Engineer, VMWare</li>
-            <li><b>Al Sene</b>, VP of Engineering, Digital Ocean</li>
-            <li><b>Corey Scobie</b>, CTO, Chef</li>
-            <li><b>Jason Warner</b>, CTO, GitHub</li>
+            <li>Joe Beda, Principal Engineer, VMWare</li>
+            <li>Al Sene, VP of Engineering, Digital Ocean</li>
+            <li>Corey Scobie, CTO, Chef</li>
+            <li>Jason Warner, CTO, GitHub</li>
             <li>Moderator: Luke Hoban</li>
         </ul>
     </div>
@@ -112,9 +112,9 @@ Here is just a sample of the sessions that you don't want to miss:
     <div style="padding-left:225px;vertical-align:bottom;">
         <b>Future of Cloud Engineering: Security and Policy</b>
         <ul style="list-style-type:none;">
-            <li><b>Maya Kaczorowski</b>, Senior Director, Product Management, Software Supply Chain Security, GitHub</li>
-            <li><b>Amit Gupta</b>, VP Business Development and Product Management, Tigera</li>
-            <li><b>Johnathon Hunt</b>, VP of Security, GitHub</li>
+            <li>Maya Kaczorowski, Senior Director, Product Management, Software Supply Chain Security, GitHub</li>
+            <li>Amit Gupta, VP Business Development and Product Management, Tigera</li>
+            <li>Johnathon Hunt, VP of Security, GitHub</li>
             <li>Moderator: Eric Rudder</li>
         </ul>
     </div>
@@ -142,10 +142,10 @@ Here is just a sample of the sessions that you don't want to miss:
     <div style="padding-left:225px;vertical-align:bottom;">
         <b>Future of Cloud Engineering: Culture, Process, Tools</b>
         <ul style="list-style-type:none;">
-            <li><b>Abby Kearns</b>, CTO, Puppet/li>
-            <li><b>Amanda Silver</b>, CVP of Product for Developer Tools, Microsoft</li>
-            <li><b>Johnathon Sullivan</b>, Co-founder and CTO, NS1</li>
-            <li><b>Avi Cavale</b>, VP of Engineering, JFrog</li>
+            <li>Abby Kearns, CTO, Puppet</li>
+            <li>Amanda Silver, CVP of Product for Developer Tools, Microsoft</li>
+            <li>Johnathon Sullivan, Co-founder and CTO, NS1</li>
+            <li>Avi Cavale, VP of Engineering, JFrog</li>
             <li>Moderator: Lee Zen</li>
         </ul>
     </div>
