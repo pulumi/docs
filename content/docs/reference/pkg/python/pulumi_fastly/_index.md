@@ -126,50 +126,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_fastly.ServiceACLEntriesv1">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_fastly.</code><code class="sig-name descname">ServiceACLEntriesv1</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">acl_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">entries</span><span class="p">:</span> <span class="n">Union[List[Union[ServiceACLEntriesv1EntryArgs, Mapping[str, Any], Awaitable[Union[ServiceACLEntriesv1EntryArgs, Mapping[str, Any]]], Output[T]]], Awaitable[List[Union[ServiceACLEntriesv1EntryArgs, Mapping[str, Any], Awaitable[Union[ServiceACLEntriesv1EntryArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_fastly.ServiceACLEntriesv1" title="Permalink to this definition">¶</a></dt>
-<dd><p>Defines a set of Fastly ACL entries that can be used to populate a service ACL.  This resource will populate an ACL with the entries and will track their state.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
-<span class="kn">import</span> <span class="nn">pulumi_fastly</span> <span class="k">as</span> <span class="nn">fastly</span>
-
-<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
-<span class="n">myacl_name</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;myaclName&quot;</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">myacl_name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="n">myacl_name</span> <span class="o">=</span> <span class="s2">&quot;My ACL&quot;</span>
-<span class="n">myservice</span> <span class="o">=</span> <span class="n">fastly</span><span class="o">.</span><span class="n">Servicev1</span><span class="p">(</span><span class="s2">&quot;myservice&quot;</span><span class="p">,</span>
-    <span class="n">domains</span><span class="o">=</span><span class="p">[</span><span class="n">fastly</span><span class="o">.</span><span class="n">Servicev1DomainArgs</span><span class="p">(</span>
-        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;demo.notexample.com&quot;</span><span class="p">,</span>
-        <span class="n">comment</span><span class="o">=</span><span class="s2">&quot;demo&quot;</span><span class="p">,</span>
-    <span class="p">)],</span>
-    <span class="n">backends</span><span class="o">=</span><span class="p">[</span><span class="n">fastly</span><span class="o">.</span><span class="n">Servicev1BackendArgs</span><span class="p">(</span>
-        <span class="n">address</span><span class="o">=</span><span class="s2">&quot;demo.notexample.com.s3-website-us-west-2.amazonaws.com&quot;</span><span class="p">,</span>
-        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;AWS S3 hosting&quot;</span><span class="p">,</span>
-        <span class="n">port</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span>
-    <span class="p">)],</span>
-    <span class="n">acls</span><span class="o">=</span><span class="p">[</span><span class="n">fastly</span><span class="o">.</span><span class="n">Servicev1AclArgs</span><span class="p">(</span>
-        <span class="n">name</span><span class="o">=</span><span class="n">myacl_name</span><span class="p">,</span>
-    <span class="p">)],</span>
-    <span class="n">force_destroy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">entries</span> <span class="o">=</span> <span class="n">fastly</span><span class="o">.</span><span class="n">ServiceACLEntriesv1</span><span class="p">(</span><span class="s2">&quot;entries&quot;</span><span class="p">,</span>
-    <span class="n">service_id</span><span class="o">=</span><span class="n">myservice</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-    <span class="n">acl_id</span><span class="o">=</span><span class="n">myservice</span><span class="o">.</span><span class="n">acls</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">acls</span><span class="p">:</span> <span class="p">{</span><span class="n">d</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="n">d</span><span class="o">.</span><span class="n">acl_id</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">acls</span><span class="p">}[</span><span class="n">myacl_name</span><span class="p">]),</span>
-    <span class="n">entries</span><span class="o">=</span><span class="p">[</span><span class="n">fastly</span><span class="o">.</span><span class="n">ServiceACLEntriesv1EntryArgs</span><span class="p">(</span>
-        <span class="n">ip</span><span class="o">=</span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
-        <span class="n">subnet</span><span class="o">=</span><span class="s2">&quot;24&quot;</span><span class="p">,</span>
-        <span class="n">negated</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-        <span class="n">comment</span><span class="o">=</span><span class="s2">&quot;ALC Entry 1&quot;</span><span class="p">,</span>
-    <span class="p">)])</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>acl_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the ACL that the items belong to</p></li>
-<li><p><strong>entries</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ServiceACLEntriesv1EntryArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A Set ACL entries that are applied to the service. Defined below</p></li>
-<li><p><strong>service_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Service that the ACL belongs to</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a ServiceACLEntriesv1 resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] acl_id: The ID of the ACL that the items belong to
+:param pulumi.Input[List[pulumi.Input[pulumi.InputType[‘ServiceACLEntriesv1EntryArgs’]]]] entries: A Set ACL entries that are applied to the service. Defined below
+:param pulumi.Input[str] service_id: The ID of the Service that the ACL belongs to</p>
 <dl class="py method">
 <dt id="pulumi_fastly.ServiceACLEntriesv1.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">acl_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">entries</span><span class="p">:</span> <span class="n">Union[List[Union[ServiceACLEntriesv1EntryArgs, Mapping[str, Any], Awaitable[Union[ServiceACLEntriesv1EntryArgs, Mapping[str, Any]]], Output[T]]], Awaitable[List[Union[ServiceACLEntriesv1EntryArgs, Mapping[str, Any], Awaitable[Union[ServiceACLEntriesv1EntryArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_fastly.service_acl_entriesv1.ServiceACLEntriesv1<a class="headerlink" href="#pulumi_fastly.ServiceACLEntriesv1.get" title="Permalink to this definition">¶</a></dt>
@@ -680,81 +642,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_fastly.ServiceDictionaryItemsv1">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_fastly.</code><code class="sig-name descname">ServiceDictionaryItemsv1</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dictionary_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">items</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_fastly.ServiceDictionaryItemsv1" title="Permalink to this definition">¶</a></dt>
-<dd><p>Defines a map of Fastly dictionary items that can be used to populate a service dictionary.  This resource will populate a dictionary with the items and will track their state.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
-<span class="kn">import</span> <span class="nn">pulumi_fastly</span> <span class="k">as</span> <span class="nn">fastly</span>
-
-<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
-<span class="n">mydict_name</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;mydictName&quot;</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">mydict_name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="n">mydict_name</span> <span class="o">=</span> <span class="s2">&quot;My Dictionary&quot;</span>
-<span class="n">myservice</span> <span class="o">=</span> <span class="n">fastly</span><span class="o">.</span><span class="n">Servicev1</span><span class="p">(</span><span class="s2">&quot;myservice&quot;</span><span class="p">,</span>
-    <span class="n">domains</span><span class="o">=</span><span class="p">[</span><span class="n">fastly</span><span class="o">.</span><span class="n">Servicev1DomainArgs</span><span class="p">(</span>
-        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;demo.notexample.com&quot;</span><span class="p">,</span>
-        <span class="n">comment</span><span class="o">=</span><span class="s2">&quot;demo&quot;</span><span class="p">,</span>
-    <span class="p">)],</span>
-    <span class="n">backends</span><span class="o">=</span><span class="p">[</span><span class="n">fastly</span><span class="o">.</span><span class="n">Servicev1BackendArgs</span><span class="p">(</span>
-        <span class="n">address</span><span class="o">=</span><span class="s2">&quot;demo.notexample.com.s3-website-us-west-2.amazonaws.com&quot;</span><span class="p">,</span>
-        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;AWS S3 hosting&quot;</span><span class="p">,</span>
-        <span class="n">port</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span>
-    <span class="p">)],</span>
-    <span class="n">dictionaries</span><span class="o">=</span><span class="p">[</span><span class="n">fastly</span><span class="o">.</span><span class="n">Servicev1DictionaryArgs</span><span class="p">(</span>
-        <span class="n">name</span><span class="o">=</span><span class="n">mydict_name</span><span class="p">,</span>
-    <span class="p">)],</span>
-    <span class="n">force_destroy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">items</span> <span class="o">=</span> <span class="n">fastly</span><span class="o">.</span><span class="n">ServiceDictionaryItemsv1</span><span class="p">(</span><span class="s2">&quot;items&quot;</span><span class="p">,</span>
-    <span class="n">service_id</span><span class="o">=</span><span class="n">myservice</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-    <span class="n">dictionary_id</span><span class="o">=</span><span class="n">myservice</span><span class="o">.</span><span class="n">dictionaries</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">dictionaries</span><span class="p">:</span> <span class="p">{</span><span class="n">s</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="n">s</span><span class="o">.</span><span class="n">dictionary_id</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">dictionaries</span><span class="p">}[</span><span class="n">mydict_name</span><span class="p">]),</span>
-    <span class="n">items</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;key1&quot;</span><span class="p">:</span> <span class="s2">&quot;value1&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;key2&quot;</span><span class="p">:</span> <span class="s2">&quot;value2&quot;</span><span class="p">,</span>
-    <span class="p">})</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
-<span class="kn">import</span> <span class="nn">pulumi_fastly</span> <span class="k">as</span> <span class="nn">fastly</span>
-
-<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
-<span class="n">mydict</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get_object</span><span class="p">(</span><span class="s2">&quot;mydict&quot;</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">mydict</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="n">mydict</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;My Dictionary&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;key1&quot;</span><span class="p">:</span> <span class="s2">&quot;value1x&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;key2&quot;</span><span class="p">:</span> <span class="s2">&quot;value2x&quot;</span><span class="p">,</span>
-        <span class="p">},</span>
-    <span class="p">}</span>
-<span class="n">myservice</span> <span class="o">=</span> <span class="n">fastly</span><span class="o">.</span><span class="n">Servicev1</span><span class="p">(</span><span class="s2">&quot;myservice&quot;</span><span class="p">,</span>
-    <span class="n">domains</span><span class="o">=</span><span class="p">[</span><span class="n">fastly</span><span class="o">.</span><span class="n">Servicev1DomainArgs</span><span class="p">(</span>
-        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;demo.notexample.com&quot;</span><span class="p">,</span>
-        <span class="n">comment</span><span class="o">=</span><span class="s2">&quot;demo&quot;</span><span class="p">,</span>
-    <span class="p">)],</span>
-    <span class="n">backends</span><span class="o">=</span><span class="p">[</span><span class="n">fastly</span><span class="o">.</span><span class="n">Servicev1BackendArgs</span><span class="p">(</span>
-        <span class="n">address</span><span class="o">=</span><span class="s2">&quot;demo.notexample.com.s3-website-us-west-2.amazonaws.com&quot;</span><span class="p">,</span>
-        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;AWS S3 hosting&quot;</span><span class="p">,</span>
-        <span class="n">port</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span>
-    <span class="p">)],</span>
-    <span class="n">dictionaries</span><span class="o">=</span><span class="p">[</span><span class="n">fastly</span><span class="o">.</span><span class="n">Servicev1DictionaryArgs</span><span class="p">(</span>
-        <span class="n">name</span><span class="o">=</span><span class="n">mydict</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
-    <span class="p">)],</span>
-    <span class="n">force_destroy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">items</span> <span class="o">=</span> <span class="n">fastly</span><span class="o">.</span><span class="n">ServiceDictionaryItemsv1</span><span class="p">(</span><span class="s2">&quot;items&quot;</span><span class="p">,</span>
-    <span class="n">service_id</span><span class="o">=</span><span class="n">myservice</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-    <span class="n">dictionary_id</span><span class="o">=</span><span class="n">myservice</span><span class="o">.</span><span class="n">dictionaries</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">dictionaries</span><span class="p">:</span> <span class="p">{</span><span class="n">d</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="n">d</span><span class="o">.</span><span class="n">dictionary_id</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">dictionaries</span><span class="p">}[</span><span class="n">mydict</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]]),</span>
-    <span class="n">items</span><span class="o">=</span><span class="n">mydict</span><span class="p">[</span><span class="s2">&quot;items&quot;</span><span class="p">])</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>dictionary_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the dictionary that the items belong to</p></li>
-<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>items</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – A map representing an entry in the dictionary, (key/value)</p></li>
-<li><p><strong>service_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the service that the dictionary belongs to</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a ServiceDictionaryItemsv1 resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] dictionary_id: The ID of the dictionary that the items belong to
+:param pulumi.Input[Mapping[str, Any]] items: A map representing an entry in the dictionary, (key/value)
+:param pulumi.Input[str] service_id: The ID of the service that the dictionary belongs to</p>
 <dl class="py method">
 <dt id="pulumi_fastly.ServiceDictionaryItemsv1.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dictionary_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">items</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_fastly.service_dictionary_itemsv1.ServiceDictionaryItemsv1<a class="headerlink" href="#pulumi_fastly.ServiceDictionaryItemsv1.get" title="Permalink to this definition">¶</a></dt>
@@ -833,87 +726,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_fastly.ServiceDynamicSnippetContentv1">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_fastly.</code><code class="sig-name descname">ServiceDynamicSnippetContentv1</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snippet_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_fastly.ServiceDynamicSnippetContentv1" title="Permalink to this definition">¶</a></dt>
-<dd><p>Defines content that represents blocks of VCL logic that is inserted into your service.  This resource will populate the content of a dynamic snippet and allow it to be manged without the creation of a new service verison.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
-<span class="kn">import</span> <span class="nn">pulumi_fastly</span> <span class="k">as</span> <span class="nn">fastly</span>
-
-<span class="n">myservice</span> <span class="o">=</span> <span class="n">fastly</span><span class="o">.</span><span class="n">Servicev1</span><span class="p">(</span><span class="s2">&quot;myservice&quot;</span><span class="p">,</span>
-    <span class="n">domains</span><span class="o">=</span><span class="p">[</span><span class="n">fastly</span><span class="o">.</span><span class="n">Servicev1DomainArgs</span><span class="p">(</span>
-        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;snippet.fastlytestdomain.com&quot;</span><span class="p">,</span>
-        <span class="n">comment</span><span class="o">=</span><span class="s2">&quot;snippet test&quot;</span><span class="p">,</span>
-    <span class="p">)],</span>
-    <span class="n">backends</span><span class="o">=</span><span class="p">[</span><span class="n">fastly</span><span class="o">.</span><span class="n">Servicev1BackendArgs</span><span class="p">(</span>
-        <span class="n">address</span><span class="o">=</span><span class="s2">&quot;tftesting.tftesting.net.s3-website-us-west-2.amazonaws.com&quot;</span><span class="p">,</span>
-        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;AWS S3 hosting&quot;</span><span class="p">,</span>
-        <span class="n">port</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span>
-    <span class="p">)],</span>
-    <span class="n">dynamicsnippets</span><span class="o">=</span><span class="p">[</span><span class="n">fastly</span><span class="o">.</span><span class="n">Servicev1DynamicsnippetArgs</span><span class="p">(</span>
-        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;My Dynamic Snippet&quot;</span><span class="p">,</span>
-        <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;recv&quot;</span><span class="p">,</span>
-        <span class="n">priority</span><span class="o">=</span><span class="mi">110</span><span class="p">,</span>
-    <span class="p">)],</span>
-    <span class="n">default_host</span><span class="o">=</span><span class="s2">&quot;tftesting.tftesting.net.s3-website-us-west-2.amazonaws.com&quot;</span><span class="p">,</span>
-    <span class="n">force_destroy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">my_dyn_content</span> <span class="o">=</span> <span class="n">fastly</span><span class="o">.</span><span class="n">ServiceDynamicSnippetContentv1</span><span class="p">(</span><span class="s2">&quot;myDynContent&quot;</span><span class="p">,</span>
-    <span class="n">service_id</span><span class="o">=</span><span class="n">myservice</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-    <span class="n">snippet_id</span><span class="o">=</span><span class="n">myservice</span><span class="o">.</span><span class="n">dynamicsnippets</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">dynamicsnippets</span><span class="p">:</span> <span class="p">{</span><span class="n">s</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="n">s</span><span class="o">.</span><span class="n">snippet_id</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">dynamicsnippets</span><span class="p">}[</span><span class="s2">&quot;My Dynamic Snippet&quot;</span><span class="p">]),</span>
-    <span class="n">content</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;if ( req.url ) {</span>
-<span class="s2"> set req.http.my-snippet-test-header = &quot;true&quot;;</span>
-<span class="s2">}&quot;&quot;&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
-<span class="kn">import</span> <span class="nn">pulumi_fastly</span> <span class="k">as</span> <span class="nn">fastly</span>
-
-<span class="n">myservice</span> <span class="o">=</span> <span class="n">fastly</span><span class="o">.</span><span class="n">Servicev1</span><span class="p">(</span><span class="s2">&quot;myservice&quot;</span><span class="p">,</span>
-    <span class="n">domains</span><span class="o">=</span><span class="p">[</span><span class="n">fastly</span><span class="o">.</span><span class="n">Servicev1DomainArgs</span><span class="p">(</span>
-        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;snippet.fastlytestdomain.com&quot;</span><span class="p">,</span>
-        <span class="n">comment</span><span class="o">=</span><span class="s2">&quot;snippet test&quot;</span><span class="p">,</span>
-    <span class="p">)],</span>
-    <span class="n">backends</span><span class="o">=</span><span class="p">[</span><span class="n">fastly</span><span class="o">.</span><span class="n">Servicev1BackendArgs</span><span class="p">(</span>
-        <span class="n">address</span><span class="o">=</span><span class="s2">&quot;tftesting.tftesting.net.s3-website-us-west-2.amazonaws.com&quot;</span><span class="p">,</span>
-        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;AWS S3 hosting&quot;</span><span class="p">,</span>
-        <span class="n">port</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span>
-    <span class="p">)],</span>
-    <span class="n">dynamicsnippets</span><span class="o">=</span><span class="p">[</span>
-        <span class="n">fastly</span><span class="o">.</span><span class="n">Servicev1DynamicsnippetArgs</span><span class="p">(</span>
-            <span class="n">name</span><span class="o">=</span><span class="s2">&quot;My Dynamic Snippet One&quot;</span><span class="p">,</span>
-            <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;recv&quot;</span><span class="p">,</span>
-            <span class="n">priority</span><span class="o">=</span><span class="mi">110</span><span class="p">,</span>
-        <span class="p">),</span>
-        <span class="n">fastly</span><span class="o">.</span><span class="n">Servicev1DynamicsnippetArgs</span><span class="p">(</span>
-            <span class="n">name</span><span class="o">=</span><span class="s2">&quot;My Dynamic Snippet Two&quot;</span><span class="p">,</span>
-            <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;recv&quot;</span><span class="p">,</span>
-            <span class="n">priority</span><span class="o">=</span><span class="mi">110</span><span class="p">,</span>
-        <span class="p">),</span>
-    <span class="p">],</span>
-    <span class="n">default_host</span><span class="o">=</span><span class="s2">&quot;tftesting.tftesting.net.s3-website-us-west-2.amazonaws.com&quot;</span><span class="p">,</span>
-    <span class="n">force_destroy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">my_dyn_content_one</span> <span class="o">=</span> <span class="n">fastly</span><span class="o">.</span><span class="n">ServiceDynamicSnippetContentv1</span><span class="p">(</span><span class="s2">&quot;myDynContentOne&quot;</span><span class="p">,</span>
-    <span class="n">service_id</span><span class="o">=</span><span class="n">myservice</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-    <span class="n">snippet_id</span><span class="o">=</span><span class="n">myservice</span><span class="o">.</span><span class="n">dynamicsnippets</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">dynamicsnippets</span><span class="p">:</span> <span class="p">{</span><span class="n">s</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="n">s</span><span class="o">.</span><span class="n">snippet_id</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">dynamicsnippets</span><span class="p">}[</span><span class="s2">&quot;My Dynamic Snippet One&quot;</span><span class="p">]),</span>
-    <span class="n">content</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;if ( req.url ) {</span>
-<span class="s2"> set req.http.my-snippet-test-header-one = &quot;true&quot;;</span>
-<span class="s2">}&quot;&quot;&quot;</span><span class="p">)</span>
-<span class="n">my_dyn_content_two</span> <span class="o">=</span> <span class="n">fastly</span><span class="o">.</span><span class="n">ServiceDynamicSnippetContentv1</span><span class="p">(</span><span class="s2">&quot;myDynContentTwo&quot;</span><span class="p">,</span>
-    <span class="n">service_id</span><span class="o">=</span><span class="n">myservice</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-    <span class="n">snippet_id</span><span class="o">=</span><span class="n">myservice</span><span class="o">.</span><span class="n">dynamicsnippets</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">dynamicsnippets</span><span class="p">:</span> <span class="p">{</span><span class="n">s</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="n">s</span><span class="o">.</span><span class="n">snippet_id</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">dynamicsnippets</span><span class="p">}[</span><span class="s2">&quot;My Dynamic Snippet Two&quot;</span><span class="p">]),</span>
-    <span class="n">content</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;if ( req.url ) {</span>
-<span class="s2"> set req.http.my-snippet-test-header-two = &quot;true&quot;;</span>
-<span class="s2">}&quot;&quot;&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>content</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VCL code that specifies exactly what the snippet does.</p></li>
-<li><p><strong>service_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the service that the dynamic snippet belongs to</p></li>
-<li><p><strong>snippet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the dynamic snippet that the content belong to</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a ServiceDynamicSnippetContentv1 resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] content: The VCL code that specifies exactly what the snippet does.
+:param pulumi.Input[str] service_id: The ID of the service that the dynamic snippet belongs to
+:param pulumi.Input[str] snippet_id: The ID of the dynamic snippet that the content belong to</p>
 <dl class="py method">
 <dt id="pulumi_fastly.ServiceDynamicSnippetContentv1.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snippet_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_fastly.service_dynamic_snippet_contentv1.ServiceDynamicSnippetContentv1<a class="headerlink" href="#pulumi_fastly.ServiceDynamicSnippetContentv1.get" title="Permalink to this definition">¶</a></dt>
