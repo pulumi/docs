@@ -103,7 +103,7 @@ At a glance, the Pulumi Service backend provides the following benefits:
 - Refresh config from the last deployment
 - Secrets handled by a key managed by the service or the option to use passpharse-based key
 
-### Self-managed backend risks:
+### Self-managed backend risks
 
 At a glance, the self-hosted backend requires that the following issues are addressed:
 
