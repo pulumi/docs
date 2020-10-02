@@ -11,59 +11,309 @@ meta_desc: "Explore the Dashboard resource of the New Relic package, including e
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Use this resource to create and manage New Relic dashboards.
-## Attribute Refence
+## Additional Examples
 
-In addition to all arguments above, the following attributes are exported:
+### Create cross-account widgets in your dashboard.
 
-  * `dashboard_url` - The URL for viewing the dashboard.
+The example below shows how you can display data for an application from a primary account and an application from a subaccount. In order to create cross-account widgets, you must use an API key from a user with admin permissions in the primary account. Please see the `widget` attribute documentation for more details.
 
-### Nested `widget` blocks
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as newrelic from "@pulumi/newrelic";
 
-All nested `widget` blocks support the following common arguments:
+const primaryAccountApplication = newrelic.getEntity({
+    name: "Main Account Application Name",
+    type: "APPLICATION",
+    domain: "APM",
+});
+const subaccountApplication = newrelic.getEntity({
+    name: "Subaccount Application Name",
+    type: "APPLICATION",
+    domain: "APM",
+});
+const crossAccountWidgetExample = new newrelic.Dashboard("crossAccountWidgetExample", {
+    title: "tf-test-cross-account-widget-dashboard",
+    filter: {
+        eventTypes: ["Transaction"],
+        attributes: [
+            "appName",
+            "envName",
+        ],
+    },
+    gridColumnCount: 12,
+    widgets: [
+        {
+            title: "Apdex (primary account)",
+            row: 1,
+            column: 1,
+            width: 6,
+            height: 3,
+            visualization: "metric_line_chart",
+            duration: 1800000,
+            metrics: [{
+                name: "Apdex",
+                values: ["score"],
+            }],
+            entityIds: [primaryAccountApplication.then(primaryAccountApplication => primaryAccountApplication.applicationId)],
+        },
+        {
+            accountId: _var.subaccount_id,
+            title: "Apdex (subaccount)",
+            row: 1,
+            column: 7,
+            width: 6,
+            height: 3,
+            visualization: "metric_line_chart",
+            duration: 1800000,
+            metrics: [{
+                name: "Apdex",
+                values: ["score"],
+            }],
+            entityIds: [subaccountApplication.then(subaccountApplication => subaccountApplication.applicationId)],
+        },
+    ],
+});
+```
+```python
+import pulumi
+import pulumi_newrelic as newrelic
 
-  * `title` - (Required) A title for the widget.
-  * `visualization` - (Required) How the widget visualizes data.  Valid values are `billboard`, `gauge`, `billboard_comparison`, `facet_bar_chart`, `faceted_line_chart`, `facet_pie_chart`, `facet_table`, `faceted_area_chart`, `heatmap`, `attribute_sheet`, `single_event`, `histogram`, `funnel`, `raw_json`, `event_feed`, `event_table`, `uniques_list`, `line_chart`, `comparison_line_chart`, `markdown`, and `metric_line_chart`.
-  * `row` - (Required) Row position of widget from top left, starting at `1`.
-  * `column` - (Required) Column position of widget from top left, starting at `1`.
-  * `width` - (Optional) Width of the widget.  Valid values are `1` to `3` inclusive.  Defaults to `1`.
-  * `height` - (Optional) Height of the widget.  Valid values are `1` to `3` inclusive.  Defaults to `1`.
-  * `notes` - (Optional) Description of the widget.
+primary_account_application = newrelic.get_entity(name="Main Account Application Name",
+    type="APPLICATION",
+    domain="APM")
+subaccount_application = newrelic.get_entity(name="Subaccount Application Name",
+    type="APPLICATION",
+    domain="APM")
+cross_account_widget_example = newrelic.Dashboard("crossAccountWidgetExample",
+    title="tf-test-cross-account-widget-dashboard",
+    filter=newrelic.DashboardFilterArgs(
+        event_types=["Transaction"],
+        attributes=[
+            "appName",
+            "envName",
+        ],
+    ),
+    grid_column_count=12,
+    widgets=[
+        newrelic.DashboardWidgetArgs(
+            title="Apdex (primary account)",
+            row=1,
+            column=1,
+            width=6,
+            height=3,
+            visualization="metric_line_chart",
+            duration=1800000,
+            metrics=[newrelic.DashboardWidgetMetricArgs(
+                name="Apdex",
+                values=["score"],
+            )],
+            entity_ids=[primary_account_application.application_id],
+        ),
+        newrelic.DashboardWidgetArgs(
+            account_id=var["subaccount_id"],
+            title="Apdex (subaccount)",
+            row=1,
+            column=7,
+            width=6,
+            height=3,
+            visualization="metric_line_chart",
+            duration=1800000,
+            metrics=[newrelic.DashboardWidgetMetricArgs(
+                name="Apdex",
+                values=["score"],
+            )],
+            entity_ids=[subaccount_application.application_id],
+        ),
+    ])
+```
+```csharp
+using Pulumi;
+using NewRelic = Pulumi.NewRelic;
 
-Each `visualization` type supports an additional set of arguments:
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var primaryAccountApplication = Output.Create(NewRelic.GetEntity.InvokeAsync(new NewRelic.GetEntityArgs
+        {
+            Name = "Main Account Application Name",
+            Type = "APPLICATION",
+            Domain = "APM",
+        }));
+        var subaccountApplication = Output.Create(NewRelic.GetEntity.InvokeAsync(new NewRelic.GetEntityArgs
+        {
+            Name = "Subaccount Application Name",
+            Type = "APPLICATION",
+            Domain = "APM",
+        }));
+        var crossAccountWidgetExample = new NewRelic.Dashboard("crossAccountWidgetExample", new NewRelic.DashboardArgs
+        {
+            Title = "tf-test-cross-account-widget-dashboard",
+            Filter = new NewRelic.Inputs.DashboardFilterArgs
+            {
+                EventTypes = 
+                {
+                    "Transaction",
+                },
+                Attributes = 
+                {
+                    "appName",
+                    "envName",
+                },
+            },
+            GridColumnCount = 12,
+            Widgets = 
+            {
+                new NewRelic.Inputs.DashboardWidgetArgs
+                {
+                    Title = "Apdex (primary account)",
+                    Row = 1,
+                    Column = 1,
+                    Width = 6,
+                    Height = 3,
+                    Visualization = "metric_line_chart",
+                    Duration = 1800000,
+                    Metrics = 
+                    {
+                        new NewRelic.Inputs.DashboardWidgetMetricArgs
+                        {
+                            Name = "Apdex",
+                            Values = 
+                            {
+                                "score",
+                            },
+                        },
+                    },
+                    EntityIds = 
+                    {
+                        primaryAccountApplication.Apply(primaryAccountApplication => primaryAccountApplication.ApplicationId),
+                    },
+                },
+                new NewRelic.Inputs.DashboardWidgetArgs
+                {
+                    AccountId = @var.Subaccount_id,
+                    Title = "Apdex (subaccount)",
+                    Row = 1,
+                    Column = 7,
+                    Width = 6,
+                    Height = 3,
+                    Visualization = "metric_line_chart",
+                    Duration = 1800000,
+                    Metrics = 
+                    {
+                        new NewRelic.Inputs.DashboardWidgetMetricArgs
+                        {
+                            Name = "Apdex",
+                            Values = 
+                            {
+                                "score",
+                            },
+                        },
+                    },
+                    EntityIds = 
+                    {
+                        subaccountApplication.Apply(subaccountApplication => subaccountApplication.ApplicationId),
+                    },
+                },
+            },
+        });
+    }
 
-  * `billboard`, `billboard_comparison`:
-    * `nrql` - (Required) Valid NRQL query string. See [Writing NRQL Queries](https://docs.newrelic.com/docs/insights/nrql-new-relic-query-language/using-nrql/introduction-nrql) for help.
-    * `threshold_red` - (Optional) Threshold above which the displayed value will be styled with a red color.
-    * `threshold_yellow` - (Optional) Threshold above which the displayed value will be styled with a yellow color.
-  * `gauge`:
-    * `nrql` - (Required) Valid NRQL query string. See [Writing NRQL Queries](https://docs.newrelic.com/docs/insights/nrql-new-relic-query-language/using-nrql/introduction-nrql) for help.
-    * `threshold_red` - (Required) Threshold above which the displayed value will be styled with a red color.
-    * `threshold_yellow` - (Optional) Threshold above which the displayed value will be styled with a yellow color.
-  * `facet_bar_chart`, `facet_pie_chart`, `facet_table`, `faceted_area_chart`, `faceted_line_chart`, or `heatmap`:
-    * `nrql` - (Required) Valid NRQL query string. See [Writing NRQL Queries](https://docs.newrelic.com/docs/insights/nrql-new-relic-query-language/using-nrql/introduction-nrql) for help.
-    * `drilldown_dashboard_id` - (Optional) The ID of a dashboard to link to from the widget's facets.
-  * `attribute_sheet`, `comparison_line_chart`, `event_feed`, `event_table`, `funnel`, `histogram`, `line_chart`, `raw_json`, `single_event`, or `uniques_list`:
-    * `nrql` - (Required) Valid NRQL query string. See [Writing NRQL Queries](https://docs.newrelic.com/docs/insights/nrql-new-relic-query-language/using-nrql/introduction-nrql) for help.
-  * `markdown`:
-    * `source` - (Required) The markdown source to be rendered in the widget.
-  * `metric_line_chart`:
-    * `entity_ids` - (Required) A collection of entity ids to display data for.  These are typically application IDs.
-    * `metric` - (Required) A nested block that describes a metric.  Nested `metric` blocks support the following arguments:
-      * `name` - (Required) The metric name to display.
-      * `values` - (Required) The metric values to display.
-    * `duration` - (Required) The duration, in ms, of the time window represented in the chart.
-    * `end_time` - (Optional) The end time of the time window represented in the chart in epoch time.  When not set, the time window will end at the current time.
-    * `facet` - (Optional) Can be set to "host" to facet the metric data by host.
-    * `limit` - (Optional) The limit of distinct data series to display.  Requires `order_by` to be set.
-    * `order_by` - (Optional) Set the order of the results.  Required when using `limit`.
-  * `application_breakdown`:
-    * `entity_ids` - (Required) A collection of entity IDs to display data. These are typically application IDs.
+}
+```
+```go
+package main
 
-### Nested `filter` block
+import (
+	"github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
 
-The optional filter block supports the following arguments:
-  * `event_types` - (Optional) A list of event types to enable filtering for.
-  * `attributes` - (Optional) A list of attributes belonging to the specified event types to enable filtering for.
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "APPLICATION"
+		opt1 := "APM"
+		primaryAccountApplication, err := newrelic.GetEntity(ctx, &newrelic.GetEntityArgs{
+			Name:   "Main Account Application Name",
+			Type:   &opt0,
+			Domain: &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		opt2 := "APPLICATION"
+		opt3 := "APM"
+		subaccountApplication, err := newrelic.GetEntity(ctx, &newrelic.GetEntityArgs{
+			Name:   "Subaccount Application Name",
+			Type:   &opt2,
+			Domain: &opt3,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = newrelic.NewDashboard(ctx, "crossAccountWidgetExample", &newrelic.DashboardArgs{
+			Title: pulumi.String("tf-test-cross-account-widget-dashboard"),
+			Filter: &newrelic.DashboardFilterArgs{
+				EventTypes: pulumi.StringArray{
+					pulumi.String("Transaction"),
+				},
+				Attributes: pulumi.StringArray{
+					pulumi.String("appName"),
+					pulumi.String("envName"),
+				},
+			},
+			GridColumnCount: pulumi.Int(12),
+			Widgets: newrelic.DashboardWidgetArray{
+				&newrelic.DashboardWidgetArgs{
+					Title:         pulumi.String("Apdex (primary account)"),
+					Row:           pulumi.Int(1),
+					Column:        pulumi.Int(1),
+					Width:         pulumi.Int(6),
+					Height:        pulumi.Int(3),
+					Visualization: pulumi.String("metric_line_chart"),
+					Duration:      pulumi.Int(1800000),
+					Metrics: newrelic.DashboardWidgetMetricArray{
+						&newrelic.DashboardWidgetMetricArgs{
+							Name: pulumi.String("Apdex"),
+							Values: pulumi.StringArray{
+								pulumi.String("score"),
+							},
+						},
+					},
+					EntityIds: pulumi.IntArray{
+						pulumi.Int(primaryAccountApplication.ApplicationId),
+					},
+				},
+				&newrelic.DashboardWidgetArgs{
+					AccountId:     pulumi.Any(_var.Subaccount_id),
+					Title:         pulumi.String("Apdex (subaccount)"),
+					Row:           pulumi.Int(1),
+					Column:        pulumi.Int(7),
+					Width:         pulumi.Int(6),
+					Height:        pulumi.Int(3),
+					Visualization: pulumi.String("metric_line_chart"),
+					Duration:      pulumi.Int(1800000),
+					Metrics: newrelic.DashboardWidgetMetricArray{
+						&newrelic.DashboardWidgetMetricArgs{
+							Name: pulumi.String("Apdex"),
+							Values: pulumi.StringArray{
+								pulumi.String("score"),
+							},
+						},
+					},
+					EntityIds: pulumi.IntArray{
+						pulumi.Int(subaccountApplication.ApplicationId),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 {{% examples %}}
 ## Example Usage
@@ -699,7 +949,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardwidget">List&lt;Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>Dashboard<wbr>Widget<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A nested block that describes a visualization.  Up to 300 `widget` blocks are allowed in a dashboard definition.  See Nested widget blocks below for details.
+    <dd>{{% md %}}A nested block that describes a visualization.  Up to 300 `widget` blocks are allowed in a dashboard definition. See Nested widget blocks below for details.
 {{% /md %}}</dd>
 
 </dl>
@@ -783,7 +1033,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardwidget">[]Dashboard<wbr>Widget</a></span>
     </dt>
-    <dd>{{% md %}}A nested block that describes a visualization.  Up to 300 `widget` blocks are allowed in a dashboard definition.  See Nested widget blocks below for details.
+    <dd>{{% md %}}A nested block that describes a visualization.  Up to 300 `widget` blocks are allowed in a dashboard definition. See Nested widget blocks below for details.
 {{% /md %}}</dd>
 
 </dl>
@@ -867,7 +1117,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardwidget">Dashboard<wbr>Widget[]</a></span>
     </dt>
-    <dd>{{% md %}}A nested block that describes a visualization.  Up to 300 `widget` blocks are allowed in a dashboard definition.  See Nested widget blocks below for details.
+    <dd>{{% md %}}A nested block that describes a visualization.  Up to 300 `widget` blocks are allowed in a dashboard definition. See Nested widget blocks below for details.
 {{% /md %}}</dd>
 
 </dl>
@@ -951,7 +1201,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardwidget">Sequence[Dashboard<wbr>Widget<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A nested block that describes a visualization.  Up to 300 `widget` blocks are allowed in a dashboard definition.  See Nested widget blocks below for details.
+    <dd>{{% md %}}A nested block that describes a visualization.  Up to 300 `widget` blocks are allowed in a dashboard definition. See Nested widget blocks below for details.
 {{% /md %}}</dd>
 
 </dl>
@@ -1296,7 +1546,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardwidget">List&lt;Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>Dashboard<wbr>Widget<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A nested block that describes a visualization.  Up to 300 `widget` blocks are allowed in a dashboard definition.  See Nested widget blocks below for details.
+    <dd>{{% md %}}A nested block that describes a visualization.  Up to 300 `widget` blocks are allowed in a dashboard definition. See Nested widget blocks below for details.
 {{% /md %}}</dd>
 
 </dl>
@@ -1391,7 +1641,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardwidget">[]Dashboard<wbr>Widget</a></span>
     </dt>
-    <dd>{{% md %}}A nested block that describes a visualization.  Up to 300 `widget` blocks are allowed in a dashboard definition.  See Nested widget blocks below for details.
+    <dd>{{% md %}}A nested block that describes a visualization.  Up to 300 `widget` blocks are allowed in a dashboard definition. See Nested widget blocks below for details.
 {{% /md %}}</dd>
 
 </dl>
@@ -1486,7 +1736,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardwidget">Dashboard<wbr>Widget[]</a></span>
     </dt>
-    <dd>{{% md %}}A nested block that describes a visualization.  Up to 300 `widget` blocks are allowed in a dashboard definition.  See Nested widget blocks below for details.
+    <dd>{{% md %}}A nested block that describes a visualization.  Up to 300 `widget` blocks are allowed in a dashboard definition. See Nested widget blocks below for details.
 {{% /md %}}</dd>
 
 </dl>
@@ -1581,7 +1831,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardwidget">Sequence[Dashboard<wbr>Widget<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A nested block that describes a visualization.  Up to 300 `widget` blocks are allowed in a dashboard definition.  See Nested widget blocks below for details.
+    <dd>{{% md %}}A nested block that describes a visualization.  Up to 300 `widget` blocks are allowed in a dashboard definition. See Nested widget blocks below for details.
 {{% /md %}}</dd>
 
 </dl>
@@ -1625,7 +1875,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) A list of event types to enable filtering for.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1635,7 +1886,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) A list of attributes belonging to the specified event types to enable filtering for.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1652,7 +1904,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) A list of event types to enable filtering for.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1662,7 +1915,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) A list of attributes belonging to the specified event types to enable filtering for.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1679,7 +1933,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) A list of event types to enable filtering for.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1689,7 +1944,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) A list of attributes belonging to the specified event types to enable filtering for.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1706,7 +1962,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) A list of event types to enable filtering for.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1716,7 +1973,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) A list of attributes belonging to the specified event types to enable filtering for.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1751,7 +2009,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) Column position of widget from top left, starting at `1`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1761,7 +2020,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) Row position of widget from top left, starting at `1`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1782,7 +2042,19 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) How the widget visualizes data.  Valid values are `billboard`, `gauge`, `billboard_comparison`, `facet_bar_chart`, `faceted_line_chart`, `facet_pie_chart`, `facet_table`, `faceted_area_chart`, `heatmap`, `attribute_sheet`, `single_event`, `histogram`, `funnel`, `raw_json`, `event_feed`, `event_table`, `uniques_list`, `line_chart`, `comparison_line_chart`, `markdown`, and `metric_line_chart`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accountid_csharp">
+<a href="#accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) The account ID to use when querying data. If `account_id` is omitted, the widget will use the account ID associated with the API key used in your provider configuration. You can also use `account_id` to configure cross-account widgets or simply to be explicit about which account the widget will be pulling data from.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1802,7 +2074,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) The ID of a dashboard to link to from the widget's facets.
+* `attribute_sheet`, `comparison_line_chart`, `event_feed`, `event_table`, `funnel`, `histogram`, `line_chart`, `raw_json`, `single_event`, or `uniques_list`:
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1812,7 +2086,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) The duration, in ms, of the time window represented in the chart.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1822,7 +2097,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) The end time of the time window represented in the chart in epoch time.  When not set, the time window will end at the current time.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1832,7 +2108,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) A collection of entity IDs to display data. These are typically application IDs.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1842,7 +2119,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) Can be set to "host" to facet the metric data by host.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1852,7 +2130,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) Height of the widget.  Valid values are `1` to `3` inclusive.  Defaults to `1`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1862,7 +2141,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) The limit of distinct data series to display.  Requires `order_by` to be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1872,7 +2152,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardwidgetmetric">List&lt;Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>Dashboard<wbr>Widget<wbr>Metric<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) A nested block that describes a metric.  Nested `metric` blocks support the following arguments:
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1882,7 +2163,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) Description of the widget.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1892,7 +2174,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) Valid NRQL query string. See [Writing NRQL Queries](https://docs.newrelic.com/docs/insights/nrql-new-relic-query-language/using-nrql/introduction-nrql) for help.
+* `markdown`:
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1902,7 +2186,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) Set the order of the results.  Required when using `limit`.
+* `application_breakdown`:
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1922,7 +2208,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) The markdown source to be rendered in the widget.
+* `metric_line_chart`:
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1932,7 +2220,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) Threshold above which the displayed value will be styled with a red color.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1942,7 +2231,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) Threshold above which the displayed value will be styled with a yellow color.
+* `facet_bar_chart`, `facet_pie_chart`, `facet_table`, `faceted_area_chart`, `faceted_line_chart`, or `heatmap`:
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1962,7 +2253,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) Width of the widget.  Valid values are `1` to `3` inclusive.  Defaults to `1`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1979,7 +2271,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) Column position of widget from top left, starting at `1`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1989,7 +2282,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) Row position of widget from top left, starting at `1`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2010,7 +2304,19 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) How the widget visualizes data.  Valid values are `billboard`, `gauge`, `billboard_comparison`, `facet_bar_chart`, `faceted_line_chart`, `facet_pie_chart`, `facet_table`, `faceted_area_chart`, `heatmap`, `attribute_sheet`, `single_event`, `histogram`, `funnel`, `raw_json`, `event_feed`, `event_table`, `uniques_list`, `line_chart`, `comparison_line_chart`, `markdown`, and `metric_line_chart`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accountid_go">
+<a href="#accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) The account ID to use when querying data. If `account_id` is omitted, the widget will use the account ID associated with the API key used in your provider configuration. You can also use `account_id` to configure cross-account widgets or simply to be explicit about which account the widget will be pulling data from.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2030,7 +2336,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) The ID of a dashboard to link to from the widget's facets.
+* `attribute_sheet`, `comparison_line_chart`, `event_feed`, `event_table`, `funnel`, `histogram`, `line_chart`, `raw_json`, `single_event`, or `uniques_list`:
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2040,7 +2348,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) The duration, in ms, of the time window represented in the chart.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2050,7 +2359,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) The end time of the time window represented in the chart in epoch time.  When not set, the time window will end at the current time.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2060,7 +2370,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) A collection of entity IDs to display data. These are typically application IDs.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2070,7 +2381,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) Can be set to "host" to facet the metric data by host.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2080,7 +2392,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) Height of the widget.  Valid values are `1` to `3` inclusive.  Defaults to `1`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2090,7 +2403,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) The limit of distinct data series to display.  Requires `order_by` to be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2100,7 +2414,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardwidgetmetric">[]Dashboard<wbr>Widget<wbr>Metric</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) A nested block that describes a metric.  Nested `metric` blocks support the following arguments:
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2110,7 +2425,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) Description of the widget.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2120,7 +2436,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) Valid NRQL query string. See [Writing NRQL Queries](https://docs.newrelic.com/docs/insights/nrql-new-relic-query-language/using-nrql/introduction-nrql) for help.
+* `markdown`:
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2130,7 +2448,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) Set the order of the results.  Required when using `limit`.
+* `application_breakdown`:
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2150,7 +2470,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) The markdown source to be rendered in the widget.
+* `metric_line_chart`:
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2160,7 +2482,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) Threshold above which the displayed value will be styled with a red color.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2170,7 +2493,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) Threshold above which the displayed value will be styled with a yellow color.
+* `facet_bar_chart`, `facet_pie_chart`, `facet_table`, `faceted_area_chart`, `faceted_line_chart`, or `heatmap`:
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2190,7 +2515,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) Width of the widget.  Valid values are `1` to `3` inclusive.  Defaults to `1`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2207,7 +2533,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) Column position of widget from top left, starting at `1`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2217,7 +2544,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) Row position of widget from top left, starting at `1`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2238,7 +2566,19 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) How the widget visualizes data.  Valid values are `billboard`, `gauge`, `billboard_comparison`, `facet_bar_chart`, `faceted_line_chart`, `facet_pie_chart`, `facet_table`, `faceted_area_chart`, `heatmap`, `attribute_sheet`, `single_event`, `histogram`, `funnel`, `raw_json`, `event_feed`, `event_table`, `uniques_list`, `line_chart`, `comparison_line_chart`, `markdown`, and `metric_line_chart`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accountid_nodejs">
+<a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) The account ID to use when querying data. If `account_id` is omitted, the widget will use the account ID associated with the API key used in your provider configuration. You can also use `account_id` to configure cross-account widgets or simply to be explicit about which account the widget will be pulling data from.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2258,7 +2598,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) The ID of a dashboard to link to from the widget's facets.
+* `attribute_sheet`, `comparison_line_chart`, `event_feed`, `event_table`, `funnel`, `histogram`, `line_chart`, `raw_json`, `single_event`, or `uniques_list`:
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2268,7 +2610,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) The duration, in ms, of the time window represented in the chart.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2278,7 +2621,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) The end time of the time window represented in the chart in epoch time.  When not set, the time window will end at the current time.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2288,7 +2632,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) A collection of entity IDs to display data. These are typically application IDs.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2298,7 +2643,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) Can be set to "host" to facet the metric data by host.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2308,7 +2654,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) Height of the widget.  Valid values are `1` to `3` inclusive.  Defaults to `1`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2318,7 +2665,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) The limit of distinct data series to display.  Requires `order_by` to be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2328,7 +2676,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardwidgetmetric">Dashboard<wbr>Widget<wbr>Metric[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) A nested block that describes a metric.  Nested `metric` blocks support the following arguments:
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2338,7 +2687,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) Description of the widget.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2348,7 +2698,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) Valid NRQL query string. See [Writing NRQL Queries](https://docs.newrelic.com/docs/insights/nrql-new-relic-query-language/using-nrql/introduction-nrql) for help.
+* `markdown`:
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2358,7 +2710,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) Set the order of the results.  Required when using `limit`.
+* `application_breakdown`:
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2378,7 +2732,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) The markdown source to be rendered in the widget.
+* `metric_line_chart`:
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2388,7 +2744,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) Threshold above which the displayed value will be styled with a red color.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2398,7 +2755,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) Threshold above which the displayed value will be styled with a yellow color.
+* `facet_bar_chart`, `facet_pie_chart`, `facet_table`, `faceted_area_chart`, `faceted_line_chart`, or `heatmap`:
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2418,7 +2777,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) Width of the widget.  Valid values are `1` to `3` inclusive.  Defaults to `1`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2435,7 +2795,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) Column position of widget from top left, starting at `1`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2445,7 +2806,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) Row position of widget from top left, starting at `1`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2466,7 +2828,19 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) How the widget visualizes data.  Valid values are `billboard`, `gauge`, `billboard_comparison`, `facet_bar_chart`, `faceted_line_chart`, `facet_pie_chart`, `facet_table`, `faceted_area_chart`, `heatmap`, `attribute_sheet`, `single_event`, `histogram`, `funnel`, `raw_json`, `event_feed`, `event_table`, `uniques_list`, `line_chart`, `comparison_line_chart`, `markdown`, and `metric_line_chart`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="account_id_python">
+<a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) The account ID to use when querying data. If `account_id` is omitted, the widget will use the account ID associated with the API key used in your provider configuration. You can also use `account_id` to configure cross-account widgets or simply to be explicit about which account the widget will be pulling data from.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2486,7 +2860,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) The ID of a dashboard to link to from the widget's facets.
+* `attribute_sheet`, `comparison_line_chart`, `event_feed`, `event_table`, `funnel`, `histogram`, `line_chart`, `raw_json`, `single_event`, or `uniques_list`:
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2496,7 +2872,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) The duration, in ms, of the time window represented in the chart.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2506,7 +2883,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) The end time of the time window represented in the chart in epoch time.  When not set, the time window will end at the current time.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2516,7 +2894,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) A collection of entity IDs to display data. These are typically application IDs.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2526,7 +2905,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) Can be set to "host" to facet the metric data by host.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2536,7 +2916,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) Height of the widget.  Valid values are `1` to `3` inclusive.  Defaults to `1`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2546,7 +2927,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) The limit of distinct data series to display.  Requires `order_by` to be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2556,7 +2938,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardwidgetmetric">Sequence[Dashboard<wbr>Widget<wbr>Metric<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) A nested block that describes a metric.  Nested `metric` blocks support the following arguments:
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2566,7 +2949,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) Description of the widget.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2576,7 +2960,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) Valid NRQL query string. See [Writing NRQL Queries](https://docs.newrelic.com/docs/insights/nrql-new-relic-query-language/using-nrql/introduction-nrql) for help.
+* `markdown`:
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2586,7 +2972,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) Set the order of the results.  Required when using `limit`.
+* `application_breakdown`:
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2606,7 +2994,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) The markdown source to be rendered in the widget.
+* `metric_line_chart`:
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2616,7 +3006,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) Threshold above which the displayed value will be styled with a red color.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2626,7 +3017,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) Threshold above which the displayed value will be styled with a yellow color.
+* `facet_bar_chart`, `facet_pie_chart`, `facet_table`, `faceted_area_chart`, `faceted_line_chart`, or `heatmap`:
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2646,7 +3039,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) Width of the widget.  Valid values are `1` to `3` inclusive.  Defaults to `1`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2817,7 +3211,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) The metric name to display.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2844,7 +3239,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) The metric name to display.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2871,7 +3267,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) The metric name to display.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2898,7 +3295,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) The metric name to display.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2933,7 +3331,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) The metric name to display.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2963,7 +3362,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) The metric values to display.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2980,7 +3380,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) The metric name to display.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3010,7 +3411,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) The metric values to display.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3027,7 +3429,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) The metric name to display.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3057,7 +3460,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) The metric values to display.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3074,7 +3478,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) The metric name to display.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3104,7 +3509,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Required) The metric values to display.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

@@ -1141,79 +1141,60 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="p">])</span>
 </pre></div>
 </div>
-<p>In addition to all arguments above, the following attributes are exported:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">dashboard_url</span></code> - The URL for viewing the dashboard.</p></li>
-</ul>
-<p>All nested <code class="docutils literal notranslate"><span class="pre">widget</span></code> blocks support the following common arguments:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> - (Required) A title for the widget.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">visualization</span></code> - (Required) How the widget visualizes data.  Valid values are <code class="docutils literal notranslate"><span class="pre">billboard</span></code>, <code class="docutils literal notranslate"><span class="pre">gauge</span></code>, <code class="docutils literal notranslate"><span class="pre">billboard_comparison</span></code>, <code class="docutils literal notranslate"><span class="pre">facet_bar_chart</span></code>, <code class="docutils literal notranslate"><span class="pre">faceted_line_chart</span></code>, <code class="docutils literal notranslate"><span class="pre">facet_pie_chart</span></code>, <code class="docutils literal notranslate"><span class="pre">facet_table</span></code>, <code class="docutils literal notranslate"><span class="pre">faceted_area_chart</span></code>, <code class="docutils literal notranslate"><span class="pre">heatmap</span></code>, <code class="docutils literal notranslate"><span class="pre">attribute_sheet</span></code>, <code class="docutils literal notranslate"><span class="pre">single_event</span></code>, <code class="docutils literal notranslate"><span class="pre">histogram</span></code>, <code class="docutils literal notranslate"><span class="pre">funnel</span></code>, <code class="docutils literal notranslate"><span class="pre">raw_json</span></code>, <code class="docutils literal notranslate"><span class="pre">event_feed</span></code>, <code class="docutils literal notranslate"><span class="pre">event_table</span></code>, <code class="docutils literal notranslate"><span class="pre">uniques_list</span></code>, <code class="docutils literal notranslate"><span class="pre">line_chart</span></code>, <code class="docutils literal notranslate"><span class="pre">comparison_line_chart</span></code>, <code class="docutils literal notranslate"><span class="pre">markdown</span></code>, and <code class="docutils literal notranslate"><span class="pre">metric_line_chart</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">row</span></code> - (Required) Row position of widget from top left, starting at <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">column</span></code> - (Required) Column position of widget from top left, starting at <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">width</span></code> - (Optional) Width of the widget.  Valid values are <code class="docutils literal notranslate"><span class="pre">1</span></code> to <code class="docutils literal notranslate"><span class="pre">3</span></code> inclusive.  Defaults to <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">height</span></code> - (Optional) Height of the widget.  Valid values are <code class="docutils literal notranslate"><span class="pre">1</span></code> to <code class="docutils literal notranslate"><span class="pre">3</span></code> inclusive.  Defaults to <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">notes</span></code> - (Optional) Description of the widget.</p></li>
-</ul>
-<p>Each <code class="docutils literal notranslate"><span class="pre">visualization</span></code> type supports an additional set of arguments:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">billboard</span></code>, <code class="docutils literal notranslate"><span class="pre">billboard_comparison</span></code>:</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">nrql</span></code> - (Required) Valid NRQL query string. See <a class="reference external" href="https://docs.newrelic.com/docs/insights/nrql-new-relic-query-language/using-nrql/introduction-nrql">Writing NRQL Queries</a> for help.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">threshold_red</span></code> - (Optional) Threshold above which the displayed value will be styled with a red color.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">threshold_yellow</span></code> - (Optional) Threshold above which the displayed value will be styled with a yellow color.</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">gauge</span></code>:</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">nrql</span></code> - (Required) Valid NRQL query string. See <a class="reference external" href="https://docs.newrelic.com/docs/insights/nrql-new-relic-query-language/using-nrql/introduction-nrql">Writing NRQL Queries</a> for help.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">threshold_red</span></code> - (Required) Threshold above which the displayed value will be styled with a red color.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">threshold_yellow</span></code> - (Optional) Threshold above which the displayed value will be styled with a yellow color.</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">facet_bar_chart</span></code>, <code class="docutils literal notranslate"><span class="pre">facet_pie_chart</span></code>, <code class="docutils literal notranslate"><span class="pre">facet_table</span></code>, <code class="docutils literal notranslate"><span class="pre">faceted_area_chart</span></code>, <code class="docutils literal notranslate"><span class="pre">faceted_line_chart</span></code>, or <code class="docutils literal notranslate"><span class="pre">heatmap</span></code>:</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">nrql</span></code> - (Required) Valid NRQL query string. See <a class="reference external" href="https://docs.newrelic.com/docs/insights/nrql-new-relic-query-language/using-nrql/introduction-nrql">Writing NRQL Queries</a> for help.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">drilldown_dashboard_id</span></code> - (Optional) The ID of a dashboard to link to from the widget’s facets.</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">attribute_sheet</span></code>, <code class="docutils literal notranslate"><span class="pre">comparison_line_chart</span></code>, <code class="docutils literal notranslate"><span class="pre">event_feed</span></code>, <code class="docutils literal notranslate"><span class="pre">event_table</span></code>, <code class="docutils literal notranslate"><span class="pre">funnel</span></code>, <code class="docutils literal notranslate"><span class="pre">histogram</span></code>, <code class="docutils literal notranslate"><span class="pre">line_chart</span></code>, <code class="docutils literal notranslate"><span class="pre">raw_json</span></code>, <code class="docutils literal notranslate"><span class="pre">single_event</span></code>, or <code class="docutils literal notranslate"><span class="pre">uniques_list</span></code>:</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">nrql</span></code> - (Required) Valid NRQL query string. See <a class="reference external" href="https://docs.newrelic.com/docs/insights/nrql-new-relic-query-language/using-nrql/introduction-nrql">Writing NRQL Queries</a> for help.</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">markdown</span></code>:</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code> - (Required) The markdown source to be rendered in the widget.</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">metric_line_chart</span></code>:</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">entity_ids</span></code> - (Required) A collection of entity ids to display data for.  These are typically application IDs.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">metric</span></code> - (Required) A nested block that describes a metric.  Nested <code class="docutils literal notranslate"><span class="pre">metric</span></code> blocks support the following arguments:</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> - (Required) The metric name to display.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> - (Required) The metric values to display.</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">duration</span></code> - (Required) The duration, in ms, of the time window represented in the chart.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">end_time</span></code> - (Optional) The end time of the time window represented in the chart in epoch time.  When not set, the time window will end at the current time.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">facet</span></code> - (Optional) Can be set to “host” to facet the metric data by host.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">limit</span></code> - (Optional) The limit of distinct data series to display.  Requires <code class="docutils literal notranslate"><span class="pre">order_by</span></code> to be set.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">order_by</span></code> - (Optional) Set the order of the results.  Required when using <code class="docutils literal notranslate"><span class="pre">limit</span></code>.</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">application_breakdown</span></code>:</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">entity_ids</span></code> - (Required) A collection of entity IDs to display data. These are typically application IDs.</p></li>
-</ul>
-</li>
-</ul>
-<p>The optional filter block supports the following arguments:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">event_types</span></code> - (Optional) A list of event types to enable filtering for.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">attributes</span></code> - (Optional) A list of attributes belonging to the specified event types to enable filtering for.</p></li>
-</ul>
+<p>See additional examples.</p>
+<p>The example below shows how you can display data for an application from a primary account and an application from a subaccount. In order to create cross-account widgets, you must use an API key from a user with admin permissions in the primary account. Please see the <code class="docutils literal notranslate"><span class="pre">widget</span></code> attribute documentation for more details.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_newrelic</span> <span class="k">as</span> <span class="nn">newrelic</span>
+
+<span class="n">primary_account_application</span> <span class="o">=</span> <span class="n">newrelic</span><span class="o">.</span><span class="n">get_entity</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Main Account Application Name&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;APPLICATION&quot;</span><span class="p">,</span>
+    <span class="n">domain</span><span class="o">=</span><span class="s2">&quot;APM&quot;</span><span class="p">)</span>
+<span class="n">subaccount_application</span> <span class="o">=</span> <span class="n">newrelic</span><span class="o">.</span><span class="n">get_entity</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Subaccount Application Name&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;APPLICATION&quot;</span><span class="p">,</span>
+    <span class="n">domain</span><span class="o">=</span><span class="s2">&quot;APM&quot;</span><span class="p">)</span>
+<span class="n">cross_account_widget_example</span> <span class="o">=</span> <span class="n">newrelic</span><span class="o">.</span><span class="n">Dashboard</span><span class="p">(</span><span class="s2">&quot;crossAccountWidgetExample&quot;</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;tf-test-cross-account-widget-dashboard&quot;</span><span class="p">,</span>
+    <span class="nb">filter</span><span class="o">=</span><span class="n">newrelic</span><span class="o">.</span><span class="n">DashboardFilterArgs</span><span class="p">(</span>
+        <span class="n">event_types</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Transaction&quot;</span><span class="p">],</span>
+        <span class="n">attributes</span><span class="o">=</span><span class="p">[</span>
+            <span class="s2">&quot;appName&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;envName&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">),</span>
+    <span class="n">grid_column_count</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span>
+    <span class="n">widgets</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">newrelic</span><span class="o">.</span><span class="n">DashboardWidgetArgs</span><span class="p">(</span>
+            <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Apdex (primary account)&quot;</span><span class="p">,</span>
+            <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+            <span class="n">column</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+            <span class="n">width</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span>
+            <span class="n">height</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+            <span class="n">visualization</span><span class="o">=</span><span class="s2">&quot;metric_line_chart&quot;</span><span class="p">,</span>
+            <span class="n">duration</span><span class="o">=</span><span class="mi">1800000</span><span class="p">,</span>
+            <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="n">newrelic</span><span class="o">.</span><span class="n">DashboardWidgetMetricArgs</span><span class="p">(</span>
+                <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Apdex&quot;</span><span class="p">,</span>
+                <span class="n">values</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;score&quot;</span><span class="p">],</span>
+            <span class="p">)],</span>
+            <span class="n">entity_ids</span><span class="o">=</span><span class="p">[</span><span class="n">primary_account_application</span><span class="o">.</span><span class="n">application_id</span><span class="p">],</span>
+        <span class="p">),</span>
+        <span class="n">newrelic</span><span class="o">.</span><span class="n">DashboardWidgetArgs</span><span class="p">(</span>
+            <span class="n">account_id</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;subaccount_id&quot;</span><span class="p">],</span>
+            <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Apdex (subaccount)&quot;</span><span class="p">,</span>
+            <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+            <span class="n">column</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span>
+            <span class="n">width</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span>
+            <span class="n">height</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+            <span class="n">visualization</span><span class="o">=</span><span class="s2">&quot;metric_line_chart&quot;</span><span class="p">,</span>
+            <span class="n">duration</span><span class="o">=</span><span class="mi">1800000</span><span class="p">,</span>
+            <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="n">newrelic</span><span class="o">.</span><span class="n">DashboardWidgetMetricArgs</span><span class="p">(</span>
+                <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Apdex&quot;</span><span class="p">,</span>
+                <span class="n">values</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;score&quot;</span><span class="p">],</span>
+            <span class="p">)],</span>
+            <span class="n">entity_ids</span><span class="o">=</span><span class="p">[</span><span class="n">subaccount_application</span><span class="o">.</span><span class="n">application_id</span><span class="p">],</span>
+        <span class="p">),</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1225,7 +1206,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>icon</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The icon for the dashboard.  Valid values are <code class="docutils literal notranslate"><span class="pre">adjust</span></code>, <code class="docutils literal notranslate"><span class="pre">archive</span></code>, <code class="docutils literal notranslate"><span class="pre">bar-chart</span></code>, <code class="docutils literal notranslate"><span class="pre">bell</span></code>, <code class="docutils literal notranslate"><span class="pre">bolt</span></code>, <code class="docutils literal notranslate"><span class="pre">bug</span></code>, <code class="docutils literal notranslate"><span class="pre">bullhorn</span></code>, <code class="docutils literal notranslate"><span class="pre">bullseye</span></code>, <code class="docutils literal notranslate"><span class="pre">clock-o</span></code>, <code class="docutils literal notranslate"><span class="pre">cloud</span></code>, <code class="docutils literal notranslate"><span class="pre">cog</span></code>, <code class="docutils literal notranslate"><span class="pre">comments-o</span></code>, <code class="docutils literal notranslate"><span class="pre">crosshairs</span></code>, <code class="docutils literal notranslate"><span class="pre">dashboard</span></code>, <code class="docutils literal notranslate"><span class="pre">envelope</span></code>, <code class="docutils literal notranslate"><span class="pre">fire</span></code>, <code class="docutils literal notranslate"><span class="pre">flag</span></code>, <code class="docutils literal notranslate"><span class="pre">flask</span></code>, <code class="docutils literal notranslate"><span class="pre">globe</span></code>, <code class="docutils literal notranslate"><span class="pre">heart</span></code>, <code class="docutils literal notranslate"><span class="pre">leaf</span></code>, <code class="docutils literal notranslate"><span class="pre">legal</span></code>, <code class="docutils literal notranslate"><span class="pre">life-ring</span></code>, <code class="docutils literal notranslate"><span class="pre">line-chart</span></code>, <code class="docutils literal notranslate"><span class="pre">magic</span></code>, <code class="docutils literal notranslate"><span class="pre">mobile</span></code>, <code class="docutils literal notranslate"><span class="pre">money</span></code>, <code class="docutils literal notranslate"><span class="pre">none</span></code>, <code class="docutils literal notranslate"><span class="pre">paper-plane</span></code>, <code class="docutils literal notranslate"><span class="pre">pie-chart</span></code>, <code class="docutils literal notranslate"><span class="pre">puzzle-piece</span></code>, <code class="docutils literal notranslate"><span class="pre">road</span></code>, <code class="docutils literal notranslate"><span class="pre">rocket</span></code>, <code class="docutils literal notranslate"><span class="pre">shopping-cart</span></code>, <code class="docutils literal notranslate"><span class="pre">sitemap</span></code>, <code class="docutils literal notranslate"><span class="pre">sliders</span></code>, <code class="docutils literal notranslate"><span class="pre">tablet</span></code>, <code class="docutils literal notranslate"><span class="pre">thumbs-down</span></code>, <code class="docutils literal notranslate"><span class="pre">thumbs-up</span></code>, <code class="docutils literal notranslate"><span class="pre">trophy</span></code>, <code class="docutils literal notranslate"><span class="pre">usd</span></code>, <code class="docutils literal notranslate"><span class="pre">user</span></code>, and <code class="docutils literal notranslate"><span class="pre">users</span></code>.  Defaults to <code class="docutils literal notranslate"><span class="pre">bar-chart</span></code>.</p></li>
 <li><p><strong>title</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The title of the dashboard.</p></li>
 <li><p><strong>visibility</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Determines who can see the dashboard in an account. Valid values are <code class="docutils literal notranslate"><span class="pre">all</span></code> or <code class="docutils literal notranslate"><span class="pre">owner</span></code>.  Defaults to <code class="docutils literal notranslate"><span class="pre">all</span></code>.</p></li>
-<li><p><strong>widgets</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'DashboardWidgetArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A nested block that describes a visualization.  Up to 300 <code class="docutils literal notranslate"><span class="pre">widget</span></code> blocks are allowed in a dashboard definition.  See Nested widget blocks below for details.</p></li>
+<li><p><strong>widgets</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'DashboardWidgetArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A nested block that describes a visualization.  Up to 300 <code class="docutils literal notranslate"><span class="pre">widget</span></code> blocks are allowed in a dashboard definition. See Nested widget blocks below for details.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1247,7 +1228,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>icon</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The icon for the dashboard.  Valid values are <code class="docutils literal notranslate"><span class="pre">adjust</span></code>, <code class="docutils literal notranslate"><span class="pre">archive</span></code>, <code class="docutils literal notranslate"><span class="pre">bar-chart</span></code>, <code class="docutils literal notranslate"><span class="pre">bell</span></code>, <code class="docutils literal notranslate"><span class="pre">bolt</span></code>, <code class="docutils literal notranslate"><span class="pre">bug</span></code>, <code class="docutils literal notranslate"><span class="pre">bullhorn</span></code>, <code class="docutils literal notranslate"><span class="pre">bullseye</span></code>, <code class="docutils literal notranslate"><span class="pre">clock-o</span></code>, <code class="docutils literal notranslate"><span class="pre">cloud</span></code>, <code class="docutils literal notranslate"><span class="pre">cog</span></code>, <code class="docutils literal notranslate"><span class="pre">comments-o</span></code>, <code class="docutils literal notranslate"><span class="pre">crosshairs</span></code>, <code class="docutils literal notranslate"><span class="pre">dashboard</span></code>, <code class="docutils literal notranslate"><span class="pre">envelope</span></code>, <code class="docutils literal notranslate"><span class="pre">fire</span></code>, <code class="docutils literal notranslate"><span class="pre">flag</span></code>, <code class="docutils literal notranslate"><span class="pre">flask</span></code>, <code class="docutils literal notranslate"><span class="pre">globe</span></code>, <code class="docutils literal notranslate"><span class="pre">heart</span></code>, <code class="docutils literal notranslate"><span class="pre">leaf</span></code>, <code class="docutils literal notranslate"><span class="pre">legal</span></code>, <code class="docutils literal notranslate"><span class="pre">life-ring</span></code>, <code class="docutils literal notranslate"><span class="pre">line-chart</span></code>, <code class="docutils literal notranslate"><span class="pre">magic</span></code>, <code class="docutils literal notranslate"><span class="pre">mobile</span></code>, <code class="docutils literal notranslate"><span class="pre">money</span></code>, <code class="docutils literal notranslate"><span class="pre">none</span></code>, <code class="docutils literal notranslate"><span class="pre">paper-plane</span></code>, <code class="docutils literal notranslate"><span class="pre">pie-chart</span></code>, <code class="docutils literal notranslate"><span class="pre">puzzle-piece</span></code>, <code class="docutils literal notranslate"><span class="pre">road</span></code>, <code class="docutils literal notranslate"><span class="pre">rocket</span></code>, <code class="docutils literal notranslate"><span class="pre">shopping-cart</span></code>, <code class="docutils literal notranslate"><span class="pre">sitemap</span></code>, <code class="docutils literal notranslate"><span class="pre">sliders</span></code>, <code class="docutils literal notranslate"><span class="pre">tablet</span></code>, <code class="docutils literal notranslate"><span class="pre">thumbs-down</span></code>, <code class="docutils literal notranslate"><span class="pre">thumbs-up</span></code>, <code class="docutils literal notranslate"><span class="pre">trophy</span></code>, <code class="docutils literal notranslate"><span class="pre">usd</span></code>, <code class="docutils literal notranslate"><span class="pre">user</span></code>, and <code class="docutils literal notranslate"><span class="pre">users</span></code>.  Defaults to <code class="docutils literal notranslate"><span class="pre">bar-chart</span></code>.</p></li>
 <li><p><strong>title</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The title of the dashboard.</p></li>
 <li><p><strong>visibility</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Determines who can see the dashboard in an account. Valid values are <code class="docutils literal notranslate"><span class="pre">all</span></code> or <code class="docutils literal notranslate"><span class="pre">owner</span></code>.  Defaults to <code class="docutils literal notranslate"><span class="pre">all</span></code>.</p></li>
-<li><p><strong>widgets</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'DashboardWidgetArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A nested block that describes a visualization.  Up to 300 <code class="docutils literal notranslate"><span class="pre">widget</span></code> blocks are allowed in a dashboard definition.  See Nested widget blocks below for details.</p></li>
+<li><p><strong>widgets</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'DashboardWidgetArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A nested block that describes a visualization.  Up to 300 <code class="docutils literal notranslate"><span class="pre">widget</span></code> blocks are allowed in a dashboard definition. See Nested widget blocks below for details.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1298,7 +1279,7 @@ properties used to qualify the lookup.</p>
 <dl class="py method">
 <dt id="pulumi_newrelic.Dashboard.widgets">
 <em class="property">property </em><code class="sig-name descname">widgets</code><a class="headerlink" href="#pulumi_newrelic.Dashboard.widgets" title="Permalink to this definition">¶</a></dt>
-<dd><p>A nested block that describes a visualization.  Up to 300 <code class="docutils literal notranslate"><span class="pre">widget</span></code> blocks are allowed in a dashboard definition.  See Nested widget blocks below for details.</p>
+<dd><p>A nested block that describes a visualization.  Up to 300 <code class="docutils literal notranslate"><span class="pre">widget</span></code> blocks are allowed in a dashboard definition. See Nested widget blocks below for details.</p>
 </dd></dl>
 
 <dl class="py method">

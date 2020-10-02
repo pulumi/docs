@@ -3,7 +3,7 @@ title: "Module types"
 title_tag: "Module types | Package @pulumi/newrelic | Node.js SDK"
 linktitle: "types"
 meta_desc: "Explore members of the types module in the @pulumi/newrelic package."
-git_sha: "7f9c5139c62e350f3f0ad0f93736621c7960b407"
+git_sha: "fb5db70552ce699fa8eaf186dce8d6a28fa1c863"
 block_external_search_index: true
 ---
 
