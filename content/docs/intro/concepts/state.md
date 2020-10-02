@@ -100,17 +100,16 @@ At a glance, the Pulumi Service backend provides the following benefits:
 - Concurrent state locking to prevent corrupting your infrastructure state in a team environment
 - Advanced policy and RBAC (Role Based Access Control)
 - Stack access control, including information on who owns a stack, who last modified stack, and what time the stack was modified
-- Refresh config from the last deployment 
-- Secrets handled by a key managed by the service and option to use passpharse-based key
-
+- Refresh config from the last deployment
+- Secrets handled by a key managed by the service or the option to use passpharse-based key
 
 ### Self-managed backend risks:
 
 At a glance, the self-hosted backend requires that the following issues are addressed:
 
 - Implement your own state management including backup, sharing, and team access synchronization
-- Automated deployments colliding and potentially corrupting state/making simultaneous edits to your infrastructure because there is no concurrency control. 
-- Must use passpharse-based secrets provider
+- Automated deployments colliding and potentially corrupting state/making simultaneous edits to your infrastructure because there is no concurrency control
+- Secrets handled by a key that must use the passphrase-based secrets provider
 
 #### app.pulumi.com architecture
 
