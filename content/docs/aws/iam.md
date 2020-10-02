@@ -69,8 +69,8 @@ const user = new aws.iam.User("myuser");
 const group = new aws.iam.Group("mygroup");
 
 const policyAttachment = new aws.iam.PolicyAttachment("mypolicyattachment", {
-    users: [user],
-    groups: [group],
+    users: [user.name],
+    groups: [group.name],
     roles: [role],
     policyArn: policy.arn
 });
