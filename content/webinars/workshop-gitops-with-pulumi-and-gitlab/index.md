@@ -10,7 +10,7 @@ unlisted: false
 gated: true
 type: webinars
 external: false
-url_slug: gitops-11-16-2020
+url_slug: workshop-gitops-with-pulumi-and-gitlab
 hero:
   title: "Workshop: GitOps with Pulumi and GitLab"
   image: /images/webinar/gitlab-demo.png
