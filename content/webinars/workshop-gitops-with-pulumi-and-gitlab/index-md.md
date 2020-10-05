@@ -35,5 +35,5 @@ main:
     using your favorite languages."
 form:
   gotowebinar_key: "6999643165114589707"
-    hubspot_form_id: "ebc6064d-756c-4d04-ac63-31ad16780ab5"
+  hubspot_form_id: "ebc6064d-756c-4d04-ac63-31ad16780ab5"
 ---
