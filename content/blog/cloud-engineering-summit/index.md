@@ -1,6 +1,6 @@
 ---
 title: "A New Era of Cloud Engineering"
-date: 2020-10-01
+date: 2020-10-05
 meta_desc: "Discover the next evolution for building cloud infrastructure."
 meta_image: cloud_engineering.png
 authors:
