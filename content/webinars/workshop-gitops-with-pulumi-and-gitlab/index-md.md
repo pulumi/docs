@@ -28,6 +28,11 @@ main:
     - Define Resources in AWS
   duration: 02:00:00
   title: "Workshop: GitOps with Pulumi and GitLab"
+  description: "Deploy and update your infrastructure the same way you deliver the
+    rest of your applications: with  code delivered through your CI/CD pipeline.
+    Learn how Pulumi’s modern infrastructure as code platform helps your team
+    deliver features faster by helping you to define resources on any cloud
+    using your favorite languages."
 form:
   gotowebinar_key: "6999643165114589707"
 ---
