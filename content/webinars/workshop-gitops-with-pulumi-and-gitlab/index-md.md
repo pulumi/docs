@@ -26,7 +26,7 @@ main:
     - Define an Infrastructure Code Review Process
     - Setup Pulumi
     - Define Resources in AWS
-  duration: 02:00:00
+  duration: 2 hours
   title: "Workshop: GitOps with Pulumi and GitLab"
   description: "Deploy and update your infrastructure the same way you deliver the
     rest of your applications: with  code delivered through your CI/CD pipeline.
