@@ -8,8 +8,8 @@ pulumi_tv: false
 preview_image: /images/webinar/gitlab-demo.png
 unlisted: false
 gated: true
-type: web
-external: true
+type: webinars
+external: false
 url_slug: gitops-11-16-2020
 hero:
   title: "Workshop: GitOps with Pulumi and GitLab"
@@ -35,4 +35,5 @@ main:
     using your favorite languages."
 form:
   gotowebinar_key: "6999643165114589707"
+    hubspot_form_id: "ebc6064d-756c-4d04-ac63-31ad16780ab5"
 ---
