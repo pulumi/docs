@@ -296,7 +296,7 @@ class MyStack : Stack
             Name = "00000000-0000-0000-0000-000000000000",
             Scope = primary.Apply(primary => primary.Id),
             RoleDefinitionId = exampleRoleDefinition.RoleDefinitionResourceId,
-            PrincipalId = exampleClientConfig.Apply(exampleClientConfig => exampleClientConfig.ClientId),
+            PrincipalId = exampleClientConfig.Apply(exampleClientConfig => exampleClientConfig.ObjectId),
         });
     }
 
@@ -347,7 +347,7 @@ func main() {
 			Name:             pulumi.String("00000000-0000-0000-0000-000000000000"),
 			Scope:            pulumi.String(primary.Id),
 			RoleDefinitionId: exampleRoleDefinition.RoleDefinitionResourceId,
-			PrincipalId:      pulumi.String(exampleClientConfig.ClientId),
+			PrincipalId:      pulumi.String(exampleClientConfig.ObjectId),
 		})
 		if err != nil {
 			return err
@@ -378,7 +378,7 @@ example_assignment = azure.authorization.Assignment("exampleAssignment",
     name="00000000-0000-0000-0000-000000000000",
     scope=primary.id,
     role_definition_id=example_role_definition.role_definition_resource_id,
-    principal_id=example_client_config.client_id)
+    principal_id=example_client_config.object_id)
 ```
 
 {{% /example %}}
@@ -404,7 +404,7 @@ const exampleAssignment = new azure.authorization.Assignment("exampleAssignment"
     name: "00000000-0000-0000-0000-000000000000",
     scope: primary.then(primary => primary.id),
     roleDefinitionId: exampleRoleDefinition.roleDefinitionResourceId,
-    principalId: exampleClientConfig.then(exampleClientConfig => exampleClientConfig.clientId),
+    principalId: exampleClientConfig.then(exampleClientConfig => exampleClientConfig.objectId),
 });
 ```
 
@@ -448,7 +448,7 @@ class MyStack : Stack
             Name = "00000000-0000-0000-0000-000000000000",
             Scope = data.Azurerm_management_group.Primary.Id,
             RoleDefinitionId = exampleRoleDefinition.RoleDefinitionResourceId,
-            PrincipalId = exampleClientConfig.Apply(exampleClientConfig => exampleClientConfig.ClientId),
+            PrincipalId = exampleClientConfig.Apply(exampleClientConfig => exampleClientConfig.ObjectId),
         });
     }
 
@@ -504,7 +504,7 @@ func main() {
 			Name:             pulumi.String("00000000-0000-0000-0000-000000000000"),
 			Scope:            pulumi.Any(data.Azurerm_management_group.Primary.Id),
 			RoleDefinitionId: exampleRoleDefinition.RoleDefinitionResourceId,
-			PrincipalId:      pulumi.String(exampleClientConfig.ClientId),
+			PrincipalId:      pulumi.String(exampleClientConfig.ObjectId),
 		})
 		if err != nil {
 			return err
@@ -536,7 +536,7 @@ example_assignment = azure.authorization.Assignment("exampleAssignment",
     name="00000000-0000-0000-0000-000000000000",
     scope=data["azurerm_management_group"]["primary"]["id"],
     role_definition_id=example_role_definition.role_definition_resource_id,
-    principal_id=example_client_config.client_id)
+    principal_id=example_client_config.object_id)
 ```
 
 {{% /example %}}
@@ -563,7 +563,7 @@ const exampleAssignment = new azure.authorization.Assignment("exampleAssignment"
     name: "00000000-0000-0000-0000-000000000000",
     scope: data.azurerm_management_group.primary.id,
     roleDefinitionId: exampleRoleDefinition.roleDefinitionResourceId,
-    principalId: exampleClientConfig.then(exampleClientConfig => exampleClientConfig.clientId),
+    principalId: exampleClientConfig.then(exampleClientConfig => exampleClientConfig.objectId),
 });
 ```
 

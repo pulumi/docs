@@ -417,8 +417,8 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="primarymasterkey_csharp">
-<a href="#primarymasterkey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Master<wbr>Key</a>
+        <span id="primarykey_csharp">
+<a href="#primarykey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -426,16 +426,36 @@ The following output properties are available:
     <dd>{{% md %}}The Primary master key for the CosmosDB Account.
 {{% /md %}}</dd>
 
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="primarymasterkey_csharp">
+<a href="#primarymasterkey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Master<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
+
     <dt class="property-"
             title="">
-        <span id="primaryreadonlymasterkey_csharp">
-<a href="#primaryreadonlymasterkey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Readonly<wbr>Master<wbr>Key</a>
+        <span id="primaryreadonlykey_csharp">
+<a href="#primaryreadonlykey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Readonly<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Primary read-only master Key for the CosmosDB Account.
 {{% /md %}}</dd>
+
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="primaryreadonlymasterkey_csharp">
+<a href="#primaryreadonlymasterkey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Readonly<wbr>Master<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -460,8 +480,8 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="secondarymasterkey_csharp">
-<a href="#secondarymasterkey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Master<wbr>Key</a>
+        <span id="secondarykey_csharp">
+<a href="#secondarykey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -469,16 +489,36 @@ The following output properties are available:
     <dd>{{% md %}}The Secondary master key for the CosmosDB Account.
 {{% /md %}}</dd>
 
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="secondarymasterkey_csharp">
+<a href="#secondarymasterkey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Master<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
+
     <dt class="property-"
             title="">
-        <span id="secondaryreadonlymasterkey_csharp">
-<a href="#secondaryreadonlymasterkey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Readonly<wbr>Master<wbr>Key</a>
+        <span id="secondaryreadonlykey_csharp">
+<a href="#secondaryreadonlykey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Readonly<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Secondary read-only master key for the CosmosDB Account.
 {{% /md %}}</dd>
+
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="secondaryreadonlymasterkey_csharp">
+<a href="#secondaryreadonlymasterkey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Readonly<wbr>Master<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -673,8 +713,8 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="primarymasterkey_go">
-<a href="#primarymasterkey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Master<wbr>Key</a>
+        <span id="primarykey_go">
+<a href="#primarykey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -682,16 +722,36 @@ The following output properties are available:
     <dd>{{% md %}}The Primary master key for the CosmosDB Account.
 {{% /md %}}</dd>
 
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="primarymasterkey_go">
+<a href="#primarymasterkey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Master<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
+
     <dt class="property-"
             title="">
-        <span id="primaryreadonlymasterkey_go">
-<a href="#primaryreadonlymasterkey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Readonly<wbr>Master<wbr>Key</a>
+        <span id="primaryreadonlykey_go">
+<a href="#primaryreadonlykey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Readonly<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Primary read-only master Key for the CosmosDB Account.
 {{% /md %}}</dd>
+
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="primaryreadonlymasterkey_go">
+<a href="#primaryreadonlymasterkey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Readonly<wbr>Master<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -716,8 +776,8 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="secondarymasterkey_go">
-<a href="#secondarymasterkey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Master<wbr>Key</a>
+        <span id="secondarykey_go">
+<a href="#secondarykey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -725,16 +785,36 @@ The following output properties are available:
     <dd>{{% md %}}The Secondary master key for the CosmosDB Account.
 {{% /md %}}</dd>
 
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="secondarymasterkey_go">
+<a href="#secondarymasterkey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Master<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
+
     <dt class="property-"
             title="">
-        <span id="secondaryreadonlymasterkey_go">
-<a href="#secondaryreadonlymasterkey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Readonly<wbr>Master<wbr>Key</a>
+        <span id="secondaryreadonlykey_go">
+<a href="#secondaryreadonlykey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Readonly<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Secondary read-only master key for the CosmosDB Account.
 {{% /md %}}</dd>
+
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="secondaryreadonlymasterkey_go">
+<a href="#secondaryreadonlymasterkey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Readonly<wbr>Master<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -929,8 +1009,8 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="primarymasterkey_nodejs">
-<a href="#primarymasterkey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Master<wbr>Key</a>
+        <span id="primarykey_nodejs">
+<a href="#primarykey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -938,16 +1018,36 @@ The following output properties are available:
     <dd>{{% md %}}The Primary master key for the CosmosDB Account.
 {{% /md %}}</dd>
 
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="primarymasterkey_nodejs">
+<a href="#primarymasterkey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Master<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
+
     <dt class="property-"
             title="">
-        <span id="primaryreadonlymasterkey_nodejs">
-<a href="#primaryreadonlymasterkey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Readonly<wbr>Master<wbr>Key</a>
+        <span id="primaryreadonlykey_nodejs">
+<a href="#primaryreadonlykey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Readonly<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Primary read-only master Key for the CosmosDB Account.
 {{% /md %}}</dd>
+
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="primaryreadonlymasterkey_nodejs">
+<a href="#primaryreadonlymasterkey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Readonly<wbr>Master<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -972,8 +1072,8 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="secondarymasterkey_nodejs">
-<a href="#secondarymasterkey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Master<wbr>Key</a>
+        <span id="secondarykey_nodejs">
+<a href="#secondarykey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -981,16 +1081,36 @@ The following output properties are available:
     <dd>{{% md %}}The Secondary master key for the CosmosDB Account.
 {{% /md %}}</dd>
 
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="secondarymasterkey_nodejs">
+<a href="#secondarymasterkey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Master<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
+
     <dt class="property-"
             title="">
-        <span id="secondaryreadonlymasterkey_nodejs">
-<a href="#secondaryreadonlymasterkey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Readonly<wbr>Master<wbr>Key</a>
+        <span id="secondaryreadonlykey_nodejs">
+<a href="#secondaryreadonlykey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Readonly<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Secondary read-only master key for the CosmosDB Account.
 {{% /md %}}</dd>
+
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="secondaryreadonlymasterkey_nodejs">
+<a href="#secondaryreadonlymasterkey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Readonly<wbr>Master<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -1185,8 +1305,8 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="primary_master_key_python">
-<a href="#primary_master_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>master_<wbr>key</a>
+        <span id="primary_key_python">
+<a href="#primary_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1194,16 +1314,36 @@ The following output properties are available:
     <dd>{{% md %}}The Primary master key for the CosmosDB Account.
 {{% /md %}}</dd>
 
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="primary_master_key_python">
+<a href="#primary_master_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>master_<wbr>key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
+
     <dt class="property-"
             title="">
-        <span id="primary_readonly_master_key_python">
-<a href="#primary_readonly_master_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>readonly_<wbr>master_<wbr>key</a>
+        <span id="primary_readonly_key_python">
+<a href="#primary_readonly_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>readonly_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Primary read-only master Key for the CosmosDB Account.
 {{% /md %}}</dd>
+
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="primary_readonly_master_key_python">
+<a href="#primary_readonly_master_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>readonly_<wbr>master_<wbr>key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -1228,8 +1368,8 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="secondary_master_key_python">
-<a href="#secondary_master_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>master_<wbr>key</a>
+        <span id="secondary_key_python">
+<a href="#secondary_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1237,16 +1377,36 @@ The following output properties are available:
     <dd>{{% md %}}The Secondary master key for the CosmosDB Account.
 {{% /md %}}</dd>
 
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="secondary_master_key_python">
+<a href="#secondary_master_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>master_<wbr>key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
+
     <dt class="property-"
             title="">
-        <span id="secondary_readonly_master_key_python">
-<a href="#secondary_readonly_master_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>readonly_<wbr>master_<wbr>key</a>
+        <span id="secondary_readonly_key_python">
+<a href="#secondary_readonly_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>readonly_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Secondary read-only master key for the CosmosDB Account.
 {{% /md %}}</dd>
+
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="secondary_readonly_master_key_python">
+<a href="#secondary_readonly_master_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>readonly_<wbr>master_<wbr>key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">

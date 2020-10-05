@@ -1202,6 +1202,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="templatedeployment_csharp">
+<a href="#templatedeployment_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Deployment</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerfeaturestemplatedeployment">Provider<wbr>Features<wbr>Template<wbr>Deployment<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="virtualmachine_csharp">
 <a href="#virtualmachine_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine</a>
 </span> 
@@ -1244,6 +1254,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeaturesnetwork">Provider<wbr>Features<wbr>Network</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="templatedeployment_go">
+<a href="#templatedeployment_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Deployment</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerfeaturestemplatedeployment">Provider<wbr>Features<wbr>Template<wbr>Deployment</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1296,6 +1316,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="templatedeployment_nodejs">
+<a href="#templatedeployment_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Deployment</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerfeaturestemplatedeployment">Provider<wbr>Features<wbr>Template<wbr>Deployment</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="virtualmachine_nodejs">
 <a href="#virtualmachine_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine</a>
 </span> 
@@ -1338,6 +1368,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeaturesnetwork">Provider<wbr>Features<wbr>Network<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="template_deployment_python">
+<a href="#template_deployment_python" style="color: inherit; text-decoration: inherit;">template_<wbr>deployment</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerfeaturestemplatedeployment">Provider<wbr>Features<wbr>Template<wbr>Deployment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1512,8 +1552,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="relaxedlocking_csharp">
 <a href="#relaxedlocking_csharp" style="color: inherit; text-decoration: inherit;">Relaxed<wbr>Locking</a>
 </span> 
@@ -1529,8 +1569,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="relaxedlocking_go">
 <a href="#relaxedlocking_go" style="color: inherit; text-decoration: inherit;">Relaxed<wbr>Locking</a>
 </span> 
@@ -1546,8 +1586,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="relaxedlocking_nodejs">
 <a href="#relaxedlocking_nodejs" style="color: inherit; text-decoration: inherit;">relaxed<wbr>Locking</a>
 </span> 
@@ -1563,10 +1603,96 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="relaxed_locking_python">
 <a href="#relaxed_locking_python" style="color: inherit; text-decoration: inherit;">relaxed_<wbr>locking</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="providerfeaturestemplatedeployment">Provider<wbr>Features<wbr>Template<wbr>Deployment</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProviderFeaturesTemplateDeployment">input</a>   API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/?tab=doc#ProviderFeaturesTemplateDeploymentArgs">input</a>   API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Inputs.ProviderFeaturesTemplateDeploymentArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="deletenesteditemsduringdeletion_csharp">
+<a href="#deletenesteditemsduringdeletion_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Nested<wbr>Items<wbr>During<wbr>Deletion</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="deletenesteditemsduringdeletion_go">
+<a href="#deletenesteditemsduringdeletion_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Nested<wbr>Items<wbr>During<wbr>Deletion</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="deletenesteditemsduringdeletion_nodejs">
+<a href="#deletenesteditemsduringdeletion_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Nested<wbr>Items<wbr>During<wbr>Deletion</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="delete_nested_items_during_deletion_python">
+<a href="#delete_nested_items_during_deletion_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>nested_<wbr>items_<wbr>during_<wbr>deletion</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

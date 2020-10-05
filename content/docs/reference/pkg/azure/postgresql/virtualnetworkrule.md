@@ -55,7 +55,7 @@ class MyStack : Stack
         {
             Location = exampleResourceGroup.Location,
             ResourceGroupName = exampleResourceGroup.Name,
-            SkuName = "B_Gen5_2",
+            SkuName = "GP_Gen5_2",
             StorageProfile = new Azure.PostgreSql.Inputs.ServerStorageProfileArgs
             {
                 StorageMb = 5120,
@@ -124,7 +124,7 @@ func main() {
 		exampleServer, err := postgresql.NewServer(ctx, "exampleServer", &postgresql.ServerArgs{
 			Location:          exampleResourceGroup.Location,
 			ResourceGroupName: exampleResourceGroup.Name,
-			SkuName:           pulumi.String("B_Gen5_2"),
+			SkuName:           pulumi.String("GP_Gen5_2"),
 			StorageProfile: &postgresql.ServerStorageProfileArgs{
 				StorageMb:           pulumi.Int(5120),
 				BackupRetentionDays: pulumi.Int(7),
@@ -172,7 +172,7 @@ internal = azure.network.Subnet("internal",
 example_server = azure.postgresql.Server("exampleServer",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
-    sku_name="B_Gen5_2",
+    sku_name="GP_Gen5_2",
     storage_profile=azure.postgresql.ServerStorageProfileArgs(
         storage_mb=5120,
         backup_retention_days=7,
@@ -212,7 +212,7 @@ const internal = new azure.network.Subnet("internal", {
 const exampleServer = new azure.postgresql.Server("exampleServer", {
     location: exampleResourceGroup.location,
     resourceGroupName: exampleResourceGroup.name,
-    skuName: "B_Gen5_2",
+    skuName: "GP_Gen5_2",
     storageProfile: {
         storageMb: 5120,
         backupRetentionDays: 7,

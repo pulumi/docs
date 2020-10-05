@@ -252,6 +252,10 @@ class MyStack : Stack
             {
                 CorrelationId = "high",
                 Label = "red",
+                Properties = 
+                {
+                    { "customProperty", "value" },
+                },
             },
         });
     }
@@ -316,6 +320,9 @@ func main() {
 			CorrelationFilter: &servicebus.SubscriptionRuleCorrelationFilterArgs{
 				CorrelationId: pulumi.String("high"),
 				Label:         pulumi.String("red"),
+				Properties: pulumi.StringMap{
+					"customProperty": pulumi.String("value"),
+				},
 			},
 		})
 		if err != nil {
@@ -359,6 +366,9 @@ example_subscription_rule = azure.servicebus.SubscriptionRule("exampleSubscripti
     correlation_filter=azure.servicebus.SubscriptionRuleCorrelationFilterArgs(
         correlation_id="high",
         label="red",
+        properties={
+            "customProperty": "value",
+        },
     ))
 ```
 
@@ -399,6 +409,9 @@ const exampleSubscriptionRule = new azure.servicebus.SubscriptionRule("exampleSu
     correlationFilter: {
         correlationId: "high",
         label: "red",
+        properties: {
+            customProperty: "value",
+        },
     },
 });
 ```
@@ -1715,6 +1728,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="properties_csharp">
+<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of user defined properties to be included in the filter. Specified as a map of name/value pairs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="replyto_csharp">
 <a href="#replyto_csharp" style="color: inherit; text-decoration: inherit;">Reply<wbr>To</a>
 </span> 
@@ -1806,6 +1830,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the message.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_go">
+<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A list of user defined properties to be included in the filter. Specified as a map of name/value pairs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1905,6 +1940,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="properties_nodejs">
+<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A list of user defined properties to be included in the filter. Specified as a map of name/value pairs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="replyto_nodejs">
 <a href="#replyto_nodejs" style="color: inherit; text-decoration: inherit;">reply<wbr>To</a>
 </span> 
@@ -1996,6 +2042,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the message.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_python">
+<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A list of user defined properties to be included in the filter. Specified as a map of name/value pairs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
