@@ -11,7 +11,8 @@ meta_desc: "Explore the Ec2CredentialV3 resource of the identity module, includi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Manages a V3 EC2 Credential resource within OpenStack Keystone.
-EC2 credentials in Openstack are used to access S3 compatible Swift/RadosGW endpoints
+EC2 credentials in OpenStack are used to access S3 compatible Swift/RadosGW
+endpoints or to authenticate against Keystone.
 
 > **Note:** All arguments including the EC2 credential access key and secret
 will be stored in the raw state as plain-text. [Read more about sensitive data
@@ -140,6 +141,7 @@ ec2_key1 = openstack.identity.Ec2CredentialV3("ec2Key1", project_id="f7ac731cc11
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -356,7 +358,10 @@ be scoped to.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
+If omitted, the `region` argument of the provider is used. Changing this
+creates a new EC2 credential.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -397,7 +402,10 @@ be scoped to.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
+If omitted, the `region` argument of the provider is used. Changing this
+creates a new EC2 credential.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -438,7 +446,10 @@ be scoped to.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
+If omitted, the `region` argument of the provider is used. Changing this
+creates a new EC2 credential.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -479,7 +490,10 @@ be scoped to.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
+If omitted, the `region` argument of the provider is used. Changing this
+creates a new EC2 credential.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -869,7 +883,10 @@ be scoped to.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
+If omitted, the `region` argument of the provider is used. Changing this
+creates a new EC2 credential.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -943,7 +960,10 @@ be scoped to.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
+If omitted, the `region` argument of the provider is used. Changing this
+creates a new EC2 credential.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1017,7 +1037,10 @@ be scoped to.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
+If omitted, the `region` argument of the provider is used. Changing this
+creates a new EC2 credential.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1091,7 +1114,10 @@ be scoped to.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
+If omitted, the `region` argument of the provider is used. Changing this
+creates a new EC2 credential.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1146,6 +1172,6 @@ be scoped to.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-providers/terraform-provider-openstack).</dd>
+	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
 </dl>
 

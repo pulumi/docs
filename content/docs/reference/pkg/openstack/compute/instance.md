@@ -22,7 +22,7 @@ meta_desc: "Explore the Instance resource of the compute module, including examp
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/compute/#pulumi_openstack.compute.Instance">Instance</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_ip_v4</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">access_ip_v6</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">admin_pass</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">availability_zone_hints</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">block_devices</span><span class="p">:</span> <span class="nx">Optional[List[InstanceBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">config_drive</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">flavor_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">flavor_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_pair</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[List[InstanceNetworkArgs]]</span> = None<span class="p">, </span><span class="nx">personalities</span><span class="p">:</span> <span class="nx">Optional[List[InstancePersonalityArgs]]</span> = None<span class="p">, </span><span class="nx">power_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduler_hints</span><span class="p">:</span> <span class="nx">Optional[List[InstanceSchedulerHintArgs]]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">stop_before_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vendor_options</span><span class="p">:</span> <span class="nx">Optional[InstanceVendorOptionsArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/compute/#pulumi_openstack.compute.Instance">Instance</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_ip_v4</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">access_ip_v6</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">admin_pass</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">availability_zone_hints</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">config_drive</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">flavor_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">flavor_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_pair</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceNetworkArgs]]</span> = None<span class="p">, </span><span class="nx">personalities</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstancePersonalityArgs]]</span> = None<span class="p">, </span><span class="nx">power_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduler_hints</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceSchedulerHintArgs]]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">stop_before_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vendor_options</span><span class="p">:</span> <span class="nx">Optional[InstanceVendorOptionsArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -387,6 +387,19 @@ name of the network. Changing this creates a new server.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="networkmode_csharp">
+<a href="#networkmode_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Special string for `network` option to create
+the server. `network_mode` can be `"auto"` or `"none"`.
+Please see the following [reference](https://docs.openstack.org/api-ref/compute/?expanded=create-server-detail#id11) for more information. Conflicts with `network`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="networks_csharp">
 <a href="#networks_csharp" style="color: inherit; text-decoration: inherit;">Networks</a>
 </span> 
@@ -710,6 +723,19 @@ within the instance. Changing this updates the existing server metadata.
     </dt>
     <dd>{{% md %}}The human-readable
 name of the network. Changing this creates a new server.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="networkmode_go">
+<a href="#networkmode_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Special string for `network` option to create
+the server. `network_mode` can be `"auto"` or `"none"`.
+Please see the following [reference](https://docs.openstack.org/api-ref/compute/?expanded=create-server-detail#id11) for more information. Conflicts with `network`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1041,6 +1067,19 @@ name of the network. Changing this creates a new server.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="networkmode_nodejs">
+<a href="#networkmode_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Special string for `network` option to create
+the server. `network_mode` can be `"auto"` or `"none"`.
+Please see the following [reference](https://docs.openstack.org/api-ref/compute/?expanded=create-server-detail#id11) for more information. Conflicts with `network`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="networks_nodejs">
 <a href="#networks_nodejs" style="color: inherit; text-decoration: inherit;">networks</a>
 </span> 
@@ -1244,7 +1283,7 @@ new server.
 <a href="#block_devices_python" style="color: inherit; text-decoration: inherit;">block_<wbr>devices</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceblockdevice">List[Instance<wbr>Block<wbr>Device<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instanceblockdevice">Sequence[Instance<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration of block devices. The block_device
 structure is documented below. Changing this creates a new server.
@@ -1368,11 +1407,24 @@ name of the network. Changing this creates a new server.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="network_mode_python">
+<a href="#network_mode_python" style="color: inherit; text-decoration: inherit;">network_<wbr>mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Special string for `network` option to create
+the server. `network_mode` can be `"auto"` or `"none"`.
+Please see the following [reference](https://docs.openstack.org/api-ref/compute/?expanded=create-server-detail#id11) for more information. Conflicts with `network`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="networks_python">
 <a href="#networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetwork">List[Instance<wbr>Network<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancenetwork">Sequence[Instance<wbr>Network<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of one or more networks to attach to the
 instance. The network object structure is documented below. Changing this
@@ -1385,7 +1437,7 @@ creates a new server.
 <a href="#personalities_python" style="color: inherit; text-decoration: inherit;">personalities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancepersonality">List[Instance<wbr>Personality<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancepersonality">Sequence[Instance<wbr>Personality<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Customize the personality of an instance by
 defining one or more files and their contents. The personality structure
@@ -1425,7 +1477,7 @@ creates a new server.
 <a href="#scheduler_hints_python" style="color: inherit; text-decoration: inherit;">scheduler_<wbr>hints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceschedulerhint">List[Instance<wbr>Scheduler<wbr>Hint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instanceschedulerhint">Sequence[Instance<wbr>Scheduler<wbr>Hint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Provide the Nova scheduler with hints on how
 the instance should be launched. The available hints are described below.
@@ -1437,7 +1489,7 @@ the instance should be launched. The available hints are described below.
 <a href="#security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of one or more security group names
 or ids to associate with the server. Changing this results in adding/removing
@@ -1465,7 +1517,7 @@ If instance doesn't stop within timeout, it will be destroyed anyway.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A set of string tags for the instance. Changing this
 updates the existing instance tags.
@@ -1646,7 +1698,7 @@ been explicitly and implicitly added.
 <a href="#all_tags_python" style="color: inherit; text-decoration: inherit;">all_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the instance, which have
 been explicitly and implicitly added.
@@ -1682,7 +1734,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_ip_v4</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">access_ip_v6</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">admin_pass</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">all_metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">all_tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">availability_zone_hints</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">block_devices</span><span class="p">:</span> <span class="nx">Optional[List[InstanceBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">config_drive</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">flavor_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">flavor_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_pair</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[List[InstanceNetworkArgs]]</span> = None<span class="p">, </span><span class="nx">personalities</span><span class="p">:</span> <span class="nx">Optional[List[InstancePersonalityArgs]]</span> = None<span class="p">, </span><span class="nx">power_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduler_hints</span><span class="p">:</span> <span class="nx">Optional[List[InstanceSchedulerHintArgs]]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">stop_before_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vendor_options</span><span class="p">:</span> <span class="nx">Optional[InstanceVendorOptionsArgs]</span> = None<span class="p">) -&gt;</span> Instance</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_ip_v4</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">access_ip_v6</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">admin_pass</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">all_metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">all_tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">availability_zone_hints</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">config_drive</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">flavor_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">flavor_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_pair</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceNetworkArgs]]</span> = None<span class="p">, </span><span class="nx">personalities</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstancePersonalityArgs]]</span> = None<span class="p">, </span><span class="nx">power_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduler_hints</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceSchedulerHintArgs]]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">stop_before_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vendor_options</span><span class="p">:</span> <span class="nx">Optional[InstanceVendorOptionsArgs]</span> = None<span class="p">) -&gt;</span> Instance</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2007,6 +2059,19 @@ within the instance. Changing this updates the existing server metadata.
     </dt>
     <dd>{{% md %}}The human-readable
 name of the network. Changing this creates a new server.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_networkmode_csharp">
+<a href="#state_networkmode_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Special string for `network` option to create
+the server. `network_mode` can be `"auto"` or `"none"`.
+Please see the following [reference](https://docs.openstack.org/api-ref/compute/?expanded=create-server-detail#id11) for more information. Conflicts with `network`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2360,6 +2425,19 @@ name of the network. Changing this creates a new server.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_networkmode_go">
+<a href="#state_networkmode_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Special string for `network` option to create
+the server. `network_mode` can be `"auto"` or `"none"`.
+Please see the following [reference](https://docs.openstack.org/api-ref/compute/?expanded=create-server-detail#id11) for more information. Conflicts with `network`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_networks_go">
 <a href="#state_networks_go" style="color: inherit; text-decoration: inherit;">Networks</a>
 </span> 
@@ -2709,6 +2787,19 @@ name of the network. Changing this creates a new server.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_networkmode_nodejs">
+<a href="#state_networkmode_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Special string for `network` option to create
+the server. `network_mode` can be `"auto"` or `"none"`.
+Please see the following [reference](https://docs.openstack.org/api-ref/compute/?expanded=create-server-detail#id11) for more information. Conflicts with `network`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_networks_nodejs">
 <a href="#state_networks_nodejs" style="color: inherit; text-decoration: inherit;">networks</a>
 </span> 
@@ -2893,7 +2984,7 @@ Changing this changes the root password on the existing server.
 <a href="#state_all_tags_python" style="color: inherit; text-decoration: inherit;">all_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the instance, which have
 been explicitly and implicitly added.
@@ -2934,7 +3025,7 @@ new server.
 <a href="#state_block_devices_python" style="color: inherit; text-decoration: inherit;">block_<wbr>devices</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceblockdevice">List[Instance<wbr>Block<wbr>Device<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instanceblockdevice">Sequence[Instance<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration of block devices. The block_device
 structure is documented below. Changing this creates a new server.
@@ -3058,11 +3149,24 @@ name of the network. Changing this creates a new server.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_network_mode_python">
+<a href="#state_network_mode_python" style="color: inherit; text-decoration: inherit;">network_<wbr>mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Special string for `network` option to create
+the server. `network_mode` can be `"auto"` or `"none"`.
+Please see the following [reference](https://docs.openstack.org/api-ref/compute/?expanded=create-server-detail#id11) for more information. Conflicts with `network`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_networks_python">
 <a href="#state_networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetwork">List[Instance<wbr>Network<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancenetwork">Sequence[Instance<wbr>Network<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of one or more networks to attach to the
 instance. The network object structure is documented below. Changing this
@@ -3075,7 +3179,7 @@ creates a new server.
 <a href="#state_personalities_python" style="color: inherit; text-decoration: inherit;">personalities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancepersonality">List[Instance<wbr>Personality<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancepersonality">Sequence[Instance<wbr>Personality<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Customize the personality of an instance by
 defining one or more files and their contents. The personality structure
@@ -3115,7 +3219,7 @@ creates a new server.
 <a href="#state_scheduler_hints_python" style="color: inherit; text-decoration: inherit;">scheduler_<wbr>hints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceschedulerhint">List[Instance<wbr>Scheduler<wbr>Hint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instanceschedulerhint">Sequence[Instance<wbr>Scheduler<wbr>Hint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Provide the Nova scheduler with hints on how
 the instance should be launched. The available hints are described below.
@@ -3127,7 +3231,7 @@ the instance should be launched. The available hints are described below.
 <a href="#state_security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of one or more security group names
 or ids to associate with the server. Changing this results in adding/removing
@@ -3155,7 +3259,7 @@ If instance doesn't stop within timeout, it will be destroyed anyway.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A set of string tags for the instance. Changing this
 updates the existing instance tags.
@@ -3630,7 +3734,7 @@ server.
 <a href="#boot_index_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>index</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The boot index of the volume. It defaults to 0.
 Changing this creates a new server.
@@ -3713,7 +3817,7 @@ the image, volume, or snapshot. Changing this creates a new server.
 <a href="#volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the volume to create (in gigabytes). Required
 in the following combinations: source=image and destination=volume,
@@ -4572,7 +4676,7 @@ will be placed on a compute node that is in the same subnet.
 <a href="#different_hosts_python" style="color: inherit; text-decoration: inherit;">different_<wbr>hosts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of instance UUIDs. The instance will
 be scheduled on a different host than all other instances.
@@ -4596,7 +4700,7 @@ into that group.
 <a href="#queries_python" style="color: inherit; text-decoration: inherit;">queries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A conditional query that a compute node must pass in
 order to host an instance. The query must use the `JsonFilter` syntax
@@ -4612,7 +4716,7 @@ At this time, only simple queries are supported. Compound queries using
 <a href="#same_hosts_python" style="color: inherit; text-decoration: inherit;">same_<wbr>hosts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of instance UUIDs. The instance will be
 scheduled on the same host of those specified.
@@ -4801,6 +4905,6 @@ instances after some timeout.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-providers/terraform-provider-openstack).</dd>
+	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
 </dl>
 

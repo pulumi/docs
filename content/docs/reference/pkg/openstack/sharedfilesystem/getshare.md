@@ -1141,7 +1141,7 @@ locations.
 <a href="#export_locations_python" style="color: inherit; text-decoration: inherit;">export_<wbr>locations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getshareexportlocation">List[Get<wbr>Share<wbr>Export<wbr>Location]</a></span>
+        <span class="property-type"><a href="#getshareexportlocation">Sequence[Get<wbr>Share<wbr>Export<wbr>Location]</a></span>
     </dt>
     <dd>{{% md %}}A list of export locations. For example, when a share
 server has more than one network interface, it can have multiple export
@@ -1242,7 +1242,7 @@ locations.
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The share size, in GBs.
 {{% /md %}}</dd>
@@ -1430,6 +1430,6 @@ locations.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-providers/terraform-provider-openstack).</dd>
+	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
 </dl>
 

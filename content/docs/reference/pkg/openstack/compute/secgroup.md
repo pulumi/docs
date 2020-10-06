@@ -56,6 +56,54 @@ func main() {
 
 A list of ICMP types and codes can be found [here](https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol#Control_messages).
 
+### Referencing Security Groups
+
+When referencing a security group in a configuration (for example, a configuration creates a new security group and then needs to apply it to an instance being created in the same configuration), it is currently recommended to reference the security group by name and not by ID, like this:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const test_server = new openstack.compute.Instance("test-server", {
+    flavorId: "3",
+    imageId: "ad091b52-742f-469e-8f3c-fd81cadf0743",
+    keyPair: "my_key_pair_name",
+    securityGroups: [openstack_compute_secgroup_v2_secgroup_1.name],
+});
+```
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+test_server = openstack.compute.Instance("test-server",
+    flavor_id="3",
+    image_id="ad091b52-742f-469e-8f3c-fd81cadf0743",
+    key_pair="my_key_pair_name",
+    security_groups=[openstack_compute_secgroup_v2["secgroup_1"]["name"]])
+```
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test_server = new OpenStack.Compute.Instance("test-server", new OpenStack.Compute.InstanceArgs
+        {
+            FlavorId = "3",
+            ImageId = "ad091b52-742f-469e-8f3c-fd81cadf0743",
+            KeyPair = "my_key_pair_name",
+            SecurityGroups = 
+            {
+                openstack_compute_secgroup_v2.Secgroup_1.Name,
+            },
+        });
+    }
+
+}
+```
+
 {{% examples %}}
 ## Example Usage
 
@@ -200,7 +248,7 @@ const secgroup1 = new openstack.compute.SecGroup("secgroup_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/compute/#pulumi_openstack.compute.SecGroup">SecGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[SecGroupRuleArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/compute/#pulumi_openstack.compute.SecGroup">SecGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[SecGroupRuleArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -593,7 +641,7 @@ security group.
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secgrouprule">List[Sec<wbr>Group<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#secgrouprule">Sequence[Sec<wbr>Group<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A rule describing how the security group operates. The
 rule object structure is documented below. Changing this updates the
@@ -700,7 +748,7 @@ Get an existing SecGroup resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[SecGroupRuleArgs]]</span> = None<span class="p">) -&gt;</span> SecGroup</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[SecGroupRuleArgs]]</span> = None<span class="p">) -&gt;</span> SecGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1035,7 +1083,7 @@ security group.
 <a href="#state_rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secgrouprule">List[Sec<wbr>Group<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#secgrouprule">Sequence[Sec<wbr>Group<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A rule describing how the security group operates. The
 rule object structure is documented below. Changing this updates the
@@ -1361,7 +1409,7 @@ be combined with `cidr` or `from_group_id`.
 <a href="#from_port_python" style="color: inherit; text-decoration: inherit;">from_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}An integer representing the lower bound of the port
 range to open. Changing this creates a new security group rule.
@@ -1385,7 +1433,7 @@ this creates a new security group rule.
 <a href="#to_port_python" style="color: inherit; text-decoration: inherit;">to_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}An integer representing the upper bound of the port
 range to open. Changing this creates a new security group rule.
@@ -1459,6 +1507,6 @@ be combined with `cidr` or `from_group_id`.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-providers/terraform-provider-openstack).</dd>
+	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
 </dl>
 

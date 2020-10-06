@@ -372,7 +372,7 @@ const tls1 = new openstack.keymanager.ContainerV1("tls_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/keymanager/#pulumi_openstack.keymanager.ContainerV1">ContainerV1</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acl</span><span class="p">:</span> <span class="nx">Optional[ContainerV1AclArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secret_refs</span><span class="p">:</span> <span class="nx">Optional[List[ContainerV1SecretRefArgs]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/keymanager/#pulumi_openstack.keymanager.ContainerV1">ContainerV1</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acl</span><span class="p">:</span> <span class="nx">Optional[ContainerV1AclArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secret_refs</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerV1SecretRefArgs]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -803,7 +803,7 @@ V1 container.
 <a href="#secret_refs_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>refs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerv1secretref">List[Container<wbr>V1Secret<wbr>Ref<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containerv1secretref">Sequence[Container<wbr>V1Secret<wbr>Ref<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of dictionaries containing references to secrets. The structure is described
 below.
@@ -1082,7 +1082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#consumers_python" style="color: inherit; text-decoration: inherit;">consumers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerv1consumer">List[Container<wbr>V1Consumer]</a></span>
+        <span class="property-type"><a href="#containerv1consumer">Sequence[Container<wbr>V1Consumer]</a></span>
     </dt>
     <dd>{{% md %}}The list of the container consumers. The structure is described below.
 {{% /md %}}</dd>
@@ -1172,7 +1172,7 @@ Get an existing ContainerV1 resource's state with the given name, ID, and option
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acl</span><span class="p">:</span> <span class="nx">Optional[ContainerV1AclArgs]</span> = None<span class="p">, </span><span class="nx">consumers</span><span class="p">:</span> <span class="nx">Optional[List[ContainerV1ConsumerArgs]]</span> = None<span class="p">, </span><span class="nx">container_ref</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creator_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secret_refs</span><span class="p">:</span> <span class="nx">Optional[List[ContainerV1SecretRefArgs]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">updated_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ContainerV1</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acl</span><span class="p">:</span> <span class="nx">Optional[ContainerV1AclArgs]</span> = None<span class="p">, </span><span class="nx">consumers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerV1ConsumerArgs]]</span> = None<span class="p">, </span><span class="nx">container_ref</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creator_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secret_refs</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerV1SecretRefArgs]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">updated_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ContainerV1</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1707,7 +1707,7 @@ accessible project wide. The `read` structure is described below.
 <a href="#state_consumers_python" style="color: inherit; text-decoration: inherit;">consumers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerv1consumer">List[Container<wbr>V1Consumer<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containerv1consumer">Sequence[Container<wbr>V1Consumer<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of the container consumers. The structure is described below.
 {{% /md %}}</dd>
@@ -1776,7 +1776,7 @@ V1 container.
 <a href="#state_secret_refs_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>refs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerv1secretref">List[Container<wbr>V1Secret<wbr>Ref<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containerv1secretref">Sequence[Container<wbr>V1Secret<wbr>Ref<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of dictionaries containing references to secrets. The structure is described
 below.
@@ -2133,7 +2133,7 @@ Defaults to `true`.
 <a href="#users_python" style="color: inherit; text-decoration: inherit;">users</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of user IDs, which are allowed to access the
 container, when `project_access` is set to `false`.
@@ -2425,6 +2425,6 @@ container, when `project_access` is set to `false`.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-providers/terraform-provider-openstack).</dd>
+	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
 </dl>
 

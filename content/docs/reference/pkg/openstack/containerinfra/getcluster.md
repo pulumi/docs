@@ -1187,7 +1187,7 @@ the cluster.
 <a href="#create_timeout_python" style="color: inherit; text-decoration: inherit;">create_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The timeout (in minutes) for creating the cluster.
 {{% /md %}}</dd>
@@ -1220,7 +1220,7 @@ the cluster.
 <a href="#docker_volume_size_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>volume_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size (in GB) of the Docker volume.
 {{% /md %}}</dd>
@@ -1308,7 +1308,7 @@ the cluster.
 <a href="#master_addresses_python" style="color: inherit; text-decoration: inherit;">master_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}IP addresses of the master node of the cluster.
 {{% /md %}}</dd>
@@ -1319,7 +1319,7 @@ the cluster.
 <a href="#master_count_python" style="color: inherit; text-decoration: inherit;">master_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of master nodes for the cluster.
 {{% /md %}}</dd>
@@ -1352,7 +1352,7 @@ the cluster.
 <a href="#node_addresses_python" style="color: inherit; text-decoration: inherit;">node_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}IP addresses of the node of the cluster.
 {{% /md %}}</dd>
@@ -1363,7 +1363,7 @@ the cluster.
 <a href="#node_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of nodes for the cluster.
 {{% /md %}}</dd>
@@ -1441,6 +1441,6 @@ the cluster.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-providers/terraform-provider-openstack).</dd>
+	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
 </dl>
 

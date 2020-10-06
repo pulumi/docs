@@ -1415,7 +1415,7 @@ cluster nodes.
 <a href="#apiserver_port_python" style="color: inherit; text-decoration: inherit;">apiserver_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The API server port for the Container Orchestration
 Engine for this cluster template.
@@ -1484,7 +1484,7 @@ Docker storage driver of the existing cluster template.
 <a href="#docker_volume_size_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>volume_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size (in GB) of the Docker volume.
 {{% /md %}}</dd>
@@ -1802,6 +1802,6 @@ cluster nodes.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-providers/terraform-provider-openstack).</dd>
+	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
 </dl>
 
