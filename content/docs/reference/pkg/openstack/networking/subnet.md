@@ -115,7 +115,7 @@ const subnet1 = new openstack.networking.Subnet("subnet_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/networking/#pulumi_openstack.networking.Subnet">Subnet</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allocation_pools</span><span class="p">:</span> <span class="nx">Optional[List[SubnetAllocationPoolArgs]]</span> = None<span class="p">, </span><span class="nx">allocation_pools_collection</span><span class="p">:</span> <span class="nx">Optional[List[SubnetAllocationPoolsCollectionArgs]]</span> = None<span class="p">, </span><span class="nx">cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_nameservers</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">enable_dhcp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gateway_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_routes</span><span class="p">:</span> <span class="nx">Optional[List[SubnetHostRouteArgs]]</span> = None<span class="p">, </span><span class="nx">ip_version</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ipv6_address_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv6_ra_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">no_gateway</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">prefix_length</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnetpool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">value_specs</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/networking/#pulumi_openstack.networking.Subnet">Subnet</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allocation_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[SubnetAllocationPoolArgs]]</span> = None<span class="p">, </span><span class="nx">allocation_pools_collection</span><span class="p">:</span> <span class="nx">Optional[Sequence[SubnetAllocationPoolsCollectionArgs]]</span> = None<span class="p">, </span><span class="nx">cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_nameservers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">enable_dhcp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gateway_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_routes</span><span class="p">:</span> <span class="nx">Optional[Sequence[SubnetHostRouteArgs]]</span> = None<span class="p">, </span><span class="nx">ip_version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ipv6_address_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv6_ra_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">no_gateway</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">prefix_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnetpool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">value_specs</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1088,7 +1088,7 @@ creates a new subnet.
 <a href="#allocation_pools_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>pools</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetallocationpool">List[Subnet<wbr>Allocation<wbr>Pool<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subnetallocationpool">Sequence[Subnet<wbr>Allocation<wbr>Pool<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A block declaring the start and end range of
 the IP addresses available for use with DHCP in this subnet. Multiple
@@ -1104,7 +1104,7 @@ The `allocation_pool` block is documented below.
 <a href="#allocation_pools_collection_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>pools_<wbr>collection</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetallocationpoolscollection">List[Subnet<wbr>Allocation<wbr>Pools<wbr>Collection<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subnetallocationpoolscollection">Sequence[Subnet<wbr>Allocation<wbr>Pools<wbr>Collection<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A block declaring the start and end range of the IP addresses available for
 use with DHCP in this subnet.
@@ -1142,7 +1142,7 @@ updates the name of the existing subnet.
 <a href="#dns_nameservers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>nameservers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of DNS name server names used by hosts
 in this subnet. Changing this updates the DNS name servers for the existing
@@ -1182,7 +1182,7 @@ existing subnet.
 <a href="#host_routes_python" style="color: inherit; text-decoration: inherit;">host_<wbr>routes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnethostroute">List[Subnet<wbr>Host<wbr>Route<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subnethostroute">Sequence[Subnet<wbr>Host<wbr>Route<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(**Deprecated** - use `openstack.networking.SubnetRoute`
 instead) An array of routes that should be used by devices
@@ -1197,7 +1197,7 @@ for the existing subnet.
 <a href="#ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}IP version, either 4 (default) or 6. Changing this creates a
 new subnet.
@@ -1257,7 +1257,7 @@ this removes or adds a default gateway IP of the existing subnet.
 <a href="#prefix_length_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>length</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The prefix length to use when creating a subnet
 from a subnet pool. The default subnet pool prefix length that was defined
@@ -1296,7 +1296,7 @@ subnet.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A set of string tags for the subnet.
 {{% /md %}}</dd>
@@ -1435,7 +1435,7 @@ explicitly and implicitly added.
 <a href="#all_tags_python" style="color: inherit; text-decoration: inherit;">all_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The collection of ags assigned on the subnet, which have been
 explicitly and implicitly added.
@@ -1471,7 +1471,7 @@ Get an existing Subnet resource's state with the given name, ID, and optional ex
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">all_tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">allocation_pools</span><span class="p">:</span> <span class="nx">Optional[List[SubnetAllocationPoolArgs]]</span> = None<span class="p">, </span><span class="nx">allocation_pools_collection</span><span class="p">:</span> <span class="nx">Optional[List[SubnetAllocationPoolsCollectionArgs]]</span> = None<span class="p">, </span><span class="nx">cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_nameservers</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">enable_dhcp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gateway_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_routes</span><span class="p">:</span> <span class="nx">Optional[List[SubnetHostRouteArgs]]</span> = None<span class="p">, </span><span class="nx">ip_version</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ipv6_address_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv6_ra_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">no_gateway</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">prefix_length</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnetpool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">value_specs</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">) -&gt;</span> Subnet</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">all_tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">allocation_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[SubnetAllocationPoolArgs]]</span> = None<span class="p">, </span><span class="nx">allocation_pools_collection</span><span class="p">:</span> <span class="nx">Optional[Sequence[SubnetAllocationPoolsCollectionArgs]]</span> = None<span class="p">, </span><span class="nx">cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_nameservers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">enable_dhcp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gateway_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_routes</span><span class="p">:</span> <span class="nx">Optional[Sequence[SubnetHostRouteArgs]]</span> = None<span class="p">, </span><span class="nx">ip_version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ipv6_address_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv6_ra_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">no_gateway</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">prefix_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnetpool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">value_specs</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">) -&gt;</span> Subnet</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2410,7 +2410,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
 <a href="#state_all_tags_python" style="color: inherit; text-decoration: inherit;">all_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The collection of ags assigned on the subnet, which have been
 explicitly and implicitly added.
@@ -2422,7 +2422,7 @@ explicitly and implicitly added.
 <a href="#state_allocation_pools_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>pools</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetallocationpool">List[Subnet<wbr>Allocation<wbr>Pool<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subnetallocationpool">Sequence[Subnet<wbr>Allocation<wbr>Pool<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A block declaring the start and end range of
 the IP addresses available for use with DHCP in this subnet. Multiple
@@ -2438,7 +2438,7 @@ The `allocation_pool` block is documented below.
 <a href="#state_allocation_pools_collection_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>pools_<wbr>collection</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetallocationpoolscollection">List[Subnet<wbr>Allocation<wbr>Pools<wbr>Collection<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subnetallocationpoolscollection">Sequence[Subnet<wbr>Allocation<wbr>Pools<wbr>Collection<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A block declaring the start and end range of the IP addresses available for
 use with DHCP in this subnet.
@@ -2476,7 +2476,7 @@ updates the name of the existing subnet.
 <a href="#state_dns_nameservers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>nameservers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of DNS name server names used by hosts
 in this subnet. Changing this updates the DNS name servers for the existing
@@ -2516,7 +2516,7 @@ existing subnet.
 <a href="#state_host_routes_python" style="color: inherit; text-decoration: inherit;">host_<wbr>routes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnethostroute">List[Subnet<wbr>Host<wbr>Route<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subnethostroute">Sequence[Subnet<wbr>Host<wbr>Route<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(**Deprecated** - use `openstack.networking.SubnetRoute`
 instead) An array of routes that should be used by devices
@@ -2531,7 +2531,7 @@ for the existing subnet.
 <a href="#state_ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}IP version, either 4 (default) or 6. Changing this creates a
 new subnet.
@@ -2603,7 +2603,7 @@ this removes or adds a default gateway IP of the existing subnet.
 <a href="#state_prefix_length_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>length</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The prefix length to use when creating a subnet
 from a subnet pool. The default subnet pool prefix length that was defined
@@ -2642,7 +2642,7 @@ subnet.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A set of string tags for the subnet.
 {{% /md %}}</dd>
@@ -3098,6 +3098,6 @@ create a subnet for another tenant. Changing this creates a new subnet.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-providers/terraform-provider-openstack).</dd>
+	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
 </dl>
 
