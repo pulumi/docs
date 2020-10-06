@@ -3,7 +3,7 @@ title: "Package @pulumi/wavefront"
 title_tag: "Package @pulumi/wavefront | Node.js SDK"
 linktitle: "@pulumi/wavefront"
 meta_desc: "Explore members of the @pulumi/wavefront package."
-git_sha: "78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa"
+git_sha: "38ced2e5195b4ac0b69a448d839e4fea7ee4fdba"
 block_external_search_index: true
 ---
 
@@ -62,6 +62,7 @@ import * as wavefront from "@pulumi/wavefront";
     <li><a href="#Dashboard"><span class="symbol resource"></span>Dashboard</a></li>
     <li><a href="#DashboardJson"><span class="symbol resource"></span>DashboardJson</a></li>
     <li><a href="#DerivedMetric"><span class="symbol resource"></span>DerivedMetric</a></li>
+    <li><a href="#ExternalLink"><span class="symbol resource"></span>ExternalLink</a></li>
     <li><a href="#MaintenanceWindow"><span class="symbol resource"></span>MaintenanceWindow</a></li>
     <li><a href="#Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="#Role"><span class="symbol resource"></span>Role</a></li>
@@ -109,6 +110,8 @@ import * as wavefront from "@pulumi/wavefront";
     <li><a href="#DashboardState"><span class="symbol api"></span>DashboardState</a></li>
     <li><a href="#DerivedMetricArgs"><span class="symbol api"></span>DerivedMetricArgs</a></li>
     <li><a href="#DerivedMetricState"><span class="symbol api"></span>DerivedMetricState</a></li>
+    <li><a href="#ExternalLinkArgs"><span class="symbol api"></span>ExternalLinkArgs</a></li>
+    <li><a href="#ExternalLinkState"><span class="symbol api"></span>ExternalLinkState</a></li>
     <li><a href="#GetDefaultUserGroupResult"><span class="symbol api"></span>GetDefaultUserGroupResult</a></li>
     <li><a href="#getEnv"><span class="symbol api"></span>getEnv</a></li>
     <li><a href="#getEnvBoolean"><span class="symbol api"></span>getEnvBoolean</a></li>
@@ -130,7 +133,7 @@ import * as wavefront from "@pulumi/wavefront";
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Alert" data-link-title="Alert">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L30">
         Resource <strong>Alert</strong>
     </a>
 </h3>
@@ -160,7 +163,7 @@ const foobar = new wavefront.Alert("foobar", {
 ```
 
 <h4 class="pdoc-member-header" id="Alert-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L129"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L129"> <b>constructor</b></a>
 </h4>
 
 
@@ -174,7 +177,7 @@ Create a Alert resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Alert-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L40">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L40">method <b>get</b></a>
 </h4>
 
 
@@ -185,14 +188,14 @@ Get an existing Alert resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Alert-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L30">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L30">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Alert-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L51">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L51">method <b>isInstance</b></a>
 </h4>
 
 
@@ -203,7 +206,7 @@ Returns true if the given object is an instance of Alert.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Alert-additionalInformation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L62">property <b>additionalInformation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L62">property <b>additionalInformation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>additionalInformation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -212,7 +215,7 @@ User-supplied additional explanatory information for this alert.
 Useful for linking runbooks, migrations...etc
 
 <h4 class="pdoc-member-header" id="Alert-alertType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L67">property <b>alertType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L67">property <b>alertType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>alertType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -221,7 +224,7 @@ The type of alert in Wavefront.  Either `CLASSIC` (default)
 or `THRESHOLD`
 
 <h4 class="pdoc-member-header" id="Alert-canModifies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L71">property <b>canModifies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L71">property <b>canModifies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>canModifies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -229,7 +232,7 @@ or `THRESHOLD`
 A list of users or groups that can modify this resource.
 
 <h4 class="pdoc-member-header" id="Alert-canViews">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L75">property <b>canViews</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L75">property <b>canViews</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>canViews: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -237,7 +240,7 @@ A list of users or groups that can modify this resource.
 A list of users or groups that can view this resource.
 
 <h4 class="pdoc-member-header" id="Alert-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L81">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L81">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -247,7 +250,7 @@ The alert fires and notifications are triggered when data series matching this q
 to a non-zero value for a set number of consecutive minutes.
 
 <h4 class="pdoc-member-header" id="Alert-conditions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L86">property <b>conditions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L86">property <b>conditions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>conditions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -256,7 +259,7 @@ a string->string map of `severity` to `condition`
 for which this alert will trigger.
 
 <h4 class="pdoc-member-header" id="Alert-displayExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L92">property <b>displayExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L92">property <b>displayExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayExpression: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -266,7 +269,7 @@ interface instead of the condition query.  This field is often used to display a
 of the condition query with Boolean operators removed so that numerical values are plotted.
 
 <h4 class="pdoc-member-header" id="Alert-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L30">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L30">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -275,7 +278,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Alert-minutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L97">property <b>minutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L97">property <b>minutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>minutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -284,7 +287,7 @@ The number of consecutive minutes that a series matching the condition query mus
 evaluate to "true" (non-zero value) before the alert fires.
 
 <h4 class="pdoc-member-header" id="Alert-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L101">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L101">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -292,7 +295,7 @@ evaluate to "true" (non-zero value) before the alert fires.
 The name of the alert as it is displayed in Wavefront.
 
 <h4 class="pdoc-member-header" id="Alert-notificationResendFrequencyMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L106">property <b>notificationResendFrequencyMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L106">property <b>notificationResendFrequencyMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notificationResendFrequencyMinutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -301,7 +304,7 @@ How often to re-trigger a continually failing alert.
 If absent or <= 0, no re-triggering occur.
 
 <h4 class="pdoc-member-header" id="Alert-resolveAfterMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L112">property <b>resolveAfterMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L112">property <b>resolveAfterMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resolveAfterMinutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -311,7 +314,7 @@ query must evaluate to "false" (zero value) before the alert resolves.  When uns
 the same value as `minutes`.
 
 <h4 class="pdoc-member-header" id="Alert-severity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L116">property <b>severity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L116">property <b>severity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>severity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -319,7 +322,7 @@ the same value as `minutes`.
 - Severity of the alert, valid values are `INFO`, `SMOKE`, `WARN`, `SEVERE`.
 
 <h4 class="pdoc-member-header" id="Alert-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L120">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L120">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -327,7 +330,7 @@ the same value as `minutes`.
 A set of tags to assign to this resource.
 
 <h4 class="pdoc-member-header" id="Alert-target">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L125">property <b>target</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L125">property <b>target</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>target: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -336,7 +339,7 @@ A comma-separated list of the email address or integration endpoint
 (such as PagerDuty or web hook) to notify when the alert status changes.
 
 <h4 class="pdoc-member-header" id="Alert-thresholdTargets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L129">property <b>thresholdTargets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L129">property <b>thresholdTargets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>thresholdTargets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -344,7 +347,7 @@ A comma-separated list of the email address or integration endpoint
 Targets for severity
 
 <h4 class="pdoc-member-header" id="Alert-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L30">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L30">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -353,7 +356,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="AlertTarget" data-link-title="AlertTarget">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L87">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L87">
         Resource <strong>AlertTarget</strong>
     </a>
 </h3>
@@ -438,7 +441,7 @@ const testTarget = new wavefront.AlertTarget("test_target", {
 ```
 
 <h4 class="pdoc-member-header" id="AlertTarget-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L162"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L162"> <b>constructor</b></a>
 </h4>
 
 
@@ -452,7 +455,7 @@ Create a AlertTarget resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AlertTarget-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L97">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L97">method <b>get</b></a>
 </h4>
 
 
@@ -463,14 +466,14 @@ Get an existing AlertTarget resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AlertTarget-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L87">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L87">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AlertTarget-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L108">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L108">method <b>isInstance</b></a>
 </h4>
 
 
@@ -481,7 +484,7 @@ Returns true if the given object is an instance of AlertTarget.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AlertTarget-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L118">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L118">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>contentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -489,7 +492,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The value of the `Content-Type` header of the webhook.
 
 <h4 class="pdoc-member-header" id="AlertTarget-customHeaders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L123">property <b>customHeaders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L123">property <b>customHeaders</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>customHeaders: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -498,7 +501,7 @@ A `string->string` map specifying the custome HTTP header key/value pairs that w
 sent in the requests with a method of `WEBHOOK`.
 
 <h4 class="pdoc-member-header" id="AlertTarget-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L127">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L127">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -506,7 +509,7 @@ sent in the requests with a method of `WEBHOOK`.
 Description describing this alert target.
 
 <h4 class="pdoc-member-header" id="AlertTarget-emailSubject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L131">property <b>emailSubject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L131">property <b>emailSubject</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>emailSubject: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -514,7 +517,7 @@ Description describing this alert target.
 The subject title of an email notification target.
 
 <h4 class="pdoc-member-header" id="AlertTarget-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L87">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L87">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -523,7 +526,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AlertTarget-isHtmlContent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L135">property <b>isHtmlContent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L135">property <b>isHtmlContent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>isHtmlContent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -531,7 +534,7 @@ deployments and may be missing (undefined) during planning phases.
 Determine whether the email alert content is sent as HTML or text.
 
 <h4 class="pdoc-member-header" id="AlertTarget-method">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L139">property <b>method</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L139">property <b>method</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>method: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -539,7 +542,7 @@ Determine whether the email alert content is sent as HTML or text.
 The notification method used for notification target. One of `WEBHOOK`, `EMAIL`, `PAGERDUTY`.
 
 <h4 class="pdoc-member-header" id="AlertTarget-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L143">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L143">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -547,7 +550,7 @@ The notification method used for notification target. One of `WEBHOOK`, `EMAIL`,
 The name of the alert target as it is displayed in wavefront
 
 <h4 class="pdoc-member-header" id="AlertTarget-recipient">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L148">property <b>recipient</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L148">property <b>recipient</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recipient: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -556,7 +559,7 @@ The end point for the notification Target.  `EMAIL`: email address. `PAGERDUTY`:
 routing key. `WEBHOOK`: URL endpoint.
 
 <h4 class="pdoc-member-header" id="AlertTarget-routes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L152">property <b>routes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L152">property <b>routes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>routes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/wavefront/types/output/#AlertTargetRoute'>AlertTargetRoute</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -564,12 +567,12 @@ routing key. `WEBHOOK`: URL endpoint.
 List of routing targets that this alert target will notify. See Route
 
 <h4 class="pdoc-member-header" id="AlertTarget-targetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L153">property <b>targetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L153">property <b>targetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AlertTarget-template">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L157">property <b>template</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L157">property <b>template</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>template: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -577,7 +580,7 @@ List of routing targets that this alert target will notify. See Route
 A mustache template that will form the body of the POST request, email and summary of the PagerDuty.
 
 <h4 class="pdoc-member-header" id="AlertTarget-triggers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L162">property <b>triggers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L162">property <b>triggers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>triggers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -586,7 +589,7 @@ A list of occurrences on which this webhook will be fired. Valid values are `ALE
 `ALERT_UPDATED`, `ALERT_RESOLVED`, `ALERT_MAINTENANCE`, `ALERT_SNOOZED`, `ALERT_NO_DATA`, `ALERT_NO_DATA_RESOLVED`, `ALERT_NO_DATA_MAINTENANCE`.
 
 <h4 class="pdoc-member-header" id="AlertTarget-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L87">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L87">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -595,7 +598,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="CloudIntegrationAppDynamics" data-link-title="CloudIntegrationAppDynamics">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L24">
         Resource <strong>CloudIntegrationAppDynamics</strong>
     </a>
 </h3>
@@ -619,7 +622,7 @@ const appDynamics = new wavefront.CloudIntegrationAppDynamics("app_dynamics", {
 ```
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamics-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L121"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L121"> <b>constructor</b></a>
 </h4>
 
 
@@ -633,7 +636,7 @@ Create a CloudIntegrationAppDynamics resource with the given unique name, argume
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamics-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L34">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L34">method <b>get</b></a>
 </h4>
 
 
@@ -644,14 +647,14 @@ Get an existing CloudIntegrationAppDynamics resource's state with the given name
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamics-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L24">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L24">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamics-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L45">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L45">method <b>isInstance</b></a>
 </h4>
 
 
@@ -662,7 +665,7 @@ Returns true if the given object is an instance of CloudIntegrationAppDynamics. 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamics-additionalTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L55">property <b>additionalTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L55">property <b>additionalTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>additionalTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -670,7 +673,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A list of point tag key-values to add to every point ingested using this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamics-appFilterRegexes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L60">property <b>appFilterRegexes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L60">property <b>appFilterRegexes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>appFilterRegexes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -679,7 +682,7 @@ List of regular expressions that a application name must match (case-insensitive
 in order to be ingested
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamics-controllerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L64">property <b>controllerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L64">property <b>controllerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>controllerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -687,7 +690,7 @@ in order to be ingested
 Name of the SaaS controller
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamics-enableAppInfraMetrics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L68">property <b>enableAppInfraMetrics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L68">property <b>enableAppInfraMetrics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enableAppInfraMetrics: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -695,7 +698,7 @@ Name of the SaaS controller
 Boolean flag to control Application Infrastructure metric injection
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamics-enableBackendMetrics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L72">property <b>enableBackendMetrics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L72">property <b>enableBackendMetrics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enableBackendMetrics: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -703,7 +706,7 @@ Boolean flag to control Application Infrastructure metric injection
 Boolean flag to control Backend metric injection
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamics-enableBusinessTrxMetrics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L76">property <b>enableBusinessTrxMetrics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L76">property <b>enableBusinessTrxMetrics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enableBusinessTrxMetrics: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -711,7 +714,7 @@ Boolean flag to control Backend metric injection
 Boolean flag to control Business Transaction metric injection
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamics-enableErrorMetrics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L80">property <b>enableErrorMetrics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L80">property <b>enableErrorMetrics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enableErrorMetrics: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -719,7 +722,7 @@ Boolean flag to control Business Transaction metric injection
 Boolean flag to control Error metric injection
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamics-enableIndividualNodeMetrics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L84">property <b>enableIndividualNodeMetrics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L84">property <b>enableIndividualNodeMetrics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enableIndividualNodeMetrics: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -727,7 +730,7 @@ Boolean flag to control Error metric injection
 Boolean flag to control Individual Node metric injection
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamics-enableOverallPerfMetrics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L88">property <b>enableOverallPerfMetrics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L88">property <b>enableOverallPerfMetrics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enableOverallPerfMetrics: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -735,7 +738,7 @@ Boolean flag to control Individual Node metric injection
 Boolean flag to control Overall Performance metric injection
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamics-enableRollup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L93">property <b>enableRollup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L93">property <b>enableRollup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enableRollup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -744,7 +747,7 @@ Set this to `false` to get separate results for all values within the time range
 by default it is `true`
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamics-enableServiceEndpointMetrics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L97">property <b>enableServiceEndpointMetrics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L97">property <b>enableServiceEndpointMetrics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enableServiceEndpointMetrics: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -752,7 +755,7 @@ by default it is `true`
 Boolean flag to control Service End point metric injection
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamics-encryptedPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L101">property <b>encryptedPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L101">property <b>encryptedPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>encryptedPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -760,7 +763,7 @@ Boolean flag to control Service End point metric injection
 Password for AppDynamics user
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamics-forceSave">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L105">property <b>forceSave</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L105">property <b>forceSave</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>forceSave: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -768,7 +771,7 @@ Password for AppDynamics user
 Forces this resource to save, even if errors are present
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamics-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L24">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L24">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -777,7 +780,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamics-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L109">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L109">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -785,7 +788,7 @@ deployments and may be missing (undefined) during planning phases.
 The human-readable name of this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamics-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L113">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L113">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -793,7 +796,7 @@ The human-readable name of this integration
 A value denoting which cloud service this service integrates with
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamics-serviceRefreshRateInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L117">property <b>serviceRefreshRateInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L117">property <b>serviceRefreshRateInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceRefreshRateInMinutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -801,7 +804,7 @@ A value denoting which cloud service this service integrates with
 How often, in minutes, to refresh the service
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamics-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L24">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L24">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -810,7 +813,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamics-userName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L121">property <b>userName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L121">property <b>userName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -818,7 +821,7 @@ deployments.
 Username is a combination of userName and the account name
 
 <h3 class="pdoc-module-header" id="CloudIntegrationAwsExternalId" data-link-title="CloudIntegrationAwsExternalId">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAwsExternalId.ts#L19">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAwsExternalId.ts#L19">
         Resource <strong>CloudIntegrationAwsExternalId</strong>
     </a>
 </h3>
@@ -837,7 +840,7 @@ const externalId = new wavefront.CloudIntegrationAwsExternalId("external_id", {}
 ```
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAwsExternalId-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAwsExternalId.ts#L45"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAwsExternalId.ts#L45"> <b>constructor</b></a>
 </h4>
 
 
@@ -851,7 +854,7 @@ Create a CloudIntegrationAwsExternalId resource with the given unique name, argu
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAwsExternalId-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAwsExternalId.ts#L29">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAwsExternalId.ts#L29">method <b>get</b></a>
 </h4>
 
 
@@ -862,14 +865,14 @@ Get an existing CloudIntegrationAwsExternalId resource's state with the given na
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAwsExternalId-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAwsExternalId.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAwsExternalId.ts#L19">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAwsExternalId-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAwsExternalId.ts#L40">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAwsExternalId.ts#L40">method <b>isInstance</b></a>
 </h4>
 
 
@@ -880,7 +883,7 @@ Returns true if the given object is an instance of CloudIntegrationAwsExternalId
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAwsExternalId-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAwsExternalId.ts#L19">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAwsExternalId.ts#L19">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -889,7 +892,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAwsExternalId-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAwsExternalId.ts#L19">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAwsExternalId.ts#L19">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -898,7 +901,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="CloudIntegrationAzure" data-link-title="CloudIntegrationAzure">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzure.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzure.ts#L24">
         Resource <strong>CloudIntegrationAzure</strong>
     </a>
 </h3>
@@ -922,7 +925,7 @@ const azureActivityLog = new wavefront.CloudIntegrationAzureActivityLog("azure_a
 ```
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzure-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzure.ts#L95"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzure.ts#L95"> <b>constructor</b></a>
 </h4>
 
 
@@ -936,7 +939,7 @@ Create a CloudIntegrationAzure resource with the given unique name, arguments, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzure-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzure.ts#L34">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzure.ts#L34">method <b>get</b></a>
 </h4>
 
 
@@ -947,14 +950,14 @@ Get an existing CloudIntegrationAzure resource's state with the given name, ID, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzure-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzure.ts#L24">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzure.ts#L24">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzure-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzure.ts#L45">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzure.ts#L45">method <b>isInstance</b></a>
 </h4>
 
 
@@ -965,7 +968,7 @@ Returns true if the given object is an instance of CloudIntegrationAzure.  This 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzure-additionalTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzure.ts#L55">property <b>additionalTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzure.ts#L55">property <b>additionalTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>additionalTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -973,7 +976,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A list of point tag key-values to add to every point ingested using this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzure-categoryFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzure.ts#L59">property <b>categoryFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzure.ts#L59">property <b>categoryFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>categoryFilters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -981,7 +984,7 @@ A list of point tag key-values to add to every point ingested using this integra
 A list of Azure Activity Log categories.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzure-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzure.ts#L63">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzure.ts#L63">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -989,7 +992,7 @@ A list of Azure Activity Log categories.
 Client id for an azure service account within your project
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzure-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzure.ts#L67">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzure.ts#L67">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -997,7 +1000,7 @@ Client id for an azure service account within your project
 Client secret for an Azure service account within your project
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzure-forceSave">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzure.ts#L71">property <b>forceSave</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzure.ts#L71">property <b>forceSave</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>forceSave: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1005,7 +1008,7 @@ Client secret for an Azure service account within your project
 Forces this resource to save, even if errors are present
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzure-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzure.ts#L24">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzure.ts#L24">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1014,7 +1017,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzure-metricFilterRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzure.ts#L75">property <b>metricFilterRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzure.ts#L75">property <b>metricFilterRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metricFilterRegex: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1022,7 +1025,7 @@ deployments and may be missing (undefined) during planning phases.
 A regular expression that a metric name must match (case-insensitively) in order to be ingested
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzure-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzure.ts#L79">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzure.ts#L79">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1030,7 +1033,7 @@ A regular expression that a metric name must match (case-insensitively) in order
 The human-readable name of this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzure-resourceGroupFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzure.ts#L83">property <b>resourceGroupFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzure.ts#L83">property <b>resourceGroupFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupFilters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1038,7 +1041,7 @@ The human-readable name of this integration
 A list of Azure resource groups from which to pull metrics
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzure-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzure.ts#L87">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzure.ts#L87">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1046,7 +1049,7 @@ A list of Azure resource groups from which to pull metrics
 A value denoting which cloud service this service integrates with
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzure-serviceRefreshRateInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzure.ts#L91">property <b>serviceRefreshRateInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzure.ts#L91">property <b>serviceRefreshRateInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceRefreshRateInMinutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1054,7 +1057,7 @@ A value denoting which cloud service this service integrates with
 How often, in minutes, to refresh the service
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzure-tenant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzure.ts#L95">property <b>tenant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzure.ts#L95">property <b>tenant</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tenant: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1062,7 +1065,7 @@ How often, in minutes, to refresh the service
 Tenant Id for an Azure service account within your project
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzure-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzure.ts#L24">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzure.ts#L24">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1071,7 +1074,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="CloudIntegrationAzureActivityLog" data-link-title="CloudIntegrationAzureActivityLog">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L25">
         Resource <strong>CloudIntegrationAzureActivityLog</strong>
     </a>
 </h3>
@@ -1096,7 +1099,7 @@ const azureActivityLog = new wavefront.CloudIntegrationAzureActivityLog("azure_a
 ```
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureActivityLog-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L88"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L88"> <b>constructor</b></a>
 </h4>
 
 
@@ -1110,7 +1113,7 @@ Create a CloudIntegrationAzureActivityLog resource with the given unique name, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureActivityLog-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L35">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L35">method <b>get</b></a>
 </h4>
 
 
@@ -1121,14 +1124,14 @@ Get an existing CloudIntegrationAzureActivityLog resource's state with the given
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureActivityLog-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L25">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L25">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureActivityLog-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L46">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L46">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1139,7 +1142,7 @@ Returns true if the given object is an instance of CloudIntegrationAzureActivity
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureActivityLog-additionalTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L56">property <b>additionalTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L56">property <b>additionalTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>additionalTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1147,7 +1150,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A list of point tag key-values to add to every point ingested using this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureActivityLog-categoryFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L60">property <b>categoryFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L60">property <b>categoryFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>categoryFilters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1155,7 +1158,7 @@ A list of point tag key-values to add to every point ingested using this integra
 A list of Azure services (such as Microsoft.Compute/virtualMachines) from which to pull metrics
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureActivityLog-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L64">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L64">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1163,7 +1166,7 @@ A list of Azure services (such as Microsoft.Compute/virtualMachines) from which 
 Client id for an azure service account within your project
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureActivityLog-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L68">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L68">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1171,7 +1174,7 @@ Client id for an azure service account within your project
 Client secret for an Azure service account within your project
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureActivityLog-forceSave">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L72">property <b>forceSave</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L72">property <b>forceSave</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>forceSave: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1179,7 +1182,7 @@ Client secret for an Azure service account within your project
 Forces this resource to save, even if errors are present
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureActivityLog-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L25">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L25">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1188,7 +1191,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureActivityLog-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L76">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L76">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1196,7 +1199,7 @@ deployments and may be missing (undefined) during planning phases.
 The human-readable name of this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureActivityLog-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L80">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L80">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1204,7 +1207,7 @@ The human-readable name of this integration
 A value denoting which cloud service this service integrates with
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureActivityLog-serviceRefreshRateInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L84">property <b>serviceRefreshRateInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L84">property <b>serviceRefreshRateInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceRefreshRateInMinutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1212,7 +1215,7 @@ A value denoting which cloud service this service integrates with
 How often, in minutes, to refresh the service
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureActivityLog-tenant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L88">property <b>tenant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L88">property <b>tenant</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tenant: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1220,7 +1223,7 @@ How often, in minutes, to refresh the service
 Tenant Id for an Azure service account within your project
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureActivityLog-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L25">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L25">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1229,7 +1232,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="CloudIntegrationCloudTrail" data-link-title="CloudIntegrationCloudTrail">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudTrail.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudTrail.ts#L26">
         Resource <strong>CloudIntegrationCloudTrail</strong>
     </a>
 </h3>
@@ -1255,7 +1258,7 @@ const cloudtrail = new wavefront.CloudIntegrationCloudTrail("cloudtrail", {
 ```
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudTrail-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudTrail.ts#L97"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudTrail.ts#L97"> <b>constructor</b></a>
 </h4>
 
 
@@ -1269,7 +1272,7 @@ Create a CloudIntegrationCloudTrail resource with the given unique name, argumen
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudTrail-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudTrail.ts#L36">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudTrail.ts#L36">method <b>get</b></a>
 </h4>
 
 
@@ -1280,14 +1283,14 @@ Get an existing CloudIntegrationCloudTrail resource's state with the given name,
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudTrail-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudTrail.ts#L26">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudTrail.ts#L26">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudTrail-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudTrail.ts#L47">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudTrail.ts#L47">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1298,7 +1301,7 @@ Returns true if the given object is an instance of CloudIntegrationCloudTrail.  
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudTrail-additionalTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudTrail.ts#L57">property <b>additionalTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudTrail.ts#L57">property <b>additionalTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>additionalTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1306,7 +1309,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A list of point tag key-values to add to every point ingested using this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudTrail-bucketName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudTrail.ts#L61">property <b>bucketName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudTrail.ts#L61">property <b>bucketName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bucketName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1314,7 +1317,7 @@ A list of point tag key-values to add to every point ingested using this integra
 Name of the S3 bucket where CloudTrail logs are stored
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudTrail-externalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudTrail.ts#L65">property <b>externalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudTrail.ts#L65">property <b>externalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>externalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1322,7 +1325,7 @@ Name of the S3 bucket where CloudTrail logs are stored
 The Role ARN that the customer has created in AWS IAM to allow access to Wavefront
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudTrail-filterRule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudTrail.ts#L69">property <b>filterRule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudTrail.ts#L69">property <b>filterRule</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>filterRule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1330,7 +1333,7 @@ The Role ARN that the customer has created in AWS IAM to allow access to Wavefro
 Rule to filter CloudTrail log event
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudTrail-forceSave">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudTrail.ts#L73">property <b>forceSave</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudTrail.ts#L73">property <b>forceSave</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>forceSave: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1338,7 +1341,7 @@ Rule to filter CloudTrail log event
 Forces this resource to save, even if errors are present
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudTrail-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudTrail.ts#L26">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudTrail.ts#L26">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1347,7 +1350,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudTrail-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudTrail.ts#L77">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudTrail.ts#L77">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1355,7 +1358,7 @@ deployments and may be missing (undefined) during planning phases.
 The human-readable name of this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudTrail-prefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudTrail.ts#L81">property <b>prefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudTrail.ts#L81">property <b>prefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>prefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1363,7 +1366,7 @@ The human-readable name of this integration
 The common prefix, if any, appended to all CloudTrail log files.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudTrail-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudTrail.ts#L85">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudTrail.ts#L85">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1371,7 +1374,7 @@ The common prefix, if any, appended to all CloudTrail log files.
 The AWS region of the S3 bucket where CloudTrail logs are stored
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudTrail-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudTrail.ts#L89">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudTrail.ts#L89">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1379,7 +1382,7 @@ The AWS region of the S3 bucket where CloudTrail logs are stored
 The external id corresponding to the Role ARN
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudTrail-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudTrail.ts#L93">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudTrail.ts#L93">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1387,7 +1390,7 @@ The external id corresponding to the Role ARN
 A value denoting which cloud service this service integrates with
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudTrail-serviceRefreshRateInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudTrail.ts#L97">property <b>serviceRefreshRateInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudTrail.ts#L97">property <b>serviceRefreshRateInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceRefreshRateInMinutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1395,7 +1398,7 @@ A value denoting which cloud service this service integrates with
 How often, in minutes, to refresh the service
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudTrail-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudTrail.ts#L26">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudTrail.ts#L26">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1404,7 +1407,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="CloudIntegrationCloudWatch" data-link-title="CloudIntegrationCloudWatch">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L25">
         Resource <strong>CloudIntegrationCloudWatch</strong>
     </a>
 </h3>
@@ -1429,7 +1432,7 @@ const cloudwatch = new wavefront.CloudIntegrationCloudWatch("cloudwatch", {
 ```
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudWatch-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L105"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L105"> <b>constructor</b></a>
 </h4>
 
 
@@ -1443,7 +1446,7 @@ Create a CloudIntegrationCloudWatch resource with the given unique name, argumen
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudWatch-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L35">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L35">method <b>get</b></a>
 </h4>
 
 
@@ -1454,14 +1457,14 @@ Get an existing CloudIntegrationCloudWatch resource's state with the given name,
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudWatch-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L25">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L25">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudWatch-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L46">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L46">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1472,7 +1475,7 @@ Returns true if the given object is an instance of CloudIntegrationCloudWatch.  
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudWatch-additionalTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L56">property <b>additionalTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L56">property <b>additionalTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>additionalTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1480,7 +1483,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A list of point tag key-values to add to every point ingested using this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudWatch-externalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L60">property <b>externalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L60">property <b>externalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>externalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1488,7 +1491,7 @@ A list of point tag key-values to add to every point ingested using this integra
 The Role ARN that the customer has created in AWS IAM to allow access to Wavefront
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudWatch-forceSave">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L64">property <b>forceSave</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L64">property <b>forceSave</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>forceSave: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1496,7 +1499,7 @@ The Role ARN that the customer has created in AWS IAM to allow access to Wavefro
 Forces this resource to save, even if errors are present
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudWatch-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L25">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L25">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1505,7 +1508,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudWatch-instanceSelectionTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L70">property <b>instanceSelectionTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L70">property <b>instanceSelectionTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceSelectionTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1515,7 +1518,7 @@ If the instance's AWS tags match this whitelist, CloudWatch data about this inst
 Multiple entries are OR'ed
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudWatch-metricFilterRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L74">property <b>metricFilterRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L74">property <b>metricFilterRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metricFilterRegex: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1523,7 +1526,7 @@ Multiple entries are OR'ed
 A regular expression that a CloudWatch metric name must match (case-insensitively) in order to be ingested
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudWatch-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L78">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L78">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1531,7 +1534,7 @@ A regular expression that a CloudWatch metric name must match (case-insensitivel
 The human-readable name of this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudWatch-namespaces">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L82">property <b>namespaces</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L82">property <b>namespaces</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namespaces: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1539,7 +1542,7 @@ The human-readable name of this integration
 A list of namespaces that limit what we query from CloudWatch
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudWatch-pointTagFilterRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L87">property <b>pointTagFilterRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L87">property <b>pointTagFilterRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pointTagFilterRegex: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1548,7 +1551,7 @@ A regular expression that AWS tag key name must match (case-insensitively)
 in order to be ingested
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudWatch-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L91">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L91">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1556,7 +1559,7 @@ in order to be ingested
 The external id corresponding to the Role ARN
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudWatch-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L95">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L95">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1564,7 +1567,7 @@ The external id corresponding to the Role ARN
 A value denoting which cloud service this service integrates with
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudWatch-serviceRefreshRateInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L99">property <b>serviceRefreshRateInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L99">property <b>serviceRefreshRateInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceRefreshRateInMinutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1572,7 +1575,7 @@ A value denoting which cloud service this service integrates with
 How often, in minutes, to refresh the service
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudWatch-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L25">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L25">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1581,7 +1584,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudWatch-volumeSelectionTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L105">property <b>volumeSelectionTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L105">property <b>volumeSelectionTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>volumeSelectionTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1591,7 +1594,7 @@ If the volume's AWS tags match this whitelist, CloudWatch data about this volume
 Multiple entries are OR'ed
 
 <h3 class="pdoc-module-header" id="CloudIntegrationEc2" data-link-title="CloudIntegrationEc2">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationEc2.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationEc2.ts#L24">
         Resource <strong>CloudIntegrationEc2</strong>
     </a>
 </h3>
@@ -1615,7 +1618,7 @@ const ec2 = new wavefront.CloudIntegrationEc2("ec2", {
 ```
 
 <h4 class="pdoc-member-header" id="CloudIntegrationEc2-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationEc2.ts#L80"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationEc2.ts#L80"> <b>constructor</b></a>
 </h4>
 
 
@@ -1629,7 +1632,7 @@ Create a CloudIntegrationEc2 resource with the given unique name, arguments, and
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationEc2-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationEc2.ts#L34">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationEc2.ts#L34">method <b>get</b></a>
 </h4>
 
 
@@ -1640,14 +1643,14 @@ Get an existing CloudIntegrationEc2 resource's state with the given name, ID, an
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationEc2-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationEc2.ts#L24">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationEc2.ts#L24">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="CloudIntegrationEc2-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationEc2.ts#L45">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationEc2.ts#L45">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1658,7 +1661,7 @@ Returns true if the given object is an instance of CloudIntegrationEc2.  This is
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationEc2-additionalTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationEc2.ts#L55">property <b>additionalTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationEc2.ts#L55">property <b>additionalTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>additionalTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1666,7 +1669,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A list of point tag key-values to add to every point ingested using this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationEc2-externalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationEc2.ts#L59">property <b>externalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationEc2.ts#L59">property <b>externalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>externalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1674,7 +1677,7 @@ A list of point tag key-values to add to every point ingested using this integra
 The Role ARN that the customer has created in AWS IAM to allow access to Wavefront
 
 <h4 class="pdoc-member-header" id="CloudIntegrationEc2-forceSave">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationEc2.ts#L63">property <b>forceSave</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationEc2.ts#L63">property <b>forceSave</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>forceSave: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1682,12 +1685,12 @@ The Role ARN that the customer has created in AWS IAM to allow access to Wavefro
 Forces this resource to save, even if errors are present
 
 <h4 class="pdoc-member-header" id="CloudIntegrationEc2-hostnameTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationEc2.ts#L64">property <b>hostnameTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationEc2.ts#L64">property <b>hostnameTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hostnameTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CloudIntegrationEc2-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationEc2.ts#L24">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationEc2.ts#L24">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1696,7 +1699,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationEc2-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationEc2.ts#L68">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationEc2.ts#L68">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1704,7 +1707,7 @@ deployments and may be missing (undefined) during planning phases.
 The human-readable name of this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationEc2-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationEc2.ts#L72">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationEc2.ts#L72">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1712,7 +1715,7 @@ The human-readable name of this integration
 The external id corresponding to the Role ARN
 
 <h4 class="pdoc-member-header" id="CloudIntegrationEc2-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationEc2.ts#L76">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationEc2.ts#L76">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1720,7 +1723,7 @@ The external id corresponding to the Role ARN
 A value denoting which cloud service this service integrates with
 
 <h4 class="pdoc-member-header" id="CloudIntegrationEc2-serviceRefreshRateInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationEc2.ts#L80">property <b>serviceRefreshRateInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationEc2.ts#L80">property <b>serviceRefreshRateInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceRefreshRateInMinutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1728,7 +1731,7 @@ A value denoting which cloud service this service integrates with
 How often, in minutes, to refresh the service
 
 <h4 class="pdoc-member-header" id="CloudIntegrationEc2-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationEc2.ts#L24">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationEc2.ts#L24">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1737,7 +1740,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="CloudIntegrationGcp" data-link-title="CloudIntegrationGcp">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcp.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcp.ts#L23">
         Resource <strong>CloudIntegrationGcp</strong>
     </a>
 </h3>
@@ -1760,7 +1763,7 @@ const gcp = new wavefront.CloudIntegrationGcp("gcp", {
 ```
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcp-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcp.ts#L91"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcp.ts#L91"> <b>constructor</b></a>
 </h4>
 
 
@@ -1774,7 +1777,7 @@ Create a CloudIntegrationGcp resource with the given unique name, arguments, and
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcp-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcp.ts#L33">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcp.ts#L33">method <b>get</b></a>
 </h4>
 
 
@@ -1785,14 +1788,14 @@ Get an existing CloudIntegrationGcp resource's state with the given name, ID, an
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcp-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcp.ts#L23">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcp.ts#L23">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcp-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcp.ts#L44">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcp.ts#L44">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1803,7 +1806,7 @@ Returns true if the given object is an instance of CloudIntegrationGcp.  This is
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcp-additionalTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcp.ts#L54">property <b>additionalTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcp.ts#L54">property <b>additionalTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>additionalTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1811,7 +1814,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A list of point tag key-values to add to every point ingested using this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcp-categories">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcp.ts#L62">property <b>categories</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcp.ts#L62">property <b>categories</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>categories: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1823,7 +1826,7 @@ A list of Google Cloud Platform (GCP) services.  Valid values are `APPENGINE`,
 `TPU`, `VPN`
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcp-forceSave">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcp.ts#L66">property <b>forceSave</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcp.ts#L66">property <b>forceSave</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>forceSave: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1831,7 +1834,7 @@ A list of Google Cloud Platform (GCP) services.  Valid values are `APPENGINE`,
 Forces this resource to save, even if errors are present
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcp-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcp.ts#L23">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcp.ts#L23">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1840,7 +1843,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcp-jsonKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcp.ts#L71">property <b>jsonKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcp.ts#L71">property <b>jsonKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>jsonKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1849,7 +1852,7 @@ Private key for a Google Cloud Platform (GCP) service account within your projec
 The account must be at least granted Monitoring Viewer permissions. This key must be in the JSON format generated by GCP.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcp-metricFilterRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcp.ts#L75">property <b>metricFilterRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcp.ts#L75">property <b>metricFilterRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metricFilterRegex: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1857,7 +1860,7 @@ The account must be at least granted Monitoring Viewer permissions. This key mus
 A regular expression that a metric name must match (case-insensitively) in order to be ingested
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcp-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcp.ts#L79">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcp.ts#L79">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1865,7 +1868,7 @@ A regular expression that a metric name must match (case-insensitively) in order
 The human-readable name of this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcp-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcp.ts#L83">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcp.ts#L83">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1873,7 +1876,7 @@ The human-readable name of this integration
 The Google Cloud Platform (GCP) Project Id
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcp-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcp.ts#L87">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcp.ts#L87">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1881,7 +1884,7 @@ The Google Cloud Platform (GCP) Project Id
 A value denoting which cloud service this service integrates with
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcp-serviceRefreshRateInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcp.ts#L91">property <b>serviceRefreshRateInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcp.ts#L91">property <b>serviceRefreshRateInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceRefreshRateInMinutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1889,7 +1892,7 @@ A value denoting which cloud service this service integrates with
 How often, in minutes, to refresh the service
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcp-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcp.ts#L23">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcp.ts#L23">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1898,7 +1901,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="CloudIntegrationGcpBilling" data-link-title="CloudIntegrationGcpBilling">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcpBilling.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcpBilling.ts#L24">
         Resource <strong>CloudIntegrationGcpBilling</strong>
     </a>
 </h3>
@@ -1922,7 +1925,7 @@ const gcpBilling = new wavefront.CloudIntegrationGcpBilling("gcp_billing", {
 ```
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpBilling-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcpBilling.ts#L84"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcpBilling.ts#L84"> <b>constructor</b></a>
 </h4>
 
 
@@ -1936,7 +1939,7 @@ Create a CloudIntegrationGcpBilling resource with the given unique name, argumen
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpBilling-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcpBilling.ts#L34">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcpBilling.ts#L34">method <b>get</b></a>
 </h4>
 
 
@@ -1947,14 +1950,14 @@ Get an existing CloudIntegrationGcpBilling resource's state with the given name,
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpBilling-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcpBilling.ts#L24">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcpBilling.ts#L24">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpBilling-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcpBilling.ts#L45">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcpBilling.ts#L45">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1965,7 +1968,7 @@ Returns true if the given object is an instance of CloudIntegrationGcpBilling.  
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpBilling-additionalTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcpBilling.ts#L55">property <b>additionalTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcpBilling.ts#L55">property <b>additionalTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>additionalTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1973,7 +1976,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A list of point tag key-values to add to every point ingested using this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpBilling-apiKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcpBilling.ts#L59">property <b>apiKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcpBilling.ts#L59">property <b>apiKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1981,7 +1984,7 @@ A list of point tag key-values to add to every point ingested using this integra
 API key for Google Cloud Platform (GCP)
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpBilling-forceSave">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcpBilling.ts#L63">property <b>forceSave</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcpBilling.ts#L63">property <b>forceSave</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>forceSave: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1989,7 +1992,7 @@ API key for Google Cloud Platform (GCP)
 Forces this resource to save, even if errors are present
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpBilling-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcpBilling.ts#L24">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcpBilling.ts#L24">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1998,7 +2001,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpBilling-jsonKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcpBilling.ts#L68">property <b>jsonKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcpBilling.ts#L68">property <b>jsonKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>jsonKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2007,7 +2010,7 @@ Private key for a Google Cloud Platform (GCP) service account within your projec
 The account must be at least granted Monitoring Viewer permissions. This key must be in the JSON format generated by GCP.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpBilling-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcpBilling.ts#L72">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcpBilling.ts#L72">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2015,7 +2018,7 @@ The account must be at least granted Monitoring Viewer permissions. This key mus
 The human-readable name of this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpBilling-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcpBilling.ts#L76">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcpBilling.ts#L76">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2023,7 +2026,7 @@ The human-readable name of this integration
 The Google Cloud Platform (GCP) Project Id
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpBilling-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcpBilling.ts#L80">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcpBilling.ts#L80">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2031,7 +2034,7 @@ The Google Cloud Platform (GCP) Project Id
 A value denoting which cloud service this service integrates with
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpBilling-serviceRefreshRateInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcpBilling.ts#L84">property <b>serviceRefreshRateInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcpBilling.ts#L84">property <b>serviceRefreshRateInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceRefreshRateInMinutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2039,7 +2042,7 @@ A value denoting which cloud service this service integrates with
 How often, in minutes, to refresh the service
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpBilling-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcpBilling.ts#L24">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcpBilling.ts#L24">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2048,7 +2051,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="CloudIntegrationNewRelic" data-link-title="CloudIntegrationNewRelic">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationNewRelic.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationNewRelic.ts#L24">
         Resource <strong>CloudIntegrationNewRelic</strong>
     </a>
 </h3>
@@ -2070,7 +2073,7 @@ const newrelic = new wavefront.CloudIntegrationNewRelic("newrelic", {
 ```
 
 <h4 class="pdoc-member-header" id="CloudIntegrationNewRelic-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationNewRelic.ts#L87"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationNewRelic.ts#L87"> <b>constructor</b></a>
 </h4>
 
 
@@ -2084,7 +2087,7 @@ Create a CloudIntegrationNewRelic resource with the given unique name, arguments
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationNewRelic-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationNewRelic.ts#L34">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationNewRelic.ts#L34">method <b>get</b></a>
 </h4>
 
 
@@ -2095,14 +2098,14 @@ Get an existing CloudIntegrationNewRelic resource's state with the given name, I
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationNewRelic-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationNewRelic.ts#L24">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationNewRelic.ts#L24">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="CloudIntegrationNewRelic-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationNewRelic.ts#L45">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationNewRelic.ts#L45">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2113,7 +2116,7 @@ Returns true if the given object is an instance of CloudIntegrationNewRelic.  Th
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationNewRelic-additionalTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationNewRelic.ts#L55">property <b>additionalTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationNewRelic.ts#L55">property <b>additionalTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>additionalTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2121,7 +2124,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A list of point tag key-values to add to every point ingested using this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationNewRelic-apiKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationNewRelic.ts#L59">property <b>apiKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationNewRelic.ts#L59">property <b>apiKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2129,7 +2132,7 @@ A list of point tag key-values to add to every point ingested using this integra
 NewRelic REST api key
 
 <h4 class="pdoc-member-header" id="CloudIntegrationNewRelic-appFilterRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationNewRelic.ts#L63">property <b>appFilterRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationNewRelic.ts#L63">property <b>appFilterRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>appFilterRegex: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2137,7 +2140,7 @@ NewRelic REST api key
 A regular expression that an application name must match (case-insensitively) iun order to collect metrics
 
 <h4 class="pdoc-member-header" id="CloudIntegrationNewRelic-forceSave">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationNewRelic.ts#L67">property <b>forceSave</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationNewRelic.ts#L67">property <b>forceSave</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>forceSave: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2145,7 +2148,7 @@ A regular expression that an application name must match (case-insensitively) iu
 Forces this resource to save, even if errors are present
 
 <h4 class="pdoc-member-header" id="CloudIntegrationNewRelic-hostFilterRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationNewRelic.ts#L71">property <b>hostFilterRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationNewRelic.ts#L71">property <b>hostFilterRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hostFilterRegex: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2153,7 +2156,7 @@ Forces this resource to save, even if errors are present
 A regular expression that a host name must match (case-insensitively) in order to collect metrics
 
 <h4 class="pdoc-member-header" id="CloudIntegrationNewRelic-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationNewRelic.ts#L24">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationNewRelic.ts#L24">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2162,7 +2165,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationNewRelic-metricFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationNewRelic.ts#L75">property <b>metricFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationNewRelic.ts#L75">property <b>metricFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metricFilters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/wavefront/types/output/#CloudIntegrationNewRelicMetricFilter'>CloudIntegrationNewRelicMetricFilter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2170,7 +2173,7 @@ deployments and may be missing (undefined) during planning phases.
 See Metric Filter
 
 <h4 class="pdoc-member-header" id="CloudIntegrationNewRelic-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationNewRelic.ts#L79">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationNewRelic.ts#L79">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2178,7 +2181,7 @@ See Metric Filter
 The human-readable name of this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationNewRelic-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationNewRelic.ts#L83">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationNewRelic.ts#L83">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2186,7 +2189,7 @@ The human-readable name of this integration
 A value denoting which cloud service this service integrates with
 
 <h4 class="pdoc-member-header" id="CloudIntegrationNewRelic-serviceRefreshRateInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationNewRelic.ts#L87">property <b>serviceRefreshRateInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationNewRelic.ts#L87">property <b>serviceRefreshRateInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceRefreshRateInMinutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2194,7 +2197,7 @@ A value denoting which cloud service this service integrates with
 How often, in minutes, to refresh the service
 
 <h4 class="pdoc-member-header" id="CloudIntegrationNewRelic-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationNewRelic.ts#L24">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationNewRelic.ts#L24">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2203,7 +2206,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="CloudIntegrationTesla" data-link-title="CloudIntegrationTesla">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationTesla.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationTesla.ts#L23">
         Resource <strong>CloudIntegrationTesla</strong>
     </a>
 </h3>
@@ -2226,7 +2229,7 @@ const tesla = new wavefront.CloudIntegrationTesla("tesla", {
 ```
 
 <h4 class="pdoc-member-header" id="CloudIntegrationTesla-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationTesla.ts#L78"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationTesla.ts#L78"> <b>constructor</b></a>
 </h4>
 
 
@@ -2240,7 +2243,7 @@ Create a CloudIntegrationTesla resource with the given unique name, arguments, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationTesla-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationTesla.ts#L33">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationTesla.ts#L33">method <b>get</b></a>
 </h4>
 
 
@@ -2251,14 +2254,14 @@ Get an existing CloudIntegrationTesla resource's state with the given name, ID, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationTesla-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationTesla.ts#L23">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationTesla.ts#L23">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="CloudIntegrationTesla-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationTesla.ts#L44">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationTesla.ts#L44">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2269,7 +2272,7 @@ Returns true if the given object is an instance of CloudIntegrationTesla.  This 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationTesla-additionalTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationTesla.ts#L54">property <b>additionalTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationTesla.ts#L54">property <b>additionalTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>additionalTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2277,7 +2280,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A list of point tag key-values to add to every point ingested using this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationTesla-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationTesla.ts#L58">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationTesla.ts#L58">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>email: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2285,7 +2288,7 @@ A list of point tag key-values to add to every point ingested using this integra
 Email address for the Tesla account login
 
 <h4 class="pdoc-member-header" id="CloudIntegrationTesla-forceSave">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationTesla.ts#L62">property <b>forceSave</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationTesla.ts#L62">property <b>forceSave</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>forceSave: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2293,7 +2296,7 @@ Email address for the Tesla account login
 Forces this resource to save, even if errors are present
 
 <h4 class="pdoc-member-header" id="CloudIntegrationTesla-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationTesla.ts#L23">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationTesla.ts#L23">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2302,7 +2305,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationTesla-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationTesla.ts#L66">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationTesla.ts#L66">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2310,7 +2313,7 @@ deployments and may be missing (undefined) during planning phases.
 The human-readable name of this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationTesla-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationTesla.ts#L70">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationTesla.ts#L70">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2318,7 +2321,7 @@ The human-readable name of this integration
 Password for the Tesla account login
 
 <h4 class="pdoc-member-header" id="CloudIntegrationTesla-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationTesla.ts#L74">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationTesla.ts#L74">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2326,7 +2329,7 @@ Password for the Tesla account login
 A value denoting which cloud service this service integrates with
 
 <h4 class="pdoc-member-header" id="CloudIntegrationTesla-serviceRefreshRateInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationTesla.ts#L78">property <b>serviceRefreshRateInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationTesla.ts#L78">property <b>serviceRefreshRateInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceRefreshRateInMinutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2334,7 +2337,7 @@ A value denoting which cloud service this service integrates with
 How often, in minutes, to refresh the service
 
 <h4 class="pdoc-member-header" id="CloudIntegrationTesla-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationTesla.ts#L23">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationTesla.ts#L23">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2343,7 +2346,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Dashboard" data-link-title="Dashboard">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboard.ts#L68">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboard.ts#L68">
         Resource <strong>Dashboard</strong>
     </a>
 </h3>
@@ -2409,7 +2412,7 @@ const testDashboard = new wavefront.Dashboard("testDashboard", {
 ```
 
 <h4 class="pdoc-member-header" id="Dashboard-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboard.ts#L142"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboard.ts#L142"> <b>constructor</b></a>
 </h4>
 
 
@@ -2423,7 +2426,7 @@ Create a Dashboard resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Dashboard-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboard.ts#L78">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboard.ts#L78">method <b>get</b></a>
 </h4>
 
 
@@ -2434,14 +2437,14 @@ Get an existing Dashboard resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Dashboard-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboard.ts#L68">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboard.ts#L68">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Dashboard-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboard.ts#L89">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboard.ts#L89">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2452,7 +2455,7 @@ Returns true if the given object is an instance of Dashboard.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Dashboard-canModifies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboard.ts#L99">property <b>canModifies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboard.ts#L99">property <b>canModifies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>canModifies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -2460,7 +2463,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A list of users that have modify ACL access to the dashboard
 
 <h4 class="pdoc-member-header" id="Dashboard-canViews">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboard.ts#L103">property <b>canViews</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboard.ts#L103">property <b>canViews</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>canViews: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2468,7 +2471,7 @@ A list of users that have modify ACL access to the dashboard
 A list of users that have view ACL access to the dashboard
 
 <h4 class="pdoc-member-header" id="Dashboard-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboard.ts#L107">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboard.ts#L107">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2476,7 +2479,7 @@ A list of users that have view ACL access to the dashboard
 Human-readable description of the dashboard
 
 <h4 class="pdoc-member-header" id="Dashboard-displayQueryParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboard.ts#L112">property <b>displayQueryParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboard.ts#L112">property <b>displayQueryParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayQueryParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2485,7 +2488,7 @@ Whether the dashboard parameters section is opened by default when the dashboard
 is shown
 
 <h4 class="pdoc-member-header" id="Dashboard-displaySectionTableOfContents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboard.ts#L117">property <b>displaySectionTableOfContents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboard.ts#L117">property <b>displaySectionTableOfContents</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displaySectionTableOfContents: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2494,7 +2497,7 @@ Whether the "pills" quick-linked the sections of the dashboard are
 displayed by default when the dashboard is shown
 
 <h4 class="pdoc-member-header" id="Dashboard-eventFilterType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboard.ts#L122">property <b>eventFilterType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboard.ts#L122">property <b>eventFilterType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eventFilterType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2503,7 +2506,7 @@ How charts belonging to this dashboard should display events. BYCHART is default
 unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBOARD`, and `BYCHARTANDDASHBOARD`
 
 <h4 class="pdoc-member-header" id="Dashboard-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboard.ts#L68">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboard.ts#L68">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2512,7 +2515,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Dashboard-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboard.ts#L126">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboard.ts#L126">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2520,7 +2523,7 @@ deployments and may be missing (undefined) during planning phases.
 Name of the dashboard
 
 <h4 class="pdoc-member-header" id="Dashboard-parameterDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboard.ts#L130">property <b>parameterDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboard.ts#L130">property <b>parameterDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parameterDetails: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/wavefront/types/output/#DashboardParameterDetail'>DashboardParameterDetail</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2528,7 +2531,7 @@ Name of the dashboard
 The current JSON representation of dashboard parameters. See parameter details
 
 <h4 class="pdoc-member-header" id="Dashboard-sections">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboard.ts#L134">property <b>sections</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboard.ts#L134">property <b>sections</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sections: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/wavefront/types/output/#DashboardSection'>DashboardSection</a>[]&gt;;</code></pre>
@@ -2536,7 +2539,7 @@ The current JSON representation of dashboard parameters. See parameter details
 Dashboard chart sections. See dashboard sections
 
 <h4 class="pdoc-member-header" id="Dashboard-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboard.ts#L138">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboard.ts#L138">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -2544,7 +2547,7 @@ Dashboard chart sections. See dashboard sections
 A set of tags to assign to this resource.
 
 <h4 class="pdoc-member-header" id="Dashboard-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboard.ts#L142">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboard.ts#L142">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2552,7 +2555,7 @@ A set of tags to assign to this resource.
 Unique identifier, also URL slug, of the dashboard
 
 <h4 class="pdoc-member-header" id="Dashboard-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboard.ts#L68">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboard.ts#L68">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2561,7 +2564,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="DashboardJson" data-link-title="DashboardJson">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboardJson.ts#L118">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboardJson.ts#L118">
         Resource <strong>DashboardJson</strong>
     </a>
 </h3>
@@ -2679,7 +2682,7 @@ const testDashboardJson = new wavefront.DashboardJson("test_dashboard_json", {
 ```
 
 <h4 class="pdoc-member-header" id="DashboardJson-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboardJson.ts#L150"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboardJson.ts#L150"> <b>constructor</b></a>
 </h4>
 
 
@@ -2693,7 +2696,7 @@ Create a DashboardJson resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DashboardJson-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboardJson.ts#L128">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboardJson.ts#L128">method <b>get</b></a>
 </h4>
 
 
@@ -2704,14 +2707,14 @@ Get an existing DashboardJson resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DashboardJson-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboardJson.ts#L118">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboardJson.ts#L118">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DashboardJson-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboardJson.ts#L139">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboardJson.ts#L139">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2722,7 +2725,7 @@ Returns true if the given object is an instance of DashboardJson.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DashboardJson-dashboardJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboardJson.ts#L150">property <b>dashboardJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboardJson.ts#L150">property <b>dashboardJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dashboardJson: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2731,7 +2734,7 @@ See [Wavefront API Documentation](https://docs.wavefront.com/wavefront_api.html#
 for instructions on how to get to your API documentation for more details.
 
 <h4 class="pdoc-member-header" id="DashboardJson-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboardJson.ts#L118">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboardJson.ts#L118">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2740,7 +2743,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DashboardJson-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboardJson.ts#L118">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboardJson.ts#L118">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2749,7 +2752,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="DerivedMetric" data-link-title="DerivedMetric">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/derivedMetric.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/derivedMetric.ts#L23">
         Resource <strong>DerivedMetric</strong>
     </a>
 </h3>
@@ -2772,7 +2775,7 @@ const derived = new wavefront.DerivedMetric("derived", {
 ```
 
 <h4 class="pdoc-member-header" id="DerivedMetric-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/derivedMetric.ts#L70"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/derivedMetric.ts#L70"> <b>constructor</b></a>
 </h4>
 
 
@@ -2786,7 +2789,7 @@ Create a DerivedMetric resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DerivedMetric-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/derivedMetric.ts#L33">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/derivedMetric.ts#L33">method <b>get</b></a>
 </h4>
 
 
@@ -2797,14 +2800,14 @@ Get an existing DerivedMetric resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DerivedMetric-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/derivedMetric.ts#L23">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/derivedMetric.ts#L23">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DerivedMetric-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/derivedMetric.ts#L44">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/derivedMetric.ts#L44">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2815,7 +2818,7 @@ Returns true if the given object is an instance of DerivedMetric.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DerivedMetric-additionalInformation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/derivedMetric.ts#L54">property <b>additionalInformation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/derivedMetric.ts#L54">property <b>additionalInformation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>additionalInformation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2823,7 +2826,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 User-supplied additional explanatory information for the derived metric
 
 <h4 class="pdoc-member-header" id="DerivedMetric-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/derivedMetric.ts#L23">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/derivedMetric.ts#L23">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2832,7 +2835,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DerivedMetric-minutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/derivedMetric.ts#L58">property <b>minutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/derivedMetric.ts#L58">property <b>minutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>minutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2840,7 +2843,7 @@ deployments and may be missing (undefined) during planning phases.
 How frequently the query generating the derived metric is run
 
 <h4 class="pdoc-member-header" id="DerivedMetric-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/derivedMetric.ts#L62">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/derivedMetric.ts#L62">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2848,7 +2851,7 @@ How frequently the query generating the derived metric is run
 The name of the Derived Metric in Wavefront
 
 <h4 class="pdoc-member-header" id="DerivedMetric-query">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/derivedMetric.ts#L66">property <b>query</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/derivedMetric.ts#L66">property <b>query</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>query: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2856,7 +2859,7 @@ The name of the Derived Metric in Wavefront
 A Wavefront query that is evaluated at regular intervals (default `1m`)
 
 <h4 class="pdoc-member-header" id="DerivedMetric-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/derivedMetric.ts#L70">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/derivedMetric.ts#L70">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2864,7 +2867,146 @@ A Wavefront query that is evaluated at regular intervals (default `1m`)
 A set of tags to assign to this resource.
 
 <h4 class="pdoc-member-header" id="DerivedMetric-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/derivedMetric.ts#L23">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/derivedMetric.ts#L23">property <b>urn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h3 class="pdoc-module-header" id="ExternalLink" data-link-title="ExternalLink">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/externalLink.ts#L22">
+        Resource <strong>ExternalLink</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>ExternalLink</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+
+Provides a Wavefront External Link Resource. This allows external links to be created, updated, and deleted.
+
+#### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as wavefront from "@pulumi/wavefront";
+
+const basic = new wavefront.ExternalLink("basic", {
+    description: "An external link description",
+    template: "https://example.com/source={{{source}}}&startTime={{startEpochMillis}}",
+});
+```
+
+<h4 class="pdoc-member-header" id="ExternalLink-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/externalLink.ts#L77"> <b>constructor</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> ExternalLink(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ExternalLinkArgs'>ExternalLinkArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
+
+
+Create a ExternalLink resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h4 class="pdoc-member-header" id="ExternalLink-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/externalLink.ts#L32">method <b>get</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ExternalLinkState'>ExternalLinkState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#ExternalLink'>ExternalLink</a></code></pre>
+
+
+Get an existing ExternalLink resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h4 class="pdoc-member-header" id="ExternalLink-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/externalLink.ts#L22">method <b>getProvider</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
+
+<h4 class="pdoc-member-header" id="ExternalLink-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/externalLink.ts#L43">method <b>isInstance</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ExternalLink</code></pre>
+
+
+Returns true if the given object is an instance of ExternalLink.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h4 class="pdoc-member-header" id="ExternalLink-description">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/externalLink.ts#L53">property <b>description</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Human-readable description for this link
+
+<h4 class="pdoc-member-header" id="ExternalLink-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/externalLink.ts#L22">property <b>id</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h4 class="pdoc-member-header" id="ExternalLink-isLogIntegration">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/externalLink.ts#L57">property <b>isLogIntegration</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>isLogIntegration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Whether this is a "Log Integration" subType of external link
+
+<h4 class="pdoc-member-header" id="ExternalLink-metricFilterRegex">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/externalLink.ts#L61">property <b>metricFilterRegex</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>metricFilterRegex: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Controls whether a link is displayed in the context menu of a highlighted series. If present, the metric name of the highlighted series must match this regular expression in order for the link to be displayed.
+
+<h4 class="pdoc-member-header" id="ExternalLink-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/externalLink.ts#L65">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the external link
+
+<h4 class="pdoc-member-header" id="ExternalLink-pointTagFilterRegexes">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/externalLink.ts#L69">property <b>pointTagFilterRegexes</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>pointTagFilterRegexes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Controls whether a link is displayed in the context menu of a highlighted series. This is a map from string to regular expression. The highlighted series must contain point tags whose keys are present in the keys of this map and whose values match the regular expressions associated with those keys in order for the link to be displayed
+
+<h4 class="pdoc-member-header" id="ExternalLink-sourceFilterRegex">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/externalLink.ts#L73">property <b>sourceFilterRegex</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>sourceFilterRegex: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Controls whether a link is displayed in the context menu of a highlighted series. If present, the source name of the highlighted series must match this regular expression in order for the link to be displayed.
+
+<h4 class="pdoc-member-header" id="ExternalLink-template">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/externalLink.ts#L77">property <b>template</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>template: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The mustache template for this link. The template must expand to a full URL, including scheme, origin, etc.
+
+<h4 class="pdoc-member-header" id="ExternalLink-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/externalLink.ts#L22">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2873,7 +3015,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="MaintenanceWindow" data-link-title="MaintenanceWindow">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/maintenanceWindow.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/maintenanceWindow.ts#L28">
         Resource <strong>MaintenanceWindow</strong>
     </a>
 </h3>
@@ -2901,7 +3043,7 @@ const basic = new wavefront.MaintenanceWindow("basic", {
 ```
 
 <h4 class="pdoc-member-header" id="MaintenanceWindow-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/maintenanceWindow.ts#L91"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/maintenanceWindow.ts#L91"> <b>constructor</b></a>
 </h4>
 
 
@@ -2915,7 +3057,7 @@ Create a MaintenanceWindow resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindow-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/maintenanceWindow.ts#L38">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/maintenanceWindow.ts#L38">method <b>get</b></a>
 </h4>
 
 
@@ -2926,14 +3068,14 @@ Get an existing MaintenanceWindow resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindow-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/maintenanceWindow.ts#L28">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/maintenanceWindow.ts#L28">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="MaintenanceWindow-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/maintenanceWindow.ts#L49">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/maintenanceWindow.ts#L49">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2944,7 +3086,7 @@ Returns true if the given object is an instance of MaintenanceWindow.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindow-endTimeInSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/maintenanceWindow.ts#L59">property <b>endTimeInSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/maintenanceWindow.ts#L59">property <b>endTimeInSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endTimeInSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2952,7 +3094,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 end time in seconds after 1 Jan 1970 GMT.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindow-hostTagGroupHostNamesGroupAnded">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/maintenanceWindow.ts#L63">property <b>hostTagGroupHostNamesGroupAnded</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/maintenanceWindow.ts#L63">property <b>hostTagGroupHostNamesGroupAnded</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hostTagGroupHostNamesGroupAnded: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2960,7 +3102,7 @@ end time in seconds after 1 Jan 1970 GMT.
 If true, a source/host must be in 'relevantHostNames' and have tags matching the specification formed by 'relevantHostTags' and 'relevantHostTagsAnded' in order for this maintenance window to apply. If false, a source/host must either be in 'relevantHostNames' or match 'relevantHostTags' and 'relevantHostTagsAnded'. Default: false
 
 <h4 class="pdoc-member-header" id="MaintenanceWindow-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/maintenanceWindow.ts#L28">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/maintenanceWindow.ts#L28">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2969,7 +3111,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindow-reason">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/maintenanceWindow.ts#L67">property <b>reason</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/maintenanceWindow.ts#L67">property <b>reason</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>reason: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2977,7 +3119,7 @@ deployments and may be missing (undefined) during planning phases.
 The reason for the maintenance window
 
 <h4 class="pdoc-member-header" id="MaintenanceWindow-relevantCustomerTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/maintenanceWindow.ts#L71">property <b>relevantCustomerTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/maintenanceWindow.ts#L71">property <b>relevantCustomerTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>relevantCustomerTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2985,7 +3127,7 @@ The reason for the maintenance window
 List of alert tags whose matching alerts will be put into maintenance because of this maintenance window. At least one of relevant_customer_tags, relevant_host_tags, or relevantHostNames is required.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindow-relevantHostNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/maintenanceWindow.ts#L75">property <b>relevantHostNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/maintenanceWindow.ts#L75">property <b>relevantHostNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>relevantHostNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2993,7 +3135,7 @@ List of alert tags whose matching alerts will be put into maintenance because of
 List of source/host names that will be put into maintenance because of this maintenance window. At least one of relevant_customer_tags, relevant_host_tags, or relevantHostNames is required.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindow-relevantHostTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/maintenanceWindow.ts#L79">property <b>relevantHostTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/maintenanceWindow.ts#L79">property <b>relevantHostTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>relevantHostTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3001,7 +3143,7 @@ List of source/host names that will be put into maintenance because of this main
 List of source/host tags whose matching sources/hosts will be put into maintenance because of this maintenance window. At least one of relevant_customer_tags, relevant_host_tags, or relevantHostNames is required.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindow-relevantHostTagsAnded">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/maintenanceWindow.ts#L83">property <b>relevantHostTagsAnded</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/maintenanceWindow.ts#L83">property <b>relevantHostTagsAnded</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>relevantHostTagsAnded: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3009,7 +3151,7 @@ List of source/host tags whose matching sources/hosts will be put into maintenan
 Whether to AND source/host tags listed in relevantHostTags. If true, a source/host must contain all tags in order for the maintenance window to apply. If false, the tags are OR'ed, and a source/host must contain one of the tags. Default: false
 
 <h4 class="pdoc-member-header" id="MaintenanceWindow-startTimeInSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/maintenanceWindow.ts#L87">property <b>startTimeInSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/maintenanceWindow.ts#L87">property <b>startTimeInSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>startTimeInSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3017,7 +3159,7 @@ Whether to AND source/host tags listed in relevantHostTags. If true, a source/ho
 start time in seconds after 1 Jan 1970 GMT.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindow-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/maintenanceWindow.ts#L91">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/maintenanceWindow.ts#L91">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>title: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3025,7 +3167,7 @@ start time in seconds after 1 Jan 1970 GMT.
 The title of the maintenance window
 
 <h4 class="pdoc-member-header" id="MaintenanceWindow-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/maintenanceWindow.ts#L28">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/maintenanceWindow.ts#L28">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -3034,7 +3176,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Provider" data-link-title="Provider">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/provider.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/provider.ts#L13">
         Resource <strong>Provider</strong>
     </a>
 </h3>
@@ -3047,7 +3189,7 @@ construction to achieve fine-grained programmatic control over provider settings
 [documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.
 
 <h4 class="pdoc-member-header" id="Provider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/provider.ts#L26"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/provider.ts#L26"> <b>constructor</b></a>
 </h4>
 
 
@@ -3061,14 +3203,14 @@ Create a Provider resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/provider.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/provider.ts#L13">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/provider.ts#L21">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/provider.ts#L21">method <b>isInstance</b></a>
 </h4>
 
 
@@ -3079,14 +3221,14 @@ Returns true if the given object is an instance of Provider.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Provider-register">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/provider.ts#L13">method <b>register</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/provider.ts#L13">method <b>register</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>static </span>register(provider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/provider.ts#L13">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/provider.ts#L13">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -3095,7 +3237,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/provider.ts#L13">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/provider.ts#L13">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -3104,7 +3246,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Role" data-link-title="Role">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/role.ts#L19">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/role.ts#L19">
         Resource <strong>Role</strong>
     </a>
 </h3>
@@ -3123,7 +3265,7 @@ const role = new wavefront.Role("role", {});
 ```
 
 <h4 class="pdoc-member-header" id="Role-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/role.ts#L64"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/role.ts#L64"> <b>constructor</b></a>
 </h4>
 
 
@@ -3137,7 +3279,7 @@ Create a Role resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Role-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/role.ts#L29">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/role.ts#L29">method <b>get</b></a>
 </h4>
 
 
@@ -3148,14 +3290,14 @@ Get an existing Role resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Role-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/role.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/role.ts#L19">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Role-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/role.ts#L40">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/role.ts#L40">method <b>isInstance</b></a>
 </h4>
 
 
@@ -3166,7 +3308,7 @@ Returns true if the given object is an instance of Role.  This is designed to wo
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Role-assignees">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/role.ts#L50">property <b>assignees</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/role.ts#L50">property <b>assignees</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>assignees: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3174,7 +3316,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A list of user groups or accounts to assign to this role.
 
 <h4 class="pdoc-member-header" id="Role-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/role.ts#L54">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/role.ts#L54">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3182,7 +3324,7 @@ A list of user groups or accounts to assign to this role.
 A short description of the user group
 
 <h4 class="pdoc-member-header" id="Role-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/role.ts#L19">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/role.ts#L19">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -3191,7 +3333,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Role-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/role.ts#L58">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/role.ts#L58">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3199,7 +3341,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the user group
 
 <h4 class="pdoc-member-header" id="Role-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/role.ts#L64">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/role.ts#L64">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3209,7 +3351,7 @@ A list of permissions to assign to this role. Valid options are
 `hostTagManagement`, `metricsManagement`, `userManagement`
 
 <h4 class="pdoc-member-header" id="Role-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/role.ts#L19">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/role.ts#L19">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -3218,7 +3360,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ServiceAccount" data-link-title="ServiceAccount">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/serviceAccount.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/serviceAccount.ts#L22">
         Resource <strong>ServiceAccount</strong>
     </a>
 </h3>
@@ -3240,7 +3382,7 @@ const basic = new wavefront.ServiceAccount("basic", {
 ```
 
 <h4 class="pdoc-member-header" id="ServiceAccount-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/serviceAccount.ts#L71"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/serviceAccount.ts#L71"> <b>constructor</b></a>
 </h4>
 
 
@@ -3254,7 +3396,7 @@ Create a ServiceAccount resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ServiceAccount-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/serviceAccount.ts#L32">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/serviceAccount.ts#L32">method <b>get</b></a>
 </h4>
 
 
@@ -3265,14 +3407,14 @@ Get an existing ServiceAccount resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ServiceAccount-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/serviceAccount.ts#L22">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/serviceAccount.ts#L22">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ServiceAccount-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/serviceAccount.ts#L43">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/serviceAccount.ts#L43">method <b>isInstance</b></a>
 </h4>
 
 
@@ -3283,7 +3425,7 @@ Returns true if the given object is an instance of ServiceAccount.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ServiceAccount-active">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/serviceAccount.ts#L53">property <b>active</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/serviceAccount.ts#L53">property <b>active</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>active: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3291,7 +3433,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Whether or not the service account is active
 
 <h4 class="pdoc-member-header" id="ServiceAccount-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/serviceAccount.ts#L57">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/serviceAccount.ts#L57">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3299,7 +3441,7 @@ Whether or not the service account is active
 The description of the service account
 
 <h4 class="pdoc-member-header" id="ServiceAccount-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/serviceAccount.ts#L22">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/serviceAccount.ts#L22">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -3308,7 +3450,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ServiceAccount-identifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/serviceAccount.ts#L61">property <b>identifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/serviceAccount.ts#L61">property <b>identifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>identifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3316,7 +3458,7 @@ deployments and may be missing (undefined) during planning phases.
 The (unique) identifier of the service account to create. Must start with sa::
 
 <h4 class="pdoc-member-header" id="ServiceAccount-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/serviceAccount.ts#L67">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/serviceAccount.ts#L67">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -3326,7 +3468,7 @@ List of permission to grant to this service account.  Valid options are
 `hostTagManagement`, `metricsManagement`, `userManagement`
 
 <h4 class="pdoc-member-header" id="ServiceAccount-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/serviceAccount.ts#L22">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/serviceAccount.ts#L22">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -3335,7 +3477,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ServiceAccount-userGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/serviceAccount.ts#L71">property <b>userGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/serviceAccount.ts#L71">property <b>userGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userGroups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -3343,7 +3485,7 @@ deployments.
 List of user groups for this service account
 
 <h3 class="pdoc-module-header" id="User" data-link-title="User">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/user.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/user.ts#L21">
         Resource <strong>User</strong>
     </a>
 </h3>
@@ -3364,7 +3506,7 @@ const basic = new wavefront.User("basic", {
 ```
 
 <h4 class="pdoc-member-header" id="User-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/user.ts#L63"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/user.ts#L63"> <b>constructor</b></a>
 </h4>
 
 
@@ -3378,7 +3520,7 @@ Create a User resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="User-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/user.ts#L31">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/user.ts#L31">method <b>get</b></a>
 </h4>
 
 
@@ -3389,14 +3531,14 @@ Get an existing User resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="User-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/user.ts#L21">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/user.ts#L21">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="User-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/user.ts#L42">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/user.ts#L42">method <b>isInstance</b></a>
 </h4>
 
 
@@ -3407,12 +3549,12 @@ Returns true if the given object is an instance of User.  This is designed to wo
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="User-customer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/user.ts#L49">property <b>customer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/user.ts#L49">property <b>customer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>customer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="User-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/user.ts#L53">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/user.ts#L53">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>email: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3420,7 +3562,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The (unique) identifier of the user to create. Must be a valid email address
 
 <h4 class="pdoc-member-header" id="User-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/user.ts#L21">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/user.ts#L21">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -3429,7 +3571,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="User-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/user.ts#L59">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/user.ts#L59">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -3439,7 +3581,7 @@ List of permission to grant to this user.  Valid options are
 `hostTagManagement`, `metricsManagement`, `userManagement`
 
 <h4 class="pdoc-member-header" id="User-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/user.ts#L21">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/user.ts#L21">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -3448,7 +3590,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="User-userGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/user.ts#L63">property <b>userGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/user.ts#L63">property <b>userGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userGroups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -3456,7 +3598,7 @@ deployments.
 List of user groups to this user
 
 <h3 class="pdoc-module-header" id="UserGroup" data-link-title="UserGroup">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/userGroup.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/userGroup.ts#L21">
         Resource <strong>UserGroup</strong>
     </a>
 </h3>
@@ -3477,7 +3619,7 @@ const basic = new wavefront.UserGroup("basic", {
 ```
 
 <h4 class="pdoc-member-header" id="UserGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/userGroup.ts#L56"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/userGroup.ts#L56"> <b>constructor</b></a>
 </h4>
 
 
@@ -3491,7 +3633,7 @@ Create a UserGroup resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="UserGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/userGroup.ts#L31">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/userGroup.ts#L31">method <b>get</b></a>
 </h4>
 
 
@@ -3502,14 +3644,14 @@ Get an existing UserGroup resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="UserGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/userGroup.ts#L21">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/userGroup.ts#L21">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="UserGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/userGroup.ts#L42">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/userGroup.ts#L42">method <b>isInstance</b></a>
 </h4>
 
 
@@ -3520,7 +3662,7 @@ Returns true if the given object is an instance of UserGroup.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="UserGroup-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/userGroup.ts#L52">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/userGroup.ts#L52">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3528,7 +3670,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A short description of the user group
 
 <h4 class="pdoc-member-header" id="UserGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/userGroup.ts#L21">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/userGroup.ts#L21">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -3537,7 +3679,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="UserGroup-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/userGroup.ts#L56">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/userGroup.ts#L56">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3545,7 +3687,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the user group
 
 <h4 class="pdoc-member-header" id="UserGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/userGroup.ts#L21">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/userGroup.ts#L21">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -3556,7 +3698,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getDefaultUserGroup" data-link-title="getDefaultUserGroup">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/getDefaultUserGroup.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/getDefaultUserGroup.ts#L22">
         Function <strong>getDefaultUserGroup</strong>
     </a>
 </h3>
@@ -3580,7 +3722,7 @@ const everyoneGroup = pulumi.output(wavefront.getDefaultUserGroup({ async: true 
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AlertArgs" data-link-title="AlertArgs">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L274">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L274">
         interface <strong>AlertArgs</strong>
     </a>
 </h3>
@@ -3590,7 +3732,7 @@ const everyoneGroup = pulumi.output(wavefront.getDefaultUserGroup({ async: true 
 The set of arguments for constructing a Alert resource.
 
 <h4 class="pdoc-member-header" id="AlertArgs-additionalInformation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L279">property <b>additionalInformation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L279">property <b>additionalInformation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalInformation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3599,7 +3741,7 @@ User-supplied additional explanatory information for this alert.
 Useful for linking runbooks, migrations...etc
 
 <h4 class="pdoc-member-header" id="AlertArgs-alertType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L284">property <b>alertType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L284">property <b>alertType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alertType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3608,7 +3750,7 @@ The type of alert in Wavefront.  Either `CLASSIC` (default)
 or `THRESHOLD`
 
 <h4 class="pdoc-member-header" id="AlertArgs-canModifies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L288">property <b>canModifies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L288">property <b>canModifies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canModifies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3616,7 +3758,7 @@ or `THRESHOLD`
 A list of users or groups that can modify this resource.
 
 <h4 class="pdoc-member-header" id="AlertArgs-canViews">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L292">property <b>canViews</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L292">property <b>canViews</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canViews?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3624,7 +3766,7 @@ A list of users or groups that can modify this resource.
 A list of users or groups that can view this resource.
 
 <h4 class="pdoc-member-header" id="AlertArgs-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L298">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L298">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3634,7 +3776,7 @@ The alert fires and notifications are triggered when data series matching this q
 to a non-zero value for a set number of consecutive minutes.
 
 <h4 class="pdoc-member-header" id="AlertArgs-conditions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L303">property <b>conditions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L303">property <b>conditions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>conditions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3643,7 +3785,7 @@ a string->string map of `severity` to `condition`
 for which this alert will trigger.
 
 <h4 class="pdoc-member-header" id="AlertArgs-displayExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L309">property <b>displayExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L309">property <b>displayExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayExpression?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3653,7 +3795,7 @@ interface instead of the condition query.  This field is often used to display a
 of the condition query with Boolean operators removed so that numerical values are plotted.
 
 <h4 class="pdoc-member-header" id="AlertArgs-minutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L314">property <b>minutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L314">property <b>minutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3662,7 +3804,7 @@ The number of consecutive minutes that a series matching the condition query mus
 evaluate to "true" (non-zero value) before the alert fires.
 
 <h4 class="pdoc-member-header" id="AlertArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L318">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L318">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3670,7 +3812,7 @@ evaluate to "true" (non-zero value) before the alert fires.
 The name of the alert as it is displayed in Wavefront.
 
 <h4 class="pdoc-member-header" id="AlertArgs-notificationResendFrequencyMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L323">property <b>notificationResendFrequencyMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L323">property <b>notificationResendFrequencyMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notificationResendFrequencyMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3679,7 +3821,7 @@ How often to re-trigger a continually failing alert.
 If absent or <= 0, no re-triggering occur.
 
 <h4 class="pdoc-member-header" id="AlertArgs-resolveAfterMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L329">property <b>resolveAfterMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L329">property <b>resolveAfterMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resolveAfterMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3689,7 +3831,7 @@ query must evaluate to "false" (zero value) before the alert resolves.  When uns
 the same value as `minutes`.
 
 <h4 class="pdoc-member-header" id="AlertArgs-severity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L333">property <b>severity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L333">property <b>severity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>severity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3697,7 +3839,7 @@ the same value as `minutes`.
 - Severity of the alert, valid values are `INFO`, `SMOKE`, `WARN`, `SEVERE`.
 
 <h4 class="pdoc-member-header" id="AlertArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L337">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L337">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3705,7 +3847,7 @@ the same value as `minutes`.
 A set of tags to assign to this resource.
 
 <h4 class="pdoc-member-header" id="AlertArgs-target">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L342">property <b>target</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L342">property <b>target</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>target?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3714,7 +3856,7 @@ A comma-separated list of the email address or integration endpoint
 (such as PagerDuty or web hook) to notify when the alert status changes.
 
 <h4 class="pdoc-member-header" id="AlertArgs-thresholdTargets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L346">property <b>thresholdTargets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L346">property <b>thresholdTargets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>thresholdTargets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3722,7 +3864,7 @@ A comma-separated list of the email address or integration endpoint
 Targets for severity
 
 <h3 class="pdoc-module-header" id="AlertState" data-link-title="AlertState">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L196">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L196">
         interface <strong>AlertState</strong>
     </a>
 </h3>
@@ -3732,7 +3874,7 @@ Targets for severity
 Input properties used for looking up and filtering Alert resources.
 
 <h4 class="pdoc-member-header" id="AlertState-additionalInformation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L201">property <b>additionalInformation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L201">property <b>additionalInformation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalInformation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3741,7 +3883,7 @@ User-supplied additional explanatory information for this alert.
 Useful for linking runbooks, migrations...etc
 
 <h4 class="pdoc-member-header" id="AlertState-alertType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L206">property <b>alertType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L206">property <b>alertType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alertType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3750,7 +3892,7 @@ The type of alert in Wavefront.  Either `CLASSIC` (default)
 or `THRESHOLD`
 
 <h4 class="pdoc-member-header" id="AlertState-canModifies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L210">property <b>canModifies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L210">property <b>canModifies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canModifies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3758,7 +3900,7 @@ or `THRESHOLD`
 A list of users or groups that can modify this resource.
 
 <h4 class="pdoc-member-header" id="AlertState-canViews">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L214">property <b>canViews</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L214">property <b>canViews</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canViews?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3766,7 +3908,7 @@ A list of users or groups that can modify this resource.
 A list of users or groups that can view this resource.
 
 <h4 class="pdoc-member-header" id="AlertState-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L220">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L220">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3776,7 +3918,7 @@ The alert fires and notifications are triggered when data series matching this q
 to a non-zero value for a set number of consecutive minutes.
 
 <h4 class="pdoc-member-header" id="AlertState-conditions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L225">property <b>conditions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L225">property <b>conditions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>conditions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3785,7 +3927,7 @@ a string->string map of `severity` to `condition`
 for which this alert will trigger.
 
 <h4 class="pdoc-member-header" id="AlertState-displayExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L231">property <b>displayExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L231">property <b>displayExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayExpression?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3795,7 +3937,7 @@ interface instead of the condition query.  This field is often used to display a
 of the condition query with Boolean operators removed so that numerical values are plotted.
 
 <h4 class="pdoc-member-header" id="AlertState-minutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L236">property <b>minutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L236">property <b>minutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3804,7 +3946,7 @@ The number of consecutive minutes that a series matching the condition query mus
 evaluate to "true" (non-zero value) before the alert fires.
 
 <h4 class="pdoc-member-header" id="AlertState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L240">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L240">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3812,7 +3954,7 @@ evaluate to "true" (non-zero value) before the alert fires.
 The name of the alert as it is displayed in Wavefront.
 
 <h4 class="pdoc-member-header" id="AlertState-notificationResendFrequencyMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L245">property <b>notificationResendFrequencyMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L245">property <b>notificationResendFrequencyMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notificationResendFrequencyMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3821,7 +3963,7 @@ How often to re-trigger a continually failing alert.
 If absent or <= 0, no re-triggering occur.
 
 <h4 class="pdoc-member-header" id="AlertState-resolveAfterMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L251">property <b>resolveAfterMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L251">property <b>resolveAfterMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resolveAfterMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3831,7 +3973,7 @@ query must evaluate to "false" (zero value) before the alert resolves.  When uns
 the same value as `minutes`.
 
 <h4 class="pdoc-member-header" id="AlertState-severity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L255">property <b>severity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L255">property <b>severity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>severity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3839,7 +3981,7 @@ the same value as `minutes`.
 - Severity of the alert, valid values are `INFO`, `SMOKE`, `WARN`, `SEVERE`.
 
 <h4 class="pdoc-member-header" id="AlertState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L259">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L259">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3847,7 +3989,7 @@ the same value as `minutes`.
 A set of tags to assign to this resource.
 
 <h4 class="pdoc-member-header" id="AlertState-target">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L264">property <b>target</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L264">property <b>target</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>target?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3856,7 +3998,7 @@ A comma-separated list of the email address or integration endpoint
 (such as PagerDuty or web hook) to notify when the alert status changes.
 
 <h4 class="pdoc-member-header" id="AlertState-thresholdTargets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alert.ts#L268">property <b>thresholdTargets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alert.ts#L268">property <b>thresholdTargets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>thresholdTargets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3864,7 +4006,7 @@ A comma-separated list of the email address or integration endpoint
 Targets for severity
 
 <h3 class="pdoc-module-header" id="AlertTargetArgs" data-link-title="AlertTargetArgs">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L283">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L283">
         interface <strong>AlertTargetArgs</strong>
     </a>
 </h3>
@@ -3874,7 +4016,7 @@ Targets for severity
 The set of arguments for constructing a AlertTarget resource.
 
 <h4 class="pdoc-member-header" id="AlertTargetArgs-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L287">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L287">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3882,7 +4024,7 @@ The set of arguments for constructing a AlertTarget resource.
 The value of the `Content-Type` header of the webhook.
 
 <h4 class="pdoc-member-header" id="AlertTargetArgs-customHeaders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L292">property <b>customHeaders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L292">property <b>customHeaders</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customHeaders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3891,7 +4033,7 @@ A `string->string` map specifying the custome HTTP header key/value pairs that w
 sent in the requests with a method of `WEBHOOK`.
 
 <h4 class="pdoc-member-header" id="AlertTargetArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L296">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L296">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3899,7 +4041,7 @@ sent in the requests with a method of `WEBHOOK`.
 Description describing this alert target.
 
 <h4 class="pdoc-member-header" id="AlertTargetArgs-emailSubject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L300">property <b>emailSubject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L300">property <b>emailSubject</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>emailSubject?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3907,7 +4049,7 @@ Description describing this alert target.
 The subject title of an email notification target.
 
 <h4 class="pdoc-member-header" id="AlertTargetArgs-isHtmlContent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L304">property <b>isHtmlContent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L304">property <b>isHtmlContent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isHtmlContent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3915,7 +4057,7 @@ The subject title of an email notification target.
 Determine whether the email alert content is sent as HTML or text.
 
 <h4 class="pdoc-member-header" id="AlertTargetArgs-method">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L308">property <b>method</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L308">property <b>method</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>method?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3923,7 +4065,7 @@ Determine whether the email alert content is sent as HTML or text.
 The notification method used for notification target. One of `WEBHOOK`, `EMAIL`, `PAGERDUTY`.
 
 <h4 class="pdoc-member-header" id="AlertTargetArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L312">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L312">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3931,7 +4073,7 @@ The notification method used for notification target. One of `WEBHOOK`, `EMAIL`,
 The name of the alert target as it is displayed in wavefront
 
 <h4 class="pdoc-member-header" id="AlertTargetArgs-recipient">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L317">property <b>recipient</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L317">property <b>recipient</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recipient: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3940,7 +4082,7 @@ The end point for the notification Target.  `EMAIL`: email address. `PAGERDUTY`:
 routing key. `WEBHOOK`: URL endpoint.
 
 <h4 class="pdoc-member-header" id="AlertTargetArgs-routes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L321">property <b>routes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L321">property <b>routes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>routes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/wavefront/types/input/#AlertTargetRoute'>AlertTargetRoute</a>&gt;[]&gt;;</code></pre>
@@ -3948,7 +4090,7 @@ routing key. `WEBHOOK`: URL endpoint.
 List of routing targets that this alert target will notify. See Route
 
 <h4 class="pdoc-member-header" id="AlertTargetArgs-template">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L325">property <b>template</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L325">property <b>template</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>template: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3956,7 +4098,7 @@ List of routing targets that this alert target will notify. See Route
 A mustache template that will form the body of the POST request, email and summary of the PagerDuty.
 
 <h4 class="pdoc-member-header" id="AlertTargetArgs-triggers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L330">property <b>triggers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L330">property <b>triggers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>triggers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3965,7 +4107,7 @@ A list of occurrences on which this webhook will be fired. Valid values are `ALE
 `ALERT_UPDATED`, `ALERT_RESOLVED`, `ALERT_MAINTENANCE`, `ALERT_SNOOZED`, `ALERT_NO_DATA`, `ALERT_NO_DATA_RESOLVED`, `ALERT_NO_DATA_MAINTENANCE`.
 
 <h3 class="pdoc-module-header" id="AlertTargetState" data-link-title="AlertTargetState">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L229">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L229">
         interface <strong>AlertTargetState</strong>
     </a>
 </h3>
@@ -3975,7 +4117,7 @@ A list of occurrences on which this webhook will be fired. Valid values are `ALE
 Input properties used for looking up and filtering AlertTarget resources.
 
 <h4 class="pdoc-member-header" id="AlertTargetState-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L233">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L233">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3983,7 +4125,7 @@ Input properties used for looking up and filtering AlertTarget resources.
 The value of the `Content-Type` header of the webhook.
 
 <h4 class="pdoc-member-header" id="AlertTargetState-customHeaders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L238">property <b>customHeaders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L238">property <b>customHeaders</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customHeaders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3992,7 +4134,7 @@ A `string->string` map specifying the custome HTTP header key/value pairs that w
 sent in the requests with a method of `WEBHOOK`.
 
 <h4 class="pdoc-member-header" id="AlertTargetState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L242">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L242">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4000,7 +4142,7 @@ sent in the requests with a method of `WEBHOOK`.
 Description describing this alert target.
 
 <h4 class="pdoc-member-header" id="AlertTargetState-emailSubject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L246">property <b>emailSubject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L246">property <b>emailSubject</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>emailSubject?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4008,7 +4150,7 @@ Description describing this alert target.
 The subject title of an email notification target.
 
 <h4 class="pdoc-member-header" id="AlertTargetState-isHtmlContent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L250">property <b>isHtmlContent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L250">property <b>isHtmlContent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isHtmlContent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4016,7 +4158,7 @@ The subject title of an email notification target.
 Determine whether the email alert content is sent as HTML or text.
 
 <h4 class="pdoc-member-header" id="AlertTargetState-method">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L254">property <b>method</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L254">property <b>method</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>method?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4024,7 +4166,7 @@ Determine whether the email alert content is sent as HTML or text.
 The notification method used for notification target. One of `WEBHOOK`, `EMAIL`, `PAGERDUTY`.
 
 <h4 class="pdoc-member-header" id="AlertTargetState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L258">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L258">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4032,7 +4174,7 @@ The notification method used for notification target. One of `WEBHOOK`, `EMAIL`,
 The name of the alert target as it is displayed in wavefront
 
 <h4 class="pdoc-member-header" id="AlertTargetState-recipient">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L263">property <b>recipient</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L263">property <b>recipient</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recipient?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4041,7 +4183,7 @@ The end point for the notification Target.  `EMAIL`: email address. `PAGERDUTY`:
 routing key. `WEBHOOK`: URL endpoint.
 
 <h4 class="pdoc-member-header" id="AlertTargetState-routes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L267">property <b>routes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L267">property <b>routes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>routes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/wavefront/types/input/#AlertTargetRoute'>AlertTargetRoute</a>&gt;[]&gt;;</code></pre>
@@ -4049,12 +4191,12 @@ routing key. `WEBHOOK`: URL endpoint.
 List of routing targets that this alert target will notify. See Route
 
 <h4 class="pdoc-member-header" id="AlertTargetState-targetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L268">property <b>targetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L268">property <b>targetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AlertTargetState-template">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L272">property <b>template</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L272">property <b>template</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>template?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4062,7 +4204,7 @@ List of routing targets that this alert target will notify. See Route
 A mustache template that will form the body of the POST request, email and summary of the PagerDuty.
 
 <h4 class="pdoc-member-header" id="AlertTargetState-triggers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/alertTarget.ts#L277">property <b>triggers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/alertTarget.ts#L277">property <b>triggers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>triggers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4071,7 +4213,7 @@ A list of occurrences on which this webhook will be fired. Valid values are `ALE
 `ALERT_UPDATED`, `ALERT_RESOLVED`, `ALERT_MAINTENANCE`, `ALERT_SNOOZED`, `ALERT_NO_DATA`, `ALERT_NO_DATA_RESOLVED`, `ALERT_NO_DATA_MAINTENANCE`.
 
 <h3 class="pdoc-module-header" id="CloudIntegrationAppDynamicsArgs" data-link-title="CloudIntegrationAppDynamicsArgs">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L274">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L274">
         interface <strong>CloudIntegrationAppDynamicsArgs</strong>
     </a>
 </h3>
@@ -4081,7 +4223,7 @@ A list of occurrences on which this webhook will be fired. Valid values are `ALE
 The set of arguments for constructing a CloudIntegrationAppDynamics resource.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamicsArgs-additionalTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L278">property <b>additionalTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L278">property <b>additionalTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -4089,7 +4231,7 @@ The set of arguments for constructing a CloudIntegrationAppDynamics resource.
 A list of point tag key-values to add to every point ingested using this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamicsArgs-appFilterRegexes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L283">property <b>appFilterRegexes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L283">property <b>appFilterRegexes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appFilterRegexes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4098,7 +4240,7 @@ List of regular expressions that a application name must match (case-insensitive
 in order to be ingested
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamicsArgs-controllerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L287">property <b>controllerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L287">property <b>controllerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>controllerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4106,7 +4248,7 @@ in order to be ingested
 Name of the SaaS controller
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamicsArgs-enableAppInfraMetrics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L291">property <b>enableAppInfraMetrics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L291">property <b>enableAppInfraMetrics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableAppInfraMetrics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4114,7 +4256,7 @@ Name of the SaaS controller
 Boolean flag to control Application Infrastructure metric injection
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamicsArgs-enableBackendMetrics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L295">property <b>enableBackendMetrics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L295">property <b>enableBackendMetrics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableBackendMetrics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4122,7 +4264,7 @@ Boolean flag to control Application Infrastructure metric injection
 Boolean flag to control Backend metric injection
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamicsArgs-enableBusinessTrxMetrics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L299">property <b>enableBusinessTrxMetrics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L299">property <b>enableBusinessTrxMetrics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableBusinessTrxMetrics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4130,7 +4272,7 @@ Boolean flag to control Backend metric injection
 Boolean flag to control Business Transaction metric injection
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamicsArgs-enableErrorMetrics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L303">property <b>enableErrorMetrics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L303">property <b>enableErrorMetrics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableErrorMetrics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4138,7 +4280,7 @@ Boolean flag to control Business Transaction metric injection
 Boolean flag to control Error metric injection
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamicsArgs-enableIndividualNodeMetrics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L307">property <b>enableIndividualNodeMetrics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L307">property <b>enableIndividualNodeMetrics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableIndividualNodeMetrics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4146,7 +4288,7 @@ Boolean flag to control Error metric injection
 Boolean flag to control Individual Node metric injection
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamicsArgs-enableOverallPerfMetrics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L311">property <b>enableOverallPerfMetrics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L311">property <b>enableOverallPerfMetrics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableOverallPerfMetrics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4154,7 +4296,7 @@ Boolean flag to control Individual Node metric injection
 Boolean flag to control Overall Performance metric injection
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamicsArgs-enableRollup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L316">property <b>enableRollup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L316">property <b>enableRollup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableRollup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4163,7 +4305,7 @@ Set this to `false` to get separate results for all values within the time range
 by default it is `true`
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamicsArgs-enableServiceEndpointMetrics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L320">property <b>enableServiceEndpointMetrics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L320">property <b>enableServiceEndpointMetrics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableServiceEndpointMetrics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4171,7 +4313,7 @@ by default it is `true`
 Boolean flag to control Service End point metric injection
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamicsArgs-encryptedPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L324">property <b>encryptedPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L324">property <b>encryptedPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encryptedPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4179,7 +4321,7 @@ Boolean flag to control Service End point metric injection
 Password for AppDynamics user
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamicsArgs-forceSave">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L328">property <b>forceSave</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L328">property <b>forceSave</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceSave?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4187,7 +4329,7 @@ Password for AppDynamics user
 Forces this resource to save, even if errors are present
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamicsArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L332">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L332">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4195,7 +4337,7 @@ Forces this resource to save, even if errors are present
 The human-readable name of this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamicsArgs-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L336">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L336">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4203,7 +4345,7 @@ The human-readable name of this integration
 A value denoting which cloud service this service integrates with
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamicsArgs-serviceRefreshRateInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L340">property <b>serviceRefreshRateInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L340">property <b>serviceRefreshRateInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceRefreshRateInMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4211,7 +4353,7 @@ A value denoting which cloud service this service integrates with
 How often, in minutes, to refresh the service
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamicsArgs-userName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L344">property <b>userName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L344">property <b>userName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4219,7 +4361,7 @@ How often, in minutes, to refresh the service
 Username is a combination of userName and the account name
 
 <h3 class="pdoc-module-header" id="CloudIntegrationAppDynamicsState" data-link-title="CloudIntegrationAppDynamicsState">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L198">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L198">
         interface <strong>CloudIntegrationAppDynamicsState</strong>
     </a>
 </h3>
@@ -4229,7 +4371,7 @@ Username is a combination of userName and the account name
 Input properties used for looking up and filtering CloudIntegrationAppDynamics resources.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamicsState-additionalTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L202">property <b>additionalTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L202">property <b>additionalTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -4237,7 +4379,7 @@ Input properties used for looking up and filtering CloudIntegrationAppDynamics r
 A list of point tag key-values to add to every point ingested using this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamicsState-appFilterRegexes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L207">property <b>appFilterRegexes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L207">property <b>appFilterRegexes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appFilterRegexes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4246,7 +4388,7 @@ List of regular expressions that a application name must match (case-insensitive
 in order to be ingested
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamicsState-controllerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L211">property <b>controllerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L211">property <b>controllerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>controllerName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4254,7 +4396,7 @@ in order to be ingested
 Name of the SaaS controller
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamicsState-enableAppInfraMetrics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L215">property <b>enableAppInfraMetrics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L215">property <b>enableAppInfraMetrics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableAppInfraMetrics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4262,7 +4404,7 @@ Name of the SaaS controller
 Boolean flag to control Application Infrastructure metric injection
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamicsState-enableBackendMetrics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L219">property <b>enableBackendMetrics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L219">property <b>enableBackendMetrics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableBackendMetrics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4270,7 +4412,7 @@ Boolean flag to control Application Infrastructure metric injection
 Boolean flag to control Backend metric injection
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamicsState-enableBusinessTrxMetrics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L223">property <b>enableBusinessTrxMetrics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L223">property <b>enableBusinessTrxMetrics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableBusinessTrxMetrics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4278,7 +4420,7 @@ Boolean flag to control Backend metric injection
 Boolean flag to control Business Transaction metric injection
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamicsState-enableErrorMetrics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L227">property <b>enableErrorMetrics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L227">property <b>enableErrorMetrics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableErrorMetrics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4286,7 +4428,7 @@ Boolean flag to control Business Transaction metric injection
 Boolean flag to control Error metric injection
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamicsState-enableIndividualNodeMetrics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L231">property <b>enableIndividualNodeMetrics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L231">property <b>enableIndividualNodeMetrics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableIndividualNodeMetrics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4294,7 +4436,7 @@ Boolean flag to control Error metric injection
 Boolean flag to control Individual Node metric injection
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamicsState-enableOverallPerfMetrics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L235">property <b>enableOverallPerfMetrics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L235">property <b>enableOverallPerfMetrics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableOverallPerfMetrics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4302,7 +4444,7 @@ Boolean flag to control Individual Node metric injection
 Boolean flag to control Overall Performance metric injection
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamicsState-enableRollup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L240">property <b>enableRollup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L240">property <b>enableRollup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableRollup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4311,7 +4453,7 @@ Set this to `false` to get separate results for all values within the time range
 by default it is `true`
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamicsState-enableServiceEndpointMetrics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L244">property <b>enableServiceEndpointMetrics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L244">property <b>enableServiceEndpointMetrics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableServiceEndpointMetrics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4319,7 +4461,7 @@ by default it is `true`
 Boolean flag to control Service End point metric injection
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamicsState-encryptedPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L248">property <b>encryptedPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L248">property <b>encryptedPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encryptedPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4327,7 +4469,7 @@ Boolean flag to control Service End point metric injection
 Password for AppDynamics user
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamicsState-forceSave">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L252">property <b>forceSave</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L252">property <b>forceSave</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceSave?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4335,7 +4477,7 @@ Password for AppDynamics user
 Forces this resource to save, even if errors are present
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamicsState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L256">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L256">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4343,7 +4485,7 @@ Forces this resource to save, even if errors are present
 The human-readable name of this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamicsState-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L260">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L260">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4351,7 +4493,7 @@ The human-readable name of this integration
 A value denoting which cloud service this service integrates with
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamicsState-serviceRefreshRateInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L264">property <b>serviceRefreshRateInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L264">property <b>serviceRefreshRateInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceRefreshRateInMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4359,7 +4501,7 @@ A value denoting which cloud service this service integrates with
 How often, in minutes, to refresh the service
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAppDynamicsState-userName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAppDynamics.ts#L268">property <b>userName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAppDynamics.ts#L268">property <b>userName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4367,7 +4509,7 @@ How often, in minutes, to refresh the service
 Username is a combination of userName and the account name
 
 <h3 class="pdoc-module-header" id="CloudIntegrationAwsExternalIdArgs" data-link-title="CloudIntegrationAwsExternalIdArgs">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAwsExternalId.ts#L83">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAwsExternalId.ts#L83">
         interface <strong>CloudIntegrationAwsExternalIdArgs</strong>
     </a>
 </h3>
@@ -4377,7 +4519,7 @@ Username is a combination of userName and the account name
 The set of arguments for constructing a CloudIntegrationAwsExternalId resource.
 
 <h3 class="pdoc-module-header" id="CloudIntegrationAwsExternalIdState" data-link-title="CloudIntegrationAwsExternalIdState">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAwsExternalId.ts#L77">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAwsExternalId.ts#L77">
         interface <strong>CloudIntegrationAwsExternalIdState</strong>
     </a>
 </h3>
@@ -4387,7 +4529,7 @@ The set of arguments for constructing a CloudIntegrationAwsExternalId resource.
 Input properties used for looking up and filtering CloudIntegrationAwsExternalId resources.
 
 <h3 class="pdoc-module-header" id="CloudIntegrationAzureActivityLogArgs" data-link-title="CloudIntegrationAzureActivityLogArgs">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L191">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L191">
         interface <strong>CloudIntegrationAzureActivityLogArgs</strong>
     </a>
 </h3>
@@ -4397,7 +4539,7 @@ Input properties used for looking up and filtering CloudIntegrationAwsExternalId
 The set of arguments for constructing a CloudIntegrationAzureActivityLog resource.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureActivityLogArgs-additionalTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L195">property <b>additionalTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L195">property <b>additionalTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -4405,7 +4547,7 @@ The set of arguments for constructing a CloudIntegrationAzureActivityLog resourc
 A list of point tag key-values to add to every point ingested using this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureActivityLogArgs-categoryFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L199">property <b>categoryFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L199">property <b>categoryFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>categoryFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4413,7 +4555,7 @@ A list of point tag key-values to add to every point ingested using this integra
 A list of Azure services (such as Microsoft.Compute/virtualMachines) from which to pull metrics
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureActivityLogArgs-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L203">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L203">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4421,7 +4563,7 @@ A list of Azure services (such as Microsoft.Compute/virtualMachines) from which 
 Client id for an azure service account within your project
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureActivityLogArgs-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L207">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L207">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4429,7 +4571,7 @@ Client id for an azure service account within your project
 Client secret for an Azure service account within your project
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureActivityLogArgs-forceSave">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L211">property <b>forceSave</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L211">property <b>forceSave</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceSave?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4437,7 +4579,7 @@ Client secret for an Azure service account within your project
 Forces this resource to save, even if errors are present
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureActivityLogArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L215">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L215">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4445,7 +4587,7 @@ Forces this resource to save, even if errors are present
 The human-readable name of this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureActivityLogArgs-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L219">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L219">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4453,7 +4595,7 @@ The human-readable name of this integration
 A value denoting which cloud service this service integrates with
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureActivityLogArgs-serviceRefreshRateInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L223">property <b>serviceRefreshRateInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L223">property <b>serviceRefreshRateInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceRefreshRateInMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4461,7 +4603,7 @@ A value denoting which cloud service this service integrates with
 How often, in minutes, to refresh the service
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureActivityLogArgs-tenant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L227">property <b>tenant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L227">property <b>tenant</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenant: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4469,7 +4611,7 @@ How often, in minutes, to refresh the service
 Tenant Id for an Azure service account within your project
 
 <h3 class="pdoc-module-header" id="CloudIntegrationAzureActivityLogState" data-link-title="CloudIntegrationAzureActivityLogState">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L149">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L149">
         interface <strong>CloudIntegrationAzureActivityLogState</strong>
     </a>
 </h3>
@@ -4479,7 +4621,7 @@ Tenant Id for an Azure service account within your project
 Input properties used for looking up and filtering CloudIntegrationAzureActivityLog resources.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureActivityLogState-additionalTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L153">property <b>additionalTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L153">property <b>additionalTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -4487,7 +4629,7 @@ Input properties used for looking up and filtering CloudIntegrationAzureActivity
 A list of point tag key-values to add to every point ingested using this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureActivityLogState-categoryFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L157">property <b>categoryFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L157">property <b>categoryFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>categoryFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4495,7 +4637,7 @@ A list of point tag key-values to add to every point ingested using this integra
 A list of Azure services (such as Microsoft.Compute/virtualMachines) from which to pull metrics
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureActivityLogState-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L161">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L161">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4503,7 +4645,7 @@ A list of Azure services (such as Microsoft.Compute/virtualMachines) from which 
 Client id for an azure service account within your project
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureActivityLogState-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L165">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L165">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4511,7 +4653,7 @@ Client id for an azure service account within your project
 Client secret for an Azure service account within your project
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureActivityLogState-forceSave">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L169">property <b>forceSave</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L169">property <b>forceSave</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceSave?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4519,7 +4661,7 @@ Client secret for an Azure service account within your project
 Forces this resource to save, even if errors are present
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureActivityLogState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L173">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L173">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4527,7 +4669,7 @@ Forces this resource to save, even if errors are present
 The human-readable name of this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureActivityLogState-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L177">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L177">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4535,7 +4677,7 @@ The human-readable name of this integration
 A value denoting which cloud service this service integrates with
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureActivityLogState-serviceRefreshRateInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L181">property <b>serviceRefreshRateInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L181">property <b>serviceRefreshRateInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceRefreshRateInMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4543,7 +4685,7 @@ A value denoting which cloud service this service integrates with
 How often, in minutes, to refresh the service
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureActivityLogState-tenant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L185">property <b>tenant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzureActivityLog.ts#L185">property <b>tenant</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenant?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4551,7 +4693,7 @@ How often, in minutes, to refresh the service
 Tenant Id for an Azure service account within your project
 
 <h3 class="pdoc-module-header" id="CloudIntegrationAzureArgs" data-link-title="CloudIntegrationAzureArgs">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzure.ts#L210">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzure.ts#L210">
         interface <strong>CloudIntegrationAzureArgs</strong>
     </a>
 </h3>
@@ -4561,7 +4703,7 @@ Tenant Id for an Azure service account within your project
 The set of arguments for constructing a CloudIntegrationAzure resource.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureArgs-additionalTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzure.ts#L214">property <b>additionalTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzure.ts#L214">property <b>additionalTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -4569,7 +4711,7 @@ The set of arguments for constructing a CloudIntegrationAzure resource.
 A list of point tag key-values to add to every point ingested using this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureArgs-categoryFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzure.ts#L218">property <b>categoryFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzure.ts#L218">property <b>categoryFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>categoryFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4577,7 +4719,7 @@ A list of point tag key-values to add to every point ingested using this integra
 A list of Azure Activity Log categories.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureArgs-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzure.ts#L222">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzure.ts#L222">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4585,7 +4727,7 @@ A list of Azure Activity Log categories.
 Client id for an azure service account within your project
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureArgs-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzure.ts#L226">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzure.ts#L226">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4593,7 +4735,7 @@ Client id for an azure service account within your project
 Client secret for an Azure service account within your project
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureArgs-forceSave">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzure.ts#L230">property <b>forceSave</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzure.ts#L230">property <b>forceSave</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceSave?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4601,7 +4743,7 @@ Client secret for an Azure service account within your project
 Forces this resource to save, even if errors are present
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureArgs-metricFilterRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzure.ts#L234">property <b>metricFilterRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzure.ts#L234">property <b>metricFilterRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricFilterRegex?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4609,7 +4751,7 @@ Forces this resource to save, even if errors are present
 A regular expression that a metric name must match (case-insensitively) in order to be ingested
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzure.ts#L238">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzure.ts#L238">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4617,7 +4759,7 @@ A regular expression that a metric name must match (case-insensitively) in order
 The human-readable name of this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureArgs-resourceGroupFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzure.ts#L242">property <b>resourceGroupFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzure.ts#L242">property <b>resourceGroupFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4625,7 +4767,7 @@ The human-readable name of this integration
 A list of Azure resource groups from which to pull metrics
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureArgs-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzure.ts#L246">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzure.ts#L246">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4633,7 +4775,7 @@ A list of Azure resource groups from which to pull metrics
 A value denoting which cloud service this service integrates with
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureArgs-serviceRefreshRateInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzure.ts#L250">property <b>serviceRefreshRateInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzure.ts#L250">property <b>serviceRefreshRateInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceRefreshRateInMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4641,7 +4783,7 @@ A value denoting which cloud service this service integrates with
 How often, in minutes, to refresh the service
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureArgs-tenant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzure.ts#L254">property <b>tenant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzure.ts#L254">property <b>tenant</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenant: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4649,7 +4791,7 @@ How often, in minutes, to refresh the service
 Tenant Id for an Azure service account within your project
 
 <h3 class="pdoc-module-header" id="CloudIntegrationAzureState" data-link-title="CloudIntegrationAzureState">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzure.ts#L160">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzure.ts#L160">
         interface <strong>CloudIntegrationAzureState</strong>
     </a>
 </h3>
@@ -4659,7 +4801,7 @@ Tenant Id for an Azure service account within your project
 Input properties used for looking up and filtering CloudIntegrationAzure resources.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureState-additionalTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzure.ts#L164">property <b>additionalTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzure.ts#L164">property <b>additionalTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -4667,7 +4809,7 @@ Input properties used for looking up and filtering CloudIntegrationAzure resourc
 A list of point tag key-values to add to every point ingested using this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureState-categoryFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzure.ts#L168">property <b>categoryFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzure.ts#L168">property <b>categoryFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>categoryFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4675,7 +4817,7 @@ A list of point tag key-values to add to every point ingested using this integra
 A list of Azure Activity Log categories.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureState-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzure.ts#L172">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzure.ts#L172">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4683,7 +4825,7 @@ A list of Azure Activity Log categories.
 Client id for an azure service account within your project
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureState-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzure.ts#L176">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzure.ts#L176">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4691,7 +4833,7 @@ Client id for an azure service account within your project
 Client secret for an Azure service account within your project
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureState-forceSave">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzure.ts#L180">property <b>forceSave</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzure.ts#L180">property <b>forceSave</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceSave?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4699,7 +4841,7 @@ Client secret for an Azure service account within your project
 Forces this resource to save, even if errors are present
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureState-metricFilterRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzure.ts#L184">property <b>metricFilterRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzure.ts#L184">property <b>metricFilterRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricFilterRegex?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4707,7 +4849,7 @@ Forces this resource to save, even if errors are present
 A regular expression that a metric name must match (case-insensitively) in order to be ingested
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzure.ts#L188">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzure.ts#L188">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4715,7 +4857,7 @@ A regular expression that a metric name must match (case-insensitively) in order
 The human-readable name of this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureState-resourceGroupFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzure.ts#L192">property <b>resourceGroupFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzure.ts#L192">property <b>resourceGroupFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4723,7 +4865,7 @@ The human-readable name of this integration
 A list of Azure resource groups from which to pull metrics
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureState-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzure.ts#L196">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzure.ts#L196">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4731,7 +4873,7 @@ A list of Azure resource groups from which to pull metrics
 A value denoting which cloud service this service integrates with
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureState-serviceRefreshRateInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzure.ts#L200">property <b>serviceRefreshRateInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzure.ts#L200">property <b>serviceRefreshRateInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceRefreshRateInMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4739,7 +4881,7 @@ A value denoting which cloud service this service integrates with
 How often, in minutes, to refresh the service
 
 <h4 class="pdoc-member-header" id="CloudIntegrationAzureState-tenant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationAzure.ts#L204">property <b>tenant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationAzure.ts#L204">property <b>tenant</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenant?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4747,7 +4889,7 @@ How often, in minutes, to refresh the service
 Tenant Id for an Azure service account within your project
 
 <h3 class="pdoc-module-header" id="CloudIntegrationCloudTrailArgs" data-link-title="CloudIntegrationCloudTrailArgs">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudTrail.ts#L215">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudTrail.ts#L215">
         interface <strong>CloudIntegrationCloudTrailArgs</strong>
     </a>
 </h3>
@@ -4757,7 +4899,7 @@ Tenant Id for an Azure service account within your project
 The set of arguments for constructing a CloudIntegrationCloudTrail resource.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudTrailArgs-additionalTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudTrail.ts#L219">property <b>additionalTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudTrail.ts#L219">property <b>additionalTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -4765,7 +4907,7 @@ The set of arguments for constructing a CloudIntegrationCloudTrail resource.
 A list of point tag key-values to add to every point ingested using this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudTrailArgs-bucketName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudTrail.ts#L223">property <b>bucketName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudTrail.ts#L223">property <b>bucketName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucketName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4773,7 +4915,7 @@ A list of point tag key-values to add to every point ingested using this integra
 Name of the S3 bucket where CloudTrail logs are stored
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudTrailArgs-externalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudTrail.ts#L227">property <b>externalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudTrail.ts#L227">property <b>externalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>externalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4781,7 +4923,7 @@ Name of the S3 bucket where CloudTrail logs are stored
 The Role ARN that the customer has created in AWS IAM to allow access to Wavefront
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudTrailArgs-filterRule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudTrail.ts#L231">property <b>filterRule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudTrail.ts#L231">property <b>filterRule</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filterRule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4789,7 +4931,7 @@ The Role ARN that the customer has created in AWS IAM to allow access to Wavefro
 Rule to filter CloudTrail log event
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudTrailArgs-forceSave">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudTrail.ts#L235">property <b>forceSave</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudTrail.ts#L235">property <b>forceSave</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceSave?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4797,7 +4939,7 @@ Rule to filter CloudTrail log event
 Forces this resource to save, even if errors are present
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudTrailArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudTrail.ts#L239">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudTrail.ts#L239">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4805,7 +4947,7 @@ Forces this resource to save, even if errors are present
 The human-readable name of this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudTrailArgs-prefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudTrail.ts#L243">property <b>prefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudTrail.ts#L243">property <b>prefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>prefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4813,7 +4955,7 @@ The human-readable name of this integration
 The common prefix, if any, appended to all CloudTrail log files.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudTrailArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudTrail.ts#L247">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudTrail.ts#L247">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4821,7 +4963,7 @@ The common prefix, if any, appended to all CloudTrail log files.
 The AWS region of the S3 bucket where CloudTrail logs are stored
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudTrailArgs-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudTrail.ts#L251">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudTrail.ts#L251">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4829,7 +4971,7 @@ The AWS region of the S3 bucket where CloudTrail logs are stored
 The external id corresponding to the Role ARN
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudTrailArgs-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudTrail.ts#L255">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudTrail.ts#L255">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4837,7 +4979,7 @@ The external id corresponding to the Role ARN
 A value denoting which cloud service this service integrates with
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudTrailArgs-serviceRefreshRateInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudTrail.ts#L259">property <b>serviceRefreshRateInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudTrail.ts#L259">property <b>serviceRefreshRateInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceRefreshRateInMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4845,7 +4987,7 @@ A value denoting which cloud service this service integrates with
 How often, in minutes, to refresh the service
 
 <h3 class="pdoc-module-header" id="CloudIntegrationCloudTrailState" data-link-title="CloudIntegrationCloudTrailState">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudTrail.ts#L165">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudTrail.ts#L165">
         interface <strong>CloudIntegrationCloudTrailState</strong>
     </a>
 </h3>
@@ -4855,7 +4997,7 @@ How often, in minutes, to refresh the service
 Input properties used for looking up and filtering CloudIntegrationCloudTrail resources.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudTrailState-additionalTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudTrail.ts#L169">property <b>additionalTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudTrail.ts#L169">property <b>additionalTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -4863,7 +5005,7 @@ Input properties used for looking up and filtering CloudIntegrationCloudTrail re
 A list of point tag key-values to add to every point ingested using this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudTrailState-bucketName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudTrail.ts#L173">property <b>bucketName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudTrail.ts#L173">property <b>bucketName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucketName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4871,7 +5013,7 @@ A list of point tag key-values to add to every point ingested using this integra
 Name of the S3 bucket where CloudTrail logs are stored
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudTrailState-externalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudTrail.ts#L177">property <b>externalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudTrail.ts#L177">property <b>externalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>externalId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4879,7 +5021,7 @@ Name of the S3 bucket where CloudTrail logs are stored
 The Role ARN that the customer has created in AWS IAM to allow access to Wavefront
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudTrailState-filterRule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudTrail.ts#L181">property <b>filterRule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudTrail.ts#L181">property <b>filterRule</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filterRule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4887,7 +5029,7 @@ The Role ARN that the customer has created in AWS IAM to allow access to Wavefro
 Rule to filter CloudTrail log event
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudTrailState-forceSave">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudTrail.ts#L185">property <b>forceSave</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudTrail.ts#L185">property <b>forceSave</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceSave?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4895,7 +5037,7 @@ Rule to filter CloudTrail log event
 Forces this resource to save, even if errors are present
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudTrailState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudTrail.ts#L189">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudTrail.ts#L189">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4903,7 +5045,7 @@ Forces this resource to save, even if errors are present
 The human-readable name of this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudTrailState-prefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudTrail.ts#L193">property <b>prefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudTrail.ts#L193">property <b>prefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>prefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4911,7 +5053,7 @@ The human-readable name of this integration
 The common prefix, if any, appended to all CloudTrail log files.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudTrailState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudTrail.ts#L197">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudTrail.ts#L197">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4919,7 +5061,7 @@ The common prefix, if any, appended to all CloudTrail log files.
 The AWS region of the S3 bucket where CloudTrail logs are stored
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudTrailState-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudTrail.ts#L201">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudTrail.ts#L201">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4927,7 +5069,7 @@ The AWS region of the S3 bucket where CloudTrail logs are stored
 The external id corresponding to the Role ARN
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudTrailState-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudTrail.ts#L205">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudTrail.ts#L205">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4935,7 +5077,7 @@ The external id corresponding to the Role ARN
 A value denoting which cloud service this service integrates with
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudTrailState-serviceRefreshRateInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudTrail.ts#L209">property <b>serviceRefreshRateInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudTrail.ts#L209">property <b>serviceRefreshRateInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceRefreshRateInMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4943,7 +5085,7 @@ A value denoting which cloud service this service integrates with
 How often, in minutes, to refresh the service
 
 <h3 class="pdoc-module-header" id="CloudIntegrationCloudWatchArgs" data-link-title="CloudIntegrationCloudWatchArgs">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L228">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L228">
         interface <strong>CloudIntegrationCloudWatchArgs</strong>
     </a>
 </h3>
@@ -4953,7 +5095,7 @@ How often, in minutes, to refresh the service
 The set of arguments for constructing a CloudIntegrationCloudWatch resource.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudWatchArgs-additionalTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L232">property <b>additionalTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L232">property <b>additionalTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -4961,7 +5103,7 @@ The set of arguments for constructing a CloudIntegrationCloudWatch resource.
 A list of point tag key-values to add to every point ingested using this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudWatchArgs-externalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L236">property <b>externalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L236">property <b>externalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>externalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4969,7 +5111,7 @@ A list of point tag key-values to add to every point ingested using this integra
 The Role ARN that the customer has created in AWS IAM to allow access to Wavefront
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudWatchArgs-forceSave">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L240">property <b>forceSave</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L240">property <b>forceSave</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceSave?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4977,7 +5119,7 @@ The Role ARN that the customer has created in AWS IAM to allow access to Wavefro
 Forces this resource to save, even if errors are present
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudWatchArgs-instanceSelectionTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L246">property <b>instanceSelectionTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L246">property <b>instanceSelectionTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceSelectionTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -4987,7 +5129,7 @@ If the instance's AWS tags match this whitelist, CloudWatch data about this inst
 Multiple entries are OR'ed
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudWatchArgs-metricFilterRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L250">property <b>metricFilterRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L250">property <b>metricFilterRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricFilterRegex?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4995,7 +5137,7 @@ Multiple entries are OR'ed
 A regular expression that a CloudWatch metric name must match (case-insensitively) in order to be ingested
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudWatchArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L254">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L254">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5003,7 +5145,7 @@ A regular expression that a CloudWatch metric name must match (case-insensitivel
 The human-readable name of this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudWatchArgs-namespaces">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L258">property <b>namespaces</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L258">property <b>namespaces</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5011,7 +5153,7 @@ The human-readable name of this integration
 A list of namespaces that limit what we query from CloudWatch
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudWatchArgs-pointTagFilterRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L263">property <b>pointTagFilterRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L263">property <b>pointTagFilterRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pointTagFilterRegex?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5020,7 +5162,7 @@ A regular expression that AWS tag key name must match (case-insensitively)
 in order to be ingested
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudWatchArgs-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L267">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L267">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5028,7 +5170,7 @@ in order to be ingested
 The external id corresponding to the Role ARN
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudWatchArgs-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L271">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L271">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5036,7 +5178,7 @@ The external id corresponding to the Role ARN
 A value denoting which cloud service this service integrates with
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudWatchArgs-serviceRefreshRateInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L275">property <b>serviceRefreshRateInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L275">property <b>serviceRefreshRateInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceRefreshRateInMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5044,7 +5186,7 @@ A value denoting which cloud service this service integrates with
 How often, in minutes, to refresh the service
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudWatchArgs-volumeSelectionTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L281">property <b>volumeSelectionTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L281">property <b>volumeSelectionTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeSelectionTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -5054,7 +5196,7 @@ If the volume's AWS tags match this whitelist, CloudWatch data about this volume
 Multiple entries are OR'ed
 
 <h3 class="pdoc-module-header" id="CloudIntegrationCloudWatchState" data-link-title="CloudIntegrationCloudWatchState">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L169">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L169">
         interface <strong>CloudIntegrationCloudWatchState</strong>
     </a>
 </h3>
@@ -5064,7 +5206,7 @@ Multiple entries are OR'ed
 Input properties used for looking up and filtering CloudIntegrationCloudWatch resources.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudWatchState-additionalTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L173">property <b>additionalTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L173">property <b>additionalTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -5072,7 +5214,7 @@ Input properties used for looking up and filtering CloudIntegrationCloudWatch re
 A list of point tag key-values to add to every point ingested using this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudWatchState-externalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L177">property <b>externalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L177">property <b>externalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>externalId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5080,7 +5222,7 @@ A list of point tag key-values to add to every point ingested using this integra
 The Role ARN that the customer has created in AWS IAM to allow access to Wavefront
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudWatchState-forceSave">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L181">property <b>forceSave</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L181">property <b>forceSave</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceSave?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5088,7 +5230,7 @@ The Role ARN that the customer has created in AWS IAM to allow access to Wavefro
 Forces this resource to save, even if errors are present
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudWatchState-instanceSelectionTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L187">property <b>instanceSelectionTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L187">property <b>instanceSelectionTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceSelectionTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -5098,7 +5240,7 @@ If the instance's AWS tags match this whitelist, CloudWatch data about this inst
 Multiple entries are OR'ed
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudWatchState-metricFilterRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L191">property <b>metricFilterRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L191">property <b>metricFilterRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricFilterRegex?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5106,7 +5248,7 @@ Multiple entries are OR'ed
 A regular expression that a CloudWatch metric name must match (case-insensitively) in order to be ingested
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudWatchState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L195">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L195">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5114,7 +5256,7 @@ A regular expression that a CloudWatch metric name must match (case-insensitivel
 The human-readable name of this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudWatchState-namespaces">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L199">property <b>namespaces</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L199">property <b>namespaces</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5122,7 +5264,7 @@ The human-readable name of this integration
 A list of namespaces that limit what we query from CloudWatch
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudWatchState-pointTagFilterRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L204">property <b>pointTagFilterRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L204">property <b>pointTagFilterRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pointTagFilterRegex?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5131,7 +5273,7 @@ A regular expression that AWS tag key name must match (case-insensitively)
 in order to be ingested
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudWatchState-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L208">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L208">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5139,7 +5281,7 @@ in order to be ingested
 The external id corresponding to the Role ARN
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudWatchState-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L212">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L212">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5147,7 +5289,7 @@ The external id corresponding to the Role ARN
 A value denoting which cloud service this service integrates with
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudWatchState-serviceRefreshRateInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L216">property <b>serviceRefreshRateInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L216">property <b>serviceRefreshRateInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceRefreshRateInMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5155,7 +5297,7 @@ A value denoting which cloud service this service integrates with
 How often, in minutes, to refresh the service
 
 <h4 class="pdoc-member-header" id="CloudIntegrationCloudWatchState-volumeSelectionTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationCloudWatch.ts#L222">property <b>volumeSelectionTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationCloudWatch.ts#L222">property <b>volumeSelectionTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeSelectionTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -5165,7 +5307,7 @@ If the volume's AWS tags match this whitelist, CloudWatch data about this volume
 Multiple entries are OR'ed
 
 <h3 class="pdoc-module-header" id="CloudIntegrationEc2Args" data-link-title="CloudIntegrationEc2Args">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationEc2.ts#L171">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationEc2.ts#L171">
         interface <strong>CloudIntegrationEc2Args</strong>
     </a>
 </h3>
@@ -5175,7 +5317,7 @@ Multiple entries are OR'ed
 The set of arguments for constructing a CloudIntegrationEc2 resource.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationEc2Args-additionalTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationEc2.ts#L175">property <b>additionalTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationEc2.ts#L175">property <b>additionalTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -5183,7 +5325,7 @@ The set of arguments for constructing a CloudIntegrationEc2 resource.
 A list of point tag key-values to add to every point ingested using this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationEc2Args-externalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationEc2.ts#L179">property <b>externalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationEc2.ts#L179">property <b>externalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>externalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5191,7 +5333,7 @@ A list of point tag key-values to add to every point ingested using this integra
 The Role ARN that the customer has created in AWS IAM to allow access to Wavefront
 
 <h4 class="pdoc-member-header" id="CloudIntegrationEc2Args-forceSave">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationEc2.ts#L183">property <b>forceSave</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationEc2.ts#L183">property <b>forceSave</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceSave?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5199,12 +5341,12 @@ The Role ARN that the customer has created in AWS IAM to allow access to Wavefro
 Forces this resource to save, even if errors are present
 
 <h4 class="pdoc-member-header" id="CloudIntegrationEc2Args-hostnameTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationEc2.ts#L184">property <b>hostnameTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationEc2.ts#L184">property <b>hostnameTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostnameTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CloudIntegrationEc2Args-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationEc2.ts#L188">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationEc2.ts#L188">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5212,7 +5354,7 @@ Forces this resource to save, even if errors are present
 The human-readable name of this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationEc2Args-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationEc2.ts#L192">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationEc2.ts#L192">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5220,7 +5362,7 @@ The human-readable name of this integration
 The external id corresponding to the Role ARN
 
 <h4 class="pdoc-member-header" id="CloudIntegrationEc2Args-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationEc2.ts#L196">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationEc2.ts#L196">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5228,7 +5370,7 @@ The external id corresponding to the Role ARN
 A value denoting which cloud service this service integrates with
 
 <h4 class="pdoc-member-header" id="CloudIntegrationEc2Args-serviceRefreshRateInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationEc2.ts#L200">property <b>serviceRefreshRateInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationEc2.ts#L200">property <b>serviceRefreshRateInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceRefreshRateInMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5236,7 +5378,7 @@ A value denoting which cloud service this service integrates with
 How often, in minutes, to refresh the service
 
 <h3 class="pdoc-module-header" id="CloudIntegrationEc2State" data-link-title="CloudIntegrationEc2State">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationEc2.ts#L136">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationEc2.ts#L136">
         interface <strong>CloudIntegrationEc2State</strong>
     </a>
 </h3>
@@ -5246,7 +5388,7 @@ How often, in minutes, to refresh the service
 Input properties used for looking up and filtering CloudIntegrationEc2 resources.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationEc2State-additionalTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationEc2.ts#L140">property <b>additionalTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationEc2.ts#L140">property <b>additionalTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -5254,7 +5396,7 @@ Input properties used for looking up and filtering CloudIntegrationEc2 resources
 A list of point tag key-values to add to every point ingested using this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationEc2State-externalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationEc2.ts#L144">property <b>externalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationEc2.ts#L144">property <b>externalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>externalId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5262,7 +5404,7 @@ A list of point tag key-values to add to every point ingested using this integra
 The Role ARN that the customer has created in AWS IAM to allow access to Wavefront
 
 <h4 class="pdoc-member-header" id="CloudIntegrationEc2State-forceSave">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationEc2.ts#L148">property <b>forceSave</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationEc2.ts#L148">property <b>forceSave</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceSave?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5270,12 +5412,12 @@ The Role ARN that the customer has created in AWS IAM to allow access to Wavefro
 Forces this resource to save, even if errors are present
 
 <h4 class="pdoc-member-header" id="CloudIntegrationEc2State-hostnameTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationEc2.ts#L149">property <b>hostnameTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationEc2.ts#L149">property <b>hostnameTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostnameTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CloudIntegrationEc2State-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationEc2.ts#L153">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationEc2.ts#L153">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5283,7 +5425,7 @@ Forces this resource to save, even if errors are present
 The human-readable name of this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationEc2State-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationEc2.ts#L157">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationEc2.ts#L157">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5291,7 +5433,7 @@ The human-readable name of this integration
 The external id corresponding to the Role ARN
 
 <h4 class="pdoc-member-header" id="CloudIntegrationEc2State-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationEc2.ts#L161">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationEc2.ts#L161">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5299,7 +5441,7 @@ The external id corresponding to the Role ARN
 A value denoting which cloud service this service integrates with
 
 <h4 class="pdoc-member-header" id="CloudIntegrationEc2State-serviceRefreshRateInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationEc2.ts#L165">property <b>serviceRefreshRateInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationEc2.ts#L165">property <b>serviceRefreshRateInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceRefreshRateInMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5307,7 +5449,7 @@ A value denoting which cloud service this service integrates with
 How often, in minutes, to refresh the service
 
 <h3 class="pdoc-module-header" id="CloudIntegrationGcpArgs" data-link-title="CloudIntegrationGcpArgs">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcp.ts#L196">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcp.ts#L196">
         interface <strong>CloudIntegrationGcpArgs</strong>
     </a>
 </h3>
@@ -5317,7 +5459,7 @@ How often, in minutes, to refresh the service
 The set of arguments for constructing a CloudIntegrationGcp resource.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpArgs-additionalTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcp.ts#L200">property <b>additionalTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcp.ts#L200">property <b>additionalTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -5325,7 +5467,7 @@ The set of arguments for constructing a CloudIntegrationGcp resource.
 A list of point tag key-values to add to every point ingested using this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpArgs-categories">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcp.ts#L208">property <b>categories</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcp.ts#L208">property <b>categories</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>categories?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5337,7 +5479,7 @@ A list of Google Cloud Platform (GCP) services.  Valid values are `APPENGINE`,
 `TPU`, `VPN`
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpArgs-forceSave">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcp.ts#L212">property <b>forceSave</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcp.ts#L212">property <b>forceSave</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceSave?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5345,7 +5487,7 @@ A list of Google Cloud Platform (GCP) services.  Valid values are `APPENGINE`,
 Forces this resource to save, even if errors are present
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpArgs-jsonKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcp.ts#L217">property <b>jsonKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcp.ts#L217">property <b>jsonKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>jsonKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5354,7 +5496,7 @@ Private key for a Google Cloud Platform (GCP) service account within your projec
 The account must be at least granted Monitoring Viewer permissions. This key must be in the JSON format generated by GCP.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpArgs-metricFilterRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcp.ts#L221">property <b>metricFilterRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcp.ts#L221">property <b>metricFilterRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricFilterRegex?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5362,7 +5504,7 @@ The account must be at least granted Monitoring Viewer permissions. This key mus
 A regular expression that a metric name must match (case-insensitively) in order to be ingested
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcp.ts#L225">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcp.ts#L225">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5370,7 +5512,7 @@ A regular expression that a metric name must match (case-insensitively) in order
 The human-readable name of this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcp.ts#L229">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcp.ts#L229">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5378,7 +5520,7 @@ The human-readable name of this integration
 The Google Cloud Platform (GCP) Project Id
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpArgs-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcp.ts#L233">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcp.ts#L233">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5386,7 +5528,7 @@ The Google Cloud Platform (GCP) Project Id
 A value denoting which cloud service this service integrates with
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpArgs-serviceRefreshRateInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcp.ts#L237">property <b>serviceRefreshRateInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcp.ts#L237">property <b>serviceRefreshRateInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceRefreshRateInMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5394,7 +5536,7 @@ A value denoting which cloud service this service integrates with
 How often, in minutes, to refresh the service
 
 <h3 class="pdoc-module-header" id="CloudIntegrationGcpBillingArgs" data-link-title="CloudIntegrationGcpBillingArgs">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcpBilling.ts#L182">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcpBilling.ts#L182">
         interface <strong>CloudIntegrationGcpBillingArgs</strong>
     </a>
 </h3>
@@ -5404,7 +5546,7 @@ How often, in minutes, to refresh the service
 The set of arguments for constructing a CloudIntegrationGcpBilling resource.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpBillingArgs-additionalTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcpBilling.ts#L186">property <b>additionalTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcpBilling.ts#L186">property <b>additionalTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -5412,7 +5554,7 @@ The set of arguments for constructing a CloudIntegrationGcpBilling resource.
 A list of point tag key-values to add to every point ingested using this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpBillingArgs-apiKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcpBilling.ts#L190">property <b>apiKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcpBilling.ts#L190">property <b>apiKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5420,7 +5562,7 @@ A list of point tag key-values to add to every point ingested using this integra
 API key for Google Cloud Platform (GCP)
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpBillingArgs-forceSave">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcpBilling.ts#L194">property <b>forceSave</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcpBilling.ts#L194">property <b>forceSave</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceSave?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5428,7 +5570,7 @@ API key for Google Cloud Platform (GCP)
 Forces this resource to save, even if errors are present
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpBillingArgs-jsonKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcpBilling.ts#L199">property <b>jsonKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcpBilling.ts#L199">property <b>jsonKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>jsonKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5437,7 +5579,7 @@ Private key for a Google Cloud Platform (GCP) service account within your projec
 The account must be at least granted Monitoring Viewer permissions. This key must be in the JSON format generated by GCP.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpBillingArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcpBilling.ts#L203">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcpBilling.ts#L203">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5445,7 +5587,7 @@ The account must be at least granted Monitoring Viewer permissions. This key mus
 The human-readable name of this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpBillingArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcpBilling.ts#L207">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcpBilling.ts#L207">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5453,7 +5595,7 @@ The human-readable name of this integration
 The Google Cloud Platform (GCP) Project Id
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpBillingArgs-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcpBilling.ts#L211">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcpBilling.ts#L211">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5461,7 +5603,7 @@ The Google Cloud Platform (GCP) Project Id
 A value denoting which cloud service this service integrates with
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpBillingArgs-serviceRefreshRateInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcpBilling.ts#L215">property <b>serviceRefreshRateInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcpBilling.ts#L215">property <b>serviceRefreshRateInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceRefreshRateInMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5469,7 +5611,7 @@ A value denoting which cloud service this service integrates with
 How often, in minutes, to refresh the service
 
 <h3 class="pdoc-module-header" id="CloudIntegrationGcpBillingState" data-link-title="CloudIntegrationGcpBillingState">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcpBilling.ts#L143">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcpBilling.ts#L143">
         interface <strong>CloudIntegrationGcpBillingState</strong>
     </a>
 </h3>
@@ -5479,7 +5621,7 @@ How often, in minutes, to refresh the service
 Input properties used for looking up and filtering CloudIntegrationGcpBilling resources.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpBillingState-additionalTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcpBilling.ts#L147">property <b>additionalTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcpBilling.ts#L147">property <b>additionalTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -5487,7 +5629,7 @@ Input properties used for looking up and filtering CloudIntegrationGcpBilling re
 A list of point tag key-values to add to every point ingested using this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpBillingState-apiKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcpBilling.ts#L151">property <b>apiKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcpBilling.ts#L151">property <b>apiKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5495,7 +5637,7 @@ A list of point tag key-values to add to every point ingested using this integra
 API key for Google Cloud Platform (GCP)
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpBillingState-forceSave">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcpBilling.ts#L155">property <b>forceSave</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcpBilling.ts#L155">property <b>forceSave</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceSave?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5503,7 +5645,7 @@ API key for Google Cloud Platform (GCP)
 Forces this resource to save, even if errors are present
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpBillingState-jsonKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcpBilling.ts#L160">property <b>jsonKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcpBilling.ts#L160">property <b>jsonKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>jsonKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5512,7 +5654,7 @@ Private key for a Google Cloud Platform (GCP) service account within your projec
 The account must be at least granted Monitoring Viewer permissions. This key must be in the JSON format generated by GCP.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpBillingState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcpBilling.ts#L164">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcpBilling.ts#L164">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5520,7 +5662,7 @@ The account must be at least granted Monitoring Viewer permissions. This key mus
 The human-readable name of this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpBillingState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcpBilling.ts#L168">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcpBilling.ts#L168">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5528,7 +5670,7 @@ The human-readable name of this integration
 The Google Cloud Platform (GCP) Project Id
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpBillingState-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcpBilling.ts#L172">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcpBilling.ts#L172">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5536,7 +5678,7 @@ The Google Cloud Platform (GCP) Project Id
 A value denoting which cloud service this service integrates with
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpBillingState-serviceRefreshRateInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcpBilling.ts#L176">property <b>serviceRefreshRateInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcpBilling.ts#L176">property <b>serviceRefreshRateInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceRefreshRateInMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5544,7 +5686,7 @@ A value denoting which cloud service this service integrates with
 How often, in minutes, to refresh the service
 
 <h3 class="pdoc-module-header" id="CloudIntegrationGcpState" data-link-title="CloudIntegrationGcpState">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcp.ts#L149">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcp.ts#L149">
         interface <strong>CloudIntegrationGcpState</strong>
     </a>
 </h3>
@@ -5554,7 +5696,7 @@ How often, in minutes, to refresh the service
 Input properties used for looking up and filtering CloudIntegrationGcp resources.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpState-additionalTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcp.ts#L153">property <b>additionalTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcp.ts#L153">property <b>additionalTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -5562,7 +5704,7 @@ Input properties used for looking up and filtering CloudIntegrationGcp resources
 A list of point tag key-values to add to every point ingested using this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpState-categories">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcp.ts#L161">property <b>categories</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcp.ts#L161">property <b>categories</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>categories?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5574,7 +5716,7 @@ A list of Google Cloud Platform (GCP) services.  Valid values are `APPENGINE`,
 `TPU`, `VPN`
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpState-forceSave">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcp.ts#L165">property <b>forceSave</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcp.ts#L165">property <b>forceSave</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceSave?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5582,7 +5724,7 @@ A list of Google Cloud Platform (GCP) services.  Valid values are `APPENGINE`,
 Forces this resource to save, even if errors are present
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpState-jsonKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcp.ts#L170">property <b>jsonKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcp.ts#L170">property <b>jsonKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>jsonKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5591,7 +5733,7 @@ Private key for a Google Cloud Platform (GCP) service account within your projec
 The account must be at least granted Monitoring Viewer permissions. This key must be in the JSON format generated by GCP.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpState-metricFilterRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcp.ts#L174">property <b>metricFilterRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcp.ts#L174">property <b>metricFilterRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricFilterRegex?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5599,7 +5741,7 @@ The account must be at least granted Monitoring Viewer permissions. This key mus
 A regular expression that a metric name must match (case-insensitively) in order to be ingested
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcp.ts#L178">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcp.ts#L178">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5607,7 +5749,7 @@ A regular expression that a metric name must match (case-insensitively) in order
 The human-readable name of this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcp.ts#L182">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcp.ts#L182">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5615,7 +5757,7 @@ The human-readable name of this integration
 The Google Cloud Platform (GCP) Project Id
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpState-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcp.ts#L186">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcp.ts#L186">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5623,7 +5765,7 @@ The Google Cloud Platform (GCP) Project Id
 A value denoting which cloud service this service integrates with
 
 <h4 class="pdoc-member-header" id="CloudIntegrationGcpState-serviceRefreshRateInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationGcp.ts#L190">property <b>serviceRefreshRateInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationGcp.ts#L190">property <b>serviceRefreshRateInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceRefreshRateInMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5631,7 +5773,7 @@ A value denoting which cloud service this service integrates with
 How often, in minutes, to refresh the service
 
 <h3 class="pdoc-module-header" id="CloudIntegrationNewRelicArgs" data-link-title="CloudIntegrationNewRelicArgs">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationNewRelic.ts#L184">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationNewRelic.ts#L184">
         interface <strong>CloudIntegrationNewRelicArgs</strong>
     </a>
 </h3>
@@ -5641,7 +5783,7 @@ How often, in minutes, to refresh the service
 The set of arguments for constructing a CloudIntegrationNewRelic resource.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationNewRelicArgs-additionalTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationNewRelic.ts#L188">property <b>additionalTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationNewRelic.ts#L188">property <b>additionalTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -5649,7 +5791,7 @@ The set of arguments for constructing a CloudIntegrationNewRelic resource.
 A list of point tag key-values to add to every point ingested using this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationNewRelicArgs-apiKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationNewRelic.ts#L192">property <b>apiKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationNewRelic.ts#L192">property <b>apiKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5657,7 +5799,7 @@ A list of point tag key-values to add to every point ingested using this integra
 NewRelic REST api key
 
 <h4 class="pdoc-member-header" id="CloudIntegrationNewRelicArgs-appFilterRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationNewRelic.ts#L196">property <b>appFilterRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationNewRelic.ts#L196">property <b>appFilterRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appFilterRegex?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5665,7 +5807,7 @@ NewRelic REST api key
 A regular expression that an application name must match (case-insensitively) iun order to collect metrics
 
 <h4 class="pdoc-member-header" id="CloudIntegrationNewRelicArgs-forceSave">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationNewRelic.ts#L200">property <b>forceSave</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationNewRelic.ts#L200">property <b>forceSave</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceSave?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5673,7 +5815,7 @@ A regular expression that an application name must match (case-insensitively) iu
 Forces this resource to save, even if errors are present
 
 <h4 class="pdoc-member-header" id="CloudIntegrationNewRelicArgs-hostFilterRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationNewRelic.ts#L204">property <b>hostFilterRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationNewRelic.ts#L204">property <b>hostFilterRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostFilterRegex?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5681,7 +5823,7 @@ Forces this resource to save, even if errors are present
 A regular expression that a host name must match (case-insensitively) in order to collect metrics
 
 <h4 class="pdoc-member-header" id="CloudIntegrationNewRelicArgs-metricFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationNewRelic.ts#L208">property <b>metricFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationNewRelic.ts#L208">property <b>metricFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/wavefront/types/input/#CloudIntegrationNewRelicMetricFilter'>CloudIntegrationNewRelicMetricFilter</a>&gt;[]&gt;;</code></pre>
@@ -5689,7 +5831,7 @@ A regular expression that a host name must match (case-insensitively) in order t
 See Metric Filter
 
 <h4 class="pdoc-member-header" id="CloudIntegrationNewRelicArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationNewRelic.ts#L212">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationNewRelic.ts#L212">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5697,7 +5839,7 @@ See Metric Filter
 The human-readable name of this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationNewRelicArgs-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationNewRelic.ts#L216">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationNewRelic.ts#L216">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5705,7 +5847,7 @@ The human-readable name of this integration
 A value denoting which cloud service this service integrates with
 
 <h4 class="pdoc-member-header" id="CloudIntegrationNewRelicArgs-serviceRefreshRateInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationNewRelic.ts#L220">property <b>serviceRefreshRateInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationNewRelic.ts#L220">property <b>serviceRefreshRateInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceRefreshRateInMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5713,7 +5855,7 @@ A value denoting which cloud service this service integrates with
 How often, in minutes, to refresh the service
 
 <h3 class="pdoc-module-header" id="CloudIntegrationNewRelicState" data-link-title="CloudIntegrationNewRelicState">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationNewRelic.ts#L142">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationNewRelic.ts#L142">
         interface <strong>CloudIntegrationNewRelicState</strong>
     </a>
 </h3>
@@ -5723,7 +5865,7 @@ How often, in minutes, to refresh the service
 Input properties used for looking up and filtering CloudIntegrationNewRelic resources.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationNewRelicState-additionalTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationNewRelic.ts#L146">property <b>additionalTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationNewRelic.ts#L146">property <b>additionalTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -5731,7 +5873,7 @@ Input properties used for looking up and filtering CloudIntegrationNewRelic reso
 A list of point tag key-values to add to every point ingested using this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationNewRelicState-apiKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationNewRelic.ts#L150">property <b>apiKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationNewRelic.ts#L150">property <b>apiKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5739,7 +5881,7 @@ A list of point tag key-values to add to every point ingested using this integra
 NewRelic REST api key
 
 <h4 class="pdoc-member-header" id="CloudIntegrationNewRelicState-appFilterRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationNewRelic.ts#L154">property <b>appFilterRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationNewRelic.ts#L154">property <b>appFilterRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appFilterRegex?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5747,7 +5889,7 @@ NewRelic REST api key
 A regular expression that an application name must match (case-insensitively) iun order to collect metrics
 
 <h4 class="pdoc-member-header" id="CloudIntegrationNewRelicState-forceSave">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationNewRelic.ts#L158">property <b>forceSave</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationNewRelic.ts#L158">property <b>forceSave</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceSave?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5755,7 +5897,7 @@ A regular expression that an application name must match (case-insensitively) iu
 Forces this resource to save, even if errors are present
 
 <h4 class="pdoc-member-header" id="CloudIntegrationNewRelicState-hostFilterRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationNewRelic.ts#L162">property <b>hostFilterRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationNewRelic.ts#L162">property <b>hostFilterRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostFilterRegex?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5763,7 +5905,7 @@ Forces this resource to save, even if errors are present
 A regular expression that a host name must match (case-insensitively) in order to collect metrics
 
 <h4 class="pdoc-member-header" id="CloudIntegrationNewRelicState-metricFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationNewRelic.ts#L166">property <b>metricFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationNewRelic.ts#L166">property <b>metricFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/wavefront/types/input/#CloudIntegrationNewRelicMetricFilter'>CloudIntegrationNewRelicMetricFilter</a>&gt;[]&gt;;</code></pre>
@@ -5771,7 +5913,7 @@ A regular expression that a host name must match (case-insensitively) in order t
 See Metric Filter
 
 <h4 class="pdoc-member-header" id="CloudIntegrationNewRelicState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationNewRelic.ts#L170">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationNewRelic.ts#L170">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5779,7 +5921,7 @@ See Metric Filter
 The human-readable name of this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationNewRelicState-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationNewRelic.ts#L174">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationNewRelic.ts#L174">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5787,7 +5929,7 @@ The human-readable name of this integration
 A value denoting which cloud service this service integrates with
 
 <h4 class="pdoc-member-header" id="CloudIntegrationNewRelicState-serviceRefreshRateInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationNewRelic.ts#L178">property <b>serviceRefreshRateInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationNewRelic.ts#L178">property <b>serviceRefreshRateInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceRefreshRateInMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5795,7 +5937,7 @@ A value denoting which cloud service this service integrates with
 How often, in minutes, to refresh the service
 
 <h3 class="pdoc-module-header" id="CloudIntegrationTeslaArgs" data-link-title="CloudIntegrationTeslaArgs">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationTesla.ts#L166">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationTesla.ts#L166">
         interface <strong>CloudIntegrationTeslaArgs</strong>
     </a>
 </h3>
@@ -5805,7 +5947,7 @@ How often, in minutes, to refresh the service
 The set of arguments for constructing a CloudIntegrationTesla resource.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationTeslaArgs-additionalTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationTesla.ts#L170">property <b>additionalTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationTesla.ts#L170">property <b>additionalTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -5813,7 +5955,7 @@ The set of arguments for constructing a CloudIntegrationTesla resource.
 A list of point tag key-values to add to every point ingested using this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationTeslaArgs-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationTesla.ts#L174">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationTesla.ts#L174">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5821,7 +5963,7 @@ A list of point tag key-values to add to every point ingested using this integra
 Email address for the Tesla account login
 
 <h4 class="pdoc-member-header" id="CloudIntegrationTeslaArgs-forceSave">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationTesla.ts#L178">property <b>forceSave</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationTesla.ts#L178">property <b>forceSave</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceSave?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5829,7 +5971,7 @@ Email address for the Tesla account login
 Forces this resource to save, even if errors are present
 
 <h4 class="pdoc-member-header" id="CloudIntegrationTeslaArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationTesla.ts#L182">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationTesla.ts#L182">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5837,7 +5979,7 @@ Forces this resource to save, even if errors are present
 The human-readable name of this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationTeslaArgs-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationTesla.ts#L186">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationTesla.ts#L186">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5845,7 +5987,7 @@ The human-readable name of this integration
 Password for the Tesla account login
 
 <h4 class="pdoc-member-header" id="CloudIntegrationTeslaArgs-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationTesla.ts#L190">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationTesla.ts#L190">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5853,7 +5995,7 @@ Password for the Tesla account login
 A value denoting which cloud service this service integrates with
 
 <h4 class="pdoc-member-header" id="CloudIntegrationTeslaArgs-serviceRefreshRateInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationTesla.ts#L194">property <b>serviceRefreshRateInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationTesla.ts#L194">property <b>serviceRefreshRateInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceRefreshRateInMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5861,7 +6003,7 @@ A value denoting which cloud service this service integrates with
 How often, in minutes, to refresh the service
 
 <h3 class="pdoc-module-header" id="CloudIntegrationTeslaState" data-link-title="CloudIntegrationTeslaState">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationTesla.ts#L132">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationTesla.ts#L132">
         interface <strong>CloudIntegrationTeslaState</strong>
     </a>
 </h3>
@@ -5871,7 +6013,7 @@ How often, in minutes, to refresh the service
 Input properties used for looking up and filtering CloudIntegrationTesla resources.
 
 <h4 class="pdoc-member-header" id="CloudIntegrationTeslaState-additionalTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationTesla.ts#L136">property <b>additionalTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationTesla.ts#L136">property <b>additionalTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -5879,7 +6021,7 @@ Input properties used for looking up and filtering CloudIntegrationTesla resourc
 A list of point tag key-values to add to every point ingested using this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationTeslaState-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationTesla.ts#L140">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationTesla.ts#L140">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5887,7 +6029,7 @@ A list of point tag key-values to add to every point ingested using this integra
 Email address for the Tesla account login
 
 <h4 class="pdoc-member-header" id="CloudIntegrationTeslaState-forceSave">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationTesla.ts#L144">property <b>forceSave</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationTesla.ts#L144">property <b>forceSave</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceSave?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5895,7 +6037,7 @@ Email address for the Tesla account login
 Forces this resource to save, even if errors are present
 
 <h4 class="pdoc-member-header" id="CloudIntegrationTeslaState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationTesla.ts#L148">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationTesla.ts#L148">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5903,7 +6045,7 @@ Forces this resource to save, even if errors are present
 The human-readable name of this integration
 
 <h4 class="pdoc-member-header" id="CloudIntegrationTeslaState-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationTesla.ts#L152">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationTesla.ts#L152">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5911,7 +6053,7 @@ The human-readable name of this integration
 Password for the Tesla account login
 
 <h4 class="pdoc-member-header" id="CloudIntegrationTeslaState-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationTesla.ts#L156">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationTesla.ts#L156">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5919,7 +6061,7 @@ Password for the Tesla account login
 A value denoting which cloud service this service integrates with
 
 <h4 class="pdoc-member-header" id="CloudIntegrationTeslaState-serviceRefreshRateInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/cloudIntegrationTesla.ts#L160">property <b>serviceRefreshRateInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/cloudIntegrationTesla.ts#L160">property <b>serviceRefreshRateInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceRefreshRateInMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5927,7 +6069,7 @@ A value denoting which cloud service this service integrates with
 How often, in minutes, to refresh the service
 
 <h3 class="pdoc-module-header" id="DashboardArgs" data-link-title="DashboardArgs">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboard.ts#L260">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboard.ts#L260">
         interface <strong>DashboardArgs</strong>
     </a>
 </h3>
@@ -5937,7 +6079,7 @@ How often, in minutes, to refresh the service
 The set of arguments for constructing a Dashboard resource.
 
 <h4 class="pdoc-member-header" id="DashboardArgs-canModifies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboard.ts#L264">property <b>canModifies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboard.ts#L264">property <b>canModifies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canModifies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5945,7 +6087,7 @@ The set of arguments for constructing a Dashboard resource.
 A list of users that have modify ACL access to the dashboard
 
 <h4 class="pdoc-member-header" id="DashboardArgs-canViews">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboard.ts#L268">property <b>canViews</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboard.ts#L268">property <b>canViews</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canViews?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5953,7 +6095,7 @@ A list of users that have modify ACL access to the dashboard
 A list of users that have view ACL access to the dashboard
 
 <h4 class="pdoc-member-header" id="DashboardArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboard.ts#L272">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboard.ts#L272">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5961,7 +6103,7 @@ A list of users that have view ACL access to the dashboard
 Human-readable description of the dashboard
 
 <h4 class="pdoc-member-header" id="DashboardArgs-displayQueryParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboard.ts#L277">property <b>displayQueryParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboard.ts#L277">property <b>displayQueryParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayQueryParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5970,7 +6112,7 @@ Whether the dashboard parameters section is opened by default when the dashboard
 is shown
 
 <h4 class="pdoc-member-header" id="DashboardArgs-displaySectionTableOfContents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboard.ts#L282">property <b>displaySectionTableOfContents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboard.ts#L282">property <b>displaySectionTableOfContents</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displaySectionTableOfContents?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5979,7 +6121,7 @@ Whether the "pills" quick-linked the sections of the dashboard are
 displayed by default when the dashboard is shown
 
 <h4 class="pdoc-member-header" id="DashboardArgs-eventFilterType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboard.ts#L287">property <b>eventFilterType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboard.ts#L287">property <b>eventFilterType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventFilterType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5988,7 +6130,7 @@ How charts belonging to this dashboard should display events. BYCHART is default
 unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBOARD`, and `BYCHARTANDDASHBOARD`
 
 <h4 class="pdoc-member-header" id="DashboardArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboard.ts#L291">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboard.ts#L291">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5996,7 +6138,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 Name of the dashboard
 
 <h4 class="pdoc-member-header" id="DashboardArgs-parameterDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboard.ts#L295">property <b>parameterDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboard.ts#L295">property <b>parameterDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameterDetails?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/wavefront/types/input/#DashboardParameterDetail'>DashboardParameterDetail</a>&gt;[]&gt;;</code></pre>
@@ -6004,7 +6146,7 @@ Name of the dashboard
 The current JSON representation of dashboard parameters. See parameter details
 
 <h4 class="pdoc-member-header" id="DashboardArgs-sections">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboard.ts#L299">property <b>sections</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboard.ts#L299">property <b>sections</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sections: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/wavefront/types/input/#DashboardSection'>DashboardSection</a>&gt;[]&gt;;</code></pre>
@@ -6012,7 +6154,7 @@ The current JSON representation of dashboard parameters. See parameter details
 Dashboard chart sections. See dashboard sections
 
 <h4 class="pdoc-member-header" id="DashboardArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboard.ts#L303">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboard.ts#L303">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -6020,7 +6162,7 @@ Dashboard chart sections. See dashboard sections
 A set of tags to assign to this resource.
 
 <h4 class="pdoc-member-header" id="DashboardArgs-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboard.ts#L307">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboard.ts#L307">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6028,7 +6170,7 @@ A set of tags to assign to this resource.
 Unique identifier, also URL slug, of the dashboard
 
 <h3 class="pdoc-module-header" id="DashboardJsonArgs" data-link-title="DashboardJsonArgs">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboardJson.ts#L197">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboardJson.ts#L197">
         interface <strong>DashboardJsonArgs</strong>
     </a>
 </h3>
@@ -6038,7 +6180,7 @@ Unique identifier, also URL slug, of the dashboard
 The set of arguments for constructing a DashboardJson resource.
 
 <h4 class="pdoc-member-header" id="DashboardJsonArgs-dashboardJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboardJson.ts#L202">property <b>dashboardJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboardJson.ts#L202">property <b>dashboardJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dashboardJson: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6047,7 +6189,7 @@ See [Wavefront API Documentation](https://docs.wavefront.com/wavefront_api.html#
 for instructions on how to get to your API documentation for more details.
 
 <h3 class="pdoc-module-header" id="DashboardJsonState" data-link-title="DashboardJsonState">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboardJson.ts#L186">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboardJson.ts#L186">
         interface <strong>DashboardJsonState</strong>
     </a>
 </h3>
@@ -6057,7 +6199,7 @@ for instructions on how to get to your API documentation for more details.
 Input properties used for looking up and filtering DashboardJson resources.
 
 <h4 class="pdoc-member-header" id="DashboardJsonState-dashboardJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboardJson.ts#L191">property <b>dashboardJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboardJson.ts#L191">property <b>dashboardJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dashboardJson?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6066,7 +6208,7 @@ See [Wavefront API Documentation](https://docs.wavefront.com/wavefront_api.html#
 for instructions on how to get to your API documentation for more details.
 
 <h3 class="pdoc-module-header" id="DashboardState" data-link-title="DashboardState">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboard.ts#L207">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboard.ts#L207">
         interface <strong>DashboardState</strong>
     </a>
 </h3>
@@ -6076,7 +6218,7 @@ for instructions on how to get to your API documentation for more details.
 Input properties used for looking up and filtering Dashboard resources.
 
 <h4 class="pdoc-member-header" id="DashboardState-canModifies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboard.ts#L211">property <b>canModifies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboard.ts#L211">property <b>canModifies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canModifies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -6084,7 +6226,7 @@ Input properties used for looking up and filtering Dashboard resources.
 A list of users that have modify ACL access to the dashboard
 
 <h4 class="pdoc-member-header" id="DashboardState-canViews">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboard.ts#L215">property <b>canViews</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboard.ts#L215">property <b>canViews</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canViews?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -6092,7 +6234,7 @@ A list of users that have modify ACL access to the dashboard
 A list of users that have view ACL access to the dashboard
 
 <h4 class="pdoc-member-header" id="DashboardState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboard.ts#L219">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboard.ts#L219">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6100,7 +6242,7 @@ A list of users that have view ACL access to the dashboard
 Human-readable description of the dashboard
 
 <h4 class="pdoc-member-header" id="DashboardState-displayQueryParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboard.ts#L224">property <b>displayQueryParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboard.ts#L224">property <b>displayQueryParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayQueryParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6109,7 +6251,7 @@ Whether the dashboard parameters section is opened by default when the dashboard
 is shown
 
 <h4 class="pdoc-member-header" id="DashboardState-displaySectionTableOfContents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboard.ts#L229">property <b>displaySectionTableOfContents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboard.ts#L229">property <b>displaySectionTableOfContents</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displaySectionTableOfContents?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6118,7 +6260,7 @@ Whether the "pills" quick-linked the sections of the dashboard are
 displayed by default when the dashboard is shown
 
 <h4 class="pdoc-member-header" id="DashboardState-eventFilterType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboard.ts#L234">property <b>eventFilterType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboard.ts#L234">property <b>eventFilterType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventFilterType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6127,7 +6269,7 @@ How charts belonging to this dashboard should display events. BYCHART is default
 unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBOARD`, and `BYCHARTANDDASHBOARD`
 
 <h4 class="pdoc-member-header" id="DashboardState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboard.ts#L238">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboard.ts#L238">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6135,7 +6277,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 Name of the dashboard
 
 <h4 class="pdoc-member-header" id="DashboardState-parameterDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboard.ts#L242">property <b>parameterDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboard.ts#L242">property <b>parameterDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameterDetails?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/wavefront/types/input/#DashboardParameterDetail'>DashboardParameterDetail</a>&gt;[]&gt;;</code></pre>
@@ -6143,7 +6285,7 @@ Name of the dashboard
 The current JSON representation of dashboard parameters. See parameter details
 
 <h4 class="pdoc-member-header" id="DashboardState-sections">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboard.ts#L246">property <b>sections</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboard.ts#L246">property <b>sections</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sections?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/wavefront/types/input/#DashboardSection'>DashboardSection</a>&gt;[]&gt;;</code></pre>
@@ -6151,7 +6293,7 @@ The current JSON representation of dashboard parameters. See parameter details
 Dashboard chart sections. See dashboard sections
 
 <h4 class="pdoc-member-header" id="DashboardState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboard.ts#L250">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboard.ts#L250">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -6159,7 +6301,7 @@ Dashboard chart sections. See dashboard sections
 A set of tags to assign to this resource.
 
 <h4 class="pdoc-member-header" id="DashboardState-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/dashboard.ts#L254">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/dashboard.ts#L254">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6167,7 +6309,7 @@ A set of tags to assign to this resource.
 Unique identifier, also URL slug, of the dashboard
 
 <h3 class="pdoc-module-header" id="DerivedMetricArgs" data-link-title="DerivedMetricArgs">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/derivedMetric.ts#L143">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/derivedMetric.ts#L143">
         interface <strong>DerivedMetricArgs</strong>
     </a>
 </h3>
@@ -6177,7 +6319,7 @@ Unique identifier, also URL slug, of the dashboard
 The set of arguments for constructing a DerivedMetric resource.
 
 <h4 class="pdoc-member-header" id="DerivedMetricArgs-additionalInformation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/derivedMetric.ts#L147">property <b>additionalInformation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/derivedMetric.ts#L147">property <b>additionalInformation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalInformation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6185,7 +6327,7 @@ The set of arguments for constructing a DerivedMetric resource.
 User-supplied additional explanatory information for the derived metric
 
 <h4 class="pdoc-member-header" id="DerivedMetricArgs-minutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/derivedMetric.ts#L151">property <b>minutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/derivedMetric.ts#L151">property <b>minutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -6193,7 +6335,7 @@ User-supplied additional explanatory information for the derived metric
 How frequently the query generating the derived metric is run
 
 <h4 class="pdoc-member-header" id="DerivedMetricArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/derivedMetric.ts#L155">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/derivedMetric.ts#L155">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6201,7 +6343,7 @@ How frequently the query generating the derived metric is run
 The name of the Derived Metric in Wavefront
 
 <h4 class="pdoc-member-header" id="DerivedMetricArgs-query">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/derivedMetric.ts#L159">property <b>query</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/derivedMetric.ts#L159">property <b>query</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>query: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6209,7 +6351,7 @@ The name of the Derived Metric in Wavefront
 A Wavefront query that is evaluated at regular intervals (default `1m`)
 
 <h4 class="pdoc-member-header" id="DerivedMetricArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/derivedMetric.ts#L163">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/derivedMetric.ts#L163">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -6217,7 +6359,7 @@ A Wavefront query that is evaluated at regular intervals (default `1m`)
 A set of tags to assign to this resource.
 
 <h3 class="pdoc-module-header" id="DerivedMetricState" data-link-title="DerivedMetricState">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/derivedMetric.ts#L117">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/derivedMetric.ts#L117">
         interface <strong>DerivedMetricState</strong>
     </a>
 </h3>
@@ -6227,7 +6369,7 @@ A set of tags to assign to this resource.
 Input properties used for looking up and filtering DerivedMetric resources.
 
 <h4 class="pdoc-member-header" id="DerivedMetricState-additionalInformation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/derivedMetric.ts#L121">property <b>additionalInformation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/derivedMetric.ts#L121">property <b>additionalInformation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalInformation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6235,7 +6377,7 @@ Input properties used for looking up and filtering DerivedMetric resources.
 User-supplied additional explanatory information for the derived metric
 
 <h4 class="pdoc-member-header" id="DerivedMetricState-minutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/derivedMetric.ts#L125">property <b>minutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/derivedMetric.ts#L125">property <b>minutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -6243,7 +6385,7 @@ User-supplied additional explanatory information for the derived metric
 How frequently the query generating the derived metric is run
 
 <h4 class="pdoc-member-header" id="DerivedMetricState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/derivedMetric.ts#L129">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/derivedMetric.ts#L129">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6251,7 +6393,7 @@ How frequently the query generating the derived metric is run
 The name of the Derived Metric in Wavefront
 
 <h4 class="pdoc-member-header" id="DerivedMetricState-query">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/derivedMetric.ts#L133">property <b>query</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/derivedMetric.ts#L133">property <b>query</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>query?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6259,15 +6401,147 @@ The name of the Derived Metric in Wavefront
 A Wavefront query that is evaluated at regular intervals (default `1m`)
 
 <h4 class="pdoc-member-header" id="DerivedMetricState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/derivedMetric.ts#L137">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/derivedMetric.ts#L137">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 
 A set of tags to assign to this resource.
 
+<h3 class="pdoc-module-header" id="ExternalLinkArgs" data-link-title="ExternalLinkArgs">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/externalLink.ts#L162">
+        interface <strong>ExternalLinkArgs</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ExternalLinkArgs</span></code></pre>
+
+The set of arguments for constructing a ExternalLink resource.
+
+<h4 class="pdoc-member-header" id="ExternalLinkArgs-description">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/externalLink.ts#L166">property <b>description</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Human-readable description for this link
+
+<h4 class="pdoc-member-header" id="ExternalLinkArgs-isLogIntegration">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/externalLink.ts#L170">property <b>isLogIntegration</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>isLogIntegration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Whether this is a "Log Integration" subType of external link
+
+<h4 class="pdoc-member-header" id="ExternalLinkArgs-metricFilterRegex">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/externalLink.ts#L174">property <b>metricFilterRegex</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>metricFilterRegex?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Controls whether a link is displayed in the context menu of a highlighted series. If present, the metric name of the highlighted series must match this regular expression in order for the link to be displayed.
+
+<h4 class="pdoc-member-header" id="ExternalLinkArgs-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/externalLink.ts#L178">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the external link
+
+<h4 class="pdoc-member-header" id="ExternalLinkArgs-pointTagFilterRegexes">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/externalLink.ts#L182">property <b>pointTagFilterRegexes</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>pointTagFilterRegexes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
+
+Controls whether a link is displayed in the context menu of a highlighted series. This is a map from string to regular expression. The highlighted series must contain point tags whose keys are present in the keys of this map and whose values match the regular expressions associated with those keys in order for the link to be displayed
+
+<h4 class="pdoc-member-header" id="ExternalLinkArgs-sourceFilterRegex">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/externalLink.ts#L186">property <b>sourceFilterRegex</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>sourceFilterRegex?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Controls whether a link is displayed in the context menu of a highlighted series. If present, the source name of the highlighted series must match this regular expression in order for the link to be displayed.
+
+<h4 class="pdoc-member-header" id="ExternalLinkArgs-template">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/externalLink.ts#L190">property <b>template</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>template: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The mustache template for this link. The template must expand to a full URL, including scheme, origin, etc.
+
+<h3 class="pdoc-module-header" id="ExternalLinkState" data-link-title="ExternalLinkState">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/externalLink.ts#L128">
+        interface <strong>ExternalLinkState</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ExternalLinkState</span></code></pre>
+
+Input properties used for looking up and filtering ExternalLink resources.
+
+<h4 class="pdoc-member-header" id="ExternalLinkState-description">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/externalLink.ts#L132">property <b>description</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Human-readable description for this link
+
+<h4 class="pdoc-member-header" id="ExternalLinkState-isLogIntegration">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/externalLink.ts#L136">property <b>isLogIntegration</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>isLogIntegration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Whether this is a "Log Integration" subType of external link
+
+<h4 class="pdoc-member-header" id="ExternalLinkState-metricFilterRegex">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/externalLink.ts#L140">property <b>metricFilterRegex</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>metricFilterRegex?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Controls whether a link is displayed in the context menu of a highlighted series. If present, the metric name of the highlighted series must match this regular expression in order for the link to be displayed.
+
+<h4 class="pdoc-member-header" id="ExternalLinkState-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/externalLink.ts#L144">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the external link
+
+<h4 class="pdoc-member-header" id="ExternalLinkState-pointTagFilterRegexes">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/externalLink.ts#L148">property <b>pointTagFilterRegexes</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>pointTagFilterRegexes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
+
+Controls whether a link is displayed in the context menu of a highlighted series. This is a map from string to regular expression. The highlighted series must contain point tags whose keys are present in the keys of this map and whose values match the regular expressions associated with those keys in order for the link to be displayed
+
+<h4 class="pdoc-member-header" id="ExternalLinkState-sourceFilterRegex">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/externalLink.ts#L152">property <b>sourceFilterRegex</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>sourceFilterRegex?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Controls whether a link is displayed in the context menu of a highlighted series. If present, the source name of the highlighted series must match this regular expression in order for the link to be displayed.
+
+<h4 class="pdoc-member-header" id="ExternalLinkState-template">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/externalLink.ts#L156">property <b>template</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>template?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The mustache template for this link. The template must expand to a full URL, including scheme, origin, etc.
+
 <h3 class="pdoc-module-header" id="GetDefaultUserGroupResult" data-link-title="GetDefaultUserGroupResult">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/getDefaultUserGroup.ts#L37">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/getDefaultUserGroup.ts#L37">
         interface <strong>GetDefaultUserGroupResult</strong>
     </a>
 </h3>
@@ -6277,7 +6551,7 @@ A set of tags to assign to this resource.
 A collection of values returned by getDefaultUserGroup.
 
 <h4 class="pdoc-member-header" id="GetDefaultUserGroupResult-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/getDefaultUserGroup.ts#L42">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/getDefaultUserGroup.ts#L42">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6286,7 +6560,7 @@ Set to the Group ID of the `Everyone` group, suitable for referencing
 in other resources that support group memberships. s
 
 <h4 class="pdoc-member-header" id="GetDefaultUserGroupResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/getDefaultUserGroup.ts#L46">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/getDefaultUserGroup.ts#L46">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6294,7 +6568,7 @@ in other resources that support group memberships. s
 The provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-module-header" id="getEnv" data-link-title="getEnv">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/utilities.ts#L5">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/utilities.ts#L5">
         function <strong>getEnv</strong>
     </a>
 </h3>
@@ -6303,7 +6577,7 @@ The provider-assigned unique ID for this managed resource.
 <pre class="highlight"><code><span class='kd'></span>getEnv(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvBoolean" data-link-title="getEnvBoolean">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/utilities.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/utilities.ts#L15">
         function <strong>getEnvBoolean</strong>
     </a>
 </h3>
@@ -6312,7 +6586,7 @@ The provider-assigned unique ID for this managed resource.
 <pre class="highlight"><code><span class='kd'></span>getEnvBoolean(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvNumber" data-link-title="getEnvNumber">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/utilities.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/utilities.ts#L30">
         function <strong>getEnvNumber</strong>
     </a>
 </h3>
@@ -6321,7 +6595,7 @@ The provider-assigned unique ID for this managed resource.
 <pre class="highlight"><code><span class='kd'></span>getEnvNumber(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getVersion" data-link-title="getVersion">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/utilities.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/utilities.ts#L41">
         function <strong>getVersion</strong>
     </a>
 </h3>
@@ -6330,7 +6604,7 @@ The provider-assigned unique ID for this managed resource.
 <pre class="highlight"><code><span class='kd'></span>getVersion(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="MaintenanceWindowArgs" data-link-title="MaintenanceWindowArgs">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/maintenanceWindow.ts#L194">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/maintenanceWindow.ts#L194">
         interface <strong>MaintenanceWindowArgs</strong>
     </a>
 </h3>
@@ -6340,7 +6614,7 @@ The provider-assigned unique ID for this managed resource.
 The set of arguments for constructing a MaintenanceWindow resource.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowArgs-endTimeInSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/maintenanceWindow.ts#L198">property <b>endTimeInSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/maintenanceWindow.ts#L198">property <b>endTimeInSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endTimeInSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -6348,7 +6622,7 @@ The set of arguments for constructing a MaintenanceWindow resource.
 end time in seconds after 1 Jan 1970 GMT.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowArgs-hostTagGroupHostNamesGroupAnded">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/maintenanceWindow.ts#L202">property <b>hostTagGroupHostNamesGroupAnded</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/maintenanceWindow.ts#L202">property <b>hostTagGroupHostNamesGroupAnded</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostTagGroupHostNamesGroupAnded?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6356,7 +6630,7 @@ end time in seconds after 1 Jan 1970 GMT.
 If true, a source/host must be in 'relevantHostNames' and have tags matching the specification formed by 'relevantHostTags' and 'relevantHostTagsAnded' in order for this maintenance window to apply. If false, a source/host must either be in 'relevantHostNames' or match 'relevantHostTags' and 'relevantHostTagsAnded'. Default: false
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowArgs-reason">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/maintenanceWindow.ts#L206">property <b>reason</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/maintenanceWindow.ts#L206">property <b>reason</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reason: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6364,7 +6638,7 @@ If true, a source/host must be in 'relevantHostNames' and have tags matching the
 The reason for the maintenance window
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowArgs-relevantCustomerTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/maintenanceWindow.ts#L210">property <b>relevantCustomerTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/maintenanceWindow.ts#L210">property <b>relevantCustomerTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>relevantCustomerTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -6372,7 +6646,7 @@ The reason for the maintenance window
 List of alert tags whose matching alerts will be put into maintenance because of this maintenance window. At least one of relevant_customer_tags, relevant_host_tags, or relevantHostNames is required.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowArgs-relevantHostNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/maintenanceWindow.ts#L214">property <b>relevantHostNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/maintenanceWindow.ts#L214">property <b>relevantHostNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>relevantHostNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -6380,7 +6654,7 @@ List of alert tags whose matching alerts will be put into maintenance because of
 List of source/host names that will be put into maintenance because of this maintenance window. At least one of relevant_customer_tags, relevant_host_tags, or relevantHostNames is required.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowArgs-relevantHostTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/maintenanceWindow.ts#L218">property <b>relevantHostTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/maintenanceWindow.ts#L218">property <b>relevantHostTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>relevantHostTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -6388,7 +6662,7 @@ List of source/host names that will be put into maintenance because of this main
 List of source/host tags whose matching sources/hosts will be put into maintenance because of this maintenance window. At least one of relevant_customer_tags, relevant_host_tags, or relevantHostNames is required.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowArgs-relevantHostTagsAnded">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/maintenanceWindow.ts#L222">property <b>relevantHostTagsAnded</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/maintenanceWindow.ts#L222">property <b>relevantHostTagsAnded</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>relevantHostTagsAnded?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6396,7 +6670,7 @@ List of source/host tags whose matching sources/hosts will be put into maintenan
 Whether to AND source/host tags listed in relevantHostTags. If true, a source/host must contain all tags in order for the maintenance window to apply. If false, the tags are OR'ed, and a source/host must contain one of the tags. Default: false
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowArgs-startTimeInSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/maintenanceWindow.ts#L226">property <b>startTimeInSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/maintenanceWindow.ts#L226">property <b>startTimeInSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>startTimeInSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -6404,7 +6678,7 @@ Whether to AND source/host tags listed in relevantHostTags. If true, a source/ho
 start time in seconds after 1 Jan 1970 GMT.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowArgs-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/maintenanceWindow.ts#L230">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/maintenanceWindow.ts#L230">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>title: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6412,7 +6686,7 @@ start time in seconds after 1 Jan 1970 GMT.
 The title of the maintenance window
 
 <h3 class="pdoc-module-header" id="MaintenanceWindowState" data-link-title="MaintenanceWindowState">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/maintenanceWindow.ts#L152">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/maintenanceWindow.ts#L152">
         interface <strong>MaintenanceWindowState</strong>
     </a>
 </h3>
@@ -6422,7 +6696,7 @@ The title of the maintenance window
 Input properties used for looking up and filtering MaintenanceWindow resources.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowState-endTimeInSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/maintenanceWindow.ts#L156">property <b>endTimeInSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/maintenanceWindow.ts#L156">property <b>endTimeInSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endTimeInSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -6430,7 +6704,7 @@ Input properties used for looking up and filtering MaintenanceWindow resources.
 end time in seconds after 1 Jan 1970 GMT.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowState-hostTagGroupHostNamesGroupAnded">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/maintenanceWindow.ts#L160">property <b>hostTagGroupHostNamesGroupAnded</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/maintenanceWindow.ts#L160">property <b>hostTagGroupHostNamesGroupAnded</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostTagGroupHostNamesGroupAnded?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6438,7 +6712,7 @@ end time in seconds after 1 Jan 1970 GMT.
 If true, a source/host must be in 'relevantHostNames' and have tags matching the specification formed by 'relevantHostTags' and 'relevantHostTagsAnded' in order for this maintenance window to apply. If false, a source/host must either be in 'relevantHostNames' or match 'relevantHostTags' and 'relevantHostTagsAnded'. Default: false
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowState-reason">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/maintenanceWindow.ts#L164">property <b>reason</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/maintenanceWindow.ts#L164">property <b>reason</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reason?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6446,7 +6720,7 @@ If true, a source/host must be in 'relevantHostNames' and have tags matching the
 The reason for the maintenance window
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowState-relevantCustomerTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/maintenanceWindow.ts#L168">property <b>relevantCustomerTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/maintenanceWindow.ts#L168">property <b>relevantCustomerTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>relevantCustomerTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -6454,7 +6728,7 @@ The reason for the maintenance window
 List of alert tags whose matching alerts will be put into maintenance because of this maintenance window. At least one of relevant_customer_tags, relevant_host_tags, or relevantHostNames is required.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowState-relevantHostNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/maintenanceWindow.ts#L172">property <b>relevantHostNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/maintenanceWindow.ts#L172">property <b>relevantHostNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>relevantHostNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -6462,7 +6736,7 @@ List of alert tags whose matching alerts will be put into maintenance because of
 List of source/host names that will be put into maintenance because of this maintenance window. At least one of relevant_customer_tags, relevant_host_tags, or relevantHostNames is required.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowState-relevantHostTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/maintenanceWindow.ts#L176">property <b>relevantHostTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/maintenanceWindow.ts#L176">property <b>relevantHostTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>relevantHostTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -6470,7 +6744,7 @@ List of source/host names that will be put into maintenance because of this main
 List of source/host tags whose matching sources/hosts will be put into maintenance because of this maintenance window. At least one of relevant_customer_tags, relevant_host_tags, or relevantHostNames is required.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowState-relevantHostTagsAnded">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/maintenanceWindow.ts#L180">property <b>relevantHostTagsAnded</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/maintenanceWindow.ts#L180">property <b>relevantHostTagsAnded</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>relevantHostTagsAnded?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6478,7 +6752,7 @@ List of source/host tags whose matching sources/hosts will be put into maintenan
 Whether to AND source/host tags listed in relevantHostTags. If true, a source/host must contain all tags in order for the maintenance window to apply. If false, the tags are OR'ed, and a source/host must contain one of the tags. Default: false
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowState-startTimeInSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/maintenanceWindow.ts#L184">property <b>startTimeInSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/maintenanceWindow.ts#L184">property <b>startTimeInSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>startTimeInSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -6486,7 +6760,7 @@ Whether to AND source/host tags listed in relevantHostTags. If true, a source/ho
 start time in seconds after 1 Jan 1970 GMT.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowState-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/maintenanceWindow.ts#L188">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/maintenanceWindow.ts#L188">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>title?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6494,7 +6768,7 @@ start time in seconds after 1 Jan 1970 GMT.
 The title of the maintenance window
 
 <h3 class="pdoc-module-header" id="ProviderArgs" data-link-title="ProviderArgs">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/provider.ts#L57">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/provider.ts#L57">
         interface <strong>ProviderArgs</strong>
     </a>
 </h3>
@@ -6504,22 +6778,22 @@ The title of the maintenance window
 The set of arguments for constructing a Provider resource.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/provider.ts#L58">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/provider.ts#L58">property <b>address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>address?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-httpProxy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/provider.ts#L59">property <b>httpProxy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/provider.ts#L59">property <b>httpProxy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpProxy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/provider.ts#L60">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/provider.ts#L60">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="RoleArgs" data-link-title="RoleArgs">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/role.ts#L127">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/role.ts#L127">
         interface <strong>RoleArgs</strong>
     </a>
 </h3>
@@ -6529,7 +6803,7 @@ The set of arguments for constructing a Provider resource.
 The set of arguments for constructing a Role resource.
 
 <h4 class="pdoc-member-header" id="RoleArgs-assignees">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/role.ts#L131">property <b>assignees</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/role.ts#L131">property <b>assignees</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>assignees?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -6537,7 +6811,7 @@ The set of arguments for constructing a Role resource.
 A list of user groups or accounts to assign to this role.
 
 <h4 class="pdoc-member-header" id="RoleArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/role.ts#L135">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/role.ts#L135">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6545,7 +6819,7 @@ A list of user groups or accounts to assign to this role.
 A short description of the user group
 
 <h4 class="pdoc-member-header" id="RoleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/role.ts#L139">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/role.ts#L139">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6553,7 +6827,7 @@ A short description of the user group
 The name of the user group
 
 <h4 class="pdoc-member-header" id="RoleArgs-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/role.ts#L145">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/role.ts#L145">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -6563,7 +6837,7 @@ A list of permissions to assign to this role. Valid options are
 `hostTagManagement`, `metricsManagement`, `userManagement`
 
 <h3 class="pdoc-module-header" id="RoleState" data-link-title="RoleState">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/role.ts#L103">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/role.ts#L103">
         interface <strong>RoleState</strong>
     </a>
 </h3>
@@ -6573,7 +6847,7 @@ A list of permissions to assign to this role. Valid options are
 Input properties used for looking up and filtering Role resources.
 
 <h4 class="pdoc-member-header" id="RoleState-assignees">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/role.ts#L107">property <b>assignees</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/role.ts#L107">property <b>assignees</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>assignees?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -6581,7 +6855,7 @@ Input properties used for looking up and filtering Role resources.
 A list of user groups or accounts to assign to this role.
 
 <h4 class="pdoc-member-header" id="RoleState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/role.ts#L111">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/role.ts#L111">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6589,7 +6863,7 @@ A list of user groups or accounts to assign to this role.
 A short description of the user group
 
 <h4 class="pdoc-member-header" id="RoleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/role.ts#L115">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/role.ts#L115">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6597,7 +6871,7 @@ A short description of the user group
 The name of the user group
 
 <h4 class="pdoc-member-header" id="RoleState-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/role.ts#L121">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/role.ts#L121">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -6607,7 +6881,7 @@ A list of permissions to assign to this role. Valid options are
 `hostTagManagement`, `metricsManagement`, `userManagement`
 
 <h3 class="pdoc-module-header" id="ServiceAccountArgs" data-link-title="ServiceAccountArgs">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/serviceAccount.ts#L143">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/serviceAccount.ts#L143">
         interface <strong>ServiceAccountArgs</strong>
     </a>
 </h3>
@@ -6617,7 +6891,7 @@ A list of permissions to assign to this role. Valid options are
 The set of arguments for constructing a ServiceAccount resource.
 
 <h4 class="pdoc-member-header" id="ServiceAccountArgs-active">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/serviceAccount.ts#L147">property <b>active</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/serviceAccount.ts#L147">property <b>active</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>active?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6625,7 +6899,7 @@ The set of arguments for constructing a ServiceAccount resource.
 Whether or not the service account is active
 
 <h4 class="pdoc-member-header" id="ServiceAccountArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/serviceAccount.ts#L151">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/serviceAccount.ts#L151">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6633,7 +6907,7 @@ Whether or not the service account is active
 The description of the service account
 
 <h4 class="pdoc-member-header" id="ServiceAccountArgs-identifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/serviceAccount.ts#L155">property <b>identifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/serviceAccount.ts#L155">property <b>identifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6641,7 +6915,7 @@ The description of the service account
 The (unique) identifier of the service account to create. Must start with sa::
 
 <h4 class="pdoc-member-header" id="ServiceAccountArgs-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/serviceAccount.ts#L161">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/serviceAccount.ts#L161">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -6651,7 +6925,7 @@ List of permission to grant to this service account.  Valid options are
 `hostTagManagement`, `metricsManagement`, `userManagement`
 
 <h4 class="pdoc-member-header" id="ServiceAccountArgs-userGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/serviceAccount.ts#L165">property <b>userGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/serviceAccount.ts#L165">property <b>userGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -6659,7 +6933,7 @@ List of permission to grant to this service account.  Valid options are
 List of user groups for this service account
 
 <h3 class="pdoc-module-header" id="ServiceAccountState" data-link-title="ServiceAccountState">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/serviceAccount.ts#L115">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/serviceAccount.ts#L115">
         interface <strong>ServiceAccountState</strong>
     </a>
 </h3>
@@ -6669,7 +6943,7 @@ List of user groups for this service account
 Input properties used for looking up and filtering ServiceAccount resources.
 
 <h4 class="pdoc-member-header" id="ServiceAccountState-active">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/serviceAccount.ts#L119">property <b>active</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/serviceAccount.ts#L119">property <b>active</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>active?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6677,7 +6951,7 @@ Input properties used for looking up and filtering ServiceAccount resources.
 Whether or not the service account is active
 
 <h4 class="pdoc-member-header" id="ServiceAccountState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/serviceAccount.ts#L123">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/serviceAccount.ts#L123">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6685,7 +6959,7 @@ Whether or not the service account is active
 The description of the service account
 
 <h4 class="pdoc-member-header" id="ServiceAccountState-identifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/serviceAccount.ts#L127">property <b>identifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/serviceAccount.ts#L127">property <b>identifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6693,7 +6967,7 @@ The description of the service account
 The (unique) identifier of the service account to create. Must start with sa::
 
 <h4 class="pdoc-member-header" id="ServiceAccountState-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/serviceAccount.ts#L133">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/serviceAccount.ts#L133">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -6703,7 +6977,7 @@ List of permission to grant to this service account.  Valid options are
 `hostTagManagement`, `metricsManagement`, `userManagement`
 
 <h4 class="pdoc-member-header" id="ServiceAccountState-userGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/serviceAccount.ts#L137">property <b>userGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/serviceAccount.ts#L137">property <b>userGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -6711,7 +6985,7 @@ List of permission to grant to this service account.  Valid options are
 List of user groups for this service account
 
 <h3 class="pdoc-module-header" id="UserArgs" data-link-title="UserArgs">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/user.ts#L126">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/user.ts#L126">
         interface <strong>UserArgs</strong>
     </a>
 </h3>
@@ -6721,12 +6995,12 @@ List of user groups for this service account
 The set of arguments for constructing a User resource.
 
 <h4 class="pdoc-member-header" id="UserArgs-customer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/user.ts#L127">property <b>customer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/user.ts#L127">property <b>customer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="UserArgs-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/user.ts#L131">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/user.ts#L131">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6734,7 +7008,7 @@ The set of arguments for constructing a User resource.
 The (unique) identifier of the user to create. Must be a valid email address
 
 <h4 class="pdoc-member-header" id="UserArgs-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/user.ts#L137">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/user.ts#L137">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -6744,7 +7018,7 @@ List of permission to grant to this user.  Valid options are
 `hostTagManagement`, `metricsManagement`, `userManagement`
 
 <h4 class="pdoc-member-header" id="UserArgs-userGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/user.ts#L141">property <b>userGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/user.ts#L141">property <b>userGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -6752,7 +7026,7 @@ List of permission to grant to this user.  Valid options are
 List of user groups to this user
 
 <h3 class="pdoc-module-header" id="UserGroupArgs" data-link-title="UserGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/userGroup.ts#L108">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/userGroup.ts#L108">
         interface <strong>UserGroupArgs</strong>
     </a>
 </h3>
@@ -6762,7 +7036,7 @@ List of user groups to this user
 The set of arguments for constructing a UserGroup resource.
 
 <h4 class="pdoc-member-header" id="UserGroupArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/userGroup.ts#L112">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/userGroup.ts#L112">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6770,7 +7044,7 @@ The set of arguments for constructing a UserGroup resource.
 A short description of the user group
 
 <h4 class="pdoc-member-header" id="UserGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/userGroup.ts#L116">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/userGroup.ts#L116">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6778,7 +7052,7 @@ A short description of the user group
 The name of the user group
 
 <h3 class="pdoc-module-header" id="UserGroupState" data-link-title="UserGroupState">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/userGroup.ts#L94">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/userGroup.ts#L94">
         interface <strong>UserGroupState</strong>
     </a>
 </h3>
@@ -6788,7 +7062,7 @@ The name of the user group
 Input properties used for looking up and filtering UserGroup resources.
 
 <h4 class="pdoc-member-header" id="UserGroupState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/userGroup.ts#L98">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/userGroup.ts#L98">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6796,7 +7070,7 @@ Input properties used for looking up and filtering UserGroup resources.
 A short description of the user group
 
 <h4 class="pdoc-member-header" id="UserGroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/userGroup.ts#L102">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/userGroup.ts#L102">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6804,7 +7078,7 @@ A short description of the user group
 The name of the user group
 
 <h3 class="pdoc-module-header" id="UserState" data-link-title="UserState">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/user.ts#L105">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/user.ts#L105">
         interface <strong>UserState</strong>
     </a>
 </h3>
@@ -6814,12 +7088,12 @@ The name of the user group
 Input properties used for looking up and filtering User resources.
 
 <h4 class="pdoc-member-header" id="UserState-customer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/user.ts#L106">property <b>customer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/user.ts#L106">property <b>customer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="UserState-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/user.ts#L110">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/user.ts#L110">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6827,7 +7101,7 @@ Input properties used for looking up and filtering User resources.
 The (unique) identifier of the user to create. Must be a valid email address
 
 <h4 class="pdoc-member-header" id="UserState-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/user.ts#L116">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/user.ts#L116">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -6837,7 +7111,7 @@ List of permission to grant to this user.  Valid options are
 `hostTagManagement`, `metricsManagement`, `userManagement`
 
 <h4 class="pdoc-member-header" id="UserState-userGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/user.ts#L120">property <b>userGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/38ced2e5195b4ac0b69a448d839e4fea7ee4fdba/sdk/nodejs/user.ts#L120">property <b>userGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
