@@ -516,7 +516,7 @@ export class Convert {
                             Your code will be converted
                             with <a href={ this.conversionTool.githubURL }>{ this.conversionTool.name }</a>,
                             an open-source command-line tool we built to make it as easy as possible for you to migrate
-                            your existing { this.sourceLanguageName } projects into Pulumi programs. The resulting file can
+                            your existing { this.sourceLanguageName } projects to Pulumi. The resulting file can
                             be copied or downloaded for use with <a href="https://pulumi.com/start">a new Pulumi project</a>.
                         </p>
                         <div>
