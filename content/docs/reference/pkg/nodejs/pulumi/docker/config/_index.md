@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/docker | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/docker package."
-git_sha: "0776fe7538b28ac66c32b43f2639b49333243410"
+git_sha: "aecbff5e37b7d208af9396c413cb558f3a6876fb"
 block_external_search_index: true
 ---
 
@@ -32,7 +32,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="caMaterial" data-link-title="caMaterial">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/0776fe7538b28ac66c32b43f2639b49333243410/sdk/nodejs/config/vars.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-docker/blob/aecbff5e37b7d208af9396c413cb558f3a6876fb/sdk/nodejs/config/vars.ts#L14">
         let <strong>caMaterial</strong>
     </a>
 </h3>
@@ -42,7 +42,7 @@ block_external_search_index: true
 PEM-encoded content of Docker host CA certificate
 
 <h3 class="pdoc-module-header" id="certMaterial" data-link-title="certMaterial">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/0776fe7538b28ac66c32b43f2639b49333243410/sdk/nodejs/config/vars.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-docker/blob/aecbff5e37b7d208af9396c413cb558f3a6876fb/sdk/nodejs/config/vars.ts#L18">
         let <strong>certMaterial</strong>
     </a>
 </h3>
@@ -52,7 +52,7 @@ PEM-encoded content of Docker host CA certificate
 PEM-encoded content of Docker client certificate
 
 <h3 class="pdoc-module-header" id="certPath" data-link-title="certPath">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/0776fe7538b28ac66c32b43f2639b49333243410/sdk/nodejs/config/vars.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-docker/blob/aecbff5e37b7d208af9396c413cb558f3a6876fb/sdk/nodejs/config/vars.ts#L22">
         let <strong>certPath</strong>
     </a>
 </h3>
@@ -62,7 +62,7 @@ PEM-encoded content of Docker client certificate
 Path to directory with Docker TLS config
 
 <h3 class="pdoc-module-header" id="host" data-link-title="host">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/0776fe7538b28ac66c32b43f2639b49333243410/sdk/nodejs/config/vars.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-docker/blob/aecbff5e37b7d208af9396c413cb558f3a6876fb/sdk/nodejs/config/vars.ts#L26">
         let <strong>host</strong>
     </a>
 </h3>
@@ -72,7 +72,7 @@ Path to directory with Docker TLS config
 The Docker daemon address
 
 <h3 class="pdoc-module-header" id="keyMaterial" data-link-title="keyMaterial">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/0776fe7538b28ac66c32b43f2639b49333243410/sdk/nodejs/config/vars.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-docker/blob/aecbff5e37b7d208af9396c413cb558f3a6876fb/sdk/nodejs/config/vars.ts#L30">
         let <strong>keyMaterial</strong>
     </a>
 </h3>
@@ -82,7 +82,7 @@ The Docker daemon address
 PEM-encoded content of Docker client private key
 
 <h3 class="pdoc-module-header" id="registryAuth" data-link-title="registryAuth">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/0776fe7538b28ac66c32b43f2639b49333243410/sdk/nodejs/config/vars.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-docker/blob/aecbff5e37b7d208af9396c413cb558f3a6876fb/sdk/nodejs/config/vars.ts#L31">
         let <strong>registryAuth</strong>
     </a>
 </h3>

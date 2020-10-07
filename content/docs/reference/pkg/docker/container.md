@@ -116,7 +116,7 @@ const ubuntuContainer = new docker.Container("ubuntu", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_docker/#pulumi_docker.Container">Container</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attach</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[ContainerCapabilitiesArgs]</span> = None<span class="p">, </span><span class="nx">command</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">cpu_set</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_shares</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">destroy_grace_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">devices</span><span class="p">:</span> <span class="nx">Optional[List[ContainerDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">dns</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">dns_opts</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">dns_searches</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">domainname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entrypoints</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">envs</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">group_adds</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">healthcheck</span><span class="p">:</span> <span class="nx">Optional[ContainerHealthcheckArgs]</span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hosts</span><span class="p">:</span> <span class="nx">Optional[List[ContainerHostArgs]]</span> = None<span class="p">, </span><span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipc_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[List[ContainerLabelArgs]]</span> = None<span class="p">, </span><span class="nx">links</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">log_driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_opts</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">logs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">max_retry_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">memory_swap</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">mounts</span><span class="p">:</span> <span class="nx">Optional[List[ContainerMountArgs]]</span> = None<span class="p">, </span><span class="nx">must_run</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_aliases</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">network_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">networks_advanced</span><span class="p">:</span> <span class="nx">Optional[List[ContainerNetworksAdvancedArgs]]</span> = None<span class="p">, </span><span class="nx">pid_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ports</span><span class="p">:</span> <span class="nx">Optional[List[ContainerPortArgs]]</span> = None<span class="p">, </span><span class="nx">privileged</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">publish_all_ports</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">restart</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rm</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">shm_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">start</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sysctls</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">tmpfs</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">ulimits</span><span class="p">:</span> <span class="nx">Optional[List[ContainerUlimitArgs]]</span> = None<span class="p">, </span><span class="nx">uploads</span><span class="p">:</span> <span class="nx">Optional[List[ContainerUploadArgs]]</span> = None<span class="p">, </span><span class="nx">user</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">userns_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[List[ContainerVolumeArgs]]</span> = None<span class="p">, </span><span class="nx">working_dir</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_docker/#pulumi_docker.Container">Container</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attach</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[ContainerCapabilitiesArgs]</span> = None<span class="p">, </span><span class="nx">command</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">cpu_set</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_shares</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">destroy_grace_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">dns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">dns_opts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">dns_searches</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">domainname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entrypoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">envs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">group_adds</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">healthcheck</span><span class="p">:</span> <span class="nx">Optional[ContainerHealthcheckArgs]</span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hosts</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerHostArgs]]</span> = None<span class="p">, </span><span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipc_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerLabelArgs]]</span> = None<span class="p">, </span><span class="nx">links</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">log_driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_opts</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">logs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">max_retry_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">memory_swap</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">mounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerMountArgs]]</span> = None<span class="p">, </span><span class="nx">must_run</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_aliases</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">network_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">networks_advanced</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerNetworksAdvancedArgs]]</span> = None<span class="p">, </span><span class="nx">pid_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerPortArgs]]</span> = None<span class="p">, </span><span class="nx">privileged</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">publish_all_ports</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">restart</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rm</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">shm_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">start</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sysctls</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">tmpfs</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">ulimits</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerUlimitArgs]]</span> = None<span class="p">, </span><span class="nx">uploads</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerUploadArgs]]</span> = None<span class="p">, </span><span class="nx">user</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">userns_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerVolumeArgs]]</span> = None<span class="p">, </span><span class="nx">working_dir</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2078,7 +2078,7 @@ as is shown in the example above.
 <a href="#command_python" style="color: inherit; text-decoration: inherit;">command</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The command to use to start the
 container. For example, to run `/usr/bin/myprogram -f baz.conf` set the
@@ -2102,7 +2102,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#cpu_shares_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>shares</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}CPU shares (relative weight) for the container.
 {{% /md %}}</dd>
@@ -2113,7 +2113,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#destroy_grace_seconds_python" style="color: inherit; text-decoration: inherit;">destroy_<wbr>grace_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}If defined will attempt to stop the container before destroying. Container will be destroyed after `n` seconds or on successful stop.
 {{% /md %}}</dd>
@@ -2124,7 +2124,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#devices_python" style="color: inherit; text-decoration: inherit;">devices</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerdevice">List[Container<wbr>Device<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containerdevice">Sequence[Container<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Devices below for details.
 {{% /md %}}</dd>
@@ -2135,7 +2135,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#dns_python" style="color: inherit; text-decoration: inherit;">dns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Set of DNS servers.
 {{% /md %}}</dd>
@@ -2146,7 +2146,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#dns_opts_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>opts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Set of DNS options used by the DNS provider(s), see `resolv.conf` documentation for valid list of options.
 {{% /md %}}</dd>
@@ -2157,7 +2157,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#dns_searches_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>searches</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Set of DNS search domains that are used when bare unqualified hostnames are used inside of the container.
 {{% /md %}}</dd>
@@ -2179,7 +2179,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#entrypoints_python" style="color: inherit; text-decoration: inherit;">entrypoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The command to use as the
 Entrypoint for the container. The Entrypoint allows you to configure a
@@ -2194,7 +2194,7 @@ when starting a container, set the entrypoint to be
 <a href="#envs_python" style="color: inherit; text-decoration: inherit;">envs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Environment variables to set.
 {{% /md %}}</dd>
@@ -2205,7 +2205,7 @@ when starting a container, set the entrypoint to be
 <a href="#group_adds_python" style="color: inherit; text-decoration: inherit;">group_<wbr>adds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Add additional groups to run as.
 {{% /md %}}</dd>
@@ -2238,7 +2238,7 @@ when starting a container, set the entrypoint to be
 <a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerhost">List[Container<wbr>Host<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containerhost">Sequence[Container<wbr>Host<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Hostname to add.
 {{% /md %}}</dd>
@@ -2260,7 +2260,7 @@ when starting a container, set the entrypoint to be
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerlabel">List[Container<wbr>Label<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containerlabel">Sequence[Container<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Adding labels.
 {{% /md %}}</dd>
@@ -2271,7 +2271,7 @@ when starting a container, set the entrypoint to be
 <a href="#links_python" style="color: inherit; text-decoration: inherit;">links</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Set of links for link based
 connectivity between containers that are running on the same host.
@@ -2318,7 +2318,7 @@ the logging driver.
 <a href="#max_retry_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retry_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum amount of times to an attempt
 a restart when `restart` is set to "on-failure"
@@ -2330,7 +2330,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The memory limit for the container in MBs.
 {{% /md %}}</dd>
@@ -2341,7 +2341,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#memory_swap_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>swap</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2351,7 +2351,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#mounts_python" style="color: inherit; text-decoration: inherit;">mounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containermount">List[Container<wbr>Mount<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containermount">Sequence[Container<wbr>Mount<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Mounts below for details.
 {{% /md %}}</dd>
@@ -2382,7 +2382,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#network_aliases_python" style="color: inherit; text-decoration: inherit;">network_<wbr>aliases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Network aliases of the container for user-defined networks only. *Deprecated:* use `networks_advanced` instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use networks_advanced instead. Will be removed in v2.0.0{{% /md %}}</p></dd>
@@ -2404,7 +2404,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Id of the networks in which the
 container is. *Deprecated:* use `networks_advanced` instead.
@@ -2416,7 +2416,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
 <a href="#networks_advanced_python" style="color: inherit; text-decoration: inherit;">networks_<wbr>advanced</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containernetworksadvanced">List[Container<wbr>Networks<wbr>Advanced<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containernetworksadvanced">Sequence[Container<wbr>Networks<wbr>Advanced<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Networks Advanced below for details. If this block has priority to the deprecated `network_alias` and `network` properties.
 {{% /md %}}</dd>
@@ -2438,7 +2438,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerport">List[Container<wbr>Port<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containerport">Sequence[Container<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Ports below for details.
 {{% /md %}}</dd>
@@ -2505,7 +2505,7 @@ one of "no", "on-failure", "always", "unless-stopped".
 <a href="#shm_size_python" style="color: inherit; text-decoration: inherit;">shm_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Size of `/dev/shm` in MBs.
 {{% /md %}}</dd>
@@ -2550,7 +2550,7 @@ started after creation. If false, then the container is only created.
 <a href="#ulimits_python" style="color: inherit; text-decoration: inherit;">ulimits</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerulimit">List[Container<wbr>Ulimit<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containerulimit">Sequence[Container<wbr>Ulimit<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Ulimits below for
 details.
@@ -2562,7 +2562,7 @@ details.
 <a href="#uploads_python" style="color: inherit; text-decoration: inherit;">uploads</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerupload">List[Container<wbr>Upload<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containerupload">Sequence[Container<wbr>Upload<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See File Upload below for details.
 {{% /md %}}</dd>
@@ -2597,7 +2597,7 @@ by name.
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containervolume">List[Container<wbr>Volume<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containervolume">Sequence[Container<wbr>Volume<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Volumes below for details.
 {{% /md %}}</dd>
@@ -2950,7 +2950,7 @@ network. Key are the network names, values are the IP addresses.
 <a href="#exit_code_python" style="color: inherit; text-decoration: inherit;">exit_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The exit code of the container if its execution is done (`must_run` must be disabled).
 {{% /md %}}</dd>
@@ -2994,7 +2994,7 @@ NetworkSettings.
 <a href="#ip_prefix_length_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>prefix_<wbr>length</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The IP prefix length of the container as read from its
 NetworkSettings.
@@ -3006,7 +3006,7 @@ NetworkSettings.
 <a href="#network_datas_python" style="color: inherit; text-decoration: inherit;">network_<wbr>datas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containernetworkdata">List[Container<wbr>Network<wbr>Data]</a></span>
+        <span class="property-type"><a href="#containernetworkdata">Sequence[Container<wbr>Network<wbr>Data]</a></span>
     </dt>
     <dd>{{% md %}}(Map of a block) The IP addresses of the container on each
 network. Key are the network names, values are the IP addresses.
@@ -3032,7 +3032,7 @@ Get an existing Container resource's state with the given name, ID, and optional
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attach</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">bridge</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[ContainerCapabilitiesArgs]</span> = None<span class="p">, </span><span class="nx">command</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">container_logs</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_set</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_shares</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">destroy_grace_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">devices</span><span class="p">:</span> <span class="nx">Optional[List[ContainerDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">dns</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">dns_opts</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">dns_searches</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">domainname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entrypoints</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">envs</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">exit_code</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">gateway</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_adds</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">healthcheck</span><span class="p">:</span> <span class="nx">Optional[ContainerHealthcheckArgs]</span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hosts</span><span class="p">:</span> <span class="nx">Optional[List[ContainerHostArgs]]</span> = None<span class="p">, </span><span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_prefix_length</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ipc_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[List[ContainerLabelArgs]]</span> = None<span class="p">, </span><span class="nx">links</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">log_driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_opts</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">logs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">max_retry_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">memory_swap</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">mounts</span><span class="p">:</span> <span class="nx">Optional[List[ContainerMountArgs]]</span> = None<span class="p">, </span><span class="nx">must_run</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_aliases</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">network_datas</span><span class="p">:</span> <span class="nx">Optional[List[ContainerNetworkDataArgs]]</span> = None<span class="p">, </span><span class="nx">network_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">networks_advanced</span><span class="p">:</span> <span class="nx">Optional[List[ContainerNetworksAdvancedArgs]]</span> = None<span class="p">, </span><span class="nx">pid_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ports</span><span class="p">:</span> <span class="nx">Optional[List[ContainerPortArgs]]</span> = None<span class="p">, </span><span class="nx">privileged</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">publish_all_ports</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">restart</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rm</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">shm_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">start</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sysctls</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">tmpfs</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">ulimits</span><span class="p">:</span> <span class="nx">Optional[List[ContainerUlimitArgs]]</span> = None<span class="p">, </span><span class="nx">uploads</span><span class="p">:</span> <span class="nx">Optional[List[ContainerUploadArgs]]</span> = None<span class="p">, </span><span class="nx">user</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">userns_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[List[ContainerVolumeArgs]]</span> = None<span class="p">, </span><span class="nx">working_dir</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Container</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attach</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">bridge</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[ContainerCapabilitiesArgs]</span> = None<span class="p">, </span><span class="nx">command</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">container_logs</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_set</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_shares</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">destroy_grace_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">dns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">dns_opts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">dns_searches</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">domainname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entrypoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">envs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">exit_code</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">gateway</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_adds</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">healthcheck</span><span class="p">:</span> <span class="nx">Optional[ContainerHealthcheckArgs]</span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hosts</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerHostArgs]]</span> = None<span class="p">, </span><span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_prefix_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ipc_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerLabelArgs]]</span> = None<span class="p">, </span><span class="nx">links</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">log_driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_opts</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">logs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">max_retry_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">memory_swap</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">mounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerMountArgs]]</span> = None<span class="p">, </span><span class="nx">must_run</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_aliases</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">network_datas</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerNetworkDataArgs]]</span> = None<span class="p">, </span><span class="nx">network_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">networks_advanced</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerNetworksAdvancedArgs]]</span> = None<span class="p">, </span><span class="nx">pid_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerPortArgs]]</span> = None<span class="p">, </span><span class="nx">privileged</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">publish_all_ports</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">restart</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rm</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">shm_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">start</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sysctls</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">tmpfs</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">ulimits</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerUlimitArgs]]</span> = None<span class="p">, </span><span class="nx">uploads</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerUploadArgs]]</span> = None<span class="p">, </span><span class="nx">user</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">userns_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerVolumeArgs]]</span> = None<span class="p">, </span><span class="nx">working_dir</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Container</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -5174,7 +5174,7 @@ by name.
 <a href="#state_command_python" style="color: inherit; text-decoration: inherit;">command</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The command to use to start the
 container. For example, to run `/usr/bin/myprogram -f baz.conf` set the
@@ -5209,7 +5209,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#state_cpu_shares_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>shares</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}CPU shares (relative weight) for the container.
 {{% /md %}}</dd>
@@ -5220,7 +5220,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#state_destroy_grace_seconds_python" style="color: inherit; text-decoration: inherit;">destroy_<wbr>grace_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}If defined will attempt to stop the container before destroying. Container will be destroyed after `n` seconds or on successful stop.
 {{% /md %}}</dd>
@@ -5231,7 +5231,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#state_devices_python" style="color: inherit; text-decoration: inherit;">devices</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerdevice">List[Container<wbr>Device<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containerdevice">Sequence[Container<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Devices below for details.
 {{% /md %}}</dd>
@@ -5242,7 +5242,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#state_dns_python" style="color: inherit; text-decoration: inherit;">dns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Set of DNS servers.
 {{% /md %}}</dd>
@@ -5253,7 +5253,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#state_dns_opts_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>opts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Set of DNS options used by the DNS provider(s), see `resolv.conf` documentation for valid list of options.
 {{% /md %}}</dd>
@@ -5264,7 +5264,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#state_dns_searches_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>searches</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Set of DNS search domains that are used when bare unqualified hostnames are used inside of the container.
 {{% /md %}}</dd>
@@ -5286,7 +5286,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#state_entrypoints_python" style="color: inherit; text-decoration: inherit;">entrypoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The command to use as the
 Entrypoint for the container. The Entrypoint allows you to configure a
@@ -5301,7 +5301,7 @@ when starting a container, set the entrypoint to be
 <a href="#state_envs_python" style="color: inherit; text-decoration: inherit;">envs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Environment variables to set.
 {{% /md %}}</dd>
@@ -5312,7 +5312,7 @@ when starting a container, set the entrypoint to be
 <a href="#state_exit_code_python" style="color: inherit; text-decoration: inherit;">exit_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The exit code of the container if its execution is done (`must_run` must be disabled).
 {{% /md %}}</dd>
@@ -5335,7 +5335,7 @@ NetworkSettings.
 <a href="#state_group_adds_python" style="color: inherit; text-decoration: inherit;">group_<wbr>adds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Add additional groups to run as.
 {{% /md %}}</dd>
@@ -5368,7 +5368,7 @@ NetworkSettings.
 <a href="#state_hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerhost">List[Container<wbr>Host<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containerhost">Sequence[Container<wbr>Host<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Hostname to add.
 {{% /md %}}</dd>
@@ -5403,7 +5403,7 @@ as is shown in the example above.
 <a href="#state_ip_prefix_length_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>prefix_<wbr>length</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The IP prefix length of the container as read from its
 NetworkSettings.
@@ -5426,7 +5426,7 @@ NetworkSettings.
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerlabel">List[Container<wbr>Label<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containerlabel">Sequence[Container<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Adding labels.
 {{% /md %}}</dd>
@@ -5437,7 +5437,7 @@ NetworkSettings.
 <a href="#state_links_python" style="color: inherit; text-decoration: inherit;">links</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Set of links for link based
 connectivity between containers that are running on the same host.
@@ -5484,7 +5484,7 @@ the logging driver.
 <a href="#state_max_retry_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retry_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum amount of times to an attempt
 a restart when `restart` is set to "on-failure"
@@ -5496,7 +5496,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#state_memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The memory limit for the container in MBs.
 {{% /md %}}</dd>
@@ -5507,7 +5507,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#state_memory_swap_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>swap</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5517,7 +5517,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#state_mounts_python" style="color: inherit; text-decoration: inherit;">mounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containermount">List[Container<wbr>Mount<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containermount">Sequence[Container<wbr>Mount<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Mounts below for details.
 {{% /md %}}</dd>
@@ -5548,7 +5548,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#state_network_aliases_python" style="color: inherit; text-decoration: inherit;">network_<wbr>aliases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Network aliases of the container for user-defined networks only. *Deprecated:* use `networks_advanced` instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use networks_advanced instead. Will be removed in v2.0.0{{% /md %}}</p></dd>
@@ -5559,7 +5559,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#state_network_datas_python" style="color: inherit; text-decoration: inherit;">network_<wbr>datas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containernetworkdata">List[Container<wbr>Network<wbr>Data<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containernetworkdata">Sequence[Container<wbr>Network<wbr>Data<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(Map of a block) The IP addresses of the container on each
 network. Key are the network names, values are the IP addresses.
@@ -5582,7 +5582,7 @@ network. Key are the network names, values are the IP addresses.
 <a href="#state_networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Id of the networks in which the
 container is. *Deprecated:* use `networks_advanced` instead.
@@ -5594,7 +5594,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
 <a href="#state_networks_advanced_python" style="color: inherit; text-decoration: inherit;">networks_<wbr>advanced</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containernetworksadvanced">List[Container<wbr>Networks<wbr>Advanced<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containernetworksadvanced">Sequence[Container<wbr>Networks<wbr>Advanced<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Networks Advanced below for details. If this block has priority to the deprecated `network_alias` and `network` properties.
 {{% /md %}}</dd>
@@ -5616,7 +5616,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
 <a href="#state_ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerport">List[Container<wbr>Port<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containerport">Sequence[Container<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Ports below for details.
 {{% /md %}}</dd>
@@ -5683,7 +5683,7 @@ one of "no", "on-failure", "always", "unless-stopped".
 <a href="#state_shm_size_python" style="color: inherit; text-decoration: inherit;">shm_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Size of `/dev/shm` in MBs.
 {{% /md %}}</dd>
@@ -5728,7 +5728,7 @@ started after creation. If false, then the container is only created.
 <a href="#state_ulimits_python" style="color: inherit; text-decoration: inherit;">ulimits</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerulimit">List[Container<wbr>Ulimit<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containerulimit">Sequence[Container<wbr>Ulimit<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Ulimits below for
 details.
@@ -5740,7 +5740,7 @@ details.
 <a href="#state_uploads_python" style="color: inherit; text-decoration: inherit;">uploads</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerupload">List[Container<wbr>Upload<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containerupload">Sequence[Container<wbr>Upload<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See File Upload below for details.
 {{% /md %}}</dd>
@@ -5775,7 +5775,7 @@ by name.
 <a href="#state_volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containervolume">List[Container<wbr>Volume<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containervolume">Sequence[Container<wbr>Volume<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Volumes below for details.
 {{% /md %}}</dd>
@@ -5917,7 +5917,7 @@ by name.
 <a href="#adds_python" style="color: inherit; text-decoration: inherit;">adds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}list of linux capabilities to add.
 {{% /md %}}</dd>
@@ -5928,7 +5928,7 @@ by name.
 <a href="#drops_python" style="color: inherit; text-decoration: inherit;">drops</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}list of linux capabilities to drop.
 {{% /md %}}</dd>
@@ -6347,7 +6347,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#tests_python" style="color: inherit; text-decoration: inherit;">tests</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Command to run to check health. For example, to run `curl -f http://localhost/health` set the
 command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
@@ -6370,7 +6370,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#retries_python" style="color: inherit; text-decoration: inherit;">retries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Consecutive failures needed to report unhealthy. Default: `0`.
 {{% /md %}}</dd>
@@ -7231,7 +7231,7 @@ Defaults to false.
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The permission mode for the tmpfs mount in an integer.
 {{% /md %}}</dd>
@@ -7242,7 +7242,7 @@ Defaults to false.
 <a href="#size_bytes_python" style="color: inherit; text-decoration: inherit;">size_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size for the tmpfs mount in bytes.
 {{% /md %}}</dd>
@@ -7449,7 +7449,7 @@ Defaults to false.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containermountvolumeoptionslabel">List[Container<wbr>Mount<wbr>Volume<wbr>Options<wbr>Label<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containermountvolumeoptionslabel">Sequence[Container<wbr>Mount<wbr>Volume<wbr>Options<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Adding labels.
 {{% /md %}}</dd>
@@ -7809,7 +7809,7 @@ NetworkSettings.
 <a href="#ip_prefix_length_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>prefix_<wbr>length</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The IP prefix length of the container as read from its
 NetworkSettings.
@@ -8020,7 +8020,7 @@ NetworkSettings.
 <a href="#aliases_python" style="color: inherit; text-decoration: inherit;">aliases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The network aliases of the container in the specific network.
 {{% /md %}}</dd>
@@ -8234,7 +8234,7 @@ defaults to `tcp`.
 <a href="#internal_python" style="color: inherit; text-decoration: inherit;">internal</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Port within the container.
 {{% /md %}}</dd>
@@ -8245,7 +8245,7 @@ defaults to `tcp`.
 <a href="#external_python" style="color: inherit; text-decoration: inherit;">external</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Port exposed out of the container. If not given a free random port `>= 32768` will be used.
 {{% /md %}}</dd>
@@ -8415,7 +8415,7 @@ defaults to `tcp`.
 <a href="#hard_python" style="color: inherit; text-decoration: inherit;">hard</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8435,7 +8435,7 @@ defaults to `tcp`.
 <a href="#soft_python" style="color: inherit; text-decoration: inherit;">soft</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
