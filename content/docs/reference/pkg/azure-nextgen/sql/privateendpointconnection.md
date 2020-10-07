@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/sql/v20180601preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20180601preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

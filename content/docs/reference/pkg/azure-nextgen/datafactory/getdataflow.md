@@ -1000,7 +1000,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Arguments for dataset.{{% /md %}}</dd>
 
@@ -1037,7 +1037,7 @@ The following output properties are available:
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]map[string]interface{}</span>
+        <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Arguments for dataset.{{% /md %}}</dd>
 
@@ -1074,7 +1074,7 @@ The following output properties are available:
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: {[key: string]: any}}</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Arguments for dataset.{{% /md %}}</dd>
 
@@ -1111,7 +1111,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any>]</span>
+        <span class="property-type">Dict[str, Any]</span>
     </dt>
     <dd>{{% md %}}Arguments for dataset.{{% /md %}}</dd>
 
@@ -1159,7 +1159,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd>
 
@@ -1196,7 +1196,7 @@ The following output properties are available:
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]map[string]interface{}</span>
+        <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd>
 
@@ -1233,7 +1233,7 @@ The following output properties are available:
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: {[key: string]: any}}</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd>
 
@@ -1270,7 +1270,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any>]</span>
+        <span class="property-type">Dict[str, Any]</span>
     </dt>
     <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd>
 
@@ -1298,7 +1298,7 @@ The following output properties are available:
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;object&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the data flow.{{% /md %}}</dd>
 
@@ -1375,7 +1375,7 @@ The following output properties are available:
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">[]map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">[]interface{}</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the data flow.{{% /md %}}</dd>
 
@@ -1452,7 +1452,7 @@ The following output properties are available:
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any[]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the data flow.{{% /md %}}</dd>
 
@@ -1529,7 +1529,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Any>]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the data flow.{{% /md %}}</dd>
 

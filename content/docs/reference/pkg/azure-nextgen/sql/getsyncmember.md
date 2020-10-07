@@ -304,6 +304,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="privateendpointname_csharp">
+<a href="#privateendpointname_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Private endpoint name of the sync member if use private link connection is enabled, for sync members in Azure.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="syncstate_csharp">
 <a href="#syncstate_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>State</a>
 </span> 
@@ -438,6 +448,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="privateendpointname_go">
+<a href="#privateendpointname_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Private endpoint name of the sync member if use private link connection is enabled, for sync members in Azure.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -578,6 +598,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="privateendpointname_nodejs">
+<a href="#privateendpointname_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Private endpoint name of the sync member if use private link connection is enabled, for sync members in Azure.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="syncstate_nodejs">
 <a href="#syncstate_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>State</a>
 </span> 
@@ -712,6 +742,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="private_endpoint_name_python">
+<a href="#private_endpoint_name_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Private endpoint name of the sync member if use private link connection is enabled, for sync members in Azure.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">

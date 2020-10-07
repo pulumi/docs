@@ -46,7 +46,7 @@ class MyStack : Stack
 package main
 
 import (
-	hybridcompute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/hybridcompute/v20200815preview"
+	hybridcompute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hybridcompute/v20200815preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -133,7 +133,7 @@ class MyStack : Stack
 package main
 
 import (
-	hybridcompute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/hybridcompute/v20200815preview"
+	hybridcompute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hybridcompute/v20200815preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

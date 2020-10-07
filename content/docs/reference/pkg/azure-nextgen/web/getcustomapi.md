@@ -463,7 +463,7 @@ The following output properties are available:
 <a href="#options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}Options available to this parameter{{% /md %}}</dd>
 
@@ -473,7 +473,7 @@ The following output properties are available:
 <a href="#uidefinition_csharp" style="color: inherit; text-decoration: inherit;">Ui<wbr>Definition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}UI definitions per culture as caller can specify the culture{{% /md %}}</dd>
 
@@ -500,7 +500,7 @@ The following output properties are available:
 <a href="#options_go" style="color: inherit; text-decoration: inherit;">Options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}Options available to this parameter{{% /md %}}</dd>
 
@@ -510,7 +510,7 @@ The following output properties are available:
 <a href="#uidefinition_go" style="color: inherit; text-decoration: inherit;">Ui<wbr>Definition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}UI definitions per culture as caller can specify the culture{{% /md %}}</dd>
 
@@ -537,7 +537,7 @@ The following output properties are available:
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}Options available to this parameter{{% /md %}}</dd>
 
@@ -547,7 +547,7 @@ The following output properties are available:
 <a href="#uidefinition_nodejs" style="color: inherit; text-decoration: inherit;">ui<wbr>Definition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}UI definitions per culture as caller can specify the culture{{% /md %}}</dd>
 
@@ -574,7 +574,7 @@ The following output properties are available:
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}Options available to this parameter{{% /md %}}</dd>
 
@@ -584,7 +584,7 @@ The following output properties are available:
 <a href="#uidefinition_python" style="color: inherit; text-decoration: inherit;">ui<wbr>Definition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}UI definitions per culture as caller can specify the culture{{% /md %}}</dd>
 
@@ -662,7 +662,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}Read only properties for this oauth setting.{{% /md %}}</dd>
 
@@ -739,7 +739,7 @@ The following output properties are available:
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}Read only properties for this oauth setting.{{% /md %}}</dd>
 
@@ -816,7 +816,7 @@ The following output properties are available:
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}Read only properties for this oauth setting.{{% /md %}}</dd>
 
@@ -893,7 +893,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}Read only properties for this oauth setting.{{% /md %}}</dd>
 
@@ -1358,7 +1358,7 @@ The following output properties are available:
 <a href="#swagger_csharp" style="color: inherit; text-decoration: inherit;">Swagger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}The JSON representation of the swagger{{% /md %}}</dd>
 
@@ -1485,7 +1485,7 @@ The following output properties are available:
 <a href="#swagger_go" style="color: inherit; text-decoration: inherit;">Swagger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}The JSON representation of the swagger{{% /md %}}</dd>
 
@@ -1612,7 +1612,7 @@ The following output properties are available:
 <a href="#swagger_nodejs" style="color: inherit; text-decoration: inherit;">swagger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}The JSON representation of the swagger{{% /md %}}</dd>
 
@@ -1739,7 +1739,7 @@ The following output properties are available:
 <a href="#swagger_python" style="color: inherit; text-decoration: inherit;">swagger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}The JSON representation of the swagger{{% /md %}}</dd>
 

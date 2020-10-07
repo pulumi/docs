@@ -466,7 +466,7 @@ The following output properties are available:
 <a href="#parametervalues_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Tokens/Claim{{% /md %}}</dd>
 
@@ -493,7 +493,7 @@ The following output properties are available:
 <a href="#parametervalues_go" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]map[string]interface{}</span>
+        <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Tokens/Claim{{% /md %}}</dd>
 
@@ -520,7 +520,7 @@ The following output properties are available:
 <a href="#parametervalues_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: {[key: string]: any}}</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Tokens/Claim{{% /md %}}</dd>
 
@@ -547,7 +547,7 @@ The following output properties are available:
 <a href="#parameter_values_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any>]</span>
+        <span class="property-type">Dict[str, Any]</span>
     </dt>
     <dd>{{% md %}}Tokens/Claim{{% /md %}}</dd>
 

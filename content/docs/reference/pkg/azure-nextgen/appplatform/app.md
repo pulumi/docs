@@ -30,6 +30,23 @@ class MyStack : Stack
         {
             AppName = "myapp",
             Location = "eastus",
+            Properties = new AzureNextGen.AppPlatform.Latest.Inputs.AppResourcePropertiesArgs
+            {
+                ActiveDeploymentName = "mydeployment1",
+                Fqdn = "myapp.mydomain.com",
+                HttpsOnly = false,
+                PersistentDisk = new AzureNextGen.AppPlatform.Latest.Inputs.PersistentDiskArgs
+                {
+                    MountPath = "mypersistentdisk",
+                    SizeInGB = 2,
+                },
+                Public = true,
+                TemporaryDisk = new AzureNextGen.AppPlatform.Latest.Inputs.TemporaryDiskArgs
+                {
+                    MountPath = "mytemporarydisk",
+                    SizeInGB = 2,
+                },
+            },
             ResourceGroupName = "myResourceGroup",
             ServiceName = "myservice",
         });
@@ -47,15 +64,29 @@ class MyStack : Stack
 package main
 
 import (
-	appplatform "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/appplatform/latest"
+	appplatform "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/appplatform/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := appplatform.NewApp(ctx, "app", &appplatform.AppArgs{
-			AppName:           pulumi.String("myapp"),
-			Location:          pulumi.String("eastus"),
+			AppName:  pulumi.String("myapp"),
+			Location: pulumi.String("eastus"),
+			Properties: &appplatform.AppResourcePropertiesArgs{
+				ActiveDeploymentName: pulumi.String("mydeployment1"),
+				Fqdn:                 pulumi.String("myapp.mydomain.com"),
+				HttpsOnly:            pulumi.Bool(false),
+				PersistentDisk: &appplatform.PersistentDiskArgs{
+					MountPath: pulumi.String("mypersistentdisk"),
+					SizeInGB:  pulumi.Int(2),
+				},
+				Public: pulumi.Bool(true),
+				TemporaryDisk: &appplatform.TemporaryDiskArgs{
+					MountPath: pulumi.String("mytemporarydisk"),
+					SizeInGB:  pulumi.Int(2),
+				},
+			},
 			ResourceGroupName: pulumi.String("myResourceGroup"),
 			ServiceName:       pulumi.String("myservice"),
 		})
@@ -79,6 +110,20 @@ import pulumi_azure_nextgen as azure_nextgen
 app = azure_nextgen.appplatform.latest.App("app",
     app_name="myapp",
     location="eastus",
+    properties={
+        "activeDeploymentName": "mydeployment1",
+        "fqdn": "myapp.mydomain.com",
+        "httpsOnly": False,
+        "persistentDisk": {
+            "mountPath": "mypersistentdisk",
+            "sizeInGB": 2,
+        },
+        "public": True,
+        "temporaryDisk": {
+            "mountPath": "mytemporarydisk",
+            "sizeInGB": 2,
+        },
+    },
     resource_group_name="myResourceGroup",
     service_name="myservice")
 
@@ -95,6 +140,20 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const app = new azure_nextgen.appplatform.latest.App("app", {
     appName: "myapp",
     location: "eastus",
+    properties: {
+        activeDeploymentName: "mydeployment1",
+        fqdn: "myapp.mydomain.com",
+        httpsOnly: false,
+        persistentDisk: {
+            mountPath: "mypersistentdisk",
+            sizeInGB: 2,
+        },
+        "public": true,
+        temporaryDisk: {
+            mountPath: "mytemporarydisk",
+            sizeInGB: 2,
+        },
+    },
     resourceGroupName: "myResourceGroup",
     serviceName: "myservice",
 });

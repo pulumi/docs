@@ -30,12 +30,15 @@ Explore the resources and functions of the eventgrid module in the Azure NextGen
     <li><a href="getdomaintopic" title="GetDomainTopic"><span class="symbol function"></span>GetDomainTopic</a></li>
     <li><a href="geteventchannel" title="GetEventChannel"><span class="symbol function"></span>GetEventChannel</a></li>
     <li><a href="geteventsubscription" title="GetEventSubscription"><span class="symbol function"></span>GetEventSubscription</a></li>
+    <li><a href="geteventsubscriptionfullurl" title="GetEventSubscriptionFullUrl"><span class="symbol function"></span>GetEventSubscriptionFullUrl</a></li>
     <li><a href="getpartnernamespace" title="GetPartnerNamespace"><span class="symbol function"></span>GetPartnerNamespace</a></li>
     <li><a href="getpartnerregistration" title="GetPartnerRegistration"><span class="symbol function"></span>GetPartnerRegistration</a></li>
     <li><a href="getpartnertopiceventsubscription" title="GetPartnerTopicEventSubscription"><span class="symbol function"></span>GetPartnerTopicEventSubscription</a></li>
+    <li><a href="getpartnertopiceventsubscriptionfullurl" title="GetPartnerTopicEventSubscriptionFullUrl"><span class="symbol function"></span>GetPartnerTopicEventSubscriptionFullUrl</a></li>
     <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
     <li><a href="getsystemtopic" title="GetSystemTopic"><span class="symbol function"></span>GetSystemTopic</a></li>
     <li><a href="getsystemtopiceventsubscription" title="GetSystemTopicEventSubscription"><span class="symbol function"></span>GetSystemTopicEventSubscription</a></li>
+    <li><a href="getsystemtopiceventsubscriptionfullurl" title="GetSystemTopicEventSubscriptionFullUrl"><span class="symbol function"></span>GetSystemTopicEventSubscriptionFullUrl</a></li>
     <li><a href="gettopic" title="GetTopic"><span class="symbol function"></span>GetTopic</a></li>
     <li><a href="listdomainsharedaccesskeys" title="ListDomainSharedAccessKeys"><span class="symbol function"></span>ListDomainSharedAccessKeys</a></li>
     <li><a href="listpartnernamespacesharedaccesskeys" title="ListPartnerNamespaceSharedAccessKeys"><span class="symbol function"></span>ListPartnerNamespaceSharedAccessKeys</a></li>
@@ -49,7 +52,7 @@ Explore the resources and functions of the eventgrid module in the Azure NextGen
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.1</dd>
 </dl>
 
 

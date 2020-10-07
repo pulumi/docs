@@ -224,6 +224,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="links_csharp">
+<a href="#links_csharp" style="color: inherit; text-decoration: inherit;">Links</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#assessmentlinksresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Outputs.<wbr>Assessment<wbr>Links<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Links relevant to the assessment{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -274,16 +284,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="links_csharp">
-<a href="#links_csharp" style="color: inherit; text-decoration: inherit;">Links</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assessmentlinksresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Outputs.<wbr>Assessment<wbr>Links<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Links relevant to the assessment{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span> 
@@ -318,6 +318,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}User friendly display name of the assessment{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="links_go">
+<a href="#links_go" style="color: inherit; text-decoration: inherit;">Links</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#assessmentlinksresponse">Assessment<wbr>Links<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Links relevant to the assessment{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -371,16 +381,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="links_go">
-<a href="#links_go" style="color: inherit; text-decoration: inherit;">Links</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assessmentlinksresponse">Assessment<wbr>Links<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Links relevant to the assessment{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span> 
@@ -415,6 +415,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}User friendly display name of the assessment{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="links_nodejs">
+<a href="#links_nodejs" style="color: inherit; text-decoration: inherit;">links</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#assessmentlinksresponse">Assessment<wbr>Links<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Links relevant to the assessment{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -468,16 +478,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="links_nodejs">
-<a href="#links_nodejs" style="color: inherit; text-decoration: inherit;">links</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assessmentlinksresponse">Assessment<wbr>Links<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Links relevant to the assessment{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
@@ -512,6 +512,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}User friendly display name of the assessment{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="links_python">
+<a href="#links_python" style="color: inherit; text-decoration: inherit;">links</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#assessmentlinksresponse">Dict[Assessment<wbr>Links<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Links relevant to the assessment{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -562,16 +572,6 @@ The following output properties are available:
         <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Additional data regarding the assessment{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="links_python">
-<a href="#links_python" style="color: inherit; text-decoration: inherit;">links</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assessmentlinksresponse">Dict[Assessment<wbr>Links<wbr>Response]</a></span>
-    </dt>
-    <dd>{{% md %}}Links relevant to the assessment{{% /md %}}</dd>
 
     <dt class="property-"
             title="">

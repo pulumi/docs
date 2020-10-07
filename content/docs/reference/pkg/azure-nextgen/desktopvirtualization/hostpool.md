@@ -64,7 +64,7 @@ class MyStack : Stack
 package main
 
 import (
-	desktopvirtualization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/desktopvirtualization/v20191210preview"
+	desktopvirtualization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/desktopvirtualization/v20191210preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

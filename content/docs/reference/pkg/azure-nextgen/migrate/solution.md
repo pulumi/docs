@@ -29,6 +29,12 @@ class MyStack : Stack
         var solution = new AzureNextGen.Migrate.V20180901Preview.Solution("solution", new AzureNextGen.Migrate.V20180901Preview.SolutionArgs
         {
             MigrateProjectName = "project01",
+            Properties = new AzureNextGen.Migrate.V20180901Preview.Inputs.SolutionPropertiesArgs
+            {
+                Goal = "Databases",
+                Purpose = "Assessment",
+                Tool = "DataMigrationAssistant",
+            },
             ResourceGroupName = "myResourceGroup",
             SolutionName = "dbsolution",
         });
@@ -46,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	migrate "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/migrate/v20180901preview"
+	migrate "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/migrate/v20180901preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -54,8 +60,13 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := migrate.NewSolution(ctx, "solution", &migrate.SolutionArgs{
 			MigrateProjectName: pulumi.String("project01"),
-			ResourceGroupName:  pulumi.String("myResourceGroup"),
-			SolutionName:       pulumi.String("dbsolution"),
+			Properties: &migrate.SolutionPropertiesArgs{
+				Goal:    pulumi.String("Databases"),
+				Purpose: pulumi.String("Assessment"),
+				Tool:    pulumi.String("DataMigrationAssistant"),
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			SolutionName:      pulumi.String("dbsolution"),
 		})
 		if err != nil {
 			return err
@@ -76,6 +87,11 @@ import pulumi_azure_nextgen as azure_nextgen
 
 solution = azure_nextgen.migrate.v20180901preview.Solution("solution",
     migrate_project_name="project01",
+    properties={
+        "goal": "Databases",
+        "purpose": "Assessment",
+        "tool": "DataMigrationAssistant",
+    },
     resource_group_name="myResourceGroup",
     solution_name="dbsolution")
 
@@ -91,6 +107,11 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const solution = new azure_nextgen.migrate.v20180901preview.Solution("solution", {
     migrateProjectName: "project01",
+    properties: {
+        goal: "Databases",
+        purpose: "Assessment",
+        tool: "DataMigrationAssistant",
+    },
     resourceGroupName: "myResourceGroup",
     solutionName: "dbsolution",
 });

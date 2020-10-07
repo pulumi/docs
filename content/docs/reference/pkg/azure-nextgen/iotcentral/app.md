@@ -53,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	iotcentral "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/iotcentral/latest"
+	iotcentral "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/iotcentral/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

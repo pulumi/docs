@@ -40,6 +40,7 @@ class MyStack : Stack
                     new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+                        Primary = true,
                     },
                 },
             },
@@ -84,7 +85,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -98,7 +99,8 @@ func main() {
 			NetworkProfile: &compute.NetworkProfileArgs{
 				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
 					&compute.NetworkInterfaceReferenceArgs{
-						Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
 					},
 				},
 			},
@@ -149,6 +151,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
     network_profile={
         "networkInterfaces": [{
             "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            "primary": True,
         }],
     },
     os_profile={
@@ -191,6 +194,7 @@ const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualM
     networkProfile: {
         networkInterfaces: [{
             id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            primary: true,
         }],
     },
     osProfile: {
@@ -244,6 +248,7 @@ class MyStack : Stack
                     new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+                        Primary = true,
                     },
                 },
             },
@@ -313,7 +318,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -327,7 +332,8 @@ func main() {
 			NetworkProfile: &compute.NetworkProfileArgs{
 				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
 					&compute.NetworkInterfaceReferenceArgs{
-						Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
 					},
 				},
 			},
@@ -398,6 +404,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
     network_profile={
         "networkInterfaces": [{
             "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            "primary": True,
         }],
     },
     os_profile={
@@ -460,6 +467,7 @@ const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualM
     networkProfile: {
         networkInterfaces: [{
             id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            primary: true,
         }],
     },
     osProfile: {
@@ -533,6 +541,7 @@ class MyStack : Stack
                     new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+                        Primary = true,
                     },
                 },
             },
@@ -576,7 +585,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -590,7 +599,8 @@ func main() {
 			NetworkProfile: &compute.NetworkProfileArgs{
 				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
 					&compute.NetworkInterfaceReferenceArgs{
-						Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
 					},
 				},
 			},
@@ -640,6 +650,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
     network_profile={
         "networkInterfaces": [{
             "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            "primary": True,
         }],
     },
     os_profile={
@@ -681,6 +692,7 @@ const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualM
     networkProfile: {
         networkInterfaces: [{
             id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            primary: true,
         }],
     },
     osProfile: {
@@ -737,6 +749,7 @@ class MyStack : Stack
                     new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+                        Primary = true,
                     },
                 },
             },
@@ -783,7 +796,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -800,7 +813,8 @@ func main() {
 			NetworkProfile: &compute.NetworkProfileArgs{
 				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
 					&compute.NetworkInterfaceReferenceArgs{
-						Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
 					},
 				},
 			},
@@ -856,6 +870,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
     network_profile={
         "networkInterfaces": [{
             "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            "primary": True,
         }],
     },
     os_profile={
@@ -903,6 +918,7 @@ const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualM
     networkProfile: {
         networkInterfaces: [{
             id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            primary: true,
         }],
     },
     osProfile: {
@@ -958,6 +974,7 @@ class MyStack : Stack
                     new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+                        Primary = true,
                     },
                 },
             },
@@ -1039,7 +1056,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1053,7 +1070,8 @@ func main() {
 			NetworkProfile: &compute.NetworkProfileArgs{
 				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
 					&compute.NetworkInterfaceReferenceArgs{
-						Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
 					},
 				},
 			},
@@ -1133,6 +1151,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
     network_profile={
         "networkInterfaces": [{
             "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            "primary": True,
         }],
     },
     os_profile={
@@ -1204,6 +1223,7 @@ const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualM
     networkProfile: {
         networkInterfaces: [{
             id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            primary: true,
         }],
     },
     osProfile: {
@@ -1286,6 +1306,7 @@ class MyStack : Stack
                     new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+                        Primary = true,
                     },
                 },
             },
@@ -1342,7 +1363,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1356,7 +1377,8 @@ func main() {
 			NetworkProfile: &compute.NetworkProfileArgs{
 				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
 					&compute.NetworkInterfaceReferenceArgs{
-						Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
 					},
 				},
 			},
@@ -1417,6 +1439,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
     network_profile={
         "networkInterfaces": [{
             "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            "primary": True,
         }],
     },
     os_profile={
@@ -1469,6 +1492,7 @@ const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualM
     networkProfile: {
         networkInterfaces: [{
             id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            primary: true,
         }],
     },
     osProfile: {
@@ -1532,6 +1556,7 @@ class MyStack : Stack
                     new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+                        Primary = true,
                     },
                 },
             },
@@ -1584,7 +1609,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1598,7 +1623,8 @@ func main() {
 			NetworkProfile: &compute.NetworkProfileArgs{
 				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
 					&compute.NetworkInterfaceReferenceArgs{
-						Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
 					},
 				},
 			},
@@ -1656,6 +1682,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
     network_profile={
         "networkInterfaces": [{
             "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            "primary": True,
         }],
     },
     os_profile={
@@ -1705,6 +1732,7 @@ const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualM
     networkProfile: {
         networkInterfaces: [{
             id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            primary: true,
         }],
     },
     osProfile: {
@@ -1765,6 +1793,7 @@ class MyStack : Stack
                     new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/nsgExistingNic",
+                        Primary = true,
                     },
                 },
             },
@@ -1820,7 +1849,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1834,7 +1863,8 @@ func main() {
 			NetworkProfile: &compute.NetworkProfileArgs{
 				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
 					&compute.NetworkInterfaceReferenceArgs{
-						Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/nsgExistingNic"),
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/nsgExistingNic"),
+						Primary: pulumi.Bool(true),
 					},
 				},
 			},
@@ -1894,6 +1924,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
     network_profile={
         "networkInterfaces": [{
             "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/nsgExistingNic",
+            "primary": True,
         }],
     },
     os_profile={
@@ -1945,6 +1976,7 @@ const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualM
     networkProfile: {
         networkInterfaces: [{
             id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/nsgExistingNic",
+            primary: true,
         }],
     },
     osProfile: {
@@ -2007,6 +2039,7 @@ class MyStack : Stack
                     new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+                        Primary = true,
                     },
                 },
             },
@@ -2062,7 +2095,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -2076,7 +2109,8 @@ func main() {
 			NetworkProfile: &compute.NetworkProfileArgs{
 				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
 					&compute.NetworkInterfaceReferenceArgs{
-						Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
 					},
 				},
 			},
@@ -2136,6 +2170,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
     network_profile={
         "networkInterfaces": [{
             "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            "primary": True,
         }],
     },
     os_profile={
@@ -2187,6 +2222,7 @@ const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualM
     networkProfile: {
         networkInterfaces: [{
             id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            primary: true,
         }],
     },
     osProfile: {
@@ -2249,6 +2285,7 @@ class MyStack : Stack
                     new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+                        Primary = true,
                     },
                 },
             },
@@ -2304,7 +2341,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -2318,7 +2355,8 @@ func main() {
 			NetworkProfile: &compute.NetworkProfileArgs{
 				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
 					&compute.NetworkInterfaceReferenceArgs{
-						Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
 					},
 				},
 			},
@@ -2378,6 +2416,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
     network_profile={
         "networkInterfaces": [{
             "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            "primary": True,
         }],
     },
     os_profile={
@@ -2429,6 +2468,7 @@ const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualM
     networkProfile: {
         networkInterfaces: [{
             id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            primary: true,
         }],
     },
     osProfile: {
@@ -2500,6 +2540,7 @@ class MyStack : Stack
                     new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+                        Primary = true,
                     },
                 },
             },
@@ -2546,7 +2587,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -2567,7 +2608,8 @@ func main() {
 			NetworkProfile: &compute.NetworkProfileArgs{
 				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
 					&compute.NetworkInterfaceReferenceArgs{
-						Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
 					},
 				},
 			},
@@ -2627,6 +2669,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
     network_profile={
         "networkInterfaces": [{
             "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            "primary": True,
         }],
     },
     os_profile={
@@ -2678,6 +2721,7 @@ const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualM
     networkProfile: {
         networkInterfaces: [{
             id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            primary: true,
         }],
     },
     osProfile: {
@@ -2741,6 +2785,7 @@ class MyStack : Stack
                     new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+                        Primary = true,
                     },
                 },
             },
@@ -2787,7 +2832,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -2807,7 +2852,8 @@ func main() {
 			NetworkProfile: &compute.NetworkProfileArgs{
 				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
 					&compute.NetworkInterfaceReferenceArgs{
-						Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
 					},
 				},
 			},
@@ -2866,6 +2912,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
     network_profile={
         "networkInterfaces": [{
             "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            "primary": True,
         }],
     },
     os_profile={
@@ -2916,6 +2963,7 @@ const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualM
     networkProfile: {
         networkInterfaces: [{
             id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            primary: true,
         }],
     },
     osProfile: {
@@ -2971,6 +3019,7 @@ class MyStack : Stack
                     new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+                        Primary = true,
                     },
                 },
             },
@@ -3032,7 +3081,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -3046,7 +3095,8 @@ func main() {
 			NetworkProfile: &compute.NetworkProfileArgs{
 				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
 					&compute.NetworkInterfaceReferenceArgs{
-						Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
 					},
 				},
 			},
@@ -3111,6 +3161,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
     network_profile={
         "networkInterfaces": [{
             "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            "primary": True,
         }],
     },
     os_profile={
@@ -3167,6 +3218,7 @@ const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualM
     networkProfile: {
         networkInterfaces: [{
             id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            primary: true,
         }],
     },
     osProfile: {
@@ -3234,6 +3286,7 @@ class MyStack : Stack
                     new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+                        Primary = true,
                     },
                 },
             },
@@ -3291,7 +3344,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -3305,7 +3358,8 @@ func main() {
 			NetworkProfile: &compute.NetworkProfileArgs{
 				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
 					&compute.NetworkInterfaceReferenceArgs{
-						Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
 					},
 				},
 			},
@@ -3367,6 +3421,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
     network_profile={
         "networkInterfaces": [{
             "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            "primary": True,
         }],
     },
     os_profile={
@@ -3420,6 +3475,7 @@ const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualM
     networkProfile: {
         networkInterfaces: [{
             id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            primary: true,
         }],
     },
     osProfile: {
@@ -3484,6 +3540,7 @@ class MyStack : Stack
                     new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+                        Primary = true,
                     },
                 },
             },
@@ -3541,7 +3598,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -3555,7 +3612,8 @@ func main() {
 			NetworkProfile: &compute.NetworkProfileArgs{
 				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
 					&compute.NetworkInterfaceReferenceArgs{
-						Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
 					},
 				},
 			},
@@ -3617,6 +3675,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
     network_profile={
         "networkInterfaces": [{
             "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            "primary": True,
         }],
     },
     os_profile={
@@ -3670,6 +3729,7 @@ const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualM
     networkProfile: {
         networkInterfaces: [{
             id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            primary: true,
         }],
     },
     osProfile: {
@@ -3734,6 +3794,7 @@ class MyStack : Stack
                     new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+                        Primary = true,
                     },
                 },
             },
@@ -3790,7 +3851,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -3804,7 +3865,8 @@ func main() {
 			NetworkProfile: &compute.NetworkProfileArgs{
 				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
 					&compute.NetworkInterfaceReferenceArgs{
-						Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
 					},
 				},
 			},
@@ -3865,6 +3927,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
     network_profile={
         "networkInterfaces": [{
             "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            "primary": True,
         }],
     },
     os_profile={
@@ -3917,6 +3980,7 @@ const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualM
     networkProfile: {
         networkInterfaces: [{
             id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            primary: true,
         }],
     },
     osProfile: {
@@ -3987,6 +4051,7 @@ class MyStack : Stack
                     new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+                        Primary = true,
                     },
                 },
             },
@@ -4033,7 +4098,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -4052,7 +4117,8 @@ func main() {
 			NetworkProfile: &compute.NetworkProfileArgs{
 				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
 					&compute.NetworkInterfaceReferenceArgs{
-						Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
 					},
 				},
 			},
@@ -4110,6 +4176,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
     network_profile={
         "networkInterfaces": [{
             "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            "primary": True,
         }],
     },
     os_profile={
@@ -4159,6 +4226,7 @@ const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualM
     networkProfile: {
         networkInterfaces: [{
             id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            primary: true,
         }],
     },
     osProfile: {
@@ -4214,6 +4282,7 @@ class MyStack : Stack
                     new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+                        Primary = true,
                     },
                 },
             },
@@ -4260,7 +4329,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -4274,7 +4343,8 @@ func main() {
 			NetworkProfile: &compute.NetworkProfileArgs{
 				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
 					&compute.NetworkInterfaceReferenceArgs{
-						Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
 					},
 				},
 			},
@@ -4327,6 +4397,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
     network_profile={
         "networkInterfaces": [{
             "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            "primary": True,
         }],
     },
     os_profile={
@@ -4371,6 +4442,7 @@ const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualM
     networkProfile: {
         networkInterfaces: [{
             id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            primary: true,
         }],
     },
     osProfile: {
@@ -4426,6 +4498,7 @@ class MyStack : Stack
                     new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+                        Primary = true,
                     },
                 },
             },
@@ -4472,7 +4545,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -4486,7 +4559,8 @@ func main() {
 			NetworkProfile: &compute.NetworkProfileArgs{
 				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
 					&compute.NetworkInterfaceReferenceArgs{
-						Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
 					},
 				},
 			},
@@ -4539,6 +4613,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
     network_profile={
         "networkInterfaces": [{
             "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            "primary": True,
         }],
     },
     os_profile={
@@ -4583,6 +4658,7 @@ const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualM
     networkProfile: {
         networkInterfaces: [{
             id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            primary: true,
         }],
     },
     osProfile: {
@@ -4638,6 +4714,7 @@ class MyStack : Stack
                     new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+                        Primary = true,
                     },
                 },
             },
@@ -4698,7 +4775,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -4712,7 +4789,8 @@ func main() {
 			NetworkProfile: &compute.NetworkProfileArgs{
 				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
 					&compute.NetworkInterfaceReferenceArgs{
-						Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
 					},
 				},
 			},
@@ -4775,6 +4853,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
     network_profile={
         "networkInterfaces": [{
             "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            "primary": True,
         }],
     },
     os_profile={
@@ -4827,6 +4906,7 @@ const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualM
     networkProfile: {
         networkInterfaces: [{
             id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            primary: true,
         }],
     },
     osProfile: {
@@ -18283,7 +18363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectedsettings_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.{{% /md %}}</dd>
 
@@ -18303,7 +18383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}Json formatted public settings for the extension.{{% /md %}}</dd>
 
@@ -18430,7 +18510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectedsettings_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.{{% /md %}}</dd>
 
@@ -18450,7 +18530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}Json formatted public settings for the extension.{{% /md %}}</dd>
 
@@ -18577,7 +18657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectedsettings_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.{{% /md %}}</dd>
 
@@ -18597,7 +18677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}Json formatted public settings for the extension.{{% /md %}}</dd>
 
@@ -18724,7 +18804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_settings_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.{{% /md %}}</dd>
 
@@ -18744,7 +18824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}Json formatted public settings for the extension.{{% /md %}}</dd>
 

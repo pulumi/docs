@@ -31,6 +31,12 @@ class MyStack : Stack
             AssemblyArtifactName = "testAssembly",
             IntegrationAccountName = "testIntegrationAccount",
             Location = "westus",
+            Properties = new AzureNextGen.Logic.Latest.Inputs.AssemblyPropertiesArgs
+            {
+                AssemblyName = "System.IdentityModel.Tokens.Jwt",
+                Content = "Base64 encoded Assembly Content",
+                Metadata = ,
+            },
             ResourceGroupName = "testResourceGroup",
         });
     }
@@ -47,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	logic "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/logic/latest"
+	logic "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/logic/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -57,7 +63,12 @@ func main() {
 			AssemblyArtifactName:   pulumi.String("testAssembly"),
 			IntegrationAccountName: pulumi.String("testIntegrationAccount"),
 			Location:               pulumi.String("westus"),
-			ResourceGroupName:      pulumi.String("testResourceGroup"),
+			Properties: &logic.AssemblyPropertiesArgs{
+				AssemblyName: pulumi.String("System.IdentityModel.Tokens.Jwt"),
+				Content:      pulumi.String("Base64 encoded Assembly Content"),
+				Metadata:     nil,
+			},
+			ResourceGroupName: pulumi.String("testResourceGroup"),
 		})
 		if err != nil {
 			return err
@@ -80,6 +91,11 @@ integration_account_assembly = azure_nextgen.logic.latest.IntegrationAccountAsse
     assembly_artifact_name="testAssembly",
     integration_account_name="testIntegrationAccount",
     location="westus",
+    properties={
+        "assemblyName": "System.IdentityModel.Tokens.Jwt",
+        "content": "Base64 encoded Assembly Content",
+        "metadata": {},
+    },
     resource_group_name="testResourceGroup")
 
 ```
@@ -96,6 +112,11 @@ const integrationAccountAssembly = new azure_nextgen.logic.latest.IntegrationAcc
     assemblyArtifactName: "testAssembly",
     integrationAccountName: "testIntegrationAccount",
     location: "westus",
+    properties: {
+        assemblyName: "System.IdentityModel.Tokens.Jwt",
+        content: "Base64 encoded Assembly Content",
+        metadata: {},
+    },
     resourceGroupName: "testResourceGroup",
 });
 
@@ -790,7 +811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -830,7 +851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -897,7 +918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -937,7 +958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1004,7 +1025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1044,7 +1065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1111,7 +1132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1151,7 +1172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1229,7 +1250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1269,7 +1290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1336,7 +1357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1376,7 +1397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1443,7 +1464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1483,7 +1504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1550,7 +1571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1590,7 +1611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1886,7 +1907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}The metadata.{{% /md %}}</dd>
 
@@ -1943,7 +1964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}The metadata.{{% /md %}}</dd>
 
@@ -2000,7 +2021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}The metadata.{{% /md %}}</dd>
 
@@ -2057,7 +2078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}The metadata.{{% /md %}}</dd>
 
@@ -2125,7 +2146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}The metadata.{{% /md %}}</dd>
 
@@ -2182,7 +2203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}The metadata.{{% /md %}}</dd>
 
@@ -2239,7 +2260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}The metadata.{{% /md %}}</dd>
 
@@ -2296,7 +2317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}The metadata.{{% /md %}}</dd>
 

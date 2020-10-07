@@ -31,6 +31,7 @@ class MyStack : Stack
             ETag = "\"b701c73a-0000-0000-0000-59c12ff00000\"",
             Location = "Southeast Asia",
             MigrateProjectName = "project01",
+            Properties = ,
             ResourceGroupName = "myResourceGroup",
             Tags = ,
         });
@@ -48,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	migrate "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/migrate/v20180901preview"
+	migrate "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/migrate/v20180901preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -58,6 +59,7 @@ func main() {
 			ETag:               pulumi.String("\"b701c73a-0000-0000-0000-59c12ff00000\""),
 			Location:           pulumi.String("Southeast Asia"),
 			MigrateProjectName: pulumi.String("project01"),
+			Properties:         nil,
 			ResourceGroupName:  pulumi.String("myResourceGroup"),
 			Tags:               nil,
 		})
@@ -82,6 +84,7 @@ migrate_project = azure_nextgen.migrate.v20180901preview.MigrateProject("migrate
     e_tag="\"b701c73a-0000-0000-0000-59c12ff00000\"",
     location="Southeast Asia",
     migrate_project_name="project01",
+    properties={},
     resource_group_name="myResourceGroup",
     tags={})
 
@@ -99,6 +102,7 @@ const migrateProject = new azure_nextgen.migrate.v20180901preview.MigrateProject
     eTag: "\"b701c73a-0000-0000-0000-59c12ff00000\"",
     location: "Southeast Asia",
     migrateProjectName: "project01",
+    properties: {},
     resourceGroupName: "myResourceGroup",
     tags: {},
 });

@@ -4247,7 +4247,7 @@ The following output properties are available:
 <a href="#agentjobs_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Jobs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Source agent jobs as a map from agent job name to id.{{% /md %}}</dd>
 
@@ -4257,7 +4257,7 @@ The following output properties are available:
 <a href="#databasetdecertificatemapping_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Tde<wbr>Certificate<wbr>Mapping</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Mapping from database name to TDE certificate name, if applicable{{% /md %}}</dd>
 
@@ -4267,7 +4267,7 @@ The following output properties are available:
 <a href="#databases_csharp" style="color: inherit; text-decoration: inherit;">Databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Source databases as a map from database name to database id{{% /md %}}</dd>
 
@@ -4287,7 +4287,7 @@ The following output properties are available:
 <a href="#logins_csharp" style="color: inherit; text-decoration: inherit;">Logins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Source logins as a map from login name to login id.{{% /md %}}</dd>
 
@@ -4334,7 +4334,7 @@ The following output properties are available:
 <a href="#agentjobs_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Jobs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Source agent jobs as a map from agent job name to id.{{% /md %}}</dd>
 
@@ -4344,7 +4344,7 @@ The following output properties are available:
 <a href="#databasetdecertificatemapping_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Tde<wbr>Certificate<wbr>Mapping</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Mapping from database name to TDE certificate name, if applicable{{% /md %}}</dd>
 
@@ -4354,7 +4354,7 @@ The following output properties are available:
 <a href="#databases_go" style="color: inherit; text-decoration: inherit;">Databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Source databases as a map from database name to database id{{% /md %}}</dd>
 
@@ -4374,7 +4374,7 @@ The following output properties are available:
 <a href="#logins_go" style="color: inherit; text-decoration: inherit;">Logins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Source logins as a map from login name to login id.{{% /md %}}</dd>
 
@@ -4421,7 +4421,7 @@ The following output properties are available:
 <a href="#agentjobs_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Jobs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Source agent jobs as a map from agent job name to id.{{% /md %}}</dd>
 
@@ -4431,7 +4431,7 @@ The following output properties are available:
 <a href="#databasetdecertificatemapping_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Tde<wbr>Certificate<wbr>Mapping</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Mapping from database name to TDE certificate name, if applicable{{% /md %}}</dd>
 
@@ -4441,7 +4441,7 @@ The following output properties are available:
 <a href="#databases_nodejs" style="color: inherit; text-decoration: inherit;">databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Source databases as a map from database name to database id{{% /md %}}</dd>
 
@@ -4461,7 +4461,7 @@ The following output properties are available:
 <a href="#logins_nodejs" style="color: inherit; text-decoration: inherit;">logins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Source logins as a map from login name to login id.{{% /md %}}</dd>
 
@@ -4508,7 +4508,7 @@ The following output properties are available:
 <a href="#agentjobs_python" style="color: inherit; text-decoration: inherit;">agent<wbr>Jobs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Source agent jobs as a map from agent job name to id.{{% /md %}}</dd>
 
@@ -4518,7 +4518,7 @@ The following output properties are available:
 <a href="#databasetdecertificatemapping_python" style="color: inherit; text-decoration: inherit;">database<wbr>Tde<wbr>Certificate<wbr>Mapping</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Mapping from database name to TDE certificate name, if applicable{{% /md %}}</dd>
 
@@ -4528,7 +4528,7 @@ The following output properties are available:
 <a href="#databases_python" style="color: inherit; text-decoration: inherit;">databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Source databases as a map from database name to database id{{% /md %}}</dd>
 
@@ -4548,7 +4548,7 @@ The following output properties are available:
 <a href="#logins_python" style="color: inherit; text-decoration: inherit;">logins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Source logins as a map from login name to login id.{{% /md %}}</dd>
 
@@ -6954,7 +6954,7 @@ The following output properties are available:
 <a href="#databases_csharp" style="color: inherit; text-decoration: inherit;">Databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Source databases as a map from database name to database id{{% /md %}}</dd>
 
@@ -7001,7 +7001,7 @@ The following output properties are available:
 <a href="#databases_go" style="color: inherit; text-decoration: inherit;">Databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Source databases as a map from database name to database id{{% /md %}}</dd>
 
@@ -7048,7 +7048,7 @@ The following output properties are available:
 <a href="#databases_nodejs" style="color: inherit; text-decoration: inherit;">databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Source databases as a map from database name to database id{{% /md %}}</dd>
 
@@ -7095,7 +7095,7 @@ The following output properties are available:
 <a href="#databases_python" style="color: inherit; text-decoration: inherit;">databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Source databases as a map from database name to database id{{% /md %}}</dd>
 
@@ -9127,6 +9127,405 @@ The following output properties are available:
 
 
 
+<h4 id="dataitemmigrationsummaryresultresponse">Data<wbr>Item<wbr>Migration<wbr>Summary<wbr>Result<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endedon_csharp">
+<a href="#endedon_csharp" style="color: inherit; text-decoration: inherit;">Ended<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Migration end time{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errorprefix_csharp">
+<a href="#errorprefix_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Wildcard string prefix to use for querying all errors of the item{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="itemscompletedcount_csharp">
+<a href="#itemscompletedcount_csharp" style="color: inherit; text-decoration: inherit;">Items<wbr>Completed<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of successfully completed items{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="itemscount_csharp">
+<a href="#itemscount_csharp" style="color: inherit; text-decoration: inherit;">Items<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of items{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the item{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resultprefix_csharp">
+<a href="#resultprefix_csharp" style="color: inherit; text-decoration: inherit;">Result<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Wildcard string prefix to use for querying all sub-tem results of the item{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="startedon_csharp">
+<a href="#startedon_csharp" style="color: inherit; text-decoration: inherit;">Started<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Migration start time{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="state_csharp">
+<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Current state of migration{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="statusmessage_csharp">
+<a href="#statusmessage_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Status message{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endedon_go">
+<a href="#endedon_go" style="color: inherit; text-decoration: inherit;">Ended<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Migration end time{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errorprefix_go">
+<a href="#errorprefix_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Wildcard string prefix to use for querying all errors of the item{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="itemscompletedcount_go">
+<a href="#itemscompletedcount_go" style="color: inherit; text-decoration: inherit;">Items<wbr>Completed<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of successfully completed items{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="itemscount_go">
+<a href="#itemscount_go" style="color: inherit; text-decoration: inherit;">Items<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of items{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the item{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resultprefix_go">
+<a href="#resultprefix_go" style="color: inherit; text-decoration: inherit;">Result<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Wildcard string prefix to use for querying all sub-tem results of the item{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="startedon_go">
+<a href="#startedon_go" style="color: inherit; text-decoration: inherit;">Started<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Migration start time{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="state_go">
+<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Current state of migration{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="statusmessage_go">
+<a href="#statusmessage_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Status message{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endedon_nodejs">
+<a href="#endedon_nodejs" style="color: inherit; text-decoration: inherit;">ended<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Migration end time{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errorprefix_nodejs">
+<a href="#errorprefix_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Wildcard string prefix to use for querying all errors of the item{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="itemscompletedcount_nodejs">
+<a href="#itemscompletedcount_nodejs" style="color: inherit; text-decoration: inherit;">items<wbr>Completed<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Number of successfully completed items{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="itemscount_nodejs">
+<a href="#itemscount_nodejs" style="color: inherit; text-decoration: inherit;">items<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Number of items{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the item{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resultprefix_nodejs">
+<a href="#resultprefix_nodejs" style="color: inherit; text-decoration: inherit;">result<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Wildcard string prefix to use for querying all sub-tem results of the item{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="startedon_nodejs">
+<a href="#startedon_nodejs" style="color: inherit; text-decoration: inherit;">started<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Migration start time{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="state_nodejs">
+<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Current state of migration{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="statusmessage_nodejs">
+<a href="#statusmessage_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Status message{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endedon_python">
+<a href="#endedon_python" style="color: inherit; text-decoration: inherit;">ended<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Migration end time{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errorprefix_python">
+<a href="#errorprefix_python" style="color: inherit; text-decoration: inherit;">error<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Wildcard string prefix to use for querying all errors of the item{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="itemscompletedcount_python">
+<a href="#itemscompletedcount_python" style="color: inherit; text-decoration: inherit;">items<wbr>Completed<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of successfully completed items{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="itemscount_python">
+<a href="#itemscount_python" style="color: inherit; text-decoration: inherit;">items<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of items{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the item{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resultprefix_python">
+<a href="#resultprefix_python" style="color: inherit; text-decoration: inherit;">result<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Wildcard string prefix to use for querying all sub-tem results of the item{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="startedon_python">
+<a href="#startedon_python" style="color: inherit; text-decoration: inherit;">started<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Migration start time{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="state_python">
+<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Current state of migration{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="status_message_python">
+<a href="#status_message_python" style="color: inherit; text-decoration: inherit;">status_<wbr>message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Status message{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="databasebackupinforesponse">Database<wbr>Backup<wbr>Info<wbr>Response</h4>
 
 
@@ -9805,6 +10204,445 @@ The following output properties are available:
 
 
 
+<h4 id="databasesummaryresultresponse">Database<wbr>Summary<wbr>Result<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endedon_csharp">
+<a href="#endedon_csharp" style="color: inherit; text-decoration: inherit;">Ended<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Migration end time{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errorprefix_csharp">
+<a href="#errorprefix_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Wildcard string prefix to use for querying all errors of the item{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="itemscompletedcount_csharp">
+<a href="#itemscompletedcount_csharp" style="color: inherit; text-decoration: inherit;">Items<wbr>Completed<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of successfully completed items{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="itemscount_csharp">
+<a href="#itemscount_csharp" style="color: inherit; text-decoration: inherit;">Items<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of items{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the item{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resultprefix_csharp">
+<a href="#resultprefix_csharp" style="color: inherit; text-decoration: inherit;">Result<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Wildcard string prefix to use for querying all sub-tem results of the item{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sizemb_csharp">
+<a href="#sizemb_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>MB</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}Size of the database in megabytes{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="startedon_csharp">
+<a href="#startedon_csharp" style="color: inherit; text-decoration: inherit;">Started<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Migration start time{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="state_csharp">
+<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Current state of migration{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="statusmessage_csharp">
+<a href="#statusmessage_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Status message{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endedon_go">
+<a href="#endedon_go" style="color: inherit; text-decoration: inherit;">Ended<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Migration end time{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errorprefix_go">
+<a href="#errorprefix_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Wildcard string prefix to use for querying all errors of the item{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="itemscompletedcount_go">
+<a href="#itemscompletedcount_go" style="color: inherit; text-decoration: inherit;">Items<wbr>Completed<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of successfully completed items{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="itemscount_go">
+<a href="#itemscount_go" style="color: inherit; text-decoration: inherit;">Items<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of items{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the item{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resultprefix_go">
+<a href="#resultprefix_go" style="color: inherit; text-decoration: inherit;">Result<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Wildcard string prefix to use for querying all sub-tem results of the item{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sizemb_go">
+<a href="#sizemb_go" style="color: inherit; text-decoration: inherit;">Size<wbr>MB</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}Size of the database in megabytes{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="startedon_go">
+<a href="#startedon_go" style="color: inherit; text-decoration: inherit;">Started<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Migration start time{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="state_go">
+<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Current state of migration{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="statusmessage_go">
+<a href="#statusmessage_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Status message{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endedon_nodejs">
+<a href="#endedon_nodejs" style="color: inherit; text-decoration: inherit;">ended<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Migration end time{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errorprefix_nodejs">
+<a href="#errorprefix_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Wildcard string prefix to use for querying all errors of the item{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="itemscompletedcount_nodejs">
+<a href="#itemscompletedcount_nodejs" style="color: inherit; text-decoration: inherit;">items<wbr>Completed<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Number of successfully completed items{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="itemscount_nodejs">
+<a href="#itemscount_nodejs" style="color: inherit; text-decoration: inherit;">items<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Number of items{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the item{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resultprefix_nodejs">
+<a href="#resultprefix_nodejs" style="color: inherit; text-decoration: inherit;">result<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Wildcard string prefix to use for querying all sub-tem results of the item{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sizemb_nodejs">
+<a href="#sizemb_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>MB</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}Size of the database in megabytes{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="startedon_nodejs">
+<a href="#startedon_nodejs" style="color: inherit; text-decoration: inherit;">started<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Migration start time{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="state_nodejs">
+<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Current state of migration{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="statusmessage_nodejs">
+<a href="#statusmessage_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Status message{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endedon_python">
+<a href="#endedon_python" style="color: inherit; text-decoration: inherit;">ended<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Migration end time{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errorprefix_python">
+<a href="#errorprefix_python" style="color: inherit; text-decoration: inherit;">error<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Wildcard string prefix to use for querying all errors of the item{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="itemscompletedcount_python">
+<a href="#itemscompletedcount_python" style="color: inherit; text-decoration: inherit;">items<wbr>Completed<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of successfully completed items{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="itemscount_python">
+<a href="#itemscount_python" style="color: inherit; text-decoration: inherit;">items<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of items{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the item{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resultprefix_python">
+<a href="#resultprefix_python" style="color: inherit; text-decoration: inherit;">result<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Wildcard string prefix to use for querying all sub-tem results of the item{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sizemb_python">
+<a href="#sizemb_python" style="color: inherit; text-decoration: inherit;">size<wbr>MB</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Size of the database in megabytes{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="startedon_python">
+<a href="#startedon_python" style="color: inherit; text-decoration: inherit;">started<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Migration start time{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="state_python">
+<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Current state of migration{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="status_message_python">
+<a href="#status_message_python" style="color: inherit; text-decoration: inherit;">status_<wbr>message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Status message{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="databasetableresponse">Database<wbr>Table<wbr>Response</h4>
 
 
@@ -10259,7 +11097,7 @@ The following output properties are available:
 <a href="#base64encodedcertificates_csharp" style="color: inherit; text-decoration: inherit;">Base64Encoded<wbr>Certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Array&lt;string&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Mapping from certificate name to base 64 encoded format.{{% /md %}}</dd>
 
@@ -10286,7 +11124,7 @@ The following output properties are available:
 <a href="#base64encodedcertificates_go" style="color: inherit; text-decoration: inherit;">Base64Encoded<wbr>Certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">map[string][]string</span>
     </dt>
     <dd>{{% md %}}Mapping from certificate name to base 64 encoded format.{{% /md %}}</dd>
 
@@ -10313,7 +11151,7 @@ The following output properties are available:
 <a href="#base64encodedcertificates_nodejs" style="color: inherit; text-decoration: inherit;">base64Encoded<wbr>Certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">{[key: string]: string[]}</span>
     </dt>
     <dd>{{% md %}}Mapping from certificate name to base 64 encoded format.{{% /md %}}</dd>
 
@@ -10340,7 +11178,7 @@ The following output properties are available:
 <a href="#base64encodedcertificates_python" style="color: inherit; text-decoration: inherit;">base64Encoded<wbr>Certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Dict[str, Array<String>]</span>
     </dt>
     <dd>{{% md %}}Mapping from certificate name to base 64 encoded format.{{% /md %}}</dd>
 
@@ -11970,7 +12808,7 @@ The following output properties are available:
 <a href="#databasestosourcetables_csharp" style="color: inherit; text-decoration: inherit;">Databases<wbr>To<wbr>Source<wbr>Tables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Array&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Database<wbr>Table<wbr>Response<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Mapping from database name to list of source tables{{% /md %}}</dd>
 
@@ -11980,7 +12818,7 @@ The following output properties are available:
 <a href="#databasestotargettables_csharp" style="color: inherit; text-decoration: inherit;">Databases<wbr>To<wbr>Target<wbr>Tables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Array&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Database<wbr>Table<wbr>Response<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Mapping from database name to list of target tables{{% /md %}}</dd>
 
@@ -11990,7 +12828,7 @@ The following output properties are available:
 <a href="#tablevalidationerrors_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Validation<wbr>Errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Array&lt;string&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Mapping from database name to list of validation errors{{% /md %}}</dd>
 
@@ -12017,7 +12855,7 @@ The following output properties are available:
 <a href="#databasestosourcetables_go" style="color: inherit; text-decoration: inherit;">Databases<wbr>To<wbr>Source<wbr>Tables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">map[string][]Database<wbr>Table<wbr>Response</span>
     </dt>
     <dd>{{% md %}}Mapping from database name to list of source tables{{% /md %}}</dd>
 
@@ -12027,7 +12865,7 @@ The following output properties are available:
 <a href="#databasestotargettables_go" style="color: inherit; text-decoration: inherit;">Databases<wbr>To<wbr>Target<wbr>Tables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">map[string][]Database<wbr>Table<wbr>Response</span>
     </dt>
     <dd>{{% md %}}Mapping from database name to list of target tables{{% /md %}}</dd>
 
@@ -12037,7 +12875,7 @@ The following output properties are available:
 <a href="#tablevalidationerrors_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Validation<wbr>Errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">map[string][]string</span>
     </dt>
     <dd>{{% md %}}Mapping from database name to list of validation errors{{% /md %}}</dd>
 
@@ -12064,7 +12902,7 @@ The following output properties are available:
 <a href="#databasestosourcetables_nodejs" style="color: inherit; text-decoration: inherit;">databases<wbr>To<wbr>Source<wbr>Tables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">{[key: string]: Database<wbr>Table<wbr>Response[]}</span>
     </dt>
     <dd>{{% md %}}Mapping from database name to list of source tables{{% /md %}}</dd>
 
@@ -12074,7 +12912,7 @@ The following output properties are available:
 <a href="#databasestotargettables_nodejs" style="color: inherit; text-decoration: inherit;">databases<wbr>To<wbr>Target<wbr>Tables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">{[key: string]: Database<wbr>Table<wbr>Response[]}</span>
     </dt>
     <dd>{{% md %}}Mapping from database name to list of target tables{{% /md %}}</dd>
 
@@ -12084,7 +12922,7 @@ The following output properties are available:
 <a href="#tablevalidationerrors_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Validation<wbr>Errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">{[key: string]: string[]}</span>
     </dt>
     <dd>{{% md %}}Mapping from database name to list of validation errors{{% /md %}}</dd>
 
@@ -12111,7 +12949,7 @@ The following output properties are available:
 <a href="#databasestosourcetables_python" style="color: inherit; text-decoration: inherit;">databases<wbr>To<wbr>Source<wbr>Tables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Dict[str, Database<wbr>Table<wbr>Response>]</span>
     </dt>
     <dd>{{% md %}}Mapping from database name to list of source tables{{% /md %}}</dd>
 
@@ -12121,7 +12959,7 @@ The following output properties are available:
 <a href="#databasestotargettables_python" style="color: inherit; text-decoration: inherit;">databases<wbr>To<wbr>Target<wbr>Tables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Dict[str, Database<wbr>Table<wbr>Response>]</span>
     </dt>
     <dd>{{% md %}}Mapping from database name to list of target tables{{% /md %}}</dd>
 
@@ -12131,7 +12969,7 @@ The following output properties are available:
 <a href="#tablevalidationerrors_python" style="color: inherit; text-decoration: inherit;">table<wbr>Validation<wbr>Errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Dict[str, Array<String>]</span>
     </dt>
     <dd>{{% md %}}Mapping from database name to list of validation errors{{% /md %}}</dd>
 
@@ -12567,7 +13405,7 @@ The following output properties are available:
 <a href="#databasestotables_csharp" style="color: inherit; text-decoration: inherit;">Databases<wbr>To<wbr>Tables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Array&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Database<wbr>Table<wbr>Response<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Mapping from database name to list of tables{{% /md %}}</dd>
 
@@ -12604,7 +13442,7 @@ The following output properties are available:
 <a href="#databasestotables_go" style="color: inherit; text-decoration: inherit;">Databases<wbr>To<wbr>Tables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">map[string][]Database<wbr>Table<wbr>Response</span>
     </dt>
     <dd>{{% md %}}Mapping from database name to list of tables{{% /md %}}</dd>
 
@@ -12641,7 +13479,7 @@ The following output properties are available:
 <a href="#databasestotables_nodejs" style="color: inherit; text-decoration: inherit;">databases<wbr>To<wbr>Tables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">{[key: string]: Database<wbr>Table<wbr>Response[]}</span>
     </dt>
     <dd>{{% md %}}Mapping from database name to list of tables{{% /md %}}</dd>
 
@@ -12678,7 +13516,7 @@ The following output properties are available:
 <a href="#databasestotables_python" style="color: inherit; text-decoration: inherit;">databases<wbr>To<wbr>Tables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Dict[str, Database<wbr>Table<wbr>Response>]</span>
     </dt>
     <dd>{{% md %}}Mapping from database name to list of tables{{% /md %}}</dd>
 
@@ -13826,6 +14664,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="tablemap_csharp">
+<a href="#tablemap_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Map</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Mapping of source to target tables{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="targetdatabasename_csharp">
 <a href="#targetdatabasename_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Database<wbr>Name</a>
 </span> 
@@ -13880,6 +14728,16 @@ The following output properties are available:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Source settings to tune source endpoint migration behavior{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tablemap_go">
+<a href="#tablemap_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Map</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Mapping of source to target tables{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -13940,6 +14798,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="tablemap_nodejs">
+<a href="#tablemap_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Map</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Mapping of source to target tables{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="targetdatabasename_nodejs">
 <a href="#targetdatabasename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Database<wbr>Name</a>
 </span> 
@@ -13994,6 +14862,16 @@ The following output properties are available:
         <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Source settings to tune source endpoint migration behavior{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tablemap_python">
+<a href="#tablemap_python" style="color: inherit; text-decoration: inherit;">table<wbr>Map</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Mapping of source to target tables{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -19040,6 +19918,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="selectedtables_csharp">
+<a href="#selectedtables_csharp" style="color: inherit; text-decoration: inherit;">Selected<wbr>Tables</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsyncdatabasetableinputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Database<wbr>Table<wbr>Input<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Tables selected for migration{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="sourcesetting_csharp">
 <a href="#sourcesetting_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Setting</a>
 </span> 
@@ -19094,6 +19982,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the database{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="selectedtables_go">
+<a href="#selectedtables_go" style="color: inherit; text-decoration: inherit;">Selected<wbr>Tables</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsyncdatabasetableinputresponse">[]Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Database<wbr>Table<wbr>Input<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Tables selected for migration{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -19154,6 +20052,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="selectedtables_nodejs">
+<a href="#selectedtables_nodejs" style="color: inherit; text-decoration: inherit;">selected<wbr>Tables</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsyncdatabasetableinputresponse">Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Database<wbr>Table<wbr>Input<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Tables selected for migration{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="sourcesetting_nodejs">
 <a href="#sourcesetting_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Setting</a>
 </span> 
@@ -19211,6 +20119,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="selectedtables_python">
+<a href="#selectedtables_python" style="color: inherit; text-decoration: inherit;">selected<wbr>Tables</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsyncdatabasetableinputresponse">List[Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Database<wbr>Table<wbr>Input<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Tables selected for migration{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="sourcesetting_python">
 <a href="#sourcesetting_python" style="color: inherit; text-decoration: inherit;">source<wbr>Setting</a>
 </span> 
@@ -19238,6 +20156,85 @@ The following output properties are available:
         <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Target settings to tune target endpoint migration behavior{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="migratepostgresqlazuredbforpostgresqlsyncdatabasetableinputresponse">Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Database<wbr>Table<wbr>Input<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the table to migrate{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the table to migrate{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the table to migrate{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the table to migrate{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -24944,7 +25941,7 @@ The following output properties are available:
 <a href="#objectsummary_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Summary</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Data<wbr>Item<wbr>Migration<wbr>Summary<wbr>Result<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Summary of object results in the migration{{% /md %}}</dd>
 
@@ -25101,7 +26098,7 @@ The following output properties are available:
 <a href="#objectsummary_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Summary</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">map[string]Data<wbr>Item<wbr>Migration<wbr>Summary<wbr>Result<wbr>Response</span>
     </dt>
     <dd>{{% md %}}Summary of object results in the migration{{% /md %}}</dd>
 
@@ -25258,7 +26255,7 @@ The following output properties are available:
 <a href="#objectsummary_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Summary</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">{[key: string]: Data<wbr>Item<wbr>Migration<wbr>Summary<wbr>Result<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}Summary of object results in the migration{{% /md %}}</dd>
 
@@ -25415,7 +26412,7 @@ The following output properties are available:
 <a href="#objectsummary_python" style="color: inherit; text-decoration: inherit;">object<wbr>Summary</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Dict[str, Data<wbr>Item<wbr>Migration<wbr>Summary<wbr>Result<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Summary of object results in the migration{{% /md %}}</dd>
 
@@ -25691,7 +26688,7 @@ The following output properties are available:
 <a href="#databasesummary_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Summary</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Database<wbr>Summary<wbr>Result<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Summary of database results in the migration{{% /md %}}</dd>
 
@@ -25701,7 +26698,7 @@ The following output properties are available:
 <a href="#databases_csharp" style="color: inherit; text-decoration: inherit;">Databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Selected databases as a map from database name to database id{{% /md %}}</dd>
 
@@ -25858,7 +26855,7 @@ The following output properties are available:
 <a href="#databasesummary_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Summary</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">map[string]Database<wbr>Summary<wbr>Result<wbr>Response</span>
     </dt>
     <dd>{{% md %}}Summary of database results in the migration{{% /md %}}</dd>
 
@@ -25868,7 +26865,7 @@ The following output properties are available:
 <a href="#databases_go" style="color: inherit; text-decoration: inherit;">Databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Selected databases as a map from database name to database id{{% /md %}}</dd>
 
@@ -26025,7 +27022,7 @@ The following output properties are available:
 <a href="#databasesummary_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Summary</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">{[key: string]: Database<wbr>Summary<wbr>Result<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}Summary of database results in the migration{{% /md %}}</dd>
 
@@ -26035,7 +27032,7 @@ The following output properties are available:
 <a href="#databases_nodejs" style="color: inherit; text-decoration: inherit;">databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Selected databases as a map from database name to database id{{% /md %}}</dd>
 
@@ -26192,7 +27189,7 @@ The following output properties are available:
 <a href="#databasesummary_python" style="color: inherit; text-decoration: inherit;">database<wbr>Summary</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Dict[str, Database<wbr>Summary<wbr>Result<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Summary of database results in the migration{{% /md %}}</dd>
 
@@ -26202,7 +27199,7 @@ The following output properties are available:
 <a href="#databases_python" style="color: inherit; text-decoration: inherit;">databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Selected databases as a map from database name to database id{{% /md %}}</dd>
 
@@ -30716,7 +31713,7 @@ The following output properties are available:
 <a href="#agentjobs_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Jobs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Selected agent jobs as a map from name to id{{% /md %}}</dd>
 
@@ -30726,7 +31723,7 @@ The following output properties are available:
 <a href="#databases_csharp" style="color: inherit; text-decoration: inherit;">Databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Selected databases as a map from database name to database id{{% /md %}}</dd>
 
@@ -30766,7 +31763,7 @@ The following output properties are available:
 <a href="#logins_csharp" style="color: inherit; text-decoration: inherit;">Logins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Selected logins as a map from name to id{{% /md %}}</dd>
 
@@ -30796,7 +31793,7 @@ The following output properties are available:
 <a href="#serverroleresults_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Role<wbr>Results</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Start<wbr>Migration<wbr>Scenario<wbr>Server<wbr>Role<wbr>Result<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Map of server role migration results.{{% /md %}}</dd>
 
@@ -30883,7 +31880,7 @@ The following output properties are available:
 <a href="#agentjobs_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Jobs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Selected agent jobs as a map from name to id{{% /md %}}</dd>
 
@@ -30893,7 +31890,7 @@ The following output properties are available:
 <a href="#databases_go" style="color: inherit; text-decoration: inherit;">Databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Selected databases as a map from database name to database id{{% /md %}}</dd>
 
@@ -30933,7 +31930,7 @@ The following output properties are available:
 <a href="#logins_go" style="color: inherit; text-decoration: inherit;">Logins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Selected logins as a map from name to id{{% /md %}}</dd>
 
@@ -30963,7 +31960,7 @@ The following output properties are available:
 <a href="#serverroleresults_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Role<wbr>Results</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">map[string]Start<wbr>Migration<wbr>Scenario<wbr>Server<wbr>Role<wbr>Result<wbr>Response</span>
     </dt>
     <dd>{{% md %}}Map of server role migration results.{{% /md %}}</dd>
 
@@ -31050,7 +32047,7 @@ The following output properties are available:
 <a href="#agentjobs_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Jobs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Selected agent jobs as a map from name to id{{% /md %}}</dd>
 
@@ -31060,7 +32057,7 @@ The following output properties are available:
 <a href="#databases_nodejs" style="color: inherit; text-decoration: inherit;">databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Selected databases as a map from database name to database id{{% /md %}}</dd>
 
@@ -31100,7 +32097,7 @@ The following output properties are available:
 <a href="#logins_nodejs" style="color: inherit; text-decoration: inherit;">logins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Selected logins as a map from name to id{{% /md %}}</dd>
 
@@ -31130,7 +32127,7 @@ The following output properties are available:
 <a href="#serverroleresults_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Role<wbr>Results</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">{[key: string]: Start<wbr>Migration<wbr>Scenario<wbr>Server<wbr>Role<wbr>Result<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}Map of server role migration results.{{% /md %}}</dd>
 
@@ -31217,7 +32214,7 @@ The following output properties are available:
 <a href="#agentjobs_python" style="color: inherit; text-decoration: inherit;">agent<wbr>Jobs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Selected agent jobs as a map from name to id{{% /md %}}</dd>
 
@@ -31227,7 +32224,7 @@ The following output properties are available:
 <a href="#databases_python" style="color: inherit; text-decoration: inherit;">databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Selected databases as a map from database name to database id{{% /md %}}</dd>
 
@@ -31267,7 +32264,7 @@ The following output properties are available:
 <a href="#logins_python" style="color: inherit; text-decoration: inherit;">logins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Selected logins as a map from name to id{{% /md %}}</dd>
 
@@ -31297,7 +32294,7 @@ The following output properties are available:
 <a href="#serverroleresults_python" style="color: inherit; text-decoration: inherit;">server<wbr>Role<wbr>Results</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Dict[str, Start<wbr>Migration<wbr>Scenario<wbr>Server<wbr>Role<wbr>Result<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Map of server role migration results.{{% /md %}}</dd>
 
@@ -40413,6 +41410,165 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The SSIS store type of source, only SSIS catalog is supported now in DMS{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="startmigrationscenarioserverroleresultresponse">Start<wbr>Migration<wbr>Scenario<wbr>Server<wbr>Role<wbr>Result<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="exceptionsandwarnings_csharp">
+<a href="#exceptionsandwarnings_csharp" style="color: inherit; text-decoration: inherit;">Exceptions<wbr>And<wbr>Warnings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Migration exceptions and warnings.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of server role.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="state_csharp">
+<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Current state of migration{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="exceptionsandwarnings_go">
+<a href="#exceptionsandwarnings_go" style="color: inherit; text-decoration: inherit;">Exceptions<wbr>And<wbr>Warnings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">[]Reportable<wbr>Exception<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Migration exceptions and warnings.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of server role.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="state_go">
+<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Current state of migration{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="exceptionsandwarnings_nodejs">
+<a href="#exceptionsandwarnings_nodejs" style="color: inherit; text-decoration: inherit;">exceptions<wbr>And<wbr>Warnings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Migration exceptions and warnings.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of server role.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="state_nodejs">
+<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Current state of migration{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="exceptionsandwarnings_python">
+<a href="#exceptionsandwarnings_python" style="color: inherit; text-decoration: inherit;">exceptions<wbr>And<wbr>Warnings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List[Reportable<wbr>Exception<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Migration exceptions and warnings.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of server role.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="state_python">
+<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Current state of migration{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

@@ -12,6 +12,227 @@ meta_desc: "Explore the NetworkSecurityGroup resource of the network module, inc
 
 NetworkSecurityGroup resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create network security group
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var networkSecurityGroup = new AzureNextGen.Network.Latest.NetworkSecurityGroup("networkSecurityGroup", new AzureNextGen.Network.Latest.NetworkSecurityGroupArgs
+        {
+            Location = "eastus",
+            NetworkSecurityGroupName = "testnsg",
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewNetworkSecurityGroup(ctx, "networkSecurityGroup", &network.NetworkSecurityGroupArgs{
+			Location:                 pulumi.String("eastus"),
+			NetworkSecurityGroupName: pulumi.String("testnsg"),
+			ResourceGroupName:        pulumi.String("rg1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+network_security_group = azure_nextgen.network.latest.NetworkSecurityGroup("networkSecurityGroup",
+    location="eastus",
+    network_security_group_name="testnsg",
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const networkSecurityGroup = new azure_nextgen.network.latest.NetworkSecurityGroup("networkSecurityGroup", {
+    location: "eastus",
+    networkSecurityGroupName: "testnsg",
+    resourceGroupName: "rg1",
+});
+
+```
+
+{{% /example %}}
+
+### Create network security group with rule
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var networkSecurityGroup = new AzureNextGen.Network.Latest.NetworkSecurityGroup("networkSecurityGroup", new AzureNextGen.Network.Latest.NetworkSecurityGroupArgs
+        {
+            Location = "eastus",
+            NetworkSecurityGroupName = "testnsg",
+            ResourceGroupName = "rg1",
+            SecurityRules = 
+            {
+                new AzureNextGen.Network.Latest.Inputs.SecurityRuleArgs
+                {
+                    Access = "Allow",
+                    DestinationAddressPrefix = "*",
+                    DestinationPortRange = "80",
+                    Direction = "Inbound",
+                    Name = "rule1",
+                    Priority = 130,
+                    Protocol = "*",
+                    SourceAddressPrefix = "*",
+                    SourcePortRange = "*",
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewNetworkSecurityGroup(ctx, "networkSecurityGroup", &network.NetworkSecurityGroupArgs{
+			Location:                 pulumi.String("eastus"),
+			NetworkSecurityGroupName: pulumi.String("testnsg"),
+			ResourceGroupName:        pulumi.String("rg1"),
+			SecurityRules: network.SecurityRuleArray{
+				&network.SecurityRuleArgs{
+					Access:                   pulumi.String("Allow"),
+					DestinationAddressPrefix: pulumi.String("*"),
+					DestinationPortRange:     pulumi.String("80"),
+					Direction:                pulumi.String("Inbound"),
+					Name:                     pulumi.String("rule1"),
+					Priority:                 pulumi.Int(130),
+					Protocol:                 pulumi.String("*"),
+					SourceAddressPrefix:      pulumi.String("*"),
+					SourcePortRange:          pulumi.String("*"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+network_security_group = azure_nextgen.network.latest.NetworkSecurityGroup("networkSecurityGroup",
+    location="eastus",
+    network_security_group_name="testnsg",
+    resource_group_name="rg1",
+    security_rules=[{
+        "access": "Allow",
+        "destinationAddressPrefix": "*",
+        "destinationPortRange": "80",
+        "direction": "Inbound",
+        "name": "rule1",
+        "priority": 130,
+        "protocol": "*",
+        "sourceAddressPrefix": "*",
+        "sourcePortRange": "*",
+    }])
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const networkSecurityGroup = new azure_nextgen.network.latest.NetworkSecurityGroup("networkSecurityGroup", {
+    location: "eastus",
+    networkSecurityGroupName: "testnsg",
+    resourceGroupName: "rg1",
+    securityRules: [{
+        access: "Allow",
+        destinationAddressPrefix: "*",
+        destinationPortRange: "80",
+        direction: "Inbound",
+        name: "rule1",
+        priority: 130,
+        protocol: "*",
+        sourceAddressPrefix: "*",
+        sourcePortRange: "*",
+    }],
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NetworkSecurityGroup Resource {#create}
@@ -14692,7 +14913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -14709,7 +14930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -14726,7 +14947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -14743,7 +14964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

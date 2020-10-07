@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	relay "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/relay/latest"
+	relay "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/relay/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

@@ -50,7 +50,7 @@ class MyStack : Stack
 package main
 
 import (
-	kusto "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/kusto/v20180907preview"
+	kusto "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/kusto/v20180907preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

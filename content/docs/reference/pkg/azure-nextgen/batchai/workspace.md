@@ -12,6 +12,94 @@ meta_desc: "Explore the Workspace resource of the batchai module, including exam
 
 Batch AI Workspace information.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a workspace
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var workspace = new AzureNextGen.BatchAI.Latest.Workspace("workspace", new AzureNextGen.BatchAI.Latest.WorkspaceArgs
+        {
+            Location = "eastus",
+            ResourceGroupName = "demo_resource_group",
+            WorkspaceName = "demo_workspace",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	batchai "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batchai/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := batchai.NewWorkspace(ctx, "workspace", &batchai.WorkspaceArgs{
+			Location:          pulumi.String("eastus"),
+			ResourceGroupName: pulumi.String("demo_resource_group"),
+			WorkspaceName:     pulumi.String("demo_workspace"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+workspace = azure_nextgen.batchai.latest.Workspace("workspace",
+    location="eastus",
+    resource_group_name="demo_resource_group",
+    workspace_name="demo_workspace")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const workspace = new azure_nextgen.batchai.latest.Workspace("workspace", {
+    location: "eastus",
+    resourceGroupName: "demo_resource_group",
+    workspaceName: "demo_workspace",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Workspace Resource {#create}

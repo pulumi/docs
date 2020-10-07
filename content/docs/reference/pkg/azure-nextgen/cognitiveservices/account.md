@@ -35,6 +35,26 @@ class MyStack : Stack
             },
             Kind = "Emotion",
             Location = "West US",
+            Properties = new AzureNextGen.CognitiveServices.Latest.Inputs.CognitiveServicesAccountPropertiesArgs
+            {
+                Encryption = new AzureNextGen.CognitiveServices.Latest.Inputs.EncryptionArgs
+                {
+                    KeySource = "Microsoft.KeyVault",
+                    KeyVaultProperties = new AzureNextGen.CognitiveServices.Latest.Inputs.KeyVaultPropertiesArgs
+                    {
+                        KeyName = "KeyName",
+                        KeyVaultUri = "https://pltfrmscrts-use-pc-dev.vault.azure.net/",
+                        KeyVersion = "891CF236-D241-4738-9462-D506AF493DFA",
+                    },
+                },
+                UserOwnedStorage = 
+                {
+                    new AzureNextGen.CognitiveServices.Latest.Inputs.UserOwnedStorageArgs
+                    {
+                        ResourceId = "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount",
+                    },
+                },
+            },
             ResourceGroupName = "myResourceGroup",
             Sku = new AzureNextGen.CognitiveServices.Latest.Inputs.SkuArgs
             {
@@ -55,7 +75,7 @@ class MyStack : Stack
 package main
 
 import (
-	cognitiveservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/cognitiveservices/latest"
+	cognitiveservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cognitiveservices/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -66,8 +86,23 @@ func main() {
 			Identity: &cognitiveservices.IdentityArgs{
 				Type: pulumi.String("SystemAssigned"),
 			},
-			Kind:              pulumi.String("Emotion"),
-			Location:          pulumi.String("West US"),
+			Kind:     pulumi.String("Emotion"),
+			Location: pulumi.String("West US"),
+			Properties: &cognitiveservices.CognitiveServicesAccountPropertiesArgs{
+				Encryption: &cognitiveservices.EncryptionArgs{
+					KeySource: pulumi.String("Microsoft.KeyVault"),
+					KeyVaultProperties: &cognitiveservices.KeyVaultPropertiesArgs{
+						KeyName:     pulumi.String("KeyName"),
+						KeyVaultUri: pulumi.String("https://pltfrmscrts-use-pc-dev.vault.azure.net/"),
+						KeyVersion:  pulumi.String("891CF236-D241-4738-9462-D506AF493DFA"),
+					},
+				},
+				UserOwnedStorage: cognitiveservices.UserOwnedStorageArray{
+					&cognitiveservices.UserOwnedStorageArgs{
+						ResourceId: pulumi.String("/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount"),
+					},
+				},
+			},
 			ResourceGroupName: pulumi.String("myResourceGroup"),
 			Sku: &cognitiveservices.SkuArgs{
 				Name: pulumi.String("S0"),
@@ -97,6 +132,19 @@ account = azure_nextgen.cognitiveservices.latest.Account("account",
     },
     kind="Emotion",
     location="West US",
+    properties={
+        "encryption": {
+            "keySource": "Microsoft.KeyVault",
+            "keyVaultProperties": {
+                "keyName": "KeyName",
+                "keyVaultUri": "https://pltfrmscrts-use-pc-dev.vault.azure.net/",
+                "keyVersion": "891CF236-D241-4738-9462-D506AF493DFA",
+            },
+        },
+        "userOwnedStorage": [{
+            "resourceId": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount",
+        }],
+    },
     resource_group_name="myResourceGroup",
     sku={
         "name": "S0",
@@ -119,6 +167,19 @@ const account = new azure_nextgen.cognitiveservices.latest.Account("account", {
     },
     kind: "Emotion",
     location: "West US",
+    properties: {
+        encryption: {
+            keySource: "Microsoft.KeyVault",
+            keyVaultProperties: {
+                keyName: "KeyName",
+                keyVaultUri: "https://pltfrmscrts-use-pc-dev.vault.azure.net/",
+                keyVersion: "891CF236-D241-4738-9462-D506AF493DFA",
+            },
+        },
+        userOwnedStorage: [{
+            resourceId: "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount",
+        }],
+    },
     resourceGroupName: "myResourceGroup",
     sku: {
         name: "S0",
@@ -148,6 +209,7 @@ class MyStack : Stack
             },
             Kind = "CognitiveServices",
             Location = "West US",
+            Properties = ,
             ResourceGroupName = "myResourceGroup",
             Sku = new AzureNextGen.CognitiveServices.Latest.Inputs.SkuArgs
             {
@@ -168,7 +230,7 @@ class MyStack : Stack
 package main
 
 import (
-	cognitiveservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/cognitiveservices/latest"
+	cognitiveservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cognitiveservices/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -181,6 +243,7 @@ func main() {
 			},
 			Kind:              pulumi.String("CognitiveServices"),
 			Location:          pulumi.String("West US"),
+			Properties:        nil,
 			ResourceGroupName: pulumi.String("myResourceGroup"),
 			Sku: &cognitiveservices.SkuArgs{
 				Name: pulumi.String("S0"),
@@ -210,6 +273,7 @@ account = azure_nextgen.cognitiveservices.latest.Account("account",
     },
     kind="CognitiveServices",
     location="West US",
+    properties={},
     resource_group_name="myResourceGroup",
     sku={
         "name": "S0",
@@ -232,6 +296,7 @@ const account = new azure_nextgen.cognitiveservices.latest.Account("account", {
     },
     kind: "CognitiveServices",
     location: "West US",
+    properties: {},
     resourceGroupName: "myResourceGroup",
     sku: {
         name: "S0",

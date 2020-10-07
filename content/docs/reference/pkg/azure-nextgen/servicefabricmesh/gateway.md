@@ -116,7 +116,7 @@ class MyStack : Stack
 package main
 
 import (
-	servicefabricmesh "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/servicefabricmesh/v20180901preview"
+	servicefabricmesh "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabricmesh/v20180901preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

@@ -41,6 +41,13 @@ class MyStack : Stack
                 {
                     Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/p2sVpnGateways/p2sVpnGateway1/p2sConnectionConfigurations/P2SConnectionConfig1",
                     Name = "P2SConnectionConfig1",
+                    VpnClientAddressPool = new AzureNextGen.Network.Latest.Inputs.AddressSpaceArgs
+                    {
+                        AddressPrefixes = 
+                        {
+                            "101.3.0.0/16",
+                        },
+                    },
                 },
             },
             ResourceGroupName = "rg1",
@@ -72,7 +79,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -89,6 +96,11 @@ func main() {
 				&network.P2SConnectionConfigurationArgs{
 					Id:   pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/p2sVpnGateways/p2sVpnGateway1/p2sConnectionConfigurations/P2SConnectionConfig1"),
 					Name: pulumi.String("P2SConnectionConfig1"),
+					VpnClientAddressPool: &network.AddressSpaceArgs{
+						AddressPrefixes: pulumi.StringArray{
+							pulumi.String("101.3.0.0/16"),
+						},
+					},
 				},
 			},
 			ResourceGroupName: pulumi.String("rg1"),
@@ -130,6 +142,9 @@ p2s_vpn_gateway = azure_nextgen.network.latest.P2sVpnGateway("p2sVpnGateway",
     p2_s_connection_configurations=[{
         "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/p2sVpnGateways/p2sVpnGateway1/p2sConnectionConfigurations/P2SConnectionConfig1",
         "name": "P2SConnectionConfig1",
+        "vpnClientAddressPool": {
+            "addressPrefixes": ["101.3.0.0/16"],
+        },
     }],
     resource_group_name="rg1",
     tags={
@@ -163,6 +178,9 @@ const p2sVpnGateway = new azure_nextgen.network.latest.P2sVpnGateway("p2sVpnGate
     p2SConnectionConfigurations: [{
         id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/p2sVpnGateways/p2sVpnGateway1/p2sConnectionConfigurations/P2SConnectionConfig1",
         name: "P2SConnectionConfig1",
+        vpnClientAddressPool: {
+            addressPrefixes: ["101.3.0.0/16"],
+        },
     }],
     resourceGroupName: "rg1",
     tags: {
@@ -2769,7 +2787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2786,7 +2804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2803,7 +2821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2820,7 +2838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

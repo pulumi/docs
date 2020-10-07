@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -130,6 +130,7 @@ class MyStack : Stack
             {
                 new AzureNextGen.Network.Latest.Inputs.ExpressRouteLinkArgs
                 {
+                    AdminState = "Enabled",
                     Name = "link1",
                 },
             },
@@ -151,7 +152,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -163,7 +164,8 @@ func main() {
 			ExpressRoutePortName: pulumi.String("portName"),
 			Links: network.ExpressRouteLinkArray{
 				&network.ExpressRouteLinkArgs{
-					Name: pulumi.String("link1"),
+					AdminState: pulumi.String("Enabled"),
+					Name:       pulumi.String("link1"),
 				},
 			},
 			Location:          pulumi.String("westus"),
@@ -192,6 +194,7 @@ express_route_port = azure_nextgen.network.latest.ExpressRoutePort("expressRoute
     encapsulation="QinQ",
     express_route_port_name="portName",
     links=[{
+        "adminState": "Enabled",
         "name": "link1",
     }],
     location="westus",
@@ -213,6 +216,7 @@ const expressRoutePort = new azure_nextgen.network.latest.ExpressRoutePort("expr
     encapsulation: "QinQ",
     expressRoutePortName: "portName",
     links: [{
+        adminState: "Enabled",
         name: "link1",
     }],
     location: "westus",
@@ -2816,7 +2820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2833,7 +2837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2850,7 +2854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2867,7 +2871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

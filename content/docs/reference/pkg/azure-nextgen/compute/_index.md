@@ -52,6 +52,8 @@ Explore the resources and functions of the compute module in the Azure NextGen p
     <li><a href="getgalleryimageversion" title="GetGalleryImageVersion"><span class="symbol function"></span>GetGalleryImageVersion</a></li>
     <li><a href="getguestconfigurationassignment" title="GetGuestConfigurationAssignment"><span class="symbol function"></span>GetGuestConfigurationAssignment</a></li>
     <li><a href="getimage" title="GetImage"><span class="symbol function"></span>GetImage</a></li>
+    <li><a href="getloganalyticexportrequestratebyinterval" title="GetLogAnalyticExportRequestRateByInterval"><span class="symbol function"></span>GetLogAnalyticExportRequestRateByInterval</a></li>
+    <li><a href="getloganalyticexportthrottledrequests" title="GetLogAnalyticExportThrottledRequests"><span class="symbol function"></span>GetLogAnalyticExportThrottledRequests</a></li>
     <li><a href="getproximityplacementgroup" title="GetProximityPlacementGroup"><span class="symbol function"></span>GetProximityPlacementGroup</a></li>
     <li><a href="getsnapshot" title="GetSnapshot"><span class="symbol function"></span>GetSnapshot</a></li>
     <li><a href="getsshpublickey" title="GetSshPublicKey"><span class="symbol function"></span>GetSshPublicKey</a></li>
@@ -70,7 +72,7 @@ Explore the resources and functions of the compute module in the Azure NextGen p
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.1</dd>
 </dl>
 
 

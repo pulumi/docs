@@ -617,6 +617,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="links_csharp">
+<a href="#links_csharp" style="color: inherit; text-decoration: inherit;">Links</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#assessmentlinksresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Outputs.<wbr>Assessment<wbr>Links<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Links relevant to the assessment{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -634,16 +644,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="links_csharp">
-<a href="#links_csharp" style="color: inherit; text-decoration: inherit;">Links</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assessmentlinksresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Outputs.<wbr>Assessment<wbr>Links<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Links relevant to the assessment{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -674,6 +674,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="links_go">
+<a href="#links_go" style="color: inherit; text-decoration: inherit;">Links</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#assessmentlinksresponse">Assessment<wbr>Links<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Links relevant to the assessment{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -691,16 +701,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="links_go">
-<a href="#links_go" style="color: inherit; text-decoration: inherit;">Links</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assessmentlinksresponse">Assessment<wbr>Links<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Links relevant to the assessment{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -731,6 +731,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="links_nodejs">
+<a href="#links_nodejs" style="color: inherit; text-decoration: inherit;">links</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#assessmentlinksresponse">Assessment<wbr>Links<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Links relevant to the assessment{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -748,16 +758,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="links_nodejs">
-<a href="#links_nodejs" style="color: inherit; text-decoration: inherit;">links</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assessmentlinksresponse">Assessment<wbr>Links<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Links relevant to the assessment{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -788,6 +788,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="links_python">
+<a href="#links_python" style="color: inherit; text-decoration: inherit;">links</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#assessmentlinksresponse">Dict[Assessment<wbr>Links<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Links relevant to the assessment{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -805,16 +815,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="links_python">
-<a href="#links_python" style="color: inherit; text-decoration: inherit;">links</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assessmentlinksresponse">Dict[Assessment<wbr>Links<wbr>Response]</a></span>
-    </dt>
-    <dd>{{% md %}}Links relevant to the assessment{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

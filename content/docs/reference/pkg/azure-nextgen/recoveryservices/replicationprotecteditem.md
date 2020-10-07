@@ -12,6 +12,99 @@ meta_desc: "Explore the ReplicationProtectedItem resource of the recoveryservice
 
 Replication protected item.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Enables protection.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var replicationProtectedItem = new AzureNextGen.RecoveryServices.Latest.ReplicationProtectedItem("replicationProtectedItem", new AzureNextGen.RecoveryServices.Latest.ReplicationProtectedItemArgs
+        {
+            FabricName = "cloud1",
+            Properties = new AzureNextGen.RecoveryServices.Latest.Inputs.EnableProtectionInputPropertiesArgs
+            {
+                PolicyId = "/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationPolicies/protectionprofile1",
+                ProtectableItemId = "/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1/replicationProtectionContainers/cloud_6d224fc6-f326-5d35-96de-fbf51efb3179/replicationProtectableItems/f8491e4f-817a-40dd-a90c-af773978c75b",
+                ProviderSpecificDetails = 
+                {
+                    { "instanceType", "HyperVReplicaAzure" },
+                },
+            },
+            ProtectionContainerName = "cloud_6d224fc6-f326-5d35-96de-fbf51efb3179",
+            ReplicatedProtectedItemName = "f8491e4f-817a-40dd-a90c-af773978c75b",
+            ResourceGroupName = "resourceGroupPS1",
+            ResourceName = "vault1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+replication_protected_item = azure_nextgen.recoveryservices.latest.ReplicationProtectedItem("replicationProtectedItem",
+    fabric_name="cloud1",
+    properties={
+        "policyId": "/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationPolicies/protectionprofile1",
+        "protectableItemId": "/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1/replicationProtectionContainers/cloud_6d224fc6-f326-5d35-96de-fbf51efb3179/replicationProtectableItems/f8491e4f-817a-40dd-a90c-af773978c75b",
+        "providerSpecificDetails": {
+            "instanceType": "HyperVReplicaAzure",
+        },
+    },
+    protection_container_name="cloud_6d224fc6-f326-5d35-96de-fbf51efb3179",
+    replicated_protected_item_name="f8491e4f-817a-40dd-a90c-af773978c75b",
+    resource_group_name="resourceGroupPS1",
+    resource_name="vault1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const replicationProtectedItem = new azure_nextgen.recoveryservices.latest.ReplicationProtectedItem("replicationProtectedItem", {
+    fabricName: "cloud1",
+    properties: {
+        policyId: "/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationPolicies/protectionprofile1",
+        protectableItemId: "/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1/replicationProtectionContainers/cloud_6d224fc6-f326-5d35-96de-fbf51efb3179/replicationProtectableItems/f8491e4f-817a-40dd-a90c-af773978c75b",
+        providerSpecificDetails: {
+            instanceType: "HyperVReplicaAzure",
+        },
+    },
+    protectionContainerName: "cloud_6d224fc6-f326-5d35-96de-fbf51efb3179",
+    replicatedProtectedItemName: "f8491e4f-817a-40dd-a90c-af773978c75b",
+    resourceGroupName: "resourceGroupPS1",
+    resourceName: "vault1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ReplicationProtectedItem Resource {#create}

@@ -31,6 +31,22 @@ class MyStack : Stack
             BatchConfigurationName = "testBatchConfiguration",
             IntegrationAccountName = "testIntegrationAccount",
             Location = "westus",
+            Properties = new AzureNextGen.Logic.Latest.Inputs.BatchConfigurationPropertiesArgs
+            {
+                BatchGroupName = "DEFAULT",
+                ReleaseCriteria = new AzureNextGen.Logic.Latest.Inputs.BatchReleaseCriteriaArgs
+                {
+                    BatchSize = 234567,
+                    MessageCount = 10,
+                    Recurrence = new AzureNextGen.Logic.Latest.Inputs.WorkflowTriggerRecurrenceArgs
+                    {
+                        Frequency = "Minute",
+                        Interval = 1,
+                        StartTime = "2017-03-24T11:43:00",
+                        TimeZone = "India Standard Time",
+                    },
+                },
+            },
             ResourceGroupName = "testResourceGroup",
         });
     }
@@ -47,7 +63,7 @@ class MyStack : Stack
 package main
 
 import (
-	logic "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/logic/latest"
+	logic "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/logic/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -57,7 +73,20 @@ func main() {
 			BatchConfigurationName: pulumi.String("testBatchConfiguration"),
 			IntegrationAccountName: pulumi.String("testIntegrationAccount"),
 			Location:               pulumi.String("westus"),
-			ResourceGroupName:      pulumi.String("testResourceGroup"),
+			Properties: &logic.BatchConfigurationPropertiesArgs{
+				BatchGroupName: pulumi.String("DEFAULT"),
+				ReleaseCriteria: &logic.BatchReleaseCriteriaArgs{
+					BatchSize:    pulumi.Int(234567),
+					MessageCount: pulumi.Int(10),
+					Recurrence: &logic.WorkflowTriggerRecurrenceArgs{
+						Frequency: pulumi.String("Minute"),
+						Interval:  pulumi.Int(1),
+						StartTime: pulumi.String("2017-03-24T11:43:00"),
+						TimeZone:  pulumi.String("India Standard Time"),
+					},
+				},
+			},
+			ResourceGroupName: pulumi.String("testResourceGroup"),
 		})
 		if err != nil {
 			return err
@@ -80,6 +109,19 @@ integration_account_batch_configuration = azure_nextgen.logic.latest.Integration
     batch_configuration_name="testBatchConfiguration",
     integration_account_name="testIntegrationAccount",
     location="westus",
+    properties={
+        "batchGroupName": "DEFAULT",
+        "releaseCriteria": {
+            "batchSize": 234567,
+            "messageCount": 10,
+            "recurrence": {
+                "frequency": "Minute",
+                "interval": 1,
+                "startTime": "2017-03-24T11:43:00",
+                "timeZone": "India Standard Time",
+            },
+        },
+    },
     resource_group_name="testResourceGroup")
 
 ```
@@ -96,6 +138,19 @@ const integrationAccountBatchConfiguration = new azure_nextgen.logic.latest.Inte
     batchConfigurationName: "testBatchConfiguration",
     integrationAccountName: "testIntegrationAccount",
     location: "westus",
+    properties: {
+        batchGroupName: "DEFAULT",
+        releaseCriteria: {
+            batchSize: 234567,
+            messageCount: 10,
+            recurrence: {
+                frequency: "Minute",
+                interval: 1,
+                startTime: "2017-03-24T11:43:00",
+                timeZone: "India Standard Time",
+            },
+        },
+    },
     resourceGroupName: "testResourceGroup",
 });
 
@@ -780,7 +835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -837,7 +892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -894,7 +949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -951,7 +1006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1019,7 +1074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1076,7 +1131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1133,7 +1188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1190,7 +1245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

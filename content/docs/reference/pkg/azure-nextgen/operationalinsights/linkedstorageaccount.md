@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	operationalinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/operationalinsights/latest"
+	operationalinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationalinsights/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

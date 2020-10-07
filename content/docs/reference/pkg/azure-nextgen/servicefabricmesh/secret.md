@@ -29,6 +29,7 @@ class MyStack : Stack
         var secret = new AzureNextGen.ServiceFabricMesh.V20180901Preview.Secret("secret", new AzureNextGen.ServiceFabricMesh.V20180901Preview.SecretArgs
         {
             Location = "EastUS",
+            Properties = ,
             ResourceGroupName = "sbz_demo",
             SecretResourceName = "dbConnectionString",
             Tags = ,
@@ -47,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	servicefabricmesh "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/servicefabricmesh/v20180901preview"
+	servicefabricmesh "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabricmesh/v20180901preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -55,6 +56,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := servicefabricmesh.NewSecret(ctx, "secret", &servicefabricmesh.SecretArgs{
 			Location:           pulumi.String("EastUS"),
+			Properties:         nil,
 			ResourceGroupName:  pulumi.String("sbz_demo"),
 			SecretResourceName: pulumi.String("dbConnectionString"),
 			Tags:               nil,
@@ -78,6 +80,7 @@ import pulumi_azure_nextgen as azure_nextgen
 
 secret = azure_nextgen.servicefabricmesh.v20180901preview.Secret("secret",
     location="EastUS",
+    properties={},
     resource_group_name="sbz_demo",
     secret_resource_name="dbConnectionString",
     tags={})
@@ -94,6 +97,7 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const secret = new azure_nextgen.servicefabricmesh.v20180901preview.Secret("secret", {
     location: "EastUS",
+    properties: {},
     resourceGroupName: "sbz_demo",
     secretResourceName: "dbConnectionString",
     tags: {},

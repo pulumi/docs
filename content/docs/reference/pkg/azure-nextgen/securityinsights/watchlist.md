@@ -70,7 +70,7 @@ class MyStack : Stack
 package main
 
 import (
-	securityinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/securityinsights/v20190101preview"
+	securityinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/securityinsights/v20190101preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1631,7 +1631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#watchlistitempair_csharp" style="color: inherit; text-decoration: inherit;">Watchlist<wbr>Item<wbr>Pair</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}A key-value pair for a watchlist item{{% /md %}}</dd>
 
@@ -1661,7 +1661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entitymapping_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Mapping</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}A key-value pair for a watchlist item entity mapping{{% /md %}}</dd>
 
@@ -1748,7 +1748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#watchlistitempair_go" style="color: inherit; text-decoration: inherit;">Watchlist<wbr>Item<wbr>Pair</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}A key-value pair for a watchlist item{{% /md %}}</dd>
 
@@ -1778,7 +1778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entitymapping_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Mapping</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}A key-value pair for a watchlist item entity mapping{{% /md %}}</dd>
 
@@ -1865,7 +1865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#watchlistitempair_nodejs" style="color: inherit; text-decoration: inherit;">watchlist<wbr>Item<wbr>Pair</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}A key-value pair for a watchlist item{{% /md %}}</dd>
 
@@ -1895,7 +1895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entitymapping_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Mapping</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}A key-value pair for a watchlist item entity mapping{{% /md %}}</dd>
 
@@ -1982,7 +1982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#watchlistitempair_python" style="color: inherit; text-decoration: inherit;">watchlist<wbr>Item<wbr>Pair</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}A key-value pair for a watchlist item{{% /md %}}</dd>
 
@@ -2012,7 +2012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entitymapping_python" style="color: inherit; text-decoration: inherit;">entity<wbr>Mapping</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}A key-value pair for a watchlist item entity mapping{{% /md %}}</dd>
 
@@ -2140,7 +2140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#watchlistitempair_csharp" style="color: inherit; text-decoration: inherit;">Watchlist<wbr>Item<wbr>Pair</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}A key-value pair for a watchlist item{{% /md %}}</dd>
 
@@ -2170,7 +2170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entitymapping_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Mapping</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}A key-value pair for a watchlist item entity mapping{{% /md %}}</dd>
 
@@ -2287,7 +2287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#watchlistitempair_go" style="color: inherit; text-decoration: inherit;">Watchlist<wbr>Item<wbr>Pair</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}A key-value pair for a watchlist item{{% /md %}}</dd>
 
@@ -2317,7 +2317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entitymapping_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Mapping</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}A key-value pair for a watchlist item entity mapping{{% /md %}}</dd>
 
@@ -2434,7 +2434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#watchlistitempair_nodejs" style="color: inherit; text-decoration: inherit;">watchlist<wbr>Item<wbr>Pair</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}A key-value pair for a watchlist item{{% /md %}}</dd>
 
@@ -2464,7 +2464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entitymapping_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Mapping</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}A key-value pair for a watchlist item entity mapping{{% /md %}}</dd>
 
@@ -2581,7 +2581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#watchlistitempair_python" style="color: inherit; text-decoration: inherit;">watchlist<wbr>Item<wbr>Pair</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}A key-value pair for a watchlist item{{% /md %}}</dd>
 
@@ -2611,7 +2611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entitymapping_python" style="color: inherit; text-decoration: inherit;">entity<wbr>Mapping</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}A key-value pair for a watchlist item entity mapping{{% /md %}}</dd>
 

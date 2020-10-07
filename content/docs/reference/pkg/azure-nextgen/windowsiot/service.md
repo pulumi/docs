@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	windowsiot "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/windowsiot/latest"
+	windowsiot "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/windowsiot/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

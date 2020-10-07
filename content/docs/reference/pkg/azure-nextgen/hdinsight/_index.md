@@ -19,6 +19,7 @@ Explore the resources and functions of the hdinsight module in the Azure NextGen
 <ul class="api">
     <li><a href="getapplication" title="GetApplication"><span class="symbol function"></span>GetApplication</a></li>
     <li><a href="getcluster" title="GetCluster"><span class="symbol function"></span>GetCluster</a></li>
+    <li><a href="getclustergatewaysettings" title="GetClusterGatewaySettings"><span class="symbol function"></span>GetClusterGatewaySettings</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -28,7 +29,7 @@ Explore the resources and functions of the hdinsight module in the Azure NextGen
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.1</dd>
 </dl>
 
 

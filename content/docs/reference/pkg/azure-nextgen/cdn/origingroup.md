@@ -66,7 +66,7 @@ class MyStack : Stack
 package main
 
 import (
-	cdn "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/cdn/latest"
+	cdn "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cdn/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

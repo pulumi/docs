@@ -54,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	automanage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/automanage/v20200630preview"
+	automanage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automanage/v20200630preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

@@ -46,7 +46,7 @@ class MyStack : Stack
 package main
 
 import (
-	notebooks "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/notebooks/v20191011preview"
+	notebooks "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/notebooks/v20191011preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

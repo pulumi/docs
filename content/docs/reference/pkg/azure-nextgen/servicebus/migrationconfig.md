@@ -50,7 +50,7 @@ package main
 import (
 	"fmt"
 
-	servicebus "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/servicebus/latest"
+	servicebus "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicebus/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

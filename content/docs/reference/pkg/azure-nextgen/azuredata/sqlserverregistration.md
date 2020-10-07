@@ -50,7 +50,7 @@ class MyStack : Stack
 package main
 
 import (
-	azuredata "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/azuredata/v20190724preview"
+	azuredata "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/azuredata/v20190724preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

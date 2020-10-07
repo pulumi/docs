@@ -390,7 +390,7 @@ class MyStack : Stack
 package main
 
 import (
-	servicefabric "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/servicefabric/v20200101preview"
+	servicefabric "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric/v20200101preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

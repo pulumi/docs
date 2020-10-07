@@ -37,18 +37,18 @@ class MyStack : Stack
                 {
                     Configuration = 
                     {
-                        { "@odata.type", "#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration" },
+                        { "odataType", "#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration" },
                     },
                     Name = "ClearKeyOption",
                     Restriction = 
                     {
-                        { "@odata.type", "#Microsoft.Media.ContentKeyPolicyTokenRestriction" },
                         { "audience", "urn:audience" },
                         { "issuer", "urn:issuer" },
+                        { "odataType", "#Microsoft.Media.ContentKeyPolicyTokenRestriction" },
                         { "primaryVerificationKey", 
                         {
-                            { "@odata.type", "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey" },
                             { "keyValue", "AAAAAAAAAAAAAAAAAAAAAA==" },
+                            { "odataType", "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey" },
                         } },
                         { "restrictionTokenType", "Swt" },
                     },
@@ -80,16 +80,16 @@ content_key_policy = azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPoli
     description="ArmPolicyDescription",
     options=[{
         "configuration": {
-            "@odata.type": "#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration",
+            "odataType": "#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration",
         },
         "name": "ClearKeyOption",
         "restriction": {
-            "@odata.type": "#Microsoft.Media.ContentKeyPolicyTokenRestriction",
             "audience": "urn:audience",
             "issuer": "urn:issuer",
+            "odataType": "#Microsoft.Media.ContentKeyPolicyTokenRestriction",
             "primaryVerificationKey": {
-                "@odata.type": "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey",
                 "keyValue": "AAAAAAAAAAAAAAAAAAAAAA==",
+                "odataType": "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey",
             },
             "restrictionTokenType": "Swt",
         },
@@ -112,16 +112,16 @@ const contentKeyPolicy = new azure_nextgen.media.latest.ContentKeyPolicy("conten
     description: "ArmPolicyDescription",
     options: [{
         configuration: {
-            "@odata.type": "#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration",
+            odataType: "#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration",
         },
         name: "ClearKeyOption",
         restriction: {
-            "@odata.type": "#Microsoft.Media.ContentKeyPolicyTokenRestriction",
             audience: "urn:audience",
             issuer: "urn:issuer",
+            odataType: "#Microsoft.Media.ContentKeyPolicyTokenRestriction",
             primaryVerificationKey: {
-                "@odata.type": "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey",
                 keyValue: "AAAAAAAAAAAAAAAAAAAAAA==",
+                odataType: "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey",
             },
             restrictionTokenType: "Swt",
         },
@@ -154,7 +154,6 @@ class MyStack : Stack
                 {
                     Configuration = 
                     {
-                        { "@odata.type", "#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration" },
                         { "licenses", 
                         {
                             new AzureNextGen.Media.Latest.Inputs.ContentKeyPolicyPlayReadyLicenseArgs
@@ -163,7 +162,7 @@ class MyStack : Stack
                                 BeginDate = "2017-10-16T18:22:53.46Z",
                                 ContentKeyLocation = 
                                 {
-                                    { "@odata.type", "#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader" },
+                                    { "odataType", "#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader" },
                                 },
                                 ContentType = "UltraVioletDownload",
                                 LicenseType = "Persistent",
@@ -177,11 +176,12 @@ class MyStack : Stack
                                 },
                             },
                         } },
+                        { "odataType", "#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration" },
                     },
                     Name = "ArmPolicyOptionName",
                     Restriction = 
                     {
-                        { "@odata.type", "#Microsoft.Media.ContentKeyPolicyOpenRestriction" },
+                        { "odataType", "#Microsoft.Media.ContentKeyPolicyOpenRestriction" },
                     },
                 },
             },
@@ -211,12 +211,11 @@ content_key_policy = azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPoli
     description="ArmPolicyDescription",
     options=[{
         "configuration": {
-            "@odata.type": "#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration",
             "licenses": [{
                 "allowTestDevices": True,
                 "beginDate": "2017-10-16T18:22:53.46Z",
                 "contentKeyLocation": {
-                    "@odata.type": "#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader",
+                    "odataType": "#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader",
                 },
                 "contentType": "UltraVioletDownload",
                 "licenseType": "Persistent",
@@ -228,10 +227,11 @@ content_key_policy = azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPoli
                     "scmsRestriction": 2,
                 },
             }],
+            "odataType": "#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration",
         },
         "name": "ArmPolicyOptionName",
         "restriction": {
-            "@odata.type": "#Microsoft.Media.ContentKeyPolicyOpenRestriction",
+            "odataType": "#Microsoft.Media.ContentKeyPolicyOpenRestriction",
         },
     }],
     resource_group_name="contoso")
@@ -252,12 +252,11 @@ const contentKeyPolicy = new azure_nextgen.media.latest.ContentKeyPolicy("conten
     description: "ArmPolicyDescription",
     options: [{
         configuration: {
-            "@odata.type": "#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration",
             licenses: [{
                 allowTestDevices: true,
                 beginDate: "2017-10-16T18:22:53.46Z",
                 contentKeyLocation: {
-                    "@odata.type": "#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader",
+                    odataType: "#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader",
                 },
                 contentType: "UltraVioletDownload",
                 licenseType: "Persistent",
@@ -269,10 +268,11 @@ const contentKeyPolicy = new azure_nextgen.media.latest.ContentKeyPolicy("conten
                     scmsRestriction: 2,
                 },
             }],
+            odataType: "#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration",
         },
         name: "ArmPolicyOptionName",
         restriction: {
-            "@odata.type": "#Microsoft.Media.ContentKeyPolicyOpenRestriction",
+            odataType: "#Microsoft.Media.ContentKeyPolicyOpenRestriction",
         },
     }],
     resourceGroupName: "contoso",
@@ -303,13 +303,12 @@ class MyStack : Stack
                 {
                     Configuration = 
                     {
-                        { "@odata.type", "#Microsoft.Media.ContentKeyPolicyWidevineConfiguration" },
+                        { "odataType", "#Microsoft.Media.ContentKeyPolicyWidevineConfiguration" },
                         { "widevineTemplate", "{\"allowed_track_types\":\"SD_HD\",\"content_key_specs\":[{\"track_type\":\"SD\",\"security_level\":1,\"required_output_protection\":{\"hdcp\":\"HDCP_V2\"}}],\"policy_overrides\":{\"can_play\":true,\"can_persist\":true,\"can_renew\":false}}" },
                     },
                     Name = "widevineoption",
                     Restriction = 
                     {
-                        { "@odata.type", "#Microsoft.Media.ContentKeyPolicyTokenRestriction" },
                         { "alternateVerificationKeys", 
                         {
                             
@@ -320,11 +319,12 @@ class MyStack : Stack
                         } },
                         { "audience", "urn:audience" },
                         { "issuer", "urn:issuer" },
+                        { "odataType", "#Microsoft.Media.ContentKeyPolicyTokenRestriction" },
                         { "primaryVerificationKey", 
                         {
-                            { "@odata.type", "#Microsoft.Media.ContentKeyPolicyRsaTokenKey" },
                             { "exponent", "AQAB" },
                             { "modulus", "AQAD" },
+                            { "odataType", "#Microsoft.Media.ContentKeyPolicyRsaTokenKey" },
                         } },
                         { "restrictionTokenType", "Jwt" },
                     },
@@ -356,22 +356,22 @@ content_key_policy = azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPoli
     description="ArmPolicyDescription",
     options=[{
         "configuration": {
-            "@odata.type": "#Microsoft.Media.ContentKeyPolicyWidevineConfiguration",
+            "odataType": "#Microsoft.Media.ContentKeyPolicyWidevineConfiguration",
             "widevineTemplate": "{\"allowed_track_types\":\"SD_HD\",\"content_key_specs\":[{\"track_type\":\"SD\",\"security_level\":1,\"required_output_protection\":{\"hdcp\":\"HDCP_V2\"}}],\"policy_overrides\":{\"can_play\":true,\"can_persist\":true,\"can_renew\":false}}",
         },
         "name": "widevineoption",
         "restriction": {
-            "@odata.type": "#Microsoft.Media.ContentKeyPolicyTokenRestriction",
             "alternateVerificationKeys": [{
                 "@odata.type": "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey",
                 "keyValue": "AAAAAAAAAAAAAAAAAAAAAA==",
             }],
             "audience": "urn:audience",
             "issuer": "urn:issuer",
+            "odataType": "#Microsoft.Media.ContentKeyPolicyTokenRestriction",
             "primaryVerificationKey": {
-                "@odata.type": "#Microsoft.Media.ContentKeyPolicyRsaTokenKey",
                 "exponent": "AQAB",
                 "modulus": "AQAD",
+                "odataType": "#Microsoft.Media.ContentKeyPolicyRsaTokenKey",
             },
             "restrictionTokenType": "Jwt",
         },
@@ -394,22 +394,22 @@ const contentKeyPolicy = new azure_nextgen.media.latest.ContentKeyPolicy("conten
     description: "ArmPolicyDescription",
     options: [{
         configuration: {
-            "@odata.type": "#Microsoft.Media.ContentKeyPolicyWidevineConfiguration",
+            odataType: "#Microsoft.Media.ContentKeyPolicyWidevineConfiguration",
             widevineTemplate: "{\"allowed_track_types\":\"SD_HD\",\"content_key_specs\":[{\"track_type\":\"SD\",\"security_level\":1,\"required_output_protection\":{\"hdcp\":\"HDCP_V2\"}}],\"policy_overrides\":{\"can_play\":true,\"can_persist\":true,\"can_renew\":false}}",
         },
         name: "widevineoption",
         restriction: {
-            "@odata.type": "#Microsoft.Media.ContentKeyPolicyTokenRestriction",
             alternateVerificationKeys: [{
                 "@odata.type": "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey",
                 keyValue: "AAAAAAAAAAAAAAAAAAAAAA==",
             }],
             audience: "urn:audience",
             issuer: "urn:issuer",
+            odataType: "#Microsoft.Media.ContentKeyPolicyTokenRestriction",
             primaryVerificationKey: {
-                "@odata.type": "#Microsoft.Media.ContentKeyPolicyRsaTokenKey",
                 exponent: "AQAB",
                 modulus: "AQAD",
+                odataType: "#Microsoft.Media.ContentKeyPolicyRsaTokenKey",
             },
             restrictionTokenType: "Jwt",
         },
@@ -442,18 +442,18 @@ class MyStack : Stack
                 {
                     Configuration = 
                     {
-                        { "@odata.type", "#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration" },
+                        { "odataType", "#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration" },
                     },
                     Name = "ClearKeyOption",
                     Restriction = 
                     {
-                        { "@odata.type", "#Microsoft.Media.ContentKeyPolicyTokenRestriction" },
                         { "audience", "urn:audience" },
                         { "issuer", "urn:issuer" },
+                        { "odataType", "#Microsoft.Media.ContentKeyPolicyTokenRestriction" },
                         { "primaryVerificationKey", 
                         {
-                            { "@odata.type", "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey" },
                             { "keyValue", "AAAAAAAAAAAAAAAAAAAAAA==" },
+                            { "odataType", "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey" },
                         } },
                         { "restrictionTokenType", "Swt" },
                     },
@@ -462,13 +462,13 @@ class MyStack : Stack
                 {
                     Configuration = 
                     {
-                        { "@odata.type", "#Microsoft.Media.ContentKeyPolicyWidevineConfiguration" },
+                        { "odataType", "#Microsoft.Media.ContentKeyPolicyWidevineConfiguration" },
                         { "widevineTemplate", "{\"allowed_track_types\":\"SD_HD\",\"content_key_specs\":[{\"track_type\":\"SD\",\"security_level\":1,\"required_output_protection\":{\"hdcp\":\"HDCP_V2\"}}],\"policy_overrides\":{\"can_play\":true,\"can_persist\":true,\"can_renew\":false}}" },
                     },
                     Name = "widevineoption",
                     Restriction = 
                     {
-                        { "@odata.type", "#Microsoft.Media.ContentKeyPolicyOpenRestriction" },
+                        { "odataType", "#Microsoft.Media.ContentKeyPolicyOpenRestriction" },
                     },
                 },
             },
@@ -499,28 +499,28 @@ content_key_policy = azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPoli
     options=[
         {
             "configuration": {
-                "@odata.type": "#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration",
+                "odataType": "#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration",
             },
             "name": "ClearKeyOption",
             "restriction": {
-                "@odata.type": "#Microsoft.Media.ContentKeyPolicyTokenRestriction",
                 "audience": "urn:audience",
                 "issuer": "urn:issuer",
+                "odataType": "#Microsoft.Media.ContentKeyPolicyTokenRestriction",
                 "primaryVerificationKey": {
-                    "@odata.type": "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey",
                     "keyValue": "AAAAAAAAAAAAAAAAAAAAAA==",
+                    "odataType": "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey",
                 },
                 "restrictionTokenType": "Swt",
             },
         },
         {
             "configuration": {
-                "@odata.type": "#Microsoft.Media.ContentKeyPolicyWidevineConfiguration",
+                "odataType": "#Microsoft.Media.ContentKeyPolicyWidevineConfiguration",
                 "widevineTemplate": "{\"allowed_track_types\":\"SD_HD\",\"content_key_specs\":[{\"track_type\":\"SD\",\"security_level\":1,\"required_output_protection\":{\"hdcp\":\"HDCP_V2\"}}],\"policy_overrides\":{\"can_play\":true,\"can_persist\":true,\"can_renew\":false}}",
             },
             "name": "widevineoption",
             "restriction": {
-                "@odata.type": "#Microsoft.Media.ContentKeyPolicyOpenRestriction",
+                "odataType": "#Microsoft.Media.ContentKeyPolicyOpenRestriction",
             },
         },
     ],
@@ -543,28 +543,28 @@ const contentKeyPolicy = new azure_nextgen.media.latest.ContentKeyPolicy("conten
     options: [
         {
             configuration: {
-                "@odata.type": "#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration",
+                odataType: "#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration",
             },
             name: "ClearKeyOption",
             restriction: {
-                "@odata.type": "#Microsoft.Media.ContentKeyPolicyTokenRestriction",
                 audience: "urn:audience",
                 issuer: "urn:issuer",
+                odataType: "#Microsoft.Media.ContentKeyPolicyTokenRestriction",
                 primaryVerificationKey: {
-                    "@odata.type": "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey",
                     keyValue: "AAAAAAAAAAAAAAAAAAAAAA==",
+                    odataType: "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey",
                 },
                 restrictionTokenType: "Swt",
             },
         },
         {
             configuration: {
-                "@odata.type": "#Microsoft.Media.ContentKeyPolicyWidevineConfiguration",
+                odataType: "#Microsoft.Media.ContentKeyPolicyWidevineConfiguration",
                 widevineTemplate: "{\"allowed_track_types\":\"SD_HD\",\"content_key_specs\":[{\"track_type\":\"SD\",\"security_level\":1,\"required_output_protection\":{\"hdcp\":\"HDCP_V2\"}}],\"policy_overrides\":{\"can_play\":true,\"can_persist\":true,\"can_renew\":false}}",
             },
             name: "widevineoption",
             restriction: {
-                "@odata.type": "#Microsoft.Media.ContentKeyPolicyOpenRestriction",
+                odataType: "#Microsoft.Media.ContentKeyPolicyOpenRestriction",
             },
         },
     ],

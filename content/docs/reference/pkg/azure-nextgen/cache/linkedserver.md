@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	cache "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/cache/latest"
+	cache "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cache/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

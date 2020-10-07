@@ -29,6 +29,12 @@ class MyStack : Stack
         var certificate = new AzureNextGen.AppPlatform.Latest.Certificate("certificate", new AzureNextGen.AppPlatform.Latest.CertificateArgs
         {
             CertificateName = "mycertificate",
+            Properties = new AzureNextGen.AppPlatform.Latest.Inputs.CertificatePropertiesArgs
+            {
+                CertVersion = "08a219d06d874795a96db47e06fbb01e",
+                KeyVaultCertName = "mycert",
+                VaultUri = "https://myvault.vault.azure.net",
+            },
             ResourceGroupName = "myResourceGroup",
             ServiceName = "myservice",
         });
@@ -46,14 +52,19 @@ class MyStack : Stack
 package main
 
 import (
-	appplatform "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/appplatform/latest"
+	appplatform "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/appplatform/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := appplatform.NewCertificate(ctx, "certificate", &appplatform.CertificateArgs{
-			CertificateName:   pulumi.String("mycertificate"),
+			CertificateName: pulumi.String("mycertificate"),
+			Properties: &appplatform.CertificatePropertiesArgs{
+				CertVersion:      pulumi.String("08a219d06d874795a96db47e06fbb01e"),
+				KeyVaultCertName: pulumi.String("mycert"),
+				VaultUri:         pulumi.String("https://myvault.vault.azure.net"),
+			},
 			ResourceGroupName: pulumi.String("myResourceGroup"),
 			ServiceName:       pulumi.String("myservice"),
 		})
@@ -76,6 +87,11 @@ import pulumi_azure_nextgen as azure_nextgen
 
 certificate = azure_nextgen.appplatform.latest.Certificate("certificate",
     certificate_name="mycertificate",
+    properties={
+        "certVersion": "08a219d06d874795a96db47e06fbb01e",
+        "keyVaultCertName": "mycert",
+        "vaultUri": "https://myvault.vault.azure.net",
+    },
     resource_group_name="myResourceGroup",
     service_name="myservice")
 
@@ -91,6 +107,11 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const certificate = new azure_nextgen.appplatform.latest.Certificate("certificate", {
     certificateName: "mycertificate",
+    properties: {
+        certVersion: "08a219d06d874795a96db47e06fbb01e",
+        keyVaultCertName: "mycert",
+        vaultUri: "https://myvault.vault.azure.net",
+    },
     resourceGroupName: "myResourceGroup",
     serviceName: "myservice",
 });

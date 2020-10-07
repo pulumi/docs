@@ -29,6 +29,14 @@ class MyStack : Stack
         var privateEndpointConnection = new AzureNextGen.Search.Latest.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.Search.Latest.PrivateEndpointConnectionArgs
         {
             PrivateEndpointConnectionName = "testEndpoint.50bf4fbe-d7c1-4b48-a642-4f5892642546",
+            Properties = new AzureNextGen.Search.Latest.Inputs.PrivateEndpointConnectionPropertiesArgs
+            {
+                PrivateLinkServiceConnectionState = new AzureNextGen.Search.Latest.Inputs.PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionStateArgs
+                {
+                    Description = "Rejected for some reason",
+                    Status = "Rejected",
+                },
+            },
             ResourceGroupName = "rg1",
             SearchServiceName = "mysearchservice",
         });
@@ -46,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	search "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/search/latest"
+	search "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/search/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -54,8 +62,14 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := search.NewPrivateEndpointConnection(ctx, "privateEndpointConnection", &search.PrivateEndpointConnectionArgs{
 			PrivateEndpointConnectionName: pulumi.String("testEndpoint.50bf4fbe-d7c1-4b48-a642-4f5892642546"),
-			ResourceGroupName:             pulumi.String("rg1"),
-			SearchServiceName:             pulumi.String("mysearchservice"),
+			Properties: &search.PrivateEndpointConnectionPropertiesArgs{
+				PrivateLinkServiceConnectionState: &search.PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionStateArgs{
+					Description: pulumi.String("Rejected for some reason"),
+					Status:      pulumi.String("Rejected"),
+				},
+			},
+			ResourceGroupName: pulumi.String("rg1"),
+			SearchServiceName: pulumi.String("mysearchservice"),
 		})
 		if err != nil {
 			return err
@@ -76,6 +90,12 @@ import pulumi_azure_nextgen as azure_nextgen
 
 private_endpoint_connection = azure_nextgen.search.latest.PrivateEndpointConnection("privateEndpointConnection",
     private_endpoint_connection_name="testEndpoint.50bf4fbe-d7c1-4b48-a642-4f5892642546",
+    properties={
+        "privateLinkServiceConnectionState": {
+            "description": "Rejected for some reason",
+            "status": "Rejected",
+        },
+    },
     resource_group_name="rg1",
     search_service_name="mysearchservice")
 
@@ -91,6 +111,12 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const privateEndpointConnection = new azure_nextgen.search.latest.PrivateEndpointConnection("privateEndpointConnection", {
     privateEndpointConnectionName: "testEndpoint.50bf4fbe-d7c1-4b48-a642-4f5892642546",
+    properties: {
+        privateLinkServiceConnectionState: {
+            description: "Rejected for some reason",
+            status: "Rejected",
+        },
+    },
     resourceGroupName: "rg1",
     searchServiceName: "mysearchservice",
 });

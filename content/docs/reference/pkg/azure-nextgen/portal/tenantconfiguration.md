@@ -45,7 +45,7 @@ class MyStack : Stack
 package main
 
 import (
-	portal "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/portal/v20200901preview"
+	portal "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/portal/v20200901preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

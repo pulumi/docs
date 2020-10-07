@@ -33,7 +33,51 @@ class MyStack : Stack
             {
                 new AzureNextGen.ContainerInstance.Latest.Inputs.ContainerArgs
                 {
+                    Command = {},
+                    EnvironmentVariables = {},
+                    Image = "nginx",
                     Name = "demo1",
+                    Ports = 
+                    {
+                        new AzureNextGen.ContainerInstance.Latest.Inputs.ContainerPortArgs
+                        {
+                            Port = 80,
+                        },
+                    },
+                    Resources = new AzureNextGen.ContainerInstance.Latest.Inputs.ResourceRequirementsArgs
+                    {
+                        Requests = new AzureNextGen.ContainerInstance.Latest.Inputs.ResourceRequestsArgs
+                        {
+                            Cpu = 1,
+                            Gpu = new AzureNextGen.ContainerInstance.Latest.Inputs.GpuResourceArgs
+                            {
+                                Count = 1,
+                                Sku = "K80",
+                            },
+                            MemoryInGB = 1.5,
+                        },
+                    },
+                    VolumeMounts = 
+                    {
+                        new AzureNextGen.ContainerInstance.Latest.Inputs.VolumeMountArgs
+                        {
+                            MountPath = "/mnt/volume1",
+                            Name = "volume1",
+                            ReadOnly = false,
+                        },
+                        new AzureNextGen.ContainerInstance.Latest.Inputs.VolumeMountArgs
+                        {
+                            MountPath = "/mnt/volume2",
+                            Name = "volume2",
+                            ReadOnly = false,
+                        },
+                        new AzureNextGen.ContainerInstance.Latest.Inputs.VolumeMountArgs
+                        {
+                            MountPath = "/mnt/volume3",
+                            Name = "volume3",
+                            ReadOnly = true,
+                        },
+                    },
                 },
             },
             Diagnostics = new AzureNextGen.ContainerInstance.Latest.Inputs.ContainerGroupDiagnosticsArgs
@@ -125,7 +169,7 @@ class MyStack : Stack
 package main
 
 import (
-	containerinstance "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/containerinstance/latest"
+	containerinstance "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerinstance/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -135,7 +179,42 @@ func main() {
 			ContainerGroupName: pulumi.String("demo1"),
 			Containers: containerinstance.ContainerArray{
 				&containerinstance.ContainerArgs{
-					Name: pulumi.String("demo1"),
+					Command:              []interface{}{},
+					EnvironmentVariables: containerinstance.EnvironmentVariableArray{},
+					Image:                pulumi.String("nginx"),
+					Name:                 pulumi.String("demo1"),
+					Ports: containerinstance.ContainerPortArray{
+						&containerinstance.ContainerPortArgs{
+							Port: pulumi.Int(80),
+						},
+					},
+					Resources: &containerinstance.ResourceRequirementsArgs{
+						Requests: &containerinstance.ResourceRequestsArgs{
+							Cpu: pulumi.Float64(1),
+							Gpu: &containerinstance.GpuResourceArgs{
+								Count: pulumi.Int(1),
+								Sku:   pulumi.String("K80"),
+							},
+							MemoryInGB: pulumi.Float64(1.5),
+						},
+					},
+					VolumeMounts: containerinstance.VolumeMountArray{
+						&containerinstance.VolumeMountArgs{
+							MountPath: pulumi.String("/mnt/volume1"),
+							Name:      pulumi.String("volume1"),
+							ReadOnly:  pulumi.Bool(false),
+						},
+						&containerinstance.VolumeMountArgs{
+							MountPath: pulumi.String("/mnt/volume2"),
+							Name:      pulumi.String("volume2"),
+							ReadOnly:  pulumi.Bool(false),
+						},
+						&containerinstance.VolumeMountArgs{
+							MountPath: pulumi.String("/mnt/volume3"),
+							Name:      pulumi.String("volume3"),
+							ReadOnly:  pulumi.Bool(true),
+						},
+					},
 				},
 			},
 			Diagnostics: &containerinstance.ContainerGroupDiagnosticsArgs{
@@ -217,7 +296,40 @@ import pulumi_azure_nextgen as azure_nextgen
 container_group = azure_nextgen.containerinstance.latest.ContainerGroup("containerGroup",
     container_group_name="demo1",
     containers=[{
+        "command": [],
+        "environmentVariables": [],
+        "image": "nginx",
         "name": "demo1",
+        "ports": [{
+            "port": 80,
+        }],
+        "resources": {
+            "requests": {
+                "cpu": 1,
+                "gpu": {
+                    "count": 1,
+                    "sku": "K80",
+                },
+                "memoryInGB": 1.5,
+            },
+        },
+        "volumeMounts": [
+            {
+                "mountPath": "/mnt/volume1",
+                "name": "volume1",
+                "readOnly": False,
+            },
+            {
+                "mountPath": "/mnt/volume2",
+                "name": "volume2",
+                "readOnly": False,
+            },
+            {
+                "mountPath": "/mnt/volume3",
+                "name": "volume3",
+                "readOnly": True,
+            },
+        ],
     }],
     diagnostics={
         "logAnalytics": {
@@ -287,7 +399,40 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const containerGroup = new azure_nextgen.containerinstance.latest.ContainerGroup("containerGroup", {
     containerGroupName: "demo1",
     containers: [{
+        command: [],
+        environmentVariables: [],
+        image: "nginx",
         name: "demo1",
+        ports: [{
+            port: 80,
+        }],
+        resources: {
+            requests: {
+                cpu: 1,
+                gpu: {
+                    count: 1,
+                    sku: "K80",
+                },
+                memoryInGB: 1.5,
+            },
+        },
+        volumeMounts: [
+            {
+                mountPath: "/mnt/volume1",
+                name: "volume1",
+                readOnly: false,
+            },
+            {
+                mountPath: "/mnt/volume2",
+                name: "volume2",
+                readOnly: false,
+            },
+            {
+                mountPath: "/mnt/volume3",
+                name: "volume3",
+                readOnly: true,
+            },
+        ],
     }],
     diagnostics: {
         logAnalytics: {
@@ -10172,7 +10317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#emptydir_csharp" style="color: inherit; text-decoration: inherit;">Empty<wbr>Dir</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}The empty directory volume.{{% /md %}}</dd>
 
@@ -10229,7 +10374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#emptydir_go" style="color: inherit; text-decoration: inherit;">Empty<wbr>Dir</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}The empty directory volume.{{% /md %}}</dd>
 
@@ -10286,7 +10431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#emptydir_nodejs" style="color: inherit; text-decoration: inherit;">empty<wbr>Dir</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}The empty directory volume.{{% /md %}}</dd>
 
@@ -10343,7 +10488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#emptydir_python" style="color: inherit; text-decoration: inherit;">empty<wbr>Dir</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}The empty directory volume.{{% /md %}}</dd>
 
@@ -10729,7 +10874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#emptydir_csharp" style="color: inherit; text-decoration: inherit;">Empty<wbr>Dir</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}The empty directory volume.{{% /md %}}</dd>
 
@@ -10786,7 +10931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#emptydir_go" style="color: inherit; text-decoration: inherit;">Empty<wbr>Dir</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}The empty directory volume.{{% /md %}}</dd>
 
@@ -10843,7 +10988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#emptydir_nodejs" style="color: inherit; text-decoration: inherit;">empty<wbr>Dir</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}The empty directory volume.{{% /md %}}</dd>
 
@@ -10900,7 +11045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#emptydir_python" style="color: inherit; text-decoration: inherit;">empty<wbr>Dir</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}The empty directory volume.{{% /md %}}</dd>
 

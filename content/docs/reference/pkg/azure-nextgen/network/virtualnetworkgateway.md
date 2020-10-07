@@ -12,6 +12,270 @@ meta_desc: "Explore the VirtualNetworkGateway resource of the network module, in
 
 A common class for general resource information.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### UpdateVirtualNetworkGateway
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualNetworkGateway = new AzureNextGen.Network.Latest.VirtualNetworkGateway("virtualNetworkGateway", new AzureNextGen.Network.Latest.VirtualNetworkGatewayArgs
+        {
+            ActiveActive = false,
+            BgpSettings = new AzureNextGen.Network.Latest.Inputs.BgpSettingsArgs
+            {
+                Asn = 65515,
+                BgpPeeringAddress = "10.0.1.30",
+                PeerWeight = 0,
+            },
+            CustomRoutes = new AzureNextGen.Network.Latest.Inputs.AddressSpaceArgs
+            {
+                AddressPrefixes = 
+                {
+                    "101.168.0.6/32",
+                },
+            },
+            EnableBgp = false,
+            EnableDnsForwarding = true,
+            GatewayType = "Vpn",
+            IpConfigurations = 
+            {
+                new AzureNextGen.Network.Latest.Inputs.VirtualNetworkGatewayIPConfigurationArgs
+                {
+                    Name = "gwipconfig1",
+                    PrivateIPAllocationMethod = "Dynamic",
+                    PublicIPAddress = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    {
+                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/gwpip",
+                    },
+                    Subnet = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    {
+                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/GatewaySubnet",
+                    },
+                },
+            },
+            Location = "centralus",
+            ResourceGroupName = "rg1",
+            Sku = new AzureNextGen.Network.Latest.Inputs.VirtualNetworkGatewaySkuArgs
+            {
+                Name = "VpnGw1",
+                Tier = "VpnGw1",
+            },
+            VirtualNetworkGatewayName = "vpngw",
+            VpnClientConfiguration = new AzureNextGen.Network.Latest.Inputs.VpnClientConfigurationArgs
+            {
+                RadiusServers = 
+                {
+                    new AzureNextGen.Network.Latest.Inputs.RadiusServerArgs
+                    {
+                        RadiusServerAddress = "10.2.0.0",
+                        RadiusServerScore = 20,
+                        RadiusServerSecret = "radiusServerSecret",
+                    },
+                },
+                VpnClientProtocols = 
+                {
+                    "OpenVPN",
+                },
+                VpnClientRevokedCertificates = {},
+                VpnClientRootCertificates = {},
+            },
+            VpnType = "RouteBased",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewVirtualNetworkGateway(ctx, "virtualNetworkGateway", &network.VirtualNetworkGatewayArgs{
+			ActiveActive: pulumi.Bool(false),
+			BgpSettings: &network.BgpSettingsArgs{
+				Asn:               pulumi.Int(65515),
+				BgpPeeringAddress: pulumi.String("10.0.1.30"),
+				PeerWeight:        pulumi.Int(0),
+			},
+			CustomRoutes: &network.AddressSpaceArgs{
+				AddressPrefixes: pulumi.StringArray{
+					pulumi.String("101.168.0.6/32"),
+				},
+			},
+			EnableBgp:           pulumi.Bool(false),
+			EnableDnsForwarding: pulumi.Bool(true),
+			GatewayType:         pulumi.String("Vpn"),
+			IpConfigurations: network.VirtualNetworkGatewayIPConfigurationArray{
+				&network.VirtualNetworkGatewayIPConfigurationArgs{
+					Name:                      pulumi.String("gwipconfig1"),
+					PrivateIPAllocationMethod: pulumi.String("Dynamic"),
+					PublicIPAddress: &network.SubResourceArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/gwpip"),
+					},
+					Subnet: &network.SubResourceArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/GatewaySubnet"),
+					},
+				},
+			},
+			Location:          pulumi.String("centralus"),
+			ResourceGroupName: pulumi.String("rg1"),
+			Sku: &network.VirtualNetworkGatewaySkuArgs{
+				Name: pulumi.String("VpnGw1"),
+				Tier: pulumi.String("VpnGw1"),
+			},
+			VirtualNetworkGatewayName: pulumi.String("vpngw"),
+			VpnClientConfiguration: &network.VpnClientConfigurationArgs{
+				RadiusServers: network.RadiusServerArray{
+					&network.RadiusServerArgs{
+						RadiusServerAddress: pulumi.String("10.2.0.0"),
+						RadiusServerScore:   pulumi.Int(20),
+						RadiusServerSecret:  pulumi.String("radiusServerSecret"),
+					},
+				},
+				VpnClientProtocols: pulumi.StringArray{
+					pulumi.String("OpenVPN"),
+				},
+				VpnClientRevokedCertificates: network.VpnClientRevokedCertificateArray{},
+				VpnClientRootCertificates:    network.VpnClientRootCertificateArray{},
+			},
+			VpnType: pulumi.String("RouteBased"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+virtual_network_gateway = azure_nextgen.network.latest.VirtualNetworkGateway("virtualNetworkGateway",
+    active_active=False,
+    bgp_settings={
+        "asn": 65515,
+        "bgpPeeringAddress": "10.0.1.30",
+        "peerWeight": 0,
+    },
+    custom_routes={
+        "addressPrefixes": ["101.168.0.6/32"],
+    },
+    enable_bgp=False,
+    enable_dns_forwarding=True,
+    gateway_type="Vpn",
+    ip_configurations=[{
+        "name": "gwipconfig1",
+        "privateIPAllocationMethod": "Dynamic",
+        "publicIPAddress": {
+            "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/gwpip",
+        },
+        "subnet": {
+            "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/GatewaySubnet",
+        },
+    }],
+    location="centralus",
+    resource_group_name="rg1",
+    sku={
+        "name": "VpnGw1",
+        "tier": "VpnGw1",
+    },
+    virtual_network_gateway_name="vpngw",
+    vpn_client_configuration={
+        "radiusServers": [{
+            "radiusServerAddress": "10.2.0.0",
+            "radiusServerScore": 20,
+            "radiusServerSecret": "radiusServerSecret",
+        }],
+        "vpnClientProtocols": ["OpenVPN"],
+        "vpnClientRevokedCertificates": [],
+        "vpnClientRootCertificates": [],
+    },
+    vpn_type="RouteBased")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const virtualNetworkGateway = new azure_nextgen.network.latest.VirtualNetworkGateway("virtualNetworkGateway", {
+    activeActive: false,
+    bgpSettings: {
+        asn: 65515,
+        bgpPeeringAddress: "10.0.1.30",
+        peerWeight: 0,
+    },
+    customRoutes: {
+        addressPrefixes: ["101.168.0.6/32"],
+    },
+    enableBgp: false,
+    enableDnsForwarding: true,
+    gatewayType: "Vpn",
+    ipConfigurations: [{
+        name: "gwipconfig1",
+        privateIPAllocationMethod: "Dynamic",
+        publicIPAddress: {
+            id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/gwpip",
+        },
+        subnet: {
+            id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/GatewaySubnet",
+        },
+    }],
+    location: "centralus",
+    resourceGroupName: "rg1",
+    sku: {
+        name: "VpnGw1",
+        tier: "VpnGw1",
+    },
+    virtualNetworkGatewayName: "vpngw",
+    vpnClientConfiguration: {
+        radiusServers: [{
+            radiusServerAddress: "10.2.0.0",
+            radiusServerScore: 20,
+            radiusServerSecret: "radiusServerSecret",
+        }],
+        vpnClientProtocols: ["OpenVPN"],
+        vpnClientRevokedCertificates: [],
+        vpnClientRootCertificates: [],
+    },
+    vpnType: "RouteBased",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VirtualNetworkGateway Resource {#create}
@@ -3279,7 +3543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3296,7 +3560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3313,7 +3577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3330,7 +3594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

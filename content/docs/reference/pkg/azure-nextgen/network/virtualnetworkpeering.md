@@ -12,6 +12,123 @@ meta_desc: "Explore the VirtualNetworkPeering resource of the network module, in
 
 Peerings in a virtual network resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create peering
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualNetworkPeering = new AzureNextGen.Network.Latest.VirtualNetworkPeering("virtualNetworkPeering", new AzureNextGen.Network.Latest.VirtualNetworkPeeringArgs
+        {
+            AllowForwardedTraffic = true,
+            AllowGatewayTransit = false,
+            AllowVirtualNetworkAccess = true,
+            RemoteVirtualNetwork = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+            {
+                Id = "/subscriptions/subid/resourceGroups/peerTest/providers/Microsoft.Network/virtualNetworks/vnet2",
+            },
+            ResourceGroupName = "peerTest",
+            UseRemoteGateways = false,
+            VirtualNetworkName = "vnet1",
+            VirtualNetworkPeeringName = "peer",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewVirtualNetworkPeering(ctx, "virtualNetworkPeering", &network.VirtualNetworkPeeringArgs{
+			AllowForwardedTraffic:     pulumi.Bool(true),
+			AllowGatewayTransit:       pulumi.Bool(false),
+			AllowVirtualNetworkAccess: pulumi.Bool(true),
+			RemoteVirtualNetwork: &network.SubResourceArgs{
+				Id: pulumi.String("/subscriptions/subid/resourceGroups/peerTest/providers/Microsoft.Network/virtualNetworks/vnet2"),
+			},
+			ResourceGroupName:         pulumi.String("peerTest"),
+			UseRemoteGateways:         pulumi.Bool(false),
+			VirtualNetworkName:        pulumi.String("vnet1"),
+			VirtualNetworkPeeringName: pulumi.String("peer"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+virtual_network_peering = azure_nextgen.network.latest.VirtualNetworkPeering("virtualNetworkPeering",
+    allow_forwarded_traffic=True,
+    allow_gateway_transit=False,
+    allow_virtual_network_access=True,
+    remote_virtual_network={
+        "id": "/subscriptions/subid/resourceGroups/peerTest/providers/Microsoft.Network/virtualNetworks/vnet2",
+    },
+    resource_group_name="peerTest",
+    use_remote_gateways=False,
+    virtual_network_name="vnet1",
+    virtual_network_peering_name="peer")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const virtualNetworkPeering = new azure_nextgen.network.latest.VirtualNetworkPeering("virtualNetworkPeering", {
+    allowForwardedTraffic: true,
+    allowGatewayTransit: false,
+    allowVirtualNetworkAccess: true,
+    remoteVirtualNetwork: {
+        id: "/subscriptions/subid/resourceGroups/peerTest/providers/Microsoft.Network/virtualNetworks/vnet2",
+    },
+    resourceGroupName: "peerTest",
+    useRemoteGateways: false,
+    virtualNetworkName: "vnet1",
+    virtualNetworkPeeringName: "peer",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VirtualNetworkPeering Resource {#create}
@@ -1167,7 +1284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1184,7 +1301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1201,7 +1318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1218,7 +1335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

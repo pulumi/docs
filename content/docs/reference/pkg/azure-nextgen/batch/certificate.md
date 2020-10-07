@@ -12,6 +12,296 @@ meta_desc: "Explore the Certificate resource of the batch module, including exam
 
 Contains information about a certificate.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CreateCertificate - Full
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var certificate = new AzureNextGen.Batch.Latest.Certificate("certificate", new AzureNextGen.Batch.Latest.CertificateArgs
+        {
+            AccountName = "sampleacct",
+            CertificateName = "sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e",
+            Data = "MIIJsgIBAzCCCW4GCSqGSIb3DQE...",
+            Format = "Pfx",
+            Password = "KG0UY40e...",
+            ResourceGroupName = "default-azurebatch-japaneast",
+            Thumbprint = "0a0e4f50d51beadeac1d35afc5116098e7902e6e",
+            ThumbprintAlgorithm = "sha1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := batch.NewCertificate(ctx, "certificate", &batch.CertificateArgs{
+			AccountName:         pulumi.String("sampleacct"),
+			CertificateName:     pulumi.String("sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e"),
+			Data:                pulumi.String("MIIJsgIBAzCCCW4GCSqGSIb3DQE..."),
+			Format:              pulumi.String("Pfx"),
+			Password:            pulumi.String("KG0UY40e..."),
+			ResourceGroupName:   pulumi.String("default-azurebatch-japaneast"),
+			Thumbprint:          pulumi.String("0a0e4f50d51beadeac1d35afc5116098e7902e6e"),
+			ThumbprintAlgorithm: pulumi.String("sha1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+certificate = azure_nextgen.batch.latest.Certificate("certificate",
+    account_name="sampleacct",
+    certificate_name="sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e",
+    data="MIIJsgIBAzCCCW4GCSqGSIb3DQE...",
+    format="Pfx",
+    password="KG0UY40e...",
+    resource_group_name="default-azurebatch-japaneast",
+    thumbprint="0a0e4f50d51beadeac1d35afc5116098e7902e6e",
+    thumbprint_algorithm="sha1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const certificate = new azure_nextgen.batch.latest.Certificate("certificate", {
+    accountName: "sampleacct",
+    certificateName: "sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e",
+    data: "MIIJsgIBAzCCCW4GCSqGSIb3DQE...",
+    format: "Pfx",
+    password: "KG0UY40e...",
+    resourceGroupName: "default-azurebatch-japaneast",
+    thumbprint: "0a0e4f50d51beadeac1d35afc5116098e7902e6e",
+    thumbprintAlgorithm: "sha1",
+});
+
+```
+
+{{% /example %}}
+
+### CreateCertificate - Minimal Cer
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var certificate = new AzureNextGen.Batch.Latest.Certificate("certificate", new AzureNextGen.Batch.Latest.CertificateArgs
+        {
+            AccountName = "sampleacct",
+            CertificateName = "sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e",
+            Data = "MIICrjCCAZagAwI...",
+            Format = "Cer",
+            ResourceGroupName = "default-azurebatch-japaneast",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := batch.NewCertificate(ctx, "certificate", &batch.CertificateArgs{
+			AccountName:       pulumi.String("sampleacct"),
+			CertificateName:   pulumi.String("sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e"),
+			Data:              pulumi.String("MIICrjCCAZagAwI..."),
+			Format:            pulumi.String("Cer"),
+			ResourceGroupName: pulumi.String("default-azurebatch-japaneast"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+certificate = azure_nextgen.batch.latest.Certificate("certificate",
+    account_name="sampleacct",
+    certificate_name="sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e",
+    data="MIICrjCCAZagAwI...",
+    format="Cer",
+    resource_group_name="default-azurebatch-japaneast")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const certificate = new azure_nextgen.batch.latest.Certificate("certificate", {
+    accountName: "sampleacct",
+    certificateName: "sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e",
+    data: "MIICrjCCAZagAwI...",
+    format: "Cer",
+    resourceGroupName: "default-azurebatch-japaneast",
+});
+
+```
+
+{{% /example %}}
+
+### CreateCertificate - Minimal Pfx
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var certificate = new AzureNextGen.Batch.Latest.Certificate("certificate", new AzureNextGen.Batch.Latest.CertificateArgs
+        {
+            AccountName = "sampleacct",
+            CertificateName = "sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e",
+            Data = "MIIJsgIBAzCCCW4GCSqGSIb3DQE...",
+            Password = "KG0UY40e...",
+            ResourceGroupName = "default-azurebatch-japaneast",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := batch.NewCertificate(ctx, "certificate", &batch.CertificateArgs{
+			AccountName:       pulumi.String("sampleacct"),
+			CertificateName:   pulumi.String("sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e"),
+			Data:              pulumi.String("MIIJsgIBAzCCCW4GCSqGSIb3DQE..."),
+			Password:          pulumi.String("KG0UY40e..."),
+			ResourceGroupName: pulumi.String("default-azurebatch-japaneast"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+certificate = azure_nextgen.batch.latest.Certificate("certificate",
+    account_name="sampleacct",
+    certificate_name="sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e",
+    data="MIIJsgIBAzCCCW4GCSqGSIb3DQE...",
+    password="KG0UY40e...",
+    resource_group_name="default-azurebatch-japaneast")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const certificate = new azure_nextgen.batch.latest.Certificate("certificate", {
+    accountName: "sampleacct",
+    certificateName: "sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e",
+    data: "MIIJsgIBAzCCCW4GCSqGSIb3DQE...",
+    password: "KG0UY40e...",
+    resourceGroupName: "default-azurebatch-japaneast",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Certificate Resource {#create}

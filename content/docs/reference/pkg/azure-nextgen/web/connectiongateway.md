@@ -29,6 +29,21 @@ class MyStack : Stack
         var connectionGateway = new AzureNextGen.Web.Latest.ConnectionGateway("connectionGateway", new AzureNextGen.Web.Latest.ConnectionGatewayArgs
         {
             ConnectionGatewayName = "test123",
+            Properties = new AzureNextGen.Web.Latest.Inputs.ConnectionGatewayDefinitionPropertiesArgs
+            {
+                BackendUri = "https://WABI-WEST-US-redirect.analysis.windows.net",
+                ConnectionGatewayInstallation = new AzureNextGen.Web.Latest.Inputs.ConnectionGatewayReferenceArgs
+                {
+                    Id = "/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/providers/Microsoft.Web/locations/westus/connectionGatewayInstallations/865dccd1-5d5c-45fe-b5a0-249d4de4134c",
+                },
+                ContactInformation = 
+                {
+                    "test123@microsoft.com",
+                },
+                DisplayName = "test123",
+                MachineName = "TEST123",
+                Status = "Installed",
+            },
             ResourceGroupName = "testResourceGroup",
         });
     }
@@ -45,7 +60,7 @@ class MyStack : Stack
 package main
 
 import (
-	web "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/web/latest"
+	web "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/web/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -53,7 +68,19 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := web.NewConnectionGateway(ctx, "connectionGateway", &web.ConnectionGatewayArgs{
 			ConnectionGatewayName: pulumi.String("test123"),
-			ResourceGroupName:     pulumi.String("testResourceGroup"),
+			Properties: &web.ConnectionGatewayDefinitionPropertiesArgs{
+				BackendUri: pulumi.String("https://WABI-WEST-US-redirect.analysis.windows.net"),
+				ConnectionGatewayInstallation: &web.ConnectionGatewayReferenceArgs{
+					Id: pulumi.String("/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/providers/Microsoft.Web/locations/westus/connectionGatewayInstallations/865dccd1-5d5c-45fe-b5a0-249d4de4134c"),
+				},
+				ContactInformation: pulumi.StringArray{
+					pulumi.String("test123@microsoft.com"),
+				},
+				DisplayName: pulumi.String("test123"),
+				MachineName: pulumi.String("TEST123"),
+				Status:      pulumi.String("Installed"),
+			},
+			ResourceGroupName: pulumi.String("testResourceGroup"),
 		})
 		if err != nil {
 			return err
@@ -74,6 +101,16 @@ import pulumi_azure_nextgen as azure_nextgen
 
 connection_gateway = azure_nextgen.web.latest.ConnectionGateway("connectionGateway",
     connection_gateway_name="test123",
+    properties={
+        "backendUri": "https://WABI-WEST-US-redirect.analysis.windows.net",
+        "connectionGatewayInstallation": {
+            "id": "/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/providers/Microsoft.Web/locations/westus/connectionGatewayInstallations/865dccd1-5d5c-45fe-b5a0-249d4de4134c",
+        },
+        "contactInformation": ["test123@microsoft.com"],
+        "displayName": "test123",
+        "machineName": "TEST123",
+        "status": "Installed",
+    },
     resource_group_name="testResourceGroup")
 
 ```
@@ -88,6 +125,16 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const connectionGateway = new azure_nextgen.web.latest.ConnectionGateway("connectionGateway", {
     connectionGatewayName: "test123",
+    properties: {
+        backendUri: "https://WABI-WEST-US-redirect.analysis.windows.net",
+        connectionGatewayInstallation: {
+            id: "/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/providers/Microsoft.Web/locations/westus/connectionGatewayInstallations/865dccd1-5d5c-45fe-b5a0-249d4de4134c",
+        },
+        contactInformation: ["test123@microsoft.com"],
+        displayName: "test123",
+        machineName: "TEST123",
+        status: "Installed",
+    },
     resourceGroupName: "testResourceGroup",
 });
 
@@ -792,7 +839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}The gateway status{{% /md %}}</dd>
 
@@ -869,7 +916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}The gateway status{{% /md %}}</dd>
 
@@ -946,7 +993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}The gateway status{{% /md %}}</dd>
 
@@ -1023,7 +1070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}The gateway status{{% /md %}}</dd>
 
@@ -1111,7 +1158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}The gateway status{{% /md %}}</dd>
 
@@ -1188,7 +1235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}The gateway status{{% /md %}}</dd>
 
@@ -1265,7 +1312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}The gateway status{{% /md %}}</dd>
 
@@ -1342,7 +1389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}The gateway status{{% /md %}}</dd>
 

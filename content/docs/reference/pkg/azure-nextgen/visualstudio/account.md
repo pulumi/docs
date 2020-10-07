@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	visualstudio "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/visualstudio/v20171101preview"
+	visualstudio "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/visualstudio/v20171101preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -58,7 +58,7 @@ func main() {
 		_, err := visualstudio.NewAccount(ctx, "account", &visualstudio.AccountArgs{
 			AccountName:       pulumi.String("Example"),
 			Location:          pulumi.String("Central US"),
-			OperationType:     "create",
+			OperationType:     pulumi.String("create"),
 			ResourceGroupName: pulumi.String("VS-Example-Group"),
 			ResourceName:      pulumi.String("Example"),
 			Tags:              nil,
@@ -123,7 +123,7 @@ const account = new azure_nextgen.visualstudio.v20171101preview.Account("account
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Account</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operation_type</span><span class="p">:</span> <span class="nx">Optional[Dict[str, Any]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Account</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operation_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -341,7 +341,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#operationtype_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the operation.{{% /md %}}</dd>
 
@@ -408,7 +408,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#operationtype_go" style="color: inherit; text-decoration: inherit;">Operation<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the operation.{{% /md %}}</dd>
 
@@ -475,7 +475,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#operationtype_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the operation.{{% /md %}}</dd>
 
@@ -542,7 +542,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#operation_type_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of the operation.{{% /md %}}</dd>
 

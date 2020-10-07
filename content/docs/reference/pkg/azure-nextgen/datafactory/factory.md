@@ -46,7 +46,7 @@ class MyStack : Stack
 package main
 
 import (
-	datafactory "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datafactory/latest"
+	datafactory "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datafactory/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -111,7 +111,7 @@ const factory = new azure_nextgen.datafactory.latest.Factory("factory", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Factory</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">global_parameters</span><span class="p">:</span> <span class="nx">Optional[Dict[str, GlobalParameterSpecification]]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[FactoryIdentity]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">repo_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[FactoryGitHubConfiguration] | Dict[FactoryVSTSConfiguration]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Factory</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">global_parameters</span><span class="p">:</span> <span class="nx">Optional[Dict[str, GlobalParameterSpecification]]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[FactoryIdentity]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_network_access</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">repo_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[FactoryGitHubConfiguration] | Dict[FactoryVSTSConfiguration]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -335,6 +335,16 @@ The Factory resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
+        <span id="publicnetworkaccess_csharp">
+<a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Whether or not public network access is allowed for the data factory.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="repoconfiguration_csharp">
 <a href="#repoconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Repo<wbr>Configuration</a>
 </span> 
@@ -409,6 +419,16 @@ The Factory resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The resource location.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publicnetworkaccess_go">
+<a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Whether or not public network access is allowed for the data factory.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -489,6 +509,16 @@ The Factory resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
+        <span id="publicnetworkaccess_nodejs">
+<a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Whether or not public network access is allowed for the data factory.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="repoconfiguration_nodejs">
 <a href="#repoconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">repo<wbr>Configuration</a>
 </span> 
@@ -563,6 +593,16 @@ The Factory resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The resource location.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="public_network_access_python">
+<a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Whether or not public network access is allowed for the data factory.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2380,7 +2420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}Value of parameter.{{% /md %}}</dd>
 
@@ -2407,7 +2447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}Value of parameter.{{% /md %}}</dd>
 
@@ -2434,7 +2474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}Value of parameter.{{% /md %}}</dd>
 
@@ -2461,7 +2501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}Value of parameter.{{% /md %}}</dd>
 
@@ -2499,7 +2539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}Value of parameter.{{% /md %}}</dd>
 
@@ -2526,7 +2566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}Value of parameter.{{% /md %}}</dd>
 
@@ -2553,7 +2593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}Value of parameter.{{% /md %}}</dd>
 
@@ -2580,7 +2620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}Value of parameter.{{% /md %}}</dd>
 

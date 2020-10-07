@@ -28,19 +28,6 @@ class MyStack : Stack
     {
         var deviceSecurityGroup = new AzureNextGen.Security.Latest.DeviceSecurityGroup("deviceSecurityGroup", new AzureNextGen.Security.Latest.DeviceSecurityGroupArgs
         {
-            DeviceSecurityGroupName = "samplesecuritygroup",
-            ResourceId = "subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/SampleRG/providers/Microsoft.Devices/iotHubs/sampleiothub",
-            TimeWindowRules = 
-            {
-                new AzureNextGen.Security.Latest.Inputs.TimeWindowCustomAlertRuleArgs
-                {
-                    IsEnabled = true,
-                    MaxThreshold = 30,
-                    MinThreshold = 0,
-                    RuleType = "ActiveConnectionsNotInAllowedRange",
-                    TimeWindowSize = "PT05M",
-                },
-            },
         });
     }
 
@@ -56,25 +43,13 @@ class MyStack : Stack
 package main
 
 import (
-	security "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/security/latest"
+	security "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/security/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := security.NewDeviceSecurityGroup(ctx, "deviceSecurityGroup", &security.DeviceSecurityGroupArgs{
-			DeviceSecurityGroupName: pulumi.String("samplesecuritygroup"),
-			ResourceId:              pulumi.String("subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/SampleRG/providers/Microsoft.Devices/iotHubs/sampleiothub"),
-			TimeWindowRules: security.TimeWindowCustomAlertRuleArray{
-				&security.TimeWindowCustomAlertRuleArgs{
-					IsEnabled:      pulumi.Bool(true),
-					MaxThreshold:   pulumi.Int(30),
-					MinThreshold:   pulumi.Int(0),
-					RuleType:       pulumi.String("ActiveConnectionsNotInAllowedRange"),
-					TimeWindowSize: pulumi.String("PT05M"),
-				},
-			},
-		})
+		_, err := security.NewDeviceSecurityGroup(ctx, "deviceSecurityGroup", nil)
 		if err != nil {
 			return err
 		}
@@ -92,16 +67,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-device_security_group = azure_nextgen.security.latest.DeviceSecurityGroup("deviceSecurityGroup",
-    device_security_group_name="samplesecuritygroup",
-    resource_id="subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/SampleRG/providers/Microsoft.Devices/iotHubs/sampleiothub",
-    time_window_rules=[{
-        "isEnabled": True,
-        "maxThreshold": 30,
-        "minThreshold": 0,
-        "ruleType": "ActiveConnectionsNotInAllowedRange",
-        "timeWindowSize": "PT05M",
-    }])
+device_security_group = azure_nextgen.security.latest.DeviceSecurityGroup("deviceSecurityGroup")
 
 ```
 
@@ -113,17 +79,7 @@ device_security_group = azure_nextgen.security.latest.DeviceSecurityGroup("devic
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const deviceSecurityGroup = new azure_nextgen.security.latest.DeviceSecurityGroup("deviceSecurityGroup", {
-    deviceSecurityGroupName: "samplesecuritygroup",
-    resourceId: "subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/SampleRG/providers/Microsoft.Devices/iotHubs/sampleiothub",
-    timeWindowRules: [{
-        isEnabled: true,
-        maxThreshold: 30,
-        minThreshold: 0,
-        ruleType: "ActiveConnectionsNotInAllowedRange",
-        timeWindowSize: "PT05M",
-    }],
-});
+const deviceSecurityGroup = new azure_nextgen.security.latest.DeviceSecurityGroup("deviceSecurityGroup", {});
 
 ```
 

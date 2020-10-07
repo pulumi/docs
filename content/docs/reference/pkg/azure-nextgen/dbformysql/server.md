@@ -29,6 +29,12 @@ class MyStack : Stack
         var server = new AzureNextGen.DBforMySQL.Latest.Server("server", new AzureNextGen.DBforMySQL.Latest.ServerArgs
         {
             Location = "brazilsouth",
+            Properties = 
+            {
+                { "createMode", "PointInTimeRestore" },
+                { "restorePointInTime", "2017-12-14T00:00:37.467Z" },
+                { "sourceServerId", "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforMySQL/servers/sourceserver" },
+            },
             ResourceGroupName = "TargetResourceGroup",
             ServerName = "targetserver",
             Sku = new AzureNextGen.DBforMySQL.Latest.Inputs.SkuArgs
@@ -52,40 +58,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-package main
-
-import (
-	dbformysql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/dbformysql/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := dbformysql.NewServer(ctx, "server", &dbformysql.ServerArgs{
-			Location:          pulumi.String("brazilsouth"),
-			ResourceGroupName: pulumi.String("TargetResourceGroup"),
-			ServerName:        pulumi.String("targetserver"),
-			Sku: &dbformysql.SkuArgs{
-				Capacity: pulumi.Int(2),
-				Family:   pulumi.String("Gen5"),
-				Name:     pulumi.String("GP_Gen5_2"),
-				Tier:     pulumi.String("GeneralPurpose"),
-			},
-			Tags: pulumi.StringMap{
-				"ElasticServer": pulumi.String("1"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -96,6 +69,11 @@ import pulumi_azure_nextgen as azure_nextgen
 
 server = azure_nextgen.dbformysql.latest.Server("server",
     location="brazilsouth",
+    properties={
+        "createMode": "PointInTimeRestore",
+        "restorePointInTime": "2017-12-14T00:00:37.467Z",
+        "sourceServerId": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforMySQL/servers/sourceserver",
+    },
     resource_group_name="TargetResourceGroup",
     server_name="targetserver",
     sku={
@@ -120,6 +98,11 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const server = new azure_nextgen.dbformysql.latest.Server("server", {
     location: "brazilsouth",
+    properties: {
+        createMode: "PointInTimeRestore",
+        restorePointInTime: "2017-12-14T00:00:37.467Z",
+        sourceServerId: "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforMySQL/servers/sourceserver",
+    },
     resourceGroupName: "TargetResourceGroup",
     serverName: "targetserver",
     sku: {
@@ -150,6 +133,19 @@ class MyStack : Stack
         var server = new AzureNextGen.DBforMySQL.Latest.Server("server", new AzureNextGen.DBforMySQL.Latest.ServerArgs
         {
             Location = "westus",
+            Properties = 
+            {
+                { "administratorLogin", "cloudsa" },
+                { "administratorLoginPassword", "pass$w0rd" },
+                { "createMode", "Default" },
+                { "sslEnforcement", "Enabled" },
+                { "storageProfile", new AzureNextGen.DBforMySQL.Latest.Inputs.StorageProfileArgs
+                {
+                    BackupRetentionDays = 7,
+                    GeoRedundantBackup = "Enabled",
+                    StorageMB = 128000,
+                } },
+            },
             ResourceGroupName = "testrg",
             ServerName = "mysqltestsvc4",
             Sku = new AzureNextGen.DBforMySQL.Latest.Inputs.SkuArgs
@@ -173,40 +169,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-package main
-
-import (
-	dbformysql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/dbformysql/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := dbformysql.NewServer(ctx, "server", &dbformysql.ServerArgs{
-			Location:          pulumi.String("westus"),
-			ResourceGroupName: pulumi.String("testrg"),
-			ServerName:        pulumi.String("mysqltestsvc4"),
-			Sku: &dbformysql.SkuArgs{
-				Capacity: pulumi.Int(2),
-				Family:   pulumi.String("Gen5"),
-				Name:     pulumi.String("GP_Gen5_2"),
-				Tier:     pulumi.String("GeneralPurpose"),
-			},
-			Tags: pulumi.StringMap{
-				"ElasticServer": pulumi.String("1"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -217,6 +180,17 @@ import pulumi_azure_nextgen as azure_nextgen
 
 server = azure_nextgen.dbformysql.latest.Server("server",
     location="westus",
+    properties={
+        "administratorLogin": "cloudsa",
+        "administratorLoginPassword": "pass$w0rd",
+        "createMode": "Default",
+        "sslEnforcement": "Enabled",
+        "storageProfile": {
+            "backupRetentionDays": 7,
+            "geoRedundantBackup": "Enabled",
+            "storageMB": 128000,
+        },
+    },
     resource_group_name="testrg",
     server_name="mysqltestsvc4",
     sku={
@@ -241,6 +215,17 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const server = new azure_nextgen.dbformysql.latest.Server("server", {
     location: "westus",
+    properties: {
+        administratorLogin: "cloudsa",
+        administratorLoginPassword: `pass$w0rd`,
+        createMode: "Default",
+        sslEnforcement: "Enabled",
+        storageProfile: {
+            backupRetentionDays: 7,
+            geoRedundantBackup: "Enabled",
+            storageMB: 128000,
+        },
+    },
     resourceGroupName: "testrg",
     serverName: "mysqltestsvc4",
     sku: {
@@ -271,6 +256,11 @@ class MyStack : Stack
         var server = new AzureNextGen.DBforMySQL.Latest.Server("server", new AzureNextGen.DBforMySQL.Latest.ServerArgs
         {
             Location = "westus",
+            Properties = 
+            {
+                { "createMode", "Replica" },
+                { "sourceServerId", "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/MasterResourceGroup/providers/Microsoft.DBforMySQL/servers/masterserver" },
+            },
             ResourceGroupName = "TargetResourceGroup",
             ServerName = "targetserver",
         });
@@ -283,31 +273,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-package main
-
-import (
-	dbformysql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/dbformysql/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := dbformysql.NewServer(ctx, "server", &dbformysql.ServerArgs{
-			Location:          pulumi.String("westus"),
-			ResourceGroupName: pulumi.String("TargetResourceGroup"),
-			ServerName:        pulumi.String("targetserver"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -318,6 +284,10 @@ import pulumi_azure_nextgen as azure_nextgen
 
 server = azure_nextgen.dbformysql.latest.Server("server",
     location="westus",
+    properties={
+        "createMode": "Replica",
+        "sourceServerId": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/MasterResourceGroup/providers/Microsoft.DBforMySQL/servers/masterserver",
+    },
     resource_group_name="TargetResourceGroup",
     server_name="targetserver")
 
@@ -333,6 +303,10 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const server = new azure_nextgen.dbformysql.latest.Server("server", {
     location: "westus",
+    properties: {
+        createMode: "Replica",
+        sourceServerId: "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/MasterResourceGroup/providers/Microsoft.DBforMySQL/servers/masterserver",
+    },
     resourceGroupName: "TargetResourceGroup",
     serverName: "targetserver",
 });
@@ -354,6 +328,11 @@ class MyStack : Stack
         var server = new AzureNextGen.DBforMySQL.Latest.Server("server", new AzureNextGen.DBforMySQL.Latest.ServerArgs
         {
             Location = "westus",
+            Properties = 
+            {
+                { "createMode", "GeoRestore" },
+                { "sourceServerId", "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforMySQL/servers/sourceserver" },
+            },
             ResourceGroupName = "TargetResourceGroup",
             ServerName = "targetserver",
             Sku = new AzureNextGen.DBforMySQL.Latest.Inputs.SkuArgs
@@ -377,40 +356,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-package main
-
-import (
-	dbformysql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/dbformysql/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := dbformysql.NewServer(ctx, "server", &dbformysql.ServerArgs{
-			Location:          pulumi.String("westus"),
-			ResourceGroupName: pulumi.String("TargetResourceGroup"),
-			ServerName:        pulumi.String("targetserver"),
-			Sku: &dbformysql.SkuArgs{
-				Capacity: pulumi.Int(2),
-				Family:   pulumi.String("Gen5"),
-				Name:     pulumi.String("GP_Gen5_2"),
-				Tier:     pulumi.String("GeneralPurpose"),
-			},
-			Tags: pulumi.StringMap{
-				"ElasticServer": pulumi.String("1"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -421,6 +367,10 @@ import pulumi_azure_nextgen as azure_nextgen
 
 server = azure_nextgen.dbformysql.latest.Server("server",
     location="westus",
+    properties={
+        "createMode": "GeoRestore",
+        "sourceServerId": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforMySQL/servers/sourceserver",
+    },
     resource_group_name="TargetResourceGroup",
     server_name="targetserver",
     sku={
@@ -445,6 +395,10 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const server = new azure_nextgen.dbformysql.latest.Server("server", {
     location: "westus",
+    properties: {
+        createMode: "GeoRestore",
+        sourceServerId: "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforMySQL/servers/sourceserver",
+    },
     resourceGroupName: "TargetResourceGroup",
     serverName: "targetserver",
     sku: {

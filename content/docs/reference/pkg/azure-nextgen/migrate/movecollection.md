@@ -34,6 +34,11 @@ class MyStack : Stack
             },
             Location = "eastus2",
             MoveCollectionName = "movecollection1",
+            Properties = new AzureNextGen.Migrate.V20191001Preview.Inputs.MoveCollectionPropertiesArgs
+            {
+                SourceRegion = "eastus",
+                TargetRegion = "westus",
+            },
             ResourceGroupName = "rg1",
         });
     }
@@ -50,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	migrate "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/migrate/v20191001preview"
+	migrate "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/migrate/v20191001preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -62,7 +67,11 @@ func main() {
 			},
 			Location:           pulumi.String("eastus2"),
 			MoveCollectionName: pulumi.String("movecollection1"),
-			ResourceGroupName:  pulumi.String("rg1"),
+			Properties: &migrate.MoveCollectionPropertiesArgs{
+				SourceRegion: pulumi.String("eastus"),
+				TargetRegion: pulumi.String("westus"),
+			},
+			ResourceGroupName: pulumi.String("rg1"),
 		})
 		if err != nil {
 			return err
@@ -87,6 +96,10 @@ move_collection = azure_nextgen.migrate.v20191001preview.MoveCollection("moveCol
     },
     location="eastus2",
     move_collection_name="movecollection1",
+    properties={
+        "sourceRegion": "eastus",
+        "targetRegion": "westus",
+    },
     resource_group_name="rg1")
 
 ```
@@ -105,6 +118,10 @@ const moveCollection = new azure_nextgen.migrate.v20191001preview.MoveCollection
     },
     location: "eastus2",
     moveCollectionName: "movecollection1",
+    properties: {
+        sourceRegion: "eastus",
+        targetRegion: "westus",
+    },
     resourceGroupName: "rg1",
 });
 
@@ -1081,16 +1098,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Gets or sets the target region.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="provisioningstate_csharp">
-<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Defines the provisioning states.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1117,16 +1124,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the target region.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="provisioningstate_go">
-<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Defines the provisioning states.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1155,16 +1152,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Gets or sets the target region.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="provisioningstate_nodejs">
-<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Defines the provisioning states.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1191,16 +1178,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the target region.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="provisioning_state_python">
-<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Defines the provisioning states.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1222,6 +1199,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
+        <span id="provisioningstate_csharp">
+<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the provisioning states.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="sourceregion_csharp">
 <a href="#sourceregion_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Region</a>
 </span> 
@@ -1240,22 +1227,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Gets or sets the target region.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="provisioningstate_csharp">
-<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Defines the provisioning states.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_go">
+<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the provisioning states.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1277,22 +1264,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Gets or sets the target region.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="provisioningstate_go">
-<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Defines the provisioning states.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_nodejs">
+<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the provisioning states.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1314,22 +1301,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Gets or sets the target region.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="provisioningstate_nodejs">
-<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Defines the provisioning states.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioning_state_python">
+<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the provisioning states.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1350,16 +1337,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the target region.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="provisioning_state_python">
-<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Defines the provisioning states.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

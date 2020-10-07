@@ -119,7 +119,7 @@ package main
 import (
 	"fmt"
 
-	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/containerservice/latest"
+	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -448,7 +448,7 @@ package main
 import (
 	"fmt"
 
-	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/containerservice/latest"
+	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -804,7 +804,7 @@ package main
 import (
 	"fmt"
 
-	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/containerservice/latest"
+	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1166,7 +1166,7 @@ package main
 import (
 	"fmt"
 
-	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/containerservice/latest"
+	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

@@ -29,6 +29,12 @@ class MyStack : Stack
         var configurationProfileAssignment = new AzureNextGen.Compute.V20200630Preview.ConfigurationProfileAssignment("configurationProfileAssignment", new AzureNextGen.Compute.V20200630Preview.ConfigurationProfileAssignmentArgs
         {
             ConfigurationProfileAssignmentName = "default",
+            Properties = new AzureNextGen.Compute.V20200630Preview.Inputs.ConfigurationProfileAssignmentPropertiesArgs
+            {
+                AccountId = "/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automanage/accounts/AutomanageAccount",
+                ConfigurationProfile = "Azure virtual machine best practices – Production",
+                ConfigurationProfilePreferenceId = "/subscriptions/subscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.Automanage/configurationProfilePreferences/defaultProfilePreference",
+            },
             ResourceGroupName = "myResourceGroupName",
             VmName = "myVMName",
         });
@@ -46,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/v20200630preview"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/v20200630preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -54,8 +60,13 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := compute.NewConfigurationProfileAssignment(ctx, "configurationProfileAssignment", &compute.ConfigurationProfileAssignmentArgs{
 			ConfigurationProfileAssignmentName: pulumi.String("default"),
-			ResourceGroupName:                  pulumi.String("myResourceGroupName"),
-			VmName:                             pulumi.String("myVMName"),
+			Properties: &compute.ConfigurationProfileAssignmentPropertiesArgs{
+				AccountId:                        pulumi.String("/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automanage/accounts/AutomanageAccount"),
+				ConfigurationProfile:             pulumi.String("Azure virtual machine best practices – Production"),
+				ConfigurationProfilePreferenceId: pulumi.String("/subscriptions/subscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.Automanage/configurationProfilePreferences/defaultProfilePreference"),
+			},
+			ResourceGroupName: pulumi.String("myResourceGroupName"),
+			VmName:            pulumi.String("myVMName"),
 		})
 		if err != nil {
 			return err
@@ -76,6 +87,11 @@ import pulumi_azure_nextgen as azure_nextgen
 
 configuration_profile_assignment = azure_nextgen.compute.v20200630preview.ConfigurationProfileAssignment("configurationProfileAssignment",
     configuration_profile_assignment_name="default",
+    properties={
+        "accountId": "/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automanage/accounts/AutomanageAccount",
+        "configurationProfile": "Azure virtual machine best practices – Production",
+        "configurationProfilePreferenceId": "/subscriptions/subscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.Automanage/configurationProfilePreferences/defaultProfilePreference",
+    },
     resource_group_name="myResourceGroupName",
     vm_name="myVMName")
 
@@ -91,6 +107,11 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const configurationProfileAssignment = new azure_nextgen.compute.v20200630preview.ConfigurationProfileAssignment("configurationProfileAssignment", {
     configurationProfileAssignmentName: "default",
+    properties: {
+        accountId: "/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automanage/accounts/AutomanageAccount",
+        configurationProfile: "Azure virtual machine best practices – Production",
+        configurationProfilePreferenceId: "/subscriptions/subscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.Automanage/configurationProfilePreferences/defaultProfilePreference",
+    },
     resourceGroupName: "myResourceGroupName",
     vmName: "myVMName",
 });

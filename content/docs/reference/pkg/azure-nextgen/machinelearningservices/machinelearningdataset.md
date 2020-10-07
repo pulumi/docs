@@ -64,7 +64,7 @@ class MyStack : Stack
 package main
 
 import (
-	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices/v20200501preview"
+	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices/v20200501preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -2619,7 +2619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionalproperties_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Additional Properties.{{% /md %}}</dd>
 
@@ -2716,7 +2716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionalproperties_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]map[string]interface{}</span>
+        <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Additional Properties.{{% /md %}}</dd>
 
@@ -2813,7 +2813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionalproperties_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: {[key: string]: any}}</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Additional Properties.{{% /md %}}</dd>
 
@@ -2910,7 +2910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additional_properties_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any>]</span>
+        <span class="property-type">Dict[str, Any]</span>
     </dt>
     <dd>{{% md %}}Additional Properties.{{% /md %}}</dd>
 
@@ -3118,7 +3118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Properties stores information like name of time series column for time series dataset.{{% /md %}}</dd>
 
@@ -3305,7 +3305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]map[string]interface{}</span>
+        <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Properties stores information like name of time series column for time series dataset.{{% /md %}}</dd>
 
@@ -3492,7 +3492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: {[key: string]: any}}</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Properties stores information like name of time series column for time series dataset.{{% /md %}}</dd>
 
@@ -3679,7 +3679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any>]</span>
+        <span class="property-type">Dict[str, Any]</span>
     </dt>
     <dd>{{% md %}}Properties stores information like name of time series column for time series dataset.{{% /md %}}</dd>
 

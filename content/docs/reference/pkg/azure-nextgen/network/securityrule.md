@@ -54,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

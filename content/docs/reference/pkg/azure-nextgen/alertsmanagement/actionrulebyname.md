@@ -30,6 +30,68 @@ class MyStack : Stack
         {
             ActionRuleName = "DailySuppression",
             Location = "Global",
+            Properties = 
+            {
+                { "conditions", new AzureNextGen.AlertsManagement.V20190505Preview.Inputs.ConditionsArgs
+                {
+                    MonitorCondition = new AzureNextGen.AlertsManagement.V20190505Preview.Inputs.ConditionArgs
+                    {
+                        Operator = "Equals",
+                        Values = 
+                        {
+                            "Fired",
+                        },
+                    },
+                    MonitorService = new AzureNextGen.AlertsManagement.V20190505Preview.Inputs.ConditionArgs
+                    {
+                        Operator = "Equals",
+                        Values = 
+                        {
+                            "Platform",
+                            "Application Insights",
+                        },
+                    },
+                    Severity = new AzureNextGen.AlertsManagement.V20190505Preview.Inputs.ConditionArgs
+                    {
+                        Operator = "Equals",
+                        Values = 
+                        {
+                            "Sev0",
+                            "Sev2",
+                        },
+                    },
+                    TargetResourceType = new AzureNextGen.AlertsManagement.V20190505Preview.Inputs.ConditionArgs
+                    {
+                        Operator = "NotEquals",
+                        Values = 
+                        {
+                            "Microsoft.Compute/VirtualMachines",
+                        },
+                    },
+                } },
+                { "description", "Action rule on resource group for daily suppression" },
+                { "scope", new AzureNextGen.AlertsManagement.V20190505Preview.Inputs.ScopeArgs
+                {
+                    ScopeType = "ResourceGroup",
+                    Values = 
+                    {
+                        "/subscriptions/1e3ff1c0-771a-4119-a03b-be82a51e232d/resourceGroups/alertscorrelationrg",
+                    },
+                } },
+                { "status", "Enabled" },
+                { "suppressionConfig", new AzureNextGen.AlertsManagement.V20190505Preview.Inputs.SuppressionConfigArgs
+                {
+                    RecurrenceType = "Daily",
+                    Schedule = new AzureNextGen.AlertsManagement.V20190505Preview.Inputs.SuppressionScheduleArgs
+                    {
+                        EndDate = "12/18/2018",
+                        EndTime = "14:00:00",
+                        StartDate = "12/09/2018",
+                        StartTime = "06:00:00",
+                    },
+                } },
+                { "type", "Suppression" },
+            },
             ResourceGroupName = "alertscorrelationrg",
             Tags = ,
         });
@@ -42,32 +104,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-package main
-
-import (
-	alertsmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/alertsmanagement/v20190505preview"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := alertsmanagement.NewActionRuleByName(ctx, "actionRuleByName", &alertsmanagement.ActionRuleByNameArgs{
-			ActionRuleName:    pulumi.String("DailySuppression"),
-			Location:          pulumi.String("Global"),
-			ResourceGroupName: pulumi.String("alertscorrelationrg"),
-			Tags:              nil,
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -79,6 +116,48 @@ import pulumi_azure_nextgen as azure_nextgen
 action_rule_by_name = azure_nextgen.alertsmanagement.v20190505preview.ActionRuleByName("actionRuleByName",
     action_rule_name="DailySuppression",
     location="Global",
+    properties={
+        "conditions": {
+            "monitorCondition": {
+                "operator": "Equals",
+                "values": ["Fired"],
+            },
+            "monitorService": {
+                "operator": "Equals",
+                "values": [
+                    "Platform",
+                    "Application Insights",
+                ],
+            },
+            "severity": {
+                "operator": "Equals",
+                "values": [
+                    "Sev0",
+                    "Sev2",
+                ],
+            },
+            "targetResourceType": {
+                "operator": "NotEquals",
+                "values": ["Microsoft.Compute/VirtualMachines"],
+            },
+        },
+        "description": "Action rule on resource group for daily suppression",
+        "scope": {
+            "scopeType": "ResourceGroup",
+            "values": ["/subscriptions/1e3ff1c0-771a-4119-a03b-be82a51e232d/resourceGroups/alertscorrelationrg"],
+        },
+        "status": "Enabled",
+        "suppressionConfig": {
+            "recurrenceType": "Daily",
+            "schedule": {
+                "endDate": "12/18/2018",
+                "endTime": "14:00:00",
+                "startDate": "12/09/2018",
+                "startTime": "06:00:00",
+            },
+        },
+        "type": "Suppression",
+    },
     resource_group_name="alertscorrelationrg",
     tags={})
 
@@ -95,6 +174,48 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const actionRuleByName = new azure_nextgen.alertsmanagement.v20190505preview.ActionRuleByName("actionRuleByName", {
     actionRuleName: "DailySuppression",
     location: "Global",
+    properties: {
+        conditions: {
+            monitorCondition: {
+                operator: "Equals",
+                values: ["Fired"],
+            },
+            monitorService: {
+                operator: "Equals",
+                values: [
+                    "Platform",
+                    "Application Insights",
+                ],
+            },
+            severity: {
+                operator: "Equals",
+                values: [
+                    "Sev0",
+                    "Sev2",
+                ],
+            },
+            targetResourceType: {
+                operator: "NotEquals",
+                values: ["Microsoft.Compute/VirtualMachines"],
+            },
+        },
+        description: "Action rule on resource group for daily suppression",
+        scope: {
+            scopeType: "ResourceGroup",
+            values: ["/subscriptions/1e3ff1c0-771a-4119-a03b-be82a51e232d/resourceGroups/alertscorrelationrg"],
+        },
+        status: "Enabled",
+        suppressionConfig: {
+            recurrenceType: "Daily",
+            schedule: {
+                endDate: "12/18/2018",
+                endTime: "14:00:00",
+                startDate: "12/09/2018",
+                startTime: "06:00:00",
+            },
+        },
+        type: "Suppression",
+    },
     resourceGroupName: "alertscorrelationrg",
     tags: {},
 });

@@ -30,15 +30,14 @@ class MyStack : Stack
         {
             DeadLetterDestination = new AzureNextGen.EventGrid.Latest.Inputs.StorageBlobDeadLetterDestinationArgs
             {
+                BlobContainerName = "contosocontainer",
                 EndpointType = "StorageBlob",
+                ResourceId = "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/contosostg",
             },
             Destination = 
             {
                 { "endpointType", "EventHub" },
-                { "properties", 
-                {
-                    { "resourceId", "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.EventHub/namespaces/ContosoNamespace/eventhubs/EH1" },
-                } },
+                { "resourceId", "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.EventHub/namespaces/ContosoNamespace/eventhubs/EH1" },
             },
             EventSubscriptionName = "examplesubscription1",
             Filter = new AzureNextGen.EventGrid.Latest.Inputs.EventSubscriptionFilterArgs
@@ -69,13 +68,13 @@ import pulumi_azure_nextgen as azure_nextgen
 
 event_subscription = azure_nextgen.eventgrid.latest.EventSubscription("eventSubscription",
     dead_letter_destination={
+        "blobContainerName": "contosocontainer",
         "endpointType": "StorageBlob",
+        "resourceId": "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/contosostg",
     },
     destination={
         "endpointType": "EventHub",
-        "properties": {
-            "resourceId": "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.EventHub/namespaces/ContosoNamespace/eventhubs/EH1",
-        },
+        "resourceId": "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.EventHub/namespaces/ContosoNamespace/eventhubs/EH1",
     },
     event_subscription_name="examplesubscription1",
     filter={
@@ -97,13 +96,13 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const eventSubscription = new azure_nextgen.eventgrid.latest.EventSubscription("eventSubscription", {
     deadLetterDestination: {
+        blobContainerName: "contosocontainer",
         endpointType: "StorageBlob",
+        resourceId: "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/contosostg",
     },
     destination: {
         endpointType: "EventHub",
-        properties: {
-            resourceId: "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.EventHub/namespaces/ContosoNamespace/eventhubs/EH1",
-        },
+        resourceId: "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.EventHub/namespaces/ContosoNamespace/eventhubs/EH1",
     },
     eventSubscriptionName: "examplesubscription1",
     filter: {
@@ -132,15 +131,14 @@ class MyStack : Stack
         {
             DeadLetterDestination = new AzureNextGen.EventGrid.Latest.Inputs.StorageBlobDeadLetterDestinationArgs
             {
+                BlobContainerName = "contosocontainer",
                 EndpointType = "StorageBlob",
+                ResourceId = "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/contosostg",
             },
             Destination = 
             {
                 { "endpointType", "HybridConnection" },
-                { "properties", 
-                {
-                    { "resourceId", "/subscriptions/d33c5f7a-02ea-40f4-bf52-07f17e84d6a8/resourceGroups/TestRG/providers/Microsoft.Relay/namespaces/ContosoNamespace/hybridConnections/HC1" },
-                } },
+                { "resourceId", "/subscriptions/d33c5f7a-02ea-40f4-bf52-07f17e84d6a8/resourceGroups/TestRG/providers/Microsoft.Relay/namespaces/ContosoNamespace/hybridConnections/HC1" },
             },
             EventSubscriptionName = "examplesubscription1",
             Filter = new AzureNextGen.EventGrid.Latest.Inputs.EventSubscriptionFilterArgs
@@ -171,13 +169,13 @@ import pulumi_azure_nextgen as azure_nextgen
 
 event_subscription = azure_nextgen.eventgrid.latest.EventSubscription("eventSubscription",
     dead_letter_destination={
+        "blobContainerName": "contosocontainer",
         "endpointType": "StorageBlob",
+        "resourceId": "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/contosostg",
     },
     destination={
         "endpointType": "HybridConnection",
-        "properties": {
-            "resourceId": "/subscriptions/d33c5f7a-02ea-40f4-bf52-07f17e84d6a8/resourceGroups/TestRG/providers/Microsoft.Relay/namespaces/ContosoNamespace/hybridConnections/HC1",
-        },
+        "resourceId": "/subscriptions/d33c5f7a-02ea-40f4-bf52-07f17e84d6a8/resourceGroups/TestRG/providers/Microsoft.Relay/namespaces/ContosoNamespace/hybridConnections/HC1",
     },
     event_subscription_name="examplesubscription1",
     filter={
@@ -199,13 +197,13 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const eventSubscription = new azure_nextgen.eventgrid.latest.EventSubscription("eventSubscription", {
     deadLetterDestination: {
+        blobContainerName: "contosocontainer",
         endpointType: "StorageBlob",
+        resourceId: "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/contosostg",
     },
     destination: {
         endpointType: "HybridConnection",
-        properties: {
-            resourceId: "/subscriptions/d33c5f7a-02ea-40f4-bf52-07f17e84d6a8/resourceGroups/TestRG/providers/Microsoft.Relay/namespaces/ContosoNamespace/hybridConnections/HC1",
-        },
+        resourceId: "/subscriptions/d33c5f7a-02ea-40f4-bf52-07f17e84d6a8/resourceGroups/TestRG/providers/Microsoft.Relay/namespaces/ContosoNamespace/hybridConnections/HC1",
     },
     eventSubscriptionName: "examplesubscription1",
     filter: {
@@ -234,16 +232,15 @@ class MyStack : Stack
         {
             DeadLetterDestination = new AzureNextGen.EventGrid.Latest.Inputs.StorageBlobDeadLetterDestinationArgs
             {
+                BlobContainerName = "contosocontainer",
                 EndpointType = "StorageBlob",
+                ResourceId = "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/contosostg",
             },
             Destination = 
             {
                 { "endpointType", "StorageQueue" },
-                { "properties", 
-                {
-                    { "queueName", "queue1" },
-                    { "resourceId", "/subscriptions/d33c5f7a-02ea-40f4-bf52-07f17e84d6a8/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/contosostg" },
-                } },
+                { "queueName", "queue1" },
+                { "resourceId", "/subscriptions/d33c5f7a-02ea-40f4-bf52-07f17e84d6a8/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/contosostg" },
             },
             EventSubscriptionName = "examplesubscription1",
             Filter = new AzureNextGen.EventGrid.Latest.Inputs.EventSubscriptionFilterArgs
@@ -274,14 +271,14 @@ import pulumi_azure_nextgen as azure_nextgen
 
 event_subscription = azure_nextgen.eventgrid.latest.EventSubscription("eventSubscription",
     dead_letter_destination={
+        "blobContainerName": "contosocontainer",
         "endpointType": "StorageBlob",
+        "resourceId": "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/contosostg",
     },
     destination={
         "endpointType": "StorageQueue",
-        "properties": {
-            "queueName": "queue1",
-            "resourceId": "/subscriptions/d33c5f7a-02ea-40f4-bf52-07f17e84d6a8/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/contosostg",
-        },
+        "queueName": "queue1",
+        "resourceId": "/subscriptions/d33c5f7a-02ea-40f4-bf52-07f17e84d6a8/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/contosostg",
     },
     event_subscription_name="examplesubscription1",
     filter={
@@ -303,14 +300,14 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const eventSubscription = new azure_nextgen.eventgrid.latest.EventSubscription("eventSubscription", {
     deadLetterDestination: {
+        blobContainerName: "contosocontainer",
         endpointType: "StorageBlob",
+        resourceId: "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/contosostg",
     },
     destination: {
         endpointType: "StorageQueue",
-        properties: {
-            queueName: "queue1",
-            resourceId: "/subscriptions/d33c5f7a-02ea-40f4-bf52-07f17e84d6a8/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/contosostg",
-        },
+        queueName: "queue1",
+        resourceId: "/subscriptions/d33c5f7a-02ea-40f4-bf52-07f17e84d6a8/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/contosostg",
     },
     eventSubscriptionName: "examplesubscription1",
     filter: {
@@ -340,10 +337,7 @@ class MyStack : Stack
             Destination = 
             {
                 { "endpointType", "EventHub" },
-                { "properties", 
-                {
-                    { "resourceId", "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.EventHub/namespaces/ContosoNamespace/eventhubs/EH1" },
-                } },
+                { "resourceId", "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.EventHub/namespaces/ContosoNamespace/eventhubs/EH1" },
             },
             EventSubscriptionName = "examplesubscription1",
             Filter = new AzureNextGen.EventGrid.Latest.Inputs.EventSubscriptionFilterArgs
@@ -375,9 +369,7 @@ import pulumi_azure_nextgen as azure_nextgen
 event_subscription = azure_nextgen.eventgrid.latest.EventSubscription("eventSubscription",
     destination={
         "endpointType": "EventHub",
-        "properties": {
-            "resourceId": "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.EventHub/namespaces/ContosoNamespace/eventhubs/EH1",
-        },
+        "resourceId": "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.EventHub/namespaces/ContosoNamespace/eventhubs/EH1",
     },
     event_subscription_name="examplesubscription1",
     filter={
@@ -400,9 +392,7 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const eventSubscription = new azure_nextgen.eventgrid.latest.EventSubscription("eventSubscription", {
     destination: {
         endpointType: "EventHub",
-        properties: {
-            resourceId: "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.EventHub/namespaces/ContosoNamespace/eventhubs/EH1",
-        },
+        resourceId: "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.EventHub/namespaces/ContosoNamespace/eventhubs/EH1",
     },
     eventSubscriptionName: "examplesubscription1",
     filter: {
@@ -432,10 +422,7 @@ class MyStack : Stack
             Destination = 
             {
                 { "endpointType", "WebHook" },
-                { "properties", 
-                {
-                    { "endpointUrl", "https://requestb.in/15ksip71" },
-                } },
+                { "endpointUrl", "https://requestb.in/15ksip71" },
             },
             EventSubscriptionName = "examplesubscription10",
             Filter = new AzureNextGen.EventGrid.Latest.Inputs.EventSubscriptionFilterArgs
@@ -467,9 +454,7 @@ import pulumi_azure_nextgen as azure_nextgen
 event_subscription = azure_nextgen.eventgrid.latest.EventSubscription("eventSubscription",
     destination={
         "endpointType": "WebHook",
-        "properties": {
-            "endpointUrl": "https://requestb.in/15ksip71",
-        },
+        "endpointUrl": "https://requestb.in/15ksip71",
     },
     event_subscription_name="examplesubscription10",
     filter={
@@ -492,9 +477,7 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const eventSubscription = new azure_nextgen.eventgrid.latest.EventSubscription("eventSubscription", {
     destination: {
         endpointType: "WebHook",
-        properties: {
-            endpointUrl: "https://requestb.in/15ksip71",
-        },
+        endpointUrl: "https://requestb.in/15ksip71",
     },
     eventSubscriptionName: "examplesubscription10",
     filter: {
@@ -524,10 +507,7 @@ class MyStack : Stack
             Destination = 
             {
                 { "endpointType", "WebHook" },
-                { "properties", 
-                {
-                    { "endpointUrl", "https://requestb.in/15ksip71" },
-                } },
+                { "endpointUrl", "https://requestb.in/15ksip71" },
             },
             EventSubscriptionName = "examplesubscription2",
             Filter = new AzureNextGen.EventGrid.Latest.Inputs.EventSubscriptionFilterArgs
@@ -559,9 +539,7 @@ import pulumi_azure_nextgen as azure_nextgen
 event_subscription = azure_nextgen.eventgrid.latest.EventSubscription("eventSubscription",
     destination={
         "endpointType": "WebHook",
-        "properties": {
-            "endpointUrl": "https://requestb.in/15ksip71",
-        },
+        "endpointUrl": "https://requestb.in/15ksip71",
     },
     event_subscription_name="examplesubscription2",
     filter={
@@ -584,9 +562,7 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const eventSubscription = new azure_nextgen.eventgrid.latest.EventSubscription("eventSubscription", {
     destination: {
         endpointType: "WebHook",
-        properties: {
-            endpointUrl: "https://requestb.in/15ksip71",
-        },
+        endpointUrl: "https://requestb.in/15ksip71",
     },
     eventSubscriptionName: "examplesubscription2",
     filter: {
@@ -616,10 +592,7 @@ class MyStack : Stack
             Destination = 
             {
                 { "endpointType", "WebHook" },
-                { "properties", 
-                {
-                    { "endpointUrl", "https://requestb.in/15ksip71" },
-                } },
+                { "endpointUrl", "https://requestb.in/15ksip71" },
             },
             EventSubscriptionName = "examplesubscription3",
             Filter = new AzureNextGen.EventGrid.Latest.Inputs.EventSubscriptionFilterArgs
@@ -649,9 +622,7 @@ import pulumi_azure_nextgen as azure_nextgen
 event_subscription = azure_nextgen.eventgrid.latest.EventSubscription("eventSubscription",
     destination={
         "endpointType": "WebHook",
-        "properties": {
-            "endpointUrl": "https://requestb.in/15ksip71",
-        },
+        "endpointUrl": "https://requestb.in/15ksip71",
     },
     event_subscription_name="examplesubscription3",
     filter={
@@ -672,9 +643,7 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const eventSubscription = new azure_nextgen.eventgrid.latest.EventSubscription("eventSubscription", {
     destination: {
         endpointType: "WebHook",
-        properties: {
-            endpointUrl: "https://requestb.in/15ksip71",
-        },
+        endpointUrl: "https://requestb.in/15ksip71",
     },
     eventSubscriptionName: "examplesubscription3",
     filter: {

@@ -29,6 +29,12 @@ class MyStack : Stack
         var server = new AzureNextGen.DBforPostgreSQL.Latest.Server("server", new AzureNextGen.DBforPostgreSQL.Latest.ServerArgs
         {
             Location = "brazilsouth",
+            Properties = 
+            {
+                { "createMode", "PointInTimeRestore" },
+                { "restorePointInTime", "2017-12-14T00:00:37.467Z" },
+                { "sourceServerId", "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforPostgreSQL/servers/sourceserver" },
+            },
             ResourceGroupName = "TargetResourceGroup",
             ServerName = "targetserver",
             Sku = new AzureNextGen.DBforPostgreSQL.Latest.Inputs.SkuArgs
@@ -52,40 +58,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-package main
-
-import (
-	dbforpostgresql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/dbforpostgresql/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := dbforpostgresql.NewServer(ctx, "server", &dbforpostgresql.ServerArgs{
-			Location:          pulumi.String("brazilsouth"),
-			ResourceGroupName: pulumi.String("TargetResourceGroup"),
-			ServerName:        pulumi.String("targetserver"),
-			Sku: &dbforpostgresql.SkuArgs{
-				Capacity: pulumi.Int(2),
-				Family:   pulumi.String("Gen5"),
-				Name:     pulumi.String("B_Gen5_2"),
-				Tier:     pulumi.String("Basic"),
-			},
-			Tags: pulumi.StringMap{
-				"ElasticServer": pulumi.String("1"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -96,6 +69,11 @@ import pulumi_azure_nextgen as azure_nextgen
 
 server = azure_nextgen.dbforpostgresql.latest.Server("server",
     location="brazilsouth",
+    properties={
+        "createMode": "PointInTimeRestore",
+        "restorePointInTime": "2017-12-14T00:00:37.467Z",
+        "sourceServerId": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforPostgreSQL/servers/sourceserver",
+    },
     resource_group_name="TargetResourceGroup",
     server_name="targetserver",
     sku={
@@ -120,6 +98,11 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const server = new azure_nextgen.dbforpostgresql.latest.Server("server", {
     location: "brazilsouth",
+    properties: {
+        createMode: "PointInTimeRestore",
+        restorePointInTime: "2017-12-14T00:00:37.467Z",
+        sourceServerId: "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforPostgreSQL/servers/sourceserver",
+    },
     resourceGroupName: "TargetResourceGroup",
     serverName: "targetserver",
     sku: {
@@ -150,6 +133,20 @@ class MyStack : Stack
         var server = new AzureNextGen.DBforPostgreSQL.Latest.Server("server", new AzureNextGen.DBforPostgreSQL.Latest.ServerArgs
         {
             Location = "westus",
+            Properties = 
+            {
+                { "administratorLogin", "cloudsa" },
+                { "administratorLoginPassword", "pa$$w0rd" },
+                { "createMode", "Default" },
+                { "minimalTlsVersion", "TLS1_2" },
+                { "sslEnforcement", "Enabled" },
+                { "storageProfile", new AzureNextGen.DBforPostgreSQL.Latest.Inputs.StorageProfileArgs
+                {
+                    BackupRetentionDays = 7,
+                    GeoRedundantBackup = "Disabled",
+                    StorageMB = 128000,
+                } },
+            },
             ResourceGroupName = "TestGroup",
             ServerName = "pgtestsvc4",
             Sku = new AzureNextGen.DBforPostgreSQL.Latest.Inputs.SkuArgs
@@ -173,40 +170,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-package main
-
-import (
-	dbforpostgresql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/dbforpostgresql/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := dbforpostgresql.NewServer(ctx, "server", &dbforpostgresql.ServerArgs{
-			Location:          pulumi.String("westus"),
-			ResourceGroupName: pulumi.String("TestGroup"),
-			ServerName:        pulumi.String("pgtestsvc4"),
-			Sku: &dbforpostgresql.SkuArgs{
-				Capacity: pulumi.Int(2),
-				Family:   pulumi.String("Gen5"),
-				Name:     pulumi.String("B_Gen5_2"),
-				Tier:     pulumi.String("Basic"),
-			},
-			Tags: pulumi.StringMap{
-				"ElasticServer": pulumi.String("1"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -217,6 +181,18 @@ import pulumi_azure_nextgen as azure_nextgen
 
 server = azure_nextgen.dbforpostgresql.latest.Server("server",
     location="westus",
+    properties={
+        "administratorLogin": "cloudsa",
+        "administratorLoginPassword": "pa$$w0rd",
+        "createMode": "Default",
+        "minimalTlsVersion": "TLS1_2",
+        "sslEnforcement": "Enabled",
+        "storageProfile": {
+            "backupRetentionDays": 7,
+            "geoRedundantBackup": "Disabled",
+            "storageMB": 128000,
+        },
+    },
     resource_group_name="TestGroup",
     server_name="pgtestsvc4",
     sku={
@@ -241,6 +217,18 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const server = new azure_nextgen.dbforpostgresql.latest.Server("server", {
     location: "westus",
+    properties: {
+        administratorLogin: "cloudsa",
+        administratorLoginPassword: `pa$$w0rd`,
+        createMode: "Default",
+        minimalTlsVersion: "TLS1_2",
+        sslEnforcement: "Enabled",
+        storageProfile: {
+            backupRetentionDays: 7,
+            geoRedundantBackup: "Disabled",
+            storageMB: 128000,
+        },
+    },
     resourceGroupName: "TestGroup",
     serverName: "pgtestsvc4",
     sku: {
@@ -271,6 +259,11 @@ class MyStack : Stack
         var server = new AzureNextGen.DBforPostgreSQL.Latest.Server("server", new AzureNextGen.DBforPostgreSQL.Latest.ServerArgs
         {
             Location = "westcentralus",
+            Properties = 
+            {
+                { "createMode", "Replica" },
+                { "sourceServerId", "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup_WestCentralUS/providers/Microsoft.DBforPostgreSQL/servers/testserver-master" },
+            },
             ResourceGroupName = "TestGroup_WestCentralUS",
             ServerName = "testserver-replica1",
             Sku = new AzureNextGen.DBforPostgreSQL.Latest.Inputs.SkuArgs
@@ -290,37 +283,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-package main
-
-import (
-	dbforpostgresql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/dbforpostgresql/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := dbforpostgresql.NewServer(ctx, "server", &dbforpostgresql.ServerArgs{
-			Location:          pulumi.String("westcentralus"),
-			ResourceGroupName: pulumi.String("TestGroup_WestCentralUS"),
-			ServerName:        pulumi.String("testserver-replica1"),
-			Sku: &dbforpostgresql.SkuArgs{
-				Capacity: pulumi.Int(2),
-				Family:   pulumi.String("Gen5"),
-				Name:     pulumi.String("GP_Gen5_2"),
-				Tier:     pulumi.String("GeneralPurpose"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -331,6 +294,10 @@ import pulumi_azure_nextgen as azure_nextgen
 
 server = azure_nextgen.dbforpostgresql.latest.Server("server",
     location="westcentralus",
+    properties={
+        "createMode": "Replica",
+        "sourceServerId": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup_WestCentralUS/providers/Microsoft.DBforPostgreSQL/servers/testserver-master",
+    },
     resource_group_name="TestGroup_WestCentralUS",
     server_name="testserver-replica1",
     sku={
@@ -352,6 +319,10 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const server = new azure_nextgen.dbforpostgresql.latest.Server("server", {
     location: "westcentralus",
+    properties: {
+        createMode: "Replica",
+        sourceServerId: "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup_WestCentralUS/providers/Microsoft.DBforPostgreSQL/servers/testserver-master",
+    },
     resourceGroupName: "TestGroup_WestCentralUS",
     serverName: "testserver-replica1",
     sku: {
@@ -379,6 +350,11 @@ class MyStack : Stack
         var server = new AzureNextGen.DBforPostgreSQL.Latest.Server("server", new AzureNextGen.DBforPostgreSQL.Latest.ServerArgs
         {
             Location = "westus",
+            Properties = 
+            {
+                { "createMode", "GeoRestore" },
+                { "sourceServerId", "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforPostgreSQL/servers/sourceserver" },
+            },
             ResourceGroupName = "TargetResourceGroup",
             ServerName = "targetserver",
             Sku = new AzureNextGen.DBforPostgreSQL.Latest.Inputs.SkuArgs
@@ -402,40 +378,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-package main
-
-import (
-	dbforpostgresql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/dbforpostgresql/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := dbforpostgresql.NewServer(ctx, "server", &dbforpostgresql.ServerArgs{
-			Location:          pulumi.String("westus"),
-			ResourceGroupName: pulumi.String("TargetResourceGroup"),
-			ServerName:        pulumi.String("targetserver"),
-			Sku: &dbforpostgresql.SkuArgs{
-				Capacity: pulumi.Int(2),
-				Family:   pulumi.String("Gen5"),
-				Name:     pulumi.String("GP_Gen5_2"),
-				Tier:     pulumi.String("GeneralPurpose"),
-			},
-			Tags: pulumi.StringMap{
-				"ElasticServer": pulumi.String("1"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -446,6 +389,10 @@ import pulumi_azure_nextgen as azure_nextgen
 
 server = azure_nextgen.dbforpostgresql.latest.Server("server",
     location="westus",
+    properties={
+        "createMode": "GeoRestore",
+        "sourceServerId": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforPostgreSQL/servers/sourceserver",
+    },
     resource_group_name="TargetResourceGroup",
     server_name="targetserver",
     sku={
@@ -470,6 +417,10 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const server = new azure_nextgen.dbforpostgresql.latest.Server("server", {
     location: "westus",
+    properties: {
+        createMode: "GeoRestore",
+        sourceServerId: "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforPostgreSQL/servers/sourceserver",
+    },
     resourceGroupName: "TargetResourceGroup",
     serverName: "targetserver",
     sku: {

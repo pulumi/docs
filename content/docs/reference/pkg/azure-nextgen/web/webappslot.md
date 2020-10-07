@@ -10358,6 +10358,16 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span id="scmmintlsversion_csharp">
+<a href="#scmmintlsversion_csharp" style="color: inherit; text-decoration: inherit;">Scm<wbr>Min<wbr>Tls<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}ScmMinTlsVersion: configures the minimum version of TLS required for SSL requests for SCM site{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="scmtype_csharp">
 <a href="#scmtype_csharp" style="color: inherit; text-decoration: inherit;">Scm<wbr>Type</a>
 </span> 
@@ -10903,6 +10913,16 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}IP security restrictions for scm to use main.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scmmintlsversion_go">
+<a href="#scmmintlsversion_go" style="color: inherit; text-decoration: inherit;">Scm<wbr>Min<wbr>Tls<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}ScmMinTlsVersion: configures the minimum version of TLS required for SSL requests for SCM site{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -11454,6 +11474,16 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span id="scmmintlsversion_nodejs">
+<a href="#scmmintlsversion_nodejs" style="color: inherit; text-decoration: inherit;">scm<wbr>Min<wbr>Tls<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}ScmMinTlsVersion: configures the minimum version of TLS required for SSL requests for SCM site{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="scmtype_nodejs">
 <a href="#scmtype_nodejs" style="color: inherit; text-decoration: inherit;">scm<wbr>Type</a>
 </span> 
@@ -11999,6 +12029,16 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}IP security restrictions for scm to use main.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scm_min_tls_version_python">
+<a href="#scm_min_tls_version_python" style="color: inherit; text-decoration: inherit;">scm_<wbr>min_<wbr>tls_<wbr>version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}ScmMinTlsVersion: configures the minimum version of TLS required for SSL requests for SCM site{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -12571,6 +12611,16 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span id="scmmintlsversion_csharp">
+<a href="#scmmintlsversion_csharp" style="color: inherit; text-decoration: inherit;">Scm<wbr>Min<wbr>Tls<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}ScmMinTlsVersion: configures the minimum version of TLS required for SSL requests for SCM site{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="scmtype_csharp">
 <a href="#scmtype_csharp" style="color: inherit; text-decoration: inherit;">Scm<wbr>Type</a>
 </span> 
@@ -13126,6 +13176,16 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}IP security restrictions for scm to use main.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scmmintlsversion_go">
+<a href="#scmmintlsversion_go" style="color: inherit; text-decoration: inherit;">Scm<wbr>Min<wbr>Tls<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}ScmMinTlsVersion: configures the minimum version of TLS required for SSL requests for SCM site{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -13687,6 +13747,16 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span id="scmmintlsversion_nodejs">
+<a href="#scmmintlsversion_nodejs" style="color: inherit; text-decoration: inherit;">scm<wbr>Min<wbr>Tls<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}ScmMinTlsVersion: configures the minimum version of TLS required for SSL requests for SCM site{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="scmtype_nodejs">
 <a href="#scmtype_nodejs" style="color: inherit; text-decoration: inherit;">scm<wbr>Type</a>
 </span> 
@@ -14242,6 +14312,16 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}IP security restrictions for scm to use main.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scm_min_tls_version_python">
+<a href="#scm_min_tls_version_python" style="color: inherit; text-decoration: inherit;">scm_<wbr>min_<wbr>tls_<wbr>version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}ScmMinTlsVersion: configures the minimum version of TLS required for SSL requests for SCM site{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

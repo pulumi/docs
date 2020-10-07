@@ -54,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	databricks "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/databricks/latest"
+	databricks "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databricks/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

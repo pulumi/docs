@@ -31,10 +31,7 @@ class MyStack : Stack
             Destination = 
             {
                 { "endpointType", "WebHook" },
-                { "properties", 
-                {
-                    { "endpointUrl", "https://requestb.in/15ksip71" },
-                } },
+                { "endpointUrl", "https://requestb.in/15ksip71" },
             },
             EventSubscriptionName = "exampleEventSubscriptionName1",
             Filter = new AzureNextGen.EventGrid.V20200401Preview.Inputs.EventSubscriptionFilterArgs
@@ -67,9 +64,7 @@ import pulumi_azure_nextgen as azure_nextgen
 partner_topic_event_subscription = azure_nextgen.eventgrid.v20200401preview.PartnerTopicEventSubscription("partnerTopicEventSubscription",
     destination={
         "endpointType": "WebHook",
-        "properties": {
-            "endpointUrl": "https://requestb.in/15ksip71",
-        },
+        "endpointUrl": "https://requestb.in/15ksip71",
     },
     event_subscription_name="exampleEventSubscriptionName1",
     filter={
@@ -93,9 +88,7 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const partnerTopicEventSubscription = new azure_nextgen.eventgrid.v20200401preview.PartnerTopicEventSubscription("partnerTopicEventSubscription", {
     destination: {
         endpointType: "WebHook",
-        properties: {
-            endpointUrl: "https://requestb.in/15ksip71",
-        },
+        endpointUrl: "https://requestb.in/15ksip71",
     },
     eventSubscriptionName: "exampleEventSubscriptionName1",
     filter: {

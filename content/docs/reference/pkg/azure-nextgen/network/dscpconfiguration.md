@@ -12,6 +12,218 @@ meta_desc: "Explore the DscpConfiguration resource of the network module, includ
 
 DSCP Configuration in a resource group.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create DSCP Configuration
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dscpConfiguration = new AzureNextGen.Network.Latest.DscpConfiguration("dscpConfiguration", new AzureNextGen.Network.Latest.DscpConfigurationArgs
+        {
+            DestinationIpRanges = 
+            {
+                new AzureNextGen.Network.Latest.Inputs.QosIpRangeArgs
+                {
+                    EndIP = "127.0.10.2",
+                    StartIP = "127.0.10.1",
+                },
+                new AzureNextGen.Network.Latest.Inputs.QosIpRangeArgs
+                {
+                    EndIP = "127.0.11.2",
+                    StartIP = "127.0.11.1",
+                },
+            },
+            DestinationPortRanges = 
+            {
+                new AzureNextGen.Network.Latest.Inputs.QosPortRangeArgs
+                {
+                    End = 15,
+                    Start = 15,
+                },
+                new AzureNextGen.Network.Latest.Inputs.QosPortRangeArgs
+                {
+                    End = 27,
+                    Start = 26,
+                },
+            },
+            DscpConfigurationName = "mydscpconfig",
+            Location = "eastus",
+            Markings = 
+            {
+                46,
+                10,
+            },
+            Protocol = "Tcp",
+            ResourceGroupName = "rg1",
+            SourceIpRanges = 
+            {
+                new AzureNextGen.Network.Latest.Inputs.QosIpRangeArgs
+                {
+                    EndIP = "127.0.0.2",
+                    StartIP = "127.0.0.1",
+                },
+                new AzureNextGen.Network.Latest.Inputs.QosIpRangeArgs
+                {
+                    EndIP = "127.0.1.2",
+                    StartIP = "127.0.1.1",
+                },
+            },
+            SourcePortRanges = 
+            {
+                new AzureNextGen.Network.Latest.Inputs.QosPortRangeArgs
+                {
+                    End = 11,
+                    Start = 10,
+                },
+                new AzureNextGen.Network.Latest.Inputs.QosPortRangeArgs
+                {
+                    End = 21,
+                    Start = 20,
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+dscp_configuration = azure_nextgen.network.latest.DscpConfiguration("dscpConfiguration",
+    destination_ip_ranges=[
+        {
+            "endIP": "127.0.10.2",
+            "startIP": "127.0.10.1",
+        },
+        {
+            "endIP": "127.0.11.2",
+            "startIP": "127.0.11.1",
+        },
+    ],
+    destination_port_ranges=[
+        {
+            "end": 15,
+            "start": 15,
+        },
+        {
+            "end": 27,
+            "start": 26,
+        },
+    ],
+    dscp_configuration_name="mydscpconfig",
+    location="eastus",
+    markings=[
+        46,
+        10,
+    ],
+    protocol="Tcp",
+    resource_group_name="rg1",
+    source_ip_ranges=[
+        {
+            "endIP": "127.0.0.2",
+            "startIP": "127.0.0.1",
+        },
+        {
+            "endIP": "127.0.1.2",
+            "startIP": "127.0.1.1",
+        },
+    ],
+    source_port_ranges=[
+        {
+            "end": 11,
+            "start": 10,
+        },
+        {
+            "end": 21,
+            "start": 20,
+        },
+    ])
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const dscpConfiguration = new azure_nextgen.network.latest.DscpConfiguration("dscpConfiguration", {
+    destinationIpRanges: [
+        {
+            endIP: "127.0.10.2",
+            startIP: "127.0.10.1",
+        },
+        {
+            endIP: "127.0.11.2",
+            startIP: "127.0.11.1",
+        },
+    ],
+    destinationPortRanges: [
+        {
+            end: 15,
+            start: 15,
+        },
+        {
+            end: 27,
+            start: 26,
+        },
+    ],
+    dscpConfigurationName: "mydscpconfig",
+    location: "eastus",
+    markings: [
+        46,
+        10,
+    ],
+    protocol: "Tcp",
+    resourceGroupName: "rg1",
+    sourceIpRanges: [
+        {
+            endIP: "127.0.0.2",
+            startIP: "127.0.0.1",
+        },
+        {
+            endIP: "127.0.1.2",
+            startIP: "127.0.1.1",
+        },
+    ],
+    sourcePortRanges: [
+        {
+            end: 11,
+            start: 10,
+        },
+        {
+            end: 21,
+            start: 20,
+        },
+    ],
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DscpConfiguration Resource {#create}
@@ -14410,7 +14622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -14427,7 +14639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -14444,7 +14656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -14461,7 +14673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

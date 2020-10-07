@@ -29,6 +29,14 @@ class MyStack : Stack
         var iotDpsResourcePrivateEndpointConnection = new AzureNextGen.Devices.Latest.IotDpsResourcePrivateEndpointConnection("iotDpsResourcePrivateEndpointConnection", new AzureNextGen.Devices.Latest.IotDpsResourcePrivateEndpointConnectionArgs
         {
             PrivateEndpointConnectionName = "myPrivateEndpointConnection",
+            Properties = new AzureNextGen.Devices.Latest.Inputs.PrivateEndpointConnectionPropertiesArgs
+            {
+                PrivateLinkServiceConnectionState = new AzureNextGen.Devices.Latest.Inputs.PrivateLinkServiceConnectionStateArgs
+                {
+                    Description = "Approved by johndoe@contoso.com",
+                    Status = "Approved",
+                },
+            },
             ResourceGroupName = "myResourceGroup",
             ResourceName = "myFirstProvisioningService",
         });
@@ -46,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	devices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/devices/latest"
+	devices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/devices/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -54,8 +62,14 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := devices.NewIotDpsResourcePrivateEndpointConnection(ctx, "iotDpsResourcePrivateEndpointConnection", &devices.IotDpsResourcePrivateEndpointConnectionArgs{
 			PrivateEndpointConnectionName: pulumi.String("myPrivateEndpointConnection"),
-			ResourceGroupName:             pulumi.String("myResourceGroup"),
-			ResourceName:                  pulumi.String("myFirstProvisioningService"),
+			Properties: &devices.PrivateEndpointConnectionPropertiesArgs{
+				PrivateLinkServiceConnectionState: &devices.PrivateLinkServiceConnectionStateArgs{
+					Description: pulumi.String("Approved by johndoe@contoso.com"),
+					Status:      pulumi.String("Approved"),
+				},
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			ResourceName:      pulumi.String("myFirstProvisioningService"),
 		})
 		if err != nil {
 			return err
@@ -76,6 +90,12 @@ import pulumi_azure_nextgen as azure_nextgen
 
 iot_dps_resource_private_endpoint_connection = azure_nextgen.devices.latest.IotDpsResourcePrivateEndpointConnection("iotDpsResourcePrivateEndpointConnection",
     private_endpoint_connection_name="myPrivateEndpointConnection",
+    properties={
+        "privateLinkServiceConnectionState": {
+            "description": "Approved by johndoe@contoso.com",
+            "status": "Approved",
+        },
+    },
     resource_group_name="myResourceGroup",
     resource_name="myFirstProvisioningService")
 
@@ -91,6 +111,12 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const iotDpsResourcePrivateEndpointConnection = new azure_nextgen.devices.latest.IotDpsResourcePrivateEndpointConnection("iotDpsResourcePrivateEndpointConnection", {
     privateEndpointConnectionName: "myPrivateEndpointConnection",
+    properties: {
+        privateLinkServiceConnectionState: {
+            description: "Approved by johndoe@contoso.com",
+            status: "Approved",
+        },
+    },
     resourceGroupName: "myResourceGroup",
     resourceName: "myFirstProvisioningService",
 });

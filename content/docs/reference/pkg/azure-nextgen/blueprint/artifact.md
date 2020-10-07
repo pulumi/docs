@@ -47,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	blueprint "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/blueprint/v20181101preview"
+	blueprint "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/blueprint/v20181101preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -134,7 +134,7 @@ class MyStack : Stack
 package main
 
 import (
-	blueprint "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/blueprint/v20181101preview"
+	blueprint "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/blueprint/v20181101preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -221,7 +221,7 @@ class MyStack : Stack
 package main
 
 import (
-	blueprint "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/blueprint/v20181101preview"
+	blueprint "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/blueprint/v20181101preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -308,7 +308,7 @@ class MyStack : Stack
 package main
 
 import (
-	blueprint "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/blueprint/v20181101preview"
+	blueprint "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/blueprint/v20181101preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -395,7 +395,7 @@ class MyStack : Stack
 package main
 
 import (
-	blueprint "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/blueprint/v20181101preview"
+	blueprint "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/blueprint/v20181101preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -482,7 +482,7 @@ class MyStack : Stack
 package main
 
 import (
-	blueprint "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/blueprint/v20181101preview"
+	blueprint "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/blueprint/v20181101preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

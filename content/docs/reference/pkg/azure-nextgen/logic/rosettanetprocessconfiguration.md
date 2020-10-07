@@ -100,7 +100,7 @@ class MyStack : Stack
 package main
 
 import (
-	logic "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/logic/latest"
+	logic "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/logic/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

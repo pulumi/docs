@@ -56,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	eventhub "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/eventhub/latest"
+	eventhub "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventhub/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -319,6 +319,16 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="namespacename_csharp">
 <a href="#namespacename_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Name</a>
 </span> 
@@ -359,16 +369,6 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="maximumthroughputunits_csharp">
 <a href="#maximumthroughputunits_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Throughput<wbr>Units</a>
 </span> 
@@ -403,6 +403,16 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -446,16 +456,6 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="maximumthroughputunits_go">
 <a href="#maximumthroughputunits_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Throughput<wbr>Units</a>
 </span> 
@@ -490,6 +490,16 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -533,16 +543,6 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="maximumthroughputunits_nodejs">
 <a href="#maximumthroughputunits_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Throughput<wbr>Units</a>
 </span> 
@@ -577,6 +577,16 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -617,16 +627,6 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Value that indicates whether Kafka is enabled for eventhub namespace.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

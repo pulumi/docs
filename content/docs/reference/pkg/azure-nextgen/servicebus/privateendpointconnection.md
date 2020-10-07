@@ -56,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	servicebus "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/servicebus/v20180101preview"
+	servicebus "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicebus/v20180101preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

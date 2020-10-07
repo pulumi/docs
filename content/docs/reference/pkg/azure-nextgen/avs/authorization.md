@@ -46,7 +46,7 @@ class MyStack : Stack
 package main
 
 import (
-	avs "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/avs/latest"
+	avs "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/avs/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

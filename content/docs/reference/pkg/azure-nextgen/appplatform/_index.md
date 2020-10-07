@@ -22,10 +22,12 @@ Explore the resources and functions of the appplatform module in the Azure NextG
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getapp" title="GetApp"><span class="symbol function"></span>GetApp</a></li>
+    <li><a href="getappresourceuploadurl" title="GetAppResourceUploadUrl"><span class="symbol function"></span>GetAppResourceUploadUrl</a></li>
     <li><a href="getbinding" title="GetBinding"><span class="symbol function"></span>GetBinding</a></li>
     <li><a href="getcertificate" title="GetCertificate"><span class="symbol function"></span>GetCertificate</a></li>
     <li><a href="getcustomdomain" title="GetCustomDomain"><span class="symbol function"></span>GetCustomDomain</a></li>
     <li><a href="getdeployment" title="GetDeployment"><span class="symbol function"></span>GetDeployment</a></li>
+    <li><a href="getdeploymentlogfileurl" title="GetDeploymentLogFileUrl"><span class="symbol function"></span>GetDeploymentLogFileUrl</a></li>
     <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
     <li><a href="listservicetestkeys" title="ListServiceTestKeys"><span class="symbol function"></span>ListServiceTestKeys</a></li>
 </ul>
@@ -37,7 +39,7 @@ Explore the resources and functions of the appplatform module in the Azure NextG
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.1</dd>
 </dl>
 
 

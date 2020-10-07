@@ -1859,7 +1859,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1876,7 +1876,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1893,7 +1893,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1910,7 +1910,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2011,6 +2011,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="connectionstatus_csharp">
+<a href="#connectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The connection status.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="egressbytestransferred_csharp">
 <a href="#egressbytestransferred_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Bytes<wbr>Transferred</a>
 </span> 
@@ -2058,16 +2068,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Expected bandwidth in MBPS.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="connectionstatus_csharp">
-<a href="#connectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The connection status.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2228,6 +2228,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="connectionstatus_go">
+<a href="#connectionstatus_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The connection status.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="egressbytestransferred_go">
 <a href="#egressbytestransferred_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Bytes<wbr>Transferred</a>
 </span> 
@@ -2275,16 +2285,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Expected bandwidth in MBPS.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="connectionstatus_go">
-<a href="#connectionstatus_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The connection status.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2445,6 +2445,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="connectionstatus_nodejs">
+<a href="#connectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The connection status.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="egressbytestransferred_nodejs">
 <a href="#egressbytestransferred_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Bytes<wbr>Transferred</a>
 </span> 
@@ -2492,16 +2502,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Expected bandwidth in MBPS.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="connectionstatus_nodejs">
-<a href="#connectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The connection status.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2662,6 +2662,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="connection_status_python">
+<a href="#connection_status_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The connection status.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="egress_bytes_transferred_python">
 <a href="#egress_bytes_transferred_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>bytes_<wbr>transferred</a>
 </span> 
@@ -2709,16 +2719,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Expected bandwidth in MBPS.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="connection_status_python">
-<a href="#connection_status_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The connection status.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3049,6 +3049,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="connectionstatus_csharp">
+<a href="#connectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The connection status.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="egressbytestransferred_csharp">
 <a href="#egressbytestransferred_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Bytes<wbr>Transferred</a>
 </span> 
@@ -3106,16 +3116,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Expected bandwidth in MBPS.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="connectionstatus_csharp">
-<a href="#connectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The connection status.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3236,6 +3236,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="connectionstatus_go">
+<a href="#connectionstatus_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The connection status.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="egressbytestransferred_go">
 <a href="#egressbytestransferred_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Bytes<wbr>Transferred</a>
 </span> 
@@ -3293,16 +3303,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Expected bandwidth in MBPS.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="connectionstatus_go">
-<a href="#connectionstatus_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The connection status.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3423,6 +3423,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="connectionstatus_nodejs">
+<a href="#connectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The connection status.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="egressbytestransferred_nodejs">
 <a href="#egressbytestransferred_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Bytes<wbr>Transferred</a>
 </span> 
@@ -3480,16 +3490,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Expected bandwidth in MBPS.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="connectionstatus_nodejs">
-<a href="#connectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The connection status.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3610,6 +3610,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="connection_status_python">
+<a href="#connection_status_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The connection status.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="egress_bytes_transferred_python">
 <a href="#egress_bytes_transferred_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>bytes_<wbr>transferred</a>
 </span> 
@@ -3667,16 +3677,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Expected bandwidth in MBPS.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="connection_status_python">
-<a href="#connection_status_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The connection status.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	web "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/web/latest"
+	web "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/web/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

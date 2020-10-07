@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices/v20200501preview"
+	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices/v20200501preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -155,7 +155,7 @@ class MyStack : Stack
 package main
 
 import (
-	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices/v20200501preview"
+	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices/v20200501preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -260,7 +260,7 @@ class MyStack : Stack
 package main
 
 import (
-	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices/v20200501preview"
+	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices/v20200501preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -356,7 +356,7 @@ class MyStack : Stack
 package main
 
 import (
-	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices/v20200501preview"
+	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices/v20200501preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -446,7 +446,7 @@ class MyStack : Stack
 package main
 
 import (
-	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices/v20200501preview"
+	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices/v20200501preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -546,7 +546,7 @@ class MyStack : Stack
 package main
 
 import (
-	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices/v20200501preview"
+	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices/v20200501preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -649,7 +649,7 @@ class MyStack : Stack
 package main
 
 import (
-	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices/v20200501preview"
+	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices/v20200501preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -752,7 +752,7 @@ class MyStack : Stack
 package main
 
 import (
-	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices/v20200501preview"
+	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices/v20200501preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

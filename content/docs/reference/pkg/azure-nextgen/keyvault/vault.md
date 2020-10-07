@@ -29,6 +29,76 @@ class MyStack : Stack
         var vault = new AzureNextGen.KeyVault.Latest.Vault("vault", new AzureNextGen.KeyVault.Latest.VaultArgs
         {
             Location = "westus",
+            Properties = new AzureNextGen.KeyVault.Latest.Inputs.VaultPropertiesArgs
+            {
+                AccessPolicies = 
+                {
+                    new AzureNextGen.KeyVault.Latest.Inputs.AccessPolicyEntryArgs
+                    {
+                        ObjectId = "00000000-0000-0000-0000-000000000000",
+                        Permissions = new AzureNextGen.KeyVault.Latest.Inputs.PermissionsArgs
+                        {
+                            Certificates = 
+                            {
+                                "get",
+                                "list",
+                                "delete",
+                                "create",
+                                "import",
+                                "update",
+                                "managecontacts",
+                                "getissuers",
+                                "listissuers",
+                                "setissuers",
+                                "deleteissuers",
+                                "manageissuers",
+                                "recover",
+                                "purge",
+                            },
+                            Keys = 
+                            {
+                                "encrypt",
+                                "decrypt",
+                                "wrapKey",
+                                "unwrapKey",
+                                "sign",
+                                "verify",
+                                "get",
+                                "list",
+                                "create",
+                                "update",
+                                "import",
+                                "delete",
+                                "backup",
+                                "restore",
+                                "recover",
+                                "purge",
+                            },
+                            Secrets = 
+                            {
+                                "get",
+                                "list",
+                                "set",
+                                "delete",
+                                "backup",
+                                "restore",
+                                "recover",
+                                "purge",
+                            },
+                        },
+                        TenantId = "00000000-0000-0000-0000-000000000000",
+                    },
+                },
+                EnabledForDeployment = true,
+                EnabledForDiskEncryption = true,
+                EnabledForTemplateDeployment = true,
+                Sku = new AzureNextGen.KeyVault.Latest.Inputs.SkuArgs
+                {
+                    Family = "A",
+                    Name = "standard",
+                },
+                TenantId = "00000000-0000-0000-0000-000000000000",
+            },
             ResourceGroupName = "sample-resource-group",
             VaultName = "sample-vault",
         });
@@ -46,14 +116,76 @@ class MyStack : Stack
 package main
 
 import (
-	keyvault "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/keyvault/latest"
+	keyvault "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/keyvault/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := keyvault.NewVault(ctx, "vault", &keyvault.VaultArgs{
-			Location:          pulumi.String("westus"),
+			Location: pulumi.String("westus"),
+			Properties: &keyvault.VaultPropertiesArgs{
+				AccessPolicies: keyvault.AccessPolicyEntryArray{
+					&keyvault.AccessPolicyEntryArgs{
+						ObjectId: pulumi.String("00000000-0000-0000-0000-000000000000"),
+						Permissions: &keyvault.PermissionsArgs{
+							Certificates: pulumi.StringArray{
+								pulumi.String("get"),
+								pulumi.String("list"),
+								pulumi.String("delete"),
+								pulumi.String("create"),
+								pulumi.String("import"),
+								pulumi.String("update"),
+								pulumi.String("managecontacts"),
+								pulumi.String("getissuers"),
+								pulumi.String("listissuers"),
+								pulumi.String("setissuers"),
+								pulumi.String("deleteissuers"),
+								pulumi.String("manageissuers"),
+								pulumi.String("recover"),
+								pulumi.String("purge"),
+							},
+							Keys: pulumi.StringArray{
+								pulumi.String("encrypt"),
+								pulumi.String("decrypt"),
+								pulumi.String("wrapKey"),
+								pulumi.String("unwrapKey"),
+								pulumi.String("sign"),
+								pulumi.String("verify"),
+								pulumi.String("get"),
+								pulumi.String("list"),
+								pulumi.String("create"),
+								pulumi.String("update"),
+								pulumi.String("import"),
+								pulumi.String("delete"),
+								pulumi.String("backup"),
+								pulumi.String("restore"),
+								pulumi.String("recover"),
+								pulumi.String("purge"),
+							},
+							Secrets: pulumi.StringArray{
+								pulumi.String("get"),
+								pulumi.String("list"),
+								pulumi.String("set"),
+								pulumi.String("delete"),
+								pulumi.String("backup"),
+								pulumi.String("restore"),
+								pulumi.String("recover"),
+								pulumi.String("purge"),
+							},
+						},
+						TenantId: pulumi.String("00000000-0000-0000-0000-000000000000"),
+					},
+				},
+				EnabledForDeployment:         pulumi.Bool(true),
+				EnabledForDiskEncryption:     pulumi.Bool(true),
+				EnabledForTemplateDeployment: pulumi.Bool(true),
+				Sku: &keyvault.SkuArgs{
+					Family: pulumi.String("A"),
+					Name:   pulumi.String("standard"),
+				},
+				TenantId: pulumi.String("00000000-0000-0000-0000-000000000000"),
+			},
 			ResourceGroupName: pulumi.String("sample-resource-group"),
 			VaultName:         pulumi.String("sample-vault"),
 		})
@@ -76,6 +208,66 @@ import pulumi_azure_nextgen as azure_nextgen
 
 vault = azure_nextgen.keyvault.latest.Vault("vault",
     location="westus",
+    properties={
+        "accessPolicies": [{
+            "objectId": "00000000-0000-0000-0000-000000000000",
+            "permissions": {
+                "certificates": [
+                    "get",
+                    "list",
+                    "delete",
+                    "create",
+                    "import",
+                    "update",
+                    "managecontacts",
+                    "getissuers",
+                    "listissuers",
+                    "setissuers",
+                    "deleteissuers",
+                    "manageissuers",
+                    "recover",
+                    "purge",
+                ],
+                "keys": [
+                    "encrypt",
+                    "decrypt",
+                    "wrapKey",
+                    "unwrapKey",
+                    "sign",
+                    "verify",
+                    "get",
+                    "list",
+                    "create",
+                    "update",
+                    "import",
+                    "delete",
+                    "backup",
+                    "restore",
+                    "recover",
+                    "purge",
+                ],
+                "secrets": [
+                    "get",
+                    "list",
+                    "set",
+                    "delete",
+                    "backup",
+                    "restore",
+                    "recover",
+                    "purge",
+                ],
+            },
+            "tenantId": "00000000-0000-0000-0000-000000000000",
+        }],
+        "enabledForDeployment": True,
+        "enabledForDiskEncryption": True,
+        "enabledForTemplateDeployment": True,
+        "sku": {
+            "family": "A",
+            "name": "standard",
+        },
+        "tenantId": "00000000-0000-0000-0000-000000000000",
+    },
     resource_group_name="sample-resource-group",
     vault_name="sample-vault")
 
@@ -91,6 +283,66 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const vault = new azure_nextgen.keyvault.latest.Vault("vault", {
     location: "westus",
+    properties: {
+        accessPolicies: [{
+            objectId: "00000000-0000-0000-0000-000000000000",
+            permissions: {
+                certificates: [
+                    "get",
+                    "list",
+                    "delete",
+                    "create",
+                    "import",
+                    "update",
+                    "managecontacts",
+                    "getissuers",
+                    "listissuers",
+                    "setissuers",
+                    "deleteissuers",
+                    "manageissuers",
+                    "recover",
+                    "purge",
+                ],
+                keys: [
+                    "encrypt",
+                    "decrypt",
+                    "wrapKey",
+                    "unwrapKey",
+                    "sign",
+                    "verify",
+                    "get",
+                    "list",
+                    "create",
+                    "update",
+                    "import",
+                    "delete",
+                    "backup",
+                    "restore",
+                    "recover",
+                    "purge",
+                ],
+                secrets: [
+                    "get",
+                    "list",
+                    "set",
+                    "delete",
+                    "backup",
+                    "restore",
+                    "recover",
+                    "purge",
+                ],
+            },
+            tenantId: "00000000-0000-0000-0000-000000000000",
+        }],
+        enabledForDeployment: true,
+        enabledForDiskEncryption: true,
+        enabledForTemplateDeployment: true,
+        sku: {
+            family: "A",
+            name: "standard",
+        },
+        tenantId: "00000000-0000-0000-0000-000000000000",
+    },
     resourceGroupName: "sample-resource-group",
     vaultName: "sample-vault",
 });
@@ -112,6 +364,41 @@ class MyStack : Stack
         var vault = new AzureNextGen.KeyVault.Latest.Vault("vault", new AzureNextGen.KeyVault.Latest.VaultArgs
         {
             Location = "westus",
+            Properties = new AzureNextGen.KeyVault.Latest.Inputs.VaultPropertiesArgs
+            {
+                EnabledForDeployment = true,
+                EnabledForDiskEncryption = true,
+                EnabledForTemplateDeployment = true,
+                NetworkAcls = new AzureNextGen.KeyVault.Latest.Inputs.NetworkRuleSetArgs
+                {
+                    Bypass = "AzureServices",
+                    DefaultAction = "Deny",
+                    IpRules = 
+                    {
+                        new AzureNextGen.KeyVault.Latest.Inputs.IPRuleArgs
+                        {
+                            Value = "124.56.78.91",
+                        },
+                        new AzureNextGen.KeyVault.Latest.Inputs.IPRuleArgs
+                        {
+                            Value = "'10.91.4.0/24'",
+                        },
+                    },
+                    VirtualNetworkRules = 
+                    {
+                        new AzureNextGen.KeyVault.Latest.Inputs.VirtualNetworkRuleArgs
+                        {
+                            Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1",
+                        },
+                    },
+                },
+                Sku = new AzureNextGen.KeyVault.Latest.Inputs.SkuArgs
+                {
+                    Family = "A",
+                    Name = "standard",
+                },
+                TenantId = "00000000-0000-0000-0000-000000000000",
+            },
             ResourceGroupName = "sample-resource-group",
             VaultName = "sample-vault",
         });
@@ -129,14 +416,41 @@ class MyStack : Stack
 package main
 
 import (
-	keyvault "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/keyvault/latest"
+	keyvault "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/keyvault/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := keyvault.NewVault(ctx, "vault", &keyvault.VaultArgs{
-			Location:          pulumi.String("westus"),
+			Location: pulumi.String("westus"),
+			Properties: &keyvault.VaultPropertiesArgs{
+				EnabledForDeployment:         pulumi.Bool(true),
+				EnabledForDiskEncryption:     pulumi.Bool(true),
+				EnabledForTemplateDeployment: pulumi.Bool(true),
+				NetworkAcls: &keyvault.NetworkRuleSetArgs{
+					Bypass:        pulumi.String("AzureServices"),
+					DefaultAction: pulumi.String("Deny"),
+					IpRules: keyvault.IPRuleArray{
+						&keyvault.IPRuleArgs{
+							Value: pulumi.String("124.56.78.91"),
+						},
+						&keyvault.IPRuleArgs{
+							Value: pulumi.String("'10.91.4.0/24'"),
+						},
+					},
+					VirtualNetworkRules: keyvault.VirtualNetworkRuleArray{
+						&keyvault.VirtualNetworkRuleArgs{
+							Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1"),
+						},
+					},
+				},
+				Sku: &keyvault.SkuArgs{
+					Family: pulumi.String("A"),
+					Name:   pulumi.String("standard"),
+				},
+				TenantId: pulumi.String("00000000-0000-0000-0000-000000000000"),
+			},
 			ResourceGroupName: pulumi.String("sample-resource-group"),
 			VaultName:         pulumi.String("sample-vault"),
 		})
@@ -159,6 +473,31 @@ import pulumi_azure_nextgen as azure_nextgen
 
 vault = azure_nextgen.keyvault.latest.Vault("vault",
     location="westus",
+    properties={
+        "enabledForDeployment": True,
+        "enabledForDiskEncryption": True,
+        "enabledForTemplateDeployment": True,
+        "networkAcls": {
+            "bypass": "AzureServices",
+            "defaultAction": "Deny",
+            "ipRules": [
+                {
+                    "value": "124.56.78.91",
+                },
+                {
+                    "value": "'10.91.4.0/24'",
+                },
+            ],
+            "virtualNetworkRules": [{
+                "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1",
+            }],
+        },
+        "sku": {
+            "family": "A",
+            "name": "standard",
+        },
+        "tenantId": "00000000-0000-0000-0000-000000000000",
+    },
     resource_group_name="sample-resource-group",
     vault_name="sample-vault")
 
@@ -174,6 +513,31 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const vault = new azure_nextgen.keyvault.latest.Vault("vault", {
     location: "westus",
+    properties: {
+        enabledForDeployment: true,
+        enabledForDiskEncryption: true,
+        enabledForTemplateDeployment: true,
+        networkAcls: {
+            bypass: "AzureServices",
+            defaultAction: "Deny",
+            ipRules: [
+                {
+                    value: "124.56.78.91",
+                },
+                {
+                    value: "'10.91.4.0/24'",
+                },
+            ],
+            virtualNetworkRules: [{
+                id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1",
+            }],
+        },
+        sku: {
+            family: "A",
+            name: "standard",
+        },
+        tenantId: "00000000-0000-0000-0000-000000000000",
+    },
     resourceGroupName: "sample-resource-group",
     vaultName: "sample-vault",
 });
@@ -2125,6 +2489,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_csharp">
+<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Provisioning state of the private endpoint connection.{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span id="privateendpoint_csharp">
@@ -2145,22 +2519,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Approval state of the private link connection.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="provisioningstate_csharp">
-<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Provisioning state of the private endpoint connection.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_go">
+<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Provisioning state of the private endpoint connection.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2182,22 +2556,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Approval state of the private link connection.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="provisioningstate_go">
-<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Provisioning state of the private endpoint connection.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_nodejs">
+<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Provisioning state of the private endpoint connection.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2219,22 +2593,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Approval state of the private link connection.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="provisioningstate_nodejs">
-<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Provisioning state of the private endpoint connection.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioning_state_python">
+<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Provisioning state of the private endpoint connection.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2255,16 +2629,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Dict[Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Approval state of the private link connection.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="provisioning_state_python">
-<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Provisioning state of the private endpoint connection.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

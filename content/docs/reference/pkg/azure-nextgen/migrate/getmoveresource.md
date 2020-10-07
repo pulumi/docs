@@ -621,16 +621,6 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="jobprogress_csharp">
-<a href="#jobprogress_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Progress</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the monitoring job percentage.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="jobname_csharp">
 <a href="#jobname_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Name</a>
 </span> 
@@ -639,12 +629,32 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Defines the job name.{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span id="jobprogress_csharp">
+<a href="#jobprogress_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Progress</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the monitoring job percentage.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="jobname_go">
+<a href="#jobname_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the job name.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -656,22 +666,22 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Gets or sets the monitoring job percentage.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="jobname_go">
-<a href="#jobname_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Defines the job name.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="jobname_nodejs">
+<a href="#jobname_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the job name.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -683,22 +693,22 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Gets or sets the monitoring job percentage.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="jobname_nodejs">
-<a href="#jobname_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Defines the job name.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="job_name_python">
+<a href="#job_name_python" style="color: inherit; text-decoration: inherit;">job_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the job name.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -709,16 +719,6 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the monitoring job percentage.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="job_name_python">
-<a href="#job_name_python" style="color: inherit; text-decoration: inherit;">job_<wbr>name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Defines the job name.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2253,6 +2253,16 @@ the dependent resource.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
+        <span id="provisioningstate_csharp">
+<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the provisioning states.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="sourceid_csharp">
 <a href="#sourceid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Id</a>
 </span> 
@@ -2303,16 +2313,6 @@ the dependent resource.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="provisioningstate_csharp">
-<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Defines the provisioning states.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="resourcesettings_csharp">
 <a href="#resourcesettings_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Settings</a>
 </span> 
@@ -2357,6 +2357,16 @@ the dependent resource.{{% /md %}}</dd>
         <span class="property-type"><a href="#moveresourcepropertiesresponsemovestatus">Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Move<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Defines the move resource status.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_go">
+<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the provisioning states.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2410,16 +2420,6 @@ the dependent resource.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="provisioningstate_go">
-<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Defines the provisioning states.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="resourcesettings_go">
 <a href="#resourcesettings_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Settings</a>
 </span> 
@@ -2464,6 +2464,16 @@ the dependent resource.{{% /md %}}</dd>
         <span class="property-type"><a href="#moveresourcepropertiesresponsemovestatus">Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Move<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Defines the move resource status.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_nodejs">
+<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the provisioning states.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2517,16 +2527,6 @@ the dependent resource.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="provisioningstate_nodejs">
-<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Defines the provisioning states.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="resourcesettings_nodejs">
 <a href="#resourcesettings_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Settings</a>
 </span> 
@@ -2571,6 +2571,16 @@ the dependent resource.{{% /md %}}</dd>
         <span class="property-type"><a href="#moveresourcepropertiesresponsemovestatus">Dict[Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Move<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}Defines the move resource status.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioning_state_python">
+<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the provisioning states.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2621,16 +2631,6 @@ the dependent resource.{{% /md %}}</dd>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the existing target ARM Id of the resource.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="provisioning_state_python">
-<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Defines the provisioning states.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2741,6 +2741,16 @@ the dependent resource.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
+        <span id="movestate_csharp">
+<a href="#movestate_csharp" style="color: inherit; text-decoration: inherit;">Move<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the MoveResource states.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="targetid_csharp">
 <a href="#targetid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Id</a>
 </span> 
@@ -2769,22 +2779,22 @@ the dependent resource.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Defines the job status.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="movestate_csharp">
-<a href="#movestate_csharp" style="color: inherit; text-decoration: inherit;">Move<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Defines the MoveResource states.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="movestate_go">
+<a href="#movestate_go" style="color: inherit; text-decoration: inherit;">Move<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the MoveResource states.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2816,22 +2826,22 @@ the dependent resource.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Defines the job status.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="movestate_go">
-<a href="#movestate_go" style="color: inherit; text-decoration: inherit;">Move<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Defines the MoveResource states.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="movestate_nodejs">
+<a href="#movestate_nodejs" style="color: inherit; text-decoration: inherit;">move<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the MoveResource states.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2863,22 +2873,22 @@ the dependent resource.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Defines the job status.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="movestate_nodejs">
-<a href="#movestate_nodejs" style="color: inherit; text-decoration: inherit;">move<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Defines the MoveResource states.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="move_state_python">
+<a href="#move_state_python" style="color: inherit; text-decoration: inherit;">move_<wbr>state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the MoveResource states.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2909,16 +2919,6 @@ the dependent resource.{{% /md %}}</dd>
         <span class="property-type"><a href="#jobstatusresponse">Dict[Job<wbr>Status<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Defines the job status.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="move_state_python">
-<a href="#move_state_python" style="color: inherit; text-decoration: inherit;">move_<wbr>state</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Defines the MoveResource states.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

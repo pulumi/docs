@@ -12,6 +12,123 @@ meta_desc: "Explore the ServiceEndpointPolicyDefinition resource of the network 
 
 Service Endpoint policy definitions.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create service endpoint policy definition
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var serviceEndpointPolicyDefinition = new AzureNextGen.Network.Latest.ServiceEndpointPolicyDefinition("serviceEndpointPolicyDefinition", new AzureNextGen.Network.Latest.ServiceEndpointPolicyDefinitionArgs
+        {
+            Description = "Storage Service EndpointPolicy Definition",
+            ResourceGroupName = "rg1",
+            Service = "Microsoft.Storage",
+            ServiceEndpointPolicyDefinitionName = "testDefinition",
+            ServiceEndpointPolicyName = "testPolicy",
+            ServiceResources = 
+            {
+                "/subscriptions/subid1",
+                "/subscriptions/subid1/resourceGroups/storageRg",
+                "/subscriptions/subid1/resourceGroups/storageRg/providers/Microsoft.Storage/storageAccounts/stAccount",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewServiceEndpointPolicyDefinition(ctx, "serviceEndpointPolicyDefinition", &network.ServiceEndpointPolicyDefinitionArgs{
+			Description:                         pulumi.String("Storage Service EndpointPolicy Definition"),
+			ResourceGroupName:                   pulumi.String("rg1"),
+			Service:                             pulumi.String("Microsoft.Storage"),
+			ServiceEndpointPolicyDefinitionName: pulumi.String("testDefinition"),
+			ServiceEndpointPolicyName:           pulumi.String("testPolicy"),
+			ServiceResources: pulumi.StringArray{
+				pulumi.String("/subscriptions/subid1"),
+				pulumi.String("/subscriptions/subid1/resourceGroups/storageRg"),
+				pulumi.String("/subscriptions/subid1/resourceGroups/storageRg/providers/Microsoft.Storage/storageAccounts/stAccount"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+service_endpoint_policy_definition = azure_nextgen.network.latest.ServiceEndpointPolicyDefinition("serviceEndpointPolicyDefinition",
+    description="Storage Service EndpointPolicy Definition",
+    resource_group_name="rg1",
+    service="Microsoft.Storage",
+    service_endpoint_policy_definition_name="testDefinition",
+    service_endpoint_policy_name="testPolicy",
+    service_resources=[
+        "/subscriptions/subid1",
+        "/subscriptions/subid1/resourceGroups/storageRg",
+        "/subscriptions/subid1/resourceGroups/storageRg/providers/Microsoft.Storage/storageAccounts/stAccount",
+    ])
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const serviceEndpointPolicyDefinition = new azure_nextgen.network.latest.ServiceEndpointPolicyDefinition("serviceEndpointPolicyDefinition", {
+    description: "Storage Service EndpointPolicy Definition",
+    resourceGroupName: "rg1",
+    service: "Microsoft.Storage",
+    serviceEndpointPolicyDefinitionName: "testDefinition",
+    serviceEndpointPolicyName: "testPolicy",
+    serviceResources: [
+        "/subscriptions/subid1",
+        "/subscriptions/subid1/resourceGroups/storageRg",
+        "/subscriptions/subid1/resourceGroups/storageRg/providers/Microsoft.Storage/storageAccounts/stAccount",
+    ],
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ServiceEndpointPolicyDefinition Resource {#create}

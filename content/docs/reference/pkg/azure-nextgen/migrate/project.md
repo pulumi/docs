@@ -31,6 +31,11 @@ class MyStack : Stack
             ETag = "",
             Location = "West Europe",
             ProjectName = "abGoyalProject2",
+            Properties = new AzureNextGen.Migrate.Latest.Inputs.ProjectPropertiesArgs
+            {
+                AssessmentSolutionId = "/subscriptions/6393a73f-8d55-47ef-b6dd-179b3e0c7910/resourcegroups/abgoyal-westeurope/providers/microsoft.migrate/migrateprojects/abgoyalweselfhost/Solutions/Servers-Assessment-ServerAssessment",
+                ProjectStatus = "Active",
+            },
             ResourceGroupName = "abgoyal-westEurope",
             Tags = ,
         });
@@ -48,16 +53,20 @@ class MyStack : Stack
 package main
 
 import (
-	migrate "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/migrate/latest"
+	migrate "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/migrate/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := migrate.NewProject(ctx, "project", &migrate.ProjectArgs{
-			ETag:              pulumi.String(""),
-			Location:          pulumi.String("West Europe"),
-			ProjectName:       pulumi.String("abGoyalProject2"),
+			ETag:        pulumi.String(""),
+			Location:    pulumi.String("West Europe"),
+			ProjectName: pulumi.String("abGoyalProject2"),
+			Properties: &migrate.ProjectPropertiesArgs{
+				AssessmentSolutionId: pulumi.String("/subscriptions/6393a73f-8d55-47ef-b6dd-179b3e0c7910/resourcegroups/abgoyal-westeurope/providers/microsoft.migrate/migrateprojects/abgoyalweselfhost/Solutions/Servers-Assessment-ServerAssessment"),
+				ProjectStatus:        pulumi.String("Active"),
+			},
 			ResourceGroupName: pulumi.String("abgoyal-westEurope"),
 			Tags:              nil,
 		})
@@ -82,6 +91,10 @@ project = azure_nextgen.migrate.latest.Project("project",
     e_tag="",
     location="West Europe",
     project_name="abGoyalProject2",
+    properties={
+        "assessmentSolutionId": "/subscriptions/6393a73f-8d55-47ef-b6dd-179b3e0c7910/resourcegroups/abgoyal-westeurope/providers/microsoft.migrate/migrateprojects/abgoyalweselfhost/Solutions/Servers-Assessment-ServerAssessment",
+        "projectStatus": "Active",
+    },
     resource_group_name="abgoyal-westEurope",
     tags={})
 
@@ -99,6 +112,10 @@ const project = new azure_nextgen.migrate.latest.Project("project", {
     eTag: "",
     location: "West Europe",
     projectName: "abGoyalProject2",
+    properties: {
+        assessmentSolutionId: "/subscriptions/6393a73f-8d55-47ef-b6dd-179b3e0c7910/resourcegroups/abgoyal-westeurope/providers/microsoft.migrate/migrateprojects/abgoyalweselfhost/Solutions/Servers-Assessment-ServerAssessment",
+        projectStatus: "Active",
+    },
     resourceGroupName: "abgoyal-westEurope",
     tags: {},
 });
@@ -347,7 +364,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}Tags provided by Azure Tagging service.{{% /md %}}</dd>
 
@@ -414,7 +431,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}Tags provided by Azure Tagging service.{{% /md %}}</dd>
 
@@ -481,7 +498,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}Tags provided by Azure Tagging service.{{% /md %}}</dd>
 
@@ -548,7 +565,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}Tags provided by Azure Tagging service.{{% /md %}}</dd>
 

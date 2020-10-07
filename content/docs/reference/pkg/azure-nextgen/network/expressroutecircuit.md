@@ -12,6 +12,269 @@ meta_desc: "Explore the ExpressRouteCircuit resource of the network module, incl
 
 ExpressRouteCircuit resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create ExpressRouteCircuit
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var expressRouteCircuit = new AzureNextGen.Network.Latest.ExpressRouteCircuit("expressRouteCircuit", new AzureNextGen.Network.Latest.ExpressRouteCircuitArgs
+        {
+            AllowClassicOperations = false,
+            Authorizations = {},
+            CircuitName = "circuitName",
+            Location = "Brazil South",
+            Peerings = {},
+            ResourceGroupName = "rg1",
+            ServiceProviderProperties = new AzureNextGen.Network.Latest.Inputs.ExpressRouteCircuitServiceProviderPropertiesArgs
+            {
+                BandwidthInMbps = 200,
+                PeeringLocation = "Silicon Valley",
+                ServiceProviderName = "Equinix",
+            },
+            Sku = new AzureNextGen.Network.Latest.Inputs.ExpressRouteCircuitSkuArgs
+            {
+                Family = "MeteredData",
+                Name = "Standard_MeteredData",
+                Tier = "Standard",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewExpressRouteCircuit(ctx, "expressRouteCircuit", &network.ExpressRouteCircuitArgs{
+			AllowClassicOperations: pulumi.Bool(false),
+			Authorizations:         network.ExpressRouteCircuitAuthorizationArray{},
+			CircuitName:            pulumi.String("circuitName"),
+			Location:               pulumi.String("Brazil South"),
+			Peerings:               network.ExpressRouteCircuitPeeringArray{},
+			ResourceGroupName:      pulumi.String("rg1"),
+			ServiceProviderProperties: &network.ExpressRouteCircuitServiceProviderPropertiesArgs{
+				BandwidthInMbps:     pulumi.Int(200),
+				PeeringLocation:     pulumi.String("Silicon Valley"),
+				ServiceProviderName: pulumi.String("Equinix"),
+			},
+			Sku: &network.ExpressRouteCircuitSkuArgs{
+				Family: pulumi.String("MeteredData"),
+				Name:   pulumi.String("Standard_MeteredData"),
+				Tier:   pulumi.String("Standard"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+express_route_circuit = azure_nextgen.network.latest.ExpressRouteCircuit("expressRouteCircuit",
+    allow_classic_operations=False,
+    authorizations=[],
+    circuit_name="circuitName",
+    location="Brazil South",
+    peerings=[],
+    resource_group_name="rg1",
+    service_provider_properties={
+        "bandwidthInMbps": 200,
+        "peeringLocation": "Silicon Valley",
+        "serviceProviderName": "Equinix",
+    },
+    sku={
+        "family": "MeteredData",
+        "name": "Standard_MeteredData",
+        "tier": "Standard",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const expressRouteCircuit = new azure_nextgen.network.latest.ExpressRouteCircuit("expressRouteCircuit", {
+    allowClassicOperations: false,
+    authorizations: [],
+    circuitName: "circuitName",
+    location: "Brazil South",
+    peerings: [],
+    resourceGroupName: "rg1",
+    serviceProviderProperties: {
+        bandwidthInMbps: 200,
+        peeringLocation: "Silicon Valley",
+        serviceProviderName: "Equinix",
+    },
+    sku: {
+        family: "MeteredData",
+        name: "Standard_MeteredData",
+        tier: "Standard",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Create ExpressRouteCircuit on ExpressRoutePort
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var expressRouteCircuit = new AzureNextGen.Network.Latest.ExpressRouteCircuit("expressRouteCircuit", new AzureNextGen.Network.Latest.ExpressRouteCircuitArgs
+        {
+            BandwidthInGbps = 10,
+            CircuitName = "expressRouteCircuit1",
+            ExpressRoutePort = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+            {
+                Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/expressRoutePorts/portName",
+            },
+            Location = "westus",
+            ResourceGroupName = "rg1",
+            Sku = new AzureNextGen.Network.Latest.Inputs.ExpressRouteCircuitSkuArgs
+            {
+                Family = "MeteredData",
+                Name = "Premium_MeteredData",
+                Tier = "Premium",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewExpressRouteCircuit(ctx, "expressRouteCircuit", &network.ExpressRouteCircuitArgs{
+			BandwidthInGbps: pulumi.Float64(10),
+			CircuitName:     pulumi.String("expressRouteCircuit1"),
+			ExpressRoutePort: &network.SubResourceArgs{
+				Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/expressRoutePorts/portName"),
+			},
+			Location:          pulumi.String("westus"),
+			ResourceGroupName: pulumi.String("rg1"),
+			Sku: &network.ExpressRouteCircuitSkuArgs{
+				Family: pulumi.String("MeteredData"),
+				Name:   pulumi.String("Premium_MeteredData"),
+				Tier:   pulumi.String("Premium"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+express_route_circuit = azure_nextgen.network.latest.ExpressRouteCircuit("expressRouteCircuit",
+    bandwidth_in_gbps=10,
+    circuit_name="expressRouteCircuit1",
+    express_route_port={
+        "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/expressRoutePorts/portName",
+    },
+    location="westus",
+    resource_group_name="rg1",
+    sku={
+        "family": "MeteredData",
+        "name": "Premium_MeteredData",
+        "tier": "Premium",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const expressRouteCircuit = new azure_nextgen.network.latest.ExpressRouteCircuit("expressRouteCircuit", {
+    bandwidthInGbps: 10,
+    circuitName: "expressRouteCircuit1",
+    expressRoutePort: {
+        id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/expressRoutePorts/portName",
+    },
+    location: "westus",
+    resourceGroupName: "rg1",
+    sku: {
+        family: "MeteredData",
+        name: "Premium_MeteredData",
+        tier: "Premium",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ExpressRouteCircuit Resource {#create}
@@ -1782,16 +2045,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="circuitconnectionstatus_csharp">
-<a href="#circuitconnectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Circuit<wbr>Connection<wbr>Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="expressroutecircuitpeering_csharp">
 <a href="#expressroutecircuitpeering_csharp" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Circuit<wbr>Peering</a>
 </span> 
@@ -1869,16 +2122,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="circuitconnectionstatus_go">
-<a href="#circuitconnectionstatus_go" style="color: inherit; text-decoration: inherit;">Circuit<wbr>Connection<wbr>Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="expressroutecircuitpeering_go">
 <a href="#expressroutecircuitpeering_go" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Circuit<wbr>Peering</a>
 </span> 
@@ -1956,16 +2199,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="circuitconnectionstatus_nodejs">
-<a href="#circuitconnectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">circuit<wbr>Connection<wbr>Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="expressroutecircuitpeering_nodejs">
 <a href="#expressroutecircuitpeering_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>Circuit<wbr>Peering</a>
 </span> 
@@ -2040,16 +2273,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The authorization key.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="circuit_connection_status_python">
-<a href="#circuit_connection_status_python" style="color: inherit; text-decoration: inherit;">circuit_<wbr>connection_<wbr>status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2121,6 +2344,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
+        <span id="circuitconnectionstatus_csharp">
+<a href="#circuitconnectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Circuit<wbr>Connection<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
 </span> 
@@ -2168,16 +2401,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The authorization key.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="circuitconnectionstatus_csharp">
-<a href="#circuitconnectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Circuit<wbr>Connection<wbr>Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2238,6 +2461,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
+        <span id="circuitconnectionstatus_go">
+<a href="#circuitconnectionstatus_go" style="color: inherit; text-decoration: inherit;">Circuit<wbr>Connection<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
 </span> 
@@ -2285,16 +2518,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The authorization key.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="circuitconnectionstatus_go">
-<a href="#circuitconnectionstatus_go" style="color: inherit; text-decoration: inherit;">Circuit<wbr>Connection<wbr>Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2355,6 +2578,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
+        <span id="circuitconnectionstatus_nodejs">
+<a href="#circuitconnectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">circuit<wbr>Connection<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span> 
@@ -2402,16 +2635,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The authorization key.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="circuitconnectionstatus_nodejs">
-<a href="#circuitconnectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">circuit<wbr>Connection<wbr>Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2472,6 +2695,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
+        <span id="circuit_connection_status_python">
+<a href="#circuit_connection_status_python" style="color: inherit; text-decoration: inherit;">circuit_<wbr>connection_<wbr>status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span> 
@@ -2519,16 +2752,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The authorization key.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="circuit_connection_status_python">
-<a href="#circuit_connection_status_python" style="color: inherit; text-decoration: inherit;">circuit_<wbr>connection_<wbr>status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6665,6 +6888,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
+        <span id="circuitconnectionstatus_csharp">
+<a href="#circuitconnectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Circuit<wbr>Connection<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
 </span> 
@@ -6712,16 +6945,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The resource guid of the authorization used for the express route circuit connection.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="circuitconnectionstatus_csharp">
-<a href="#circuitconnectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Circuit<wbr>Connection<wbr>Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6782,6 +7005,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
+        <span id="circuitconnectionstatus_go">
+<a href="#circuitconnectionstatus_go" style="color: inherit; text-decoration: inherit;">Circuit<wbr>Connection<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
 </span> 
@@ -6829,16 +7062,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The resource guid of the authorization used for the express route circuit connection.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="circuitconnectionstatus_go">
-<a href="#circuitconnectionstatus_go" style="color: inherit; text-decoration: inherit;">Circuit<wbr>Connection<wbr>Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6899,6 +7122,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
+        <span id="circuitconnectionstatus_nodejs">
+<a href="#circuitconnectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">circuit<wbr>Connection<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span> 
@@ -6946,16 +7179,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The resource guid of the authorization used for the express route circuit connection.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="circuitconnectionstatus_nodejs">
-<a href="#circuitconnectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">circuit<wbr>Connection<wbr>Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7016,6 +7239,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
+        <span id="circuit_connection_status_python">
+<a href="#circuit_connection_status_python" style="color: inherit; text-decoration: inherit;">circuit_<wbr>connection_<wbr>status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span> 
@@ -7063,16 +7296,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The resource guid of the authorization used for the express route circuit connection.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="circuit_connection_status_python">
-<a href="#circuit_connection_status_python" style="color: inherit; text-decoration: inherit;">circuit_<wbr>connection_<wbr>status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7229,7 +7452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -7246,7 +7469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -7263,7 +7486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -7280,7 +7503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

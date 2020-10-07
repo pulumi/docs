@@ -44,7 +44,7 @@ class MyStack : Stack
 package main
 
 import (
-	changeanalysis "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/changeanalysis/v20200401preview"
+	changeanalysis "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/changeanalysis/v20200401preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -116,7 +116,7 @@ class MyStack : Stack
 package main
 
 import (
-	changeanalysis "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/changeanalysis/v20200401preview"
+	changeanalysis "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/changeanalysis/v20200401preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

@@ -69,7 +69,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the Live Event.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the live event, maximum length is 32.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -79,7 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the Live Output.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the live output.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -116,7 +116,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the Live Event.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the live event, maximum length is 32.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -126,7 +126,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the Live Output.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the live output.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -163,7 +163,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the Live Event.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the live event, maximum length is 32.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -173,7 +173,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the Live Output.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the live output.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -210,7 +210,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the Live Event.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the live event, maximum length is 32.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -220,7 +220,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the Live Output.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the live output.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -260,7 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}ISO 8601 timespan duration of the archive window length. This is duration that customer want to retain the recorded content.{{% /md %}}</dd>
+    <dd>{{% md %}}ISO 8601 time between 1 minute to 25 hours to indicate the maximum content length that can be archived in the asset for this live output. This also sets the maximum content length for the rewind window. For example, use PT1H30M to indicate 1 hour and 30 minutes of archive window.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -270,7 +270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The asset name.{{% /md %}}</dd>
+    <dd>{{% md %}}The asset that the live output will write to.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -280,7 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The exact time the Live Output was created.{{% /md %}}</dd>
+    <dd>{{% md %}}The creation time the live output.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -290,7 +290,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The exact time the Live Output was last modified.{{% /md %}}</dd>
+    <dd>{{% md %}}The time the live output was last modified.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -310,7 +310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the Live Output.{{% /md %}}</dd>
+    <dd>{{% md %}}The provisioning state of the live output.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -320,7 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource state of the Live Output.{{% /md %}}</dd>
+    <dd>{{% md %}}The resource state of the live output.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -340,7 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The description of the Live Output.{{% /md %}}</dd>
+    <dd>{{% md %}}The description of the live output.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -350,7 +350,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hlsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Outputs.<wbr>Hls<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The HLS configuration.{{% /md %}}</dd>
+    <dd>{{% md %}}HTTP Live Streaming (HLS) packing setting for the live output.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -360,7 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The manifest file name.  If not provided, the service will generate one automatically.{{% /md %}}</dd>
+    <dd>{{% md %}}The manifest file name. If not provided, the service will generate one automatically.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -370,7 +370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The output snapshot time.{{% /md %}}</dd>
+    <dd>{{% md %}}The initial timestamp that the live output will start at, any content before this value will not be archived.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -387,7 +387,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}ISO 8601 timespan duration of the archive window length. This is duration that customer want to retain the recorded content.{{% /md %}}</dd>
+    <dd>{{% md %}}ISO 8601 time between 1 minute to 25 hours to indicate the maximum content length that can be archived in the asset for this live output. This also sets the maximum content length for the rewind window. For example, use PT1H30M to indicate 1 hour and 30 minutes of archive window.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -397,7 +397,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The asset name.{{% /md %}}</dd>
+    <dd>{{% md %}}The asset that the live output will write to.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -407,7 +407,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The exact time the Live Output was created.{{% /md %}}</dd>
+    <dd>{{% md %}}The creation time the live output.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -417,7 +417,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The exact time the Live Output was last modified.{{% /md %}}</dd>
+    <dd>{{% md %}}The time the live output was last modified.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -437,7 +437,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the Live Output.{{% /md %}}</dd>
+    <dd>{{% md %}}The provisioning state of the live output.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -447,7 +447,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource state of the Live Output.{{% /md %}}</dd>
+    <dd>{{% md %}}The resource state of the live output.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -467,7 +467,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The description of the Live Output.{{% /md %}}</dd>
+    <dd>{{% md %}}The description of the live output.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -477,7 +477,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hlsresponse">Hls<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The HLS configuration.{{% /md %}}</dd>
+    <dd>{{% md %}}HTTP Live Streaming (HLS) packing setting for the live output.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -487,7 +487,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The manifest file name.  If not provided, the service will generate one automatically.{{% /md %}}</dd>
+    <dd>{{% md %}}The manifest file name. If not provided, the service will generate one automatically.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -497,7 +497,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The output snapshot time.{{% /md %}}</dd>
+    <dd>{{% md %}}The initial timestamp that the live output will start at, any content before this value will not be archived.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -514,7 +514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}ISO 8601 timespan duration of the archive window length. This is duration that customer want to retain the recorded content.{{% /md %}}</dd>
+    <dd>{{% md %}}ISO 8601 time between 1 minute to 25 hours to indicate the maximum content length that can be archived in the asset for this live output. This also sets the maximum content length for the rewind window. For example, use PT1H30M to indicate 1 hour and 30 minutes of archive window.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -524,7 +524,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The asset name.{{% /md %}}</dd>
+    <dd>{{% md %}}The asset that the live output will write to.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -534,7 +534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The exact time the Live Output was created.{{% /md %}}</dd>
+    <dd>{{% md %}}The creation time the live output.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -544,7 +544,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The exact time the Live Output was last modified.{{% /md %}}</dd>
+    <dd>{{% md %}}The time the live output was last modified.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -564,7 +564,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the Live Output.{{% /md %}}</dd>
+    <dd>{{% md %}}The provisioning state of the live output.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -574,7 +574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource state of the Live Output.{{% /md %}}</dd>
+    <dd>{{% md %}}The resource state of the live output.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -594,7 +594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The description of the Live Output.{{% /md %}}</dd>
+    <dd>{{% md %}}The description of the live output.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -604,7 +604,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hlsresponse">Hls<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The HLS configuration.{{% /md %}}</dd>
+    <dd>{{% md %}}HTTP Live Streaming (HLS) packing setting for the live output.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -614,7 +614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The manifest file name.  If not provided, the service will generate one automatically.{{% /md %}}</dd>
+    <dd>{{% md %}}The manifest file name. If not provided, the service will generate one automatically.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -624,7 +624,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The output snapshot time.{{% /md %}}</dd>
+    <dd>{{% md %}}The initial timestamp that the live output will start at, any content before this value will not be archived.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -641,7 +641,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}ISO 8601 timespan duration of the archive window length. This is duration that customer want to retain the recorded content.{{% /md %}}</dd>
+    <dd>{{% md %}}ISO 8601 time between 1 minute to 25 hours to indicate the maximum content length that can be archived in the asset for this live output. This also sets the maximum content length for the rewind window. For example, use PT1H30M to indicate 1 hour and 30 minutes of archive window.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -651,7 +651,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The asset name.{{% /md %}}</dd>
+    <dd>{{% md %}}The asset that the live output will write to.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -661,7 +661,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The exact time the Live Output was created.{{% /md %}}</dd>
+    <dd>{{% md %}}The creation time the live output.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -671,7 +671,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The exact time the Live Output was last modified.{{% /md %}}</dd>
+    <dd>{{% md %}}The time the live output was last modified.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -691,7 +691,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the Live Output.{{% /md %}}</dd>
+    <dd>{{% md %}}The provisioning state of the live output.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -701,7 +701,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The resource state of the Live Output.{{% /md %}}</dd>
+    <dd>{{% md %}}The resource state of the live output.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -721,7 +721,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The description of the Live Output.{{% /md %}}</dd>
+    <dd>{{% md %}}The description of the live output.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -731,7 +731,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hlsresponse">Dict[Hls<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The HLS configuration.{{% /md %}}</dd>
+    <dd>{{% md %}}HTTP Live Streaming (HLS) packing setting for the live output.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -741,7 +741,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The manifest file name.  If not provided, the service will generate one automatically.{{% /md %}}</dd>
+    <dd>{{% md %}}The manifest file name. If not provided, the service will generate one automatically.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -751,7 +751,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The output snapshot time.{{% /md %}}</dd>
+    <dd>{{% md %}}The initial timestamp that the live output will start at, any content before this value will not be archived.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -785,7 +785,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The amount of fragments per HTTP Live Streaming (HLS) segment.{{% /md %}}</dd>
+    <dd>{{% md %}}The number of fragments in an HTTP Live Streaming (HLS) TS segment in the output of the live event. This value does not affect the packing ratio for HLS CMAF output.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -802,7 +802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The amount of fragments per HTTP Live Streaming (HLS) segment.{{% /md %}}</dd>
+    <dd>{{% md %}}The number of fragments in an HTTP Live Streaming (HLS) TS segment in the output of the live event. This value does not affect the packing ratio for HLS CMAF output.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -819,7 +819,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The amount of fragments per HTTP Live Streaming (HLS) segment.{{% /md %}}</dd>
+    <dd>{{% md %}}The number of fragments in an HTTP Live Streaming (HLS) TS segment in the output of the live event. This value does not affect the packing ratio for HLS CMAF output.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -836,7 +836,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The amount of fragments per HTTP Live Streaming (HLS) segment.{{% /md %}}</dd>
+    <dd>{{% md %}}The number of fragments in an HTTP Live Streaming (HLS) TS segment in the output of the live event. This value does not affect the packing ratio for HLS CMAF output.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

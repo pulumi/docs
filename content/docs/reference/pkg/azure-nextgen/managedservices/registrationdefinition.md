@@ -35,6 +35,20 @@ class MyStack : Stack
                 Publisher = "marketplace-test",
                 Version = "1.0.0",
             },
+            Properties = new AzureNextGen.ManagedServices.Latest.Inputs.RegistrationDefinitionPropertiesArgs
+            {
+                Authorizations = 
+                {
+                    new AzureNextGen.ManagedServices.Latest.Inputs.AuthorizationArgs
+                    {
+                        PrincipalId = "f98d86a2-4cc4-4e9d-ad47-b3e80a1bcdfc",
+                        RoleDefinitionId = "acdd72a7-3385-48ef-bd42-f606fba81ae7",
+                    },
+                },
+                Description = "Tes1t",
+                ManagedByTenantId = "83abe5cd-bcc3-441a-bd86-e6a75360cecc",
+                RegistrationDefinitionName = "DefinitionName",
+            },
             RegistrationDefinitionId = "26c128c2-fefa-4340-9bb1-6e081c90ada2",
             Scope = "subscription/0afefe50-734e-4610-8a82-a144ahf49dea",
         });
@@ -52,7 +66,7 @@ class MyStack : Stack
 package main
 
 import (
-	managedservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/managedservices/latest"
+	managedservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/managedservices/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -64,6 +78,17 @@ func main() {
 				Product:   pulumi.String("test"),
 				Publisher: pulumi.String("marketplace-test"),
 				Version:   pulumi.String("1.0.0"),
+			},
+			Properties: &managedservices.RegistrationDefinitionPropertiesArgs{
+				Authorizations: managedservices.AuthorizationArray{
+					&managedservices.AuthorizationArgs{
+						PrincipalId:      pulumi.String("f98d86a2-4cc4-4e9d-ad47-b3e80a1bcdfc"),
+						RoleDefinitionId: pulumi.String("acdd72a7-3385-48ef-bd42-f606fba81ae7"),
+					},
+				},
+				Description:                pulumi.String("Tes1t"),
+				ManagedByTenantId:          pulumi.String("83abe5cd-bcc3-441a-bd86-e6a75360cecc"),
+				RegistrationDefinitionName: pulumi.String("DefinitionName"),
 			},
 			RegistrationDefinitionId: pulumi.String("26c128c2-fefa-4340-9bb1-6e081c90ada2"),
 			Scope:                    pulumi.String("subscription/0afefe50-734e-4610-8a82-a144ahf49dea"),
@@ -92,6 +117,15 @@ registration_definition = azure_nextgen.managedservices.latest.RegistrationDefin
         "publisher": "marketplace-test",
         "version": "1.0.0",
     },
+    properties={
+        "authorizations": [{
+            "principalId": "f98d86a2-4cc4-4e9d-ad47-b3e80a1bcdfc",
+            "roleDefinitionId": "acdd72a7-3385-48ef-bd42-f606fba81ae7",
+        }],
+        "description": "Tes1t",
+        "managedByTenantId": "83abe5cd-bcc3-441a-bd86-e6a75360cecc",
+        "registrationDefinitionName": "DefinitionName",
+    },
     registration_definition_id="26c128c2-fefa-4340-9bb1-6e081c90ada2",
     scope="subscription/0afefe50-734e-4610-8a82-a144ahf49dea")
 
@@ -111,6 +145,15 @@ const registrationDefinition = new azure_nextgen.managedservices.latest.Registra
         product: "test",
         publisher: "marketplace-test",
         version: "1.0.0",
+    },
+    properties: {
+        authorizations: [{
+            principalId: "f98d86a2-4cc4-4e9d-ad47-b3e80a1bcdfc",
+            roleDefinitionId: "acdd72a7-3385-48ef-bd42-f606fba81ae7",
+        }],
+        description: "Tes1t",
+        managedByTenantId: "83abe5cd-bcc3-441a-bd86-e6a75360cecc",
+        registrationDefinitionName: "DefinitionName",
     },
     registrationDefinitionId: "26c128c2-fefa-4340-9bb1-6e081c90ada2",
     scope: "subscription/0afefe50-734e-4610-8a82-a144ahf49dea",

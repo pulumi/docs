@@ -57,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	customerinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/customerinsights/latest"
+	customerinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/customerinsights/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -149,7 +149,7 @@ const connector = new azure_nextgen.customerinsights.latest.Connector("connector
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Connector</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connector_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connector_properties</span><span class="p">:</span> <span class="nx">Optional[Dict[str, Any&gt;]]</span> = None<span class="p">, </span><span class="nx">connector_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_internal</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Connector</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connector_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connector_properties</span><span class="p">:</span> <span class="nx">Optional[Dict[str, Any]]</span> = None<span class="p">, </span><span class="nx">connector_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_internal</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -337,7 +337,7 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#connectorproperties_csharp" style="color: inherit; text-decoration: inherit;">Connector<wbr>Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}The connector properties.{{% /md %}}</dd>
 
@@ -424,7 +424,7 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#connectorproperties_go" style="color: inherit; text-decoration: inherit;">Connector<wbr>Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]map[string]interface{}</span>
+        <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}The connector properties.{{% /md %}}</dd>
 
@@ -511,7 +511,7 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#connectorproperties_nodejs" style="color: inherit; text-decoration: inherit;">connector<wbr>Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: {[key: string]: any}}</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}The connector properties.{{% /md %}}</dd>
 
@@ -598,7 +598,7 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#connector_properties_python" style="color: inherit; text-decoration: inherit;">connector_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any>]</span>
+        <span class="property-type">Dict[str, Any]</span>
     </dt>
     <dd>{{% md %}}The connector properties.{{% /md %}}</dd>
 

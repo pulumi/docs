@@ -54,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	powerplatform "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/powerplatform/v20201030preview"
+	powerplatform "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/powerplatform/v20201030preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -137,7 +137,7 @@ const enterprisePolicy = new azure_nextgen.powerplatform.v20201030preview.Enterp
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EnterprisePolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enterprise_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[EnterprisePolicyIdentity]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EnterprisePolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[Dict[PropertiesEncryption]]</span> = None<span class="p">, </span><span class="nx">enterprise_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[EnterprisePolicyIdentity]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -331,6 +331,16 @@ The EnterprisePolicy resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
+        <span id="encryption_csharp">
+<a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#propertiesencryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>Platform.<wbr>Inputs.<wbr>Properties<wbr>Encryption<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption settings for a configuration store.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="identity_csharp">
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span> 
@@ -385,6 +395,16 @@ The EnterprisePolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryption_go">
+<a href="#encryption_go" style="color: inherit; text-decoration: inherit;">Encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#propertiesencryption">Properties<wbr>Encryption</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption settings for a configuration store.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -445,6 +465,16 @@ The EnterprisePolicy resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
+        <span id="encryption_nodejs">
+<a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#propertiesencryption">Properties<wbr>Encryption</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption settings for a configuration store.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="identity_nodejs">
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
@@ -499,6 +529,16 @@ The EnterprisePolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryption_python">
+<a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#propertiesencryption">Dict[Properties<wbr>Encryption]</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption settings for a configuration store.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -570,6 +610,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="systemdata_csharp">
+<a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>Platform.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
@@ -577,6 +627,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="lockbox_csharp">
+<a href="#lockbox_csharp" style="color: inherit; text-decoration: inherit;">Lockbox</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#propertiesresponselockbox">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>Platform.<wbr>Outputs.<wbr>Properties<wbr>Response<wbr>Lockbox</a></span>
+    </dt>
+    <dd>{{% md %}}Settings concerning lockbox.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -607,6 +667,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="systemdata_go">
+<a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
@@ -614,6 +684,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="lockbox_go">
+<a href="#lockbox_go" style="color: inherit; text-decoration: inherit;">Lockbox</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#propertiesresponselockbox">Properties<wbr>Response<wbr>Lockbox</a></span>
+    </dt>
+    <dd>{{% md %}}Settings concerning lockbox.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -644,6 +724,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="systemdata_nodejs">
+<a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
@@ -651,6 +741,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="lockbox_nodejs">
+<a href="#lockbox_nodejs" style="color: inherit; text-decoration: inherit;">lockbox</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#propertiesresponselockbox">Properties<wbr>Response<wbr>Lockbox</a></span>
+    </dt>
+    <dd>{{% md %}}Settings concerning lockbox.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -681,6 +781,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="system_data_python">
+<a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">Dict[System<wbr>Data<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
@@ -688,6 +798,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="lockbox_python">
+<a href="#lockbox_python" style="color: inherit; text-decoration: inherit;">lockbox</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#propertiesresponselockbox">Dict[Properties<wbr>Response<wbr>Lockbox]</a></span>
+    </dt>
+    <dd>{{% md %}}Settings concerning lockbox.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -718,36 +838,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryption_csharp">
-<a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enterprisepolicyidentityencryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>Platform.<wbr>Inputs.<wbr>Enterprise<wbr>Policy<wbr>Identity<wbr>Encryption<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The encryption settings for a configuration store.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="lockbox_csharp">
-<a href="#lockbox_csharp" style="color: inherit; text-decoration: inherit;">Lockbox</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enterprisepolicyidentitylockbox">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>Platform.<wbr>Inputs.<wbr>Enterprise<wbr>Policy<wbr>Identity<wbr>Lockbox<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Settings concerning lockbox.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="systemdata_csharp">
-<a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdata">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>Platform.<wbr>Inputs.<wbr>System<wbr>Data<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Metadata for the enterprisePolicy.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
@@ -762,36 +852,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="encryption_go">
-<a href="#encryption_go" style="color: inherit; text-decoration: inherit;">Encryption</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enterprisepolicyidentityencryption">Enterprise<wbr>Policy<wbr>Identity<wbr>Encryption</a></span>
-    </dt>
-    <dd>{{% md %}}The encryption settings for a configuration store.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="lockbox_go">
-<a href="#lockbox_go" style="color: inherit; text-decoration: inherit;">Lockbox</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enterprisepolicyidentitylockbox">Enterprise<wbr>Policy<wbr>Identity<wbr>Lockbox</a></span>
-    </dt>
-    <dd>{{% md %}}Settings concerning lockbox.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="systemdata_go">
-<a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdata">System<wbr>Data</a></span>
-    </dt>
-    <dd>{{% md %}}Metadata for the enterprisePolicy.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -812,36 +872,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryption_nodejs">
-<a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enterprisepolicyidentityencryption">Enterprise<wbr>Policy<wbr>Identity<wbr>Encryption</a></span>
-    </dt>
-    <dd>{{% md %}}The encryption settings for a configuration store.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="lockbox_nodejs">
-<a href="#lockbox_nodejs" style="color: inherit; text-decoration: inherit;">lockbox</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enterprisepolicyidentitylockbox">Enterprise<wbr>Policy<wbr>Identity<wbr>Lockbox</a></span>
-    </dt>
-    <dd>{{% md %}}Settings concerning lockbox.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="systemdata_nodejs">
-<a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdata">System<wbr>Data</a></span>
-    </dt>
-    <dd>{{% md %}}Metadata for the enterprisePolicy.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
@@ -859,36 +889,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryption_python">
-<a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enterprisepolicyidentityencryption">Dict[Enterprise<wbr>Policy<wbr>Identity<wbr>Encryption]</a></span>
-    </dt>
-    <dd>{{% md %}}The encryption settings for a configuration store.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="lockbox_python">
-<a href="#lockbox_python" style="color: inherit; text-decoration: inherit;">lockbox</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enterprisepolicyidentitylockbox">Dict[Enterprise<wbr>Policy<wbr>Identity<wbr>Lockbox]</a></span>
-    </dt>
-    <dd>{{% md %}}Settings concerning lockbox.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="system_data_python">
-<a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdata">Dict[System<wbr>Data]</a></span>
-    </dt>
-    <dd>{{% md %}}Metadata for the enterprisePolicy.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
@@ -896,164 +896,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the EnterprisePolicy. Currently, the only supported type is 'SystemAssigned', which implicitly creates an identity.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-<h4 id="enterprisepolicyidentityencryption">Enterprise<wbr>Policy<wbr>Identity<wbr>Encryption</h4>
-
-
-
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="keyvaultproperties_csharp">
-<a href="#keyvaultproperties_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>Platform.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Key vault properties.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="keyvaultproperties_go">
-<a href="#keyvaultproperties_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultproperties">Key<wbr>Vault<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}Key vault properties.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="keyvaultproperties_nodejs">
-<a href="#keyvaultproperties_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Properties</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultproperties">Key<wbr>Vault<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}Key vault properties.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="key_vault_properties_python">
-<a href="#key_vault_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>properties</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultproperties">Dict[Key<wbr>Vault<wbr>Properties]</a></span>
-    </dt>
-    <dd>{{% md %}}Key vault properties.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-<h4 id="enterprisepolicyidentitylockbox">Enterprise<wbr>Policy<wbr>Identity<wbr>Lockbox</h4>
-
-
-
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="status_csharp">
-<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}lockbox configuration{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="status_go">
-<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}lockbox configuration{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="status_nodejs">
-<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}lockbox configuration{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="status_python">
-<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}lockbox configuration{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1095,36 +937,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryption_csharp">
-<a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enterprisepolicyidentityresponseencryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>Platform.<wbr>Inputs.<wbr>Enterprise<wbr>Policy<wbr>Identity<wbr>Response<wbr>Encryption<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The encryption settings for a configuration store.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="lockbox_csharp">
-<a href="#lockbox_csharp" style="color: inherit; text-decoration: inherit;">Lockbox</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enterprisepolicyidentityresponselockbox">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>Platform.<wbr>Inputs.<wbr>Enterprise<wbr>Policy<wbr>Identity<wbr>Response<wbr>Lockbox<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Settings concerning lockbox.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="systemdata_csharp">
-<a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>Platform.<wbr>Inputs.<wbr>System<wbr>Data<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Metadata for the enterprisePolicy.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
@@ -1159,36 +971,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The tenant id associated with the EnterprisePolicy.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="encryption_go">
-<a href="#encryption_go" style="color: inherit; text-decoration: inherit;">Encryption</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enterprisepolicyidentityresponseencryption">Enterprise<wbr>Policy<wbr>Identity<wbr>Response<wbr>Encryption</a></span>
-    </dt>
-    <dd>{{% md %}}The encryption settings for a configuration store.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="lockbox_go">
-<a href="#lockbox_go" style="color: inherit; text-decoration: inherit;">Lockbox</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enterprisepolicyidentityresponselockbox">Enterprise<wbr>Policy<wbr>Identity<wbr>Response<wbr>Lockbox</a></span>
-    </dt>
-    <dd>{{% md %}}Settings concerning lockbox.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="systemdata_go">
-<a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Metadata for the enterprisePolicy.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1229,36 +1011,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryption_nodejs">
-<a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enterprisepolicyidentityresponseencryption">Enterprise<wbr>Policy<wbr>Identity<wbr>Response<wbr>Encryption</a></span>
-    </dt>
-    <dd>{{% md %}}The encryption settings for a configuration store.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="lockbox_nodejs">
-<a href="#lockbox_nodejs" style="color: inherit; text-decoration: inherit;">lockbox</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enterprisepolicyidentityresponselockbox">Enterprise<wbr>Policy<wbr>Identity<wbr>Response<wbr>Lockbox</a></span>
-    </dt>
-    <dd>{{% md %}}Settings concerning lockbox.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="systemdata_nodejs">
-<a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Metadata for the enterprisePolicy.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
@@ -1296,36 +1048,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryption_python">
-<a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enterprisepolicyidentityresponseencryption">Dict[Enterprise<wbr>Policy<wbr>Identity<wbr>Response<wbr>Encryption]</a></span>
-    </dt>
-    <dd>{{% md %}}The encryption settings for a configuration store.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="lockbox_python">
-<a href="#lockbox_python" style="color: inherit; text-decoration: inherit;">lockbox</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enterprisepolicyidentityresponselockbox">Dict[Enterprise<wbr>Policy<wbr>Identity<wbr>Response<wbr>Lockbox]</a></span>
-    </dt>
-    <dd>{{% md %}}Settings concerning lockbox.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="system_data_python">
-<a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Dict[System<wbr>Data<wbr>Response]</a></span>
-    </dt>
-    <dd>{{% md %}}Metadata for the enterprisePolicy.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
@@ -1333,164 +1055,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the EnterprisePolicy. Currently, the only supported type is 'SystemAssigned', which implicitly creates an identity.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-<h4 id="enterprisepolicyidentityresponseencryption">Enterprise<wbr>Policy<wbr>Identity<wbr>Response<wbr>Encryption</h4>
-
-
-
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="keyvaultproperties_csharp">
-<a href="#keyvaultproperties_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>Platform.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Key vault properties.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="keyvaultproperties_go">
-<a href="#keyvaultproperties_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Key vault properties.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="keyvaultproperties_nodejs">
-<a href="#keyvaultproperties_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Properties</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Key vault properties.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="key_vault_properties_python">
-<a href="#key_vault_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>properties</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultpropertiesresponse">Dict[Key<wbr>Vault<wbr>Properties<wbr>Response]</a></span>
-    </dt>
-    <dd>{{% md %}}Key vault properties.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-<h4 id="enterprisepolicyidentityresponselockbox">Enterprise<wbr>Policy<wbr>Identity<wbr>Response<wbr>Lockbox</h4>
-
-
-
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="status_csharp">
-<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}lockbox configuration{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="status_go">
-<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}lockbox configuration{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="status_nodejs">
-<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}lockbox configuration{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="status_python">
-<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}lockbox configuration{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1768,16 +1332,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Identity of the secret that includes name and version.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="status_csharp">
-<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The state of onboarding, which only appears in the response.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1805,16 +1359,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Identity of the secret that includes name and version.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="status_go">
-<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The state of onboarding, which only appears in the response.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1841,16 +1385,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#keyproperties">Key<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Identity of the secret that includes name and version.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="status_nodejs">
-<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The state of onboarding, which only appears in the response.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1879,16 +1413,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Identity of the secret that includes name and version.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="status_python">
-<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The state of onboarding, which only appears in the response.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1906,6 +1430,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The state of onboarding, which only appears in the response.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1927,22 +1461,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Identity of the secret that includes name and version.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="status_csharp">
-<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The state of onboarding, which only appears in the response.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The state of onboarding, which only appears in the response.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1964,22 +1498,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Identity of the secret that includes name and version.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="status_go">
-<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The state of onboarding, which only appears in the response.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The state of onboarding, which only appears in the response.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2001,22 +1535,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Identity of the secret that includes name and version.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="status_nodejs">
-<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The state of onboarding, which only appears in the response.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The state of onboarding, which only appears in the response.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2038,16 +1572,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Identity of the secret that includes name and version.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="status_python">
-<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The state of onboarding, which only appears in the response.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -2055,7 +1579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="systemdata">System<wbr>Data</h4>
+<h4 id="propertiesencryption">Properties<wbr>Encryption</h4>
 
 
 
@@ -2068,63 +1592,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="createdat_csharp">
-<a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+        <span id="keyvaultproperties_csharp">
+<a href="#keyvaultproperties_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="#keyvaultproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>Platform.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="createdby_csharp">
-<a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="createdbytype_csharp">
-<a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedat_csharp">
-<a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedby_csharp">
-<a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedbytype_csharp">
-<a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}Key vault properties.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2135,63 +1609,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="createdat_go">
-<a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+        <span id="keyvaultproperties_go">
+<a href="#keyvaultproperties_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="#keyvaultproperties">Key<wbr>Vault<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="createdby_go">
-<a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="createdbytype_go">
-<a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedat_go">
-<a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedby_go">
-<a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedbytype_go">
-<a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}Key vault properties.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2202,63 +1626,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="createdat_nodejs">
-<a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
+        <span id="keyvaultproperties_nodejs">
+<a href="#keyvaultproperties_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="#keyvaultproperties">Key<wbr>Vault<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="createdby_nodejs">
-<a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="createdbytype_nodejs">
-<a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedat_nodejs">
-<a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedby_nodejs">
-<a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedbytype_nodejs">
-<a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}Key vault properties.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2269,63 +1643,171 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="created_at_python">
-<a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
+        <span id="key_vault_properties_python">
+<a href="#key_vault_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="#keyvaultproperties">Dict[Key<wbr>Vault<wbr>Properties]</a></span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
+    <dd>{{% md %}}Key vault properties.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="propertiesresponseencryption">Properties<wbr>Response<wbr>Encryption</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="created_by_python">
-<a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
+        <span id="keyvaultproperties_csharp">
+<a href="#keyvaultproperties_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Power<wbr>Platform.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}Key vault properties.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="created_by_type_python">
-<a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
+        <span id="keyvaultproperties_go">
+<a href="#keyvaultproperties_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}Key vault properties.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="last_modified_at_python">
-<a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
+        <span id="keyvaultproperties_nodejs">
+<a href="#keyvaultproperties_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}Key vault properties.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="last_modified_by_python">
-<a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
+        <span id="key_vault_properties_python">
+<a href="#key_vault_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Dict[Key<wbr>Vault<wbr>Properties<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}Key vault properties.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="last_modified_by_type_python">
-<a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="propertiesresponselockbox">Properties<wbr>Response<wbr>Lockbox</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}lockbox configuration{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}lockbox configuration{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}lockbox configuration{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}lockbox configuration{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

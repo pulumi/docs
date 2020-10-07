@@ -228,7 +228,7 @@ The following output properties are available:
 <a href="#createuidefinition_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Ui<wbr>Definition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}The createUiDefinition json for the backing template with Microsoft.Solutions/applications resource. It can be a JObject or well-formed JSON string.{{% /md %}}</dd>
 
@@ -298,7 +298,7 @@ The following output properties are available:
 <a href="#maintemplate_csharp" style="color: inherit; text-decoration: inherit;">Main<wbr>Template</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}The inline main template json which has resources to be provisioned. It can be a JObject or well-formed JSON string.{{% /md %}}</dd>
 
@@ -435,7 +435,7 @@ The following output properties are available:
 <a href="#createuidefinition_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Ui<wbr>Definition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}The createUiDefinition json for the backing template with Microsoft.Solutions/applications resource. It can be a JObject or well-formed JSON string.{{% /md %}}</dd>
 
@@ -505,7 +505,7 @@ The following output properties are available:
 <a href="#maintemplate_go" style="color: inherit; text-decoration: inherit;">Main<wbr>Template</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}The inline main template json which has resources to be provisioned. It can be a JObject or well-formed JSON string.{{% /md %}}</dd>
 
@@ -642,7 +642,7 @@ The following output properties are available:
 <a href="#createuidefinition_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Ui<wbr>Definition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}The createUiDefinition json for the backing template with Microsoft.Solutions/applications resource. It can be a JObject or well-formed JSON string.{{% /md %}}</dd>
 
@@ -712,7 +712,7 @@ The following output properties are available:
 <a href="#maintemplate_nodejs" style="color: inherit; text-decoration: inherit;">main<wbr>Template</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}The inline main template json which has resources to be provisioned. It can be a JObject or well-formed JSON string.{{% /md %}}</dd>
 
@@ -849,7 +849,7 @@ The following output properties are available:
 <a href="#create_ui_definition_python" style="color: inherit; text-decoration: inherit;">create_<wbr>ui_<wbr>definition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}The createUiDefinition json for the backing template with Microsoft.Solutions/applications resource. It can be a JObject or well-formed JSON string.{{% /md %}}</dd>
 
@@ -919,7 +919,7 @@ The following output properties are available:
 <a href="#main_template_python" style="color: inherit; text-decoration: inherit;">main_<wbr>template</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}The inline main template json which has resources to be provisioned. It can be a JObject or well-formed JSON string.{{% /md %}}</dd>
 

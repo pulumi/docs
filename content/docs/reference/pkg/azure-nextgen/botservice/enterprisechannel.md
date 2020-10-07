@@ -30,6 +30,18 @@ class MyStack : Stack
         {
             Etag = "etag1",
             Location = "West US",
+            Properties = new AzureNextGen.BotService.Latest.Inputs.EnterpriseChannelPropertiesArgs
+            {
+                Nodes = 
+                {
+                    new AzureNextGen.BotService.Latest.Inputs.EnterpriseChannelNodeArgs
+                    {
+                        AzureLocation = "WestUs",
+                        AzureSku = "Int1",
+                        Name = "Node 1",
+                    },
+                },
+            },
             ResourceGroupName = "OneResourceGroupName",
             ResourceName = "contoso-dl",
             Sku = new AzureNextGen.BotService.Latest.Inputs.SkuArgs
@@ -56,15 +68,24 @@ class MyStack : Stack
 package main
 
 import (
-	botservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/botservice/latest"
+	botservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/botservice/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := botservice.NewEnterpriseChannel(ctx, "enterpriseChannel", &botservice.EnterpriseChannelArgs{
-			Etag:              pulumi.String("etag1"),
-			Location:          pulumi.String("West US"),
+			Etag:     pulumi.String("etag1"),
+			Location: pulumi.String("West US"),
+			Properties: &botservice.EnterpriseChannelPropertiesArgs{
+				Nodes: botservice.EnterpriseChannelNodeArray{
+					&botservice.EnterpriseChannelNodeArgs{
+						AzureLocation: pulumi.String("WestUs"),
+						AzureSku:      pulumi.String("Int1"),
+						Name:          pulumi.String("Node 1"),
+					},
+				},
+			},
 			ResourceGroupName: pulumi.String("OneResourceGroupName"),
 			ResourceName:      pulumi.String("contoso-dl"),
 			Sku: &botservice.SkuArgs{
@@ -95,6 +116,13 @@ import pulumi_azure_nextgen as azure_nextgen
 enterprise_channel = azure_nextgen.botservice.latest.EnterpriseChannel("enterpriseChannel",
     etag="etag1",
     location="West US",
+    properties={
+        "nodes": [{
+            "azureLocation": "WestUs",
+            "azureSku": "Int1",
+            "name": "Node 1",
+        }],
+    },
     resource_group_name="OneResourceGroupName",
     resource_name="contoso-dl",
     sku={
@@ -118,6 +146,13 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const enterpriseChannel = new azure_nextgen.botservice.latest.EnterpriseChannel("enterpriseChannel", {
     etag: "etag1",
     location: "West US",
+    properties: {
+        nodes: [{
+            azureLocation: "WestUs",
+            azureSku: "Int1",
+            name: "Node 1",
+        }],
+    },
     resourceGroupName: "OneResourceGroupName",
     resourceName: "contoso-dl",
     sku: {

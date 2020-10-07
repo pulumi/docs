@@ -30,6 +30,13 @@ class MyStack : Stack
         {
             ContainerName = "VMAppContainer;Compute;testRG;testSQL",
             FabricName = "Azure",
+            Properties = 
+            {
+                { "backupManagementType", "AzureWorkload" },
+                { "containerType", "VMAppContainer" },
+                { "friendlyName", "testSQL" },
+                { "sourceResourceId", "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/testRG/providers/Microsoft.Compute/virtualMachines/testSQL" },
+            },
             ResourceGroupName = "test-rg",
             VaultName = "testvault",
         });
@@ -42,32 +49,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-package main
-
-import (
-	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/recoveryservices/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := recoveryservices.NewProtectionContainer(ctx, "protectionContainer", &recoveryservices.ProtectionContainerArgs{
-			ContainerName:     pulumi.String("VMAppContainer;Compute;testRG;testSQL"),
-			FabricName:        pulumi.String("Azure"),
-			ResourceGroupName: pulumi.String("test-rg"),
-			VaultName:         pulumi.String("testvault"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -79,6 +61,12 @@ import pulumi_azure_nextgen as azure_nextgen
 protection_container = azure_nextgen.recoveryservices.latest.ProtectionContainer("protectionContainer",
     container_name="VMAppContainer;Compute;testRG;testSQL",
     fabric_name="Azure",
+    properties={
+        "backupManagementType": "AzureWorkload",
+        "containerType": "VMAppContainer",
+        "friendlyName": "testSQL",
+        "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/testRG/providers/Microsoft.Compute/virtualMachines/testSQL",
+    },
     resource_group_name="test-rg",
     vault_name="testvault")
 
@@ -95,6 +83,12 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const protectionContainer = new azure_nextgen.recoveryservices.latest.ProtectionContainer("protectionContainer", {
     containerName: "VMAppContainer;Compute;testRG;testSQL",
     fabricName: "Azure",
+    properties: {
+        backupManagementType: "AzureWorkload",
+        containerType: "VMAppContainer",
+        friendlyName: "testSQL",
+        sourceResourceId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/testRG/providers/Microsoft.Compute/virtualMachines/testSQL",
+    },
     resourceGroupName: "test-rg",
     vaultName: "testvault",
 });

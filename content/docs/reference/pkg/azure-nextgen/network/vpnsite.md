@@ -12,6 +12,232 @@ meta_desc: "Explore the VpnSite resource of the network module, including exampl
 
 VpnSite Resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### VpnSiteCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var vpnSite = new AzureNextGen.Network.Latest.VpnSite("vpnSite", new AzureNextGen.Network.Latest.VpnSiteArgs
+        {
+            AddressSpace = new AzureNextGen.Network.Latest.Inputs.AddressSpaceArgs
+            {
+                AddressPrefixes = 
+                {
+                    "10.0.0.0/16",
+                },
+            },
+            IsSecuritySite = false,
+            Location = "West US",
+            O365Policy = new AzureNextGen.Network.Latest.Inputs.O365PolicyPropertiesArgs
+            {
+                BreakOutCategories = new AzureNextGen.Network.Latest.Inputs.O365BreakOutCategoryPoliciesArgs
+                {
+                    Allow = true,
+                    Default = false,
+                    Optimize = true,
+                },
+            },
+            ResourceGroupName = "rg1",
+            Tags = 
+            {
+                { "key1", "value1" },
+            },
+            VirtualWan = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+            {
+                Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualWANs/wan1",
+            },
+            VpnSiteLinks = 
+            {
+                new AzureNextGen.Network.Latest.Inputs.VpnSiteLinkArgs
+                {
+                    BgpProperties = new AzureNextGen.Network.Latest.Inputs.VpnLinkBgpSettingsArgs
+                    {
+                        Asn = 1234,
+                        BgpPeeringAddress = "192.168.0.0",
+                    },
+                    Fqdn = "link1.vpnsite1.contoso.com",
+                    IpAddress = "50.50.50.56",
+                    LinkProperties = new AzureNextGen.Network.Latest.Inputs.VpnLinkProviderPropertiesArgs
+                    {
+                        LinkProviderName = "vendor1",
+                        LinkSpeedInMbps = 0,
+                    },
+                    Name = "vpnSiteLink1",
+                },
+            },
+            VpnSiteName = "vpnSite1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewVpnSite(ctx, "vpnSite", &network.VpnSiteArgs{
+			AddressSpace: &network.AddressSpaceArgs{
+				AddressPrefixes: pulumi.StringArray{
+					pulumi.String("10.0.0.0/16"),
+				},
+			},
+			IsSecuritySite: pulumi.Bool(false),
+			Location:       pulumi.String("West US"),
+			O365Policy: &network.O365PolicyPropertiesArgs{
+				BreakOutCategories: &network.O365BreakOutCategoryPoliciesArgs{
+					Allow:    pulumi.Bool(true),
+					Default:  pulumi.Bool(false),
+					Optimize: pulumi.Bool(true),
+				},
+			},
+			ResourceGroupName: pulumi.String("rg1"),
+			Tags: pulumi.StringMap{
+				"key1": pulumi.String("value1"),
+			},
+			VirtualWan: &network.SubResourceArgs{
+				Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualWANs/wan1"),
+			},
+			VpnSiteLinks: network.VpnSiteLinkArray{
+				&network.VpnSiteLinkArgs{
+					BgpProperties: &network.VpnLinkBgpSettingsArgs{
+						Asn:               pulumi.Int(1234),
+						BgpPeeringAddress: pulumi.String("192.168.0.0"),
+					},
+					Fqdn:      pulumi.String("link1.vpnsite1.contoso.com"),
+					IpAddress: pulumi.String("50.50.50.56"),
+					LinkProperties: &network.VpnLinkProviderPropertiesArgs{
+						LinkProviderName: pulumi.String("vendor1"),
+						LinkSpeedInMbps:  pulumi.Int(0),
+					},
+					Name: pulumi.String("vpnSiteLink1"),
+				},
+			},
+			VpnSiteName: pulumi.String("vpnSite1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+vpn_site = azure_nextgen.network.latest.VpnSite("vpnSite",
+    address_space={
+        "addressPrefixes": ["10.0.0.0/16"],
+    },
+    is_security_site=False,
+    location="West US",
+    o365_policy={
+        "breakOutCategories": {
+            "allow": True,
+            "default": False,
+            "optimize": True,
+        },
+    },
+    resource_group_name="rg1",
+    tags={
+        "key1": "value1",
+    },
+    virtual_wan={
+        "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualWANs/wan1",
+    },
+    vpn_site_links=[{
+        "bgpProperties": {
+            "asn": 1234,
+            "bgpPeeringAddress": "192.168.0.0",
+        },
+        "fqdn": "link1.vpnsite1.contoso.com",
+        "ipAddress": "50.50.50.56",
+        "linkProperties": {
+            "linkProviderName": "vendor1",
+            "linkSpeedInMbps": 0,
+        },
+        "name": "vpnSiteLink1",
+    }],
+    vpn_site_name="vpnSite1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const vpnSite = new azure_nextgen.network.latest.VpnSite("vpnSite", {
+    addressSpace: {
+        addressPrefixes: ["10.0.0.0/16"],
+    },
+    isSecuritySite: false,
+    location: "West US",
+    o365Policy: {
+        breakOutCategories: {
+            allow: true,
+            "default": false,
+            optimize: true,
+        },
+    },
+    resourceGroupName: "rg1",
+    tags: {
+        key1: "value1",
+    },
+    virtualWan: {
+        id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualWANs/wan1",
+    },
+    vpnSiteLinks: [{
+        bgpProperties: {
+            asn: 1234,
+            bgpPeeringAddress: "192.168.0.0",
+        },
+        fqdn: "link1.vpnsite1.contoso.com",
+        ipAddress: "50.50.50.56",
+        linkProperties: {
+            linkProviderName: "vendor1",
+            linkSpeedInMbps: 0,
+        },
+        name: "vpnSiteLink1",
+    }],
+    vpnSiteName: "vpnSite1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VpnSite Resource {#create}
@@ -2797,7 +3023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2814,7 +3040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2831,7 +3057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2848,7 +3074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

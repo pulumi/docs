@@ -35,6 +35,10 @@ class MyStack : Stack
             LinkName = "link-1",
             Location = "westus",
             Name = "link-1",
+            Properties = new AzureNextGen.MachineLearningServices.V20200901Preview.Inputs.LinkedServicePropsArgs
+            {
+                LinkedServiceResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.Synapse/workspaces/Syn-1",
+            },
             ResourceGroupName = "resourceGroup-1",
             WorkspaceName = "workspace-1",
         });
@@ -52,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices/v20200901preview"
+	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices/v20200901preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -62,9 +66,12 @@ func main() {
 			Identity: &machinelearningservices.IdentityArgs{
 				Type: pulumi.String("SystemAssigned"),
 			},
-			LinkName:          pulumi.String("link-1"),
-			Location:          pulumi.String("westus"),
-			Name:              pulumi.String("link-1"),
+			LinkName: pulumi.String("link-1"),
+			Location: pulumi.String("westus"),
+			Name:     pulumi.String("link-1"),
+			Properties: &machinelearningservices.LinkedServicePropsArgs{
+				LinkedServiceResourceId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.Synapse/workspaces/Syn-1"),
+			},
 			ResourceGroupName: pulumi.String("resourceGroup-1"),
 			WorkspaceName:     pulumi.String("workspace-1"),
 		})
@@ -92,6 +99,9 @@ linked_service = azure_nextgen.machinelearningservices.v20200901preview.LinkedSe
     link_name="link-1",
     location="westus",
     name="link-1",
+    properties={
+        "linkedServiceResourceId": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.Synapse/workspaces/Syn-1",
+    },
     resource_group_name="resourceGroup-1",
     workspace_name="workspace-1")
 
@@ -112,6 +122,9 @@ const linkedService = new azure_nextgen.machinelearningservices.v20200901preview
     linkName: "link-1",
     location: "westus",
     name: "link-1",
+    properties: {
+        linkedServiceResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.Synapse/workspaces/Syn-1",
+    },
     resourceGroupName: "resourceGroup-1",
     workspaceName: "workspace-1",
 });

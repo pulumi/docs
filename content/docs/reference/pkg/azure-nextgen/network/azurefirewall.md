@@ -32,7 +32,37 @@ class MyStack : Stack
             {
                 new AzureNextGen.Network.Latest.Inputs.AzureFirewallApplicationRuleCollectionArgs
                 {
+                    Action = new AzureNextGen.Network.Latest.Inputs.AzureFirewallRCActionArgs
+                    {
+                        Type = "Deny",
+                    },
                     Name = "apprulecoll",
+                    Priority = 110,
+                    Rules = 
+                    {
+                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallApplicationRuleArgs
+                        {
+                            Description = "Deny inbound rule",
+                            Name = "rule1",
+                            Protocols = 
+                            {
+                                new AzureNextGen.Network.Latest.Inputs.AzureFirewallApplicationRuleProtocolArgs
+                                {
+                                    Port = 443,
+                                    ProtocolType = "Https",
+                                },
+                            },
+                            SourceAddresses = 
+                            {
+                                "216.58.216.164",
+                                "10.0.0.0/24",
+                            },
+                            TargetFqdns = 
+                            {
+                                "www.test.com",
+                            },
+                        },
+                    },
                 },
             },
             AzureFirewallName = "azurefirewall",
@@ -41,6 +71,14 @@ class MyStack : Stack
                 new AzureNextGen.Network.Latest.Inputs.AzureFirewallIPConfigurationArgs
                 {
                     Name = "azureFirewallIpConfiguration",
+                    PublicIPAddress = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    {
+                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName",
+                    },
+                    Subnet = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    {
+                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet",
+                    },
                 },
             },
             Location = "West US",
@@ -48,14 +86,121 @@ class MyStack : Stack
             {
                 new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRuleCollectionArgs
                 {
+                    Action = new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRCActionArgs
+                    {
+                        Type = "Dnat",
+                    },
                     Name = "natrulecoll",
+                    Priority = 112,
+                    Rules = 
+                    {
+                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRuleArgs
+                        {
+                            Description = "D-NAT all outbound web traffic for inspection",
+                            DestinationAddresses = 
+                            {
+                                "1.2.3.4",
+                            },
+                            DestinationPorts = 
+                            {
+                                "443",
+                            },
+                            Name = "DNAT-HTTPS-traffic",
+                            Protocols = 
+                            {
+                                "TCP",
+                            },
+                            SourceAddresses = 
+                            {
+                                "*",
+                            },
+                            TranslatedAddress = "1.2.3.5",
+                            TranslatedPort = "8443",
+                        },
+                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRuleArgs
+                        {
+                            Description = "D-NAT all inbound web traffic for inspection",
+                            DestinationAddresses = 
+                            {
+                                "1.2.3.4",
+                            },
+                            DestinationPorts = 
+                            {
+                                "80",
+                            },
+                            Name = "DNAT-HTTP-traffic-With-FQDN",
+                            Protocols = 
+                            {
+                                "TCP",
+                            },
+                            SourceAddresses = 
+                            {
+                                "*",
+                            },
+                            TranslatedFqdn = "internalhttpserver",
+                            TranslatedPort = "880",
+                        },
+                    },
                 },
             },
             NetworkRuleCollections = 
             {
                 new AzureNextGen.Network.Latest.Inputs.AzureFirewallNetworkRuleCollectionArgs
                 {
+                    Action = new AzureNextGen.Network.Latest.Inputs.AzureFirewallRCActionArgs
+                    {
+                        Type = "Deny",
+                    },
                     Name = "netrulecoll",
+                    Priority = 112,
+                    Rules = 
+                    {
+                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallNetworkRuleArgs
+                        {
+                            Description = "Block traffic based on source IPs and ports",
+                            DestinationAddresses = 
+                            {
+                                "*",
+                            },
+                            DestinationPorts = 
+                            {
+                                "443-444",
+                                "8443",
+                            },
+                            Name = "L4-traffic",
+                            Protocols = 
+                            {
+                                "TCP",
+                            },
+                            SourceAddresses = 
+                            {
+                                "192.168.1.1-192.168.1.12",
+                                "10.1.4.12-10.1.4.255",
+                            },
+                        },
+                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallNetworkRuleArgs
+                        {
+                            Description = "Block traffic based on source IPs and ports to amazon",
+                            DestinationFqdns = 
+                            {
+                                "www.amazon.com",
+                            },
+                            DestinationPorts = 
+                            {
+                                "443-444",
+                                "8443",
+                            },
+                            Name = "L4-traffic-with-FQDN",
+                            Protocols = 
+                            {
+                                "TCP",
+                            },
+                            SourceAddresses = 
+                            {
+                                "10.2.4.12-10.2.4.255",
+                            },
+                        },
+                    },
                 },
             },
             ResourceGroupName = "rg1",
@@ -85,7 +230,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -94,24 +239,136 @@ func main() {
 		_, err := network.NewAzureFirewall(ctx, "azureFirewall", &network.AzureFirewallArgs{
 			ApplicationRuleCollections: network.AzureFirewallApplicationRuleCollectionArray{
 				&network.AzureFirewallApplicationRuleCollectionArgs{
-					Name: pulumi.String("apprulecoll"),
+					Action: &network.AzureFirewallRCActionArgs{
+						Type: pulumi.String("Deny"),
+					},
+					Name:     pulumi.String("apprulecoll"),
+					Priority: pulumi.Int(110),
+					Rules: network.AzureFirewallApplicationRuleArray{
+						&network.AzureFirewallApplicationRuleArgs{
+							Description: pulumi.String("Deny inbound rule"),
+							Name:        pulumi.String("rule1"),
+							Protocols: network.AzureFirewallApplicationRuleProtocolArray{
+								&network.AzureFirewallApplicationRuleProtocolArgs{
+									Port:         pulumi.Int(443),
+									ProtocolType: pulumi.String("Https"),
+								},
+							},
+							SourceAddresses: pulumi.StringArray{
+								pulumi.String("216.58.216.164"),
+								pulumi.String("10.0.0.0/24"),
+							},
+							TargetFqdns: pulumi.StringArray{
+								pulumi.String("www.test.com"),
+							},
+						},
+					},
 				},
 			},
 			AzureFirewallName: pulumi.String("azurefirewall"),
 			IpConfigurations: network.AzureFirewallIPConfigurationArray{
 				&network.AzureFirewallIPConfigurationArgs{
 					Name: pulumi.String("azureFirewallIpConfiguration"),
+					PublicIPAddress: &network.SubResourceArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName"),
+					},
+					Subnet: &network.SubResourceArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet"),
+					},
 				},
 			},
 			Location: pulumi.String("West US"),
 			NatRuleCollections: network.AzureFirewallNatRuleCollectionArray{
 				&network.AzureFirewallNatRuleCollectionArgs{
-					Name: pulumi.String("natrulecoll"),
+					Action: &network.AzureFirewallNatRCActionArgs{
+						Type: pulumi.String("Dnat"),
+					},
+					Name:     pulumi.String("natrulecoll"),
+					Priority: pulumi.Int(112),
+					Rules: network.AzureFirewallNatRuleArray{
+						&network.AzureFirewallNatRuleArgs{
+							Description: pulumi.String("D-NAT all outbound web traffic for inspection"),
+							DestinationAddresses: pulumi.StringArray{
+								pulumi.String("1.2.3.4"),
+							},
+							DestinationPorts: pulumi.StringArray{
+								pulumi.String("443"),
+							},
+							Name: pulumi.String("DNAT-HTTPS-traffic"),
+							Protocols: pulumi.StringArray{
+								pulumi.String("TCP"),
+							},
+							SourceAddresses: pulumi.StringArray{
+								pulumi.String("*"),
+							},
+							TranslatedAddress: pulumi.String("1.2.3.5"),
+							TranslatedPort:    pulumi.String("8443"),
+						},
+						&network.AzureFirewallNatRuleArgs{
+							Description: pulumi.String("D-NAT all inbound web traffic for inspection"),
+							DestinationAddresses: pulumi.StringArray{
+								pulumi.String("1.2.3.4"),
+							},
+							DestinationPorts: pulumi.StringArray{
+								pulumi.String("80"),
+							},
+							Name: pulumi.String("DNAT-HTTP-traffic-With-FQDN"),
+							Protocols: pulumi.StringArray{
+								pulumi.String("TCP"),
+							},
+							SourceAddresses: pulumi.StringArray{
+								pulumi.String("*"),
+							},
+							TranslatedFqdn: pulumi.String("internalhttpserver"),
+							TranslatedPort: pulumi.String("880"),
+						},
+					},
 				},
 			},
 			NetworkRuleCollections: network.AzureFirewallNetworkRuleCollectionArray{
 				&network.AzureFirewallNetworkRuleCollectionArgs{
-					Name: pulumi.String("netrulecoll"),
+					Action: &network.AzureFirewallRCActionArgs{
+						Type: pulumi.String("Deny"),
+					},
+					Name:     pulumi.String("netrulecoll"),
+					Priority: pulumi.Int(112),
+					Rules: network.AzureFirewallNetworkRuleArray{
+						&network.AzureFirewallNetworkRuleArgs{
+							Description: pulumi.String("Block traffic based on source IPs and ports"),
+							DestinationAddresses: pulumi.StringArray{
+								pulumi.String("*"),
+							},
+							DestinationPorts: pulumi.StringArray{
+								pulumi.String("443-444"),
+								pulumi.String("8443"),
+							},
+							Name: pulumi.String("L4-traffic"),
+							Protocols: pulumi.StringArray{
+								pulumi.String("TCP"),
+							},
+							SourceAddresses: pulumi.StringArray{
+								pulumi.String("192.168.1.1-192.168.1.12"),
+								pulumi.String("10.1.4.12-10.1.4.255"),
+							},
+						},
+						&network.AzureFirewallNetworkRuleArgs{
+							Description: pulumi.String("Block traffic based on source IPs and ports to amazon"),
+							DestinationFqdns: pulumi.StringArray{
+								pulumi.String("www.amazon.com"),
+							},
+							DestinationPorts: pulumi.StringArray{
+								pulumi.String("443-444"),
+								pulumi.String("8443"),
+							},
+							Name: pulumi.String("L4-traffic-with-FQDN"),
+							Protocols: pulumi.StringArray{
+								pulumi.String("TCP"),
+							},
+							SourceAddresses: pulumi.StringArray{
+								pulumi.String("10.2.4.12-10.2.4.255"),
+							},
+						},
+					},
 				},
 			},
 			ResourceGroupName: pulumi.String("rg1"),
@@ -144,18 +401,98 @@ import pulumi_azure_nextgen as azure_nextgen
 
 azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
     application_rule_collections=[{
+        "action": {
+            "type": "Deny",
+        },
         "name": "apprulecoll",
+        "priority": 110,
+        "rules": [{
+            "description": "Deny inbound rule",
+            "name": "rule1",
+            "protocols": [{
+                "port": 443,
+                "protocolType": "Https",
+            }],
+            "sourceAddresses": [
+                "216.58.216.164",
+                "10.0.0.0/24",
+            ],
+            "targetFqdns": ["www.test.com"],
+        }],
     }],
     azure_firewall_name="azurefirewall",
     ip_configurations=[{
         "name": "azureFirewallIpConfiguration",
+        "publicIPAddress": {
+            "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName",
+        },
+        "subnet": {
+            "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet",
+        },
     }],
     location="West US",
     nat_rule_collections=[{
+        "action": {
+            "type": "Dnat",
+        },
         "name": "natrulecoll",
+        "priority": 112,
+        "rules": [
+            {
+                "description": "D-NAT all outbound web traffic for inspection",
+                "destinationAddresses": ["1.2.3.4"],
+                "destinationPorts": ["443"],
+                "name": "DNAT-HTTPS-traffic",
+                "protocols": ["TCP"],
+                "sourceAddresses": ["*"],
+                "translatedAddress": "1.2.3.5",
+                "translatedPort": "8443",
+            },
+            {
+                "description": "D-NAT all inbound web traffic for inspection",
+                "destinationAddresses": ["1.2.3.4"],
+                "destinationPorts": ["80"],
+                "name": "DNAT-HTTP-traffic-With-FQDN",
+                "protocols": ["TCP"],
+                "sourceAddresses": ["*"],
+                "translatedFqdn": "internalhttpserver",
+                "translatedPort": "880",
+            },
+        ],
     }],
     network_rule_collections=[{
+        "action": {
+            "type": "Deny",
+        },
         "name": "netrulecoll",
+        "priority": 112,
+        "rules": [
+            {
+                "description": "Block traffic based on source IPs and ports",
+                "destinationAddresses": ["*"],
+                "destinationPorts": [
+                    "443-444",
+                    "8443",
+                ],
+                "name": "L4-traffic",
+                "protocols": ["TCP"],
+                "sourceAddresses": [
+                    "192.168.1.1-192.168.1.12",
+                    "10.1.4.12-10.1.4.255",
+                ],
+            },
+            {
+                "description": "Block traffic based on source IPs and ports to amazon",
+                "destinationFqdns": ["www.amazon.com"],
+                "destinationPorts": [
+                    "443-444",
+                    "8443",
+                ],
+                "name": "L4-traffic-with-FQDN",
+                "protocols": ["TCP"],
+                "sourceAddresses": ["10.2.4.12-10.2.4.255"],
+            },
+        ],
     }],
     resource_group_name="rg1",
     sku={
@@ -180,18 +517,98 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const azureFirewall = new azure_nextgen.network.latest.AzureFirewall("azureFirewall", {
     applicationRuleCollections: [{
+        action: {
+            type: "Deny",
+        },
         name: "apprulecoll",
+        priority: 110,
+        rules: [{
+            description: "Deny inbound rule",
+            name: "rule1",
+            protocols: [{
+                port: 443,
+                protocolType: "Https",
+            }],
+            sourceAddresses: [
+                "216.58.216.164",
+                "10.0.0.0/24",
+            ],
+            targetFqdns: ["www.test.com"],
+        }],
     }],
     azureFirewallName: "azurefirewall",
     ipConfigurations: [{
         name: "azureFirewallIpConfiguration",
+        publicIPAddress: {
+            id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName",
+        },
+        subnet: {
+            id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet",
+        },
     }],
     location: "West US",
     natRuleCollections: [{
+        action: {
+            type: "Dnat",
+        },
         name: "natrulecoll",
+        priority: 112,
+        rules: [
+            {
+                description: "D-NAT all outbound web traffic for inspection",
+                destinationAddresses: ["1.2.3.4"],
+                destinationPorts: ["443"],
+                name: "DNAT-HTTPS-traffic",
+                protocols: ["TCP"],
+                sourceAddresses: ["*"],
+                translatedAddress: "1.2.3.5",
+                translatedPort: "8443",
+            },
+            {
+                description: "D-NAT all inbound web traffic for inspection",
+                destinationAddresses: ["1.2.3.4"],
+                destinationPorts: ["80"],
+                name: "DNAT-HTTP-traffic-With-FQDN",
+                protocols: ["TCP"],
+                sourceAddresses: ["*"],
+                translatedFqdn: "internalhttpserver",
+                translatedPort: "880",
+            },
+        ],
     }],
     networkRuleCollections: [{
+        action: {
+            type: "Deny",
+        },
         name: "netrulecoll",
+        priority: 112,
+        rules: [
+            {
+                description: "Block traffic based on source IPs and ports",
+                destinationAddresses: ["*"],
+                destinationPorts: [
+                    "443-444",
+                    "8443",
+                ],
+                name: "L4-traffic",
+                protocols: ["TCP"],
+                sourceAddresses: [
+                    "192.168.1.1-192.168.1.12",
+                    "10.1.4.12-10.1.4.255",
+                ],
+            },
+            {
+                description: "Block traffic based on source IPs and ports to amazon",
+                destinationFqdns: ["www.amazon.com"],
+                destinationPorts: [
+                    "443-444",
+                    "8443",
+                ],
+                name: "L4-traffic-with-FQDN",
+                protocols: ["TCP"],
+                sourceAddresses: ["10.2.4.12-10.2.4.255"],
+            },
+        ],
     }],
     resourceGroupName: "rg1",
     sku: {
@@ -230,7 +647,37 @@ class MyStack : Stack
             {
                 new AzureNextGen.Network.Latest.Inputs.AzureFirewallApplicationRuleCollectionArgs
                 {
+                    Action = new AzureNextGen.Network.Latest.Inputs.AzureFirewallRCActionArgs
+                    {
+                        Type = "Deny",
+                    },
                     Name = "apprulecoll",
+                    Priority = 110,
+                    Rules = 
+                    {
+                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallApplicationRuleArgs
+                        {
+                            Description = "Deny inbound rule",
+                            Name = "rule1",
+                            Protocols = 
+                            {
+                                new AzureNextGen.Network.Latest.Inputs.AzureFirewallApplicationRuleProtocolArgs
+                                {
+                                    Port = 443,
+                                    ProtocolType = "Https",
+                                },
+                            },
+                            SourceAddresses = 
+                            {
+                                "216.58.216.164",
+                                "10.0.0.0/24",
+                            },
+                            TargetFqdns = 
+                            {
+                                "www.test.com",
+                            },
+                        },
+                    },
                 },
             },
             AzureFirewallName = "azurefirewall",
@@ -239,6 +686,14 @@ class MyStack : Stack
                 new AzureNextGen.Network.Latest.Inputs.AzureFirewallIPConfigurationArgs
                 {
                     Name = "azureFirewallIpConfiguration",
+                    PublicIPAddress = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    {
+                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName",
+                    },
+                    Subnet = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    {
+                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet",
+                    },
                 },
             },
             Location = "West US",
@@ -246,14 +701,121 @@ class MyStack : Stack
             {
                 new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRuleCollectionArgs
                 {
+                    Action = new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRCActionArgs
+                    {
+                        Type = "Dnat",
+                    },
                     Name = "natrulecoll",
+                    Priority = 112,
+                    Rules = 
+                    {
+                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRuleArgs
+                        {
+                            Description = "D-NAT all outbound web traffic for inspection",
+                            DestinationAddresses = 
+                            {
+                                "1.2.3.4",
+                            },
+                            DestinationPorts = 
+                            {
+                                "443",
+                            },
+                            Name = "DNAT-HTTPS-traffic",
+                            Protocols = 
+                            {
+                                "TCP",
+                            },
+                            SourceAddresses = 
+                            {
+                                "*",
+                            },
+                            TranslatedAddress = "1.2.3.5",
+                            TranslatedPort = "8443",
+                        },
+                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRuleArgs
+                        {
+                            Description = "D-NAT all inbound web traffic for inspection",
+                            DestinationAddresses = 
+                            {
+                                "1.2.3.4",
+                            },
+                            DestinationPorts = 
+                            {
+                                "80",
+                            },
+                            Name = "DNAT-HTTP-traffic-With-FQDN",
+                            Protocols = 
+                            {
+                                "TCP",
+                            },
+                            SourceAddresses = 
+                            {
+                                "*",
+                            },
+                            TranslatedFqdn = "internalhttpserver",
+                            TranslatedPort = "880",
+                        },
+                    },
                 },
             },
             NetworkRuleCollections = 
             {
                 new AzureNextGen.Network.Latest.Inputs.AzureFirewallNetworkRuleCollectionArgs
                 {
+                    Action = new AzureNextGen.Network.Latest.Inputs.AzureFirewallRCActionArgs
+                    {
+                        Type = "Deny",
+                    },
                     Name = "netrulecoll",
+                    Priority = 112,
+                    Rules = 
+                    {
+                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallNetworkRuleArgs
+                        {
+                            Description = "Block traffic based on source IPs and ports",
+                            DestinationAddresses = 
+                            {
+                                "*",
+                            },
+                            DestinationPorts = 
+                            {
+                                "443-444",
+                                "8443",
+                            },
+                            Name = "L4-traffic",
+                            Protocols = 
+                            {
+                                "TCP",
+                            },
+                            SourceAddresses = 
+                            {
+                                "192.168.1.1-192.168.1.12",
+                                "10.1.4.12-10.1.4.255",
+                            },
+                        },
+                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallNetworkRuleArgs
+                        {
+                            Description = "Block traffic based on source IPs and ports to amazon",
+                            DestinationFqdns = 
+                            {
+                                "www.amazon.com",
+                            },
+                            DestinationPorts = 
+                            {
+                                "443-444",
+                                "8443",
+                            },
+                            Name = "L4-traffic-with-FQDN",
+                            Protocols = 
+                            {
+                                "TCP",
+                            },
+                            SourceAddresses = 
+                            {
+                                "10.2.4.12-10.2.4.255",
+                            },
+                        },
+                    },
                 },
             },
             ResourceGroupName = "rg1",
@@ -283,7 +845,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -296,24 +858,136 @@ func main() {
 			},
 			ApplicationRuleCollections: network.AzureFirewallApplicationRuleCollectionArray{
 				&network.AzureFirewallApplicationRuleCollectionArgs{
-					Name: pulumi.String("apprulecoll"),
+					Action: &network.AzureFirewallRCActionArgs{
+						Type: pulumi.String("Deny"),
+					},
+					Name:     pulumi.String("apprulecoll"),
+					Priority: pulumi.Int(110),
+					Rules: network.AzureFirewallApplicationRuleArray{
+						&network.AzureFirewallApplicationRuleArgs{
+							Description: pulumi.String("Deny inbound rule"),
+							Name:        pulumi.String("rule1"),
+							Protocols: network.AzureFirewallApplicationRuleProtocolArray{
+								&network.AzureFirewallApplicationRuleProtocolArgs{
+									Port:         pulumi.Int(443),
+									ProtocolType: pulumi.String("Https"),
+								},
+							},
+							SourceAddresses: pulumi.StringArray{
+								pulumi.String("216.58.216.164"),
+								pulumi.String("10.0.0.0/24"),
+							},
+							TargetFqdns: pulumi.StringArray{
+								pulumi.String("www.test.com"),
+							},
+						},
+					},
 				},
 			},
 			AzureFirewallName: pulumi.String("azurefirewall"),
 			IpConfigurations: network.AzureFirewallIPConfigurationArray{
 				&network.AzureFirewallIPConfigurationArgs{
 					Name: pulumi.String("azureFirewallIpConfiguration"),
+					PublicIPAddress: &network.SubResourceArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName"),
+					},
+					Subnet: &network.SubResourceArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet"),
+					},
 				},
 			},
 			Location: pulumi.String("West US"),
 			NatRuleCollections: network.AzureFirewallNatRuleCollectionArray{
 				&network.AzureFirewallNatRuleCollectionArgs{
-					Name: pulumi.String("natrulecoll"),
+					Action: &network.AzureFirewallNatRCActionArgs{
+						Type: pulumi.String("Dnat"),
+					},
+					Name:     pulumi.String("natrulecoll"),
+					Priority: pulumi.Int(112),
+					Rules: network.AzureFirewallNatRuleArray{
+						&network.AzureFirewallNatRuleArgs{
+							Description: pulumi.String("D-NAT all outbound web traffic for inspection"),
+							DestinationAddresses: pulumi.StringArray{
+								pulumi.String("1.2.3.4"),
+							},
+							DestinationPorts: pulumi.StringArray{
+								pulumi.String("443"),
+							},
+							Name: pulumi.String("DNAT-HTTPS-traffic"),
+							Protocols: pulumi.StringArray{
+								pulumi.String("TCP"),
+							},
+							SourceAddresses: pulumi.StringArray{
+								pulumi.String("*"),
+							},
+							TranslatedAddress: pulumi.String("1.2.3.5"),
+							TranslatedPort:    pulumi.String("8443"),
+						},
+						&network.AzureFirewallNatRuleArgs{
+							Description: pulumi.String("D-NAT all inbound web traffic for inspection"),
+							DestinationAddresses: pulumi.StringArray{
+								pulumi.String("1.2.3.4"),
+							},
+							DestinationPorts: pulumi.StringArray{
+								pulumi.String("80"),
+							},
+							Name: pulumi.String("DNAT-HTTP-traffic-With-FQDN"),
+							Protocols: pulumi.StringArray{
+								pulumi.String("TCP"),
+							},
+							SourceAddresses: pulumi.StringArray{
+								pulumi.String("*"),
+							},
+							TranslatedFqdn: pulumi.String("internalhttpserver"),
+							TranslatedPort: pulumi.String("880"),
+						},
+					},
 				},
 			},
 			NetworkRuleCollections: network.AzureFirewallNetworkRuleCollectionArray{
 				&network.AzureFirewallNetworkRuleCollectionArgs{
-					Name: pulumi.String("netrulecoll"),
+					Action: &network.AzureFirewallRCActionArgs{
+						Type: pulumi.String("Deny"),
+					},
+					Name:     pulumi.String("netrulecoll"),
+					Priority: pulumi.Int(112),
+					Rules: network.AzureFirewallNetworkRuleArray{
+						&network.AzureFirewallNetworkRuleArgs{
+							Description: pulumi.String("Block traffic based on source IPs and ports"),
+							DestinationAddresses: pulumi.StringArray{
+								pulumi.String("*"),
+							},
+							DestinationPorts: pulumi.StringArray{
+								pulumi.String("443-444"),
+								pulumi.String("8443"),
+							},
+							Name: pulumi.String("L4-traffic"),
+							Protocols: pulumi.StringArray{
+								pulumi.String("TCP"),
+							},
+							SourceAddresses: pulumi.StringArray{
+								pulumi.String("192.168.1.1-192.168.1.12"),
+								pulumi.String("10.1.4.12-10.1.4.255"),
+							},
+						},
+						&network.AzureFirewallNetworkRuleArgs{
+							Description: pulumi.String("Block traffic based on source IPs and ports to amazon"),
+							DestinationFqdns: pulumi.StringArray{
+								pulumi.String("www.amazon.com"),
+							},
+							DestinationPorts: pulumi.StringArray{
+								pulumi.String("443-444"),
+								pulumi.String("8443"),
+							},
+							Name: pulumi.String("L4-traffic-with-FQDN"),
+							Protocols: pulumi.StringArray{
+								pulumi.String("TCP"),
+							},
+							SourceAddresses: pulumi.StringArray{
+								pulumi.String("10.2.4.12-10.2.4.255"),
+							},
+						},
+					},
 				},
 			},
 			ResourceGroupName: pulumi.String("rg1"),
@@ -350,18 +1024,98 @@ azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
         "key2": "value2",
     },
     application_rule_collections=[{
+        "action": {
+            "type": "Deny",
+        },
         "name": "apprulecoll",
+        "priority": 110,
+        "rules": [{
+            "description": "Deny inbound rule",
+            "name": "rule1",
+            "protocols": [{
+                "port": 443,
+                "protocolType": "Https",
+            }],
+            "sourceAddresses": [
+                "216.58.216.164",
+                "10.0.0.0/24",
+            ],
+            "targetFqdns": ["www.test.com"],
+        }],
     }],
     azure_firewall_name="azurefirewall",
     ip_configurations=[{
         "name": "azureFirewallIpConfiguration",
+        "publicIPAddress": {
+            "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName",
+        },
+        "subnet": {
+            "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet",
+        },
     }],
     location="West US",
     nat_rule_collections=[{
+        "action": {
+            "type": "Dnat",
+        },
         "name": "natrulecoll",
+        "priority": 112,
+        "rules": [
+            {
+                "description": "D-NAT all outbound web traffic for inspection",
+                "destinationAddresses": ["1.2.3.4"],
+                "destinationPorts": ["443"],
+                "name": "DNAT-HTTPS-traffic",
+                "protocols": ["TCP"],
+                "sourceAddresses": ["*"],
+                "translatedAddress": "1.2.3.5",
+                "translatedPort": "8443",
+            },
+            {
+                "description": "D-NAT all inbound web traffic for inspection",
+                "destinationAddresses": ["1.2.3.4"],
+                "destinationPorts": ["80"],
+                "name": "DNAT-HTTP-traffic-With-FQDN",
+                "protocols": ["TCP"],
+                "sourceAddresses": ["*"],
+                "translatedFqdn": "internalhttpserver",
+                "translatedPort": "880",
+            },
+        ],
     }],
     network_rule_collections=[{
+        "action": {
+            "type": "Deny",
+        },
         "name": "netrulecoll",
+        "priority": 112,
+        "rules": [
+            {
+                "description": "Block traffic based on source IPs and ports",
+                "destinationAddresses": ["*"],
+                "destinationPorts": [
+                    "443-444",
+                    "8443",
+                ],
+                "name": "L4-traffic",
+                "protocols": ["TCP"],
+                "sourceAddresses": [
+                    "192.168.1.1-192.168.1.12",
+                    "10.1.4.12-10.1.4.255",
+                ],
+            },
+            {
+                "description": "Block traffic based on source IPs and ports to amazon",
+                "destinationFqdns": ["www.amazon.com"],
+                "destinationPorts": [
+                    "443-444",
+                    "8443",
+                ],
+                "name": "L4-traffic-with-FQDN",
+                "protocols": ["TCP"],
+                "sourceAddresses": ["10.2.4.12-10.2.4.255"],
+            },
+        ],
     }],
     resource_group_name="rg1",
     sku={
@@ -390,18 +1144,98 @@ const azureFirewall = new azure_nextgen.network.latest.AzureFirewall("azureFirew
         key2: "value2",
     },
     applicationRuleCollections: [{
+        action: {
+            type: "Deny",
+        },
         name: "apprulecoll",
+        priority: 110,
+        rules: [{
+            description: "Deny inbound rule",
+            name: "rule1",
+            protocols: [{
+                port: 443,
+                protocolType: "Https",
+            }],
+            sourceAddresses: [
+                "216.58.216.164",
+                "10.0.0.0/24",
+            ],
+            targetFqdns: ["www.test.com"],
+        }],
     }],
     azureFirewallName: "azurefirewall",
     ipConfigurations: [{
         name: "azureFirewallIpConfiguration",
+        publicIPAddress: {
+            id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName",
+        },
+        subnet: {
+            id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet",
+        },
     }],
     location: "West US",
     natRuleCollections: [{
+        action: {
+            type: "Dnat",
+        },
         name: "natrulecoll",
+        priority: 112,
+        rules: [
+            {
+                description: "D-NAT all outbound web traffic for inspection",
+                destinationAddresses: ["1.2.3.4"],
+                destinationPorts: ["443"],
+                name: "DNAT-HTTPS-traffic",
+                protocols: ["TCP"],
+                sourceAddresses: ["*"],
+                translatedAddress: "1.2.3.5",
+                translatedPort: "8443",
+            },
+            {
+                description: "D-NAT all inbound web traffic for inspection",
+                destinationAddresses: ["1.2.3.4"],
+                destinationPorts: ["80"],
+                name: "DNAT-HTTP-traffic-With-FQDN",
+                protocols: ["TCP"],
+                sourceAddresses: ["*"],
+                translatedFqdn: "internalhttpserver",
+                translatedPort: "880",
+            },
+        ],
     }],
     networkRuleCollections: [{
+        action: {
+            type: "Deny",
+        },
         name: "netrulecoll",
+        priority: 112,
+        rules: [
+            {
+                description: "Block traffic based on source IPs and ports",
+                destinationAddresses: ["*"],
+                destinationPorts: [
+                    "443-444",
+                    "8443",
+                ],
+                name: "L4-traffic",
+                protocols: ["TCP"],
+                sourceAddresses: [
+                    "192.168.1.1-192.168.1.12",
+                    "10.1.4.12-10.1.4.255",
+                ],
+            },
+            {
+                description: "Block traffic based on source IPs and ports to amazon",
+                destinationFqdns: ["www.amazon.com"],
+                destinationPorts: [
+                    "443-444",
+                    "8443",
+                ],
+                name: "L4-traffic-with-FQDN",
+                protocols: ["TCP"],
+                sourceAddresses: ["10.2.4.12-10.2.4.255"],
+            },
+        ],
     }],
     resourceGroupName: "rg1",
     sku: {
@@ -435,7 +1269,37 @@ class MyStack : Stack
             {
                 new AzureNextGen.Network.Latest.Inputs.AzureFirewallApplicationRuleCollectionArgs
                 {
+                    Action = new AzureNextGen.Network.Latest.Inputs.AzureFirewallRCActionArgs
+                    {
+                        Type = "Deny",
+                    },
                     Name = "apprulecoll",
+                    Priority = 110,
+                    Rules = 
+                    {
+                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallApplicationRuleArgs
+                        {
+                            Description = "Deny inbound rule",
+                            Name = "rule1",
+                            Protocols = 
+                            {
+                                new AzureNextGen.Network.Latest.Inputs.AzureFirewallApplicationRuleProtocolArgs
+                                {
+                                    Port = 443,
+                                    ProtocolType = "Https",
+                                },
+                            },
+                            SourceAddresses = 
+                            {
+                                "216.58.216.164",
+                                "10.0.0.0/24",
+                            },
+                            TargetFqdns = 
+                            {
+                                "www.test.com",
+                            },
+                        },
+                    },
                 },
             },
             AzureFirewallName = "azurefirewall",
@@ -444,6 +1308,14 @@ class MyStack : Stack
                 new AzureNextGen.Network.Latest.Inputs.AzureFirewallIPConfigurationArgs
                 {
                     Name = "azureFirewallIpConfiguration",
+                    PublicIPAddress = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    {
+                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName",
+                    },
+                    Subnet = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    {
+                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet",
+                    },
                 },
             },
             Location = "West US",
@@ -451,14 +1323,121 @@ class MyStack : Stack
             {
                 new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRuleCollectionArgs
                 {
+                    Action = new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRCActionArgs
+                    {
+                        Type = "Dnat",
+                    },
                     Name = "natrulecoll",
+                    Priority = 112,
+                    Rules = 
+                    {
+                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRuleArgs
+                        {
+                            Description = "D-NAT all outbound web traffic for inspection",
+                            DestinationAddresses = 
+                            {
+                                "1.2.3.4",
+                            },
+                            DestinationPorts = 
+                            {
+                                "443",
+                            },
+                            Name = "DNAT-HTTPS-traffic",
+                            Protocols = 
+                            {
+                                "TCP",
+                            },
+                            SourceAddresses = 
+                            {
+                                "*",
+                            },
+                            TranslatedAddress = "1.2.3.5",
+                            TranslatedPort = "8443",
+                        },
+                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRuleArgs
+                        {
+                            Description = "D-NAT all inbound web traffic for inspection",
+                            DestinationAddresses = 
+                            {
+                                "1.2.3.4",
+                            },
+                            DestinationPorts = 
+                            {
+                                "80",
+                            },
+                            Name = "DNAT-HTTP-traffic-With-FQDN",
+                            Protocols = 
+                            {
+                                "TCP",
+                            },
+                            SourceAddresses = 
+                            {
+                                "*",
+                            },
+                            TranslatedFqdn = "internalhttpserver",
+                            TranslatedPort = "880",
+                        },
+                    },
                 },
             },
             NetworkRuleCollections = 
             {
                 new AzureNextGen.Network.Latest.Inputs.AzureFirewallNetworkRuleCollectionArgs
                 {
+                    Action = new AzureNextGen.Network.Latest.Inputs.AzureFirewallRCActionArgs
+                    {
+                        Type = "Deny",
+                    },
                     Name = "netrulecoll",
+                    Priority = 112,
+                    Rules = 
+                    {
+                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallNetworkRuleArgs
+                        {
+                            Description = "Block traffic based on source IPs and ports",
+                            DestinationAddresses = 
+                            {
+                                "*",
+                            },
+                            DestinationPorts = 
+                            {
+                                "443-444",
+                                "8443",
+                            },
+                            Name = "L4-traffic",
+                            Protocols = 
+                            {
+                                "TCP",
+                            },
+                            SourceAddresses = 
+                            {
+                                "192.168.1.1-192.168.1.12",
+                                "10.1.4.12-10.1.4.255",
+                            },
+                        },
+                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallNetworkRuleArgs
+                        {
+                            Description = "Block traffic based on source IPs and ports to amazon",
+                            DestinationFqdns = 
+                            {
+                                "www.amazon.com",
+                            },
+                            DestinationPorts = 
+                            {
+                                "443-444",
+                                "8443",
+                            },
+                            Name = "L4-traffic-with-FQDN",
+                            Protocols = 
+                            {
+                                "TCP",
+                            },
+                            SourceAddresses = 
+                            {
+                                "10.2.4.12-10.2.4.255",
+                            },
+                        },
+                    },
                 },
             },
             ResourceGroupName = "rg1",
@@ -488,7 +1467,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -497,24 +1476,136 @@ func main() {
 		_, err := network.NewAzureFirewall(ctx, "azureFirewall", &network.AzureFirewallArgs{
 			ApplicationRuleCollections: network.AzureFirewallApplicationRuleCollectionArray{
 				&network.AzureFirewallApplicationRuleCollectionArgs{
-					Name: pulumi.String("apprulecoll"),
+					Action: &network.AzureFirewallRCActionArgs{
+						Type: pulumi.String("Deny"),
+					},
+					Name:     pulumi.String("apprulecoll"),
+					Priority: pulumi.Int(110),
+					Rules: network.AzureFirewallApplicationRuleArray{
+						&network.AzureFirewallApplicationRuleArgs{
+							Description: pulumi.String("Deny inbound rule"),
+							Name:        pulumi.String("rule1"),
+							Protocols: network.AzureFirewallApplicationRuleProtocolArray{
+								&network.AzureFirewallApplicationRuleProtocolArgs{
+									Port:         pulumi.Int(443),
+									ProtocolType: pulumi.String("Https"),
+								},
+							},
+							SourceAddresses: pulumi.StringArray{
+								pulumi.String("216.58.216.164"),
+								pulumi.String("10.0.0.0/24"),
+							},
+							TargetFqdns: pulumi.StringArray{
+								pulumi.String("www.test.com"),
+							},
+						},
+					},
 				},
 			},
 			AzureFirewallName: pulumi.String("azurefirewall"),
 			IpConfigurations: network.AzureFirewallIPConfigurationArray{
 				&network.AzureFirewallIPConfigurationArgs{
 					Name: pulumi.String("azureFirewallIpConfiguration"),
+					PublicIPAddress: &network.SubResourceArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName"),
+					},
+					Subnet: &network.SubResourceArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet"),
+					},
 				},
 			},
 			Location: pulumi.String("West US"),
 			NatRuleCollections: network.AzureFirewallNatRuleCollectionArray{
 				&network.AzureFirewallNatRuleCollectionArgs{
-					Name: pulumi.String("natrulecoll"),
+					Action: &network.AzureFirewallNatRCActionArgs{
+						Type: pulumi.String("Dnat"),
+					},
+					Name:     pulumi.String("natrulecoll"),
+					Priority: pulumi.Int(112),
+					Rules: network.AzureFirewallNatRuleArray{
+						&network.AzureFirewallNatRuleArgs{
+							Description: pulumi.String("D-NAT all outbound web traffic for inspection"),
+							DestinationAddresses: pulumi.StringArray{
+								pulumi.String("1.2.3.4"),
+							},
+							DestinationPorts: pulumi.StringArray{
+								pulumi.String("443"),
+							},
+							Name: pulumi.String("DNAT-HTTPS-traffic"),
+							Protocols: pulumi.StringArray{
+								pulumi.String("TCP"),
+							},
+							SourceAddresses: pulumi.StringArray{
+								pulumi.String("*"),
+							},
+							TranslatedAddress: pulumi.String("1.2.3.5"),
+							TranslatedPort:    pulumi.String("8443"),
+						},
+						&network.AzureFirewallNatRuleArgs{
+							Description: pulumi.String("D-NAT all inbound web traffic for inspection"),
+							DestinationAddresses: pulumi.StringArray{
+								pulumi.String("1.2.3.4"),
+							},
+							DestinationPorts: pulumi.StringArray{
+								pulumi.String("80"),
+							},
+							Name: pulumi.String("DNAT-HTTP-traffic-With-FQDN"),
+							Protocols: pulumi.StringArray{
+								pulumi.String("TCP"),
+							},
+							SourceAddresses: pulumi.StringArray{
+								pulumi.String("*"),
+							},
+							TranslatedFqdn: pulumi.String("internalhttpserver"),
+							TranslatedPort: pulumi.String("880"),
+						},
+					},
 				},
 			},
 			NetworkRuleCollections: network.AzureFirewallNetworkRuleCollectionArray{
 				&network.AzureFirewallNetworkRuleCollectionArgs{
-					Name: pulumi.String("netrulecoll"),
+					Action: &network.AzureFirewallRCActionArgs{
+						Type: pulumi.String("Deny"),
+					},
+					Name:     pulumi.String("netrulecoll"),
+					Priority: pulumi.Int(112),
+					Rules: network.AzureFirewallNetworkRuleArray{
+						&network.AzureFirewallNetworkRuleArgs{
+							Description: pulumi.String("Block traffic based on source IPs and ports"),
+							DestinationAddresses: pulumi.StringArray{
+								pulumi.String("*"),
+							},
+							DestinationPorts: pulumi.StringArray{
+								pulumi.String("443-444"),
+								pulumi.String("8443"),
+							},
+							Name: pulumi.String("L4-traffic"),
+							Protocols: pulumi.StringArray{
+								pulumi.String("TCP"),
+							},
+							SourceAddresses: pulumi.StringArray{
+								pulumi.String("192.168.1.1-192.168.1.12"),
+								pulumi.String("10.1.4.12-10.1.4.255"),
+							},
+						},
+						&network.AzureFirewallNetworkRuleArgs{
+							Description: pulumi.String("Block traffic based on source IPs and ports to amazon"),
+							DestinationFqdns: pulumi.StringArray{
+								pulumi.String("www.amazon.com"),
+							},
+							DestinationPorts: pulumi.StringArray{
+								pulumi.String("443-444"),
+								pulumi.String("8443"),
+							},
+							Name: pulumi.String("L4-traffic-with-FQDN"),
+							Protocols: pulumi.StringArray{
+								pulumi.String("TCP"),
+							},
+							SourceAddresses: pulumi.StringArray{
+								pulumi.String("10.2.4.12-10.2.4.255"),
+							},
+						},
+					},
 				},
 			},
 			ResourceGroupName: pulumi.String("rg1"),
@@ -547,18 +1638,98 @@ import pulumi_azure_nextgen as azure_nextgen
 
 azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
     application_rule_collections=[{
+        "action": {
+            "type": "Deny",
+        },
         "name": "apprulecoll",
+        "priority": 110,
+        "rules": [{
+            "description": "Deny inbound rule",
+            "name": "rule1",
+            "protocols": [{
+                "port": 443,
+                "protocolType": "Https",
+            }],
+            "sourceAddresses": [
+                "216.58.216.164",
+                "10.0.0.0/24",
+            ],
+            "targetFqdns": ["www.test.com"],
+        }],
     }],
     azure_firewall_name="azurefirewall",
     ip_configurations=[{
         "name": "azureFirewallIpConfiguration",
+        "publicIPAddress": {
+            "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName",
+        },
+        "subnet": {
+            "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet",
+        },
     }],
     location="West US",
     nat_rule_collections=[{
+        "action": {
+            "type": "Dnat",
+        },
         "name": "natrulecoll",
+        "priority": 112,
+        "rules": [
+            {
+                "description": "D-NAT all outbound web traffic for inspection",
+                "destinationAddresses": ["1.2.3.4"],
+                "destinationPorts": ["443"],
+                "name": "DNAT-HTTPS-traffic",
+                "protocols": ["TCP"],
+                "sourceAddresses": ["*"],
+                "translatedAddress": "1.2.3.5",
+                "translatedPort": "8443",
+            },
+            {
+                "description": "D-NAT all inbound web traffic for inspection",
+                "destinationAddresses": ["1.2.3.4"],
+                "destinationPorts": ["80"],
+                "name": "DNAT-HTTP-traffic-With-FQDN",
+                "protocols": ["TCP"],
+                "sourceAddresses": ["*"],
+                "translatedFqdn": "internalhttpserver",
+                "translatedPort": "880",
+            },
+        ],
     }],
     network_rule_collections=[{
+        "action": {
+            "type": "Deny",
+        },
         "name": "netrulecoll",
+        "priority": 112,
+        "rules": [
+            {
+                "description": "Block traffic based on source IPs and ports",
+                "destinationAddresses": ["*"],
+                "destinationPorts": [
+                    "443-444",
+                    "8443",
+                ],
+                "name": "L4-traffic",
+                "protocols": ["TCP"],
+                "sourceAddresses": [
+                    "192.168.1.1-192.168.1.12",
+                    "10.1.4.12-10.1.4.255",
+                ],
+            },
+            {
+                "description": "Block traffic based on source IPs and ports to amazon",
+                "destinationFqdns": ["www.amazon.com"],
+                "destinationPorts": [
+                    "443-444",
+                    "8443",
+                ],
+                "name": "L4-traffic-with-FQDN",
+                "protocols": ["TCP"],
+                "sourceAddresses": ["10.2.4.12-10.2.4.255"],
+            },
+        ],
     }],
     resource_group_name="rg1",
     sku={
@@ -583,18 +1754,98 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const azureFirewall = new azure_nextgen.network.latest.AzureFirewall("azureFirewall", {
     applicationRuleCollections: [{
+        action: {
+            type: "Deny",
+        },
         name: "apprulecoll",
+        priority: 110,
+        rules: [{
+            description: "Deny inbound rule",
+            name: "rule1",
+            protocols: [{
+                port: 443,
+                protocolType: "Https",
+            }],
+            sourceAddresses: [
+                "216.58.216.164",
+                "10.0.0.0/24",
+            ],
+            targetFqdns: ["www.test.com"],
+        }],
     }],
     azureFirewallName: "azurefirewall",
     ipConfigurations: [{
         name: "azureFirewallIpConfiguration",
+        publicIPAddress: {
+            id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName",
+        },
+        subnet: {
+            id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet",
+        },
     }],
     location: "West US",
     natRuleCollections: [{
+        action: {
+            type: "Dnat",
+        },
         name: "natrulecoll",
+        priority: 112,
+        rules: [
+            {
+                description: "D-NAT all outbound web traffic for inspection",
+                destinationAddresses: ["1.2.3.4"],
+                destinationPorts: ["443"],
+                name: "DNAT-HTTPS-traffic",
+                protocols: ["TCP"],
+                sourceAddresses: ["*"],
+                translatedAddress: "1.2.3.5",
+                translatedPort: "8443",
+            },
+            {
+                description: "D-NAT all inbound web traffic for inspection",
+                destinationAddresses: ["1.2.3.4"],
+                destinationPorts: ["80"],
+                name: "DNAT-HTTP-traffic-With-FQDN",
+                protocols: ["TCP"],
+                sourceAddresses: ["*"],
+                translatedFqdn: "internalhttpserver",
+                translatedPort: "880",
+            },
+        ],
     }],
     networkRuleCollections: [{
+        action: {
+            type: "Deny",
+        },
         name: "netrulecoll",
+        priority: 112,
+        rules: [
+            {
+                description: "Block traffic based on source IPs and ports",
+                destinationAddresses: ["*"],
+                destinationPorts: [
+                    "443-444",
+                    "8443",
+                ],
+                name: "L4-traffic",
+                protocols: ["TCP"],
+                sourceAddresses: [
+                    "192.168.1.1-192.168.1.12",
+                    "10.1.4.12-10.1.4.255",
+                ],
+            },
+            {
+                description: "Block traffic based on source IPs and ports to amazon",
+                destinationFqdns: ["www.amazon.com"],
+                destinationPorts: [
+                    "443-444",
+                    "8443",
+                ],
+                name: "L4-traffic-with-FQDN",
+                protocols: ["TCP"],
+                sourceAddresses: ["10.2.4.12-10.2.4.255"],
+            },
+        ],
     }],
     resourceGroupName: "rg1",
     sku: {
@@ -628,7 +1879,37 @@ class MyStack : Stack
             {
                 new AzureNextGen.Network.Latest.Inputs.AzureFirewallApplicationRuleCollectionArgs
                 {
+                    Action = new AzureNextGen.Network.Latest.Inputs.AzureFirewallRCActionArgs
+                    {
+                        Type = "Deny",
+                    },
                     Name = "apprulecoll",
+                    Priority = 110,
+                    Rules = 
+                    {
+                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallApplicationRuleArgs
+                        {
+                            Description = "Deny inbound rule",
+                            Name = "rule1",
+                            Protocols = 
+                            {
+                                new AzureNextGen.Network.Latest.Inputs.AzureFirewallApplicationRuleProtocolArgs
+                                {
+                                    Port = 443,
+                                    ProtocolType = "Https",
+                                },
+                            },
+                            SourceAddresses = 
+                            {
+                                "216.58.216.164",
+                                "10.0.0.0/24",
+                            },
+                            TargetFqdns = 
+                            {
+                                "www.test.com",
+                            },
+                        },
+                    },
                 },
             },
             AzureFirewallName = "azurefirewall",
@@ -637,6 +1918,14 @@ class MyStack : Stack
                 new AzureNextGen.Network.Latest.Inputs.AzureFirewallIPConfigurationArgs
                 {
                     Name = "azureFirewallIpConfiguration",
+                    PublicIPAddress = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    {
+                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName",
+                    },
+                    Subnet = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    {
+                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet",
+                    },
                 },
             },
             Location = "West US 2",
@@ -644,14 +1933,121 @@ class MyStack : Stack
             {
                 new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRuleCollectionArgs
                 {
+                    Action = new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRCActionArgs
+                    {
+                        Type = "Dnat",
+                    },
                     Name = "natrulecoll",
+                    Priority = 112,
+                    Rules = 
+                    {
+                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRuleArgs
+                        {
+                            Description = "D-NAT all outbound web traffic for inspection",
+                            DestinationAddresses = 
+                            {
+                                "1.2.3.4",
+                            },
+                            DestinationPorts = 
+                            {
+                                "443",
+                            },
+                            Name = "DNAT-HTTPS-traffic",
+                            Protocols = 
+                            {
+                                "TCP",
+                            },
+                            SourceAddresses = 
+                            {
+                                "*",
+                            },
+                            TranslatedAddress = "1.2.3.5",
+                            TranslatedPort = "8443",
+                        },
+                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRuleArgs
+                        {
+                            Description = "D-NAT all inbound web traffic for inspection",
+                            DestinationAddresses = 
+                            {
+                                "1.2.3.4",
+                            },
+                            DestinationPorts = 
+                            {
+                                "80",
+                            },
+                            Name = "DNAT-HTTP-traffic-With-FQDN",
+                            Protocols = 
+                            {
+                                "TCP",
+                            },
+                            SourceAddresses = 
+                            {
+                                "*",
+                            },
+                            TranslatedFqdn = "internalhttpserver",
+                            TranslatedPort = "880",
+                        },
+                    },
                 },
             },
             NetworkRuleCollections = 
             {
                 new AzureNextGen.Network.Latest.Inputs.AzureFirewallNetworkRuleCollectionArgs
                 {
+                    Action = new AzureNextGen.Network.Latest.Inputs.AzureFirewallRCActionArgs
+                    {
+                        Type = "Deny",
+                    },
                     Name = "netrulecoll",
+                    Priority = 112,
+                    Rules = 
+                    {
+                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallNetworkRuleArgs
+                        {
+                            Description = "Block traffic based on source IPs and ports",
+                            DestinationAddresses = 
+                            {
+                                "*",
+                            },
+                            DestinationPorts = 
+                            {
+                                "443-444",
+                                "8443",
+                            },
+                            Name = "L4-traffic",
+                            Protocols = 
+                            {
+                                "TCP",
+                            },
+                            SourceAddresses = 
+                            {
+                                "192.168.1.1-192.168.1.12",
+                                "10.1.4.12-10.1.4.255",
+                            },
+                        },
+                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallNetworkRuleArgs
+                        {
+                            Description = "Block traffic based on source IPs and ports to amazon",
+                            DestinationFqdns = 
+                            {
+                                "www.amazon.com",
+                            },
+                            DestinationPorts = 
+                            {
+                                "443-444",
+                                "8443",
+                            },
+                            Name = "L4-traffic-with-FQDN",
+                            Protocols = 
+                            {
+                                "TCP",
+                            },
+                            SourceAddresses = 
+                            {
+                                "10.2.4.12-10.2.4.255",
+                            },
+                        },
+                    },
                 },
             },
             ResourceGroupName = "rg1",
@@ -686,7 +2082,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -695,24 +2091,136 @@ func main() {
 		_, err := network.NewAzureFirewall(ctx, "azureFirewall", &network.AzureFirewallArgs{
 			ApplicationRuleCollections: network.AzureFirewallApplicationRuleCollectionArray{
 				&network.AzureFirewallApplicationRuleCollectionArgs{
-					Name: pulumi.String("apprulecoll"),
+					Action: &network.AzureFirewallRCActionArgs{
+						Type: pulumi.String("Deny"),
+					},
+					Name:     pulumi.String("apprulecoll"),
+					Priority: pulumi.Int(110),
+					Rules: network.AzureFirewallApplicationRuleArray{
+						&network.AzureFirewallApplicationRuleArgs{
+							Description: pulumi.String("Deny inbound rule"),
+							Name:        pulumi.String("rule1"),
+							Protocols: network.AzureFirewallApplicationRuleProtocolArray{
+								&network.AzureFirewallApplicationRuleProtocolArgs{
+									Port:         pulumi.Int(443),
+									ProtocolType: pulumi.String("Https"),
+								},
+							},
+							SourceAddresses: pulumi.StringArray{
+								pulumi.String("216.58.216.164"),
+								pulumi.String("10.0.0.0/24"),
+							},
+							TargetFqdns: pulumi.StringArray{
+								pulumi.String("www.test.com"),
+							},
+						},
+					},
 				},
 			},
 			AzureFirewallName: pulumi.String("azurefirewall"),
 			IpConfigurations: network.AzureFirewallIPConfigurationArray{
 				&network.AzureFirewallIPConfigurationArgs{
 					Name: pulumi.String("azureFirewallIpConfiguration"),
+					PublicIPAddress: &network.SubResourceArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName"),
+					},
+					Subnet: &network.SubResourceArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet"),
+					},
 				},
 			},
 			Location: pulumi.String("West US 2"),
 			NatRuleCollections: network.AzureFirewallNatRuleCollectionArray{
 				&network.AzureFirewallNatRuleCollectionArgs{
-					Name: pulumi.String("natrulecoll"),
+					Action: &network.AzureFirewallNatRCActionArgs{
+						Type: pulumi.String("Dnat"),
+					},
+					Name:     pulumi.String("natrulecoll"),
+					Priority: pulumi.Int(112),
+					Rules: network.AzureFirewallNatRuleArray{
+						&network.AzureFirewallNatRuleArgs{
+							Description: pulumi.String("D-NAT all outbound web traffic for inspection"),
+							DestinationAddresses: pulumi.StringArray{
+								pulumi.String("1.2.3.4"),
+							},
+							DestinationPorts: pulumi.StringArray{
+								pulumi.String("443"),
+							},
+							Name: pulumi.String("DNAT-HTTPS-traffic"),
+							Protocols: pulumi.StringArray{
+								pulumi.String("TCP"),
+							},
+							SourceAddresses: pulumi.StringArray{
+								pulumi.String("*"),
+							},
+							TranslatedAddress: pulumi.String("1.2.3.5"),
+							TranslatedPort:    pulumi.String("8443"),
+						},
+						&network.AzureFirewallNatRuleArgs{
+							Description: pulumi.String("D-NAT all inbound web traffic for inspection"),
+							DestinationAddresses: pulumi.StringArray{
+								pulumi.String("1.2.3.4"),
+							},
+							DestinationPorts: pulumi.StringArray{
+								pulumi.String("80"),
+							},
+							Name: pulumi.String("DNAT-HTTP-traffic-With-FQDN"),
+							Protocols: pulumi.StringArray{
+								pulumi.String("TCP"),
+							},
+							SourceAddresses: pulumi.StringArray{
+								pulumi.String("*"),
+							},
+							TranslatedFqdn: pulumi.String("internalhttpserver"),
+							TranslatedPort: pulumi.String("880"),
+						},
+					},
 				},
 			},
 			NetworkRuleCollections: network.AzureFirewallNetworkRuleCollectionArray{
 				&network.AzureFirewallNetworkRuleCollectionArgs{
-					Name: pulumi.String("netrulecoll"),
+					Action: &network.AzureFirewallRCActionArgs{
+						Type: pulumi.String("Deny"),
+					},
+					Name:     pulumi.String("netrulecoll"),
+					Priority: pulumi.Int(112),
+					Rules: network.AzureFirewallNetworkRuleArray{
+						&network.AzureFirewallNetworkRuleArgs{
+							Description: pulumi.String("Block traffic based on source IPs and ports"),
+							DestinationAddresses: pulumi.StringArray{
+								pulumi.String("*"),
+							},
+							DestinationPorts: pulumi.StringArray{
+								pulumi.String("443-444"),
+								pulumi.String("8443"),
+							},
+							Name: pulumi.String("L4-traffic"),
+							Protocols: pulumi.StringArray{
+								pulumi.String("TCP"),
+							},
+							SourceAddresses: pulumi.StringArray{
+								pulumi.String("192.168.1.1-192.168.1.12"),
+								pulumi.String("10.1.4.12-10.1.4.255"),
+							},
+						},
+						&network.AzureFirewallNetworkRuleArgs{
+							Description: pulumi.String("Block traffic based on source IPs and ports to amazon"),
+							DestinationFqdns: pulumi.StringArray{
+								pulumi.String("www.amazon.com"),
+							},
+							DestinationPorts: pulumi.StringArray{
+								pulumi.String("443-444"),
+								pulumi.String("8443"),
+							},
+							Name: pulumi.String("L4-traffic-with-FQDN"),
+							Protocols: pulumi.StringArray{
+								pulumi.String("TCP"),
+							},
+							SourceAddresses: pulumi.StringArray{
+								pulumi.String("10.2.4.12-10.2.4.255"),
+							},
+						},
+					},
 				},
 			},
 			ResourceGroupName: pulumi.String("rg1"),
@@ -749,18 +2257,98 @@ import pulumi_azure_nextgen as azure_nextgen
 
 azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
     application_rule_collections=[{
+        "action": {
+            "type": "Deny",
+        },
         "name": "apprulecoll",
+        "priority": 110,
+        "rules": [{
+            "description": "Deny inbound rule",
+            "name": "rule1",
+            "protocols": [{
+                "port": 443,
+                "protocolType": "Https",
+            }],
+            "sourceAddresses": [
+                "216.58.216.164",
+                "10.0.0.0/24",
+            ],
+            "targetFqdns": ["www.test.com"],
+        }],
     }],
     azure_firewall_name="azurefirewall",
     ip_configurations=[{
         "name": "azureFirewallIpConfiguration",
+        "publicIPAddress": {
+            "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName",
+        },
+        "subnet": {
+            "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet",
+        },
     }],
     location="West US 2",
     nat_rule_collections=[{
+        "action": {
+            "type": "Dnat",
+        },
         "name": "natrulecoll",
+        "priority": 112,
+        "rules": [
+            {
+                "description": "D-NAT all outbound web traffic for inspection",
+                "destinationAddresses": ["1.2.3.4"],
+                "destinationPorts": ["443"],
+                "name": "DNAT-HTTPS-traffic",
+                "protocols": ["TCP"],
+                "sourceAddresses": ["*"],
+                "translatedAddress": "1.2.3.5",
+                "translatedPort": "8443",
+            },
+            {
+                "description": "D-NAT all inbound web traffic for inspection",
+                "destinationAddresses": ["1.2.3.4"],
+                "destinationPorts": ["80"],
+                "name": "DNAT-HTTP-traffic-With-FQDN",
+                "protocols": ["TCP"],
+                "sourceAddresses": ["*"],
+                "translatedFqdn": "internalhttpserver",
+                "translatedPort": "880",
+            },
+        ],
     }],
     network_rule_collections=[{
+        "action": {
+            "type": "Deny",
+        },
         "name": "netrulecoll",
+        "priority": 112,
+        "rules": [
+            {
+                "description": "Block traffic based on source IPs and ports",
+                "destinationAddresses": ["*"],
+                "destinationPorts": [
+                    "443-444",
+                    "8443",
+                ],
+                "name": "L4-traffic",
+                "protocols": ["TCP"],
+                "sourceAddresses": [
+                    "192.168.1.1-192.168.1.12",
+                    "10.1.4.12-10.1.4.255",
+                ],
+            },
+            {
+                "description": "Block traffic based on source IPs and ports to amazon",
+                "destinationFqdns": ["www.amazon.com"],
+                "destinationPorts": [
+                    "443-444",
+                    "8443",
+                ],
+                "name": "L4-traffic-with-FQDN",
+                "protocols": ["TCP"],
+                "sourceAddresses": ["10.2.4.12-10.2.4.255"],
+            },
+        ],
     }],
     resource_group_name="rg1",
     sku={
@@ -789,18 +2377,98 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const azureFirewall = new azure_nextgen.network.latest.AzureFirewall("azureFirewall", {
     applicationRuleCollections: [{
+        action: {
+            type: "Deny",
+        },
         name: "apprulecoll",
+        priority: 110,
+        rules: [{
+            description: "Deny inbound rule",
+            name: "rule1",
+            protocols: [{
+                port: 443,
+                protocolType: "Https",
+            }],
+            sourceAddresses: [
+                "216.58.216.164",
+                "10.0.0.0/24",
+            ],
+            targetFqdns: ["www.test.com"],
+        }],
     }],
     azureFirewallName: "azurefirewall",
     ipConfigurations: [{
         name: "azureFirewallIpConfiguration",
+        publicIPAddress: {
+            id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName",
+        },
+        subnet: {
+            id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet",
+        },
     }],
     location: "West US 2",
     natRuleCollections: [{
+        action: {
+            type: "Dnat",
+        },
         name: "natrulecoll",
+        priority: 112,
+        rules: [
+            {
+                description: "D-NAT all outbound web traffic for inspection",
+                destinationAddresses: ["1.2.3.4"],
+                destinationPorts: ["443"],
+                name: "DNAT-HTTPS-traffic",
+                protocols: ["TCP"],
+                sourceAddresses: ["*"],
+                translatedAddress: "1.2.3.5",
+                translatedPort: "8443",
+            },
+            {
+                description: "D-NAT all inbound web traffic for inspection",
+                destinationAddresses: ["1.2.3.4"],
+                destinationPorts: ["80"],
+                name: "DNAT-HTTP-traffic-With-FQDN",
+                protocols: ["TCP"],
+                sourceAddresses: ["*"],
+                translatedFqdn: "internalhttpserver",
+                translatedPort: "880",
+            },
+        ],
     }],
     networkRuleCollections: [{
+        action: {
+            type: "Deny",
+        },
         name: "netrulecoll",
+        priority: 112,
+        rules: [
+            {
+                description: "Block traffic based on source IPs and ports",
+                destinationAddresses: ["*"],
+                destinationPorts: [
+                    "443-444",
+                    "8443",
+                ],
+                name: "L4-traffic",
+                protocols: ["TCP"],
+                sourceAddresses: [
+                    "192.168.1.1-192.168.1.12",
+                    "10.1.4.12-10.1.4.255",
+                ],
+            },
+            {
+                description: "Block traffic based on source IPs and ports to amazon",
+                destinationFqdns: ["www.amazon.com"],
+                destinationPorts: [
+                    "443-444",
+                    "8443",
+                ],
+                name: "L4-traffic-with-FQDN",
+                protocols: ["TCP"],
+                sourceAddresses: ["10.2.4.12-10.2.4.255"],
+            },
+        ],
     }],
     resourceGroupName: "rg1",
     sku: {
@@ -838,7 +2506,37 @@ class MyStack : Stack
             {
                 new AzureNextGen.Network.Latest.Inputs.AzureFirewallApplicationRuleCollectionArgs
                 {
+                    Action = new AzureNextGen.Network.Latest.Inputs.AzureFirewallRCActionArgs
+                    {
+                        Type = "Deny",
+                    },
                     Name = "apprulecoll",
+                    Priority = 110,
+                    Rules = 
+                    {
+                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallApplicationRuleArgs
+                        {
+                            Description = "Deny inbound rule",
+                            Name = "rule1",
+                            Protocols = 
+                            {
+                                new AzureNextGen.Network.Latest.Inputs.AzureFirewallApplicationRuleProtocolArgs
+                                {
+                                    Port = 443,
+                                    ProtocolType = "Https",
+                                },
+                            },
+                            SourceAddresses = 
+                            {
+                                "216.58.216.164",
+                                "10.0.0.0/24",
+                            },
+                            TargetFqdns = 
+                            {
+                                "www.test.com",
+                            },
+                        },
+                    },
                 },
             },
             AzureFirewallName = "azurefirewall",
@@ -847,25 +2545,148 @@ class MyStack : Stack
                 new AzureNextGen.Network.Latest.Inputs.AzureFirewallIPConfigurationArgs
                 {
                     Name = "azureFirewallIpConfiguration",
+                    PublicIPAddress = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    {
+                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName",
+                    },
+                    Subnet = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    {
+                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet",
+                    },
                 },
             },
             Location = "West US",
             ManagementIpConfiguration = new AzureNextGen.Network.Latest.Inputs.AzureFirewallIPConfigurationArgs
             {
                 Name = "azureFirewallMgmtIpConfiguration",
+                PublicIPAddress = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                {
+                    Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/managementPipName",
+                },
+                Subnet = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                {
+                    Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallManagementSubnet",
+                },
             },
             NatRuleCollections = 
             {
                 new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRuleCollectionArgs
                 {
+                    Action = new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRCActionArgs
+                    {
+                        Type = "Dnat",
+                    },
                     Name = "natrulecoll",
+                    Priority = 112,
+                    Rules = 
+                    {
+                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRuleArgs
+                        {
+                            Description = "D-NAT all outbound web traffic for inspection",
+                            DestinationAddresses = 
+                            {
+                                "1.2.3.4",
+                            },
+                            DestinationPorts = 
+                            {
+                                "443",
+                            },
+                            Name = "DNAT-HTTPS-traffic",
+                            Protocols = 
+                            {
+                                "TCP",
+                            },
+                            SourceAddresses = 
+                            {
+                                "*",
+                            },
+                            TranslatedAddress = "1.2.3.5",
+                            TranslatedPort = "8443",
+                        },
+                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRuleArgs
+                        {
+                            Description = "D-NAT all inbound web traffic for inspection",
+                            DestinationAddresses = 
+                            {
+                                "1.2.3.4",
+                            },
+                            DestinationPorts = 
+                            {
+                                "80",
+                            },
+                            Name = "DNAT-HTTP-traffic-With-FQDN",
+                            Protocols = 
+                            {
+                                "TCP",
+                            },
+                            SourceAddresses = 
+                            {
+                                "*",
+                            },
+                            TranslatedFqdn = "internalhttpserver",
+                            TranslatedPort = "880",
+                        },
+                    },
                 },
             },
             NetworkRuleCollections = 
             {
                 new AzureNextGen.Network.Latest.Inputs.AzureFirewallNetworkRuleCollectionArgs
                 {
+                    Action = new AzureNextGen.Network.Latest.Inputs.AzureFirewallRCActionArgs
+                    {
+                        Type = "Deny",
+                    },
                     Name = "netrulecoll",
+                    Priority = 112,
+                    Rules = 
+                    {
+                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallNetworkRuleArgs
+                        {
+                            Description = "Block traffic based on source IPs and ports",
+                            DestinationAddresses = 
+                            {
+                                "*",
+                            },
+                            DestinationPorts = 
+                            {
+                                "443-444",
+                                "8443",
+                            },
+                            Name = "L4-traffic",
+                            Protocols = 
+                            {
+                                "TCP",
+                            },
+                            SourceAddresses = 
+                            {
+                                "192.168.1.1-192.168.1.12",
+                                "10.1.4.12-10.1.4.255",
+                            },
+                        },
+                        new AzureNextGen.Network.Latest.Inputs.AzureFirewallNetworkRuleArgs
+                        {
+                            Description = "Block traffic based on source IPs and ports to amazon",
+                            DestinationFqdns = 
+                            {
+                                "www.amazon.com",
+                            },
+                            DestinationPorts = 
+                            {
+                                "443-444",
+                                "8443",
+                            },
+                            Name = "L4-traffic-with-FQDN",
+                            Protocols = 
+                            {
+                                "TCP",
+                            },
+                            SourceAddresses = 
+                            {
+                                "10.2.4.12-10.2.4.255",
+                            },
+                        },
+                    },
                 },
             },
             ResourceGroupName = "rg1",
@@ -895,7 +2716,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -904,27 +2725,145 @@ func main() {
 		_, err := network.NewAzureFirewall(ctx, "azureFirewall", &network.AzureFirewallArgs{
 			ApplicationRuleCollections: network.AzureFirewallApplicationRuleCollectionArray{
 				&network.AzureFirewallApplicationRuleCollectionArgs{
-					Name: pulumi.String("apprulecoll"),
+					Action: &network.AzureFirewallRCActionArgs{
+						Type: pulumi.String("Deny"),
+					},
+					Name:     pulumi.String("apprulecoll"),
+					Priority: pulumi.Int(110),
+					Rules: network.AzureFirewallApplicationRuleArray{
+						&network.AzureFirewallApplicationRuleArgs{
+							Description: pulumi.String("Deny inbound rule"),
+							Name:        pulumi.String("rule1"),
+							Protocols: network.AzureFirewallApplicationRuleProtocolArray{
+								&network.AzureFirewallApplicationRuleProtocolArgs{
+									Port:         pulumi.Int(443),
+									ProtocolType: pulumi.String("Https"),
+								},
+							},
+							SourceAddresses: pulumi.StringArray{
+								pulumi.String("216.58.216.164"),
+								pulumi.String("10.0.0.0/24"),
+							},
+							TargetFqdns: pulumi.StringArray{
+								pulumi.String("www.test.com"),
+							},
+						},
+					},
 				},
 			},
 			AzureFirewallName: pulumi.String("azurefirewall"),
 			IpConfigurations: network.AzureFirewallIPConfigurationArray{
 				&network.AzureFirewallIPConfigurationArgs{
 					Name: pulumi.String("azureFirewallIpConfiguration"),
+					PublicIPAddress: &network.SubResourceArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName"),
+					},
+					Subnet: &network.SubResourceArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet"),
+					},
 				},
 			},
 			Location: pulumi.String("West US"),
 			ManagementIpConfiguration: &network.AzureFirewallIPConfigurationArgs{
 				Name: pulumi.String("azureFirewallMgmtIpConfiguration"),
+				PublicIPAddress: &network.SubResourceArgs{
+					Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/managementPipName"),
+				},
+				Subnet: &network.SubResourceArgs{
+					Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallManagementSubnet"),
+				},
 			},
 			NatRuleCollections: network.AzureFirewallNatRuleCollectionArray{
 				&network.AzureFirewallNatRuleCollectionArgs{
-					Name: pulumi.String("natrulecoll"),
+					Action: &network.AzureFirewallNatRCActionArgs{
+						Type: pulumi.String("Dnat"),
+					},
+					Name:     pulumi.String("natrulecoll"),
+					Priority: pulumi.Int(112),
+					Rules: network.AzureFirewallNatRuleArray{
+						&network.AzureFirewallNatRuleArgs{
+							Description: pulumi.String("D-NAT all outbound web traffic for inspection"),
+							DestinationAddresses: pulumi.StringArray{
+								pulumi.String("1.2.3.4"),
+							},
+							DestinationPorts: pulumi.StringArray{
+								pulumi.String("443"),
+							},
+							Name: pulumi.String("DNAT-HTTPS-traffic"),
+							Protocols: pulumi.StringArray{
+								pulumi.String("TCP"),
+							},
+							SourceAddresses: pulumi.StringArray{
+								pulumi.String("*"),
+							},
+							TranslatedAddress: pulumi.String("1.2.3.5"),
+							TranslatedPort:    pulumi.String("8443"),
+						},
+						&network.AzureFirewallNatRuleArgs{
+							Description: pulumi.String("D-NAT all inbound web traffic for inspection"),
+							DestinationAddresses: pulumi.StringArray{
+								pulumi.String("1.2.3.4"),
+							},
+							DestinationPorts: pulumi.StringArray{
+								pulumi.String("80"),
+							},
+							Name: pulumi.String("DNAT-HTTP-traffic-With-FQDN"),
+							Protocols: pulumi.StringArray{
+								pulumi.String("TCP"),
+							},
+							SourceAddresses: pulumi.StringArray{
+								pulumi.String("*"),
+							},
+							TranslatedFqdn: pulumi.String("internalhttpserver"),
+							TranslatedPort: pulumi.String("880"),
+						},
+					},
 				},
 			},
 			NetworkRuleCollections: network.AzureFirewallNetworkRuleCollectionArray{
 				&network.AzureFirewallNetworkRuleCollectionArgs{
-					Name: pulumi.String("netrulecoll"),
+					Action: &network.AzureFirewallRCActionArgs{
+						Type: pulumi.String("Deny"),
+					},
+					Name:     pulumi.String("netrulecoll"),
+					Priority: pulumi.Int(112),
+					Rules: network.AzureFirewallNetworkRuleArray{
+						&network.AzureFirewallNetworkRuleArgs{
+							Description: pulumi.String("Block traffic based on source IPs and ports"),
+							DestinationAddresses: pulumi.StringArray{
+								pulumi.String("*"),
+							},
+							DestinationPorts: pulumi.StringArray{
+								pulumi.String("443-444"),
+								pulumi.String("8443"),
+							},
+							Name: pulumi.String("L4-traffic"),
+							Protocols: pulumi.StringArray{
+								pulumi.String("TCP"),
+							},
+							SourceAddresses: pulumi.StringArray{
+								pulumi.String("192.168.1.1-192.168.1.12"),
+								pulumi.String("10.1.4.12-10.1.4.255"),
+							},
+						},
+						&network.AzureFirewallNetworkRuleArgs{
+							Description: pulumi.String("Block traffic based on source IPs and ports to amazon"),
+							DestinationFqdns: pulumi.StringArray{
+								pulumi.String("www.amazon.com"),
+							},
+							DestinationPorts: pulumi.StringArray{
+								pulumi.String("443-444"),
+								pulumi.String("8443"),
+							},
+							Name: pulumi.String("L4-traffic-with-FQDN"),
+							Protocols: pulumi.StringArray{
+								pulumi.String("TCP"),
+							},
+							SourceAddresses: pulumi.StringArray{
+								pulumi.String("10.2.4.12-10.2.4.255"),
+							},
+						},
+					},
 				},
 			},
 			ResourceGroupName: pulumi.String("rg1"),
@@ -957,21 +2896,107 @@ import pulumi_azure_nextgen as azure_nextgen
 
 azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
     application_rule_collections=[{
+        "action": {
+            "type": "Deny",
+        },
         "name": "apprulecoll",
+        "priority": 110,
+        "rules": [{
+            "description": "Deny inbound rule",
+            "name": "rule1",
+            "protocols": [{
+                "port": 443,
+                "protocolType": "Https",
+            }],
+            "sourceAddresses": [
+                "216.58.216.164",
+                "10.0.0.0/24",
+            ],
+            "targetFqdns": ["www.test.com"],
+        }],
     }],
     azure_firewall_name="azurefirewall",
     ip_configurations=[{
         "name": "azureFirewallIpConfiguration",
+        "publicIPAddress": {
+            "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName",
+        },
+        "subnet": {
+            "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet",
+        },
     }],
     location="West US",
     management_ip_configuration={
         "name": "azureFirewallMgmtIpConfiguration",
+        "publicIPAddress": {
+            "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/managementPipName",
+        },
+        "subnet": {
+            "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallManagementSubnet",
+        },
     },
     nat_rule_collections=[{
+        "action": {
+            "type": "Dnat",
+        },
         "name": "natrulecoll",
+        "priority": 112,
+        "rules": [
+            {
+                "description": "D-NAT all outbound web traffic for inspection",
+                "destinationAddresses": ["1.2.3.4"],
+                "destinationPorts": ["443"],
+                "name": "DNAT-HTTPS-traffic",
+                "protocols": ["TCP"],
+                "sourceAddresses": ["*"],
+                "translatedAddress": "1.2.3.5",
+                "translatedPort": "8443",
+            },
+            {
+                "description": "D-NAT all inbound web traffic for inspection",
+                "destinationAddresses": ["1.2.3.4"],
+                "destinationPorts": ["80"],
+                "name": "DNAT-HTTP-traffic-With-FQDN",
+                "protocols": ["TCP"],
+                "sourceAddresses": ["*"],
+                "translatedFqdn": "internalhttpserver",
+                "translatedPort": "880",
+            },
+        ],
     }],
     network_rule_collections=[{
+        "action": {
+            "type": "Deny",
+        },
         "name": "netrulecoll",
+        "priority": 112,
+        "rules": [
+            {
+                "description": "Block traffic based on source IPs and ports",
+                "destinationAddresses": ["*"],
+                "destinationPorts": [
+                    "443-444",
+                    "8443",
+                ],
+                "name": "L4-traffic",
+                "protocols": ["TCP"],
+                "sourceAddresses": [
+                    "192.168.1.1-192.168.1.12",
+                    "10.1.4.12-10.1.4.255",
+                ],
+            },
+            {
+                "description": "Block traffic based on source IPs and ports to amazon",
+                "destinationFqdns": ["www.amazon.com"],
+                "destinationPorts": [
+                    "443-444",
+                    "8443",
+                ],
+                "name": "L4-traffic-with-FQDN",
+                "protocols": ["TCP"],
+                "sourceAddresses": ["10.2.4.12-10.2.4.255"],
+            },
+        ],
     }],
     resource_group_name="rg1",
     sku={
@@ -996,21 +3021,107 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const azureFirewall = new azure_nextgen.network.latest.AzureFirewall("azureFirewall", {
     applicationRuleCollections: [{
+        action: {
+            type: "Deny",
+        },
         name: "apprulecoll",
+        priority: 110,
+        rules: [{
+            description: "Deny inbound rule",
+            name: "rule1",
+            protocols: [{
+                port: 443,
+                protocolType: "Https",
+            }],
+            sourceAddresses: [
+                "216.58.216.164",
+                "10.0.0.0/24",
+            ],
+            targetFqdns: ["www.test.com"],
+        }],
     }],
     azureFirewallName: "azurefirewall",
     ipConfigurations: [{
         name: "azureFirewallIpConfiguration",
+        publicIPAddress: {
+            id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName",
+        },
+        subnet: {
+            id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet",
+        },
     }],
     location: "West US",
     managementIpConfiguration: {
         name: "azureFirewallMgmtIpConfiguration",
+        publicIPAddress: {
+            id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/managementPipName",
+        },
+        subnet: {
+            id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallManagementSubnet",
+        },
     },
     natRuleCollections: [{
+        action: {
+            type: "Dnat",
+        },
         name: "natrulecoll",
+        priority: 112,
+        rules: [
+            {
+                description: "D-NAT all outbound web traffic for inspection",
+                destinationAddresses: ["1.2.3.4"],
+                destinationPorts: ["443"],
+                name: "DNAT-HTTPS-traffic",
+                protocols: ["TCP"],
+                sourceAddresses: ["*"],
+                translatedAddress: "1.2.3.5",
+                translatedPort: "8443",
+            },
+            {
+                description: "D-NAT all inbound web traffic for inspection",
+                destinationAddresses: ["1.2.3.4"],
+                destinationPorts: ["80"],
+                name: "DNAT-HTTP-traffic-With-FQDN",
+                protocols: ["TCP"],
+                sourceAddresses: ["*"],
+                translatedFqdn: "internalhttpserver",
+                translatedPort: "880",
+            },
+        ],
     }],
     networkRuleCollections: [{
+        action: {
+            type: "Deny",
+        },
         name: "netrulecoll",
+        priority: 112,
+        rules: [
+            {
+                description: "Block traffic based on source IPs and ports",
+                destinationAddresses: ["*"],
+                destinationPorts: [
+                    "443-444",
+                    "8443",
+                ],
+                name: "L4-traffic",
+                protocols: ["TCP"],
+                sourceAddresses: [
+                    "192.168.1.1-192.168.1.12",
+                    "10.1.4.12-10.1.4.255",
+                ],
+            },
+            {
+                description: "Block traffic based on source IPs and ports to amazon",
+                destinationFqdns: ["www.amazon.com"],
+                destinationPorts: [
+                    "443-444",
+                    "8443",
+                ],
+                name: "L4-traffic-with-FQDN",
+                protocols: ["TCP"],
+                sourceAddresses: ["10.2.4.12-10.2.4.255"],
+            },
+        ],
     }],
     resourceGroupName: "rg1",
     sku: {
@@ -1085,7 +3196,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -8570,7 +10681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -8587,7 +10698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -8604,7 +10715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -8621,7 +10732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

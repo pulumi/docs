@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	dbformariadb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/dbformariadb/latest"
+	dbformariadb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/dbformariadb/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

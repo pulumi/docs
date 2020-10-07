@@ -30,7 +30,10 @@ class MyStack : Stack
         {
             PrivateDnsZoneConfigs = 
             {
-                ,
+                new AzureNextGen.Network.Latest.Inputs.PrivateDnsZoneConfigArgs
+                {
+                    PrivateDnsZoneId = "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateDnsZones/zone1.com",
+                },
             },
             PrivateDnsZoneGroupName = "testPdnsgroup",
             PrivateEndpointName = "testPe",
@@ -50,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -58,7 +61,9 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := network.NewPrivateDnsZoneGroup(ctx, "privateDnsZoneGroup", &network.PrivateDnsZoneGroupArgs{
 			PrivateDnsZoneConfigs: network.PrivateDnsZoneConfigArray{
-				nil,
+				&network.PrivateDnsZoneConfigArgs{
+					PrivateDnsZoneId: pulumi.String("/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateDnsZones/zone1.com"),
+				},
 			},
 			PrivateDnsZoneGroupName: pulumi.String("testPdnsgroup"),
 			PrivateEndpointName:     pulumi.String("testPe"),
@@ -82,7 +87,9 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 private_dns_zone_group = azure_nextgen.network.latest.PrivateDnsZoneGroup("privateDnsZoneGroup",
-    private_dns_zone_configs=[{}],
+    private_dns_zone_configs=[{
+        "privateDnsZoneId": "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateDnsZones/zone1.com",
+    }],
     private_dns_zone_group_name="testPdnsgroup",
     private_endpoint_name="testPe",
     resource_group_name="rg1")
@@ -98,7 +105,9 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const privateDnsZoneGroup = new azure_nextgen.network.latest.PrivateDnsZoneGroup("privateDnsZoneGroup", {
-    privateDnsZoneConfigs: [{}],
+    privateDnsZoneConfigs: [{
+        privateDnsZoneId: "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateDnsZones/zone1.com",
+    }],
     privateDnsZoneGroupName: "testPdnsgroup",
     privateEndpointName: "testPe",
     resourceGroupName: "rg1",

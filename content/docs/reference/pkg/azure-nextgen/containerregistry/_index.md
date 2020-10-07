@@ -30,6 +30,7 @@ Explore the resources and functions of the containerregistry module in the Azure
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getagentpool" title="GetAgentPool"><span class="symbol function"></span>GetAgentPool</a></li>
+    <li><a href="getbuildloglink" title="GetBuildLogLink"><span class="symbol function"></span>GetBuildLogLink</a></li>
     <li><a href="getbuildstep" title="GetBuildStep"><span class="symbol function"></span>GetBuildStep</a></li>
     <li><a href="getbuildtask" title="GetBuildTask"><span class="symbol function"></span>GetBuildTask</a></li>
     <li><a href="getexportpipeline" title="GetExportPipeline"><span class="symbol function"></span>GetExportPipeline</a></li>
@@ -37,12 +38,15 @@ Explore the resources and functions of the containerregistry module in the Azure
     <li><a href="getpipelinerun" title="GetPipelineRun"><span class="symbol function"></span>GetPipelineRun</a></li>
     <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
     <li><a href="getregistry" title="GetRegistry"><span class="symbol function"></span>GetRegistry</a></li>
+    <li><a href="getregistrybuildsourceuploadurl" title="GetRegistryBuildSourceUploadUrl"><span class="symbol function"></span>GetRegistryBuildSourceUploadUrl</a></li>
+    <li><a href="getregistrycredentials" title="GetRegistryCredentials"><span class="symbol function"></span>GetRegistryCredentials</a></li>
     <li><a href="getreplication" title="GetReplication"><span class="symbol function"></span>GetReplication</a></li>
     <li><a href="getscopemap" title="GetScopeMap"><span class="symbol function"></span>GetScopeMap</a></li>
     <li><a href="gettask" title="GetTask"><span class="symbol function"></span>GetTask</a></li>
     <li><a href="gettaskrun" title="GetTaskRun"><span class="symbol function"></span>GetTaskRun</a></li>
     <li><a href="gettoken" title="GetToken"><span class="symbol function"></span>GetToken</a></li>
     <li><a href="getwebhook" title="GetWebhook"><span class="symbol function"></span>GetWebhook</a></li>
+    <li><a href="getwebhookcallbackconfig" title="GetWebhookCallbackConfig"><span class="symbol function"></span>GetWebhookCallbackConfig</a></li>
     <li><a href="listagentpoolqueuestatus" title="ListAgentPoolQueueStatus"><span class="symbol function"></span>ListAgentPoolQueueStatus</a></li>
     <li><a href="listbuildstepbuildarguments" title="ListBuildStepBuildArguments"><span class="symbol function"></span>ListBuildStepBuildArguments</a></li>
     <li><a href="listbuildtasksourcerepositoryproperties" title="ListBuildTaskSourceRepositoryProperties"><span class="symbol function"></span>ListBuildTaskSourceRepositoryProperties</a></li>
@@ -61,7 +65,7 @@ Explore the resources and functions of the containerregistry module in the Azure
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.1</dd>
 </dl>
 
 

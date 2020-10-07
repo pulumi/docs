@@ -109,7 +109,7 @@ class MyStack : Stack
 package main
 
 import (
-	hybridnetwork "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/hybridnetwork/v20200101preview"
+	hybridnetwork "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hybridnetwork/v20200101preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -533,7 +533,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#managedapplicationparameters_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Application<wbr>Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}The parameters for the managed application to be supplied by vendor.{{% /md %}}</dd>
 
@@ -543,7 +543,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#managedapplicationtemplate_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Application<wbr>Template</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}The template for the managed application deployment.{{% /md %}}</dd>
 
@@ -640,7 +640,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#managedapplicationparameters_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Application<wbr>Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}The parameters for the managed application to be supplied by vendor.{{% /md %}}</dd>
 
@@ -650,7 +650,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#managedapplicationtemplate_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Application<wbr>Template</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}The template for the managed application deployment.{{% /md %}}</dd>
 
@@ -747,7 +747,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#managedapplicationparameters_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Application<wbr>Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}The parameters for the managed application to be supplied by vendor.{{% /md %}}</dd>
 
@@ -757,7 +757,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#managedapplicationtemplate_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Application<wbr>Template</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}The template for the managed application deployment.{{% /md %}}</dd>
 
@@ -854,7 +854,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#managed_application_parameters_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>application_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}The parameters for the managed application to be supplied by vendor.{{% /md %}}</dd>
 
@@ -864,7 +864,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#managed_application_template_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>application_<wbr>template</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}The template for the managed application deployment.{{% /md %}}</dd>
 
@@ -2862,7 +2862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userdataparameters_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data<wbr>Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.{{% /md %}}</dd>
 
@@ -2872,7 +2872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userdatatemplate_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data<wbr>Template</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}The user data template for customers. This is json scheme template describing the format and data type of user data parameters.{{% /md %}}</dd>
 
@@ -2949,7 +2949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userdataparameters_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data<wbr>Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.{{% /md %}}</dd>
 
@@ -2959,7 +2959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userdatatemplate_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data<wbr>Template</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}The user data template for customers. This is json scheme template describing the format and data type of user data parameters.{{% /md %}}</dd>
 
@@ -3036,7 +3036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userdataparameters_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data<wbr>Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.{{% /md %}}</dd>
 
@@ -3046,7 +3046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userdatatemplate_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data<wbr>Template</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}The user data template for customers. This is json scheme template describing the format and data type of user data parameters.{{% /md %}}</dd>
 
@@ -3123,7 +3123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userdataparameters_python" style="color: inherit; text-decoration: inherit;">user<wbr>Data<wbr>Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.{{% /md %}}</dd>
 
@@ -3133,7 +3133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userdatatemplate_python" style="color: inherit; text-decoration: inherit;">user<wbr>Data<wbr>Template</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}The user data template for customers. This is json scheme template describing the format and data type of user data parameters.{{% /md %}}</dd>
 
@@ -3221,7 +3221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userdataparameters_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data<wbr>Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.{{% /md %}}</dd>
 
@@ -3231,7 +3231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userdatatemplate_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data<wbr>Template</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}The user data template for customers. This is json scheme template describing the format and data type of user data parameters.{{% /md %}}</dd>
 
@@ -3308,7 +3308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userdataparameters_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data<wbr>Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.{{% /md %}}</dd>
 
@@ -3318,7 +3318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userdatatemplate_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data<wbr>Template</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}The user data template for customers. This is json scheme template describing the format and data type of user data parameters.{{% /md %}}</dd>
 
@@ -3395,7 +3395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userdataparameters_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data<wbr>Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.{{% /md %}}</dd>
 
@@ -3405,7 +3405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userdatatemplate_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data<wbr>Template</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}The user data template for customers. This is json scheme template describing the format and data type of user data parameters.{{% /md %}}</dd>
 
@@ -3482,7 +3482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userdataparameters_python" style="color: inherit; text-decoration: inherit;">user<wbr>Data<wbr>Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.{{% /md %}}</dd>
 
@@ -3492,7 +3492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userdatatemplate_python" style="color: inherit; text-decoration: inherit;">user<wbr>Data<wbr>Template</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}The user data template for customers. This is json scheme template describing the format and data type of user data parameters.{{% /md %}}</dd>
 

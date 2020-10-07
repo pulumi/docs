@@ -46,7 +46,7 @@ class MyStack : Stack
 package main
 
 import (
-	servicefabric "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/servicefabric/latest"
+	servicefabric "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

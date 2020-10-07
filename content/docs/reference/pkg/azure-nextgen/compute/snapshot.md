@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -155,7 +155,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -255,7 +255,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -332,7 +332,7 @@ const snapshot = new azure_nextgen.compute.latest.Snapshot("snapshot", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Snapshot</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">creation_data</span><span class="p">:</span> <span class="nx">Optional[Dict[CreationData]]</span> = None<span class="p">, </span><span class="nx">disk_access_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">disk_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[Dict[Encryption]]</span> = None<span class="p">, </span><span class="nx">encryption_settings_collection</span><span class="p">:</span> <span class="nx">Optional[Dict[EncryptionSettingsCollection]]</span> = None<span class="p">, </span><span class="nx">hyper_v_generation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">incremental</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_access_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[SnapshotSku]]</span> = None<span class="p">, </span><span class="nx">snapshot_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Snapshot</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">creation_data</span><span class="p">:</span> <span class="nx">Optional[Dict[CreationData]]</span> = None<span class="p">, </span><span class="nx">disk_access_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[Dict[Encryption]]</span> = None<span class="p">, </span><span class="nx">encryption_settings_collection</span><span class="p">:</span> <span class="nx">Optional[Dict[EncryptionSettingsCollection]]</span> = None<span class="p">, </span><span class="nx">hyper_v_generation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">incremental</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_access_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[SnapshotSku]]</span> = None<span class="p">, </span><span class="nx">snapshot_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -566,16 +566,6 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span id="diskstate_csharp">
-<a href="#diskstate_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The state of the snapshot.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="encryption_csharp">
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span> 
@@ -720,16 +710,6 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="diskstate_go">
-<a href="#diskstate_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The state of the snapshot.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -880,16 +860,6 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span id="diskstate_nodejs">
-<a href="#diskstate_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The state of the snapshot.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="encryption_nodejs">
 <a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span> 
@@ -1037,16 +1007,6 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span id="disk_state_python">
-<a href="#disk_state_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>state</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The state of the snapshot.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="encryption_python">
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span> 
@@ -1155,6 +1115,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="diskstate_csharp">
+<a href="#diskstate_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The state of the snapshot.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span> 
@@ -1239,6 +1209,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the disk in bytes. This field is read only.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="diskstate_go">
+<a href="#diskstate_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The state of the snapshot.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1329,6 +1309,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="diskstate_nodejs">
+<a href="#diskstate_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The state of the snapshot.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
@@ -1413,6 +1403,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the disk in bytes. This field is read only.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="disk_state_python">
+<a href="#disk_state_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The state of the snapshot.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">

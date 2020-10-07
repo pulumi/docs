@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	eventgrid "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/eventgrid/v20200401preview"
+	eventgrid "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventgrid/v20200401preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

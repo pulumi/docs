@@ -204,6 +204,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="office365localbreakoutcategory_csharp">
+<a href="#office365localbreakoutcategory_csharp" style="color: inherit; text-decoration: inherit;">Office365Local<wbr>Breakout<wbr>Category</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The office local breakout category.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span> 
@@ -274,16 +284,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="office365localbreakoutcategory_csharp">
-<a href="#office365localbreakoutcategory_csharp" style="color: inherit; text-decoration: inherit;">Office365Local<wbr>Breakout<wbr>Category</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The office local breakout category.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
@@ -328,6 +328,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="office365localbreakoutcategory_go">
+<a href="#office365localbreakoutcategory_go" style="color: inherit; text-decoration: inherit;">Office365Local<wbr>Breakout<wbr>Category</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The office local breakout category.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -401,16 +411,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="office365localbreakoutcategory_go">
-<a href="#office365localbreakoutcategory_go" style="color: inherit; text-decoration: inherit;">Office365Local<wbr>Breakout<wbr>Category</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The office local breakout category.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
@@ -455,6 +455,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="office365localbreakoutcategory_nodejs">
+<a href="#office365localbreakoutcategory_nodejs" style="color: inherit; text-decoration: inherit;">office365Local<wbr>Breakout<wbr>Category</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The office local breakout category.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -528,16 +538,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="office365localbreakoutcategory_nodejs">
-<a href="#office365localbreakoutcategory_nodejs" style="color: inherit; text-decoration: inherit;">office365Local<wbr>Breakout<wbr>Category</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The office local breakout category.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
@@ -582,6 +582,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="office365_local_breakout_category_python">
+<a href="#office365_local_breakout_category_python" style="color: inherit; text-decoration: inherit;">office365_<wbr>local_<wbr>breakout_<wbr>category</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The office local breakout category.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -655,16 +665,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="office365_local_breakout_category_python">
-<a href="#office365_local_breakout_category_python" style="color: inherit; text-decoration: inherit;">office365_<wbr>local_<wbr>breakout_<wbr>category</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The office local breakout category.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
@@ -705,7 +705,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -722,7 +722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -739,7 +739,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -756,7 +756,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

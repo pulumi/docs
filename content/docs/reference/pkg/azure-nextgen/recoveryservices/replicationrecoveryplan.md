@@ -28,6 +28,29 @@ class MyStack : Stack
     {
         var replicationRecoveryPlan = new AzureNextGen.RecoveryServices.Latest.ReplicationRecoveryPlan("replicationRecoveryPlan", new AzureNextGen.RecoveryServices.Latest.ReplicationRecoveryPlanArgs
         {
+            Properties = new AzureNextGen.RecoveryServices.Latest.Inputs.CreateRecoveryPlanInputPropertiesArgs
+            {
+                FailoverDeploymentModel = "ResourceManager",
+                Groups = 
+                {
+                    new AzureNextGen.RecoveryServices.Latest.Inputs.RecoveryPlanGroupArgs
+                    {
+                        EndGroupActions = {},
+                        GroupType = "Boot",
+                        ReplicationProtectedItems = 
+                        {
+                            new AzureNextGen.RecoveryServices.Latest.Inputs.RecoveryPlanProtectedItemArgs
+                            {
+                                Id = "/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1/replicationProtectionContainers/cloud_6d224fc6-f326-5d35-96de-fbf51efb3179/replicationProtectedItems/f8491e4f-817a-40dd-a90c-af773978c75b",
+                                VirtualMachineId = "f8491e4f-817a-40dd-a90c-af773978c75b",
+                            },
+                        },
+                        StartGroupActions = {},
+                    },
+                },
+                PrimaryFabricId = "/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1",
+                RecoveryFabricId = "Microsoft Azure",
+            },
             RecoveryPlanName = "RPtest1",
             ResourceGroupName = "resourceGroupPS1",
             ResourceName = "vault1",
@@ -46,13 +69,31 @@ class MyStack : Stack
 package main
 
 import (
-	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/recoveryservices/latest"
+	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := recoveryservices.NewReplicationRecoveryPlan(ctx, "replicationRecoveryPlan", &recoveryservices.ReplicationRecoveryPlanArgs{
+			Properties: &recoveryservices.CreateRecoveryPlanInputPropertiesArgs{
+				FailoverDeploymentModel: pulumi.String("ResourceManager"),
+				Groups: recoveryservices.RecoveryPlanGroupArray{
+					&recoveryservices.RecoveryPlanGroupArgs{
+						EndGroupActions: recoveryservices.RecoveryPlanActionArray{},
+						GroupType:       pulumi.String("Boot"),
+						ReplicationProtectedItems: recoveryservices.RecoveryPlanProtectedItemArray{
+							&recoveryservices.RecoveryPlanProtectedItemArgs{
+								Id:               pulumi.String("/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1/replicationProtectionContainers/cloud_6d224fc6-f326-5d35-96de-fbf51efb3179/replicationProtectedItems/f8491e4f-817a-40dd-a90c-af773978c75b"),
+								VirtualMachineId: pulumi.String("f8491e4f-817a-40dd-a90c-af773978c75b"),
+							},
+						},
+						StartGroupActions: recoveryservices.RecoveryPlanActionArray{},
+					},
+				},
+				PrimaryFabricId:  pulumi.String("/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1"),
+				RecoveryFabricId: pulumi.String("Microsoft Azure"),
+			},
 			RecoveryPlanName:  pulumi.String("RPtest1"),
 			ResourceGroupName: pulumi.String("resourceGroupPS1"),
 			ResourceName:      pulumi.String("vault1"),
@@ -75,6 +116,20 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 replication_recovery_plan = azure_nextgen.recoveryservices.latest.ReplicationRecoveryPlan("replicationRecoveryPlan",
+    properties={
+        "failoverDeploymentModel": "ResourceManager",
+        "groups": [{
+            "endGroupActions": [],
+            "groupType": "Boot",
+            "replicationProtectedItems": [{
+                "id": "/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1/replicationProtectionContainers/cloud_6d224fc6-f326-5d35-96de-fbf51efb3179/replicationProtectedItems/f8491e4f-817a-40dd-a90c-af773978c75b",
+                "virtualMachineId": "f8491e4f-817a-40dd-a90c-af773978c75b",
+            }],
+            "startGroupActions": [],
+        }],
+        "primaryFabricId": "/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1",
+        "recoveryFabricId": "Microsoft Azure",
+    },
     recovery_plan_name="RPtest1",
     resource_group_name="resourceGroupPS1",
     resource_name="vault1")
@@ -90,6 +145,20 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const replicationRecoveryPlan = new azure_nextgen.recoveryservices.latest.ReplicationRecoveryPlan("replicationRecoveryPlan", {
+    properties: {
+        failoverDeploymentModel: "ResourceManager",
+        groups: [{
+            endGroupActions: [],
+            groupType: "Boot",
+            replicationProtectedItems: [{
+                id: "/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1/replicationProtectionContainers/cloud_6d224fc6-f326-5d35-96de-fbf51efb3179/replicationProtectedItems/f8491e4f-817a-40dd-a90c-af773978c75b",
+                virtualMachineId: "f8491e4f-817a-40dd-a90c-af773978c75b",
+            }],
+            startGroupActions: [],
+        }],
+        primaryFabricId: "/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1",
+        recoveryFabricId: "Microsoft Azure",
+    },
     recoveryPlanName: "RPtest1",
     resourceGroupName: "resourceGroupPS1",
     resourceName: "vault1",

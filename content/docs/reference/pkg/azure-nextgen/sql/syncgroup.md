@@ -36,7 +36,7 @@ class MyStack : Stack
             ServerName = "syncgroupcrud-8475",
             SyncDatabaseId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-3521/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
             SyncGroupName = "syncgroupcrud-3187",
-            UsePrivateLinkConnection = false,
+            UsePrivateLinkConnection = true,
         });
     }
 
@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/sql/v20190601preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20190601preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -67,7 +67,7 @@ func main() {
 			ServerName:               pulumi.String("syncgroupcrud-8475"),
 			SyncDatabaseId:           pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-3521/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328"),
 			SyncGroupName:            pulumi.String("syncgroupcrud-3187"),
-			UsePrivateLinkConnection: pulumi.Bool(false),
+			UsePrivateLinkConnection: pulumi.Bool(true),
 		})
 		if err != nil {
 			return err
@@ -95,7 +95,7 @@ sync_group = azure_nextgen.sql.v20190601preview.SyncGroup("syncGroup",
     server_name="syncgroupcrud-8475",
     sync_database_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-3521/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
     sync_group_name="syncgroupcrud-3187",
-    use_private_link_connection=False)
+    use_private_link_connection=True)
 
 ```
 
@@ -116,7 +116,7 @@ const syncGroup = new azure_nextgen.sql.v20190601preview.SyncGroup("syncGroup", 
     serverName: "syncgroupcrud-8475",
     syncDatabaseId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-3521/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
     syncGroupName: "syncgroupcrud-3187",
-    usePrivateLinkConnection: false,
+    usePrivateLinkConnection: true,
 });
 
 ```
@@ -143,7 +143,7 @@ class MyStack : Stack
             ServerName = "syncgroupcrud-8475",
             SyncDatabaseId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-3521/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
             SyncGroupName = "syncgroupcrud-3187",
-            UsePrivateLinkConnection = false,
+            UsePrivateLinkConnection = true,
         });
     }
 
@@ -159,7 +159,7 @@ class MyStack : Stack
 package main
 
 import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/sql/v20190601preview"
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20190601preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -174,7 +174,7 @@ func main() {
 			ServerName:               pulumi.String("syncgroupcrud-8475"),
 			SyncDatabaseId:           pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-3521/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328"),
 			SyncGroupName:            pulumi.String("syncgroupcrud-3187"),
-			UsePrivateLinkConnection: pulumi.Bool(false),
+			UsePrivateLinkConnection: pulumi.Bool(true),
 		})
 		if err != nil {
 			return err
@@ -202,7 +202,7 @@ sync_group = azure_nextgen.sql.v20190601preview.SyncGroup("syncGroup",
     server_name="syncgroupcrud-8475",
     sync_database_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-3521/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
     sync_group_name="syncgroupcrud-3187",
-    use_private_link_connection=False)
+    use_private_link_connection=True)
 
 ```
 
@@ -223,7 +223,7 @@ const syncGroup = new azure_nextgen.sql.v20190601preview.SyncGroup("syncGroup", 
     serverName: "syncgroupcrud-8475",
     syncDatabaseId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-3521/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
     syncGroupName: "syncgroupcrud-3187",
-    usePrivateLinkConnection: false,
+    usePrivateLinkConnection: true,
 });
 
 ```
@@ -925,6 +925,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="privateendpointname_csharp">
+<a href="#privateendpointname_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Private endpoint name of the sync group if use private link connection is enabled.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="syncstate_csharp">
 <a href="#syncstate_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>State</a>
 </span> 
@@ -979,6 +989,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="privateendpointname_go">
+<a href="#privateendpointname_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Private endpoint name of the sync group if use private link connection is enabled.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1039,6 +1059,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="privateendpointname_nodejs">
+<a href="#privateendpointname_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Private endpoint name of the sync group if use private link connection is enabled.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="syncstate_nodejs">
 <a href="#syncstate_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>State</a>
 </span> 
@@ -1093,6 +1123,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="private_endpoint_name_python">
+<a href="#private_endpoint_name_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Private endpoint name of the sync group if use private link connection is enabled.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">

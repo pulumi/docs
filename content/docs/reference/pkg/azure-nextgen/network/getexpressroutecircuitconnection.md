@@ -254,6 +254,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="circuitconnectionstatus_csharp">
+<a href="#circuitconnectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Circuit<wbr>Connection<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
 </span> 
@@ -304,16 +314,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="circuitconnectionstatus_csharp">
-<a href="#circuitconnectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Circuit<wbr>Connection<wbr>Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="expressroutecircuitpeering_csharp">
 <a href="#expressroutecircuitpeering_csharp" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Circuit<wbr>Peering</a>
 </span> 
@@ -358,6 +358,16 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="circuitconnectionstatus_go">
+<a href="#circuitconnectionstatus_go" style="color: inherit; text-decoration: inherit;">Circuit<wbr>Connection<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -411,16 +421,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="circuitconnectionstatus_go">
-<a href="#circuitconnectionstatus_go" style="color: inherit; text-decoration: inherit;">Circuit<wbr>Connection<wbr>Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="expressroutecircuitpeering_go">
 <a href="#expressroutecircuitpeering_go" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Circuit<wbr>Peering</a>
 </span> 
@@ -465,6 +465,16 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="circuitconnectionstatus_nodejs">
+<a href="#circuitconnectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">circuit<wbr>Connection<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -518,16 +528,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="circuitconnectionstatus_nodejs">
-<a href="#circuitconnectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">circuit<wbr>Connection<wbr>Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="expressroutecircuitpeering_nodejs">
 <a href="#expressroutecircuitpeering_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>Circuit<wbr>Peering</a>
 </span> 
@@ -572,6 +572,16 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="circuit_connection_status_python">
+<a href="#circuit_connection_status_python" style="color: inherit; text-decoration: inherit;">circuit_<wbr>connection_<wbr>status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -622,16 +632,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The authorization key.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="circuit_connection_status_python">
-<a href="#circuit_connection_status_python" style="color: inherit; text-decoration: inherit;">circuit_<wbr>connection_<wbr>status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -824,7 +824,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -841,7 +841,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -858,7 +858,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -875,7 +875,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

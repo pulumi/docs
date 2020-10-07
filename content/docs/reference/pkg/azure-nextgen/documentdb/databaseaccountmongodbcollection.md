@@ -74,7 +74,7 @@ class MyStack : Stack
 package main
 
 import (
-	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/documentdb/latest"
+	documentdb "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

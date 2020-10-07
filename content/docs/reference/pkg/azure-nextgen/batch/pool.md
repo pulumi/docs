@@ -12,6 +12,1710 @@ meta_desc: "Explore the Pool resource of the batch module, including examples, i
 
 Contains information about a pool.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CreatePool - Custom Image
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var pool = new AzureNextGen.Batch.Latest.Pool("pool", new AzureNextGen.Batch.Latest.PoolArgs
+        {
+            AccountName = "sampleacct",
+            DeploymentConfiguration = new AzureNextGen.Batch.Latest.Inputs.DeploymentConfigurationArgs
+            {
+                VirtualMachineConfiguration = new AzureNextGen.Batch.Latest.Inputs.VirtualMachineConfigurationArgs
+                {
+                    ImageReference = new AzureNextGen.Batch.Latest.Inputs.ImageReferenceArgs
+                    {
+                        Id = "/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1",
+                    },
+                    NodeAgentSkuId = "batch.node.ubuntu 18.04",
+                },
+            },
+            PoolName = "testpool",
+            ResourceGroupName = "default-azurebatch-japaneast",
+            VmSize = "STANDARD_D4",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := batch.NewPool(ctx, "pool", &batch.PoolArgs{
+			AccountName: pulumi.String("sampleacct"),
+			DeploymentConfiguration: &batch.DeploymentConfigurationArgs{
+				VirtualMachineConfiguration: &batch.VirtualMachineConfigurationArgs{
+					ImageReference: &batch.ImageReferenceArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1"),
+					},
+					NodeAgentSkuId: pulumi.String("batch.node.ubuntu 18.04"),
+				},
+			},
+			PoolName:          pulumi.String("testpool"),
+			ResourceGroupName: pulumi.String("default-azurebatch-japaneast"),
+			VmSize:            pulumi.String("STANDARD_D4"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+pool = azure_nextgen.batch.latest.Pool("pool",
+    account_name="sampleacct",
+    deployment_configuration={
+        "virtualMachineConfiguration": {
+            "imageReference": {
+                "id": "/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1",
+            },
+            "nodeAgentSkuId": "batch.node.ubuntu 18.04",
+        },
+    },
+    pool_name="testpool",
+    resource_group_name="default-azurebatch-japaneast",
+    vm_size="STANDARD_D4")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const pool = new azure_nextgen.batch.latest.Pool("pool", {
+    accountName: "sampleacct",
+    deploymentConfiguration: {
+        virtualMachineConfiguration: {
+            imageReference: {
+                id: "/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1",
+            },
+            nodeAgentSkuId: "batch.node.ubuntu 18.04",
+        },
+    },
+    poolName: "testpool",
+    resourceGroupName: "default-azurebatch-japaneast",
+    vmSize: "STANDARD_D4",
+});
+
+```
+
+{{% /example %}}
+
+### CreatePool - Full Example
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var pool = new AzureNextGen.Batch.Latest.Pool("pool", new AzureNextGen.Batch.Latest.PoolArgs
+        {
+            AccountName = "sampleacct",
+            ApplicationLicenses = 
+            {
+                "app-license0",
+                "app-license1",
+            },
+            ApplicationPackages = 
+            {
+                new AzureNextGen.Batch.Latest.Inputs.ApplicationPackageReferenceArgs
+                {
+                    Id = "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/pools/testpool/applications/app_1234",
+                    Version = "asdf",
+                },
+            },
+            Certificates = 
+            {
+                new AzureNextGen.Batch.Latest.Inputs.CertificateReferenceArgs
+                {
+                    Id = "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/pools/testpool/certificates/sha1-1234567",
+                    StoreLocation = "LocalMachine",
+                    StoreName = "MY",
+                    Visibility = 
+                    {
+                        "RemoteUser",
+                    },
+                },
+            },
+            DeploymentConfiguration = new AzureNextGen.Batch.Latest.Inputs.DeploymentConfigurationArgs
+            {
+                CloudServiceConfiguration = new AzureNextGen.Batch.Latest.Inputs.CloudServiceConfigurationArgs
+                {
+                    OsFamily = "4",
+                    OsVersion = "WA-GUEST-OS-4.45_201708-01",
+                },
+            },
+            DisplayName = "my-pool-name",
+            InterNodeCommunication = "Enabled",
+            Metadata = 
+            {
+                new AzureNextGen.Batch.Latest.Inputs.MetadataItemArgs
+                {
+                    Name = "metadata-1",
+                    Value = "value-1",
+                },
+                new AzureNextGen.Batch.Latest.Inputs.MetadataItemArgs
+                {
+                    Name = "metadata-2",
+                    Value = "value-2",
+                },
+            },
+            NetworkConfiguration = new AzureNextGen.Batch.Latest.Inputs.NetworkConfigurationArgs
+            {
+                EndpointConfiguration = new AzureNextGen.Batch.Latest.Inputs.PoolEndpointConfigurationArgs
+                {
+                    InboundNatPools = 
+                    {
+                        new AzureNextGen.Batch.Latest.Inputs.InboundNatPoolArgs
+                        {
+                            BackendPort = 12001,
+                            FrontendPortRangeEnd = 15100,
+                            FrontendPortRangeStart = 15000,
+                            Name = "testnat",
+                            NetworkSecurityGroupRules = 
+                            {
+                                new AzureNextGen.Batch.Latest.Inputs.NetworkSecurityGroupRuleArgs
+                                {
+                                    Access = "Allow",
+                                    Priority = 150,
+                                    SourceAddressPrefix = "192.100.12.45",
+                                    SourcePortRanges = 
+                                    {
+                                        "*",
+                                    },
+                                },
+                                new AzureNextGen.Batch.Latest.Inputs.NetworkSecurityGroupRuleArgs
+                                {
+                                    Access = "Deny",
+                                    Priority = 3500,
+                                    SourceAddressPrefix = "*",
+                                    SourcePortRanges = 
+                                    {
+                                        "*",
+                                    },
+                                },
+                            },
+                            Protocol = "TCP",
+                        },
+                    },
+                },
+                PublicIPAddressConfiguration = new AzureNextGen.Batch.Latest.Inputs.PublicIPAddressConfigurationArgs
+                {
+                    IpAddressIds = 
+                    {
+                        "/subscriptions/subid1/resourceGroups/rg13/providers/Microsoft.Network/publicIPAddresses/ip135",
+                        "/subscriptions/subid2/resourceGroups/rg24/providers/Microsoft.Network/publicIPAddresses/ip268",
+                    },
+                    Provision = "UserManaged",
+                },
+                SubnetId = "/subscriptions/subid/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123",
+            },
+            PoolName = "testpool",
+            ResourceGroupName = "default-azurebatch-japaneast",
+            ScaleSettings = new AzureNextGen.Batch.Latest.Inputs.ScaleSettingsArgs
+            {
+                FixedScale = new AzureNextGen.Batch.Latest.Inputs.FixedScaleSettingsArgs
+                {
+                    NodeDeallocationOption = "TaskCompletion",
+                    ResizeTimeout = "PT8M",
+                    TargetDedicatedNodes = 6,
+                    TargetLowPriorityNodes = 28,
+                },
+            },
+            StartTask = new AzureNextGen.Batch.Latest.Inputs.StartTaskArgs
+            {
+                CommandLine = "cmd /c SET",
+                EnvironmentSettings = 
+                {
+                    new AzureNextGen.Batch.Latest.Inputs.EnvironmentSettingArgs
+                    {
+                        Name = "MYSET",
+                        Value = "1234",
+                    },
+                },
+                MaxTaskRetryCount = 6,
+                ResourceFiles = 
+                {
+                    new AzureNextGen.Batch.Latest.Inputs.ResourceFileArgs
+                    {
+                        FileMode = "777",
+                        FilePath = "c:\\temp\\gohere",
+                        HttpUrl = "https://testaccount.blob.core.windows.net/example-blob-file",
+                    },
+                },
+                UserIdentity = new AzureNextGen.Batch.Latest.Inputs.UserIdentityArgs
+                {
+                    AutoUser = new AzureNextGen.Batch.Latest.Inputs.AutoUserSpecificationArgs
+                    {
+                        ElevationLevel = "Admin",
+                        Scope = "Pool",
+                    },
+                },
+                WaitForSuccess = true,
+            },
+            TaskSchedulingPolicy = new AzureNextGen.Batch.Latest.Inputs.TaskSchedulingPolicyArgs
+            {
+                NodeFillType = "Pack",
+            },
+            TaskSlotsPerNode = 13,
+            UserAccounts = 
+            {
+                new AzureNextGen.Batch.Latest.Inputs.UserAccountArgs
+                {
+                    ElevationLevel = "Admin",
+                    LinuxUserConfiguration = new AzureNextGen.Batch.Latest.Inputs.LinuxUserConfigurationArgs
+                    {
+                        Gid = 4567,
+                        SshPrivateKey = "sshprivatekeyvalue",
+                        Uid = 1234,
+                    },
+                    Name = "username1",
+                    Password = "examplepassword",
+                },
+            },
+            VmSize = "STANDARD_D4",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := batch.NewPool(ctx, "pool", &batch.PoolArgs{
+			AccountName: pulumi.String("sampleacct"),
+			ApplicationLicenses: pulumi.StringArray{
+				pulumi.String("app-license0"),
+				pulumi.String("app-license1"),
+			},
+			ApplicationPackages: batch.ApplicationPackageReferenceArray{
+				&batch.ApplicationPackageReferenceArgs{
+					Id:      pulumi.String("/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/pools/testpool/applications/app_1234"),
+					Version: pulumi.String("asdf"),
+				},
+			},
+			Certificates: batch.CertificateReferenceArray{
+				&batch.CertificateReferenceArgs{
+					Id:            pulumi.String("/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/pools/testpool/certificates/sha1-1234567"),
+					StoreLocation: pulumi.String("LocalMachine"),
+					StoreName:     pulumi.String("MY"),
+					Visibility: pulumi.StringArray{
+						pulumi.String("RemoteUser"),
+					},
+				},
+			},
+			DeploymentConfiguration: &batch.DeploymentConfigurationArgs{
+				CloudServiceConfiguration: &batch.CloudServiceConfigurationArgs{
+					OsFamily:  pulumi.String("4"),
+					OsVersion: pulumi.String("WA-GUEST-OS-4.45_201708-01"),
+				},
+			},
+			DisplayName:            pulumi.String("my-pool-name"),
+			InterNodeCommunication: pulumi.String("Enabled"),
+			Metadata: batch.MetadataItemArray{
+				&batch.MetadataItemArgs{
+					Name:  pulumi.String("metadata-1"),
+					Value: pulumi.String("value-1"),
+				},
+				&batch.MetadataItemArgs{
+					Name:  pulumi.String("metadata-2"),
+					Value: pulumi.String("value-2"),
+				},
+			},
+			NetworkConfiguration: &batch.NetworkConfigurationArgs{
+				EndpointConfiguration: &batch.PoolEndpointConfigurationArgs{
+					InboundNatPools: batch.InboundNatPoolArray{
+						&batch.InboundNatPoolArgs{
+							BackendPort:            pulumi.Int(12001),
+							FrontendPortRangeEnd:   pulumi.Int(15100),
+							FrontendPortRangeStart: pulumi.Int(15000),
+							Name:                   pulumi.String("testnat"),
+							NetworkSecurityGroupRules: batch.NetworkSecurityGroupRuleArray{
+								&batch.NetworkSecurityGroupRuleArgs{
+									Access:              pulumi.String("Allow"),
+									Priority:            pulumi.Int(150),
+									SourceAddressPrefix: pulumi.String("192.100.12.45"),
+									SourcePortRanges: pulumi.StringArray{
+										pulumi.String("*"),
+									},
+								},
+								&batch.NetworkSecurityGroupRuleArgs{
+									Access:              pulumi.String("Deny"),
+									Priority:            pulumi.Int(3500),
+									SourceAddressPrefix: pulumi.String("*"),
+									SourcePortRanges: pulumi.StringArray{
+										pulumi.String("*"),
+									},
+								},
+							},
+							Protocol: pulumi.String("TCP"),
+						},
+					},
+				},
+				PublicIPAddressConfiguration: &batch.PublicIPAddressConfigurationArgs{
+					IpAddressIds: pulumi.StringArray{
+						pulumi.String("/subscriptions/subid1/resourceGroups/rg13/providers/Microsoft.Network/publicIPAddresses/ip135"),
+						pulumi.String("/subscriptions/subid2/resourceGroups/rg24/providers/Microsoft.Network/publicIPAddresses/ip268"),
+					},
+					Provision: pulumi.String("UserManaged"),
+				},
+				SubnetId: pulumi.String("/subscriptions/subid/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123"),
+			},
+			PoolName:          pulumi.String("testpool"),
+			ResourceGroupName: pulumi.String("default-azurebatch-japaneast"),
+			ScaleSettings: &batch.ScaleSettingsArgs{
+				FixedScale: &batch.FixedScaleSettingsArgs{
+					NodeDeallocationOption: pulumi.String("TaskCompletion"),
+					ResizeTimeout:          pulumi.String("PT8M"),
+					TargetDedicatedNodes:   pulumi.Int(6),
+					TargetLowPriorityNodes: pulumi.Int(28),
+				},
+			},
+			StartTask: &batch.StartTaskArgs{
+				CommandLine: pulumi.String("cmd /c SET"),
+				EnvironmentSettings: batch.EnvironmentSettingArray{
+					&batch.EnvironmentSettingArgs{
+						Name:  pulumi.String("MYSET"),
+						Value: pulumi.String("1234"),
+					},
+				},
+				MaxTaskRetryCount: pulumi.Int(6),
+				ResourceFiles: batch.ResourceFileArray{
+					&batch.ResourceFileArgs{
+						FileMode: pulumi.String("777"),
+						FilePath: pulumi.String("c:\\temp\\gohere"),
+						HttpUrl:  pulumi.String("https://testaccount.blob.core.windows.net/example-blob-file"),
+					},
+				},
+				UserIdentity: &batch.UserIdentityArgs{
+					AutoUser: &batch.AutoUserSpecificationArgs{
+						ElevationLevel: pulumi.String("Admin"),
+						Scope:          pulumi.String("Pool"),
+					},
+				},
+				WaitForSuccess: pulumi.Bool(true),
+			},
+			TaskSchedulingPolicy: &batch.TaskSchedulingPolicyArgs{
+				NodeFillType: pulumi.String("Pack"),
+			},
+			TaskSlotsPerNode: pulumi.Int(13),
+			UserAccounts: batch.UserAccountArray{
+				&batch.UserAccountArgs{
+					ElevationLevel: pulumi.String("Admin"),
+					LinuxUserConfiguration: &batch.LinuxUserConfigurationArgs{
+						Gid:           pulumi.Int(4567),
+						SshPrivateKey: pulumi.String("sshprivatekeyvalue"),
+						Uid:           pulumi.Int(1234),
+					},
+					Name:     pulumi.String("username1"),
+					Password: pulumi.String("examplepassword"),
+				},
+			},
+			VmSize: pulumi.String("STANDARD_D4"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+pool = azure_nextgen.batch.latest.Pool("pool",
+    account_name="sampleacct",
+    application_licenses=[
+        "app-license0",
+        "app-license1",
+    ],
+    application_packages=[{
+        "id": "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/pools/testpool/applications/app_1234",
+        "version": "asdf",
+    }],
+    certificates=[{
+        "id": "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/pools/testpool/certificates/sha1-1234567",
+        "storeLocation": "LocalMachine",
+        "storeName": "MY",
+        "visibility": ["RemoteUser"],
+    }],
+    deployment_configuration={
+        "cloudServiceConfiguration": {
+            "osFamily": "4",
+            "osVersion": "WA-GUEST-OS-4.45_201708-01",
+        },
+    },
+    display_name="my-pool-name",
+    inter_node_communication="Enabled",
+    metadata=[
+        {
+            "name": "metadata-1",
+            "value": "value-1",
+        },
+        {
+            "name": "metadata-2",
+            "value": "value-2",
+        },
+    ],
+    network_configuration={
+        "endpointConfiguration": {
+            "inboundNatPools": [{
+                "backendPort": 12001,
+                "frontendPortRangeEnd": 15100,
+                "frontendPortRangeStart": 15000,
+                "name": "testnat",
+                "networkSecurityGroupRules": [
+                    {
+                        "access": "Allow",
+                        "priority": 150,
+                        "sourceAddressPrefix": "192.100.12.45",
+                        "sourcePortRanges": ["*"],
+                    },
+                    {
+                        "access": "Deny",
+                        "priority": 3500,
+                        "sourceAddressPrefix": "*",
+                        "sourcePortRanges": ["*"],
+                    },
+                ],
+                "protocol": "TCP",
+            }],
+        },
+        "publicIPAddressConfiguration": {
+            "ipAddressIds": [
+                "/subscriptions/subid1/resourceGroups/rg13/providers/Microsoft.Network/publicIPAddresses/ip135",
+                "/subscriptions/subid2/resourceGroups/rg24/providers/Microsoft.Network/publicIPAddresses/ip268",
+            ],
+            "provision": "UserManaged",
+        },
+        "subnetId": "/subscriptions/subid/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123",
+    },
+    pool_name="testpool",
+    resource_group_name="default-azurebatch-japaneast",
+    scale_settings={
+        "fixedScale": {
+            "nodeDeallocationOption": "TaskCompletion",
+            "resizeTimeout": "PT8M",
+            "targetDedicatedNodes": 6,
+            "targetLowPriorityNodes": 28,
+        },
+    },
+    start_task={
+        "commandLine": "cmd /c SET",
+        "environmentSettings": [{
+            "name": "MYSET",
+            "value": "1234",
+        }],
+        "maxTaskRetryCount": 6,
+        "resourceFiles": [{
+            "fileMode": "777",
+            "filePath": "c:\\temp\\gohere",
+            "httpUrl": "https://testaccount.blob.core.windows.net/example-blob-file",
+        }],
+        "userIdentity": {
+            "autoUser": {
+                "elevationLevel": "Admin",
+                "scope": "Pool",
+            },
+        },
+        "waitForSuccess": True,
+    },
+    task_scheduling_policy={
+        "nodeFillType": "Pack",
+    },
+    task_slots_per_node=13,
+    user_accounts=[{
+        "elevationLevel": "Admin",
+        "linuxUserConfiguration": {
+            "gid": 4567,
+            "sshPrivateKey": "sshprivatekeyvalue",
+            "uid": 1234,
+        },
+        "name": "username1",
+        "password": "examplepassword",
+    }],
+    vm_size="STANDARD_D4")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const pool = new azure_nextgen.batch.latest.Pool("pool", {
+    accountName: "sampleacct",
+    applicationLicenses: [
+        "app-license0",
+        "app-license1",
+    ],
+    applicationPackages: [{
+        id: "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/pools/testpool/applications/app_1234",
+        version: "asdf",
+    }],
+    certificates: [{
+        id: "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/pools/testpool/certificates/sha1-1234567",
+        storeLocation: "LocalMachine",
+        storeName: "MY",
+        visibility: ["RemoteUser"],
+    }],
+    deploymentConfiguration: {
+        cloudServiceConfiguration: {
+            osFamily: "4",
+            osVersion: "WA-GUEST-OS-4.45_201708-01",
+        },
+    },
+    displayName: "my-pool-name",
+    interNodeCommunication: "Enabled",
+    metadata: [
+        {
+            name: "metadata-1",
+            value: "value-1",
+        },
+        {
+            name: "metadata-2",
+            value: "value-2",
+        },
+    ],
+    networkConfiguration: {
+        endpointConfiguration: {
+            inboundNatPools: [{
+                backendPort: 12001,
+                frontendPortRangeEnd: 15100,
+                frontendPortRangeStart: 15000,
+                name: "testnat",
+                networkSecurityGroupRules: [
+                    {
+                        access: "Allow",
+                        priority: 150,
+                        sourceAddressPrefix: "192.100.12.45",
+                        sourcePortRanges: ["*"],
+                    },
+                    {
+                        access: "Deny",
+                        priority: 3500,
+                        sourceAddressPrefix: "*",
+                        sourcePortRanges: ["*"],
+                    },
+                ],
+                protocol: "TCP",
+            }],
+        },
+        publicIPAddressConfiguration: {
+            ipAddressIds: [
+                "/subscriptions/subid1/resourceGroups/rg13/providers/Microsoft.Network/publicIPAddresses/ip135",
+                "/subscriptions/subid2/resourceGroups/rg24/providers/Microsoft.Network/publicIPAddresses/ip268",
+            ],
+            provision: "UserManaged",
+        },
+        subnetId: "/subscriptions/subid/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123",
+    },
+    poolName: "testpool",
+    resourceGroupName: "default-azurebatch-japaneast",
+    scaleSettings: {
+        fixedScale: {
+            nodeDeallocationOption: "TaskCompletion",
+            resizeTimeout: "PT8M",
+            targetDedicatedNodes: 6,
+            targetLowPriorityNodes: 28,
+        },
+    },
+    startTask: {
+        commandLine: "cmd /c SET",
+        environmentSettings: [{
+            name: "MYSET",
+            value: "1234",
+        }],
+        maxTaskRetryCount: 6,
+        resourceFiles: [{
+            fileMode: "777",
+            filePath: "c:\\temp\\gohere",
+            httpUrl: "https://testaccount.blob.core.windows.net/example-blob-file",
+        }],
+        userIdentity: {
+            autoUser: {
+                elevationLevel: "Admin",
+                scope: "Pool",
+            },
+        },
+        waitForSuccess: true,
+    },
+    taskSchedulingPolicy: {
+        nodeFillType: "Pack",
+    },
+    taskSlotsPerNode: 13,
+    userAccounts: [{
+        elevationLevel: "Admin",
+        linuxUserConfiguration: {
+            gid: 4567,
+            sshPrivateKey: "sshprivatekeyvalue",
+            uid: 1234,
+        },
+        name: "username1",
+        password: "examplepassword",
+    }],
+    vmSize: "STANDARD_D4",
+});
+
+```
+
+{{% /example %}}
+
+### CreatePool - Full VirtualMachineConfiguration
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var pool = new AzureNextGen.Batch.Latest.Pool("pool", new AzureNextGen.Batch.Latest.PoolArgs
+        {
+            AccountName = "sampleacct",
+            DeploymentConfiguration = new AzureNextGen.Batch.Latest.Inputs.DeploymentConfigurationArgs
+            {
+                VirtualMachineConfiguration = new AzureNextGen.Batch.Latest.Inputs.VirtualMachineConfigurationArgs
+                {
+                    DataDisks = 
+                    {
+                        new AzureNextGen.Batch.Latest.Inputs.DataDiskArgs
+                        {
+                            Caching = "ReadWrite",
+                            DiskSizeGB = 30,
+                            Lun = 0,
+                            StorageAccountType = "Premium_LRS",
+                        },
+                        new AzureNextGen.Batch.Latest.Inputs.DataDiskArgs
+                        {
+                            Caching = "None",
+                            DiskSizeGB = 200,
+                            Lun = 1,
+                            StorageAccountType = "Standard_LRS",
+                        },
+                    },
+                    DiskEncryptionConfiguration = new AzureNextGen.Batch.Latest.Inputs.DiskEncryptionConfigurationArgs
+                    {
+                        Targets = 
+                        {
+                            "OsDisk",
+                            "TemporaryDisk",
+                        },
+                    },
+                    ImageReference = new AzureNextGen.Batch.Latest.Inputs.ImageReferenceArgs
+                    {
+                        Offer = "WindowsServer",
+                        Publisher = "MicrosoftWindowsServer",
+                        Sku = "2016-Datacenter-SmallDisk",
+                        Version = "latest",
+                    },
+                    LicenseType = "Windows_Server",
+                    NodeAgentSkuId = "batch.node.windows amd64",
+                    WindowsConfiguration = new AzureNextGen.Batch.Latest.Inputs.WindowsConfigurationArgs
+                    {
+                        EnableAutomaticUpdates = false,
+                    },
+                },
+            },
+            NetworkConfiguration = new AzureNextGen.Batch.Latest.Inputs.NetworkConfigurationArgs
+            {
+                EndpointConfiguration = new AzureNextGen.Batch.Latest.Inputs.PoolEndpointConfigurationArgs
+                {
+                    InboundNatPools = 
+                    {
+                        new AzureNextGen.Batch.Latest.Inputs.InboundNatPoolArgs
+                        {
+                            BackendPort = 12001,
+                            FrontendPortRangeEnd = 15100,
+                            FrontendPortRangeStart = 15000,
+                            Name = "testnat",
+                            NetworkSecurityGroupRules = 
+                            {
+                                new AzureNextGen.Batch.Latest.Inputs.NetworkSecurityGroupRuleArgs
+                                {
+                                    Access = "Allow",
+                                    Priority = 150,
+                                    SourceAddressPrefix = "192.100.12.45",
+                                    SourcePortRanges = 
+                                    {
+                                        "1",
+                                        "2",
+                                    },
+                                },
+                                new AzureNextGen.Batch.Latest.Inputs.NetworkSecurityGroupRuleArgs
+                                {
+                                    Access = "Deny",
+                                    Priority = 3500,
+                                    SourceAddressPrefix = "*",
+                                    SourcePortRanges = 
+                                    {
+                                        "*",
+                                    },
+                                },
+                            },
+                            Protocol = "TCP",
+                        },
+                    },
+                },
+            },
+            PoolName = "testpool",
+            ResourceGroupName = "default-azurebatch-japaneast",
+            ScaleSettings = new AzureNextGen.Batch.Latest.Inputs.ScaleSettingsArgs
+            {
+                AutoScale = new AzureNextGen.Batch.Latest.Inputs.AutoScaleSettingsArgs
+                {
+                    EvaluationInterval = "PT5M",
+                    Formula = "$TargetDedicatedNodes=1",
+                },
+            },
+            VmSize = "STANDARD_D4",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	"fmt"
+
+	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := batch.NewPool(ctx, "pool", &batch.PoolArgs{
+			AccountName: pulumi.String("sampleacct"),
+			DeploymentConfiguration: &batch.DeploymentConfigurationArgs{
+				VirtualMachineConfiguration: &batch.VirtualMachineConfigurationArgs{
+					DataDisks: batch.DataDiskArray{
+						&batch.DataDiskArgs{
+							Caching:            pulumi.String("ReadWrite"),
+							DiskSizeGB:         pulumi.Int(30),
+							Lun:                pulumi.Int(0),
+							StorageAccountType: pulumi.String("Premium_LRS"),
+						},
+						&batch.DataDiskArgs{
+							Caching:            pulumi.String("None"),
+							DiskSizeGB:         pulumi.Int(200),
+							Lun:                pulumi.Int(1),
+							StorageAccountType: pulumi.String("Standard_LRS"),
+						},
+					},
+					DiskEncryptionConfiguration: &batch.DiskEncryptionConfigurationArgs{
+						Targets: pulumi.StringArray{
+							pulumi.String("OsDisk"),
+							pulumi.String("TemporaryDisk"),
+						},
+					},
+					ImageReference: &batch.ImageReferenceArgs{
+						Offer:     pulumi.String("WindowsServer"),
+						Publisher: pulumi.String("MicrosoftWindowsServer"),
+						Sku:       pulumi.String("2016-Datacenter-SmallDisk"),
+						Version:   pulumi.String("latest"),
+					},
+					LicenseType:    pulumi.String("Windows_Server"),
+					NodeAgentSkuId: pulumi.String("batch.node.windows amd64"),
+					WindowsConfiguration: &batch.WindowsConfigurationArgs{
+						EnableAutomaticUpdates: pulumi.Bool(false),
+					},
+				},
+			},
+			NetworkConfiguration: &batch.NetworkConfigurationArgs{
+				EndpointConfiguration: &batch.PoolEndpointConfigurationArgs{
+					InboundNatPools: batch.InboundNatPoolArray{
+						&batch.InboundNatPoolArgs{
+							BackendPort:            pulumi.Int(12001),
+							FrontendPortRangeEnd:   pulumi.Int(15100),
+							FrontendPortRangeStart: pulumi.Int(15000),
+							Name:                   pulumi.String("testnat"),
+							NetworkSecurityGroupRules: batch.NetworkSecurityGroupRuleArray{
+								&batch.NetworkSecurityGroupRuleArgs{
+									Access:              pulumi.String("Allow"),
+									Priority:            pulumi.Int(150),
+									SourceAddressPrefix: pulumi.String("192.100.12.45"),
+									SourcePortRanges: pulumi.StringArray{
+										pulumi.String("1"),
+										pulumi.String("2"),
+									},
+								},
+								&batch.NetworkSecurityGroupRuleArgs{
+									Access:              pulumi.String("Deny"),
+									Priority:            pulumi.Int(3500),
+									SourceAddressPrefix: pulumi.String("*"),
+									SourcePortRanges: pulumi.StringArray{
+										pulumi.String("*"),
+									},
+								},
+							},
+							Protocol: pulumi.String("TCP"),
+						},
+					},
+				},
+			},
+			PoolName:          pulumi.String("testpool"),
+			ResourceGroupName: pulumi.String("default-azurebatch-japaneast"),
+			ScaleSettings: &batch.ScaleSettingsArgs{
+				AutoScale: &batch.AutoScaleSettingsArgs{
+					EvaluationInterval: pulumi.String("PT5M"),
+					Formula:            pulumi.String(fmt.Sprintf("%v%v", "$", "TargetDedicatedNodes=1")),
+				},
+			},
+			VmSize: pulumi.String("STANDARD_D4"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+pool = azure_nextgen.batch.latest.Pool("pool",
+    account_name="sampleacct",
+    deployment_configuration={
+        "virtualMachineConfiguration": {
+            "dataDisks": [
+                {
+                    "caching": "ReadWrite",
+                    "diskSizeGB": 30,
+                    "lun": 0,
+                    "storageAccountType": "Premium_LRS",
+                },
+                {
+                    "caching": "None",
+                    "diskSizeGB": 200,
+                    "lun": 1,
+                    "storageAccountType": "Standard_LRS",
+                },
+            ],
+            "diskEncryptionConfiguration": {
+                "targets": [
+                    "OsDisk",
+                    "TemporaryDisk",
+                ],
+            },
+            "imageReference": {
+                "offer": "WindowsServer",
+                "publisher": "MicrosoftWindowsServer",
+                "sku": "2016-Datacenter-SmallDisk",
+                "version": "latest",
+            },
+            "licenseType": "Windows_Server",
+            "nodeAgentSkuId": "batch.node.windows amd64",
+            "windowsConfiguration": {
+                "enableAutomaticUpdates": False,
+            },
+        },
+    },
+    network_configuration={
+        "endpointConfiguration": {
+            "inboundNatPools": [{
+                "backendPort": 12001,
+                "frontendPortRangeEnd": 15100,
+                "frontendPortRangeStart": 15000,
+                "name": "testnat",
+                "networkSecurityGroupRules": [
+                    {
+                        "access": "Allow",
+                        "priority": 150,
+                        "sourceAddressPrefix": "192.100.12.45",
+                        "sourcePortRanges": [
+                            "1",
+                            "2",
+                        ],
+                    },
+                    {
+                        "access": "Deny",
+                        "priority": 3500,
+                        "sourceAddressPrefix": "*",
+                        "sourcePortRanges": ["*"],
+                    },
+                ],
+                "protocol": "TCP",
+            }],
+        },
+    },
+    pool_name="testpool",
+    resource_group_name="default-azurebatch-japaneast",
+    scale_settings={
+        "autoScale": {
+            "evaluationInterval": "PT5M",
+            "formula": "$TargetDedicatedNodes=1",
+        },
+    },
+    vm_size="STANDARD_D4")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const pool = new azure_nextgen.batch.latest.Pool("pool", {
+    accountName: "sampleacct",
+    deploymentConfiguration: {
+        virtualMachineConfiguration: {
+            dataDisks: [
+                {
+                    caching: "ReadWrite",
+                    diskSizeGB: 30,
+                    lun: 0,
+                    storageAccountType: "Premium_LRS",
+                },
+                {
+                    caching: "None",
+                    diskSizeGB: 200,
+                    lun: 1,
+                    storageAccountType: "Standard_LRS",
+                },
+            ],
+            diskEncryptionConfiguration: {
+                targets: [
+                    "OsDisk",
+                    "TemporaryDisk",
+                ],
+            },
+            imageReference: {
+                offer: "WindowsServer",
+                publisher: "MicrosoftWindowsServer",
+                sku: "2016-Datacenter-SmallDisk",
+                version: "latest",
+            },
+            licenseType: "Windows_Server",
+            nodeAgentSkuId: "batch.node.windows amd64",
+            windowsConfiguration: {
+                enableAutomaticUpdates: false,
+            },
+        },
+    },
+    networkConfiguration: {
+        endpointConfiguration: {
+            inboundNatPools: [{
+                backendPort: 12001,
+                frontendPortRangeEnd: 15100,
+                frontendPortRangeStart: 15000,
+                name: "testnat",
+                networkSecurityGroupRules: [
+                    {
+                        access: "Allow",
+                        priority: 150,
+                        sourceAddressPrefix: "192.100.12.45",
+                        sourcePortRanges: [
+                            "1",
+                            "2",
+                        ],
+                    },
+                    {
+                        access: "Deny",
+                        priority: 3500,
+                        sourceAddressPrefix: "*",
+                        sourcePortRanges: ["*"],
+                    },
+                ],
+                protocol: "TCP",
+            }],
+        },
+    },
+    poolName: "testpool",
+    resourceGroupName: "default-azurebatch-japaneast",
+    scaleSettings: {
+        autoScale: {
+            evaluationInterval: "PT5M",
+            formula: `$TargetDedicatedNodes=1`,
+        },
+    },
+    vmSize: "STANDARD_D4",
+});
+
+```
+
+{{% /example %}}
+
+### CreatePool - Minimal CloudServiceConfiguration
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var pool = new AzureNextGen.Batch.Latest.Pool("pool", new AzureNextGen.Batch.Latest.PoolArgs
+        {
+            AccountName = "sampleacct",
+            DeploymentConfiguration = new AzureNextGen.Batch.Latest.Inputs.DeploymentConfigurationArgs
+            {
+                CloudServiceConfiguration = new AzureNextGen.Batch.Latest.Inputs.CloudServiceConfigurationArgs
+                {
+                    OsFamily = "5",
+                },
+            },
+            PoolName = "testpool",
+            ResourceGroupName = "default-azurebatch-japaneast",
+            ScaleSettings = new AzureNextGen.Batch.Latest.Inputs.ScaleSettingsArgs
+            {
+                FixedScale = new AzureNextGen.Batch.Latest.Inputs.FixedScaleSettingsArgs
+                {
+                    TargetDedicatedNodes = 3,
+                },
+            },
+            VmSize = "STANDARD_D4",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := batch.NewPool(ctx, "pool", &batch.PoolArgs{
+			AccountName: pulumi.String("sampleacct"),
+			DeploymentConfiguration: &batch.DeploymentConfigurationArgs{
+				CloudServiceConfiguration: &batch.CloudServiceConfigurationArgs{
+					OsFamily: pulumi.String("5"),
+				},
+			},
+			PoolName:          pulumi.String("testpool"),
+			ResourceGroupName: pulumi.String("default-azurebatch-japaneast"),
+			ScaleSettings: &batch.ScaleSettingsArgs{
+				FixedScale: &batch.FixedScaleSettingsArgs{
+					TargetDedicatedNodes: pulumi.Int(3),
+				},
+			},
+			VmSize: pulumi.String("STANDARD_D4"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+pool = azure_nextgen.batch.latest.Pool("pool",
+    account_name="sampleacct",
+    deployment_configuration={
+        "cloudServiceConfiguration": {
+            "osFamily": "5",
+        },
+    },
+    pool_name="testpool",
+    resource_group_name="default-azurebatch-japaneast",
+    scale_settings={
+        "fixedScale": {
+            "targetDedicatedNodes": 3,
+        },
+    },
+    vm_size="STANDARD_D4")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const pool = new azure_nextgen.batch.latest.Pool("pool", {
+    accountName: "sampleacct",
+    deploymentConfiguration: {
+        cloudServiceConfiguration: {
+            osFamily: "5",
+        },
+    },
+    poolName: "testpool",
+    resourceGroupName: "default-azurebatch-japaneast",
+    scaleSettings: {
+        fixedScale: {
+            targetDedicatedNodes: 3,
+        },
+    },
+    vmSize: "STANDARD_D4",
+});
+
+```
+
+{{% /example %}}
+
+### CreatePool - Minimal VirtualMachineConfiguration
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var pool = new AzureNextGen.Batch.Latest.Pool("pool", new AzureNextGen.Batch.Latest.PoolArgs
+        {
+            AccountName = "sampleacct",
+            DeploymentConfiguration = new AzureNextGen.Batch.Latest.Inputs.DeploymentConfigurationArgs
+            {
+                VirtualMachineConfiguration = new AzureNextGen.Batch.Latest.Inputs.VirtualMachineConfigurationArgs
+                {
+                    ImageReference = new AzureNextGen.Batch.Latest.Inputs.ImageReferenceArgs
+                    {
+                        Offer = "UbuntuServer",
+                        Publisher = "Canonical",
+                        Sku = "18.04-LTS",
+                        Version = "latest",
+                    },
+                    NodeAgentSkuId = "batch.node.ubuntu 18.04",
+                },
+            },
+            PoolName = "testpool",
+            ResourceGroupName = "default-azurebatch-japaneast",
+            ScaleSettings = new AzureNextGen.Batch.Latest.Inputs.ScaleSettingsArgs
+            {
+                AutoScale = new AzureNextGen.Batch.Latest.Inputs.AutoScaleSettingsArgs
+                {
+                    EvaluationInterval = "PT5M",
+                    Formula = "$TargetDedicatedNodes=1",
+                },
+            },
+            VmSize = "STANDARD_D4",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	"fmt"
+
+	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := batch.NewPool(ctx, "pool", &batch.PoolArgs{
+			AccountName: pulumi.String("sampleacct"),
+			DeploymentConfiguration: &batch.DeploymentConfigurationArgs{
+				VirtualMachineConfiguration: &batch.VirtualMachineConfigurationArgs{
+					ImageReference: &batch.ImageReferenceArgs{
+						Offer:     pulumi.String("UbuntuServer"),
+						Publisher: pulumi.String("Canonical"),
+						Sku:       pulumi.String("18.04-LTS"),
+						Version:   pulumi.String("latest"),
+					},
+					NodeAgentSkuId: pulumi.String("batch.node.ubuntu 18.04"),
+				},
+			},
+			PoolName:          pulumi.String("testpool"),
+			ResourceGroupName: pulumi.String("default-azurebatch-japaneast"),
+			ScaleSettings: &batch.ScaleSettingsArgs{
+				AutoScale: &batch.AutoScaleSettingsArgs{
+					EvaluationInterval: pulumi.String("PT5M"),
+					Formula:            pulumi.String(fmt.Sprintf("%v%v", "$", "TargetDedicatedNodes=1")),
+				},
+			},
+			VmSize: pulumi.String("STANDARD_D4"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+pool = azure_nextgen.batch.latest.Pool("pool",
+    account_name="sampleacct",
+    deployment_configuration={
+        "virtualMachineConfiguration": {
+            "imageReference": {
+                "offer": "UbuntuServer",
+                "publisher": "Canonical",
+                "sku": "18.04-LTS",
+                "version": "latest",
+            },
+            "nodeAgentSkuId": "batch.node.ubuntu 18.04",
+        },
+    },
+    pool_name="testpool",
+    resource_group_name="default-azurebatch-japaneast",
+    scale_settings={
+        "autoScale": {
+            "evaluationInterval": "PT5M",
+            "formula": "$TargetDedicatedNodes=1",
+        },
+    },
+    vm_size="STANDARD_D4")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const pool = new azure_nextgen.batch.latest.Pool("pool", {
+    accountName: "sampleacct",
+    deploymentConfiguration: {
+        virtualMachineConfiguration: {
+            imageReference: {
+                offer: "UbuntuServer",
+                publisher: "Canonical",
+                sku: "18.04-LTS",
+                version: "latest",
+            },
+            nodeAgentSkuId: "batch.node.ubuntu 18.04",
+        },
+    },
+    poolName: "testpool",
+    resourceGroupName: "default-azurebatch-japaneast",
+    scaleSettings: {
+        autoScale: {
+            evaluationInterval: "PT5M",
+            formula: `$TargetDedicatedNodes=1`,
+        },
+    },
+    vmSize: "STANDARD_D4",
+});
+
+```
+
+{{% /example %}}
+
+### CreatePool - No public IP
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var pool = new AzureNextGen.Batch.Latest.Pool("pool", new AzureNextGen.Batch.Latest.PoolArgs
+        {
+            AccountName = "sampleacct",
+            DeploymentConfiguration = new AzureNextGen.Batch.Latest.Inputs.DeploymentConfigurationArgs
+            {
+                VirtualMachineConfiguration = new AzureNextGen.Batch.Latest.Inputs.VirtualMachineConfigurationArgs
+                {
+                    ImageReference = new AzureNextGen.Batch.Latest.Inputs.ImageReferenceArgs
+                    {
+                        Id = "/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1",
+                    },
+                    NodeAgentSkuId = "batch.node.ubuntu 18.04",
+                },
+            },
+            NetworkConfiguration = new AzureNextGen.Batch.Latest.Inputs.NetworkConfigurationArgs
+            {
+                PublicIPAddressConfiguration = new AzureNextGen.Batch.Latest.Inputs.PublicIPAddressConfigurationArgs
+                {
+                    Provision = "NoPublicIPAddresses",
+                },
+                SubnetId = "/subscriptions/subid/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123",
+            },
+            PoolName = "testpool",
+            ResourceGroupName = "default-azurebatch-japaneast",
+            VmSize = "STANDARD_D4",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := batch.NewPool(ctx, "pool", &batch.PoolArgs{
+			AccountName: pulumi.String("sampleacct"),
+			DeploymentConfiguration: &batch.DeploymentConfigurationArgs{
+				VirtualMachineConfiguration: &batch.VirtualMachineConfigurationArgs{
+					ImageReference: &batch.ImageReferenceArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1"),
+					},
+					NodeAgentSkuId: pulumi.String("batch.node.ubuntu 18.04"),
+				},
+			},
+			NetworkConfiguration: &batch.NetworkConfigurationArgs{
+				PublicIPAddressConfiguration: &batch.PublicIPAddressConfigurationArgs{
+					Provision: pulumi.String("NoPublicIPAddresses"),
+				},
+				SubnetId: pulumi.String("/subscriptions/subid/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123"),
+			},
+			PoolName:          pulumi.String("testpool"),
+			ResourceGroupName: pulumi.String("default-azurebatch-japaneast"),
+			VmSize:            pulumi.String("STANDARD_D4"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+pool = azure_nextgen.batch.latest.Pool("pool",
+    account_name="sampleacct",
+    deployment_configuration={
+        "virtualMachineConfiguration": {
+            "imageReference": {
+                "id": "/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1",
+            },
+            "nodeAgentSkuId": "batch.node.ubuntu 18.04",
+        },
+    },
+    network_configuration={
+        "publicIPAddressConfiguration": {
+            "provision": "NoPublicIPAddresses",
+        },
+        "subnetId": "/subscriptions/subid/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123",
+    },
+    pool_name="testpool",
+    resource_group_name="default-azurebatch-japaneast",
+    vm_size="STANDARD_D4")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const pool = new azure_nextgen.batch.latest.Pool("pool", {
+    accountName: "sampleacct",
+    deploymentConfiguration: {
+        virtualMachineConfiguration: {
+            imageReference: {
+                id: "/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1",
+            },
+            nodeAgentSkuId: "batch.node.ubuntu 18.04",
+        },
+    },
+    networkConfiguration: {
+        publicIPAddressConfiguration: {
+            provision: "NoPublicIPAddresses",
+        },
+        subnetId: "/subscriptions/subid/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123",
+    },
+    poolName: "testpool",
+    resourceGroupName: "default-azurebatch-japaneast",
+    vmSize: "STANDARD_D4",
+});
+
+```
+
+{{% /example %}}
+
+### CreatePool - Public IPs
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var pool = new AzureNextGen.Batch.Latest.Pool("pool", new AzureNextGen.Batch.Latest.PoolArgs
+        {
+            AccountName = "sampleacct",
+            DeploymentConfiguration = new AzureNextGen.Batch.Latest.Inputs.DeploymentConfigurationArgs
+            {
+                VirtualMachineConfiguration = new AzureNextGen.Batch.Latest.Inputs.VirtualMachineConfigurationArgs
+                {
+                    ImageReference = new AzureNextGen.Batch.Latest.Inputs.ImageReferenceArgs
+                    {
+                        Id = "/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1",
+                    },
+                    NodeAgentSkuId = "batch.node.ubuntu 18.04",
+                },
+            },
+            NetworkConfiguration = new AzureNextGen.Batch.Latest.Inputs.NetworkConfigurationArgs
+            {
+                PublicIPAddressConfiguration = new AzureNextGen.Batch.Latest.Inputs.PublicIPAddressConfigurationArgs
+                {
+                    IpAddressIds = 
+                    {
+                        "/subscriptions/subid1/resourceGroups/rg13/providers/Microsoft.Network/publicIPAddresses/ip135",
+                    },
+                    Provision = "UserManaged",
+                },
+                SubnetId = "/subscriptions/subid/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123",
+            },
+            PoolName = "testpool",
+            ResourceGroupName = "default-azurebatch-japaneast",
+            VmSize = "STANDARD_D4",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := batch.NewPool(ctx, "pool", &batch.PoolArgs{
+			AccountName: pulumi.String("sampleacct"),
+			DeploymentConfiguration: &batch.DeploymentConfigurationArgs{
+				VirtualMachineConfiguration: &batch.VirtualMachineConfigurationArgs{
+					ImageReference: &batch.ImageReferenceArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1"),
+					},
+					NodeAgentSkuId: pulumi.String("batch.node.ubuntu 18.04"),
+				},
+			},
+			NetworkConfiguration: &batch.NetworkConfigurationArgs{
+				PublicIPAddressConfiguration: &batch.PublicIPAddressConfigurationArgs{
+					IpAddressIds: pulumi.StringArray{
+						pulumi.String("/subscriptions/subid1/resourceGroups/rg13/providers/Microsoft.Network/publicIPAddresses/ip135"),
+					},
+					Provision: pulumi.String("UserManaged"),
+				},
+				SubnetId: pulumi.String("/subscriptions/subid/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123"),
+			},
+			PoolName:          pulumi.String("testpool"),
+			ResourceGroupName: pulumi.String("default-azurebatch-japaneast"),
+			VmSize:            pulumi.String("STANDARD_D4"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+pool = azure_nextgen.batch.latest.Pool("pool",
+    account_name="sampleacct",
+    deployment_configuration={
+        "virtualMachineConfiguration": {
+            "imageReference": {
+                "id": "/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1",
+            },
+            "nodeAgentSkuId": "batch.node.ubuntu 18.04",
+        },
+    },
+    network_configuration={
+        "publicIPAddressConfiguration": {
+            "ipAddressIds": ["/subscriptions/subid1/resourceGroups/rg13/providers/Microsoft.Network/publicIPAddresses/ip135"],
+            "provision": "UserManaged",
+        },
+        "subnetId": "/subscriptions/subid/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123",
+    },
+    pool_name="testpool",
+    resource_group_name="default-azurebatch-japaneast",
+    vm_size="STANDARD_D4")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const pool = new azure_nextgen.batch.latest.Pool("pool", {
+    accountName: "sampleacct",
+    deploymentConfiguration: {
+        virtualMachineConfiguration: {
+            imageReference: {
+                id: "/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1",
+            },
+            nodeAgentSkuId: "batch.node.ubuntu 18.04",
+        },
+    },
+    networkConfiguration: {
+        publicIPAddressConfiguration: {
+            ipAddressIds: ["/subscriptions/subid1/resourceGroups/rg13/providers/Microsoft.Network/publicIPAddresses/ip135"],
+            provision: "UserManaged",
+        },
+        subnetId: "/subscriptions/subid/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123",
+    },
+    poolName: "testpool",
+    resourceGroupName: "default-azurebatch-japaneast",
+    vmSize: "STANDARD_D4",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Pool Resource {#create}

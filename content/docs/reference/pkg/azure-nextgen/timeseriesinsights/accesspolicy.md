@@ -52,7 +52,7 @@ class MyStack : Stack
 package main
 
 import (
-	timeseriesinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/timeseriesinsights/latest"
+	timeseriesinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/timeseriesinsights/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

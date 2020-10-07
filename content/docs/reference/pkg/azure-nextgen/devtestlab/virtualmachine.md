@@ -68,7 +68,7 @@ class MyStack : Stack
 package main
 
 import (
-	devtestlab "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/devtestlab/latest"
+	devtestlab "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/devtestlab/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

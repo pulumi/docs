@@ -12,6 +12,163 @@ meta_desc: "Explore the LoadBalancerBackendAddressPool resource of the network m
 
 Pool of backend IP addresses.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Update load balancer backend pool with backend addresses containing virtual network and  IP address.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var loadBalancerBackendAddressPool = new AzureNextGen.Network.Latest.LoadBalancerBackendAddressPool("loadBalancerBackendAddressPool", new AzureNextGen.Network.Latest.LoadBalancerBackendAddressPoolArgs
+        {
+            BackendAddressPoolName = "backend",
+            LoadBalancerBackendAddresses = 
+            {
+                new AzureNextGen.Network.Latest.Inputs.LoadBalancerBackendAddressArgs
+                {
+                    IpAddress = "10.0.0.4",
+                    Name = "address1",
+                    VirtualNetwork = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    {
+                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb",
+                    },
+                },
+                new AzureNextGen.Network.Latest.Inputs.LoadBalancerBackendAddressArgs
+                {
+                    IpAddress = "10.0.0.5",
+                    Name = "address2",
+                    VirtualNetwork = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    {
+                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb",
+                    },
+                },
+            },
+            LoadBalancerName = "lb",
+            ResourceGroupName = "testrg",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewLoadBalancerBackendAddressPool(ctx, "loadBalancerBackendAddressPool", &network.LoadBalancerBackendAddressPoolArgs{
+			BackendAddressPoolName: pulumi.String("backend"),
+			LoadBalancerBackendAddresses: network.LoadBalancerBackendAddressArray{
+				&network.LoadBalancerBackendAddressArgs{
+					IpAddress: pulumi.String("10.0.0.4"),
+					Name:      pulumi.String("address1"),
+					VirtualNetwork: &network.SubResourceArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb"),
+					},
+				},
+				&network.LoadBalancerBackendAddressArgs{
+					IpAddress: pulumi.String("10.0.0.5"),
+					Name:      pulumi.String("address2"),
+					VirtualNetwork: &network.SubResourceArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb"),
+					},
+				},
+			},
+			LoadBalancerName:  pulumi.String("lb"),
+			ResourceGroupName: pulumi.String("testrg"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+load_balancer_backend_address_pool = azure_nextgen.network.latest.LoadBalancerBackendAddressPool("loadBalancerBackendAddressPool",
+    backend_address_pool_name="backend",
+    load_balancer_backend_addresses=[
+        {
+            "ipAddress": "10.0.0.4",
+            "name": "address1",
+            "virtualNetwork": {
+                "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb",
+            },
+        },
+        {
+            "ipAddress": "10.0.0.5",
+            "name": "address2",
+            "virtualNetwork": {
+                "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb",
+            },
+        },
+    ],
+    load_balancer_name="lb",
+    resource_group_name="testrg")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const loadBalancerBackendAddressPool = new azure_nextgen.network.latest.LoadBalancerBackendAddressPool("loadBalancerBackendAddressPool", {
+    backendAddressPoolName: "backend",
+    loadBalancerBackendAddresses: [
+        {
+            ipAddress: "10.0.0.4",
+            name: "address1",
+            virtualNetwork: {
+                id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb",
+            },
+        },
+        {
+            ipAddress: "10.0.0.5",
+            name: "address2",
+            virtualNetwork: {
+                id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb",
+            },
+        },
+    ],
+    loadBalancerName: "lb",
+    resourceGroupName: "testrg",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a LoadBalancerBackendAddressPool Resource {#create}
@@ -13972,7 +14129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -13989,7 +14146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -14006,7 +14163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -14023,7 +14180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

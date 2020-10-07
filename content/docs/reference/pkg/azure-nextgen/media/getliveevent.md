@@ -69,7 +69,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the Live Event.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the live event, maximum length is 32.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -106,7 +106,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the Live Event.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the live event, maximum length is 32.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -143,7 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the Live Event.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the live event, maximum length is 32.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -180,7 +180,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the Live Event.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the live event, maximum length is 32.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -220,7 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The exact time the Live Event was created.{{% /md %}}</dd>
+    <dd>{{% md %}}The creation time for the live event{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -230,7 +230,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#liveeventinputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Outputs.<wbr>Live<wbr>Event<wbr>Input<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Live Event input.{{% /md %}}</dd>
+    <dd>{{% md %}}Live event input settings. It defines how the live event receives input from a contribution encoder.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -240,7 +240,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The exact time the Live Event was last modified.{{% /md %}}</dd>
+    <dd>{{% md %}}The last modified time of the live event.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -270,7 +270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the Live Event.{{% /md %}}</dd>
+    <dd>{{% md %}}The provisioning state of the live event.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -280,7 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource state of the Live Event.{{% /md %}}</dd>
+    <dd>{{% md %}}The resource state of the live event. See https://go.microsoft.com/fwlink/?linkid=2139012 for more information.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -300,7 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crosssiteaccesspoliciesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Outputs.<wbr>Cross<wbr>Site<wbr>Access<wbr>Policies<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Live Event access policies.{{% /md %}}</dd>
+    <dd>{{% md %}}Live event cross site access policies.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -310,7 +310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Live Event description.{{% /md %}}</dd>
+    <dd>{{% md %}}A description for the live event.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -320,7 +320,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#liveeventencodingresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Outputs.<wbr>Live<wbr>Event<wbr>Encoding<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Live Event encoding.{{% /md %}}</dd>
+    <dd>{{% md %}}Encoding settings for the live event. It configures whether a live encoder is used for the live event and settings for the live encoder if it is used.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="hostnameprefix_csharp">
+<a href="#hostnameprefix_csharp" style="color: inherit; text-decoration: inherit;">Hostname<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}When useStaticHostname is set to true, the hostnamePrefix specifies the first part of the hostname assigned to the live event preview and ingest endpoints. The final hostname would be a combination of this prefix, the media service account name and a short code for the Azure Media Services data center.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -330,7 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#liveeventpreviewresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Outputs.<wbr>Live<wbr>Event<wbr>Preview<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Live Event preview.{{% /md %}}</dd>
+    <dd>{{% md %}}Live event preview settings. Preview allows live event producers to preview the live streaming content without creating any live output.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -340,7 +350,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The options to use for the LiveEvent.  This value is specified at creation time and cannot be updated. The valid values for the array entry values are 'Default' and 'LowLatency'.{{% /md %}}</dd>
+    <dd>{{% md %}}The options to use for the LiveEvent. This value is specified at creation time and cannot be updated. The valid values for the array entry values are 'Default' and 'LowLatency'.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -354,13 +364,23 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="transcriptions_csharp">
+<a href="#transcriptions_csharp" style="color: inherit; text-decoration: inherit;">Transcriptions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#liveeventtranscriptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Outputs.<wbr>Live<wbr>Event<wbr>Transcription<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Live transcription settings for the live event. See https://go.microsoft.com/fwlink/?linkid=2133742 for more information about the live transcription feature.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="usestatichostname_csharp">
 <a href="#usestatichostname_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Static<wbr>Hostname</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to use a vanity url with the Live Event.  This value is specified at creation time and cannot be updated.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies whether a static hostname would be assigned to the live event preview and ingest endpoints. This value can only be updated if the live event is in Standby state{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -377,7 +397,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The exact time the Live Event was created.{{% /md %}}</dd>
+    <dd>{{% md %}}The creation time for the live event{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -387,7 +407,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#liveeventinputresponse">Live<wbr>Event<wbr>Input<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Live Event input.{{% /md %}}</dd>
+    <dd>{{% md %}}Live event input settings. It defines how the live event receives input from a contribution encoder.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -397,7 +417,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The exact time the Live Event was last modified.{{% /md %}}</dd>
+    <dd>{{% md %}}The last modified time of the live event.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -427,7 +447,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the Live Event.{{% /md %}}</dd>
+    <dd>{{% md %}}The provisioning state of the live event.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -437,7 +457,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource state of the Live Event.{{% /md %}}</dd>
+    <dd>{{% md %}}The resource state of the live event. See https://go.microsoft.com/fwlink/?linkid=2139012 for more information.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -457,7 +477,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crosssiteaccesspoliciesresponse">Cross<wbr>Site<wbr>Access<wbr>Policies<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Live Event access policies.{{% /md %}}</dd>
+    <dd>{{% md %}}Live event cross site access policies.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -467,7 +487,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Live Event description.{{% /md %}}</dd>
+    <dd>{{% md %}}A description for the live event.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -477,7 +497,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#liveeventencodingresponse">Live<wbr>Event<wbr>Encoding<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Live Event encoding.{{% /md %}}</dd>
+    <dd>{{% md %}}Encoding settings for the live event. It configures whether a live encoder is used for the live event and settings for the live encoder if it is used.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="hostnameprefix_go">
+<a href="#hostnameprefix_go" style="color: inherit; text-decoration: inherit;">Hostname<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}When useStaticHostname is set to true, the hostnamePrefix specifies the first part of the hostname assigned to the live event preview and ingest endpoints. The final hostname would be a combination of this prefix, the media service account name and a short code for the Azure Media Services data center.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -487,7 +517,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#liveeventpreviewresponse">Live<wbr>Event<wbr>Preview<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Live Event preview.{{% /md %}}</dd>
+    <dd>{{% md %}}Live event preview settings. Preview allows live event producers to preview the live streaming content without creating any live output.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -497,7 +527,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The options to use for the LiveEvent.  This value is specified at creation time and cannot be updated. The valid values for the array entry values are 'Default' and 'LowLatency'.{{% /md %}}</dd>
+    <dd>{{% md %}}The options to use for the LiveEvent. This value is specified at creation time and cannot be updated. The valid values for the array entry values are 'Default' and 'LowLatency'.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -511,13 +541,23 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="transcriptions_go">
+<a href="#transcriptions_go" style="color: inherit; text-decoration: inherit;">Transcriptions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#liveeventtranscriptionresponse">[]Live<wbr>Event<wbr>Transcription<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Live transcription settings for the live event. See https://go.microsoft.com/fwlink/?linkid=2133742 for more information about the live transcription feature.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="usestatichostname_go">
 <a href="#usestatichostname_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Static<wbr>Hostname</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to use a vanity url with the Live Event.  This value is specified at creation time and cannot be updated.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies whether a static hostname would be assigned to the live event preview and ingest endpoints. This value can only be updated if the live event is in Standby state{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -534,7 +574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The exact time the Live Event was created.{{% /md %}}</dd>
+    <dd>{{% md %}}The creation time for the live event{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -544,7 +584,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#liveeventinputresponse">Live<wbr>Event<wbr>Input<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Live Event input.{{% /md %}}</dd>
+    <dd>{{% md %}}Live event input settings. It defines how the live event receives input from a contribution encoder.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -554,7 +594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The exact time the Live Event was last modified.{{% /md %}}</dd>
+    <dd>{{% md %}}The last modified time of the live event.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -584,7 +624,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the Live Event.{{% /md %}}</dd>
+    <dd>{{% md %}}The provisioning state of the live event.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -594,7 +634,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource state of the Live Event.{{% /md %}}</dd>
+    <dd>{{% md %}}The resource state of the live event. See https://go.microsoft.com/fwlink/?linkid=2139012 for more information.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -614,7 +654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crosssiteaccesspoliciesresponse">Cross<wbr>Site<wbr>Access<wbr>Policies<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Live Event access policies.{{% /md %}}</dd>
+    <dd>{{% md %}}Live event cross site access policies.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -624,7 +664,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Live Event description.{{% /md %}}</dd>
+    <dd>{{% md %}}A description for the live event.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -634,7 +674,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#liveeventencodingresponse">Live<wbr>Event<wbr>Encoding<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Live Event encoding.{{% /md %}}</dd>
+    <dd>{{% md %}}Encoding settings for the live event. It configures whether a live encoder is used for the live event and settings for the live encoder if it is used.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="hostnameprefix_nodejs">
+<a href="#hostnameprefix_nodejs" style="color: inherit; text-decoration: inherit;">hostname<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}When useStaticHostname is set to true, the hostnamePrefix specifies the first part of the hostname assigned to the live event preview and ingest endpoints. The final hostname would be a combination of this prefix, the media service account name and a short code for the Azure Media Services data center.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -644,7 +694,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#liveeventpreviewresponse">Live<wbr>Event<wbr>Preview<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Live Event preview.{{% /md %}}</dd>
+    <dd>{{% md %}}Live event preview settings. Preview allows live event producers to preview the live streaming content without creating any live output.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -654,7 +704,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The options to use for the LiveEvent.  This value is specified at creation time and cannot be updated. The valid values for the array entry values are 'Default' and 'LowLatency'.{{% /md %}}</dd>
+    <dd>{{% md %}}The options to use for the LiveEvent. This value is specified at creation time and cannot be updated. The valid values for the array entry values are 'Default' and 'LowLatency'.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -668,13 +718,23 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="transcriptions_nodejs">
+<a href="#transcriptions_nodejs" style="color: inherit; text-decoration: inherit;">transcriptions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#liveeventtranscriptionresponse">Live<wbr>Event<wbr>Transcription<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Live transcription settings for the live event. See https://go.microsoft.com/fwlink/?linkid=2133742 for more information about the live transcription feature.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="usestatichostname_nodejs">
 <a href="#usestatichostname_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Static<wbr>Hostname</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to use a vanity url with the Live Event.  This value is specified at creation time and cannot be updated.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies whether a static hostname would be assigned to the live event preview and ingest endpoints. This value can only be updated if the live event is in Standby state{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -691,7 +751,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The exact time the Live Event was created.{{% /md %}}</dd>
+    <dd>{{% md %}}The creation time for the live event{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -701,7 +761,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#liveeventinputresponse">Dict[Live<wbr>Event<wbr>Input<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The Live Event input.{{% /md %}}</dd>
+    <dd>{{% md %}}Live event input settings. It defines how the live event receives input from a contribution encoder.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -711,7 +771,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The exact time the Live Event was last modified.{{% /md %}}</dd>
+    <dd>{{% md %}}The last modified time of the live event.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -741,7 +801,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the Live Event.{{% /md %}}</dd>
+    <dd>{{% md %}}The provisioning state of the live event.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -751,7 +811,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The resource state of the Live Event.{{% /md %}}</dd>
+    <dd>{{% md %}}The resource state of the live event. See https://go.microsoft.com/fwlink/?linkid=2139012 for more information.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -771,7 +831,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crosssiteaccesspoliciesresponse">Dict[Cross<wbr>Site<wbr>Access<wbr>Policies<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The Live Event access policies.{{% /md %}}</dd>
+    <dd>{{% md %}}Live event cross site access policies.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -781,7 +841,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Live Event description.{{% /md %}}</dd>
+    <dd>{{% md %}}A description for the live event.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -791,7 +851,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#liveeventencodingresponse">Dict[Live<wbr>Event<wbr>Encoding<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The Live Event encoding.{{% /md %}}</dd>
+    <dd>{{% md %}}Encoding settings for the live event. It configures whether a live encoder is used for the live event and settings for the live encoder if it is used.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="hostname_prefix_python">
+<a href="#hostname_prefix_python" style="color: inherit; text-decoration: inherit;">hostname_<wbr>prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}When useStaticHostname is set to true, the hostnamePrefix specifies the first part of the hostname assigned to the live event preview and ingest endpoints. The final hostname would be a combination of this prefix, the media service account name and a short code for the Azure Media Services data center.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -801,7 +871,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#liveeventpreviewresponse">Dict[Live<wbr>Event<wbr>Preview<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The Live Event preview.{{% /md %}}</dd>
+    <dd>{{% md %}}Live event preview settings. Preview allows live event producers to preview the live streaming content without creating any live output.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -811,7 +881,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}The options to use for the LiveEvent.  This value is specified at creation time and cannot be updated. The valid values for the array entry values are 'Default' and 'LowLatency'.{{% /md %}}</dd>
+    <dd>{{% md %}}The options to use for the LiveEvent. This value is specified at creation time and cannot be updated. The valid values for the array entry values are 'Default' and 'LowLatency'.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -825,13 +895,23 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="transcriptions_python">
+<a href="#transcriptions_python" style="color: inherit; text-decoration: inherit;">transcriptions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#liveeventtranscriptionresponse">List[Live<wbr>Event<wbr>Transcription<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Live transcription settings for the live event. See https://go.microsoft.com/fwlink/?linkid=2133742 for more information about the live transcription feature.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="use_static_hostname_python">
 <a href="#use_static_hostname_python" style="color: inherit; text-decoration: inherit;">use_<wbr>static_<wbr>hostname</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to use a vanity url with the Live Event.  This value is specified at creation time and cannot be updated.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies whether a static hostname would be assigned to the live event preview and ingest endpoints. This value can only be updated if the live event is in Standby state{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1222,7 +1302,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The encoding type for Live Event. This value is specified at creation time and cannot be updated. When encodingType is set to None, the service simply passes through the incoming video and audio layer(s) to the output. When encodingType is set to Standard or Premium1080p, a live encoder transcodes the incoming stream into multiple bit rates or layers. See https://go.microsoft.com/fwlink/?linkid=2095101 for more information. The encodingType of Basic is obsolete – if specified, the service will treat this as a Standard Live Event.{{% /md %}}</dd>
+    <dd>{{% md %}}Live event type. When encodingType is set to None, the service simply passes through the incoming video and audio layer(s) to the output. When encodingType is set to Standard or Premium1080p, a live encoder transcodes the incoming stream into multiple bitrates or layers. See https://go.microsoft.com/fwlink/?linkid=2095101 for more information. This property cannot be modified after the live event is created.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyframeinterval_csharp">
+<a href="#keyframeinterval_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Frame<wbr>Interval</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Use an ISO 8601 time value between 0.5 to 20 seconds to specify the output fragment length for the video and audio tracks of an encoding live event. For example, use PT2S to indicate 2 seconds. For the video track it also defines the key frame interval, or the length of a GoP (group of pictures).   If this value is not set for an encoding live event, the fragment duration defaults to 2 seconds. The value cannot be set for pass-through live events.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1233,6 +1323,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The optional encoding preset name, used when encodingType is not None. This value is specified at creation time and cannot be updated. If the encodingType is set to Standard, then the default preset name is ‘Default720p’. Else if the encodingType is set to Premium1080p, the default preset is ‘Default1080p’.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stretchmode_csharp">
+<a href="#stretchmode_csharp" style="color: inherit; text-decoration: inherit;">Stretch<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies how the input video will be resized to fit the desired output resolution(s). Default is None{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1249,7 +1349,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The encoding type for Live Event. This value is specified at creation time and cannot be updated. When encodingType is set to None, the service simply passes through the incoming video and audio layer(s) to the output. When encodingType is set to Standard or Premium1080p, a live encoder transcodes the incoming stream into multiple bit rates or layers. See https://go.microsoft.com/fwlink/?linkid=2095101 for more information. The encodingType of Basic is obsolete – if specified, the service will treat this as a Standard Live Event.{{% /md %}}</dd>
+    <dd>{{% md %}}Live event type. When encodingType is set to None, the service simply passes through the incoming video and audio layer(s) to the output. When encodingType is set to Standard or Premium1080p, a live encoder transcodes the incoming stream into multiple bitrates or layers. See https://go.microsoft.com/fwlink/?linkid=2095101 for more information. This property cannot be modified after the live event is created.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyframeinterval_go">
+<a href="#keyframeinterval_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Frame<wbr>Interval</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Use an ISO 8601 time value between 0.5 to 20 seconds to specify the output fragment length for the video and audio tracks of an encoding live event. For example, use PT2S to indicate 2 seconds. For the video track it also defines the key frame interval, or the length of a GoP (group of pictures).   If this value is not set for an encoding live event, the fragment duration defaults to 2 seconds. The value cannot be set for pass-through live events.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1260,6 +1370,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The optional encoding preset name, used when encodingType is not None. This value is specified at creation time and cannot be updated. If the encodingType is set to Standard, then the default preset name is ‘Default720p’. Else if the encodingType is set to Premium1080p, the default preset is ‘Default1080p’.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stretchmode_go">
+<a href="#stretchmode_go" style="color: inherit; text-decoration: inherit;">Stretch<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies how the input video will be resized to fit the desired output resolution(s). Default is None{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1276,7 +1396,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The encoding type for Live Event. This value is specified at creation time and cannot be updated. When encodingType is set to None, the service simply passes through the incoming video and audio layer(s) to the output. When encodingType is set to Standard or Premium1080p, a live encoder transcodes the incoming stream into multiple bit rates or layers. See https://go.microsoft.com/fwlink/?linkid=2095101 for more information. The encodingType of Basic is obsolete – if specified, the service will treat this as a Standard Live Event.{{% /md %}}</dd>
+    <dd>{{% md %}}Live event type. When encodingType is set to None, the service simply passes through the incoming video and audio layer(s) to the output. When encodingType is set to Standard or Premium1080p, a live encoder transcodes the incoming stream into multiple bitrates or layers. See https://go.microsoft.com/fwlink/?linkid=2095101 for more information. This property cannot be modified after the live event is created.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyframeinterval_nodejs">
+<a href="#keyframeinterval_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Frame<wbr>Interval</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Use an ISO 8601 time value between 0.5 to 20 seconds to specify the output fragment length for the video and audio tracks of an encoding live event. For example, use PT2S to indicate 2 seconds. For the video track it also defines the key frame interval, or the length of a GoP (group of pictures).   If this value is not set for an encoding live event, the fragment duration defaults to 2 seconds. The value cannot be set for pass-through live events.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1287,6 +1417,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The optional encoding preset name, used when encodingType is not None. This value is specified at creation time and cannot be updated. If the encodingType is set to Standard, then the default preset name is ‘Default720p’. Else if the encodingType is set to Premium1080p, the default preset is ‘Default1080p’.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stretchmode_nodejs">
+<a href="#stretchmode_nodejs" style="color: inherit; text-decoration: inherit;">stretch<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies how the input video will be resized to fit the desired output resolution(s). Default is None{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1303,7 +1443,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The encoding type for Live Event. This value is specified at creation time and cannot be updated. When encodingType is set to None, the service simply passes through the incoming video and audio layer(s) to the output. When encodingType is set to Standard or Premium1080p, a live encoder transcodes the incoming stream into multiple bit rates or layers. See https://go.microsoft.com/fwlink/?linkid=2095101 for more information. The encodingType of Basic is obsolete – if specified, the service will treat this as a Standard Live Event.{{% /md %}}</dd>
+    <dd>{{% md %}}Live event type. When encodingType is set to None, the service simply passes through the incoming video and audio layer(s) to the output. When encodingType is set to Standard or Premium1080p, a live encoder transcodes the incoming stream into multiple bitrates or layers. See https://go.microsoft.com/fwlink/?linkid=2095101 for more information. This property cannot be modified after the live event is created.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_frame_interval_python">
+<a href="#key_frame_interval_python" style="color: inherit; text-decoration: inherit;">key_<wbr>frame_<wbr>interval</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Use an ISO 8601 time value between 0.5 to 20 seconds to specify the output fragment length for the video and audio tracks of an encoding live event. For example, use PT2S to indicate 2 seconds. For the video track it also defines the key frame interval, or the length of a GoP (group of pictures).   If this value is not set for an encoding live event, the fragment duration defaults to 2 seconds. The value cannot be set for pass-through live events.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1314,6 +1464,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The optional encoding preset name, used when encodingType is not None. This value is specified at creation time and cannot be updated. If the encodingType is set to Standard, then the default preset name is ‘Default720p’. Else if the encodingType is set to Premium1080p, the default preset is ‘Default1080p’.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stretch_mode_python">
+<a href="#stretch_mode_python" style="color: inherit; text-decoration: inherit;">stretch_<wbr>mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies how the input video will be resized to fit the desired output resolution(s). Default is None{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1539,7 +1699,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The streaming protocol for the Live Event.  This is specified at creation time and cannot be updated.{{% /md %}}</dd>
+    <dd>{{% md %}}The input protocol for the live event. This is specified at creation time and cannot be updated.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1549,7 +1709,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#liveeventinputaccesscontrolresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Input<wbr>Access<wbr>Control<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The access control for LiveEvent Input.{{% /md %}}</dd>
+    <dd>{{% md %}}Access control for live event input.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1559,7 +1719,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A UUID in string form to uniquely identify the stream. This can be specified at creation time but cannot be updated.  If omitted, the service will generate a unique value.{{% /md %}}</dd>
+    <dd>{{% md %}}A UUID in string form to uniquely identify the stream. This can be specified at creation time but cannot be updated. If omitted, the service will generate a unique value.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1569,7 +1729,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#liveeventendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Endpoint<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The input endpoints for the Live Event.{{% /md %}}</dd>
+    <dd>{{% md %}}The input endpoints for the live event.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1579,7 +1739,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}ISO 8601 timespan duration of the key frame interval duration.{{% /md %}}</dd>
+    <dd>{{% md %}}ISO 8601 time duration of the key frame interval duration of the input. This value sets the EXT-X-TARGETDURATION property in the HLS output. For example, use PT2S to indicate 2 seconds. Leave the value empty for encoding live events.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1596,7 +1756,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The streaming protocol for the Live Event.  This is specified at creation time and cannot be updated.{{% /md %}}</dd>
+    <dd>{{% md %}}The input protocol for the live event. This is specified at creation time and cannot be updated.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1606,7 +1766,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#liveeventinputaccesscontrolresponse">Live<wbr>Event<wbr>Input<wbr>Access<wbr>Control<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The access control for LiveEvent Input.{{% /md %}}</dd>
+    <dd>{{% md %}}Access control for live event input.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1616,7 +1776,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A UUID in string form to uniquely identify the stream. This can be specified at creation time but cannot be updated.  If omitted, the service will generate a unique value.{{% /md %}}</dd>
+    <dd>{{% md %}}A UUID in string form to uniquely identify the stream. This can be specified at creation time but cannot be updated. If omitted, the service will generate a unique value.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1626,7 +1786,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#liveeventendpointresponse">[]Live<wbr>Event<wbr>Endpoint<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The input endpoints for the Live Event.{{% /md %}}</dd>
+    <dd>{{% md %}}The input endpoints for the live event.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1636,7 +1796,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}ISO 8601 timespan duration of the key frame interval duration.{{% /md %}}</dd>
+    <dd>{{% md %}}ISO 8601 time duration of the key frame interval duration of the input. This value sets the EXT-X-TARGETDURATION property in the HLS output. For example, use PT2S to indicate 2 seconds. Leave the value empty for encoding live events.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1653,7 +1813,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The streaming protocol for the Live Event.  This is specified at creation time and cannot be updated.{{% /md %}}</dd>
+    <dd>{{% md %}}The input protocol for the live event. This is specified at creation time and cannot be updated.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1663,7 +1823,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#liveeventinputaccesscontrolresponse">Live<wbr>Event<wbr>Input<wbr>Access<wbr>Control<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The access control for LiveEvent Input.{{% /md %}}</dd>
+    <dd>{{% md %}}Access control for live event input.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1673,7 +1833,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A UUID in string form to uniquely identify the stream. This can be specified at creation time but cannot be updated.  If omitted, the service will generate a unique value.{{% /md %}}</dd>
+    <dd>{{% md %}}A UUID in string form to uniquely identify the stream. This can be specified at creation time but cannot be updated. If omitted, the service will generate a unique value.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1683,7 +1843,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#liveeventendpointresponse">Live<wbr>Event<wbr>Endpoint<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The input endpoints for the Live Event.{{% /md %}}</dd>
+    <dd>{{% md %}}The input endpoints for the live event.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1693,7 +1853,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}ISO 8601 timespan duration of the key frame interval duration.{{% /md %}}</dd>
+    <dd>{{% md %}}ISO 8601 time duration of the key frame interval duration of the input. This value sets the EXT-X-TARGETDURATION property in the HLS output. For example, use PT2S to indicate 2 seconds. Leave the value empty for encoding live events.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1710,7 +1870,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The streaming protocol for the Live Event.  This is specified at creation time and cannot be updated.{{% /md %}}</dd>
+    <dd>{{% md %}}The input protocol for the live event. This is specified at creation time and cannot be updated.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1720,7 +1880,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#liveeventinputaccesscontrolresponse">Dict[Live<wbr>Event<wbr>Input<wbr>Access<wbr>Control<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The access control for LiveEvent Input.{{% /md %}}</dd>
+    <dd>{{% md %}}Access control for live event input.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1730,7 +1890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A UUID in string form to uniquely identify the stream. This can be specified at creation time but cannot be updated.  If omitted, the service will generate a unique value.{{% /md %}}</dd>
+    <dd>{{% md %}}A UUID in string form to uniquely identify the stream. This can be specified at creation time but cannot be updated. If omitted, the service will generate a unique value.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1740,7 +1900,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#liveeventendpointresponse">List[Live<wbr>Event<wbr>Endpoint<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The input endpoints for the Live Event.{{% /md %}}</dd>
+    <dd>{{% md %}}The input endpoints for the live event.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1750,7 +1910,245 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}ISO 8601 timespan duration of the key frame interval duration.{{% /md %}}</dd>
+    <dd>{{% md %}}ISO 8601 time duration of the key frame interval duration of the input. This value sets the EXT-X-TARGETDURATION property in the HLS output. For example, use PT2S to indicate 2 seconds. Leave the value empty for encoding live events.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="liveeventinputtrackselectionresponse">Live<wbr>Event<wbr>Input<wbr>Track<wbr>Selection<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operation_csharp">
+<a href="#operation_csharp" style="color: inherit; text-decoration: inherit;">Operation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Comparing operation. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="property_csharp">
+<a href="#property_csharp" style="color: inherit; text-decoration: inherit;">Property</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Property name to select. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Property value to select. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operation_go">
+<a href="#operation_go" style="color: inherit; text-decoration: inherit;">Operation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Comparing operation. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="property_go">
+<a href="#property_go" style="color: inherit; text-decoration: inherit;">Property</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Property name to select. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Property value to select. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operation_nodejs">
+<a href="#operation_nodejs" style="color: inherit; text-decoration: inherit;">operation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Comparing operation. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="property_nodejs">
+<a href="#property_nodejs" style="color: inherit; text-decoration: inherit;">property</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Property name to select. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Property value to select. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operation_python">
+<a href="#operation_python" style="color: inherit; text-decoration: inherit;">operation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Comparing operation. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="property_python">
+<a href="#property_python" style="color: inherit; text-decoration: inherit;">property</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Property name to select. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Property value to select. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="liveeventoutputtranscriptiontrackresponse">Live<wbr>Event<wbr>Output<wbr>Transcription<wbr>Track<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="trackname_csharp">
+<a href="#trackname_csharp" style="color: inherit; text-decoration: inherit;">Track<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The output track name. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="trackname_go">
+<a href="#trackname_go" style="color: inherit; text-decoration: inherit;">Track<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The output track name. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="trackname_nodejs">
+<a href="#trackname_nodejs" style="color: inherit; text-decoration: inherit;">track<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The output track name. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="trackname_python">
+<a href="#trackname_python" style="color: inherit; text-decoration: inherit;">track<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The output track name. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1857,7 +2255,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#liveeventpreviewaccesscontrolresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Preview<wbr>Access<wbr>Control<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The access control for LiveEvent preview.{{% /md %}}</dd>
+    <dd>{{% md %}}The access control for live event preview.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1867,7 +2265,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}An Alternative Media Identifier associated with the StreamingLocator created for the preview.  This value is specified at creation time and cannot be updated.  The identifier can be used in the CustomLicenseAcquisitionUrlTemplate or the CustomKeyAcquisitionUrlTemplate of the StreamingPolicy specified in the StreamingPolicyName field.{{% /md %}}</dd>
+    <dd>{{% md %}}An alternative media identifier associated with the streaming locator created for the preview. This value is specified at creation time and cannot be updated. The identifier can be used in the CustomLicenseAcquisitionUrlTemplate or the CustomKeyAcquisitionUrlTemplate of the StreamingPolicy specified in the StreamingPolicyName field.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1877,7 +2275,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#liveeventendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Endpoint<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The endpoints for preview.{{% /md %}}</dd>
+    <dd>{{% md %}}The endpoints for preview. Do not share the preview URL with the live event audience.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1887,7 +2285,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The identifier of the preview locator in Guid format.  Specifying this at creation time allows the caller to know the preview locator url before the event is created.  If omitted, the service will generate a random identifier.  This value cannot be updated once the live event is created.{{% /md %}}</dd>
+    <dd>{{% md %}}The identifier of the preview locator in Guid format. Specifying this at creation time allows the caller to know the preview locator url before the event is created. If omitted, the service will generate a random identifier. This value cannot be updated once the live event is created.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1897,7 +2295,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of streaming policy used for the LiveEvent preview.  This value is specified at creation time and cannot be updated.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of streaming policy used for the live event preview. This value is specified at creation time and cannot be updated.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1914,7 +2312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#liveeventpreviewaccesscontrolresponse">Live<wbr>Event<wbr>Preview<wbr>Access<wbr>Control<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The access control for LiveEvent preview.{{% /md %}}</dd>
+    <dd>{{% md %}}The access control for live event preview.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1924,7 +2322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}An Alternative Media Identifier associated with the StreamingLocator created for the preview.  This value is specified at creation time and cannot be updated.  The identifier can be used in the CustomLicenseAcquisitionUrlTemplate or the CustomKeyAcquisitionUrlTemplate of the StreamingPolicy specified in the StreamingPolicyName field.{{% /md %}}</dd>
+    <dd>{{% md %}}An alternative media identifier associated with the streaming locator created for the preview. This value is specified at creation time and cannot be updated. The identifier can be used in the CustomLicenseAcquisitionUrlTemplate or the CustomKeyAcquisitionUrlTemplate of the StreamingPolicy specified in the StreamingPolicyName field.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1934,7 +2332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#liveeventendpointresponse">[]Live<wbr>Event<wbr>Endpoint<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The endpoints for preview.{{% /md %}}</dd>
+    <dd>{{% md %}}The endpoints for preview. Do not share the preview URL with the live event audience.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1944,7 +2342,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The identifier of the preview locator in Guid format.  Specifying this at creation time allows the caller to know the preview locator url before the event is created.  If omitted, the service will generate a random identifier.  This value cannot be updated once the live event is created.{{% /md %}}</dd>
+    <dd>{{% md %}}The identifier of the preview locator in Guid format. Specifying this at creation time allows the caller to know the preview locator url before the event is created. If omitted, the service will generate a random identifier. This value cannot be updated once the live event is created.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1954,7 +2352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of streaming policy used for the LiveEvent preview.  This value is specified at creation time and cannot be updated.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of streaming policy used for the live event preview. This value is specified at creation time and cannot be updated.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1971,7 +2369,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#liveeventpreviewaccesscontrolresponse">Live<wbr>Event<wbr>Preview<wbr>Access<wbr>Control<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The access control for LiveEvent preview.{{% /md %}}</dd>
+    <dd>{{% md %}}The access control for live event preview.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1981,7 +2379,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}An Alternative Media Identifier associated with the StreamingLocator created for the preview.  This value is specified at creation time and cannot be updated.  The identifier can be used in the CustomLicenseAcquisitionUrlTemplate or the CustomKeyAcquisitionUrlTemplate of the StreamingPolicy specified in the StreamingPolicyName field.{{% /md %}}</dd>
+    <dd>{{% md %}}An alternative media identifier associated with the streaming locator created for the preview. This value is specified at creation time and cannot be updated. The identifier can be used in the CustomLicenseAcquisitionUrlTemplate or the CustomKeyAcquisitionUrlTemplate of the StreamingPolicy specified in the StreamingPolicyName field.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1991,7 +2389,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#liveeventendpointresponse">Live<wbr>Event<wbr>Endpoint<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The endpoints for preview.{{% /md %}}</dd>
+    <dd>{{% md %}}The endpoints for preview. Do not share the preview URL with the live event audience.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2001,7 +2399,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The identifier of the preview locator in Guid format.  Specifying this at creation time allows the caller to know the preview locator url before the event is created.  If omitted, the service will generate a random identifier.  This value cannot be updated once the live event is created.{{% /md %}}</dd>
+    <dd>{{% md %}}The identifier of the preview locator in Guid format. Specifying this at creation time allows the caller to know the preview locator url before the event is created. If omitted, the service will generate a random identifier. This value cannot be updated once the live event is created.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2011,7 +2409,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of streaming policy used for the LiveEvent preview.  This value is specified at creation time and cannot be updated.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of streaming policy used for the live event preview. This value is specified at creation time and cannot be updated.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2028,7 +2426,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#liveeventpreviewaccesscontrolresponse">Dict[Live<wbr>Event<wbr>Preview<wbr>Access<wbr>Control<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The access control for LiveEvent preview.{{% /md %}}</dd>
+    <dd>{{% md %}}The access control for live event preview.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2038,7 +2436,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}An Alternative Media Identifier associated with the StreamingLocator created for the preview.  This value is specified at creation time and cannot be updated.  The identifier can be used in the CustomLicenseAcquisitionUrlTemplate or the CustomKeyAcquisitionUrlTemplate of the StreamingPolicy specified in the StreamingPolicyName field.{{% /md %}}</dd>
+    <dd>{{% md %}}An alternative media identifier associated with the streaming locator created for the preview. This value is specified at creation time and cannot be updated. The identifier can be used in the CustomLicenseAcquisitionUrlTemplate or the CustomKeyAcquisitionUrlTemplate of the StreamingPolicy specified in the StreamingPolicyName field.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2048,7 +2446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#liveeventendpointresponse">List[Live<wbr>Event<wbr>Endpoint<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The endpoints for preview.{{% /md %}}</dd>
+    <dd>{{% md %}}The endpoints for preview. Do not share the preview URL with the live event audience.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2058,7 +2456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The identifier of the preview locator in Guid format.  Specifying this at creation time allows the caller to know the preview locator url before the event is created.  If omitted, the service will generate a random identifier.  This value cannot be updated once the live event is created.{{% /md %}}</dd>
+    <dd>{{% md %}}The identifier of the preview locator in Guid format. Specifying this at creation time allows the caller to know the preview locator url before the event is created. If omitted, the service will generate a random identifier. This value cannot be updated once the live event is created.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2068,7 +2466,166 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of streaming policy used for the LiveEvent preview.  This value is specified at creation time and cannot be updated.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of streaming policy used for the live event preview. This value is specified at creation time and cannot be updated.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="liveeventtranscriptionresponse">Live<wbr>Event<wbr>Transcription<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inputtrackselection_csharp">
+<a href="#inputtrackselection_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Track<wbr>Selection</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#liveeventinputtrackselectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Input<wbr>Track<wbr>Selection<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Provides a mechanism to select the audio track in the input live feed, to which speech-to-text transcription is applied. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="language_csharp">
+<a href="#language_csharp" style="color: inherit; text-decoration: inherit;">Language</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the language (locale) to be used for speech-to-text transcription – it should match the spoken language in the audio track. The value should be in BCP-47 format (e.g: 'en-US'). See https://go.microsoft.com/fwlink/?linkid=2133742 for more information about the live transcription feature and the list of supported languages.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="outputtranscriptiontrack_csharp">
+<a href="#outputtranscriptiontrack_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Transcription<wbr>Track</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#liveeventoutputtranscriptiontrackresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Output<wbr>Transcription<wbr>Track<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Describes a transcription track in the output of a live event, generated using speech-to-text transcription. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inputtrackselection_go">
+<a href="#inputtrackselection_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Track<wbr>Selection</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#liveeventinputtrackselectionresponse">[]Live<wbr>Event<wbr>Input<wbr>Track<wbr>Selection<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Provides a mechanism to select the audio track in the input live feed, to which speech-to-text transcription is applied. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="language_go">
+<a href="#language_go" style="color: inherit; text-decoration: inherit;">Language</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the language (locale) to be used for speech-to-text transcription – it should match the spoken language in the audio track. The value should be in BCP-47 format (e.g: 'en-US'). See https://go.microsoft.com/fwlink/?linkid=2133742 for more information about the live transcription feature and the list of supported languages.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="outputtranscriptiontrack_go">
+<a href="#outputtranscriptiontrack_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Transcription<wbr>Track</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#liveeventoutputtranscriptiontrackresponse">Live<wbr>Event<wbr>Output<wbr>Transcription<wbr>Track<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Describes a transcription track in the output of a live event, generated using speech-to-text transcription. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inputtrackselection_nodejs">
+<a href="#inputtrackselection_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Track<wbr>Selection</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#liveeventinputtrackselectionresponse">Live<wbr>Event<wbr>Input<wbr>Track<wbr>Selection<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Provides a mechanism to select the audio track in the input live feed, to which speech-to-text transcription is applied. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="language_nodejs">
+<a href="#language_nodejs" style="color: inherit; text-decoration: inherit;">language</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the language (locale) to be used for speech-to-text transcription – it should match the spoken language in the audio track. The value should be in BCP-47 format (e.g: 'en-US'). See https://go.microsoft.com/fwlink/?linkid=2133742 for more information about the live transcription feature and the list of supported languages.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="outputtranscriptiontrack_nodejs">
+<a href="#outputtranscriptiontrack_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Transcription<wbr>Track</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#liveeventoutputtranscriptiontrackresponse">Live<wbr>Event<wbr>Output<wbr>Transcription<wbr>Track<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Describes a transcription track in the output of a live event, generated using speech-to-text transcription. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inputtrackselection_python">
+<a href="#inputtrackselection_python" style="color: inherit; text-decoration: inherit;">input<wbr>Track<wbr>Selection</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#liveeventinputtrackselectionresponse">List[Live<wbr>Event<wbr>Input<wbr>Track<wbr>Selection<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Provides a mechanism to select the audio track in the input live feed, to which speech-to-text transcription is applied. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="language_python">
+<a href="#language_python" style="color: inherit; text-decoration: inherit;">language</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the language (locale) to be used for speech-to-text transcription – it should match the spoken language in the audio track. The value should be in BCP-47 format (e.g: 'en-US'). See https://go.microsoft.com/fwlink/?linkid=2133742 for more information about the live transcription feature and the list of supported languages.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="outputtranscriptiontrack_python">
+<a href="#outputtranscriptiontrack_python" style="color: inherit; text-decoration: inherit;">output<wbr>Transcription<wbr>Track</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#liveeventoutputtranscriptiontrackresponse">Dict[Live<wbr>Event<wbr>Output<wbr>Transcription<wbr>Track<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Describes a transcription track in the output of a live event, generated using speech-to-text transcription. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

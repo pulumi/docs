@@ -46,7 +46,7 @@ class MyStack : Stack
 package main
 
 import (
-	hybridnetwork "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/hybridnetwork/v20200101preview"
+	hybridnetwork "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hybridnetwork/v20200101preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

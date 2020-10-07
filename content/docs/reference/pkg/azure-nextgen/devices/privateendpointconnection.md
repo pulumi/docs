@@ -29,6 +29,14 @@ class MyStack : Stack
         var privateEndpointConnection = new AzureNextGen.Devices.Latest.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.Devices.Latest.PrivateEndpointConnectionArgs
         {
             PrivateEndpointConnectionName = "myPrivateEndpointConnection",
+            Properties = new AzureNextGen.Devices.Latest.Inputs.PrivateEndpointConnectionPropertiesArgs
+            {
+                PrivateLinkServiceConnectionState = new AzureNextGen.Devices.Latest.Inputs.PrivateLinkServiceConnectionStateArgs
+                {
+                    Description = "Approved by johndoe@contoso.com",
+                    Status = "Approved",
+                },
+            },
             ResourceGroupName = "myResourceGroup",
             ResourceName = "testHub",
         });
@@ -46,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	devices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/devices/latest"
+	devices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/devices/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -54,8 +62,14 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := devices.NewPrivateEndpointConnection(ctx, "privateEndpointConnection", &devices.PrivateEndpointConnectionArgs{
 			PrivateEndpointConnectionName: pulumi.String("myPrivateEndpointConnection"),
-			ResourceGroupName:             pulumi.String("myResourceGroup"),
-			ResourceName:                  pulumi.String("testHub"),
+			Properties: &devices.PrivateEndpointConnectionPropertiesArgs{
+				PrivateLinkServiceConnectionState: &devices.PrivateLinkServiceConnectionStateArgs{
+					Description: pulumi.String("Approved by johndoe@contoso.com"),
+					Status:      pulumi.String("Approved"),
+				},
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			ResourceName:      pulumi.String("testHub"),
 		})
 		if err != nil {
 			return err
@@ -76,6 +90,12 @@ import pulumi_azure_nextgen as azure_nextgen
 
 private_endpoint_connection = azure_nextgen.devices.latest.PrivateEndpointConnection("privateEndpointConnection",
     private_endpoint_connection_name="myPrivateEndpointConnection",
+    properties={
+        "privateLinkServiceConnectionState": {
+            "description": "Approved by johndoe@contoso.com",
+            "status": "Approved",
+        },
+    },
     resource_group_name="myResourceGroup",
     resource_name="testHub")
 
@@ -91,6 +111,12 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const privateEndpointConnection = new azure_nextgen.devices.latest.PrivateEndpointConnection("privateEndpointConnection", {
     privateEndpointConnectionName: "myPrivateEndpointConnection",
+    properties: {
+        privateLinkServiceConnectionState: {
+            description: "Approved by johndoe@contoso.com",
+            status: "Approved",
+        },
+    },
     resourceGroupName: "myResourceGroup",
     resourceName: "testHub",
 });

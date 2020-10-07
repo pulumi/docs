@@ -47,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	devices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/devices/latest"
+	devices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/devices/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

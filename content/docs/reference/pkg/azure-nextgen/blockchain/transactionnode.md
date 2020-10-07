@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	blockchain "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/blockchain/v20180601preview"
+	blockchain "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/blockchain/v20180601preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

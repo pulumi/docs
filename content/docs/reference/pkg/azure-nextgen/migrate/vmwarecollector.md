@@ -29,6 +29,21 @@ class MyStack : Stack
         {
             ETag = "\"01003d32-0000-0d00-0000-5d74d2e50000\"",
             ProjectName = "abgoyalWEselfhostb72bproject",
+            Properties = new AzureNextGen.Migrate.Latest.Inputs.CollectorPropertiesArgs
+            {
+                AgentProperties = new AzureNextGen.Migrate.Latest.Inputs.CollectorAgentPropertiesArgs
+                {
+                    SpnDetails = new AzureNextGen.Migrate.Latest.Inputs.CollectorBodyAgentSpnPropertiesArgs
+                    {
+                        ApplicationId = "fc717575-8173-4b21-92a5-658b655e613e",
+                        Audience = "https://72f988bf-86f1-41af-91ab-2d7cd011db47/PortalvCenterbc2fagentauthaadapp",
+                        Authority = "https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47",
+                        ObjectId = "29d94f38-db94-4980-aec0-0cfd55ab1cd0",
+                        TenantId = "72f988bf-86f1-41af-91ab-2d7cd011db47",
+                    },
+                },
+                DiscoverySiteId = "/subscriptions/6393a73f-8d55-47ef-b6dd-179b3e0c7910/resourceGroups/abgoyal-westEurope/providers/Microsoft.OffAzure/VMwareSites/PortalvCenterbc2fsite",
+            },
             ResourceGroupName = "abgoyal-westEurope",
             VmWareCollectorName = "PortalvCenterbc2fcollector",
         });
@@ -46,15 +61,27 @@ class MyStack : Stack
 package main
 
 import (
-	migrate "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/migrate/latest"
+	migrate "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/migrate/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := migrate.NewVMwareCollector(ctx, "vMwareCollector", &migrate.VMwareCollectorArgs{
-			ETag:                pulumi.String("\"01003d32-0000-0d00-0000-5d74d2e50000\""),
-			ProjectName:         pulumi.String("abgoyalWEselfhostb72bproject"),
+			ETag:        pulumi.String("\"01003d32-0000-0d00-0000-5d74d2e50000\""),
+			ProjectName: pulumi.String("abgoyalWEselfhostb72bproject"),
+			Properties: &migrate.CollectorPropertiesArgs{
+				AgentProperties: &migrate.CollectorAgentPropertiesArgs{
+					SpnDetails: &migrate.CollectorBodyAgentSpnPropertiesArgs{
+						ApplicationId: pulumi.String("fc717575-8173-4b21-92a5-658b655e613e"),
+						Audience:      pulumi.String("https://72f988bf-86f1-41af-91ab-2d7cd011db47/PortalvCenterbc2fagentauthaadapp"),
+						Authority:     pulumi.String("https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47"),
+						ObjectId:      pulumi.String("29d94f38-db94-4980-aec0-0cfd55ab1cd0"),
+						TenantId:      pulumi.String("72f988bf-86f1-41af-91ab-2d7cd011db47"),
+					},
+				},
+				DiscoverySiteId: pulumi.String("/subscriptions/6393a73f-8d55-47ef-b6dd-179b3e0c7910/resourceGroups/abgoyal-westEurope/providers/Microsoft.OffAzure/VMwareSites/PortalvCenterbc2fsite"),
+			},
 			ResourceGroupName:   pulumi.String("abgoyal-westEurope"),
 			VmWareCollectorName: pulumi.String("PortalvCenterbc2fcollector"),
 		})
@@ -78,6 +105,18 @@ import pulumi_azure_nextgen as azure_nextgen
 v_mware_collector = azure_nextgen.migrate.latest.VMwareCollector("vMwareCollector",
     e_tag="\"01003d32-0000-0d00-0000-5d74d2e50000\"",
     project_name="abgoyalWEselfhostb72bproject",
+    properties={
+        "agentProperties": {
+            "spnDetails": {
+                "applicationId": "fc717575-8173-4b21-92a5-658b655e613e",
+                "audience": "https://72f988bf-86f1-41af-91ab-2d7cd011db47/PortalvCenterbc2fagentauthaadapp",
+                "authority": "https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47",
+                "objectId": "29d94f38-db94-4980-aec0-0cfd55ab1cd0",
+                "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+            },
+        },
+        "discoverySiteId": "/subscriptions/6393a73f-8d55-47ef-b6dd-179b3e0c7910/resourceGroups/abgoyal-westEurope/providers/Microsoft.OffAzure/VMwareSites/PortalvCenterbc2fsite",
+    },
     resource_group_name="abgoyal-westEurope",
     vm_ware_collector_name="PortalvCenterbc2fcollector")
 
@@ -94,6 +133,18 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const vMwareCollector = new azure_nextgen.migrate.latest.VMwareCollector("vMwareCollector", {
     eTag: "\"01003d32-0000-0d00-0000-5d74d2e50000\"",
     projectName: "abgoyalWEselfhostb72bproject",
+    properties: {
+        agentProperties: {
+            spnDetails: {
+                applicationId: "fc717575-8173-4b21-92a5-658b655e613e",
+                audience: "https://72f988bf-86f1-41af-91ab-2d7cd011db47/PortalvCenterbc2fagentauthaadapp",
+                authority: "https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47",
+                objectId: "29d94f38-db94-4980-aec0-0cfd55ab1cd0",
+                tenantId: "72f988bf-86f1-41af-91ab-2d7cd011db47",
+            },
+        },
+        discoverySiteId: "/subscriptions/6393a73f-8d55-47ef-b6dd-179b3e0c7910/resourceGroups/abgoyal-westEurope/providers/Microsoft.OffAzure/VMwareSites/PortalvCenterbc2fsite",
+    },
     resourceGroupName: "abgoyal-westEurope",
     vmWareCollectorName: "PortalvCenterbc2fcollector",
 });

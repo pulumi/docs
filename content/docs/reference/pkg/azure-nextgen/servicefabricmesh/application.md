@@ -36,7 +36,48 @@ class MyStack : Stack
             {
                 new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.ServiceResourceDescriptionArgs
                 {
+                    CodePackages = 
+                    {
+                        new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.ContainerCodePackagePropertiesArgs
+                        {
+                            Endpoints = 
+                            {
+                                new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.EndpointPropertiesArgs
+                                {
+                                    Name = "helloWorldListener",
+                                    Port = 80,
+                                },
+                            },
+                            Image = "seabreeze/sbz-helloworld:1.0-alpine",
+                            Name = "helloWorldCode",
+                            Resources = new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.ResourceRequirementsArgs
+                            {
+                                Requests = new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.ResourceRequestsArgs
+                                {
+                                    Cpu = 1,
+                                    MemoryInGB = 1,
+                                },
+                            },
+                        },
+                    },
+                    Description = "SeaBreeze Hello World Service.",
                     Name = "helloWorldService",
+                    NetworkRefs = 
+                    {
+                        new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.NetworkRefArgs
+                        {
+                            EndpointRefs = 
+                            {
+                                new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.EndpointRefArgs
+                                {
+                                    Name = "helloWorldListener",
+                                },
+                            },
+                            Name = "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/sbz_demo/providers/Microsoft.ServiceFabricMesh/networks/sampleNetwork",
+                        },
+                    },
+                    OsType = "Linux",
+                    ReplicaCount = 1,
                 },
             },
             Tags = ,
@@ -55,7 +96,7 @@ class MyStack : Stack
 package main
 
 import (
-	servicefabricmesh "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/servicefabricmesh/v20180901preview"
+	servicefabricmesh "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabricmesh/v20180901preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -68,7 +109,38 @@ func main() {
 			ResourceGroupName:       pulumi.String("sbz_demo"),
 			Services: servicefabricmesh.ServiceResourceDescriptionArray{
 				&servicefabricmesh.ServiceResourceDescriptionArgs{
-					Name: pulumi.String("helloWorldService"),
+					CodePackages: servicefabricmesh.ContainerCodePackagePropertiesArray{
+						&servicefabricmesh.ContainerCodePackagePropertiesArgs{
+							Endpoints: servicefabricmesh.EndpointPropertiesArray{
+								&servicefabricmesh.EndpointPropertiesArgs{
+									Name: pulumi.String("helloWorldListener"),
+									Port: pulumi.Int(80),
+								},
+							},
+							Image: pulumi.String("seabreeze/sbz-helloworld:1.0-alpine"),
+							Name:  pulumi.String("helloWorldCode"),
+							Resources: &servicefabricmesh.ResourceRequirementsArgs{
+								Requests: &servicefabricmesh.ResourceRequestsArgs{
+									Cpu:        pulumi.Float64(1),
+									MemoryInGB: pulumi.Float64(1),
+								},
+							},
+						},
+					},
+					Description: pulumi.String("SeaBreeze Hello World Service."),
+					Name:        pulumi.String("helloWorldService"),
+					NetworkRefs: servicefabricmesh.NetworkRefArray{
+						&servicefabricmesh.NetworkRefArgs{
+							EndpointRefs: servicefabricmesh.EndpointRefArray{
+								&servicefabricmesh.EndpointRefArgs{
+									Name: pulumi.String("helloWorldListener"),
+								},
+							},
+							Name: pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/sbz_demo/providers/Microsoft.ServiceFabricMesh/networks/sampleNetwork"),
+						},
+					},
+					OsType:       pulumi.String("Linux"),
+					ReplicaCount: pulumi.Int(1),
 				},
 			},
 			Tags: nil,
@@ -96,7 +168,30 @@ application = azure_nextgen.servicefabricmesh.v20180901preview.Application("appl
     location="EastUS",
     resource_group_name="sbz_demo",
     services=[{
+        "codePackages": [{
+            "endpoints": [{
+                "name": "helloWorldListener",
+                "port": 80,
+            }],
+            "image": "seabreeze/sbz-helloworld:1.0-alpine",
+            "name": "helloWorldCode",
+            "resources": {
+                "requests": {
+                    "cpu": 1,
+                    "memoryInGB": 1,
+                },
+            },
+        }],
+        "description": "SeaBreeze Hello World Service.",
         "name": "helloWorldService",
+        "networkRefs": [{
+            "endpointRefs": [{
+                "name": "helloWorldListener",
+            }],
+            "name": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/sbz_demo/providers/Microsoft.ServiceFabricMesh/networks/sampleNetwork",
+        }],
+        "osType": "Linux",
+        "replicaCount": 1,
     }],
     tags={})
 
@@ -116,7 +211,30 @@ const application = new azure_nextgen.servicefabricmesh.v20180901preview.Applica
     location: "EastUS",
     resourceGroupName: "sbz_demo",
     services: [{
+        codePackages: [{
+            endpoints: [{
+                name: "helloWorldListener",
+                port: 80,
+            }],
+            image: "seabreeze/sbz-helloworld:1.0-alpine",
+            name: "helloWorldCode",
+            resources: {
+                requests: {
+                    cpu: 1,
+                    memoryInGB: 1,
+                },
+            },
+        }],
+        description: "SeaBreeze Hello World Service.",
         name: "helloWorldService",
+        networkRefs: [{
+            endpointRefs: [{
+                name: "helloWorldListener",
+            }],
+            name: "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/sbz_demo/providers/Microsoft.ServiceFabricMesh/networks/sampleNetwork",
+        }],
+        osType: "Linux",
+        replicaCount: 1,
     }],
     tags: {},
 });
@@ -2940,7 +3058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fluentdconfigurl_csharp" style="color: inherit; text-decoration: inherit;">Fluentd<wbr>Config<wbr>Url</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}Azure Internal monitoring agent fluentd configuration.{{% /md %}}</dd>
 
@@ -3017,7 +3135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fluentdconfigurl_go" style="color: inherit; text-decoration: inherit;">Fluentd<wbr>Config<wbr>Url</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}Azure Internal monitoring agent fluentd configuration.{{% /md %}}</dd>
 
@@ -3094,7 +3212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fluentdconfigurl_nodejs" style="color: inherit; text-decoration: inherit;">fluentd<wbr>Config<wbr>Url</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}Azure Internal monitoring agent fluentd configuration.{{% /md %}}</dd>
 
@@ -3171,7 +3289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fluentdconfigurl_python" style="color: inherit; text-decoration: inherit;">fluentd<wbr>Config<wbr>Url</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}Azure Internal monitoring agent fluentd configuration.{{% /md %}}</dd>
 
@@ -3259,7 +3377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fluentdconfigurl_csharp" style="color: inherit; text-decoration: inherit;">Fluentd<wbr>Config<wbr>Url</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}Azure Internal monitoring agent fluentd configuration.{{% /md %}}</dd>
 
@@ -3336,7 +3454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fluentdconfigurl_go" style="color: inherit; text-decoration: inherit;">Fluentd<wbr>Config<wbr>Url</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}Azure Internal monitoring agent fluentd configuration.{{% /md %}}</dd>
 
@@ -3413,7 +3531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fluentdconfigurl_nodejs" style="color: inherit; text-decoration: inherit;">fluentd<wbr>Config<wbr>Url</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}Azure Internal monitoring agent fluentd configuration.{{% /md %}}</dd>
 
@@ -3490,7 +3608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fluentdconfigurl_python" style="color: inherit; text-decoration: inherit;">fluentd<wbr>Config<wbr>Url</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}Azure Internal monitoring agent fluentd configuration.{{% /md %}}</dd>
 

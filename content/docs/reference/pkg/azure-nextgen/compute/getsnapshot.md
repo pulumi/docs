@@ -194,6 +194,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="diskstate_csharp">
+<a href="#diskstate_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The state of the snapshot.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span> 
@@ -281,16 +291,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="diskstate_csharp">
-<a href="#diskstate_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The state of the snapshot.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -401,6 +401,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="diskstate_go">
+<a href="#diskstate_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The state of the snapshot.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span> 
@@ -488,16 +498,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="diskstate_go">
-<a href="#diskstate_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The state of the snapshot.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -608,6 +608,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="diskstate_nodejs">
+<a href="#diskstate_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The state of the snapshot.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span> 
@@ -695,16 +705,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="diskstate_nodejs">
-<a href="#diskstate_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The state of the snapshot.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -815,6 +815,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="disk_state_python">
+<a href="#disk_state_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The state of the snapshot.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span> 
@@ -902,16 +912,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="disk_state_python">
-<a href="#disk_state_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>state</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The state of the snapshot.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">

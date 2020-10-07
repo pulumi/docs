@@ -60,7 +60,7 @@ class MyStack : Stack
 package main
 
 import (
-	kubernetesconfiguration "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/kubernetesconfiguration/v20191101preview"
+	kubernetesconfiguration "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/kubernetesconfiguration/v20191101preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

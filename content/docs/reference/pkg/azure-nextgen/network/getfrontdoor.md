@@ -214,6 +214,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="resourcestate_csharp">
+<a href="#resourcestate_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status of the Front Door.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="rulesengines_csharp">
 <a href="#rulesengines_csharp" style="color: inherit; text-decoration: inherit;">Rules<wbr>Engines</a>
 </span> 
@@ -314,16 +324,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="resourcestate_csharp">
-<a href="#resourcestate_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status of the Front Door.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="routingrules_csharp">
 <a href="#routingrules_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Rules</a>
 </span> 
@@ -388,6 +388,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Provisioning state of the Front Door.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="resourcestate_go">
+<a href="#resourcestate_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status of the Front Door.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -491,16 +501,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="resourcestate_go">
-<a href="#resourcestate_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status of the Front Door.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="routingrules_go">
 <a href="#routingrules_go" style="color: inherit; text-decoration: inherit;">Routing<wbr>Rules</a>
 </span> 
@@ -565,6 +565,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Provisioning state of the Front Door.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="resourcestate_nodejs">
+<a href="#resourcestate_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status of the Front Door.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -668,16 +678,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="resourcestate_nodejs">
-<a href="#resourcestate_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status of the Front Door.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="routingrules_nodejs">
 <a href="#routingrules_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Rules</a>
 </span> 
@@ -742,6 +742,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Provisioning state of the Front Door.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="resource_state_python">
+<a href="#resource_state_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status of the Front Door.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -845,16 +855,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="resource_state_python">
-<a href="#resource_state_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status of the Front Door.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="routing_rules_python">
 <a href="#routing_rules_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>rules</a>
 </span> 
@@ -896,6 +896,16 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcestate_csharp">
+<a href="#resourcestate_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -957,22 +967,22 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resourcestate_csharp">
-<a href="#resourcestate_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcestate_go">
+<a href="#resourcestate_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1034,22 +1044,22 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resourcestate_go">
-<a href="#resourcestate_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcestate_nodejs">
+<a href="#resourcestate_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1111,22 +1121,22 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resourcestate_nodejs">
-<a href="#resourcestate_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resource_state_python">
+<a href="#resource_state_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1187,16 +1197,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resource_state_python">
-<a href="#resource_state_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2603,6 +2603,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="resourcestate_csharp">
+<a href="#resourcestate_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
@@ -2640,16 +2650,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resourcestate_csharp">
-<a href="#resourcestate_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2720,6 +2720,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="resourcestate_go">
+<a href="#resourcestate_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
@@ -2757,16 +2767,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resourcestate_go">
-<a href="#resourcestate_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2837,6 +2837,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="resourcestate_nodejs">
+<a href="#resourcestate_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
@@ -2874,16 +2884,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resourcestate_nodejs">
-<a href="#resourcestate_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2954,6 +2954,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="resource_state_python">
+<a href="#resource_state_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
@@ -2991,16 +3001,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resource_state_python">
-<a href="#resource_state_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3290,6 +3290,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="resourcestate_csharp">
+<a href="#resourcestate_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
@@ -3368,22 +3378,22 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Protocol scheme to use for this probe{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resourcestate_csharp">
-<a href="#resourcestate_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcestate_go">
+<a href="#resourcestate_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3465,22 +3475,22 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Protocol scheme to use for this probe{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resourcestate_go">
-<a href="#resourcestate_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcestate_nodejs">
+<a href="#resourcestate_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3562,22 +3572,22 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Protocol scheme to use for this probe{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resourcestate_nodejs">
-<a href="#resourcestate_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resource_state_python">
+<a href="#resource_state_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3658,16 +3668,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Protocol scheme to use for this probe{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resource_state_python">
-<a href="#resource_state_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3768,6 +3768,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="resourcestate_csharp">
+<a href="#resourcestate_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
@@ -3808,16 +3818,6 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resourcestate_csharp">
-<a href="#resourcestate_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="samplesize_csharp">
 <a href="#samplesize_csharp" style="color: inherit; text-decoration: inherit;">Sample<wbr>Size</a>
 </span> 
@@ -3842,6 +3842,16 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcestate_go">
+<a href="#resourcestate_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3885,16 +3895,6 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resourcestate_go">
-<a href="#resourcestate_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="samplesize_go">
 <a href="#samplesize_go" style="color: inherit; text-decoration: inherit;">Sample<wbr>Size</a>
 </span> 
@@ -3919,6 +3919,16 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcestate_nodejs">
+<a href="#resourcestate_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3962,16 +3972,6 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resourcestate_nodejs">
-<a href="#resourcestate_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="samplesize_nodejs">
 <a href="#samplesize_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Size</a>
 </span> 
@@ -3996,6 +3996,16 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resource_state_python">
+<a href="#resource_state_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4036,16 +4046,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resource_state_python">
-<a href="#resource_state_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4366,6 +4366,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="resourcestate_csharp">
+<a href="#resourcestate_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
@@ -4436,16 +4446,6 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resourcestate_csharp">
-<a href="#resourcestate_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="routeconfiguration_csharp">
 <a href="#routeconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Configuration</a>
 </span> 
@@ -4480,6 +4480,16 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcestate_go">
+<a href="#resourcestate_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4553,16 +4563,6 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resourcestate_go">
-<a href="#resourcestate_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="routeconfiguration_go">
 <a href="#routeconfiguration_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Configuration</a>
 </span> 
@@ -4597,6 +4597,16 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcestate_nodejs">
+<a href="#resourcestate_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4670,16 +4680,6 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resourcestate_nodejs">
-<a href="#resourcestate_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="routeconfiguration_nodejs">
 <a href="#routeconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Configuration</a>
 </span> 
@@ -4714,6 +4714,16 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resource_state_python">
+<a href="#resource_state_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4784,16 +4794,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The route patterns of the rule.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resource_state_python">
-<a href="#resource_state_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5382,16 +5382,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="resourcestate_csharp">
 <a href="#resourcestate_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
 </span> 
@@ -5399,6 +5389,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Resource status.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5439,16 +5439,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="resourcestate_go">
 <a href="#resourcestate_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
 </span> 
@@ -5456,6 +5446,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Resource status.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5496,16 +5496,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="resourcestate_nodejs">
 <a href="#resourcestate_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>State</a>
 </span> 
@@ -5513,6 +5503,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Resource status.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5553,16 +5553,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="resource_state_python">
 <a href="#resource_state_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state</a>
 </span> 
@@ -5570,6 +5560,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Resource status.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5846,7 +5846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5863,7 +5863,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5880,7 +5880,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5897,7 +5897,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

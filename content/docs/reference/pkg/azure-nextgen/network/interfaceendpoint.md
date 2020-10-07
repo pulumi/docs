@@ -12,6 +12,120 @@ meta_desc: "Explore the InterfaceEndpoint resource of the network module, includ
 
 Interface endpoint resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create interface endpoint
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var interfaceEndpoint = new AzureNextGen.Network.Latest.InterfaceEndpoint("interfaceEndpoint", new AzureNextGen.Network.Latest.InterfaceEndpointArgs
+        {
+            EndpointService = new AzureNextGen.Network.Latest.Inputs.EndpointServiceArgs
+            {
+                Id = "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Provider/resourceType/resourceName",
+            },
+            Fqdn = "uniqueIdentifier.fqdn.windows.net",
+            InterfaceEndpointName = "testIe",
+            ResourceGroupName = "rg1",
+            Subnet = new AzureNextGen.Network.Latest.Inputs.SubnetArgs
+            {
+                Id = "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewInterfaceEndpoint(ctx, "interfaceEndpoint", &network.InterfaceEndpointArgs{
+			EndpointService: &network.EndpointServiceArgs{
+				Id: pulumi.String("/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Provider/resourceType/resourceName"),
+			},
+			Fqdn:                  pulumi.String("uniqueIdentifier.fqdn.windows.net"),
+			InterfaceEndpointName: pulumi.String("testIe"),
+			ResourceGroupName:     pulumi.String("rg1"),
+			Subnet: &network.SubnetArgs{
+				Id: pulumi.String("/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+interface_endpoint = azure_nextgen.network.latest.InterfaceEndpoint("interfaceEndpoint",
+    endpoint_service={
+        "id": "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Provider/resourceType/resourceName",
+    },
+    fqdn="uniqueIdentifier.fqdn.windows.net",
+    interface_endpoint_name="testIe",
+    resource_group_name="rg1",
+    subnet={
+        "id": "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const interfaceEndpoint = new azure_nextgen.network.latest.InterfaceEndpoint("interfaceEndpoint", {
+    endpointService: {
+        id: "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Provider/resourceType/resourceName",
+    },
+    fqdn: "uniqueIdentifier.fqdn.windows.net",
+    interfaceEndpointName: "testIe",
+    resourceGroupName: "rg1",
+    subnet: {
+        id: "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a InterfaceEndpoint Resource {#create}
@@ -16282,7 +16396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -16299,7 +16413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -16316,7 +16430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -16333,7 +16447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

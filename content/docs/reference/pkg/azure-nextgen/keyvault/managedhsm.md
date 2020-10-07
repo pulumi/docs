@@ -30,6 +30,17 @@ class MyStack : Stack
         {
             Location = "westus",
             Name = "hsm1",
+            Properties = new AzureNextGen.KeyVault.V20200401Preview.Inputs.ManagedHsmPropertiesArgs
+            {
+                EnablePurgeProtection = true,
+                EnableSoftDelete = true,
+                InitialAdminObjectIds = 
+                {
+                    "00000000-0000-0000-0000-000000000000",
+                },
+                SoftDeleteRetentionInDays = 90,
+                TenantId = "00000000-0000-0000-0000-000000000000",
+            },
             ResourceGroupName = "hsm-group",
             Sku = new AzureNextGen.KeyVault.V20200401Preview.Inputs.ManagedHsmSkuArgs
             {
@@ -56,15 +67,24 @@ class MyStack : Stack
 package main
 
 import (
-	keyvault "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/keyvault/v20200401preview"
+	keyvault "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/keyvault/v20200401preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := keyvault.NewManagedHsm(ctx, "managedHsm", &keyvault.ManagedHsmArgs{
-			Location:          pulumi.String("westus"),
-			Name:              pulumi.String("hsm1"),
+			Location: pulumi.String("westus"),
+			Name:     pulumi.String("hsm1"),
+			Properties: &keyvault.ManagedHsmPropertiesArgs{
+				EnablePurgeProtection: pulumi.Bool(true),
+				EnableSoftDelete:      pulumi.Bool(true),
+				InitialAdminObjectIds: pulumi.StringArray{
+					pulumi.String("00000000-0000-0000-0000-000000000000"),
+				},
+				SoftDeleteRetentionInDays: pulumi.Int(90),
+				TenantId:                  pulumi.String("00000000-0000-0000-0000-000000000000"),
+			},
 			ResourceGroupName: pulumi.String("hsm-group"),
 			Sku: &keyvault.ManagedHsmSkuArgs{
 				Family: pulumi.String("B"),
@@ -95,6 +115,13 @@ import pulumi_azure_nextgen as azure_nextgen
 managed_hsm = azure_nextgen.keyvault.v20200401preview.ManagedHsm("managedHsm",
     location="westus",
     name="hsm1",
+    properties={
+        "enablePurgeProtection": True,
+        "enableSoftDelete": True,
+        "initialAdminObjectIds": ["00000000-0000-0000-0000-000000000000"],
+        "softDeleteRetentionInDays": 90,
+        "tenantId": "00000000-0000-0000-0000-000000000000",
+    },
     resource_group_name="hsm-group",
     sku={
         "family": "B",
@@ -118,6 +145,13 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const managedHsm = new azure_nextgen.keyvault.v20200401preview.ManagedHsm("managedHsm", {
     location: "westus",
     name: "hsm1",
+    properties: {
+        enablePurgeProtection: true,
+        enableSoftDelete: true,
+        initialAdminObjectIds: ["00000000-0000-0000-0000-000000000000"],
+        softDeleteRetentionInDays: 90,
+        tenantId: "00000000-0000-0000-0000-000000000000",
+    },
     resourceGroupName: "hsm-group",
     sku: {
         family: "B",
@@ -756,8 +790,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hsmpooluri_csharp">
-<a href="#hsmpooluri_csharp" style="color: inherit; text-decoration: inherit;">Hsm<wbr>Pool<wbr>Uri</a>
+        <span id="hsmuri_csharp">
+<a href="#hsmuri_csharp" style="color: inherit; text-decoration: inherit;">Hsm<wbr>Uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -833,8 +867,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hsmpooluri_go">
-<a href="#hsmpooluri_go" style="color: inherit; text-decoration: inherit;">Hsm<wbr>Pool<wbr>Uri</a>
+        <span id="hsmuri_go">
+<a href="#hsmuri_go" style="color: inherit; text-decoration: inherit;">Hsm<wbr>Uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -910,8 +944,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hsmpooluri_nodejs">
-<a href="#hsmpooluri_nodejs" style="color: inherit; text-decoration: inherit;">hsm<wbr>Pool<wbr>Uri</a>
+        <span id="hsmuri_nodejs">
+<a href="#hsmuri_nodejs" style="color: inherit; text-decoration: inherit;">hsm<wbr>Uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -987,8 +1021,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hsm_pool_uri_python">
-<a href="#hsm_pool_uri_python" style="color: inherit; text-decoration: inherit;">hsm_<wbr>pool_<wbr>uri</a>
+        <span id="hsm_uri_python">
+<a href="#hsm_uri_python" style="color: inherit; text-decoration: inherit;">hsm_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1095,8 +1129,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hsmpooluri_csharp">
-<a href="#hsmpooluri_csharp" style="color: inherit; text-decoration: inherit;">Hsm<wbr>Pool<wbr>Uri</a>
+        <span id="hsmuri_csharp">
+<a href="#hsmuri_csharp" style="color: inherit; text-decoration: inherit;">Hsm<wbr>Uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -1192,8 +1226,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hsmpooluri_go">
-<a href="#hsmpooluri_go" style="color: inherit; text-decoration: inherit;">Hsm<wbr>Pool<wbr>Uri</a>
+        <span id="hsmuri_go">
+<a href="#hsmuri_go" style="color: inherit; text-decoration: inherit;">Hsm<wbr>Uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -1289,8 +1323,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hsmpooluri_nodejs">
-<a href="#hsmpooluri_nodejs" style="color: inherit; text-decoration: inherit;">hsm<wbr>Pool<wbr>Uri</a>
+        <span id="hsmuri_nodejs">
+<a href="#hsmuri_nodejs" style="color: inherit; text-decoration: inherit;">hsm<wbr>Uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -1386,8 +1420,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hsm_pool_uri_python">
-<a href="#hsm_pool_uri_python" style="color: inherit; text-decoration: inherit;">hsm_<wbr>pool_<wbr>uri</a>
+        <span id="hsm_uri_python">
+<a href="#hsm_uri_python" style="color: inherit; text-decoration: inherit;">hsm_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

@@ -30,6 +30,7 @@ class MyStack : Stack
         {
             Location = "EastUS",
             NetworkResourceName = "sampleNetwork",
+            Properties = ,
             ResourceGroupName = "sbz_demo",
             Tags = ,
         });
@@ -47,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	servicefabricmesh "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/servicefabricmesh/v20180901preview"
+	servicefabricmesh "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabricmesh/v20180901preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -56,6 +57,7 @@ func main() {
 		_, err := servicefabricmesh.NewNetwork(ctx, "network", &servicefabricmesh.NetworkArgs{
 			Location:            pulumi.String("EastUS"),
 			NetworkResourceName: pulumi.String("sampleNetwork"),
+			Properties:          nil,
 			ResourceGroupName:   pulumi.String("sbz_demo"),
 			Tags:                nil,
 		})
@@ -79,6 +81,7 @@ import pulumi_azure_nextgen as azure_nextgen
 network = azure_nextgen.servicefabricmesh.v20180901preview.Network("network",
     location="EastUS",
     network_resource_name="sampleNetwork",
+    properties={},
     resource_group_name="sbz_demo",
     tags={})
 
@@ -95,6 +98,7 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const network = new azure_nextgen.servicefabricmesh.v20180901preview.Network("network", {
     location: "EastUS",
     networkResourceName: "sampleNetwork",
+    properties: {},
     resourceGroupName: "sbz_demo",
     tags: {},
 });

@@ -12,6 +12,143 @@ meta_desc: "Explore the NetworkProfile resource of the network module, including
 
 Network profile resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create network profile defaults
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var networkProfile = new AzureNextGen.Network.Latest.NetworkProfile("networkProfile", new AzureNextGen.Network.Latest.NetworkProfileArgs
+        {
+            ContainerNetworkInterfaceConfigurations = 
+            {
+                new AzureNextGen.Network.Latest.Inputs.ContainerNetworkInterfaceConfigurationArgs
+                {
+                    IpConfigurations = 
+                    {
+                        new AzureNextGen.Network.Latest.Inputs.IPConfigurationProfileArgs
+                        {
+                            Name = "ipconfig1",
+                            Subnet = new AzureNextGen.Network.Latest.Inputs.SubnetArgs
+                            {
+                                Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/networkProfileVnet/subnets/networkProfileSubnet1",
+                            },
+                        },
+                    },
+                    Name = "eth1",
+                },
+            },
+            Location = "westus",
+            NetworkProfileName = "networkProfile1",
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewNetworkProfile(ctx, "networkProfile", &network.NetworkProfileArgs{
+			ContainerNetworkInterfaceConfigurations: network.ContainerNetworkInterfaceConfigurationArray{
+				&network.ContainerNetworkInterfaceConfigurationArgs{
+					IpConfigurations: network.IPConfigurationProfileArray{
+						&network.IPConfigurationProfileArgs{
+							Name: pulumi.String("ipconfig1"),
+							Subnet: &network.SubnetArgs{
+								Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/networkProfileVnet/subnets/networkProfileSubnet1"),
+							},
+						},
+					},
+					Name: pulumi.String("eth1"),
+				},
+			},
+			Location:           pulumi.String("westus"),
+			NetworkProfileName: pulumi.String("networkProfile1"),
+			ResourceGroupName:  pulumi.String("rg1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+network_profile = azure_nextgen.network.latest.NetworkProfile("networkProfile",
+    container_network_interface_configurations=[{
+        "ipConfigurations": [{
+            "name": "ipconfig1",
+            "subnet": {
+                "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/networkProfileVnet/subnets/networkProfileSubnet1",
+            },
+        }],
+        "name": "eth1",
+    }],
+    location="westus",
+    network_profile_name="networkProfile1",
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const networkProfile = new azure_nextgen.network.latest.NetworkProfile("networkProfile", {
+    containerNetworkInterfaceConfigurations: [{
+        ipConfigurations: [{
+            name: "ipconfig1",
+            subnet: {
+                id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/networkProfileVnet/subnets/networkProfileSubnet1",
+            },
+        }],
+        name: "eth1",
+    }],
+    location: "westus",
+    networkProfileName: "networkProfile1",
+    resourceGroupName: "rg1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NetworkProfile Resource {#create}
@@ -17358,7 +17495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -17375,7 +17512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -17392,7 +17529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -17409,7 +17546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
