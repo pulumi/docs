@@ -36,6 +36,7 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
     <li><a href="cloudhsmv2/" title="cloudhsmv2"><span class="symbol module"></span>cloudhsmv2</a></li>
     <li><a href="cloudtrail/" title="cloudtrail"><span class="symbol module"></span>cloudtrail</a></li>
     <li><a href="cloudwatch/" title="cloudwatch"><span class="symbol module"></span>cloudwatch</a></li>
+    <li><a href="codeartifact/" title="codeartifact"><span class="symbol module"></span>codeartifact</a></li>
     <li><a href="codebuild/" title="codebuild"><span class="symbol module"></span>codebuild</a></li>
     <li><a href="codecommit/" title="codecommit"><span class="symbol module"></span>codecommit</a></li>
     <li><a href="codedeploy/" title="codedeploy"><span class="symbol module"></span>codedeploy</a></li>
@@ -163,7 +164,7 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.5.0</dd>
+	<dd>3.6.0</dd>
 </dl>
 
 

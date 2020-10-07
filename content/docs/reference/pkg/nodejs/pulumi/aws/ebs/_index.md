@@ -3,7 +3,7 @@ title: "Module ebs"
 title_tag: "Module ebs | Package @pulumi/aws | Node.js SDK"
 linktitle: "ebs"
 meta_desc: "Explore members of the ebs module in the @pulumi/aws package."
-git_sha: "666638557408d978cfe3b6ef8de5bd64ccda6273"
+git_sha: "ddc4d5623c8bb2e25428f11ab0de487b17795614"
 block_external_search_index: true
 ---
 
@@ -61,7 +61,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="DefaultKmsKey" data-link-title="DefaultKmsKey">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/defaultKmsKey.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/defaultKmsKey.ts#L26">
         Resource <strong>DefaultKmsKey</strong>
     </a>
 </h3>
@@ -87,7 +87,7 @@ const example = new aws.ebs.DefaultKmsKey("example", {keyArn: aws_kms_key.exampl
 ```
 
 <h4 class="pdoc-member-header" id="DefaultKmsKey-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/defaultKmsKey.ts#L57"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/defaultKmsKey.ts#L57"> <b>constructor</b></a>
 </h4>
 
 
@@ -101,7 +101,7 @@ Create a DefaultKmsKey resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DefaultKmsKey-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/defaultKmsKey.ts#L36">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/defaultKmsKey.ts#L36">method <b>get</b></a>
 </h4>
 
 
@@ -112,14 +112,14 @@ Get an existing DefaultKmsKey resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DefaultKmsKey-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/defaultKmsKey.ts#L26">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/defaultKmsKey.ts#L26">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DefaultKmsKey-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/defaultKmsKey.ts#L47">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/defaultKmsKey.ts#L47">method <b>isInstance</b></a>
 </h4>
 
 
@@ -130,7 +130,7 @@ Returns true if the given object is an instance of DefaultKmsKey.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DefaultKmsKey-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/defaultKmsKey.ts#L26">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/defaultKmsKey.ts#L26">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -139,7 +139,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DefaultKmsKey-keyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/defaultKmsKey.ts#L57">property <b>keyArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/defaultKmsKey.ts#L57">property <b>keyArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -147,7 +147,7 @@ deployments and may be missing (undefined) during planning phases.
 The ARN of the AWS Key Management Service (AWS KMS) customer master key (CMK) to use to encrypt the EBS volume.
 
 <h4 class="pdoc-member-header" id="DefaultKmsKey-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/defaultKmsKey.ts#L26">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/defaultKmsKey.ts#L26">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -156,7 +156,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="EncryptionByDefault" data-link-title="EncryptionByDefault">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/encryptionByDefault.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/encryptionByDefault.ts#L23">
         Resource <strong>EncryptionByDefault</strong>
     </a>
 </h3>
@@ -179,7 +179,7 @@ const example = new aws.ebs.EncryptionByDefault("example", {
 ```
 
 <h4 class="pdoc-member-header" id="EncryptionByDefault-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/encryptionByDefault.ts#L54"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/encryptionByDefault.ts#L54"> <b>constructor</b></a>
 </h4>
 
 
@@ -193,7 +193,7 @@ Create a EncryptionByDefault resource with the given unique name, arguments, and
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="EncryptionByDefault-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/encryptionByDefault.ts#L33">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/encryptionByDefault.ts#L33">method <b>get</b></a>
 </h4>
 
 
@@ -204,14 +204,14 @@ Get an existing EncryptionByDefault resource's state with the given name, ID, an
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="EncryptionByDefault-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/encryptionByDefault.ts#L23">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/encryptionByDefault.ts#L23">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EncryptionByDefault-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/encryptionByDefault.ts#L44">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/encryptionByDefault.ts#L44">method <b>isInstance</b></a>
 </h4>
 
 
@@ -222,7 +222,7 @@ Returns true if the given object is an instance of EncryptionByDefault.  This is
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EncryptionByDefault-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/encryptionByDefault.ts#L54">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/encryptionByDefault.ts#L54">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -230,7 +230,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Whether or not default EBS encryption is enabled. Valid values are `true` or `false`. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="EncryptionByDefault-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/encryptionByDefault.ts#L23">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/encryptionByDefault.ts#L23">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -239,7 +239,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="EncryptionByDefault-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/encryptionByDefault.ts#L23">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/encryptionByDefault.ts#L23">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -248,7 +248,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Snapshot" data-link-title="Snapshot">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshot.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshot.ts#L31">
         Resource <strong>Snapshot</strong>
     </a>
 </h3>
@@ -279,7 +279,7 @@ const exampleSnapshot = new aws.ebs.Snapshot("exampleSnapshot", {
 ```
 
 <h4 class="pdoc-member-header" id="Snapshot-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshot.ts#L98"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshot.ts#L98"> <b>constructor</b></a>
 </h4>
 
 
@@ -293,7 +293,7 @@ Create a Snapshot resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Snapshot-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshot.ts#L41">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshot.ts#L41">method <b>get</b></a>
 </h4>
 
 
@@ -304,14 +304,14 @@ Get an existing Snapshot resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Snapshot-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshot.ts#L31">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshot.ts#L31">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Snapshot-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshot.ts#L52">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshot.ts#L52">method <b>isInstance</b></a>
 </h4>
 
 
@@ -322,7 +322,7 @@ Returns true if the given object is an instance of Snapshot.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Snapshot-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshot.ts#L62">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshot.ts#L62">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -330,7 +330,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Amazon Resource Name (ARN) of the EBS Snapshot.
 
 <h4 class="pdoc-member-header" id="Snapshot-dataEncryptionKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshot.ts#L66">property <b>dataEncryptionKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshot.ts#L66">property <b>dataEncryptionKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dataEncryptionKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -338,7 +338,7 @@ Amazon Resource Name (ARN) of the EBS Snapshot.
 The data encryption key identifier for the snapshot.
 
 <h4 class="pdoc-member-header" id="Snapshot-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshot.ts#L70">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshot.ts#L70">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -346,7 +346,7 @@ The data encryption key identifier for the snapshot.
 A description of what the snapshot is.
 
 <h4 class="pdoc-member-header" id="Snapshot-encrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshot.ts#L74">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshot.ts#L74">property <b>encrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>encrypted: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -354,7 +354,7 @@ A description of what the snapshot is.
 Whether the snapshot is encrypted.
 
 <h4 class="pdoc-member-header" id="Snapshot-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshot.ts#L31">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshot.ts#L31">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -363,7 +363,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Snapshot-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshot.ts#L78">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshot.ts#L78">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kmsKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -371,7 +371,7 @@ deployments and may be missing (undefined) during planning phases.
 The ARN for the KMS encryption key.
 
 <h4 class="pdoc-member-header" id="Snapshot-ownerAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshot.ts#L82">property <b>ownerAlias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshot.ts#L82">property <b>ownerAlias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ownerAlias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -379,7 +379,7 @@ The ARN for the KMS encryption key.
 Value from an Amazon-maintained list (`amazon`, `aws-marketplace`, `microsoft`) of snapshot owners.
 
 <h4 class="pdoc-member-header" id="Snapshot-ownerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshot.ts#L86">property <b>ownerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshot.ts#L86">property <b>ownerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ownerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -387,7 +387,7 @@ Value from an Amazon-maintained list (`amazon`, `aws-marketplace`, `microsoft`) 
 The AWS account ID of the EBS snapshot owner.
 
 <h4 class="pdoc-member-header" id="Snapshot-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshot.ts#L90">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshot.ts#L90">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -395,7 +395,7 @@ The AWS account ID of the EBS snapshot owner.
 A map of tags to assign to the snapshot
 
 <h4 class="pdoc-member-header" id="Snapshot-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshot.ts#L31">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshot.ts#L31">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -404,7 +404,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Snapshot-volumeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshot.ts#L94">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshot.ts#L94">property <b>volumeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>volumeId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -412,7 +412,7 @@ deployments.
 The Volume ID of which to make a snapshot.
 
 <h4 class="pdoc-member-header" id="Snapshot-volumeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshot.ts#L98">property <b>volumeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshot.ts#L98">property <b>volumeSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>volumeSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -420,7 +420,7 @@ The Volume ID of which to make a snapshot.
 The size of the drive in GiBs.
 
 <h3 class="pdoc-module-header" id="SnapshotCopy" data-link-title="SnapshotCopy">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshotCopy.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshotCopy.ts#L38">
         Resource <strong>SnapshotCopy</strong>
     </a>
 </h3>
@@ -458,7 +458,7 @@ const exampleCopy = new aws.ebs.SnapshotCopy("exampleCopy", {
 ```
 
 <h4 class="pdoc-member-header" id="SnapshotCopy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshotCopy.ts#L112"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshotCopy.ts#L112"> <b>constructor</b></a>
 </h4>
 
 
@@ -472,7 +472,7 @@ Create a SnapshotCopy resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SnapshotCopy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshotCopy.ts#L48">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshotCopy.ts#L48">method <b>get</b></a>
 </h4>
 
 
@@ -483,14 +483,14 @@ Get an existing SnapshotCopy resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SnapshotCopy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshotCopy.ts#L38">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshotCopy.ts#L38">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SnapshotCopy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshotCopy.ts#L59">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshotCopy.ts#L59">method <b>isInstance</b></a>
 </h4>
 
 
@@ -501,7 +501,7 @@ Returns true if the given object is an instance of SnapshotCopy.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SnapshotCopy-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshotCopy.ts#L69">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshotCopy.ts#L69">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -509,7 +509,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Amazon Resource Name (ARN) of the EBS Snapshot.
 
 <h4 class="pdoc-member-header" id="SnapshotCopy-dataEncryptionKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshotCopy.ts#L75">property <b>dataEncryptionKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshotCopy.ts#L75">property <b>dataEncryptionKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dataEncryptionKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -519,7 +519,7 @@ The data encryption key identifier for the snapshot.
 * `sourceRegion` The region of the source snapshot.
 
 <h4 class="pdoc-member-header" id="SnapshotCopy-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshotCopy.ts#L79">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshotCopy.ts#L79">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -527,7 +527,7 @@ The data encryption key identifier for the snapshot.
 A description of what the snapshot is.
 
 <h4 class="pdoc-member-header" id="SnapshotCopy-encrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshotCopy.ts#L83">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshotCopy.ts#L83">property <b>encrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>encrypted: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -535,7 +535,7 @@ A description of what the snapshot is.
 Whether the snapshot is encrypted.
 
 <h4 class="pdoc-member-header" id="SnapshotCopy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshotCopy.ts#L38">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshotCopy.ts#L38">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -544,7 +544,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SnapshotCopy-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshotCopy.ts#L87">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshotCopy.ts#L87">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kmsKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -552,7 +552,7 @@ deployments and may be missing (undefined) during planning phases.
 The ARN for the KMS encryption key.
 
 <h4 class="pdoc-member-header" id="SnapshotCopy-ownerAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshotCopy.ts#L91">property <b>ownerAlias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshotCopy.ts#L91">property <b>ownerAlias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ownerAlias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -560,7 +560,7 @@ The ARN for the KMS encryption key.
 Value from an Amazon-maintained list (`amazon`, `aws-marketplace`, `microsoft`) of snapshot owners.
 
 <h4 class="pdoc-member-header" id="SnapshotCopy-ownerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshotCopy.ts#L95">property <b>ownerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshotCopy.ts#L95">property <b>ownerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ownerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -568,7 +568,7 @@ Value from an Amazon-maintained list (`amazon`, `aws-marketplace`, `microsoft`) 
 The AWS account ID of the snapshot owner.
 
 <h4 class="pdoc-member-header" id="SnapshotCopy-sourceRegion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshotCopy.ts#L99">property <b>sourceRegion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshotCopy.ts#L99">property <b>sourceRegion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceRegion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -576,7 +576,7 @@ The AWS account ID of the snapshot owner.
 The region of the source snapshot.
 
 <h4 class="pdoc-member-header" id="SnapshotCopy-sourceSnapshotId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshotCopy.ts#L103">property <b>sourceSnapshotId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshotCopy.ts#L103">property <b>sourceSnapshotId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceSnapshotId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -584,7 +584,7 @@ The region of the source snapshot.
 The ARN for the snapshot to be copied.
 
 <h4 class="pdoc-member-header" id="SnapshotCopy-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshotCopy.ts#L107">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshotCopy.ts#L107">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -592,7 +592,7 @@ The ARN for the snapshot to be copied.
 A map of tags for the snapshot.
 
 <h4 class="pdoc-member-header" id="SnapshotCopy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshotCopy.ts#L38">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshotCopy.ts#L38">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -601,12 +601,12 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="SnapshotCopy-volumeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshotCopy.ts#L108">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshotCopy.ts#L108">property <b>volumeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>volumeId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SnapshotCopy-volumeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshotCopy.ts#L112">property <b>volumeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshotCopy.ts#L112">property <b>volumeSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>volumeSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -614,7 +614,7 @@ deployments.
 The size of the drive in GiBs.
 
 <h3 class="pdoc-module-header" id="Volume" data-link-title="Volume">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/volume.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/volume.ts#L27">
         Resource <strong>Volume</strong>
     </a>
 </h3>
@@ -641,7 +641,7 @@ const example = new aws.ebs.Volume("example", {
 > **NOTE**: One of `size` or `snapshotId` is required when specifying an EBS volume
 
 <h4 class="pdoc-member-header" id="Volume-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/volume.ts#L98"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/volume.ts#L98"> <b>constructor</b></a>
 </h4>
 
 
@@ -655,7 +655,7 @@ Create a Volume resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Volume-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/volume.ts#L37">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/volume.ts#L37">method <b>get</b></a>
 </h4>
 
 
@@ -666,14 +666,14 @@ Get an existing Volume resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Volume-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/volume.ts#L27">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/volume.ts#L27">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Volume-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/volume.ts#L48">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/volume.ts#L48">method <b>isInstance</b></a>
 </h4>
 
 
@@ -684,7 +684,7 @@ Returns true if the given object is an instance of Volume.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Volume-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/volume.ts#L58">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/volume.ts#L58">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -692,7 +692,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The volume ARN (e.g. arn:aws:ec2:us-east-1:0123456789012:volume/vol-59fcb34e).
 
 <h4 class="pdoc-member-header" id="Volume-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/volume.ts#L62">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/volume.ts#L62">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>availabilityZone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -700,7 +700,7 @@ The volume ARN (e.g. arn:aws:ec2:us-east-1:0123456789012:volume/vol-59fcb34e).
 The AZ where the EBS volume will exist.
 
 <h4 class="pdoc-member-header" id="Volume-encrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/volume.ts#L66">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/volume.ts#L66">property <b>encrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>encrypted: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -708,7 +708,7 @@ The AZ where the EBS volume will exist.
 If true, the disk will be encrypted.
 
 <h4 class="pdoc-member-header" id="Volume-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/volume.ts#L27">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/volume.ts#L27">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -717,7 +717,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Volume-iops">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/volume.ts#L70">property <b>iops</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/volume.ts#L70">property <b>iops</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>iops: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -725,7 +725,7 @@ deployments and may be missing (undefined) during planning phases.
 The amount of IOPS to provision for the disk. Only valid for `type` of `io1` or `io2`.
 
 <h4 class="pdoc-member-header" id="Volume-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/volume.ts#L74">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/volume.ts#L74">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kmsKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -733,7 +733,7 @@ The amount of IOPS to provision for the disk. Only valid for `type` of `io1` or 
 The ARN for the KMS encryption key. When specifying `kmsKeyId`, `encrypted` needs to be set to true.
 
 <h4 class="pdoc-member-header" id="Volume-multiAttachEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/volume.ts#L78">property <b>multiAttachEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/volume.ts#L78">property <b>multiAttachEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>multiAttachEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -741,7 +741,7 @@ The ARN for the KMS encryption key. When specifying `kmsKeyId`, `encrypted` need
 Specifies whether to enable Amazon EBS Multi-Attach. Multi-Attach is supported exclusively on `io1` volumes.
 
 <h4 class="pdoc-member-header" id="Volume-outpostArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/volume.ts#L82">property <b>outpostArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/volume.ts#L82">property <b>outpostArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>outpostArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -749,7 +749,7 @@ Specifies whether to enable Amazon EBS Multi-Attach. Multi-Attach is supported e
 The Amazon Resource Name (ARN) of the Outpost.
 
 <h4 class="pdoc-member-header" id="Volume-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/volume.ts#L86">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/volume.ts#L86">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -757,7 +757,7 @@ The Amazon Resource Name (ARN) of the Outpost.
 The size of the drive in GiBs.
 
 <h4 class="pdoc-member-header" id="Volume-snapshotId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/volume.ts#L90">property <b>snapshotId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/volume.ts#L90">property <b>snapshotId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>snapshotId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -765,7 +765,7 @@ The size of the drive in GiBs.
 A snapshot to base the EBS volume off of.
 
 <h4 class="pdoc-member-header" id="Volume-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/volume.ts#L94">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/volume.ts#L94">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -773,7 +773,7 @@ A snapshot to base the EBS volume off of.
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Volume-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/volume.ts#L98">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/volume.ts#L98">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -781,7 +781,7 @@ A map of tags to assign to the resource.
 The type of EBS volume. Can be "standard", "gp2", "io1", "io2", "sc1" or "st1" (Default: "gp2").
 
 <h4 class="pdoc-member-header" id="Volume-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/volume.ts#L27">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/volume.ts#L27">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -792,7 +792,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getDefaultKmsKey" data-link-title="getDefaultKmsKey">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getDefaultKmsKey.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getDefaultKmsKey.ts#L26">
         Function <strong>getDefaultKmsKey</strong>
     </a>
 </h3>
@@ -818,7 +818,7 @@ const example = new aws.ebs.Volume("example", {
 ```
 
 <h3 class="pdoc-module-header" id="getEbsVolumes" data-link-title="getEbsVolumes">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getEbsVolumes.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getEbsVolumes.ts#L36">
         Function <strong>getEbsVolumes</strong>
     </a>
 </h3>
@@ -854,7 +854,7 @@ export const availabilityZoneToVolumeId = exampleVolume.reduce((__obj, s) => { .
 ```
 
 <h3 class="pdoc-module-header" id="getEncryptionByDefault" data-link-title="getEncryptionByDefault">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getEncryptionByDefault.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getEncryptionByDefault.ts#L21">
         Function <strong>getEncryptionByDefault</strong>
     </a>
 </h3>
@@ -875,7 +875,7 @@ const current = pulumi.output(aws.ebs.getEncryptionByDefault({ async: true }));
 ```
 
 <h3 class="pdoc-module-header" id="getSnapshot" data-link-title="getSnapshot">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getSnapshot.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getSnapshot.ts#L34">
         Function <strong>getSnapshot</strong>
     </a>
 </h3>
@@ -909,7 +909,7 @@ const ebsVolume = pulumi.output(aws.ebs.getSnapshot({
 ```
 
 <h3 class="pdoc-module-header" id="getSnapshotIds" data-link-title="getSnapshotIds">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getSnapshotIds.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getSnapshotIds.ts#L34">
         Function <strong>getSnapshotIds</strong>
     </a>
 </h3>
@@ -943,7 +943,7 @@ const ebsVolumes = pulumi.output(aws.ebs.getSnapshotIds({
 ```
 
 <h3 class="pdoc-module-header" id="getVolume" data-link-title="getVolume">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getVolume.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getVolume.ts#L34">
         Function <strong>getVolume</strong>
     </a>
 </h3>
@@ -979,7 +979,7 @@ const ebsVolume = pulumi.output(aws.ebs.getVolume({
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="DefaultKmsKeyArgs" data-link-title="DefaultKmsKeyArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/defaultKmsKey.ts#L103">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/defaultKmsKey.ts#L103">
         interface <strong>DefaultKmsKeyArgs</strong>
     </a>
 </h3>
@@ -989,7 +989,7 @@ const ebsVolume = pulumi.output(aws.ebs.getVolume({
 The set of arguments for constructing a DefaultKmsKey resource.
 
 <h4 class="pdoc-member-header" id="DefaultKmsKeyArgs-keyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/defaultKmsKey.ts#L107">property <b>keyArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/defaultKmsKey.ts#L107">property <b>keyArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -997,7 +997,7 @@ The set of arguments for constructing a DefaultKmsKey resource.
 The ARN of the AWS Key Management Service (AWS KMS) customer master key (CMK) to use to encrypt the EBS volume.
 
 <h3 class="pdoc-module-header" id="DefaultKmsKeyState" data-link-title="DefaultKmsKeyState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/defaultKmsKey.ts#L93">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/defaultKmsKey.ts#L93">
         interface <strong>DefaultKmsKeyState</strong>
     </a>
 </h3>
@@ -1007,7 +1007,7 @@ The ARN of the AWS Key Management Service (AWS KMS) customer master key (CMK) to
 Input properties used for looking up and filtering DefaultKmsKey resources.
 
 <h4 class="pdoc-member-header" id="DefaultKmsKeyState-keyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/defaultKmsKey.ts#L97">property <b>keyArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/defaultKmsKey.ts#L97">property <b>keyArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1015,7 +1015,7 @@ Input properties used for looking up and filtering DefaultKmsKey resources.
 The ARN of the AWS Key Management Service (AWS KMS) customer master key (CMK) to use to encrypt the EBS volume.
 
 <h3 class="pdoc-module-header" id="EncryptionByDefaultArgs" data-link-title="EncryptionByDefaultArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/encryptionByDefault.ts#L97">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/encryptionByDefault.ts#L97">
         interface <strong>EncryptionByDefaultArgs</strong>
     </a>
 </h3>
@@ -1025,7 +1025,7 @@ The ARN of the AWS Key Management Service (AWS KMS) customer master key (CMK) to
 The set of arguments for constructing a EncryptionByDefault resource.
 
 <h4 class="pdoc-member-header" id="EncryptionByDefaultArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/encryptionByDefault.ts#L101">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/encryptionByDefault.ts#L101">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1033,7 +1033,7 @@ The set of arguments for constructing a EncryptionByDefault resource.
 Whether or not default EBS encryption is enabled. Valid values are `true` or `false`. Defaults to `true`.
 
 <h3 class="pdoc-module-header" id="EncryptionByDefaultState" data-link-title="EncryptionByDefaultState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/encryptionByDefault.ts#L87">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/encryptionByDefault.ts#L87">
         interface <strong>EncryptionByDefaultState</strong>
     </a>
 </h3>
@@ -1043,7 +1043,7 @@ Whether or not default EBS encryption is enabled. Valid values are `true` or `fa
 Input properties used for looking up and filtering EncryptionByDefault resources.
 
 <h4 class="pdoc-member-header" id="EncryptionByDefaultState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/encryptionByDefault.ts#L91">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/encryptionByDefault.ts#L91">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1051,7 +1051,7 @@ Input properties used for looking up and filtering EncryptionByDefault resources
 Whether or not default EBS encryption is enabled. Valid values are `true` or `false`. Defaults to `true`.
 
 <h3 class="pdoc-module-header" id="GetDefaultKmsKeyResult" data-link-title="GetDefaultKmsKeyResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getDefaultKmsKey.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getDefaultKmsKey.ts#L41">
         interface <strong>GetDefaultKmsKeyResult</strong>
     </a>
 </h3>
@@ -1061,7 +1061,7 @@ Whether or not default EBS encryption is enabled. Valid values are `true` or `fa
 A collection of values returned by getDefaultKmsKey.
 
 <h4 class="pdoc-member-header" id="GetDefaultKmsKeyResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getDefaultKmsKey.ts#L45">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getDefaultKmsKey.ts#L45">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1069,7 +1069,7 @@ A collection of values returned by getDefaultKmsKey.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDefaultKmsKeyResult-keyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getDefaultKmsKey.ts#L49">property <b>keyArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getDefaultKmsKey.ts#L49">property <b>keyArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1077,7 +1077,7 @@ The provider-assigned unique ID for this managed resource.
 Amazon Resource Name (ARN) of the default KMS key uses to encrypt an EBS volume in this region when no key is specified in an API call that creates the volume and encryption by default is enabled.
 
 <h3 class="pdoc-module-header" id="GetEbsVolumesArgs" data-link-title="GetEbsVolumesArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getEbsVolumes.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getEbsVolumes.ts#L54">
         interface <strong>GetEbsVolumesArgs</strong>
     </a>
 </h3>
@@ -1087,7 +1087,7 @@ Amazon Resource Name (ARN) of the default KMS key uses to encrypt an EBS volume 
 A collection of arguments for invoking getEbsVolumes.
 
 <h4 class="pdoc-member-header" id="GetEbsVolumesArgs-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getEbsVolumes.ts#L58">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getEbsVolumes.ts#L58">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetEbsVolumesFilter'>GetEbsVolumesFilter</a>[];</code></pre>
@@ -1095,7 +1095,7 @@ A collection of arguments for invoking getEbsVolumes.
 Custom filter block as described below.
 
 <h4 class="pdoc-member-header" id="GetEbsVolumesArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getEbsVolumes.ts#L63">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getEbsVolumes.ts#L63">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1104,7 +1104,7 @@ A map of tags, each pair of which must exactly match
 a pair on the desired volumes.
 
 <h3 class="pdoc-module-header" id="GetEbsVolumesResult" data-link-title="GetEbsVolumesResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getEbsVolumes.ts#L69">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getEbsVolumes.ts#L69">
         interface <strong>GetEbsVolumesResult</strong>
     </a>
 </h3>
@@ -1114,12 +1114,12 @@ a pair on the desired volumes.
 A collection of values returned by getEbsVolumes.
 
 <h4 class="pdoc-member-header" id="GetEbsVolumesResult-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getEbsVolumes.ts#L70">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getEbsVolumes.ts#L70">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetEbsVolumesFilter'>GetEbsVolumesFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetEbsVolumesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getEbsVolumes.ts#L74">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getEbsVolumes.ts#L74">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1127,7 +1127,7 @@ A collection of values returned by getEbsVolumes.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetEbsVolumesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getEbsVolumes.ts#L79">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getEbsVolumes.ts#L79">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1136,12 +1136,12 @@ A set of all the EBS Volume IDs found. This data source will fail if
 no volumes match the provided criteria.
 
 <h4 class="pdoc-member-header" id="GetEbsVolumesResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getEbsVolumes.ts#L80">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getEbsVolumes.ts#L80">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
 <h3 class="pdoc-module-header" id="GetEncryptionByDefaultResult" data-link-title="GetEncryptionByDefaultResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getEncryptionByDefault.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getEncryptionByDefault.ts#L36">
         interface <strong>GetEncryptionByDefaultResult</strong>
     </a>
 </h3>
@@ -1151,7 +1151,7 @@ no volumes match the provided criteria.
 A collection of values returned by getEncryptionByDefault.
 
 <h4 class="pdoc-member-header" id="GetEncryptionByDefaultResult-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getEncryptionByDefault.ts#L40">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getEncryptionByDefault.ts#L40">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1159,7 +1159,7 @@ A collection of values returned by getEncryptionByDefault.
 Whether or not default EBS encryption is enabled. Returns as `true` or `false`.
 
 <h4 class="pdoc-member-header" id="GetEncryptionByDefaultResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getEncryptionByDefault.ts#L44">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getEncryptionByDefault.ts#L44">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1167,7 +1167,7 @@ Whether or not default EBS encryption is enabled. Returns as `true` or `false`.
 The provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-module-header" id="GetSnapshotArgs" data-link-title="GetSnapshotArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getSnapshot.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getSnapshot.ts#L56">
         interface <strong>GetSnapshotArgs</strong>
     </a>
 </h3>
@@ -1177,7 +1177,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getSnapshot.
 
 <h4 class="pdoc-member-header" id="GetSnapshotArgs-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getSnapshot.ts#L62">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getSnapshot.ts#L62">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetSnapshotFilter'>GetSnapshotFilter</a>[];</code></pre>
@@ -1187,7 +1187,7 @@ several valid keys, for a full reference, check out
 [describe-snapshots in the AWS CLI reference][1].
 
 <h4 class="pdoc-member-header" id="GetSnapshotArgs-mostRecent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getSnapshot.ts#L66">property <b>mostRecent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getSnapshot.ts#L66">property <b>mostRecent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mostRecent?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -1195,7 +1195,7 @@ several valid keys, for a full reference, check out
 If more than one result is returned, use the most recent snapshot.
 
 <h4 class="pdoc-member-header" id="GetSnapshotArgs-owners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getSnapshot.ts#L70">property <b>owners</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getSnapshot.ts#L70">property <b>owners</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>owners?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1203,7 +1203,7 @@ If more than one result is returned, use the most recent snapshot.
 Returns the snapshots owned by the specified owner id. Multiple owners can be specified.
 
 <h4 class="pdoc-member-header" id="GetSnapshotArgs-restorableByUserIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getSnapshot.ts#L74">property <b>restorableByUserIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getSnapshot.ts#L74">property <b>restorableByUserIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>restorableByUserIds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1211,7 +1211,7 @@ Returns the snapshots owned by the specified owner id. Multiple owners can be sp
 One or more AWS accounts IDs that can create volumes from the snapshot.
 
 <h4 class="pdoc-member-header" id="GetSnapshotArgs-snapshotIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getSnapshot.ts#L78">property <b>snapshotIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getSnapshot.ts#L78">property <b>snapshotIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotIds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1219,7 +1219,7 @@ One or more AWS accounts IDs that can create volumes from the snapshot.
 Returns information on a specific snapshot_id.
 
 <h4 class="pdoc-member-header" id="GetSnapshotArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getSnapshot.ts#L82">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getSnapshot.ts#L82">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1227,7 +1227,7 @@ Returns information on a specific snapshot_id.
 A map of tags for the resource.
 
 <h3 class="pdoc-module-header" id="GetSnapshotIdsArgs" data-link-title="GetSnapshotIdsArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getSnapshotIds.ts#L53">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getSnapshotIds.ts#L53">
         interface <strong>GetSnapshotIdsArgs</strong>
     </a>
 </h3>
@@ -1237,7 +1237,7 @@ A map of tags for the resource.
 A collection of arguments for invoking getSnapshotIds.
 
 <h4 class="pdoc-member-header" id="GetSnapshotIdsArgs-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getSnapshotIds.ts#L59">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getSnapshotIds.ts#L59">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetSnapshotIdsFilter'>GetSnapshotIdsFilter</a>[];</code></pre>
@@ -1247,7 +1247,7 @@ several valid keys, for a full reference, check out
 [describe-volumes in the AWS CLI reference][1].
 
 <h4 class="pdoc-member-header" id="GetSnapshotIdsArgs-owners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getSnapshotIds.ts#L63">property <b>owners</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getSnapshotIds.ts#L63">property <b>owners</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>owners?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1255,7 +1255,7 @@ several valid keys, for a full reference, check out
 Returns the snapshots owned by the specified owner id. Multiple owners can be specified.
 
 <h4 class="pdoc-member-header" id="GetSnapshotIdsArgs-restorableByUserIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getSnapshotIds.ts#L67">property <b>restorableByUserIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getSnapshotIds.ts#L67">property <b>restorableByUserIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>restorableByUserIds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1263,7 +1263,7 @@ Returns the snapshots owned by the specified owner id. Multiple owners can be sp
 One or more AWS accounts IDs that can create volumes from the snapshot.
 
 <h3 class="pdoc-module-header" id="GetSnapshotIdsResult" data-link-title="GetSnapshotIdsResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getSnapshotIds.ts#L73">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getSnapshotIds.ts#L73">
         interface <strong>GetSnapshotIdsResult</strong>
     </a>
 </h3>
@@ -1273,12 +1273,12 @@ One or more AWS accounts IDs that can create volumes from the snapshot.
 A collection of values returned by getSnapshotIds.
 
 <h4 class="pdoc-member-header" id="GetSnapshotIdsResult-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getSnapshotIds.ts#L74">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getSnapshotIds.ts#L74">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSnapshotIdsFilter'>GetSnapshotIdsFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetSnapshotIdsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getSnapshotIds.ts#L78">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getSnapshotIds.ts#L78">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1286,22 +1286,22 @@ A collection of values returned by getSnapshotIds.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetSnapshotIdsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getSnapshotIds.ts#L79">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getSnapshotIds.ts#L79">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetSnapshotIdsResult-owners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getSnapshotIds.ts#L80">property <b>owners</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getSnapshotIds.ts#L80">property <b>owners</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>owners?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetSnapshotIdsResult-restorableByUserIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getSnapshotIds.ts#L81">property <b>restorableByUserIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getSnapshotIds.ts#L81">property <b>restorableByUserIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>restorableByUserIds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetSnapshotResult" data-link-title="GetSnapshotResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getSnapshot.ts#L88">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getSnapshot.ts#L88">
         interface <strong>GetSnapshotResult</strong>
     </a>
 </h3>
@@ -1311,7 +1311,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of values returned by getSnapshot.
 
 <h4 class="pdoc-member-header" id="GetSnapshotResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getSnapshot.ts#L92">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getSnapshot.ts#L92">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1319,7 +1319,7 @@ A collection of values returned by getSnapshot.
 Amazon Resource Name (ARN) of the EBS Snapshot.
 
 <h4 class="pdoc-member-header" id="GetSnapshotResult-dataEncryptionKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getSnapshot.ts#L96">property <b>dataEncryptionKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getSnapshot.ts#L96">property <b>dataEncryptionKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataEncryptionKeyId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1327,7 +1327,7 @@ Amazon Resource Name (ARN) of the EBS Snapshot.
 The data encryption key identifier for the snapshot.
 
 <h4 class="pdoc-member-header" id="GetSnapshotResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getSnapshot.ts#L100">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getSnapshot.ts#L100">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1335,7 +1335,7 @@ The data encryption key identifier for the snapshot.
 A description for the snapshot
 
 <h4 class="pdoc-member-header" id="GetSnapshotResult-encrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getSnapshot.ts#L104">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getSnapshot.ts#L104">property <b>encrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encrypted: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1343,12 +1343,12 @@ A description for the snapshot
 Whether the snapshot is encrypted.
 
 <h4 class="pdoc-member-header" id="GetSnapshotResult-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getSnapshot.ts#L105">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getSnapshot.ts#L105">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSnapshotFilter'>GetSnapshotFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetSnapshotResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getSnapshot.ts#L109">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getSnapshot.ts#L109">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1356,7 +1356,7 @@ Whether the snapshot is encrypted.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetSnapshotResult-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getSnapshot.ts#L113">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getSnapshot.ts#L113">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1364,12 +1364,12 @@ The provider-assigned unique ID for this managed resource.
 The ARN for the KMS encryption key.
 
 <h4 class="pdoc-member-header" id="GetSnapshotResult-mostRecent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getSnapshot.ts#L114">property <b>mostRecent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getSnapshot.ts#L114">property <b>mostRecent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mostRecent?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSnapshotResult-ownerAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getSnapshot.ts#L118">property <b>ownerAlias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getSnapshot.ts#L118">property <b>ownerAlias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ownerAlias: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1377,7 +1377,7 @@ The ARN for the KMS encryption key.
 Value from an Amazon-maintained list (`amazon`, `aws-marketplace`, `microsoft`) of snapshot owners.
 
 <h4 class="pdoc-member-header" id="GetSnapshotResult-ownerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getSnapshot.ts#L122">property <b>ownerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getSnapshot.ts#L122">property <b>ownerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ownerId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1385,17 +1385,17 @@ Value from an Amazon-maintained list (`amazon`, `aws-marketplace`, `microsoft`) 
 The AWS account ID of the EBS snapshot owner.
 
 <h4 class="pdoc-member-header" id="GetSnapshotResult-owners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getSnapshot.ts#L123">property <b>owners</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getSnapshot.ts#L123">property <b>owners</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>owners?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetSnapshotResult-restorableByUserIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getSnapshot.ts#L124">property <b>restorableByUserIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getSnapshot.ts#L124">property <b>restorableByUserIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>restorableByUserIds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetSnapshotResult-snapshotId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getSnapshot.ts#L128">property <b>snapshotId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getSnapshot.ts#L128">property <b>snapshotId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1403,12 +1403,12 @@ The AWS account ID of the EBS snapshot owner.
 The snapshot ID (e.g. snap-59fcb34e).
 
 <h4 class="pdoc-member-header" id="GetSnapshotResult-snapshotIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getSnapshot.ts#L129">property <b>snapshotIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getSnapshot.ts#L129">property <b>snapshotIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotIds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetSnapshotResult-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getSnapshot.ts#L133">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getSnapshot.ts#L133">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>state: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1416,7 +1416,7 @@ The snapshot ID (e.g. snap-59fcb34e).
 The snapshot state.
 
 <h4 class="pdoc-member-header" id="GetSnapshotResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getSnapshot.ts#L137">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getSnapshot.ts#L137">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1424,7 +1424,7 @@ The snapshot state.
 A map of tags for the resource.
 
 <h4 class="pdoc-member-header" id="GetSnapshotResult-volumeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getSnapshot.ts#L141">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getSnapshot.ts#L141">property <b>volumeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1432,7 +1432,7 @@ A map of tags for the resource.
 The volume ID (e.g. vol-59fcb34e).
 
 <h4 class="pdoc-member-header" id="GetSnapshotResult-volumeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getSnapshot.ts#L145">property <b>volumeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getSnapshot.ts#L145">property <b>volumeSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeSize: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1440,7 +1440,7 @@ The volume ID (e.g. vol-59fcb34e).
 The size of the drive in GiBs.
 
 <h3 class="pdoc-module-header" id="GetVolumeArgs" data-link-title="GetVolumeArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getVolume.ts#L53">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getVolume.ts#L53">
         interface <strong>GetVolumeArgs</strong>
     </a>
 </h3>
@@ -1450,7 +1450,7 @@ The size of the drive in GiBs.
 A collection of arguments for invoking getVolume.
 
 <h4 class="pdoc-member-header" id="GetVolumeArgs-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getVolume.ts#L59">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getVolume.ts#L59">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetVolumeFilter'>GetVolumeFilter</a>[];</code></pre>
@@ -1460,7 +1460,7 @@ several valid keys, for a full reference, check out
 [describe-volumes in the AWS CLI reference][1].
 
 <h4 class="pdoc-member-header" id="GetVolumeArgs-mostRecent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getVolume.ts#L64">property <b>mostRecent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getVolume.ts#L64">property <b>mostRecent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mostRecent?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -1469,7 +1469,7 @@ If more than one result is returned, use the most
 recent Volume.
 
 <h4 class="pdoc-member-header" id="GetVolumeArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getVolume.ts#L68">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getVolume.ts#L68">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1477,7 +1477,7 @@ recent Volume.
 A map of tags for the resource.
 
 <h3 class="pdoc-module-header" id="GetVolumeResult" data-link-title="GetVolumeResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getVolume.ts#L74">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getVolume.ts#L74">
         interface <strong>GetVolumeResult</strong>
     </a>
 </h3>
@@ -1487,7 +1487,7 @@ A map of tags for the resource.
 A collection of values returned by getVolume.
 
 <h4 class="pdoc-member-header" id="GetVolumeResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getVolume.ts#L78">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getVolume.ts#L78">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1495,7 +1495,7 @@ A collection of values returned by getVolume.
 The volume ARN (e.g. arn:aws:ec2:us-east-1:0123456789012:volume/vol-59fcb34e).
 
 <h4 class="pdoc-member-header" id="GetVolumeResult-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getVolume.ts#L82">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getVolume.ts#L82">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZone: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1503,7 +1503,7 @@ The volume ARN (e.g. arn:aws:ec2:us-east-1:0123456789012:volume/vol-59fcb34e).
 The AZ where the EBS volume exists.
 
 <h4 class="pdoc-member-header" id="GetVolumeResult-encrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getVolume.ts#L86">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getVolume.ts#L86">property <b>encrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encrypted: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1511,12 +1511,12 @@ The AZ where the EBS volume exists.
 Whether the disk is encrypted.
 
 <h4 class="pdoc-member-header" id="GetVolumeResult-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getVolume.ts#L87">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getVolume.ts#L87">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetVolumeFilter'>GetVolumeFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetVolumeResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getVolume.ts#L91">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getVolume.ts#L91">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1524,7 +1524,7 @@ Whether the disk is encrypted.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetVolumeResult-iops">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getVolume.ts#L95">property <b>iops</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getVolume.ts#L95">property <b>iops</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iops: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1532,7 +1532,7 @@ The provider-assigned unique ID for this managed resource.
 The amount of IOPS for the disk.
 
 <h4 class="pdoc-member-header" id="GetVolumeResult-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getVolume.ts#L99">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getVolume.ts#L99">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1540,12 +1540,12 @@ The amount of IOPS for the disk.
 The ARN for the KMS encryption key.
 
 <h4 class="pdoc-member-header" id="GetVolumeResult-mostRecent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getVolume.ts#L100">property <b>mostRecent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getVolume.ts#L100">property <b>mostRecent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mostRecent?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVolumeResult-multiAttachEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getVolume.ts#L104">property <b>multiAttachEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getVolume.ts#L104">property <b>multiAttachEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>multiAttachEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1553,7 +1553,7 @@ The ARN for the KMS encryption key.
 (Optional) Specifies whether Amazon EBS Multi-Attach is enabled.
 
 <h4 class="pdoc-member-header" id="GetVolumeResult-outpostArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getVolume.ts#L108">property <b>outpostArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getVolume.ts#L108">property <b>outpostArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outpostArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1561,7 +1561,7 @@ The ARN for the KMS encryption key.
 The Amazon Resource Name (ARN) of the Outpost.
 
 <h4 class="pdoc-member-header" id="GetVolumeResult-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getVolume.ts#L112">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getVolume.ts#L112">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1569,7 +1569,7 @@ The Amazon Resource Name (ARN) of the Outpost.
 The size of the drive in GiBs.
 
 <h4 class="pdoc-member-header" id="GetVolumeResult-snapshotId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getVolume.ts#L116">property <b>snapshotId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getVolume.ts#L116">property <b>snapshotId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1577,7 +1577,7 @@ The size of the drive in GiBs.
 The snapshotId the EBS volume is based off.
 
 <h4 class="pdoc-member-header" id="GetVolumeResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getVolume.ts#L120">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getVolume.ts#L120">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1585,7 +1585,7 @@ The snapshotId the EBS volume is based off.
 A map of tags for the resource.
 
 <h4 class="pdoc-member-header" id="GetVolumeResult-volumeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getVolume.ts#L124">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getVolume.ts#L124">property <b>volumeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1593,7 +1593,7 @@ A map of tags for the resource.
 The volume ID (e.g. vol-59fcb34e).
 
 <h4 class="pdoc-member-header" id="GetVolumeResult-volumeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/getVolume.ts#L128">property <b>volumeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/getVolume.ts#L128">property <b>volumeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1601,7 +1601,7 @@ The volume ID (e.g. vol-59fcb34e).
 The type of EBS volume.
 
 <h3 class="pdoc-module-header" id="SnapshotArgs" data-link-title="SnapshotArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshot.ts#L198">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshot.ts#L198">
         interface <strong>SnapshotArgs</strong>
     </a>
 </h3>
@@ -1611,7 +1611,7 @@ The type of EBS volume.
 The set of arguments for constructing a Snapshot resource.
 
 <h4 class="pdoc-member-header" id="SnapshotArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshot.ts#L202">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshot.ts#L202">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1619,7 +1619,7 @@ The set of arguments for constructing a Snapshot resource.
 A description of what the snapshot is.
 
 <h4 class="pdoc-member-header" id="SnapshotArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshot.ts#L206">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshot.ts#L206">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1627,7 +1627,7 @@ A description of what the snapshot is.
 A map of tags to assign to the snapshot
 
 <h4 class="pdoc-member-header" id="SnapshotArgs-volumeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshot.ts#L210">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshot.ts#L210">property <b>volumeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1635,7 +1635,7 @@ A map of tags to assign to the snapshot
 The Volume ID of which to make a snapshot.
 
 <h3 class="pdoc-module-header" id="SnapshotCopyArgs" data-link-title="SnapshotCopyArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshotCopy.ts#L226">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshotCopy.ts#L226">
         interface <strong>SnapshotCopyArgs</strong>
     </a>
 </h3>
@@ -1645,7 +1645,7 @@ The Volume ID of which to make a snapshot.
 The set of arguments for constructing a SnapshotCopy resource.
 
 <h4 class="pdoc-member-header" id="SnapshotCopyArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshotCopy.ts#L230">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshotCopy.ts#L230">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1653,7 +1653,7 @@ The set of arguments for constructing a SnapshotCopy resource.
 A description of what the snapshot is.
 
 <h4 class="pdoc-member-header" id="SnapshotCopyArgs-encrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshotCopy.ts#L234">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshotCopy.ts#L234">property <b>encrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1661,7 +1661,7 @@ A description of what the snapshot is.
 Whether the snapshot is encrypted.
 
 <h4 class="pdoc-member-header" id="SnapshotCopyArgs-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshotCopy.ts#L238">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshotCopy.ts#L238">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1669,7 +1669,7 @@ Whether the snapshot is encrypted.
 The ARN for the KMS encryption key.
 
 <h4 class="pdoc-member-header" id="SnapshotCopyArgs-sourceRegion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshotCopy.ts#L242">property <b>sourceRegion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshotCopy.ts#L242">property <b>sourceRegion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceRegion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1677,7 +1677,7 @@ The ARN for the KMS encryption key.
 The region of the source snapshot.
 
 <h4 class="pdoc-member-header" id="SnapshotCopyArgs-sourceSnapshotId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshotCopy.ts#L246">property <b>sourceSnapshotId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshotCopy.ts#L246">property <b>sourceSnapshotId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceSnapshotId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1685,7 +1685,7 @@ The region of the source snapshot.
 The ARN for the snapshot to be copied.
 
 <h4 class="pdoc-member-header" id="SnapshotCopyArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshotCopy.ts#L250">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshotCopy.ts#L250">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1693,7 +1693,7 @@ The ARN for the snapshot to be copied.
 A map of tags for the snapshot.
 
 <h3 class="pdoc-module-header" id="SnapshotCopyState" data-link-title="SnapshotCopyState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshotCopy.ts#L173">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshotCopy.ts#L173">
         interface <strong>SnapshotCopyState</strong>
     </a>
 </h3>
@@ -1703,7 +1703,7 @@ A map of tags for the snapshot.
 Input properties used for looking up and filtering SnapshotCopy resources.
 
 <h4 class="pdoc-member-header" id="SnapshotCopyState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshotCopy.ts#L177">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshotCopy.ts#L177">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1711,7 +1711,7 @@ Input properties used for looking up and filtering SnapshotCopy resources.
 Amazon Resource Name (ARN) of the EBS Snapshot.
 
 <h4 class="pdoc-member-header" id="SnapshotCopyState-dataEncryptionKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshotCopy.ts#L183">property <b>dataEncryptionKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshotCopy.ts#L183">property <b>dataEncryptionKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataEncryptionKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1721,7 +1721,7 @@ The data encryption key identifier for the snapshot.
 * `sourceRegion` The region of the source snapshot.
 
 <h4 class="pdoc-member-header" id="SnapshotCopyState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshotCopy.ts#L187">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshotCopy.ts#L187">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1729,7 +1729,7 @@ The data encryption key identifier for the snapshot.
 A description of what the snapshot is.
 
 <h4 class="pdoc-member-header" id="SnapshotCopyState-encrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshotCopy.ts#L191">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshotCopy.ts#L191">property <b>encrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1737,7 +1737,7 @@ A description of what the snapshot is.
 Whether the snapshot is encrypted.
 
 <h4 class="pdoc-member-header" id="SnapshotCopyState-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshotCopy.ts#L195">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshotCopy.ts#L195">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1745,7 +1745,7 @@ Whether the snapshot is encrypted.
 The ARN for the KMS encryption key.
 
 <h4 class="pdoc-member-header" id="SnapshotCopyState-ownerAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshotCopy.ts#L199">property <b>ownerAlias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshotCopy.ts#L199">property <b>ownerAlias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ownerAlias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1753,7 +1753,7 @@ The ARN for the KMS encryption key.
 Value from an Amazon-maintained list (`amazon`, `aws-marketplace`, `microsoft`) of snapshot owners.
 
 <h4 class="pdoc-member-header" id="SnapshotCopyState-ownerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshotCopy.ts#L203">property <b>ownerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshotCopy.ts#L203">property <b>ownerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ownerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1761,7 +1761,7 @@ Value from an Amazon-maintained list (`amazon`, `aws-marketplace`, `microsoft`) 
 The AWS account ID of the snapshot owner.
 
 <h4 class="pdoc-member-header" id="SnapshotCopyState-sourceRegion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshotCopy.ts#L207">property <b>sourceRegion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshotCopy.ts#L207">property <b>sourceRegion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceRegion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1769,7 +1769,7 @@ The AWS account ID of the snapshot owner.
 The region of the source snapshot.
 
 <h4 class="pdoc-member-header" id="SnapshotCopyState-sourceSnapshotId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshotCopy.ts#L211">property <b>sourceSnapshotId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshotCopy.ts#L211">property <b>sourceSnapshotId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceSnapshotId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1777,7 +1777,7 @@ The region of the source snapshot.
 The ARN for the snapshot to be copied.
 
 <h4 class="pdoc-member-header" id="SnapshotCopyState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshotCopy.ts#L215">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshotCopy.ts#L215">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1785,12 +1785,12 @@ The ARN for the snapshot to be copied.
 A map of tags for the snapshot.
 
 <h4 class="pdoc-member-header" id="SnapshotCopyState-volumeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshotCopy.ts#L216">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshotCopy.ts#L216">property <b>volumeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SnapshotCopyState-volumeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshotCopy.ts#L220">property <b>volumeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshotCopy.ts#L220">property <b>volumeSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1798,7 +1798,7 @@ A map of tags for the snapshot.
 The size of the drive in GiBs.
 
 <h3 class="pdoc-module-header" id="SnapshotState" data-link-title="SnapshotState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshot.ts#L152">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshot.ts#L152">
         interface <strong>SnapshotState</strong>
     </a>
 </h3>
@@ -1808,7 +1808,7 @@ The size of the drive in GiBs.
 Input properties used for looking up and filtering Snapshot resources.
 
 <h4 class="pdoc-member-header" id="SnapshotState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshot.ts#L156">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshot.ts#L156">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1816,7 +1816,7 @@ Input properties used for looking up and filtering Snapshot resources.
 Amazon Resource Name (ARN) of the EBS Snapshot.
 
 <h4 class="pdoc-member-header" id="SnapshotState-dataEncryptionKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshot.ts#L160">property <b>dataEncryptionKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshot.ts#L160">property <b>dataEncryptionKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataEncryptionKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1824,7 +1824,7 @@ Amazon Resource Name (ARN) of the EBS Snapshot.
 The data encryption key identifier for the snapshot.
 
 <h4 class="pdoc-member-header" id="SnapshotState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshot.ts#L164">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshot.ts#L164">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1832,7 +1832,7 @@ The data encryption key identifier for the snapshot.
 A description of what the snapshot is.
 
 <h4 class="pdoc-member-header" id="SnapshotState-encrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshot.ts#L168">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshot.ts#L168">property <b>encrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1840,7 +1840,7 @@ A description of what the snapshot is.
 Whether the snapshot is encrypted.
 
 <h4 class="pdoc-member-header" id="SnapshotState-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshot.ts#L172">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshot.ts#L172">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1848,7 +1848,7 @@ Whether the snapshot is encrypted.
 The ARN for the KMS encryption key.
 
 <h4 class="pdoc-member-header" id="SnapshotState-ownerAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshot.ts#L176">property <b>ownerAlias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshot.ts#L176">property <b>ownerAlias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ownerAlias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1856,7 +1856,7 @@ The ARN for the KMS encryption key.
 Value from an Amazon-maintained list (`amazon`, `aws-marketplace`, `microsoft`) of snapshot owners.
 
 <h4 class="pdoc-member-header" id="SnapshotState-ownerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshot.ts#L180">property <b>ownerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshot.ts#L180">property <b>ownerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ownerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1864,7 +1864,7 @@ Value from an Amazon-maintained list (`amazon`, `aws-marketplace`, `microsoft`) 
 The AWS account ID of the EBS snapshot owner.
 
 <h4 class="pdoc-member-header" id="SnapshotState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshot.ts#L184">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshot.ts#L184">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1872,7 +1872,7 @@ The AWS account ID of the EBS snapshot owner.
 A map of tags to assign to the snapshot
 
 <h4 class="pdoc-member-header" id="SnapshotState-volumeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshot.ts#L188">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshot.ts#L188">property <b>volumeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1880,7 +1880,7 @@ A map of tags to assign to the snapshot
 The Volume ID of which to make a snapshot.
 
 <h4 class="pdoc-member-header" id="SnapshotState-volumeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/snapshot.ts#L192">property <b>volumeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/snapshot.ts#L192">property <b>volumeSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1888,7 +1888,7 @@ The Volume ID of which to make a snapshot.
 The size of the drive in GiBs.
 
 <h3 class="pdoc-module-header" id="VolumeArgs" data-link-title="VolumeArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/volume.ts#L204">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/volume.ts#L204">
         interface <strong>VolumeArgs</strong>
     </a>
 </h3>
@@ -1898,7 +1898,7 @@ The size of the drive in GiBs.
 The set of arguments for constructing a Volume resource.
 
 <h4 class="pdoc-member-header" id="VolumeArgs-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/volume.ts#L208">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/volume.ts#L208">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1906,7 +1906,7 @@ The set of arguments for constructing a Volume resource.
 The AZ where the EBS volume will exist.
 
 <h4 class="pdoc-member-header" id="VolumeArgs-encrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/volume.ts#L212">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/volume.ts#L212">property <b>encrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1914,7 +1914,7 @@ The AZ where the EBS volume will exist.
 If true, the disk will be encrypted.
 
 <h4 class="pdoc-member-header" id="VolumeArgs-iops">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/volume.ts#L216">property <b>iops</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/volume.ts#L216">property <b>iops</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iops?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1922,7 +1922,7 @@ If true, the disk will be encrypted.
 The amount of IOPS to provision for the disk. Only valid for `type` of `io1` or `io2`.
 
 <h4 class="pdoc-member-header" id="VolumeArgs-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/volume.ts#L220">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/volume.ts#L220">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1930,7 +1930,7 @@ The amount of IOPS to provision for the disk. Only valid for `type` of `io1` or 
 The ARN for the KMS encryption key. When specifying `kmsKeyId`, `encrypted` needs to be set to true.
 
 <h4 class="pdoc-member-header" id="VolumeArgs-multiAttachEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/volume.ts#L224">property <b>multiAttachEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/volume.ts#L224">property <b>multiAttachEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>multiAttachEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1938,7 +1938,7 @@ The ARN for the KMS encryption key. When specifying `kmsKeyId`, `encrypted` need
 Specifies whether to enable Amazon EBS Multi-Attach. Multi-Attach is supported exclusively on `io1` volumes.
 
 <h4 class="pdoc-member-header" id="VolumeArgs-outpostArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/volume.ts#L228">property <b>outpostArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/volume.ts#L228">property <b>outpostArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outpostArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1946,7 +1946,7 @@ Specifies whether to enable Amazon EBS Multi-Attach. Multi-Attach is supported e
 The Amazon Resource Name (ARN) of the Outpost.
 
 <h4 class="pdoc-member-header" id="VolumeArgs-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/volume.ts#L232">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/volume.ts#L232">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1954,7 +1954,7 @@ The Amazon Resource Name (ARN) of the Outpost.
 The size of the drive in GiBs.
 
 <h4 class="pdoc-member-header" id="VolumeArgs-snapshotId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/volume.ts#L236">property <b>snapshotId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/volume.ts#L236">property <b>snapshotId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1962,7 +1962,7 @@ The size of the drive in GiBs.
 A snapshot to base the EBS volume off of.
 
 <h4 class="pdoc-member-header" id="VolumeArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/volume.ts#L240">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/volume.ts#L240">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1970,7 +1970,7 @@ A snapshot to base the EBS volume off of.
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="VolumeArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/volume.ts#L244">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/volume.ts#L244">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1978,7 +1978,7 @@ A map of tags to assign to the resource.
 The type of EBS volume. Can be "standard", "gp2", "io1", "io2", "sc1" or "st1" (Default: "gp2").
 
 <h3 class="pdoc-module-header" id="VolumeState" data-link-title="VolumeState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/volume.ts#L154">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/volume.ts#L154">
         interface <strong>VolumeState</strong>
     </a>
 </h3>
@@ -1988,7 +1988,7 @@ The type of EBS volume. Can be "standard", "gp2", "io1", "io2", "sc1" or "st1" (
 Input properties used for looking up and filtering Volume resources.
 
 <h4 class="pdoc-member-header" id="VolumeState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/volume.ts#L158">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/volume.ts#L158">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1996,7 +1996,7 @@ Input properties used for looking up and filtering Volume resources.
 The volume ARN (e.g. arn:aws:ec2:us-east-1:0123456789012:volume/vol-59fcb34e).
 
 <h4 class="pdoc-member-header" id="VolumeState-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/volume.ts#L162">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/volume.ts#L162">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2004,7 +2004,7 @@ The volume ARN (e.g. arn:aws:ec2:us-east-1:0123456789012:volume/vol-59fcb34e).
 The AZ where the EBS volume will exist.
 
 <h4 class="pdoc-member-header" id="VolumeState-encrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/volume.ts#L166">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/volume.ts#L166">property <b>encrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2012,7 +2012,7 @@ The AZ where the EBS volume will exist.
 If true, the disk will be encrypted.
 
 <h4 class="pdoc-member-header" id="VolumeState-iops">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/volume.ts#L170">property <b>iops</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/volume.ts#L170">property <b>iops</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iops?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2020,7 +2020,7 @@ If true, the disk will be encrypted.
 The amount of IOPS to provision for the disk. Only valid for `type` of `io1` or `io2`.
 
 <h4 class="pdoc-member-header" id="VolumeState-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/volume.ts#L174">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/volume.ts#L174">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2028,7 +2028,7 @@ The amount of IOPS to provision for the disk. Only valid for `type` of `io1` or 
 The ARN for the KMS encryption key. When specifying `kmsKeyId`, `encrypted` needs to be set to true.
 
 <h4 class="pdoc-member-header" id="VolumeState-multiAttachEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/volume.ts#L178">property <b>multiAttachEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/volume.ts#L178">property <b>multiAttachEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>multiAttachEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2036,7 +2036,7 @@ The ARN for the KMS encryption key. When specifying `kmsKeyId`, `encrypted` need
 Specifies whether to enable Amazon EBS Multi-Attach. Multi-Attach is supported exclusively on `io1` volumes.
 
 <h4 class="pdoc-member-header" id="VolumeState-outpostArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/volume.ts#L182">property <b>outpostArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/volume.ts#L182">property <b>outpostArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outpostArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2044,7 +2044,7 @@ Specifies whether to enable Amazon EBS Multi-Attach. Multi-Attach is supported e
 The Amazon Resource Name (ARN) of the Outpost.
 
 <h4 class="pdoc-member-header" id="VolumeState-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/volume.ts#L186">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/volume.ts#L186">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2052,7 +2052,7 @@ The Amazon Resource Name (ARN) of the Outpost.
 The size of the drive in GiBs.
 
 <h4 class="pdoc-member-header" id="VolumeState-snapshotId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/volume.ts#L190">property <b>snapshotId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/volume.ts#L190">property <b>snapshotId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2060,7 +2060,7 @@ The size of the drive in GiBs.
 A snapshot to base the EBS volume off of.
 
 <h4 class="pdoc-member-header" id="VolumeState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/volume.ts#L194">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/volume.ts#L194">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2068,7 +2068,7 @@ A snapshot to base the EBS volume off of.
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="VolumeState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/ebs/volume.ts#L198">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/ebs/volume.ts#L198">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

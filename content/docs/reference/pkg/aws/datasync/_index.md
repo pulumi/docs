@@ -13,6 +13,7 @@ Explore the resources and functions of the datasync module in the AWS package.
 <ul class="api">
     <li><a href="agent" title="Agent"><span class="symbol resource"></span>Agent</a></li>
     <li><a href="efslocation" title="EfsLocation"><span class="symbol resource"></span>EfsLocation</a></li>
+    <li><a href="locationfsxwindows" title="LocationFsxWindows"><span class="symbol resource"></span>LocationFsxWindows</a></li>
     <li><a href="locationsmb" title="LocationSmb"><span class="symbol resource"></span>LocationSmb</a></li>
     <li><a href="nfslocation" title="NfsLocation"><span class="symbol resource"></span>NfsLocation</a></li>
     <li><a href="s3location" title="S3Location"><span class="symbol resource"></span>S3Location</a></li>
@@ -28,7 +29,7 @@ Explore the resources and functions of the datasync module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.5.0</dd>
+	<dd>3.6.0</dd>
 </dl>
 
 
