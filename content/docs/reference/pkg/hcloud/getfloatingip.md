@@ -33,7 +33,7 @@ class MyStack : Stack
         {
             IpAddress = "1.2.3.4",
         }));
-        var image2 = Output.Create(HCloud.GetFloatingIp.InvokeAsync(new HCloud.GetFloatingIpArgs
+        var ip2 = Output.Create(HCloud.GetFloatingIp.InvokeAsync(new HCloud.GetFloatingIpArgs
         {
             WithSelector = "key=value",
         }));
@@ -103,7 +103,7 @@ import pulumi
 import pulumi_hcloud as hcloud
 
 ip1 = hcloud.get_floating_ip(ip_address="1.2.3.4")
-image2 = hcloud.get_floating_ip(with_selector="key=value")
+ip2 = hcloud.get_floating_ip(with_selector="key=value")
 main = []
 for range in [{"value": i} for i in range(0, var.counter)]:
     main.append(hcloud.FloatingIpAssignment(f"main-{range['value']}",
@@ -121,7 +121,7 @@ import * as hcloud from "@pulumi/hcloud";
 const ip1 = hcloud.getFloatingIp({
     ipAddress: "1.2.3.4",
 });
-const image2 = hcloud.getFloatingIp({
+const ip2 = hcloud.getFloatingIp({
     withSelector: "key=value",
 });
 const main: hcloud.FloatingIpAssignment[];
@@ -149,7 +149,7 @@ for (const range = {value: 0}; range.value < _var.counter; range.value++) {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_floating_ip(</span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">selector</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">with_selector</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetFloatingIpResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_floating_ip(</span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">selector</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">with_selector</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetFloatingIpResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -184,7 +184,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}(int) Unique ID of the Floating IP.
+    <dd>{{% md %}}ID of the Floating IP.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -206,7 +206,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the Floating IP.
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -244,7 +245,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}(int) Unique ID of the Floating IP.
+    <dd>{{% md %}}ID of the Floating IP.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -266,7 +267,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the Floating IP.
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -304,7 +306,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}(int) Unique ID of the Floating IP.
+    <dd>{{% md %}}ID of the Floating IP.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -326,7 +328,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the Floating IP.
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -362,9 +365,9 @@ The following arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}(int) Unique ID of the Floating IP.
+    <dd>{{% md %}}ID of the Floating IP.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -386,7 +389,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the Floating IP.
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -437,7 +441,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Description of the Floating IP.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -447,7 +452,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Home location.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -457,7 +463,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}(string) IP address of the Floating IP.
+    <dd>{{% md %}}(string) IP Address of the Floating IP.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -468,7 +474,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) IPv6 subnet. (Only set if `type` is `ipv6`)
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -478,7 +485,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(map) User-defined labels (key-value pairs).
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -488,7 +496,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Server to assign the Floating IP is assigned to.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -498,7 +507,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Type of the Floating IP.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -519,7 +529,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Name of the Floating IP.
+{{% /md %}}</dd>
 
     <dt class="property- property-deprecated"
             title=", Deprecated">
@@ -556,7 +567,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Description of the Floating IP.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -566,7 +578,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Home location.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -576,7 +589,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}(string) IP address of the Floating IP.
+    <dd>{{% md %}}(string) IP Address of the Floating IP.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -587,7 +600,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) IPv6 subnet. (Only set if `type` is `ipv6`)
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -597,7 +611,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(map) User-defined labels (key-value pairs).
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -607,7 +622,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Server to assign the Floating IP is assigned to.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -617,7 +633,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Type of the Floating IP.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -638,7 +655,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Name of the Floating IP.
+{{% /md %}}</dd>
 
     <dt class="property- property-deprecated"
             title=", Deprecated">
@@ -675,7 +693,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Description of the Floating IP.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -685,7 +704,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Home location.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -695,7 +715,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}(string) IP address of the Floating IP.
+    <dd>{{% md %}}(string) IP Address of the Floating IP.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -706,7 +726,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) IPv6 subnet. (Only set if `type` is `ipv6`)
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -716,7 +737,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(map) User-defined labels (key-value pairs).
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -726,7 +748,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Server to assign the Floating IP is assigned to.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -736,7 +759,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Type of the Floating IP.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -757,7 +781,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Name of the Floating IP.
+{{% /md %}}</dd>
 
     <dt class="property- property-deprecated"
             title=", Deprecated">
@@ -794,7 +819,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Description of the Floating IP.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -804,7 +830,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Home location.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -814,7 +841,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}(string) IP address of the Floating IP.
+    <dd>{{% md %}}(string) IP Address of the Floating IP.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -825,7 +852,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) IPv6 subnet. (Only set if `type` is `ipv6`)
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -835,7 +863,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(map) User-defined labels (key-value pairs).
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -843,9 +872,10 @@ The following output properties are available:
 <a href="#server_id_python" style="color: inherit; text-decoration: inherit;">server_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Server to assign the Floating IP is assigned to.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -855,7 +885,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Type of the Floating IP.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -863,7 +894,7 @@ The following output properties are available:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}(int) Unique ID of the Floating IP.
 {{% /md %}}</dd>
@@ -876,7 +907,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Name of the Floating IP.
+{{% /md %}}</dd>
 
     <dt class="property- property-deprecated"
             title=", Deprecated">

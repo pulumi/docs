@@ -84,7 +84,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="py class">
 <dt id="pulumi_hcloud.Certificate">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_hcloud.</code><code class="sig-name descname">Certificate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">certificate</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_hcloud.Certificate" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a Hetzner Clould Certificate to represent a TLS certificate in the Hetzner Cloud.</p>
+<dd><p>Provides a Hetzner Cloud Certificate to represent a TLS certificate in the Hetzner Cloud.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -590,6 +590,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_hcloud.</code><code class="sig-name descname">GetFloatingIpResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">home_location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_network</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">selector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">with_selector</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_hcloud.GetFloatingIpResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getFloatingIp.</p>
 <dl class="py method">
+<dt id="pulumi_hcloud.GetFloatingIpResult.description">
+<em class="property">property </em><code class="sig-name descname">description</code><a class="headerlink" href="#pulumi_hcloud.GetFloatingIpResult.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>(string) Description of the Floating IP.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_hcloud.GetFloatingIpResult.home_location">
+<em class="property">property </em><code class="sig-name descname">home_location</code><a class="headerlink" href="#pulumi_hcloud.GetFloatingIpResult.home_location" title="Permalink to this definition">¶</a></dt>
+<dd><p>(string) Home location.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt id="pulumi_hcloud.GetFloatingIpResult.id">
 <em class="property">property </em><code class="sig-name descname">id</code><a class="headerlink" href="#pulumi_hcloud.GetFloatingIpResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>(int) Unique ID of the Floating IP.</p>
@@ -598,7 +610,37 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py method">
 <dt id="pulumi_hcloud.GetFloatingIpResult.ip_address">
 <em class="property">property </em><code class="sig-name descname">ip_address</code><a class="headerlink" href="#pulumi_hcloud.GetFloatingIpResult.ip_address" title="Permalink to this definition">¶</a></dt>
-<dd><p>(string) IP address of the Floating IP.</p>
+<dd><p>(string) IP Address of the Floating IP.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_hcloud.GetFloatingIpResult.ip_network">
+<em class="property">property </em><code class="sig-name descname">ip_network</code><a class="headerlink" href="#pulumi_hcloud.GetFloatingIpResult.ip_network" title="Permalink to this definition">¶</a></dt>
+<dd><p>(string) IPv6 subnet. (Only set if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">ipv6</span></code>)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_hcloud.GetFloatingIpResult.labels">
+<em class="property">property </em><code class="sig-name descname">labels</code><a class="headerlink" href="#pulumi_hcloud.GetFloatingIpResult.labels" title="Permalink to this definition">¶</a></dt>
+<dd><p>(map) User-defined labels (key-value pairs).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_hcloud.GetFloatingIpResult.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#pulumi_hcloud.GetFloatingIpResult.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>(string) Name of the Floating IP.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_hcloud.GetFloatingIpResult.server_id">
+<em class="property">property </em><code class="sig-name descname">server_id</code><a class="headerlink" href="#pulumi_hcloud.GetFloatingIpResult.server_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>(int) Server to assign the Floating IP is assigned to.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_hcloud.GetFloatingIpResult.type">
+<em class="property">property </em><code class="sig-name descname">type</code><a class="headerlink" href="#pulumi_hcloud.GetFloatingIpResult.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>(string) Type of the Floating IP.</p>
 </dd></dl>
 
 </dd></dl>
@@ -1455,7 +1497,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">location</span><span class="o">=</span><span class="s2">&quot;nbg1&quot;</span><span class="p">)</span>
 <span class="n">load_balancer_target</span> <span class="o">=</span> <span class="n">hcloud</span><span class="o">.</span><span class="n">LoadBalancerTarget</span><span class="p">(</span><span class="s2">&quot;loadBalancerTarget&quot;</span><span class="p">,</span>
     <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;server&quot;</span><span class="p">,</span>
-    <span class="n">load_balancer_id</span><span class="o">=</span><span class="n">hcloud_load_balancer</span><span class="p">[</span><span class="s2">&quot;load_balcancer&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">load_balancer_id</span><span class="o">=</span><span class="n">load_balancer</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">server_id</span><span class="o">=</span><span class="n">my_server</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2850,7 +2892,7 @@ This resource can be useful when you need to determine a Floating IP ID based on
 <span class="kn">import</span> <span class="nn">pulumi_hcloud</span> <span class="k">as</span> <span class="nn">hcloud</span>
 
 <span class="n">ip1</span> <span class="o">=</span> <span class="n">hcloud</span><span class="o">.</span><span class="n">get_floating_ip</span><span class="p">(</span><span class="n">ip_address</span><span class="o">=</span><span class="s2">&quot;1.2.3.4&quot;</span><span class="p">)</span>
-<span class="n">image2</span> <span class="o">=</span> <span class="n">hcloud</span><span class="o">.</span><span class="n">get_floating_ip</span><span class="p">(</span><span class="n">with_selector</span><span class="o">=</span><span class="s2">&quot;key=value&quot;</span><span class="p">)</span>
+<span class="n">ip2</span> <span class="o">=</span> <span class="n">hcloud</span><span class="o">.</span><span class="n">get_floating_ip</span><span class="p">(</span><span class="n">with_selector</span><span class="o">=</span><span class="s2">&quot;key=value&quot;</span><span class="p">)</span>
 <span class="n">main</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="nb">range</span> <span class="ow">in</span> <span class="p">[{</span><span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">i</span><span class="p">}</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">var</span><span class="o">.</span><span class="n">counter</span><span class="p">)]:</span>
     <span class="n">main</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">hcloud</span><span class="o">.</span><span class="n">FloatingIpAssignment</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;main-</span><span class="si">{</span><span class="nb">range</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
@@ -2861,8 +2903,9 @@ This resource can be useful when you need to determine a Floating IP ID based on
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>id</strong> (<em>float</em>) – (int) Unique ID of the Floating IP.</p></li>
+<li><p><strong>id</strong> (<em>float</em>) – ID of the Floating IP.</p></li>
 <li><p><strong>ip_address</strong> (<em>str</em>) – IP address of the Floating IP.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – Name of the Floating IP.</p></li>
 <li><p><strong>with_selector</strong> (<em>str</em>) – <p><a class="reference external" href="https://docs.hetzner.cloud/#overview-label-selector">Label selector</a></p>
 </p></li>
 </ul>
