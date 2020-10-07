@@ -2382,6 +2382,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="macie2_csharp">
+<a href="#macie2_csharp" style="color: inherit; text-decoration: inherit;">Macie2</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="managedblockchain_csharp">
 <a href="#managedblockchain_csharp" style="color: inherit; text-decoration: inherit;">Managedblockchain</a>
 </span> 
@@ -3791,6 +3801,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="macie_go">
 <a href="#macie_go" style="color: inherit; text-decoration: inherit;">Macie</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="macie2_go">
+<a href="#macie2_go" style="color: inherit; text-decoration: inherit;">Macie2</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -5216,6 +5236,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="macie2_nodejs">
+<a href="#macie2_nodejs" style="color: inherit; text-decoration: inherit;">macie2</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="managedblockchain_nodejs">
 <a href="#managedblockchain_nodejs" style="color: inherit; text-decoration: inherit;">managedblockchain</a>
 </span> 
@@ -6625,6 +6655,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="macie_python">
 <a href="#macie_python" style="color: inherit; text-decoration: inherit;">macie</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="macie2_python">
+<a href="#macie2_python" style="color: inherit; text-decoration: inherit;">macie2</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

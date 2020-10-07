@@ -3,7 +3,7 @@ title: "Module organizations"
 title_tag: "Module organizations | Package @pulumi/aws | Node.js SDK"
 linktitle: "organizations"
 meta_desc: "Explore members of the organizations module in the @pulumi/aws package."
-git_sha: "666638557408d978cfe3b6ef8de5bd64ccda6273"
+git_sha: "ddc4d5623c8bb2e25428f11ab0de487b17795614"
 block_external_search_index: true
 ---
 
@@ -50,7 +50,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Account" data-link-title="Account">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/account.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/account.ts#L25">
         Resource <strong>Account</strong>
     </a>
 </h3>
@@ -75,7 +75,7 @@ const account = new aws.organizations.Account("account", {
 ```
 
 <h4 class="pdoc-member-header" id="Account-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/account.ts#L83"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/account.ts#L83"> <b>constructor</b></a>
 </h4>
 
 
@@ -89,7 +89,7 @@ Create a Account resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Account-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/account.ts#L35">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/account.ts#L35">method <b>get</b></a>
 </h4>
 
 
@@ -100,14 +100,14 @@ Get an existing Account resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Account-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/account.ts#L25">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/account.ts#L25">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Account-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/account.ts#L46">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/account.ts#L46">method <b>isInstance</b></a>
 </h4>
 
 
@@ -118,7 +118,7 @@ Returns true if the given object is an instance of Account.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Account-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/account.ts#L56">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/account.ts#L56">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -126,7 +126,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ARN for this account.
 
 <h4 class="pdoc-member-header" id="Account-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/account.ts#L60">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/account.ts#L60">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>email: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -134,7 +134,7 @@ The ARN for this account.
 The email address of the owner to assign to the new member account. This email address must not already be associated with another AWS account.
 
 <h4 class="pdoc-member-header" id="Account-iamUserAccessToBilling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/account.ts#L64">property <b>iamUserAccessToBilling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/account.ts#L64">property <b>iamUserAccessToBilling</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>iamUserAccessToBilling: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -142,7 +142,7 @@ The email address of the owner to assign to the new member account. This email a
 If set to `ALLOW`, the new account enables IAM users to access account billing information if they have the required permissions. If set to `DENY`, then only the root user of the new account can access account billing information.
 
 <h4 class="pdoc-member-header" id="Account-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/account.ts#L25">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/account.ts#L25">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -151,17 +151,17 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Account-joinedMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/account.ts#L65">property <b>joinedMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/account.ts#L65">property <b>joinedMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>joinedMethod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Account-joinedTimestamp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/account.ts#L66">property <b>joinedTimestamp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/account.ts#L66">property <b>joinedTimestamp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>joinedTimestamp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Account-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/account.ts#L70">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/account.ts#L70">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -169,7 +169,7 @@ deployments and may be missing (undefined) during planning phases.
 A friendly name for the member account.
 
 <h4 class="pdoc-member-header" id="Account-parentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/account.ts#L74">property <b>parentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/account.ts#L74">property <b>parentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parentId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -177,7 +177,7 @@ A friendly name for the member account.
 Parent Organizational Unit ID or Root ID for the account. Defaults to the Organization default Root ID. A configuration must be present for this argument to perform drift detection.
 
 <h4 class="pdoc-member-header" id="Account-roleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/account.ts#L78">property <b>roleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/account.ts#L78">property <b>roleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>roleName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -185,12 +185,12 @@ Parent Organizational Unit ID or Root ID for the account. Defaults to the Organi
 The name of an IAM role that Organizations automatically preconfigures in the new member account. This role trusts the master account, allowing users in the master account to assume the role, as permitted by the master account administrator. The role has administrator permissions in the new member account. The Organizations API provides no method for reading this information after account creation, so this provider cannot perform drift detection on its value and will always show a difference for a configured value after import unless [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) is used.
 
 <h4 class="pdoc-member-header" id="Account-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/account.ts#L79">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/account.ts#L79">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Account-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/account.ts#L83">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/account.ts#L83">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -198,7 +198,7 @@ The name of an IAM role that Organizations automatically preconfigures in the ne
 Key-value mapping of resource tags.
 
 <h4 class="pdoc-member-header" id="Account-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/account.ts#L25">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/account.ts#L25">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -207,7 +207,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Organization" data-link-title="Organization">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organization.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organization.ts#L27">
         Resource <strong>Organization</strong>
     </a>
 </h3>
@@ -232,7 +232,7 @@ const org = new aws.organizations.Organization("org", {
 ```
 
 <h4 class="pdoc-member-header" id="Organization-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organization.ts#L94"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organization.ts#L94"> <b>constructor</b></a>
 </h4>
 
 
@@ -246,7 +246,7 @@ Create a Organization resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Organization-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organization.ts#L37">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organization.ts#L37">method <b>get</b></a>
 </h4>
 
 
@@ -257,14 +257,14 @@ Get an existing Organization resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Organization-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organization.ts#L27">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organization.ts#L27">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Organization-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organization.ts#L48">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organization.ts#L48">method <b>isInstance</b></a>
 </h4>
 
 
@@ -275,7 +275,7 @@ Returns true if the given object is an instance of Organization.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Organization-accounts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organization.ts#L58">property <b>accounts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organization.ts#L58">property <b>accounts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#OrganizationAccount'>OrganizationAccount</a>[]&gt;;</code></pre>
@@ -283,7 +283,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 List of organization accounts including the master account. For a list excluding the master account, see the `nonMasterAccounts` attribute. All elements have these attributes:
 
 <h4 class="pdoc-member-header" id="Organization-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organization.ts#L62">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organization.ts#L62">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -291,7 +291,7 @@ List of organization accounts including the master account. For a list excluding
 ARN of the root
 
 <h4 class="pdoc-member-header" id="Organization-awsServiceAccessPrincipals">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organization.ts#L66">property <b>awsServiceAccessPrincipals</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organization.ts#L66">property <b>awsServiceAccessPrincipals</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>awsServiceAccessPrincipals: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -299,7 +299,7 @@ ARN of the root
 List of AWS service principal names for which you want to enable integration with your organization. This is typically in the form of a URL, such as service-abbreviation.amazonaws.com. Organization must have `featureSet` set to `ALL`. For additional information, see the [AWS Organizations User Guide](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html).
 
 <h4 class="pdoc-member-header" id="Organization-enabledPolicyTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organization.ts#L70">property <b>enabledPolicyTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organization.ts#L70">property <b>enabledPolicyTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabledPolicyTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -307,7 +307,7 @@ List of AWS service principal names for which you want to enable integration wit
 List of Organizations policy types to enable in the Organization Root. Organization must have `featureSet` set to `ALL`. For additional information about valid policy types (e.g. `BACKUP_POLICY`, `SERVICE_CONTROL_POLICY`, and `TAG_POLICY`), see the [AWS Organizations API Reference](https://docs.aws.amazon.com/organizations/latest/APIReference/API_EnablePolicyType.html).
 
 <h4 class="pdoc-member-header" id="Organization-featureSet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organization.ts#L74">property <b>featureSet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organization.ts#L74">property <b>featureSet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>featureSet: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -315,7 +315,7 @@ List of Organizations policy types to enable in the Organization Root. Organizat
 Specify "ALL" (default) or "CONSOLIDATED_BILLING".
 
 <h4 class="pdoc-member-header" id="Organization-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organization.ts#L27">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organization.ts#L27">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -324,7 +324,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Organization-masterAccountArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organization.ts#L78">property <b>masterAccountArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organization.ts#L78">property <b>masterAccountArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>masterAccountArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -332,7 +332,7 @@ deployments and may be missing (undefined) during planning phases.
 ARN of the master account
 
 <h4 class="pdoc-member-header" id="Organization-masterAccountEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organization.ts#L82">property <b>masterAccountEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organization.ts#L82">property <b>masterAccountEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>masterAccountEmail: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -340,7 +340,7 @@ ARN of the master account
 Email address of the master account
 
 <h4 class="pdoc-member-header" id="Organization-masterAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organization.ts#L86">property <b>masterAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organization.ts#L86">property <b>masterAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>masterAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -348,7 +348,7 @@ Email address of the master account
 Identifier of the master account
 
 <h4 class="pdoc-member-header" id="Organization-nonMasterAccounts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organization.ts#L90">property <b>nonMasterAccounts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organization.ts#L90">property <b>nonMasterAccounts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nonMasterAccounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#OrganizationNonMasterAccount'>OrganizationNonMasterAccount</a>[]&gt;;</code></pre>
@@ -356,7 +356,7 @@ Identifier of the master account
 List of organization accounts excluding the master account. For a list including the master account, see the `accounts` attribute. All elements have these attributes:
 
 <h4 class="pdoc-member-header" id="Organization-roots">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organization.ts#L94">property <b>roots</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organization.ts#L94">property <b>roots</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>roots: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#OrganizationRoot'>OrganizationRoot</a>[]&gt;;</code></pre>
@@ -364,7 +364,7 @@ List of organization accounts excluding the master account. For a list including
 List of organization roots. All elements have these attributes:
 
 <h4 class="pdoc-member-header" id="Organization-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organization.ts#L27">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organization.ts#L27">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -373,7 +373,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="OrganizationalUnit" data-link-title="OrganizationalUnit">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organizationalUnit.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organizationalUnit.ts#L21">
         Resource <strong>OrganizationalUnit</strong>
     </a>
 </h3>
@@ -392,7 +392,7 @@ const example = new aws.organizations.OrganizationalUnit("example", {parentId: a
 ```
 
 <h4 class="pdoc-member-header" id="OrganizationalUnit-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organizationalUnit.ts#L64"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organizationalUnit.ts#L64"> <b>constructor</b></a>
 </h4>
 
 
@@ -406,7 +406,7 @@ Create a OrganizationalUnit resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="OrganizationalUnit-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organizationalUnit.ts#L31">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organizationalUnit.ts#L31">method <b>get</b></a>
 </h4>
 
 
@@ -417,14 +417,14 @@ Get an existing OrganizationalUnit resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="OrganizationalUnit-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organizationalUnit.ts#L21">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organizationalUnit.ts#L21">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="OrganizationalUnit-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organizationalUnit.ts#L42">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organizationalUnit.ts#L42">method <b>isInstance</b></a>
 </h4>
 
 
@@ -435,7 +435,7 @@ Returns true if the given object is an instance of OrganizationalUnit.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="OrganizationalUnit-accounts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organizationalUnit.ts#L52">property <b>accounts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organizationalUnit.ts#L52">property <b>accounts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#OrganizationalUnitAccount'>OrganizationalUnitAccount</a>[]&gt;;</code></pre>
@@ -443,7 +443,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 List of child accounts for this Organizational Unit. Does not return account information for child Organizational Units. All elements have these attributes:
 
 <h4 class="pdoc-member-header" id="OrganizationalUnit-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organizationalUnit.ts#L56">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organizationalUnit.ts#L56">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -451,7 +451,7 @@ List of child accounts for this Organizational Unit. Does not return account inf
 ARN of the organizational unit
 
 <h4 class="pdoc-member-header" id="OrganizationalUnit-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organizationalUnit.ts#L21">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organizationalUnit.ts#L21">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -460,7 +460,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="OrganizationalUnit-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organizationalUnit.ts#L60">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organizationalUnit.ts#L60">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -468,7 +468,7 @@ deployments and may be missing (undefined) during planning phases.
 The name for the organizational unit
 
 <h4 class="pdoc-member-header" id="OrganizationalUnit-parentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organizationalUnit.ts#L64">property <b>parentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organizationalUnit.ts#L64">property <b>parentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parentId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -476,7 +476,7 @@ The name for the organizational unit
 ID of the parent organizational unit, which may be the root
 
 <h4 class="pdoc-member-header" id="OrganizationalUnit-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organizationalUnit.ts#L21">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organizationalUnit.ts#L21">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -485,7 +485,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Policy" data-link-title="Policy">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/policy.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/policy.ts#L29">
         Resource <strong>Policy</strong>
     </a>
 </h3>
@@ -514,7 +514,7 @@ const example = new aws.organizations.Policy("example", {
 ```
 
 <h4 class="pdoc-member-header" id="Policy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/policy.ts#L80"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/policy.ts#L80"> <b>constructor</b></a>
 </h4>
 
 
@@ -528,7 +528,7 @@ Create a Policy resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Policy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/policy.ts#L39">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/policy.ts#L39">method <b>get</b></a>
 </h4>
 
 
@@ -539,14 +539,14 @@ Get an existing Policy resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Policy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/policy.ts#L29">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/policy.ts#L29">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Policy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/policy.ts#L50">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/policy.ts#L50">method <b>isInstance</b></a>
 </h4>
 
 
@@ -557,7 +557,7 @@ Returns true if the given object is an instance of Policy.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Policy-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/policy.ts#L60">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/policy.ts#L60">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -565,7 +565,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Amazon Resource Name (ARN) of the policy.
 
 <h4 class="pdoc-member-header" id="Policy-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/policy.ts#L64">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/policy.ts#L64">property <b>content</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>content: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -573,7 +573,7 @@ Amazon Resource Name (ARN) of the policy.
 The policy content to add to the new policy. For example, if you create a [service control policy (SCP)](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scp.html), this string must be JSON text that specifies the permissions that admins in attached accounts can delegate to their users, groups, and roles. For more information about the SCP syntax, see the [Service Control Policy Syntax documentation](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_scp-syntax.html) and for more information on the Tag Policy syntax, see the [Tag Policy Syntax documentation](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_example-tag-policies.html).
 
 <h4 class="pdoc-member-header" id="Policy-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/policy.ts#L68">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/policy.ts#L68">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -581,7 +581,7 @@ The policy content to add to the new policy. For example, if you create a [servi
 A description to assign to the policy.
 
 <h4 class="pdoc-member-header" id="Policy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/policy.ts#L29">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/policy.ts#L29">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -590,7 +590,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Policy-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/policy.ts#L72">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/policy.ts#L72">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -598,7 +598,7 @@ deployments and may be missing (undefined) during planning phases.
 The friendly name to assign to the policy.
 
 <h4 class="pdoc-member-header" id="Policy-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/policy.ts#L76">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/policy.ts#L76">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -606,7 +606,7 @@ The friendly name to assign to the policy.
 Key-value map of resource tags.
 
 <h4 class="pdoc-member-header" id="Policy-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/policy.ts#L80">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/policy.ts#L80">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -614,7 +614,7 @@ Key-value map of resource tags.
 The type of policy to create. Valid values are `AISERVICES_OPT_OUT_POLICY`, `BACKUP_POLICY`, `SERVICE_CONTROL_POLICY` (SCP), and `TAG_POLICY`. Defaults to `SERVICE_CONTROL_POLICY`.
 
 <h4 class="pdoc-member-header" id="Policy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/policy.ts#L29">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/policy.ts#L29">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -623,7 +623,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="PolicyAttachment" data-link-title="PolicyAttachment">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/policyAttachment.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/policyAttachment.ts#L45">
         Resource <strong>PolicyAttachment</strong>
     </a>
 </h3>
@@ -668,7 +668,7 @@ const unit = new aws.organizations.PolicyAttachment("unit", {
 ```
 
 <h4 class="pdoc-member-header" id="PolicyAttachment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/policyAttachment.ts#L80"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/policyAttachment.ts#L80"> <b>constructor</b></a>
 </h4>
 
 
@@ -682,7 +682,7 @@ Create a PolicyAttachment resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="PolicyAttachment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/policyAttachment.ts#L55">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/policyAttachment.ts#L55">method <b>get</b></a>
 </h4>
 
 
@@ -693,14 +693,14 @@ Get an existing PolicyAttachment resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="PolicyAttachment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/policyAttachment.ts#L45">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/policyAttachment.ts#L45">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PolicyAttachment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/policyAttachment.ts#L66">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/policyAttachment.ts#L66">method <b>isInstance</b></a>
 </h4>
 
 
@@ -711,7 +711,7 @@ Returns true if the given object is an instance of PolicyAttachment.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="PolicyAttachment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/policyAttachment.ts#L45">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/policyAttachment.ts#L45">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -720,7 +720,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="PolicyAttachment-policyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/policyAttachment.ts#L76">property <b>policyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/policyAttachment.ts#L76">property <b>policyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -728,7 +728,7 @@ deployments and may be missing (undefined) during planning phases.
 The unique identifier (ID) of the policy that you want to attach to the target.
 
 <h4 class="pdoc-member-header" id="PolicyAttachment-targetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/policyAttachment.ts#L80">property <b>targetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/policyAttachment.ts#L80">property <b>targetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -736,7 +736,7 @@ The unique identifier (ID) of the policy that you want to attach to the target.
 The unique identifier (ID) of the root, organizational unit, or account number that you want to attach the policy to.
 
 <h4 class="pdoc-member-header" id="PolicyAttachment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/policyAttachment.ts#L45">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/policyAttachment.ts#L45">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -747,7 +747,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getOrganization" data-link-title="getOrganization">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/getOrganization.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/getOrganization.ts#L55">
         Function <strong>getOrganization</strong>
     </a>
 </h3>
@@ -802,7 +802,7 @@ const snsTopicPolicyTopicPolicy = new aws.sns.TopicPolicy("snsTopicPolicyTopicPo
 ```
 
 <h3 class="pdoc-module-header" id="getOrganizationalUnits" data-link-title="getOrganizationalUnits">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/getOrganizationalUnits.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/getOrganizationalUnits.ts#L24">
         Function <strong>getOrganizationalUnits</strong>
     </a>
 </h3>
@@ -828,7 +828,7 @@ const ou = org.then(org => aws.organizations.getOrganizationalUnits({
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AccountArgs" data-link-title="AccountArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/account.ts#L174">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/account.ts#L174">
         interface <strong>AccountArgs</strong>
     </a>
 </h3>
@@ -838,7 +838,7 @@ const ou = org.then(org => aws.organizations.getOrganizationalUnits({
 The set of arguments for constructing a Account resource.
 
 <h4 class="pdoc-member-header" id="AccountArgs-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/account.ts#L178">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/account.ts#L178">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -846,7 +846,7 @@ The set of arguments for constructing a Account resource.
 The email address of the owner to assign to the new member account. This email address must not already be associated with another AWS account.
 
 <h4 class="pdoc-member-header" id="AccountArgs-iamUserAccessToBilling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/account.ts#L182">property <b>iamUserAccessToBilling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/account.ts#L182">property <b>iamUserAccessToBilling</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iamUserAccessToBilling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -854,7 +854,7 @@ The email address of the owner to assign to the new member account. This email a
 If set to `ALLOW`, the new account enables IAM users to access account billing information if they have the required permissions. If set to `DENY`, then only the root user of the new account can access account billing information.
 
 <h4 class="pdoc-member-header" id="AccountArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/account.ts#L186">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/account.ts#L186">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -862,7 +862,7 @@ If set to `ALLOW`, the new account enables IAM users to access account billing i
 A friendly name for the member account.
 
 <h4 class="pdoc-member-header" id="AccountArgs-parentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/account.ts#L190">property <b>parentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/account.ts#L190">property <b>parentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parentId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -870,7 +870,7 @@ A friendly name for the member account.
 Parent Organizational Unit ID or Root ID for the account. Defaults to the Organization default Root ID. A configuration must be present for this argument to perform drift detection.
 
 <h4 class="pdoc-member-header" id="AccountArgs-roleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/account.ts#L194">property <b>roleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/account.ts#L194">property <b>roleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -878,7 +878,7 @@ Parent Organizational Unit ID or Root ID for the account. Defaults to the Organi
 The name of an IAM role that Organizations automatically preconfigures in the new member account. This role trusts the master account, allowing users in the master account to assume the role, as permitted by the master account administrator. The role has administrator permissions in the new member account. The Organizations API provides no method for reading this information after account creation, so this provider cannot perform drift detection on its value and will always show a difference for a configured value after import unless [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) is used.
 
 <h4 class="pdoc-member-header" id="AccountArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/account.ts#L198">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/account.ts#L198">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -886,7 +886,7 @@ The name of an IAM role that Organizations automatically preconfigures in the ne
 Key-value mapping of resource tags.
 
 <h3 class="pdoc-module-header" id="AccountState" data-link-title="AccountState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/account.ts#L137">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/account.ts#L137">
         interface <strong>AccountState</strong>
     </a>
 </h3>
@@ -896,7 +896,7 @@ Key-value mapping of resource tags.
 Input properties used for looking up and filtering Account resources.
 
 <h4 class="pdoc-member-header" id="AccountState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/account.ts#L141">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/account.ts#L141">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -904,7 +904,7 @@ Input properties used for looking up and filtering Account resources.
 The ARN for this account.
 
 <h4 class="pdoc-member-header" id="AccountState-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/account.ts#L145">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/account.ts#L145">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -912,7 +912,7 @@ The ARN for this account.
 The email address of the owner to assign to the new member account. This email address must not already be associated with another AWS account.
 
 <h4 class="pdoc-member-header" id="AccountState-iamUserAccessToBilling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/account.ts#L149">property <b>iamUserAccessToBilling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/account.ts#L149">property <b>iamUserAccessToBilling</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iamUserAccessToBilling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -920,17 +920,17 @@ The email address of the owner to assign to the new member account. This email a
 If set to `ALLOW`, the new account enables IAM users to access account billing information if they have the required permissions. If set to `DENY`, then only the root user of the new account can access account billing information.
 
 <h4 class="pdoc-member-header" id="AccountState-joinedMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/account.ts#L150">property <b>joinedMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/account.ts#L150">property <b>joinedMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>joinedMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AccountState-joinedTimestamp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/account.ts#L151">property <b>joinedTimestamp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/account.ts#L151">property <b>joinedTimestamp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>joinedTimestamp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AccountState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/account.ts#L155">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/account.ts#L155">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -938,7 +938,7 @@ If set to `ALLOW`, the new account enables IAM users to access account billing i
 A friendly name for the member account.
 
 <h4 class="pdoc-member-header" id="AccountState-parentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/account.ts#L159">property <b>parentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/account.ts#L159">property <b>parentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parentId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -946,7 +946,7 @@ A friendly name for the member account.
 Parent Organizational Unit ID or Root ID for the account. Defaults to the Organization default Root ID. A configuration must be present for this argument to perform drift detection.
 
 <h4 class="pdoc-member-header" id="AccountState-roleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/account.ts#L163">property <b>roleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/account.ts#L163">property <b>roleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -954,12 +954,12 @@ Parent Organizational Unit ID or Root ID for the account. Defaults to the Organi
 The name of an IAM role that Organizations automatically preconfigures in the new member account. This role trusts the master account, allowing users in the master account to assume the role, as permitted by the master account administrator. The role has administrator permissions in the new member account. The Organizations API provides no method for reading this information after account creation, so this provider cannot perform drift detection on its value and will always show a difference for a configured value after import unless [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) is used.
 
 <h4 class="pdoc-member-header" id="AccountState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/account.ts#L164">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/account.ts#L164">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AccountState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/account.ts#L168">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/account.ts#L168">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -967,7 +967,7 @@ The name of an IAM role that Organizations automatically preconfigures in the ne
 Key-value mapping of resource tags.
 
 <h3 class="pdoc-module-header" id="GetOrganizationalUnitsArgs" data-link-title="GetOrganizationalUnitsArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/getOrganizationalUnits.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/getOrganizationalUnits.ts#L40">
         interface <strong>GetOrganizationalUnitsArgs</strong>
     </a>
 </h3>
@@ -977,7 +977,7 @@ Key-value mapping of resource tags.
 A collection of arguments for invoking getOrganizationalUnits.
 
 <h4 class="pdoc-member-header" id="GetOrganizationalUnitsArgs-parentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/getOrganizationalUnits.ts#L44">property <b>parentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/getOrganizationalUnits.ts#L44">property <b>parentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parentId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -985,7 +985,7 @@ A collection of arguments for invoking getOrganizationalUnits.
 The parent ID of the organizational unit.
 
 <h3 class="pdoc-module-header" id="GetOrganizationalUnitsResult" data-link-title="GetOrganizationalUnitsResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/getOrganizationalUnits.ts#L50">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/getOrganizationalUnits.ts#L50">
         interface <strong>GetOrganizationalUnitsResult</strong>
     </a>
 </h3>
@@ -995,7 +995,7 @@ The parent ID of the organizational unit.
 A collection of values returned by getOrganizationalUnits.
 
 <h4 class="pdoc-member-header" id="GetOrganizationalUnitsResult-childrens">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/getOrganizationalUnits.ts#L54">property <b>childrens</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/getOrganizationalUnits.ts#L54">property <b>childrens</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>childrens: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetOrganizationalUnitsChildren'>GetOrganizationalUnitsChildren</a>[];</code></pre>
@@ -1003,7 +1003,7 @@ A collection of values returned by getOrganizationalUnits.
 List of child organizational units, which have the following attributes:
 
 <h4 class="pdoc-member-header" id="GetOrganizationalUnitsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/getOrganizationalUnits.ts#L58">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/getOrganizationalUnits.ts#L58">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1011,12 +1011,12 @@ List of child organizational units, which have the following attributes:
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetOrganizationalUnitsResult-parentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/getOrganizationalUnits.ts#L59">property <b>parentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/getOrganizationalUnits.ts#L59">property <b>parentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parentId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetOrganizationResult" data-link-title="GetOrganizationResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/getOrganization.ts#L70">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/getOrganization.ts#L70">
         interface <strong>GetOrganizationResult</strong>
     </a>
 </h3>
@@ -1026,7 +1026,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of values returned by getOrganization.
 
 <h4 class="pdoc-member-header" id="GetOrganizationResult-accounts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/getOrganization.ts#L74">property <b>accounts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/getOrganization.ts#L74">property <b>accounts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accounts: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetOrganizationAccount'>GetOrganizationAccount</a>[];</code></pre>
@@ -1034,7 +1034,7 @@ A collection of values returned by getOrganization.
 List of organization accounts including the master account. For a list excluding the master account, see the `nonMasterAccounts` attribute. All elements have these attributes:
 
 <h4 class="pdoc-member-header" id="GetOrganizationResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/getOrganization.ts#L78">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/getOrganization.ts#L78">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1042,7 +1042,7 @@ List of organization accounts including the master account. For a list excluding
 ARN of the root
 
 <h4 class="pdoc-member-header" id="GetOrganizationResult-awsServiceAccessPrincipals">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/getOrganization.ts#L82">property <b>awsServiceAccessPrincipals</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/getOrganization.ts#L82">property <b>awsServiceAccessPrincipals</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>awsServiceAccessPrincipals: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1050,7 +1050,7 @@ ARN of the root
 A list of AWS service principal names that have integration enabled with your organization. Organization must have `featureSet` set to `ALL`. For additional information, see the [AWS Organizations User Guide](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html).
 
 <h4 class="pdoc-member-header" id="GetOrganizationResult-enabledPolicyTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/getOrganization.ts#L86">property <b>enabledPolicyTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/getOrganization.ts#L86">property <b>enabledPolicyTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabledPolicyTypes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1058,7 +1058,7 @@ A list of AWS service principal names that have integration enabled with your or
 A list of Organizations policy types that are enabled in the Organization Root. Organization must have `featureSet` set to `ALL`. For additional information about valid policy types (e.g. `SERVICE_CONTROL_POLICY`), see the [AWS Organizations API Reference](https://docs.aws.amazon.com/organizations/latest/APIReference/API_EnablePolicyType.html).
 
 <h4 class="pdoc-member-header" id="GetOrganizationResult-featureSet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/getOrganization.ts#L90">property <b>featureSet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/getOrganization.ts#L90">property <b>featureSet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>featureSet: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1066,7 +1066,7 @@ A list of Organizations policy types that are enabled in the Organization Root. 
 The FeatureSet of the organization.
 
 <h4 class="pdoc-member-header" id="GetOrganizationResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/getOrganization.ts#L94">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/getOrganization.ts#L94">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1074,7 +1074,7 @@ The FeatureSet of the organization.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetOrganizationResult-masterAccountArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/getOrganization.ts#L98">property <b>masterAccountArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/getOrganization.ts#L98">property <b>masterAccountArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterAccountArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1082,7 +1082,7 @@ The provider-assigned unique ID for this managed resource.
 The Amazon Resource Name (ARN) of the account that is designated as the master account for the organization.
 
 <h4 class="pdoc-member-header" id="GetOrganizationResult-masterAccountEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/getOrganization.ts#L102">property <b>masterAccountEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/getOrganization.ts#L102">property <b>masterAccountEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterAccountEmail: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1090,7 +1090,7 @@ The Amazon Resource Name (ARN) of the account that is designated as the master a
 The email address that is associated with the AWS account that is designated as the master account for the organization.
 
 <h4 class="pdoc-member-header" id="GetOrganizationResult-masterAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/getOrganization.ts#L106">property <b>masterAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/getOrganization.ts#L106">property <b>masterAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterAccountId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1098,7 +1098,7 @@ The email address that is associated with the AWS account that is designated as 
 The unique identifier (ID) of the master account of an organization.
 
 <h4 class="pdoc-member-header" id="GetOrganizationResult-nonMasterAccounts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/getOrganization.ts#L110">property <b>nonMasterAccounts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/getOrganization.ts#L110">property <b>nonMasterAccounts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nonMasterAccounts: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetOrganizationNonMasterAccount'>GetOrganizationNonMasterAccount</a>[];</code></pre>
@@ -1106,7 +1106,7 @@ The unique identifier (ID) of the master account of an organization.
 List of organization accounts excluding the master account. For a list including the master account, see the `accounts` attribute. All elements have these attributes:
 
 <h4 class="pdoc-member-header" id="GetOrganizationResult-roots">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/getOrganization.ts#L114">property <b>roots</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/getOrganization.ts#L114">property <b>roots</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roots: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetOrganizationRoot'>GetOrganizationRoot</a>[];</code></pre>
@@ -1114,7 +1114,7 @@ List of organization accounts excluding the master account. For a list including
 List of organization roots. All elements have these attributes:
 
 <h3 class="pdoc-module-header" id="OrganizationalUnitArgs" data-link-title="OrganizationalUnitArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organizationalUnit.ts#L128">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organizationalUnit.ts#L128">
         interface <strong>OrganizationalUnitArgs</strong>
     </a>
 </h3>
@@ -1124,7 +1124,7 @@ List of organization roots. All elements have these attributes:
 The set of arguments for constructing a OrganizationalUnit resource.
 
 <h4 class="pdoc-member-header" id="OrganizationalUnitArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organizationalUnit.ts#L132">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organizationalUnit.ts#L132">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1132,7 +1132,7 @@ The set of arguments for constructing a OrganizationalUnit resource.
 The name for the organizational unit
 
 <h4 class="pdoc-member-header" id="OrganizationalUnitArgs-parentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organizationalUnit.ts#L136">property <b>parentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organizationalUnit.ts#L136">property <b>parentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parentId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1140,7 +1140,7 @@ The name for the organizational unit
 ID of the parent organizational unit, which may be the root
 
 <h3 class="pdoc-module-header" id="OrganizationalUnitState" data-link-title="OrganizationalUnitState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organizationalUnit.ts#L106">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organizationalUnit.ts#L106">
         interface <strong>OrganizationalUnitState</strong>
     </a>
 </h3>
@@ -1150,7 +1150,7 @@ ID of the parent organizational unit, which may be the root
 Input properties used for looking up and filtering OrganizationalUnit resources.
 
 <h4 class="pdoc-member-header" id="OrganizationalUnitState-accounts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organizationalUnit.ts#L110">property <b>accounts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organizationalUnit.ts#L110">property <b>accounts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#OrganizationalUnitAccount'>OrganizationalUnitAccount</a>&gt;[]&gt;;</code></pre>
@@ -1158,7 +1158,7 @@ Input properties used for looking up and filtering OrganizationalUnit resources.
 List of child accounts for this Organizational Unit. Does not return account information for child Organizational Units. All elements have these attributes:
 
 <h4 class="pdoc-member-header" id="OrganizationalUnitState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organizationalUnit.ts#L114">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organizationalUnit.ts#L114">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1166,7 +1166,7 @@ List of child accounts for this Organizational Unit. Does not return account inf
 ARN of the organizational unit
 
 <h4 class="pdoc-member-header" id="OrganizationalUnitState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organizationalUnit.ts#L118">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organizationalUnit.ts#L118">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1174,7 +1174,7 @@ ARN of the organizational unit
 The name for the organizational unit
 
 <h4 class="pdoc-member-header" id="OrganizationalUnitState-parentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organizationalUnit.ts#L122">property <b>parentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organizationalUnit.ts#L122">property <b>parentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parentId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1182,7 +1182,7 @@ The name for the organizational unit
 ID of the parent organizational unit, which may be the root
 
 <h3 class="pdoc-module-header" id="OrganizationArgs" data-link-title="OrganizationArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organization.ts#L191">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organization.ts#L191">
         interface <strong>OrganizationArgs</strong>
     </a>
 </h3>
@@ -1192,7 +1192,7 @@ ID of the parent organizational unit, which may be the root
 The set of arguments for constructing a Organization resource.
 
 <h4 class="pdoc-member-header" id="OrganizationArgs-awsServiceAccessPrincipals">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organization.ts#L195">property <b>awsServiceAccessPrincipals</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organization.ts#L195">property <b>awsServiceAccessPrincipals</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>awsServiceAccessPrincipals?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1200,7 +1200,7 @@ The set of arguments for constructing a Organization resource.
 List of AWS service principal names for which you want to enable integration with your organization. This is typically in the form of a URL, such as service-abbreviation.amazonaws.com. Organization must have `featureSet` set to `ALL`. For additional information, see the [AWS Organizations User Guide](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html).
 
 <h4 class="pdoc-member-header" id="OrganizationArgs-enabledPolicyTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organization.ts#L199">property <b>enabledPolicyTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organization.ts#L199">property <b>enabledPolicyTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabledPolicyTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1208,7 +1208,7 @@ List of AWS service principal names for which you want to enable integration wit
 List of Organizations policy types to enable in the Organization Root. Organization must have `featureSet` set to `ALL`. For additional information about valid policy types (e.g. `BACKUP_POLICY`, `SERVICE_CONTROL_POLICY`, and `TAG_POLICY`), see the [AWS Organizations API Reference](https://docs.aws.amazon.com/organizations/latest/APIReference/API_EnablePolicyType.html).
 
 <h4 class="pdoc-member-header" id="OrganizationArgs-featureSet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organization.ts#L203">property <b>featureSet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organization.ts#L203">property <b>featureSet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>featureSet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1216,7 +1216,7 @@ List of Organizations policy types to enable in the Organization Root. Organizat
 Specify "ALL" (default) or "CONSOLIDATED_BILLING".
 
 <h3 class="pdoc-module-header" id="OrganizationState" data-link-title="OrganizationState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organization.ts#L145">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organization.ts#L145">
         interface <strong>OrganizationState</strong>
     </a>
 </h3>
@@ -1226,7 +1226,7 @@ Specify "ALL" (default) or "CONSOLIDATED_BILLING".
 Input properties used for looking up and filtering Organization resources.
 
 <h4 class="pdoc-member-header" id="OrganizationState-accounts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organization.ts#L149">property <b>accounts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organization.ts#L149">property <b>accounts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#OrganizationAccount'>OrganizationAccount</a>&gt;[]&gt;;</code></pre>
@@ -1234,7 +1234,7 @@ Input properties used for looking up and filtering Organization resources.
 List of organization accounts including the master account. For a list excluding the master account, see the `nonMasterAccounts` attribute. All elements have these attributes:
 
 <h4 class="pdoc-member-header" id="OrganizationState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organization.ts#L153">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organization.ts#L153">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1242,7 +1242,7 @@ List of organization accounts including the master account. For a list excluding
 ARN of the root
 
 <h4 class="pdoc-member-header" id="OrganizationState-awsServiceAccessPrincipals">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organization.ts#L157">property <b>awsServiceAccessPrincipals</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organization.ts#L157">property <b>awsServiceAccessPrincipals</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>awsServiceAccessPrincipals?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1250,7 +1250,7 @@ ARN of the root
 List of AWS service principal names for which you want to enable integration with your organization. This is typically in the form of a URL, such as service-abbreviation.amazonaws.com. Organization must have `featureSet` set to `ALL`. For additional information, see the [AWS Organizations User Guide](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html).
 
 <h4 class="pdoc-member-header" id="OrganizationState-enabledPolicyTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organization.ts#L161">property <b>enabledPolicyTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organization.ts#L161">property <b>enabledPolicyTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabledPolicyTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1258,7 +1258,7 @@ List of AWS service principal names for which you want to enable integration wit
 List of Organizations policy types to enable in the Organization Root. Organization must have `featureSet` set to `ALL`. For additional information about valid policy types (e.g. `BACKUP_POLICY`, `SERVICE_CONTROL_POLICY`, and `TAG_POLICY`), see the [AWS Organizations API Reference](https://docs.aws.amazon.com/organizations/latest/APIReference/API_EnablePolicyType.html).
 
 <h4 class="pdoc-member-header" id="OrganizationState-featureSet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organization.ts#L165">property <b>featureSet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organization.ts#L165">property <b>featureSet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>featureSet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1266,7 +1266,7 @@ List of Organizations policy types to enable in the Organization Root. Organizat
 Specify "ALL" (default) or "CONSOLIDATED_BILLING".
 
 <h4 class="pdoc-member-header" id="OrganizationState-masterAccountArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organization.ts#L169">property <b>masterAccountArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organization.ts#L169">property <b>masterAccountArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterAccountArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1274,7 +1274,7 @@ Specify "ALL" (default) or "CONSOLIDATED_BILLING".
 ARN of the master account
 
 <h4 class="pdoc-member-header" id="OrganizationState-masterAccountEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organization.ts#L173">property <b>masterAccountEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organization.ts#L173">property <b>masterAccountEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterAccountEmail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1282,7 +1282,7 @@ ARN of the master account
 Email address of the master account
 
 <h4 class="pdoc-member-header" id="OrganizationState-masterAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organization.ts#L177">property <b>masterAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organization.ts#L177">property <b>masterAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1290,7 +1290,7 @@ Email address of the master account
 Identifier of the master account
 
 <h4 class="pdoc-member-header" id="OrganizationState-nonMasterAccounts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organization.ts#L181">property <b>nonMasterAccounts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organization.ts#L181">property <b>nonMasterAccounts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nonMasterAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#OrganizationNonMasterAccount'>OrganizationNonMasterAccount</a>&gt;[]&gt;;</code></pre>
@@ -1298,7 +1298,7 @@ Identifier of the master account
 List of organization accounts excluding the master account. For a list including the master account, see the `accounts` attribute. All elements have these attributes:
 
 <h4 class="pdoc-member-header" id="OrganizationState-roots">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/organization.ts#L185">property <b>roots</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/organization.ts#L185">property <b>roots</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roots?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#OrganizationRoot'>OrganizationRoot</a>&gt;[]&gt;;</code></pre>
@@ -1306,7 +1306,7 @@ List of organization accounts excluding the master account. For a list including
 List of organization roots. All elements have these attributes:
 
 <h3 class="pdoc-module-header" id="PolicyArgs" data-link-title="PolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/policy.ts#L156">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/policy.ts#L156">
         interface <strong>PolicyArgs</strong>
     </a>
 </h3>
@@ -1316,7 +1316,7 @@ List of organization roots. All elements have these attributes:
 The set of arguments for constructing a Policy resource.
 
 <h4 class="pdoc-member-header" id="PolicyArgs-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/policy.ts#L160">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/policy.ts#L160">property <b>content</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>content: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1324,7 +1324,7 @@ The set of arguments for constructing a Policy resource.
 The policy content to add to the new policy. For example, if you create a [service control policy (SCP)](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scp.html), this string must be JSON text that specifies the permissions that admins in attached accounts can delegate to their users, groups, and roles. For more information about the SCP syntax, see the [Service Control Policy Syntax documentation](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_scp-syntax.html) and for more information on the Tag Policy syntax, see the [Tag Policy Syntax documentation](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_example-tag-policies.html).
 
 <h4 class="pdoc-member-header" id="PolicyArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/policy.ts#L164">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/policy.ts#L164">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1332,7 +1332,7 @@ The policy content to add to the new policy. For example, if you create a [servi
 A description to assign to the policy.
 
 <h4 class="pdoc-member-header" id="PolicyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/policy.ts#L168">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/policy.ts#L168">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1340,7 +1340,7 @@ A description to assign to the policy.
 The friendly name to assign to the policy.
 
 <h4 class="pdoc-member-header" id="PolicyArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/policy.ts#L172">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/policy.ts#L172">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1348,7 +1348,7 @@ The friendly name to assign to the policy.
 Key-value map of resource tags.
 
 <h4 class="pdoc-member-header" id="PolicyArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/policy.ts#L176">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/policy.ts#L176">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1356,7 +1356,7 @@ Key-value map of resource tags.
 The type of policy to create. Valid values are `AISERVICES_OPT_OUT_POLICY`, `BACKUP_POLICY`, `SERVICE_CONTROL_POLICY` (SCP), and `TAG_POLICY`. Defaults to `SERVICE_CONTROL_POLICY`.
 
 <h3 class="pdoc-module-header" id="PolicyAttachmentArgs" data-link-title="PolicyAttachmentArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/policyAttachment.ts#L135">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/policyAttachment.ts#L135">
         interface <strong>PolicyAttachmentArgs</strong>
     </a>
 </h3>
@@ -1366,7 +1366,7 @@ The type of policy to create. Valid values are `AISERVICES_OPT_OUT_POLICY`, `BAC
 The set of arguments for constructing a PolicyAttachment resource.
 
 <h4 class="pdoc-member-header" id="PolicyAttachmentArgs-policyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/policyAttachment.ts#L139">property <b>policyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/policyAttachment.ts#L139">property <b>policyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1374,7 +1374,7 @@ The set of arguments for constructing a PolicyAttachment resource.
 The unique identifier (ID) of the policy that you want to attach to the target.
 
 <h4 class="pdoc-member-header" id="PolicyAttachmentArgs-targetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/policyAttachment.ts#L143">property <b>targetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/policyAttachment.ts#L143">property <b>targetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1382,7 +1382,7 @@ The unique identifier (ID) of the policy that you want to attach to the target.
 The unique identifier (ID) of the root, organizational unit, or account number that you want to attach the policy to.
 
 <h3 class="pdoc-module-header" id="PolicyAttachmentState" data-link-title="PolicyAttachmentState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/policyAttachment.ts#L121">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/policyAttachment.ts#L121">
         interface <strong>PolicyAttachmentState</strong>
     </a>
 </h3>
@@ -1392,7 +1392,7 @@ The unique identifier (ID) of the root, organizational unit, or account number t
 Input properties used for looking up and filtering PolicyAttachment resources.
 
 <h4 class="pdoc-member-header" id="PolicyAttachmentState-policyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/policyAttachment.ts#L125">property <b>policyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/policyAttachment.ts#L125">property <b>policyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1400,7 +1400,7 @@ Input properties used for looking up and filtering PolicyAttachment resources.
 The unique identifier (ID) of the policy that you want to attach to the target.
 
 <h4 class="pdoc-member-header" id="PolicyAttachmentState-targetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/policyAttachment.ts#L129">property <b>targetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/policyAttachment.ts#L129">property <b>targetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1408,7 +1408,7 @@ The unique identifier (ID) of the policy that you want to attach to the target.
 The unique identifier (ID) of the root, organizational unit, or account number that you want to attach the policy to.
 
 <h3 class="pdoc-module-header" id="PolicyState" data-link-title="PolicyState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/policy.ts#L126">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/policy.ts#L126">
         interface <strong>PolicyState</strong>
     </a>
 </h3>
@@ -1418,7 +1418,7 @@ The unique identifier (ID) of the root, organizational unit, or account number t
 Input properties used for looking up and filtering Policy resources.
 
 <h4 class="pdoc-member-header" id="PolicyState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/policy.ts#L130">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/policy.ts#L130">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1426,7 +1426,7 @@ Input properties used for looking up and filtering Policy resources.
 Amazon Resource Name (ARN) of the policy.
 
 <h4 class="pdoc-member-header" id="PolicyState-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/policy.ts#L134">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/policy.ts#L134">property <b>content</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>content?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1434,7 +1434,7 @@ Amazon Resource Name (ARN) of the policy.
 The policy content to add to the new policy. For example, if you create a [service control policy (SCP)](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scp.html), this string must be JSON text that specifies the permissions that admins in attached accounts can delegate to their users, groups, and roles. For more information about the SCP syntax, see the [Service Control Policy Syntax documentation](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_scp-syntax.html) and for more information on the Tag Policy syntax, see the [Tag Policy Syntax documentation](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_example-tag-policies.html).
 
 <h4 class="pdoc-member-header" id="PolicyState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/policy.ts#L138">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/policy.ts#L138">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1442,7 +1442,7 @@ The policy content to add to the new policy. For example, if you create a [servi
 A description to assign to the policy.
 
 <h4 class="pdoc-member-header" id="PolicyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/policy.ts#L142">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/policy.ts#L142">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1450,7 +1450,7 @@ A description to assign to the policy.
 The friendly name to assign to the policy.
 
 <h4 class="pdoc-member-header" id="PolicyState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/policy.ts#L146">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/policy.ts#L146">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1458,7 +1458,7 @@ The friendly name to assign to the policy.
 Key-value map of resource tags.
 
 <h4 class="pdoc-member-header" id="PolicyState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/organizations/policy.ts#L150">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/organizations/policy.ts#L150">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

@@ -16,7 +16,10 @@ Explore the resources and functions of the glue module in the AWS package.
     <li><a href="classifier" title="Classifier"><span class="symbol resource"></span>Classifier</a></li>
     <li><a href="connection" title="Connection"><span class="symbol resource"></span>Connection</a></li>
     <li><a href="crawler" title="Crawler"><span class="symbol resource"></span>Crawler</a></li>
+    <li><a href="datacatalogencryptionsettings" title="DataCatalogEncryptionSettings"><span class="symbol resource"></span>DataCatalogEncryptionSettings</a></li>
     <li><a href="job" title="Job"><span class="symbol resource"></span>Job</a></li>
+    <li><a href="mltransform" title="MLTransform"><span class="symbol resource"></span>MLTransform</a></li>
+    <li><a href="partition" title="Partition"><span class="symbol resource"></span>Partition</a></li>
     <li><a href="securityconfiguration" title="SecurityConfiguration"><span class="symbol resource"></span>SecurityConfiguration</a></li>
     <li><a href="trigger" title="Trigger"><span class="symbol resource"></span>Trigger</a></li>
     <li><a href="userdefinedfunction" title="UserDefinedFunction"><span class="symbol resource"></span>UserDefinedFunction</a></li>
@@ -37,7 +40,7 @@ Explore the resources and functions of the glue module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.5.0</dd>
+	<dd>3.6.0</dd>
 </dl>
 
 

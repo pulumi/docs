@@ -1996,6 +1996,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="backenddefaults_csharp">
+<a href="#backenddefaults_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Defaults</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaults">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The defaults for backends.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="backends_csharp">
 <a href="#backends_csharp" style="color: inherit; text-decoration: inherit;">Backends</a>
 </span> 
@@ -2044,6 +2055,17 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backenddefaults_go">
+<a href="#backenddefaults_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Defaults</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaults">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults</a></span>
+    </dt>
+    <dd>{{% md %}}The defaults for backends.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2098,6 +2120,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="backenddefaults_nodejs">
+<a href="#backenddefaults_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Defaults</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaults">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults</a></span>
+    </dt>
+    <dd>{{% md %}}The defaults for backends.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="backends_nodejs">
 <a href="#backends_nodejs" style="color: inherit; text-decoration: inherit;">backends</a>
 </span> 
@@ -2146,6 +2179,17 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backend_defaults_python">
+<a href="#backend_defaults_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>defaults</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaults">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The defaults for backends.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2288,6 +2332,764 @@ The following state arguments are supported:
 
 
 
+<h4 id="virtualnodespecbackenddefaults">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecBackendDefaults">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecBackendDefaults">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendDefaultsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendDefaultsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecBackendDefaultsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecBackendDefaults.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientpolicy_csharp">
+<a href="#clientpolicy_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicy">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The default client policy for virtual service backends. See above for details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientpolicy_go">
+<a href="#clientpolicy_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicy">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}The default client policy for virtual service backends. See above for details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientpolicy_nodejs">
+<a href="#clientpolicy_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicy">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}The default client policy for virtual service backends. See above for details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="client_policy_python">
+<a href="#client_policy_python" style="color: inherit; text-decoration: inherit;">client_<wbr>policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicy">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The default client policy for virtual service backends. See above for details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualnodespecbackenddefaultsclientpolicy">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecBackendDefaultsClientPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecBackendDefaultsClientPolicy">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendDefaultsClientPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendDefaultsClientPolicyOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecBackendDefaultsClientPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecBackendDefaultsClientPolicy.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tls_csharp">
+<a href="#tls_csharp" style="color: inherit; text-decoration: inherit;">Tls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytls">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Transport Layer Security (TLS) client policy.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tls_go">
+<a href="#tls_go" style="color: inherit; text-decoration: inherit;">Tls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytls">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls</a></span>
+    </dt>
+    <dd>{{% md %}}The Transport Layer Security (TLS) client policy.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tls_nodejs">
+<a href="#tls_nodejs" style="color: inherit; text-decoration: inherit;">tls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytls">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls</a></span>
+    </dt>
+    <dd>{{% md %}}The Transport Layer Security (TLS) client policy.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tls_python">
+<a href="#tls_python" style="color: inherit; text-decoration: inherit;">tls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytls">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Transport Layer Security (TLS) client policy.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualnodespecbackenddefaultsclientpolicytls">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecBackendDefaultsClientPolicyTls">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecBackendDefaultsClientPolicyTls">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendDefaultsClientPolicyTlsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendDefaultsClientPolicyTlsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecBackendDefaultsClientPolicyTlsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecBackendDefaultsClientPolicyTls.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="validation_csharp">
+<a href="#validation_csharp" style="color: inherit; text-decoration: inherit;">Validation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enforce_csharp">
+<a href="#enforce_csharp" style="color: inherit; text-decoration: inherit;">Enforce</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ports_csharp">
+<a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more ports that the policy is enforced for.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="validation_go">
+<a href="#validation_go" style="color: inherit; text-decoration: inherit;">Validation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enforce_go">
+<a href="#enforce_go" style="color: inherit; text-decoration: inherit;">Enforce</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ports_go">
+<a href="#ports_go" style="color: inherit; text-decoration: inherit;">Ports</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
+    </dt>
+    <dd>{{% md %}}One or more ports that the policy is enforced for.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="validation_nodejs">
+<a href="#validation_nodejs" style="color: inherit; text-decoration: inherit;">validation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enforce_nodejs">
+<a href="#enforce_nodejs" style="color: inherit; text-decoration: inherit;">enforce</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ports_nodejs">
+<a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more ports that the policy is enforced for.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="validation_python">
+<a href="#validation_python" style="color: inherit; text-decoration: inherit;">validation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enforce_python">
+<a href="#enforce_python" style="color: inherit; text-decoration: inherit;">enforce</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ports_python">
+<a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more ports that the policy is enforced for.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualnodespecbackenddefaultsclientpolicytlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecBackendDefaultsClientPolicyTlsValidation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecBackendDefaultsClientPolicyTlsValidation">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecBackendDefaultsClientPolicyTlsValidation.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="trust_csharp">
+<a href="#trust_csharp" style="color: inherit; text-decoration: inherit;">Trust</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrust">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="trust_go">
+<a href="#trust_go" style="color: inherit; text-decoration: inherit;">Trust</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrust">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="trust_nodejs">
+<a href="#trust_nodejs" style="color: inherit; text-decoration: inherit;">trust</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrust">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="trust_python">
+<a href="#trust_python" style="color: inherit; text-decoration: inherit;">trust</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrust">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualnodespecbackenddefaultsclientpolicytlsvalidationtrust">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrust">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrust">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrust.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="acm_csharp">
+<a href="#acm_csharp" style="color: inherit; text-decoration: inherit;">Acm</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrustacm">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust for an AWS Certicate Manager (ACM) certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="file_csharp">
+<a href="#file_csharp" style="color: inherit; text-decoration: inherit;">File</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrustfile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust for a local file.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="acm_go">
+<a href="#acm_go" style="color: inherit; text-decoration: inherit;">Acm</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrustacm">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust for an AWS Certicate Manager (ACM) certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="file_go">
+<a href="#file_go" style="color: inherit; text-decoration: inherit;">File</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrustfile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust for a local file.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="acm_nodejs">
+<a href="#acm_nodejs" style="color: inherit; text-decoration: inherit;">acm</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrustacm">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust for an AWS Certicate Manager (ACM) certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="file_nodejs">
+<a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrustfile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust for a local file.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="acm_python">
+<a href="#acm_python" style="color: inherit; text-decoration: inherit;">acm</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrustacm">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust for an AWS Certicate Manager (ACM) certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="file_python">
+<a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrustfile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust for a local file.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualnodespecbackenddefaultsclientpolicytlsvalidationtrustacm">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcm">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcm">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcm.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificateauthorityarns_csharp">
+<a href="#certificateauthorityarns_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Authority<wbr>Arns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more ACM Amazon Resource Name (ARN)s.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificateauthorityarns_go">
+<a href="#certificateauthorityarns_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Authority<wbr>Arns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}One or more ACM Amazon Resource Name (ARN)s.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificateauthorityarns_nodejs">
+<a href="#certificateauthorityarns_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Authority<wbr>Arns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more ACM Amazon Resource Name (ARN)s.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificate_authority_arns_python">
+<a href="#certificate_authority_arns_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>authority_<wbr>arns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more ACM Amazon Resource Name (ARN)s.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualnodespecbackenddefaultsclientpolicytlsvalidationtrustfile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFile">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFile">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFileArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFileOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFileArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFile.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificatechain_csharp">
+<a href="#certificatechain_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Chain</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The certificate chain for the certificate.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificatechain_go">
+<a href="#certificatechain_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Chain</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The certificate chain for the certificate.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificatechain_nodejs">
+<a href="#certificatechain_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Chain</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The certificate chain for the certificate.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificate_chain_python">
+<a href="#certificate_chain_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>chain</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The certificate chain for the certificate.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="virtualnodespecbackendvirtualservice">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecBackendVirtualService">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecBackendVirtualService">output</a> API doc for this type.
@@ -2317,6 +3119,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the virtual service that is acting as a virtual node backend.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientpolicy_csharp">
+<a href="#clientpolicy_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicy">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The client policy for the backend.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2333,6 +3146,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the virtual service that is acting as a virtual node backend.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientpolicy_go">
+<a href="#clientpolicy_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicy">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}The client policy for the backend.
 {{% /md %}}</dd>
 
 </dl>
@@ -2353,6 +3177,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the virtual service that is acting as a virtual node backend.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientpolicy_nodejs">
+<a href="#clientpolicy_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicy">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}The client policy for the backend.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2369,6 +3204,685 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the virtual service that is acting as a virtual node backend.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="client_policy_python">
+<a href="#client_policy_python" style="color: inherit; text-decoration: inherit;">client_<wbr>policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicy">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The client policy for the backend.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualnodespecbackendvirtualserviceclientpolicy">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecBackendVirtualServiceClientPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecBackendVirtualServiceClientPolicy">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendVirtualServiceClientPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendVirtualServiceClientPolicyOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecBackendVirtualServiceClientPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecBackendVirtualServiceClientPolicy.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tls_csharp">
+<a href="#tls_csharp" style="color: inherit; text-decoration: inherit;">Tls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytls">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Transport Layer Security (TLS) client policy.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tls_go">
+<a href="#tls_go" style="color: inherit; text-decoration: inherit;">Tls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytls">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls</a></span>
+    </dt>
+    <dd>{{% md %}}The Transport Layer Security (TLS) client policy.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tls_nodejs">
+<a href="#tls_nodejs" style="color: inherit; text-decoration: inherit;">tls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytls">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls</a></span>
+    </dt>
+    <dd>{{% md %}}The Transport Layer Security (TLS) client policy.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tls_python">
+<a href="#tls_python" style="color: inherit; text-decoration: inherit;">tls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytls">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Transport Layer Security (TLS) client policy.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualnodespecbackendvirtualserviceclientpolicytls">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecBackendVirtualServiceClientPolicyTls">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecBackendVirtualServiceClientPolicyTls">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendVirtualServiceClientPolicyTlsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendVirtualServiceClientPolicyTlsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecBackendVirtualServiceClientPolicyTlsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecBackendVirtualServiceClientPolicyTls.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="validation_csharp">
+<a href="#validation_csharp" style="color: inherit; text-decoration: inherit;">Validation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enforce_csharp">
+<a href="#enforce_csharp" style="color: inherit; text-decoration: inherit;">Enforce</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ports_csharp">
+<a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more ports that the policy is enforced for.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="validation_go">
+<a href="#validation_go" style="color: inherit; text-decoration: inherit;">Validation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enforce_go">
+<a href="#enforce_go" style="color: inherit; text-decoration: inherit;">Enforce</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ports_go">
+<a href="#ports_go" style="color: inherit; text-decoration: inherit;">Ports</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
+    </dt>
+    <dd>{{% md %}}One or more ports that the policy is enforced for.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="validation_nodejs">
+<a href="#validation_nodejs" style="color: inherit; text-decoration: inherit;">validation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enforce_nodejs">
+<a href="#enforce_nodejs" style="color: inherit; text-decoration: inherit;">enforce</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ports_nodejs">
+<a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more ports that the policy is enforced for.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="validation_python">
+<a href="#validation_python" style="color: inherit; text-decoration: inherit;">validation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enforce_python">
+<a href="#enforce_python" style="color: inherit; text-decoration: inherit;">enforce</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ports_python">
+<a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more ports that the policy is enforced for.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualnodespecbackendvirtualserviceclientpolicytlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="trust_csharp">
+<a href="#trust_csharp" style="color: inherit; text-decoration: inherit;">Trust</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrust">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="trust_go">
+<a href="#trust_go" style="color: inherit; text-decoration: inherit;">Trust</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrust">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="trust_nodejs">
+<a href="#trust_nodejs" style="color: inherit; text-decoration: inherit;">trust</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrust">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="trust_python">
+<a href="#trust_python" style="color: inherit; text-decoration: inherit;">trust</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrust">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrust">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrust">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrust">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrust.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="acm_csharp">
+<a href="#acm_csharp" style="color: inherit; text-decoration: inherit;">Acm</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrustacm">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust for an AWS Certicate Manager (ACM) certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="file_csharp">
+<a href="#file_csharp" style="color: inherit; text-decoration: inherit;">File</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrustfile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust for a local file.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="acm_go">
+<a href="#acm_go" style="color: inherit; text-decoration: inherit;">Acm</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrustacm">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust for an AWS Certicate Manager (ACM) certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="file_go">
+<a href="#file_go" style="color: inherit; text-decoration: inherit;">File</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrustfile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust for a local file.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="acm_nodejs">
+<a href="#acm_nodejs" style="color: inherit; text-decoration: inherit;">acm</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrustacm">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust for an AWS Certicate Manager (ACM) certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="file_nodejs">
+<a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrustfile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust for a local file.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="acm_python">
+<a href="#acm_python" style="color: inherit; text-decoration: inherit;">acm</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrustacm">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust for an AWS Certicate Manager (ACM) certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="file_python">
+<a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrustfile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The TLS validation context trust for a local file.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrustacm">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustAcm">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustAcm">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustAcmArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustAcmOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustAcmArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustAcm.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificateauthorityarns_csharp">
+<a href="#certificateauthorityarns_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Authority<wbr>Arns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more ACM Amazon Resource Name (ARN)s.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificateauthorityarns_go">
+<a href="#certificateauthorityarns_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Authority<wbr>Arns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}One or more ACM Amazon Resource Name (ARN)s.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificateauthorityarns_nodejs">
+<a href="#certificateauthorityarns_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Authority<wbr>Arns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more ACM Amazon Resource Name (ARN)s.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificate_authority_arns_python">
+<a href="#certificate_authority_arns_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>authority_<wbr>arns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more ACM Amazon Resource Name (ARN)s.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrustfile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustFile">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustFile">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustFileArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustFileOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustFileArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustFile.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificatechain_csharp">
+<a href="#certificatechain_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Chain</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The certificate chain for the certificate.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificatechain_go">
+<a href="#certificatechain_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Chain</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The certificate chain for the certificate.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificatechain_nodejs">
+<a href="#certificatechain_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Chain</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The certificate chain for the certificate.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificate_chain_python">
+<a href="#certificate_chain_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>chain</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The certificate chain for the certificate.
 {{% /md %}}</dd>
 
 </dl>
@@ -2418,6 +3932,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The health check information for the listener.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tls_csharp">
+<a href="#tls_csharp" style="color: inherit; text-decoration: inherit;">Tls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertls">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Transport Layer Security (TLS) properties for the listener
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2445,6 +3970,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualnodespeclistenerhealthcheck">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}The health check information for the listener.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tls_go">
+<a href="#tls_go" style="color: inherit; text-decoration: inherit;">Tls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertls">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls</a></span>
+    </dt>
+    <dd>{{% md %}}The Transport Layer Security (TLS) properties for the listener
 {{% /md %}}</dd>
 
 </dl>
@@ -2476,6 +4012,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The health check information for the listener.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tls_nodejs">
+<a href="#tls_nodejs" style="color: inherit; text-decoration: inherit;">tls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertls">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls</a></span>
+    </dt>
+    <dd>{{% md %}}The Transport Layer Security (TLS) properties for the listener
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2503,6 +4050,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualnodespeclistenerhealthcheck">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The health check information for the listener.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tls_python">
+<a href="#tls_python" style="color: inherit; text-decoration: inherit;">tls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertls">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Transport Layer Security (TLS) properties for the listener
 {{% /md %}}</dd>
 
 </dl>
@@ -2560,7 +4118,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The protocol for the health check request. Valid values are `http` and `tcp`.
+    <dd>{{% md %}}The protocol for the health check request. Valid values are `http`, `http2`, `tcp` and `grpc`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2593,7 +4151,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The destination path for the health check request. This is only required if the specified protocol is `http`.
+    <dd>{{% md %}}The destination path for the health check request. This is only required if the specified protocol is `http` or `http2`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2644,7 +4202,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The protocol for the health check request. Valid values are `http` and `tcp`.
+    <dd>{{% md %}}The protocol for the health check request. Valid values are `http`, `http2`, `tcp` and `grpc`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2677,7 +4235,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The destination path for the health check request. This is only required if the specified protocol is `http`.
+    <dd>{{% md %}}The destination path for the health check request. This is only required if the specified protocol is `http` or `http2`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2728,7 +4286,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The protocol for the health check request. Valid values are `http` and `tcp`.
+    <dd>{{% md %}}The protocol for the health check request. Valid values are `http`, `http2`, `tcp` and `grpc`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2761,7 +4319,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The destination path for the health check request. This is only required if the specified protocol is `http`.
+    <dd>{{% md %}}The destination path for the health check request. This is only required if the specified protocol is `http` or `http2`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2812,7 +4370,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The protocol for the health check request. Valid values are `http` and `tcp`.
+    <dd>{{% md %}}The protocol for the health check request. Valid values are `http`, `http2`, `tcp` and `grpc`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2845,7 +4403,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The destination path for the health check request. This is only required if the specified protocol is `http`.
+    <dd>{{% md %}}The destination path for the health check request. This is only required if the specified protocol is `http` or `http2`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2903,7 +4461,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The protocol used for the port mapping. Valid values are `http` and `tcp`.
+    <dd>{{% md %}}The protocol used for the port mapping. Valid values are `http`, `http2`, `tcp` and `grpc`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2932,7 +4490,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The protocol used for the port mapping. Valid values are `http` and `tcp`.
+    <dd>{{% md %}}The protocol used for the port mapping. Valid values are `http`, `http2`, `tcp` and `grpc`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2961,7 +4519,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The protocol used for the port mapping. Valid values are `http` and `tcp`.
+    <dd>{{% md %}}The protocol used for the port mapping. Valid values are `http`, `http2`, `tcp` and `grpc`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2990,7 +4548,499 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The protocol used for the port mapping. Valid values are `http` and `tcp`.
+    <dd>{{% md %}}The protocol used for the port mapping. Valid values are `http`, `http2`, `tcp` and `grpc`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualnodespeclistenertls">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerTls">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerTls">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTlsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTlsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerTlsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerTls.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificate_csharp">
+<a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlscertificate">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The listener's TLS certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mode_csharp">
+<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The listener's TLS mode. Valid values: `DISABLED`, `PERMISSIVE`, `STRICT`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificate_go">
+<a href="#certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlscertificate">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate</a></span>
+    </dt>
+    <dd>{{% md %}}The listener's TLS certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mode_go">
+<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The listener's TLS mode. Valid values: `DISABLED`, `PERMISSIVE`, `STRICT`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificate_nodejs">
+<a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlscertificate">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate</a></span>
+    </dt>
+    <dd>{{% md %}}The listener's TLS certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mode_nodejs">
+<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The listener's TLS mode. Valid values: `DISABLED`, `PERMISSIVE`, `STRICT`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificate_python">
+<a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlscertificate">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The listener's TLS certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mode_python">
+<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The listener's TLS mode. Valid values: `DISABLED`, `PERMISSIVE`, `STRICT`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualnodespeclistenertlscertificate">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerTlsCertificate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerTlsCertificate">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTlsCertificateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTlsCertificateOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerTlsCertificateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerTlsCertificate.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="acm_csharp">
+<a href="#acm_csharp" style="color: inherit; text-decoration: inherit;">Acm</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlscertificateacm">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Acm<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An AWS Certicate Manager (ACM) certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="file_csharp">
+<a href="#file_csharp" style="color: inherit; text-decoration: inherit;">File</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlscertificatefile">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>File<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A local file certificate.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="acm_go">
+<a href="#acm_go" style="color: inherit; text-decoration: inherit;">Acm</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlscertificateacm">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Acm</a></span>
+    </dt>
+    <dd>{{% md %}}An AWS Certicate Manager (ACM) certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="file_go">
+<a href="#file_go" style="color: inherit; text-decoration: inherit;">File</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlscertificatefile">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>File</a></span>
+    </dt>
+    <dd>{{% md %}}A local file certificate.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="acm_nodejs">
+<a href="#acm_nodejs" style="color: inherit; text-decoration: inherit;">acm</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlscertificateacm">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Acm</a></span>
+    </dt>
+    <dd>{{% md %}}An AWS Certicate Manager (ACM) certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="file_nodejs">
+<a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlscertificatefile">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>File</a></span>
+    </dt>
+    <dd>{{% md %}}A local file certificate.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="acm_python">
+<a href="#acm_python" style="color: inherit; text-decoration: inherit;">acm</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlscertificateacm">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Acm<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An AWS Certicate Manager (ACM) certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="file_python">
+<a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlscertificatefile">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>File<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A local file certificate.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualnodespeclistenertlscertificateacm">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Acm</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerTlsCertificateAcm">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerTlsCertificateAcm">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTlsCertificateAcmArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTlsCertificateAcmOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerTlsCertificateAcmArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerTlsCertificateAcm.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificatearn_csharp">
+<a href="#certificatearn_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificatearn_go">
+<a href="#certificatearn_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificatearn_nodejs">
+<a href="#certificatearn_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificate_arn_python">
+<a href="#certificate_arn_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualnodespeclistenertlscertificatefile">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>File</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerTlsCertificateFile">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerTlsCertificateFile">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTlsCertificateFileArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTlsCertificateFileOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerTlsCertificateFileArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerTlsCertificateFile.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificatechain_csharp">
+<a href="#certificatechain_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Chain</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The certificate chain for the certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="privatekey_csharp">
+<a href="#privatekey_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The private key for a certificate stored on the file system of the virtual node that the proxy is running on.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificatechain_go">
+<a href="#certificatechain_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Chain</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The certificate chain for the certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="privatekey_go">
+<a href="#privatekey_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The private key for a certificate stored on the file system of the virtual node that the proxy is running on.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificatechain_nodejs">
+<a href="#certificatechain_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Chain</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The certificate chain for the certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="privatekey_nodejs">
+<a href="#privatekey_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The private key for a certificate stored on the file system of the virtual node that the proxy is running on.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificate_chain_python">
+<a href="#certificate_chain_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>chain</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The certificate chain for the certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="private_key_python">
+<a href="#private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The private key for a certificate stored on the file system of the virtual node that the proxy is running on.
 {{% /md %}}</dd>
 
 </dl>
