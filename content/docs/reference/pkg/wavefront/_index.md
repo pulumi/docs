@@ -30,6 +30,7 @@ A Pulumi package for creating and managing wavefront cloud resources.
     <li><a href="dashboard" title="Dashboard"><span class="symbol resource"></span>Dashboard</a></li>
     <li><a href="dashboardjson" title="DashboardJson"><span class="symbol resource"></span>DashboardJson</a></li>
     <li><a href="derivedmetric" title="DerivedMetric"><span class="symbol resource"></span>DerivedMetric</a></li>
+    <li><a href="externallink" title="ExternalLink"><span class="symbol resource"></span>ExternalLink</a></li>
     <li><a href="maintenancewindow" title="MaintenanceWindow"><span class="symbol resource"></span>MaintenanceWindow</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="role" title="Role"><span class="symbol resource"></span>Role</a></li>
@@ -52,7 +53,7 @@ A Pulumi package for creating and managing wavefront cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`wavefront` Terraform Provider](https://github.com/vmware/terraform-provider-wavefront).</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 
 
