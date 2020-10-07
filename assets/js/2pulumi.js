@@ -593,12 +593,8 @@ return `
       "sku": {
 	  "name": "[parameters('storageAccountType')]",
       },
-      "properties": {
-	"sku": {
-	  "name": "[parameters('storageAccountType')]",
-        },
-        "kind": "StorageV2",
-      }
+      "kind": "StorageV2",
+      "properties": {}
     }
   ],
   "outputs": {
@@ -731,11 +727,11 @@ case "acr":
         "displayName": "Container Registry",
         "container.registry": "[parameters('acrName')]"
       },
+      "sku": {
+        "name": "[parameters('acrSku')]"
+      },
       "properties": {
         "adminUserEnabled": "[parameters('acrAdminUserEnabled')]",
-        "sku": {
-          "name": "[parameters('acrSku')]"
-        },
       }
     }
   ],
