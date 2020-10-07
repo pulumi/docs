@@ -1,0 +1,38 @@
+#BambooHR-ATS {
+
+    .BambooHR-ATS-board {
+        > h2 {
+            @apply hidden;
+        }
+
+        .BambooHR-ATS-Department-Item {
+            @apply pb-4;
+
+            .BambooHR-ATS-Department-Header {
+                @apply font-display text-lg text-gray-700;
+            }
+
+            .BambooHR-ATS-Jobs-List {
+                @apply border-none border-0 p-0;
+
+                .BambooHR-ATS-Jobs-Item {
+                    a {
+                        @apply font-normal text-blue-600;
+                    }
+
+                    .BambooHR-ATS-Location {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .BambooHR-ATS-Department-Header {
+            @apply border-none;
+        }
+    }
+
+    + #BambooHR-Footer {
+        @apply mt-8 text-left;
+    }
+}
