@@ -3,7 +3,7 @@ title: "Module mysql"
 title_tag: "Module mysql | Package @pulumi/azure | Node.js SDK"
 linktitle: "mysql"
 meta_desc: "Explore members of the mysql module in the @pulumi/azure package."
-git_sha: "6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155"
+git_sha: "4458e2dce0815e5cc0e8221a9ab77d2466eb9bba"
 block_external_search_index: true
 ---
 
@@ -48,7 +48,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="ActiveDirectoryAdministrator" data-link-title="ActiveDirectoryAdministrator">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L36">
         Resource <strong>ActiveDirectoryAdministrator</strong>
     </a>
 </h3>
@@ -84,7 +84,7 @@ const exampleActiveDirectoryAdministrator = new azure.mysql.ActiveDirectoryAdmin
 ```
 
 <h4 class="pdoc-member-header" id="ActiveDirectoryAdministrator-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L83"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L83"> <b>constructor</b></a>
 </h4>
 
 
@@ -98,7 +98,7 @@ Create a ActiveDirectoryAdministrator resource with the given unique name, argum
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ActiveDirectoryAdministrator-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L46">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L46">method <b>get</b></a>
 </h4>
 
 
@@ -109,14 +109,14 @@ Get an existing ActiveDirectoryAdministrator resource's state with the given nam
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ActiveDirectoryAdministrator-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L36">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L36">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ActiveDirectoryAdministrator-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L57">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L57">method <b>isInstance</b></a>
 </h4>
 
 
@@ -127,7 +127,7 @@ Returns true if the given object is an instance of ActiveDirectoryAdministrator.
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ActiveDirectoryAdministrator-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L36">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L36">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -136,7 +136,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ActiveDirectoryAdministrator-login">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L67">property <b>login</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L67">property <b>login</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>login: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -144,7 +144,7 @@ deployments and may be missing (undefined) during planning phases.
 The login name of the principal to set as the server administrator
 
 <h4 class="pdoc-member-header" id="ActiveDirectoryAdministrator-objectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L71">property <b>objectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L71">property <b>objectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>objectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -152,7 +152,7 @@ The login name of the principal to set as the server administrator
 The ID of the principal to set as the server administrator
 
 <h4 class="pdoc-member-header" id="ActiveDirectoryAdministrator-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L75">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L75">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -160,7 +160,7 @@ The ID of the principal to set as the server administrator
 The name of the resource group for the MySQL server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ActiveDirectoryAdministrator-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L79">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L79">property <b>serverName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serverName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -168,7 +168,7 @@ The name of the resource group for the MySQL server. Changing this forces a new 
 The name of the MySQL Server on which to set the administrator. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ActiveDirectoryAdministrator-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L83">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L83">property <b>tenantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -176,7 +176,7 @@ The name of the MySQL Server on which to set the administrator. Changing this fo
 The Azure Tenant ID
 
 <h4 class="pdoc-member-header" id="ActiveDirectoryAdministrator-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L36">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -185,7 +185,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Configuration" data-link-title="Configuration">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/configuration.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/configuration.ts#L44">
         Resource <strong>Configuration</strong>
     </a>
 </h3>
@@ -229,7 +229,7 @@ const exampleConfiguration = new azure.mysql.Configuration("exampleConfiguration
 ```
 
 <h4 class="pdoc-member-header" id="Configuration-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/configuration.ts#L87"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/configuration.ts#L87"> <b>constructor</b></a>
 </h4>
 
 
@@ -243,7 +243,7 @@ Create a Configuration resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Configuration-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/configuration.ts#L54">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/configuration.ts#L54">method <b>get</b></a>
 </h4>
 
 
@@ -254,14 +254,14 @@ Get an existing Configuration resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Configuration-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/configuration.ts#L44">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/configuration.ts#L44">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Configuration-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/configuration.ts#L65">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/configuration.ts#L65">method <b>isInstance</b></a>
 </h4>
 
 
@@ -272,7 +272,7 @@ Returns true if the given object is an instance of Configuration.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Configuration-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/configuration.ts#L44">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/configuration.ts#L44">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -281,7 +281,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Configuration-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/configuration.ts#L75">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/configuration.ts#L75">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -289,7 +289,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the name of the MySQL Configuration, which needs [to be a valid MySQL configuration name](https://dev.mysql.com/doc/refman/5.7/en/server-configuration.html). Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Configuration-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/configuration.ts#L79">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/configuration.ts#L79">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -297,7 +297,7 @@ Specifies the name of the MySQL Configuration, which needs [to be a valid MySQL 
 The name of the resource group in which the MySQL Server exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Configuration-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/configuration.ts#L83">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/configuration.ts#L83">property <b>serverName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serverName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -305,7 +305,7 @@ The name of the resource group in which the MySQL Server exists. Changing this f
 Specifies the name of the MySQL Server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Configuration-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/configuration.ts#L44">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/configuration.ts#L44">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -314,7 +314,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Configuration-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/configuration.ts#L87">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/configuration.ts#L87">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -322,7 +322,7 @@ deployments.
 Specifies the value of the MySQL Configuration. See the MySQL documentation for valid values.
 
 <h3 class="pdoc-module-header" id="Database" data-link-title="Database">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/database.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/database.ts#L41">
         Resource <strong>Database</strong>
     </a>
 </h3>
@@ -363,7 +363,7 @@ const exampleDatabase = new azure.mysql.Database("exampleDatabase", {
 ```
 
 <h4 class="pdoc-member-header" id="Database-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/database.ts#L88"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/database.ts#L88"> <b>constructor</b></a>
 </h4>
 
 
@@ -377,7 +377,7 @@ Create a Database resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Database-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/database.ts#L51">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/database.ts#L51">method <b>get</b></a>
 </h4>
 
 
@@ -388,14 +388,14 @@ Get an existing Database resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Database-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/database.ts#L41">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/database.ts#L41">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Database-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/database.ts#L62">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/database.ts#L62">method <b>isInstance</b></a>
 </h4>
 
 
@@ -406,7 +406,7 @@ Returns true if the given object is an instance of Database.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Database-charset">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/database.ts#L72">property <b>charset</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/database.ts#L72">property <b>charset</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>charset: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -414,7 +414,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Specifies the Charset for the MySQL Database, which needs [to be a valid MySQL Charset](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html). Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Database-collation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/database.ts#L76">property <b>collation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/database.ts#L76">property <b>collation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>collation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -422,7 +422,7 @@ Specifies the Charset for the MySQL Database, which needs [to be a valid MySQL C
 Specifies the Collation for the MySQL Database, which needs [to be a valid MySQL Collation](https://dev.mysql.com/doc/refman/5.7/en/charset-mysql.html). Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Database-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/database.ts#L41">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/database.ts#L41">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -431,7 +431,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Database-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/database.ts#L80">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/database.ts#L80">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -439,7 +439,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the name of the MySQL Database, which needs [to be a valid MySQL identifier](https://dev.mysql.com/doc/refman/5.7/en/identifiers.html). Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Database-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/database.ts#L84">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/database.ts#L84">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -447,7 +447,7 @@ Specifies the name of the MySQL Database, which needs [to be a valid MySQL ident
 The name of the resource group in which the MySQL Server exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Database-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/database.ts#L88">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/database.ts#L88">property <b>serverName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serverName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -455,7 +455,7 @@ The name of the resource group in which the MySQL Server exists. Changing this f
 Specifies the name of the MySQL Server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Database-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/database.ts#L41">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/database.ts#L41">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -464,7 +464,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="FirewallRule" data-link-title="FirewallRule">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/firewallRule.ts#L60">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/firewallRule.ts#L60">
         Resource <strong>FirewallRule</strong>
     </a>
 </h3>
@@ -524,7 +524,7 @@ const exampleFirewallRule = new azure.mysql.FirewallRule("exampleFirewallRule", 
 ```
 
 <h4 class="pdoc-member-header" id="FirewallRule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/firewallRule.ts#L107"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/firewallRule.ts#L107"> <b>constructor</b></a>
 </h4>
 
 
@@ -538,7 +538,7 @@ Create a FirewallRule resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="FirewallRule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/firewallRule.ts#L70">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/firewallRule.ts#L70">method <b>get</b></a>
 </h4>
 
 
@@ -549,14 +549,14 @@ Get an existing FirewallRule resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="FirewallRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/firewallRule.ts#L60">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/firewallRule.ts#L60">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="FirewallRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/firewallRule.ts#L81">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/firewallRule.ts#L81">method <b>isInstance</b></a>
 </h4>
 
 
@@ -567,7 +567,7 @@ Returns true if the given object is an instance of FirewallRule.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="FirewallRule-endIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/firewallRule.ts#L91">property <b>endIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/firewallRule.ts#L91">property <b>endIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endIpAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -575,7 +575,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Specifies the End IP Address associated with this Firewall Rule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FirewallRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/firewallRule.ts#L60">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/firewallRule.ts#L60">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -584,7 +584,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="FirewallRule-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/firewallRule.ts#L95">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/firewallRule.ts#L95">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -592,7 +592,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the name of the MySQL Firewall Rule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FirewallRule-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/firewallRule.ts#L99">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/firewallRule.ts#L99">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -600,7 +600,7 @@ Specifies the name of the MySQL Firewall Rule. Changing this forces a new resour
 The name of the resource group in which the MySQL Server exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FirewallRule-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/firewallRule.ts#L103">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/firewallRule.ts#L103">property <b>serverName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serverName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -608,7 +608,7 @@ The name of the resource group in which the MySQL Server exists. Changing this f
 Specifies the name of the MySQL Server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FirewallRule-startIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/firewallRule.ts#L107">property <b>startIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/firewallRule.ts#L107">property <b>startIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>startIpAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -616,7 +616,7 @@ Specifies the name of the MySQL Server. Changing this forces a new resource to b
 Specifies the Start IP Address associated with this Firewall Rule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FirewallRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/firewallRule.ts#L60">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/firewallRule.ts#L60">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -625,7 +625,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Server" data-link-title="Server">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L37">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L37">
         Resource <strong>Server</strong>
     </a>
 </h3>
@@ -660,7 +660,7 @@ const exampleServer = new azure.mysql.Server("exampleServer", {
 ```
 
 <h4 class="pdoc-member-header" id="Server-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L160"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L160"> <b>constructor</b></a>
 </h4>
 
 
@@ -674,7 +674,7 @@ Create a Server resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Server-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L47">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L47">method <b>get</b></a>
 </h4>
 
 
@@ -685,14 +685,14 @@ Get an existing Server resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Server-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L37">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L37">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Server-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L58">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L58">method <b>isInstance</b></a>
 </h4>
 
 
@@ -703,7 +703,7 @@ Returns true if the given object is an instance of Server.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Server-administratorLogin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L68">property <b>administratorLogin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L68">property <b>administratorLogin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>administratorLogin: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -711,7 +711,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Administrator Login for the MySQL Server. Required when `createMode` is `Default`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Server-administratorLoginPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L72">property <b>administratorLoginPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L72">property <b>administratorLoginPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>administratorLoginPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -719,7 +719,7 @@ The Administrator Login for the MySQL Server. Required when `createMode` is `Def
 The Password associated with the `administratorLogin` for the MySQL Server. Required when `createMode` is `Default`.
 
 <h4 class="pdoc-member-header" id="Server-autoGrowEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L76">property <b>autoGrowEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L76">property <b>autoGrowEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoGrowEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -727,7 +727,7 @@ The Password associated with the `administratorLogin` for the MySQL Server. Requ
 Enable/Disable auto-growing of the storage. Storage auto-grow prevents your server from running out of storage and becoming read-only. If storage auto grow is enabled, the storage automatically grows without impacting the workload. The default value if not explicitly specified is `true`.
 
 <h4 class="pdoc-member-header" id="Server-backupRetentionDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L80">property <b>backupRetentionDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L80">property <b>backupRetentionDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backupRetentionDays: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -735,7 +735,7 @@ Enable/Disable auto-growing of the storage. Storage auto-grow prevents your serv
 Backup retention days for the server, supported values are between `7` and `35` days.
 
 <h4 class="pdoc-member-header" id="Server-createMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L84">property <b>createMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L84">property <b>createMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -743,7 +743,7 @@ Backup retention days for the server, supported values are between `7` and `35` 
 The creation mode. Can be used to restore or replicate existing servers. Possible values are `Default`, `Replica`, `GeoRestore`, and `PointInTimeRestore`. Defaults to `Default`.
 
 <h4 class="pdoc-member-header" id="Server-creationSourceServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L88">property <b>creationSourceServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L88">property <b>creationSourceServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>creationSourceServerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -751,7 +751,7 @@ The creation mode. Can be used to restore or replicate existing servers. Possibl
 For creation modes other than `Default`, the source server ID to use.
 
 <h4 class="pdoc-member-header" id="Server-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L92">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L92">property <b>fqdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fqdn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -759,7 +759,7 @@ For creation modes other than `Default`, the source server ID to use.
 The FQDN of the MySQL Server.
 
 <h4 class="pdoc-member-header" id="Server-geoRedundantBackupEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L96">property <b>geoRedundantBackupEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L96">property <b>geoRedundantBackupEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>geoRedundantBackupEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -767,7 +767,7 @@ The FQDN of the MySQL Server.
 Turn Geo-redundant server backups on/off. This allows you to choose between locally redundant or geo-redundant backup storage in the General Purpose and Memory Optimized tiers. When the backups are stored in geo-redundant backup storage, they are not only stored within the region in which your server is hosted, but are also replicated to a paired data center. This provides better protection and ability to restore your server in a different region in the event of a disaster. This is not supported for the Basic tier.
 
 <h4 class="pdoc-member-header" id="Server-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L37">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L37">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -776,7 +776,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Server-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L100">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L100">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServerIdentity'>ServerIdentity</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -784,7 +784,7 @@ deployments and may be missing (undefined) during planning phases.
 An `identity` block as defined below.
 
 <h4 class="pdoc-member-header" id="Server-infrastructureEncryptionEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L104">property <b>infrastructureEncryptionEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L104">property <b>infrastructureEncryptionEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>infrastructureEncryptionEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -792,7 +792,7 @@ An `identity` block as defined below.
 Whether or not infrastructure is encrypted for this server. Defaults to `false`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Server-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L108">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L108">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -800,7 +800,7 @@ Whether or not infrastructure is encrypted for this server. Defaults to `false`.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Server-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L112">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L112">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -808,7 +808,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the MySQL Server. Changing this forces a new resource to be created. This needs to be globally unique within Azure.
 
 <h4 class="pdoc-member-header" id="Server-publicNetworkAccessEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L116">property <b>publicNetworkAccessEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L116">property <b>publicNetworkAccessEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>publicNetworkAccessEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -816,7 +816,7 @@ Specifies the name of the MySQL Server. Changing this forces a new resource to b
 Whether or not public network access is allowed for this server. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="Server-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L120">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L120">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -824,7 +824,7 @@ Whether or not public network access is allowed for this server. Defaults to `tr
 The name of the resource group in which to create the MySQL Server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Server-restorePointInTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L124">property <b>restorePointInTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L124">property <b>restorePointInTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>restorePointInTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -832,7 +832,7 @@ The name of the resource group in which to create the MySQL Server. Changing thi
 When `createMode` is `PointInTimeRestore`, specifies the point in time to restore from `creationSourceServerId`.
 
 <h4 class="pdoc-member-header" id="Server-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L128">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L128">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>skuName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -840,7 +840,7 @@ When `createMode` is `PointInTimeRestore`, specifies the point in time to restor
 Specifies the SKU Name for this MySQL Server. The name of the SKU, follows the `tier` + `family` + `cores` pattern (e.g. `B_Gen4_1`, `GP_Gen5_8`). For more information see the [product documentation](https://docs.microsoft.com/en-us/rest/api/mysql/servers/create#sku).
 
 <h4 class="pdoc-member-header" id="Server-sslEnforcement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L132">property <b>sslEnforcement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L132">property <b>sslEnforcement</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -849,7 +849,7 @@ this has been moved to the boolean attribute `ssl_enforcement_enabled` and will 
 </div>
 <pre class="highlight"><code><span class='kd'>public </span>sslEnforcement: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Server-sslEnforcementEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L136">property <b>sslEnforcementEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L136">property <b>sslEnforcementEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sslEnforcementEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -857,7 +857,7 @@ this has been moved to the boolean attribute `ssl_enforcement_enabled` and will 
 Specifies if SSL should be enforced on connections. Possible values are `true` and `false`.
 
 <h4 class="pdoc-member-header" id="Server-sslMinimalTlsVersionEnforced">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L140">property <b>sslMinimalTlsVersionEnforced</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L140">property <b>sslMinimalTlsVersionEnforced</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sslMinimalTlsVersionEnforced: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -865,7 +865,7 @@ Specifies if SSL should be enforced on connections. Possible values are `true` a
 The minimum TLS version to support on the sever. Possible values are `TLSEnforcementDisabled`, `TLS1_0`, `TLS1_1`, and `TLS1_2`. Defaults to `TLSEnforcementDisabled`.
 
 <h4 class="pdoc-member-header" id="Server-storageMb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L144">property <b>storageMb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L144">property <b>storageMb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageMb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -873,7 +873,7 @@ The minimum TLS version to support on the sever. Possible values are `TLSEnforce
 Max storage allowed for a server. Possible values are between `5120` MB(5GB) and `1048576` MB(1TB) for the Basic SKU and between `5120` MB(5GB) and `4194304` MB(4TB) for General Purpose/Memory Optimized SKUs. For more information see the [product documentation](https://docs.microsoft.com/en-us/rest/api/mysql/servers/create#StorageProfile).
 
 <h4 class="pdoc-member-header" id="Server-storageProfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L148">property <b>storageProfile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L148">property <b>storageProfile</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -882,7 +882,7 @@ all storage_profile properties have been moved to the top level. This block will
 </div>
 <pre class="highlight"><code><span class='kd'>public </span>storageProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServerStorageProfile'>ServerStorageProfile</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Server-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L152">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L152">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -890,7 +890,7 @@ all storage_profile properties have been moved to the top level. This block will
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Server-threatDetectionPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L156">property <b>threatDetectionPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L156">property <b>threatDetectionPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>threatDetectionPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServerThreatDetectionPolicy'>ServerThreatDetectionPolicy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -898,7 +898,7 @@ A mapping of tags to assign to the resource.
 Threat detection policy configuration, known in the API as Server Security Alerts Policy. The `threatDetectionPolicy` block supports fields documented below.
 
 <h4 class="pdoc-member-header" id="Server-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L37">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L37">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -907,7 +907,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Server-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L160">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L160">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -915,7 +915,7 @@ deployments.
 Specifies the version of MySQL to use. Valid values are `5.6`, `5.7`, and `8.0`. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="ServerKey" data-link-title="ServerKey">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/serverKey.ts#L10">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/serverKey.ts#L10">
         Resource <strong>ServerKey</strong>
     </a>
 </h3>
@@ -925,7 +925,7 @@ Specifies the version of MySQL to use. Valid values are `5.6`, `5.7`, and `8.0`.
 Manages a Customer Managed Key for a MySQL Server.
 
 <h4 class="pdoc-member-header" id="ServerKey-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/serverKey.ts#L45"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/serverKey.ts#L45"> <b>constructor</b></a>
 </h4>
 
 
@@ -939,7 +939,7 @@ Create a ServerKey resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ServerKey-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/serverKey.ts#L20">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/serverKey.ts#L20">method <b>get</b></a>
 </h4>
 
 
@@ -950,14 +950,14 @@ Get an existing ServerKey resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ServerKey-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/serverKey.ts#L10">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/serverKey.ts#L10">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ServerKey-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/serverKey.ts#L31">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/serverKey.ts#L31">method <b>isInstance</b></a>
 </h4>
 
 
@@ -968,7 +968,7 @@ Returns true if the given object is an instance of ServerKey.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ServerKey-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/serverKey.ts#L10">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/serverKey.ts#L10">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -977,7 +977,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ServerKey-keyVaultKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/serverKey.ts#L41">property <b>keyVaultKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/serverKey.ts#L41">property <b>keyVaultKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyVaultKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -985,7 +985,7 @@ deployments and may be missing (undefined) during planning phases.
 The URL to a Key Vault Key.
 
 <h4 class="pdoc-member-header" id="ServerKey-serverId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/serverKey.ts#L45">property <b>serverId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/serverKey.ts#L45">property <b>serverId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serverId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -993,7 +993,7 @@ The URL to a Key Vault Key.
 The ID of the MySQL Server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServerKey-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/serverKey.ts#L10">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/serverKey.ts#L10">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1002,7 +1002,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="VirtualNetworkRule" data-link-title="VirtualNetworkRule">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/virtualNetworkRule.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/virtualNetworkRule.ts#L49">
         Resource <strong>VirtualNetworkRule</strong>
     </a>
 </h3>
@@ -1051,7 +1051,7 @@ const exampleVirtualNetworkRule = new azure.mysql.VirtualNetworkRule("exampleVir
 ```
 
 <h4 class="pdoc-member-header" id="VirtualNetworkRule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/virtualNetworkRule.ts#L92"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/virtualNetworkRule.ts#L92"> <b>constructor</b></a>
 </h4>
 
 
@@ -1065,7 +1065,7 @@ Create a VirtualNetworkRule resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkRule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/virtualNetworkRule.ts#L59">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/virtualNetworkRule.ts#L59">method <b>get</b></a>
 </h4>
 
 
@@ -1076,14 +1076,14 @@ Get an existing VirtualNetworkRule resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/virtualNetworkRule.ts#L49">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/virtualNetworkRule.ts#L49">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="VirtualNetworkRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/virtualNetworkRule.ts#L70">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/virtualNetworkRule.ts#L70">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1094,7 +1094,7 @@ Returns true if the given object is an instance of VirtualNetworkRule.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/virtualNetworkRule.ts#L49">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/virtualNetworkRule.ts#L49">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1103,7 +1103,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkRule-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/virtualNetworkRule.ts#L80">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/virtualNetworkRule.ts#L80">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1111,7 +1111,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the MySQL Virtual Network Rule. Cannot be empty and must only contain alphanumeric characters and hyphens. Cannot start with a number, and cannot start or end with a hyphen. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkRule-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/virtualNetworkRule.ts#L84">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/virtualNetworkRule.ts#L84">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1119,7 +1119,7 @@ The name of the MySQL Virtual Network Rule. Cannot be empty and must only contai
 The name of the resource group where the MySQL server resides. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkRule-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/virtualNetworkRule.ts#L88">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/virtualNetworkRule.ts#L88">property <b>serverName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serverName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1127,7 +1127,7 @@ The name of the resource group where the MySQL server resides. Changing this for
 The name of the SQL Server to which this MySQL virtual network rule will be applied to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkRule-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/virtualNetworkRule.ts#L92">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/virtualNetworkRule.ts#L92">property <b>subnetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1135,7 +1135,7 @@ The name of the SQL Server to which this MySQL virtual network rule will be appl
 The ID of the subnet that the MySQL server will be connected to.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/virtualNetworkRule.ts#L49">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/virtualNetworkRule.ts#L49">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1147,7 +1147,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ActiveDirectoryAdministratorArgs" data-link-title="ActiveDirectoryAdministratorArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L165">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L165">
         interface <strong>ActiveDirectoryAdministratorArgs</strong>
     </a>
 </h3>
@@ -1157,7 +1157,7 @@ deployments.
 The set of arguments for constructing a ActiveDirectoryAdministrator resource.
 
 <h4 class="pdoc-member-header" id="ActiveDirectoryAdministratorArgs-login">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L169">property <b>login</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L169">property <b>login</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>login: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1165,7 +1165,7 @@ The set of arguments for constructing a ActiveDirectoryAdministrator resource.
 The login name of the principal to set as the server administrator
 
 <h4 class="pdoc-member-header" id="ActiveDirectoryAdministratorArgs-objectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L173">property <b>objectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L173">property <b>objectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>objectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1173,7 +1173,7 @@ The login name of the principal to set as the server administrator
 The ID of the principal to set as the server administrator
 
 <h4 class="pdoc-member-header" id="ActiveDirectoryAdministratorArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L177">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L177">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1181,7 +1181,7 @@ The ID of the principal to set as the server administrator
 The name of the resource group for the MySQL server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ActiveDirectoryAdministratorArgs-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L181">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L181">property <b>serverName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1189,7 +1189,7 @@ The name of the resource group for the MySQL server. Changing this forces a new 
 The name of the MySQL Server on which to set the administrator. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ActiveDirectoryAdministratorArgs-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L185">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L185">property <b>tenantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1197,7 +1197,7 @@ The name of the MySQL Server on which to set the administrator. Changing this fo
 The Azure Tenant ID
 
 <h3 class="pdoc-module-header" id="ActiveDirectoryAdministratorState" data-link-title="ActiveDirectoryAdministratorState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L139">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L139">
         interface <strong>ActiveDirectoryAdministratorState</strong>
     </a>
 </h3>
@@ -1207,7 +1207,7 @@ The Azure Tenant ID
 Input properties used for looking up and filtering ActiveDirectoryAdministrator resources.
 
 <h4 class="pdoc-member-header" id="ActiveDirectoryAdministratorState-login">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L143">property <b>login</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L143">property <b>login</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>login?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1215,7 +1215,7 @@ Input properties used for looking up and filtering ActiveDirectoryAdministrator 
 The login name of the principal to set as the server administrator
 
 <h4 class="pdoc-member-header" id="ActiveDirectoryAdministratorState-objectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L147">property <b>objectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L147">property <b>objectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>objectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1223,7 +1223,7 @@ The login name of the principal to set as the server administrator
 The ID of the principal to set as the server administrator
 
 <h4 class="pdoc-member-header" id="ActiveDirectoryAdministratorState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L151">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L151">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1231,7 +1231,7 @@ The ID of the principal to set as the server administrator
 The name of the resource group for the MySQL server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ActiveDirectoryAdministratorState-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L155">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L155">property <b>serverName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1239,7 +1239,7 @@ The name of the resource group for the MySQL server. Changing this forces a new 
 The name of the MySQL Server on which to set the administrator. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ActiveDirectoryAdministratorState-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L159">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/activeDirectoryAdministrator.ts#L159">property <b>tenantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1247,7 +1247,7 @@ The name of the MySQL Server on which to set the administrator. Changing this fo
 The Azure Tenant ID
 
 <h3 class="pdoc-module-header" id="ConfigurationArgs" data-link-title="ConfigurationArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/configuration.ts#L157">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/configuration.ts#L157">
         interface <strong>ConfigurationArgs</strong>
     </a>
 </h3>
@@ -1257,7 +1257,7 @@ The Azure Tenant ID
 The set of arguments for constructing a Configuration resource.
 
 <h4 class="pdoc-member-header" id="ConfigurationArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/configuration.ts#L161">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/configuration.ts#L161">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1265,7 +1265,7 @@ The set of arguments for constructing a Configuration resource.
 Specifies the name of the MySQL Configuration, which needs [to be a valid MySQL configuration name](https://dev.mysql.com/doc/refman/5.7/en/server-configuration.html). Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ConfigurationArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/configuration.ts#L165">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/configuration.ts#L165">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1273,7 +1273,7 @@ Specifies the name of the MySQL Configuration, which needs [to be a valid MySQL 
 The name of the resource group in which the MySQL Server exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ConfigurationArgs-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/configuration.ts#L169">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/configuration.ts#L169">property <b>serverName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1281,7 +1281,7 @@ The name of the resource group in which the MySQL Server exists. Changing this f
 Specifies the name of the MySQL Server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ConfigurationArgs-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/configuration.ts#L173">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/configuration.ts#L173">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1289,7 +1289,7 @@ Specifies the name of the MySQL Server. Changing this forces a new resource to b
 Specifies the value of the MySQL Configuration. See the MySQL documentation for valid values.
 
 <h3 class="pdoc-module-header" id="ConfigurationState" data-link-title="ConfigurationState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/configuration.ts#L135">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/configuration.ts#L135">
         interface <strong>ConfigurationState</strong>
     </a>
 </h3>
@@ -1299,7 +1299,7 @@ Specifies the value of the MySQL Configuration. See the MySQL documentation for 
 Input properties used for looking up and filtering Configuration resources.
 
 <h4 class="pdoc-member-header" id="ConfigurationState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/configuration.ts#L139">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/configuration.ts#L139">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1307,7 +1307,7 @@ Input properties used for looking up and filtering Configuration resources.
 Specifies the name of the MySQL Configuration, which needs [to be a valid MySQL configuration name](https://dev.mysql.com/doc/refman/5.7/en/server-configuration.html). Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ConfigurationState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/configuration.ts#L143">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/configuration.ts#L143">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1315,7 +1315,7 @@ Specifies the name of the MySQL Configuration, which needs [to be a valid MySQL 
 The name of the resource group in which the MySQL Server exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ConfigurationState-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/configuration.ts#L147">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/configuration.ts#L147">property <b>serverName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1323,7 +1323,7 @@ The name of the resource group in which the MySQL Server exists. Changing this f
 Specifies the name of the MySQL Server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ConfigurationState-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/configuration.ts#L151">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/configuration.ts#L151">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1331,7 +1331,7 @@ Specifies the name of the MySQL Server. Changing this forces a new resource to b
 Specifies the value of the MySQL Configuration. See the MySQL documentation for valid values.
 
 <h3 class="pdoc-module-header" id="DatabaseArgs" data-link-title="DatabaseArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/database.ts#L167">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/database.ts#L167">
         interface <strong>DatabaseArgs</strong>
     </a>
 </h3>
@@ -1341,7 +1341,7 @@ Specifies the value of the MySQL Configuration. See the MySQL documentation for 
 The set of arguments for constructing a Database resource.
 
 <h4 class="pdoc-member-header" id="DatabaseArgs-charset">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/database.ts#L171">property <b>charset</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/database.ts#L171">property <b>charset</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>charset: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1349,7 +1349,7 @@ The set of arguments for constructing a Database resource.
 Specifies the Charset for the MySQL Database, which needs [to be a valid MySQL Charset](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html). Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabaseArgs-collation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/database.ts#L175">property <b>collation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/database.ts#L175">property <b>collation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>collation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1357,7 +1357,7 @@ Specifies the Charset for the MySQL Database, which needs [to be a valid MySQL C
 Specifies the Collation for the MySQL Database, which needs [to be a valid MySQL Collation](https://dev.mysql.com/doc/refman/5.7/en/charset-mysql.html). Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabaseArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/database.ts#L179">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/database.ts#L179">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1365,7 +1365,7 @@ Specifies the Collation for the MySQL Database, which needs [to be a valid MySQL
 Specifies the name of the MySQL Database, which needs [to be a valid MySQL identifier](https://dev.mysql.com/doc/refman/5.7/en/identifiers.html). Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabaseArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/database.ts#L183">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/database.ts#L183">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1373,7 +1373,7 @@ Specifies the name of the MySQL Database, which needs [to be a valid MySQL ident
 The name of the resource group in which the MySQL Server exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabaseArgs-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/database.ts#L187">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/database.ts#L187">property <b>serverName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1381,7 +1381,7 @@ The name of the resource group in which the MySQL Server exists. Changing this f
 Specifies the name of the MySQL Server. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="DatabaseState" data-link-title="DatabaseState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/database.ts#L141">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/database.ts#L141">
         interface <strong>DatabaseState</strong>
     </a>
 </h3>
@@ -1391,7 +1391,7 @@ Specifies the name of the MySQL Server. Changing this forces a new resource to b
 Input properties used for looking up and filtering Database resources.
 
 <h4 class="pdoc-member-header" id="DatabaseState-charset">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/database.ts#L145">property <b>charset</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/database.ts#L145">property <b>charset</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>charset?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1399,7 +1399,7 @@ Input properties used for looking up and filtering Database resources.
 Specifies the Charset for the MySQL Database, which needs [to be a valid MySQL Charset](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html). Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabaseState-collation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/database.ts#L149">property <b>collation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/database.ts#L149">property <b>collation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>collation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1407,7 +1407,7 @@ Specifies the Charset for the MySQL Database, which needs [to be a valid MySQL C
 Specifies the Collation for the MySQL Database, which needs [to be a valid MySQL Collation](https://dev.mysql.com/doc/refman/5.7/en/charset-mysql.html). Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabaseState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/database.ts#L153">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/database.ts#L153">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1415,7 +1415,7 @@ Specifies the Collation for the MySQL Database, which needs [to be a valid MySQL
 Specifies the name of the MySQL Database, which needs [to be a valid MySQL identifier](https://dev.mysql.com/doc/refman/5.7/en/identifiers.html). Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabaseState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/database.ts#L157">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/database.ts#L157">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1423,7 +1423,7 @@ Specifies the name of the MySQL Database, which needs [to be a valid MySQL ident
 The name of the resource group in which the MySQL Server exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabaseState-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/database.ts#L161">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/database.ts#L161">property <b>serverName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1431,7 +1431,7 @@ The name of the resource group in which the MySQL Server exists. Changing this f
 Specifies the name of the MySQL Server. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="FirewallRuleArgs" data-link-title="FirewallRuleArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/firewallRule.ts#L186">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/firewallRule.ts#L186">
         interface <strong>FirewallRuleArgs</strong>
     </a>
 </h3>
@@ -1441,7 +1441,7 @@ Specifies the name of the MySQL Server. Changing this forces a new resource to b
 The set of arguments for constructing a FirewallRule resource.
 
 <h4 class="pdoc-member-header" id="FirewallRuleArgs-endIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/firewallRule.ts#L190">property <b>endIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/firewallRule.ts#L190">property <b>endIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endIpAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1449,7 +1449,7 @@ The set of arguments for constructing a FirewallRule resource.
 Specifies the End IP Address associated with this Firewall Rule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FirewallRuleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/firewallRule.ts#L194">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/firewallRule.ts#L194">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1457,7 +1457,7 @@ Specifies the End IP Address associated with this Firewall Rule. Changing this f
 Specifies the name of the MySQL Firewall Rule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FirewallRuleArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/firewallRule.ts#L198">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/firewallRule.ts#L198">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1465,7 +1465,7 @@ Specifies the name of the MySQL Firewall Rule. Changing this forces a new resour
 The name of the resource group in which the MySQL Server exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FirewallRuleArgs-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/firewallRule.ts#L202">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/firewallRule.ts#L202">property <b>serverName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1473,7 +1473,7 @@ The name of the resource group in which the MySQL Server exists. Changing this f
 Specifies the name of the MySQL Server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FirewallRuleArgs-startIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/firewallRule.ts#L206">property <b>startIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/firewallRule.ts#L206">property <b>startIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>startIpAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1481,7 +1481,7 @@ Specifies the name of the MySQL Server. Changing this forces a new resource to b
 Specifies the Start IP Address associated with this Firewall Rule. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="FirewallRuleState" data-link-title="FirewallRuleState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/firewallRule.ts#L160">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/firewallRule.ts#L160">
         interface <strong>FirewallRuleState</strong>
     </a>
 </h3>
@@ -1491,7 +1491,7 @@ Specifies the Start IP Address associated with this Firewall Rule. Changing this
 Input properties used for looking up and filtering FirewallRule resources.
 
 <h4 class="pdoc-member-header" id="FirewallRuleState-endIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/firewallRule.ts#L164">property <b>endIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/firewallRule.ts#L164">property <b>endIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endIpAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1499,7 +1499,7 @@ Input properties used for looking up and filtering FirewallRule resources.
 Specifies the End IP Address associated with this Firewall Rule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FirewallRuleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/firewallRule.ts#L168">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/firewallRule.ts#L168">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1507,7 +1507,7 @@ Specifies the End IP Address associated with this Firewall Rule. Changing this f
 Specifies the name of the MySQL Firewall Rule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FirewallRuleState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/firewallRule.ts#L172">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/firewallRule.ts#L172">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1515,7 +1515,7 @@ Specifies the name of the MySQL Firewall Rule. Changing this forces a new resour
 The name of the resource group in which the MySQL Server exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FirewallRuleState-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/firewallRule.ts#L176">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/firewallRule.ts#L176">property <b>serverName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1523,7 +1523,7 @@ The name of the resource group in which the MySQL Server exists. Changing this f
 Specifies the name of the MySQL Server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FirewallRuleState-startIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/firewallRule.ts#L180">property <b>startIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/firewallRule.ts#L180">property <b>startIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>startIpAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1531,7 +1531,7 @@ Specifies the name of the MySQL Server. Changing this forces a new resource to b
 Specifies the Start IP Address associated with this Firewall Rule. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="ServerArgs" data-link-title="ServerArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L350">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L350">
         interface <strong>ServerArgs</strong>
     </a>
 </h3>
@@ -1541,7 +1541,7 @@ Specifies the Start IP Address associated with this Firewall Rule. Changing this
 The set of arguments for constructing a Server resource.
 
 <h4 class="pdoc-member-header" id="ServerArgs-administratorLogin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L354">property <b>administratorLogin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L354">property <b>administratorLogin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>administratorLogin?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1549,7 +1549,7 @@ The set of arguments for constructing a Server resource.
 The Administrator Login for the MySQL Server. Required when `createMode` is `Default`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServerArgs-administratorLoginPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L358">property <b>administratorLoginPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L358">property <b>administratorLoginPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>administratorLoginPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1557,7 +1557,7 @@ The Administrator Login for the MySQL Server. Required when `createMode` is `Def
 The Password associated with the `administratorLogin` for the MySQL Server. Required when `createMode` is `Default`.
 
 <h4 class="pdoc-member-header" id="ServerArgs-autoGrowEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L362">property <b>autoGrowEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L362">property <b>autoGrowEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoGrowEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1565,7 +1565,7 @@ The Password associated with the `administratorLogin` for the MySQL Server. Requ
 Enable/Disable auto-growing of the storage. Storage auto-grow prevents your server from running out of storage and becoming read-only. If storage auto grow is enabled, the storage automatically grows without impacting the workload. The default value if not explicitly specified is `true`.
 
 <h4 class="pdoc-member-header" id="ServerArgs-backupRetentionDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L366">property <b>backupRetentionDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L366">property <b>backupRetentionDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupRetentionDays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1573,7 +1573,7 @@ Enable/Disable auto-growing of the storage. Storage auto-grow prevents your serv
 Backup retention days for the server, supported values are between `7` and `35` days.
 
 <h4 class="pdoc-member-header" id="ServerArgs-createMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L370">property <b>createMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L370">property <b>createMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1581,7 +1581,7 @@ Backup retention days for the server, supported values are between `7` and `35` 
 The creation mode. Can be used to restore or replicate existing servers. Possible values are `Default`, `Replica`, `GeoRestore`, and `PointInTimeRestore`. Defaults to `Default`.
 
 <h4 class="pdoc-member-header" id="ServerArgs-creationSourceServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L374">property <b>creationSourceServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L374">property <b>creationSourceServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>creationSourceServerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1589,7 +1589,7 @@ The creation mode. Can be used to restore or replicate existing servers. Possibl
 For creation modes other than `Default`, the source server ID to use.
 
 <h4 class="pdoc-member-header" id="ServerArgs-geoRedundantBackupEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L378">property <b>geoRedundantBackupEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L378">property <b>geoRedundantBackupEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>geoRedundantBackupEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1597,7 +1597,7 @@ For creation modes other than `Default`, the source server ID to use.
 Turn Geo-redundant server backups on/off. This allows you to choose between locally redundant or geo-redundant backup storage in the General Purpose and Memory Optimized tiers. When the backups are stored in geo-redundant backup storage, they are not only stored within the region in which your server is hosted, but are also replicated to a paired data center. This provides better protection and ability to restore your server in a different region in the event of a disaster. This is not supported for the Basic tier.
 
 <h4 class="pdoc-member-header" id="ServerArgs-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L382">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L382">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServerIdentity'>ServerIdentity</a>&gt;;</code></pre>
@@ -1605,7 +1605,7 @@ Turn Geo-redundant server backups on/off. This allows you to choose between loca
 An `identity` block as defined below.
 
 <h4 class="pdoc-member-header" id="ServerArgs-infrastructureEncryptionEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L386">property <b>infrastructureEncryptionEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L386">property <b>infrastructureEncryptionEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>infrastructureEncryptionEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1613,7 +1613,7 @@ An `identity` block as defined below.
 Whether or not infrastructure is encrypted for this server. Defaults to `false`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServerArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L390">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L390">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1621,7 +1621,7 @@ Whether or not infrastructure is encrypted for this server. Defaults to `false`.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServerArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L394">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L394">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1629,7 +1629,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the MySQL Server. Changing this forces a new resource to be created. This needs to be globally unique within Azure.
 
 <h4 class="pdoc-member-header" id="ServerArgs-publicNetworkAccessEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L398">property <b>publicNetworkAccessEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L398">property <b>publicNetworkAccessEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicNetworkAccessEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1637,7 +1637,7 @@ Specifies the name of the MySQL Server. Changing this forces a new resource to b
 Whether or not public network access is allowed for this server. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="ServerArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L402">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L402">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1645,7 +1645,7 @@ Whether or not public network access is allowed for this server. Defaults to `tr
 The name of the resource group in which to create the MySQL Server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServerArgs-restorePointInTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L406">property <b>restorePointInTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L406">property <b>restorePointInTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>restorePointInTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1653,7 +1653,7 @@ The name of the resource group in which to create the MySQL Server. Changing thi
 When `createMode` is `PointInTimeRestore`, specifies the point in time to restore from `creationSourceServerId`.
 
 <h4 class="pdoc-member-header" id="ServerArgs-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L410">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L410">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skuName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1661,7 +1661,7 @@ When `createMode` is `PointInTimeRestore`, specifies the point in time to restor
 Specifies the SKU Name for this MySQL Server. The name of the SKU, follows the `tier` + `family` + `cores` pattern (e.g. `B_Gen4_1`, `GP_Gen5_8`). For more information see the [product documentation](https://docs.microsoft.com/en-us/rest/api/mysql/servers/create#sku).
 
 <h4 class="pdoc-member-header" id="ServerArgs-sslEnforcement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L414">property <b>sslEnforcement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L414">property <b>sslEnforcement</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1670,7 +1670,7 @@ this has been moved to the boolean attribute `ssl_enforcement_enabled` and will 
 </div>
 <pre class="highlight"><code><span class='kd'></span>sslEnforcement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServerArgs-sslEnforcementEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L418">property <b>sslEnforcementEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L418">property <b>sslEnforcementEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sslEnforcementEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1678,7 +1678,7 @@ this has been moved to the boolean attribute `ssl_enforcement_enabled` and will 
 Specifies if SSL should be enforced on connections. Possible values are `true` and `false`.
 
 <h4 class="pdoc-member-header" id="ServerArgs-sslMinimalTlsVersionEnforced">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L422">property <b>sslMinimalTlsVersionEnforced</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L422">property <b>sslMinimalTlsVersionEnforced</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sslMinimalTlsVersionEnforced?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1686,7 +1686,7 @@ Specifies if SSL should be enforced on connections. Possible values are `true` a
 The minimum TLS version to support on the sever. Possible values are `TLSEnforcementDisabled`, `TLS1_0`, `TLS1_1`, and `TLS1_2`. Defaults to `TLSEnforcementDisabled`.
 
 <h4 class="pdoc-member-header" id="ServerArgs-storageMb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L426">property <b>storageMb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L426">property <b>storageMb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageMb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1694,7 +1694,7 @@ The minimum TLS version to support on the sever. Possible values are `TLSEnforce
 Max storage allowed for a server. Possible values are between `5120` MB(5GB) and `1048576` MB(1TB) for the Basic SKU and between `5120` MB(5GB) and `4194304` MB(4TB) for General Purpose/Memory Optimized SKUs. For more information see the [product documentation](https://docs.microsoft.com/en-us/rest/api/mysql/servers/create#StorageProfile).
 
 <h4 class="pdoc-member-header" id="ServerArgs-storageProfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L430">property <b>storageProfile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L430">property <b>storageProfile</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1703,7 +1703,7 @@ all storage_profile properties have been moved to the top level. This block will
 </div>
 <pre class="highlight"><code><span class='kd'></span>storageProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServerStorageProfile'>ServerStorageProfile</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServerArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L434">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L434">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1711,7 +1711,7 @@ all storage_profile properties have been moved to the top level. This block will
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ServerArgs-threatDetectionPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L438">property <b>threatDetectionPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L438">property <b>threatDetectionPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threatDetectionPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServerThreatDetectionPolicy'>ServerThreatDetectionPolicy</a>&gt;;</code></pre>
@@ -1719,7 +1719,7 @@ A mapping of tags to assign to the resource.
 Threat detection policy configuration, known in the API as Server Security Alerts Policy. The `threatDetectionPolicy` block supports fields documented below.
 
 <h4 class="pdoc-member-header" id="ServerArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L442">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L442">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1727,7 +1727,7 @@ Threat detection policy configuration, known in the API as Server Security Alert
 Specifies the version of MySQL to use. Valid values are `5.6`, `5.7`, and `8.0`. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="ServerKeyArgs" data-link-title="ServerKeyArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/serverKey.ts#L100">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/serverKey.ts#L100">
         interface <strong>ServerKeyArgs</strong>
     </a>
 </h3>
@@ -1737,7 +1737,7 @@ Specifies the version of MySQL to use. Valid values are `5.6`, `5.7`, and `8.0`.
 The set of arguments for constructing a ServerKey resource.
 
 <h4 class="pdoc-member-header" id="ServerKeyArgs-keyVaultKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/serverKey.ts#L104">property <b>keyVaultKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/serverKey.ts#L104">property <b>keyVaultKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyVaultKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1745,7 +1745,7 @@ The set of arguments for constructing a ServerKey resource.
 The URL to a Key Vault Key.
 
 <h4 class="pdoc-member-header" id="ServerKeyArgs-serverId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/serverKey.ts#L108">property <b>serverId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/serverKey.ts#L108">property <b>serverId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1753,7 +1753,7 @@ The URL to a Key Vault Key.
 The ID of the MySQL Server. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="ServerKeyState" data-link-title="ServerKeyState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/serverKey.ts#L86">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/serverKey.ts#L86">
         interface <strong>ServerKeyState</strong>
     </a>
 </h3>
@@ -1763,7 +1763,7 @@ The ID of the MySQL Server. Changing this forces a new resource to be created.
 Input properties used for looking up and filtering ServerKey resources.
 
 <h4 class="pdoc-member-header" id="ServerKeyState-keyVaultKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/serverKey.ts#L90">property <b>keyVaultKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/serverKey.ts#L90">property <b>keyVaultKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyVaultKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1771,7 +1771,7 @@ Input properties used for looking up and filtering ServerKey resources.
 The URL to a Key Vault Key.
 
 <h4 class="pdoc-member-header" id="ServerKeyState-serverId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/serverKey.ts#L94">property <b>serverId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/serverKey.ts#L94">property <b>serverId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1779,7 +1779,7 @@ The URL to a Key Vault Key.
 The ID of the MySQL Server. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="ServerState" data-link-title="ServerState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L248">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L248">
         interface <strong>ServerState</strong>
     </a>
 </h3>
@@ -1789,7 +1789,7 @@ The ID of the MySQL Server. Changing this forces a new resource to be created.
 Input properties used for looking up and filtering Server resources.
 
 <h4 class="pdoc-member-header" id="ServerState-administratorLogin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L252">property <b>administratorLogin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L252">property <b>administratorLogin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>administratorLogin?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1797,7 +1797,7 @@ Input properties used for looking up and filtering Server resources.
 The Administrator Login for the MySQL Server. Required when `createMode` is `Default`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServerState-administratorLoginPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L256">property <b>administratorLoginPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L256">property <b>administratorLoginPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>administratorLoginPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1805,7 +1805,7 @@ The Administrator Login for the MySQL Server. Required when `createMode` is `Def
 The Password associated with the `administratorLogin` for the MySQL Server. Required when `createMode` is `Default`.
 
 <h4 class="pdoc-member-header" id="ServerState-autoGrowEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L260">property <b>autoGrowEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L260">property <b>autoGrowEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoGrowEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1813,7 +1813,7 @@ The Password associated with the `administratorLogin` for the MySQL Server. Requ
 Enable/Disable auto-growing of the storage. Storage auto-grow prevents your server from running out of storage and becoming read-only. If storage auto grow is enabled, the storage automatically grows without impacting the workload. The default value if not explicitly specified is `true`.
 
 <h4 class="pdoc-member-header" id="ServerState-backupRetentionDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L264">property <b>backupRetentionDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L264">property <b>backupRetentionDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupRetentionDays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1821,7 +1821,7 @@ Enable/Disable auto-growing of the storage. Storage auto-grow prevents your serv
 Backup retention days for the server, supported values are between `7` and `35` days.
 
 <h4 class="pdoc-member-header" id="ServerState-createMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L268">property <b>createMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L268">property <b>createMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1829,7 +1829,7 @@ Backup retention days for the server, supported values are between `7` and `35` 
 The creation mode. Can be used to restore or replicate existing servers. Possible values are `Default`, `Replica`, `GeoRestore`, and `PointInTimeRestore`. Defaults to `Default`.
 
 <h4 class="pdoc-member-header" id="ServerState-creationSourceServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L272">property <b>creationSourceServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L272">property <b>creationSourceServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>creationSourceServerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1837,7 +1837,7 @@ The creation mode. Can be used to restore or replicate existing servers. Possibl
 For creation modes other than `Default`, the source server ID to use.
 
 <h4 class="pdoc-member-header" id="ServerState-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L276">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L276">property <b>fqdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fqdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1845,7 +1845,7 @@ For creation modes other than `Default`, the source server ID to use.
 The FQDN of the MySQL Server.
 
 <h4 class="pdoc-member-header" id="ServerState-geoRedundantBackupEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L280">property <b>geoRedundantBackupEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L280">property <b>geoRedundantBackupEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>geoRedundantBackupEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1853,7 +1853,7 @@ The FQDN of the MySQL Server.
 Turn Geo-redundant server backups on/off. This allows you to choose between locally redundant or geo-redundant backup storage in the General Purpose and Memory Optimized tiers. When the backups are stored in geo-redundant backup storage, they are not only stored within the region in which your server is hosted, but are also replicated to a paired data center. This provides better protection and ability to restore your server in a different region in the event of a disaster. This is not supported for the Basic tier.
 
 <h4 class="pdoc-member-header" id="ServerState-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L284">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L284">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServerIdentity'>ServerIdentity</a>&gt;;</code></pre>
@@ -1861,7 +1861,7 @@ Turn Geo-redundant server backups on/off. This allows you to choose between loca
 An `identity` block as defined below.
 
 <h4 class="pdoc-member-header" id="ServerState-infrastructureEncryptionEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L288">property <b>infrastructureEncryptionEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L288">property <b>infrastructureEncryptionEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>infrastructureEncryptionEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1869,7 +1869,7 @@ An `identity` block as defined below.
 Whether or not infrastructure is encrypted for this server. Defaults to `false`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServerState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L292">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L292">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1877,7 +1877,7 @@ Whether or not infrastructure is encrypted for this server. Defaults to `false`.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServerState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L296">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L296">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1885,7 +1885,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the MySQL Server. Changing this forces a new resource to be created. This needs to be globally unique within Azure.
 
 <h4 class="pdoc-member-header" id="ServerState-publicNetworkAccessEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L300">property <b>publicNetworkAccessEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L300">property <b>publicNetworkAccessEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicNetworkAccessEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1893,7 +1893,7 @@ Specifies the name of the MySQL Server. Changing this forces a new resource to b
 Whether or not public network access is allowed for this server. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="ServerState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L304">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L304">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1901,7 +1901,7 @@ Whether or not public network access is allowed for this server. Defaults to `tr
 The name of the resource group in which to create the MySQL Server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServerState-restorePointInTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L308">property <b>restorePointInTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L308">property <b>restorePointInTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>restorePointInTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1909,7 +1909,7 @@ The name of the resource group in which to create the MySQL Server. Changing thi
 When `createMode` is `PointInTimeRestore`, specifies the point in time to restore from `creationSourceServerId`.
 
 <h4 class="pdoc-member-header" id="ServerState-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L312">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L312">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skuName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1917,7 +1917,7 @@ When `createMode` is `PointInTimeRestore`, specifies the point in time to restor
 Specifies the SKU Name for this MySQL Server. The name of the SKU, follows the `tier` + `family` + `cores` pattern (e.g. `B_Gen4_1`, `GP_Gen5_8`). For more information see the [product documentation](https://docs.microsoft.com/en-us/rest/api/mysql/servers/create#sku).
 
 <h4 class="pdoc-member-header" id="ServerState-sslEnforcement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L316">property <b>sslEnforcement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L316">property <b>sslEnforcement</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1926,7 +1926,7 @@ this has been moved to the boolean attribute `ssl_enforcement_enabled` and will 
 </div>
 <pre class="highlight"><code><span class='kd'></span>sslEnforcement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServerState-sslEnforcementEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L320">property <b>sslEnforcementEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L320">property <b>sslEnforcementEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sslEnforcementEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1934,7 +1934,7 @@ this has been moved to the boolean attribute `ssl_enforcement_enabled` and will 
 Specifies if SSL should be enforced on connections. Possible values are `true` and `false`.
 
 <h4 class="pdoc-member-header" id="ServerState-sslMinimalTlsVersionEnforced">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L324">property <b>sslMinimalTlsVersionEnforced</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L324">property <b>sslMinimalTlsVersionEnforced</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sslMinimalTlsVersionEnforced?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1942,7 +1942,7 @@ Specifies if SSL should be enforced on connections. Possible values are `true` a
 The minimum TLS version to support on the sever. Possible values are `TLSEnforcementDisabled`, `TLS1_0`, `TLS1_1`, and `TLS1_2`. Defaults to `TLSEnforcementDisabled`.
 
 <h4 class="pdoc-member-header" id="ServerState-storageMb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L328">property <b>storageMb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L328">property <b>storageMb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageMb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1950,7 +1950,7 @@ The minimum TLS version to support on the sever. Possible values are `TLSEnforce
 Max storage allowed for a server. Possible values are between `5120` MB(5GB) and `1048576` MB(1TB) for the Basic SKU and between `5120` MB(5GB) and `4194304` MB(4TB) for General Purpose/Memory Optimized SKUs. For more information see the [product documentation](https://docs.microsoft.com/en-us/rest/api/mysql/servers/create#StorageProfile).
 
 <h4 class="pdoc-member-header" id="ServerState-storageProfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L332">property <b>storageProfile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L332">property <b>storageProfile</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1959,7 +1959,7 @@ all storage_profile properties have been moved to the top level. This block will
 </div>
 <pre class="highlight"><code><span class='kd'></span>storageProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServerStorageProfile'>ServerStorageProfile</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServerState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L336">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L336">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1967,7 +1967,7 @@ all storage_profile properties have been moved to the top level. This block will
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ServerState-threatDetectionPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L340">property <b>threatDetectionPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L340">property <b>threatDetectionPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threatDetectionPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServerThreatDetectionPolicy'>ServerThreatDetectionPolicy</a>&gt;;</code></pre>
@@ -1975,7 +1975,7 @@ A mapping of tags to assign to the resource.
 Threat detection policy configuration, known in the API as Server Security Alerts Policy. The `threatDetectionPolicy` block supports fields documented below.
 
 <h4 class="pdoc-member-header" id="ServerState-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/server.ts#L344">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/server.ts#L344">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1983,7 +1983,7 @@ Threat detection policy configuration, known in the API as Server Security Alert
 Specifies the version of MySQL to use. Valid values are `5.6`, `5.7`, and `8.0`. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="VirtualNetworkRuleArgs" data-link-title="VirtualNetworkRuleArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/virtualNetworkRule.ts#L162">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/virtualNetworkRule.ts#L162">
         interface <strong>VirtualNetworkRuleArgs</strong>
     </a>
 </h3>
@@ -1993,7 +1993,7 @@ Specifies the version of MySQL to use. Valid values are `5.6`, `5.7`, and `8.0`.
 The set of arguments for constructing a VirtualNetworkRule resource.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkRuleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/virtualNetworkRule.ts#L166">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/virtualNetworkRule.ts#L166">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2001,7 +2001,7 @@ The set of arguments for constructing a VirtualNetworkRule resource.
 The name of the MySQL Virtual Network Rule. Cannot be empty and must only contain alphanumeric characters and hyphens. Cannot start with a number, and cannot start or end with a hyphen. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkRuleArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/virtualNetworkRule.ts#L170">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/virtualNetworkRule.ts#L170">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2009,7 +2009,7 @@ The name of the MySQL Virtual Network Rule. Cannot be empty and must only contai
 The name of the resource group where the MySQL server resides. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkRuleArgs-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/virtualNetworkRule.ts#L174">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/virtualNetworkRule.ts#L174">property <b>serverName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2017,7 +2017,7 @@ The name of the resource group where the MySQL server resides. Changing this for
 The name of the SQL Server to which this MySQL virtual network rule will be applied to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkRuleArgs-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/virtualNetworkRule.ts#L178">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/virtualNetworkRule.ts#L178">property <b>subnetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2025,7 +2025,7 @@ The name of the SQL Server to which this MySQL virtual network rule will be appl
 The ID of the subnet that the MySQL server will be connected to.
 
 <h3 class="pdoc-module-header" id="VirtualNetworkRuleState" data-link-title="VirtualNetworkRuleState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/virtualNetworkRule.ts#L140">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/virtualNetworkRule.ts#L140">
         interface <strong>VirtualNetworkRuleState</strong>
     </a>
 </h3>
@@ -2035,7 +2035,7 @@ The ID of the subnet that the MySQL server will be connected to.
 Input properties used for looking up and filtering VirtualNetworkRule resources.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkRuleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/virtualNetworkRule.ts#L144">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/virtualNetworkRule.ts#L144">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2043,7 +2043,7 @@ Input properties used for looking up and filtering VirtualNetworkRule resources.
 The name of the MySQL Virtual Network Rule. Cannot be empty and must only contain alphanumeric characters and hyphens. Cannot start with a number, and cannot start or end with a hyphen. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkRuleState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/virtualNetworkRule.ts#L148">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/virtualNetworkRule.ts#L148">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2051,7 +2051,7 @@ The name of the MySQL Virtual Network Rule. Cannot be empty and must only contai
 The name of the resource group where the MySQL server resides. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkRuleState-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/virtualNetworkRule.ts#L152">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/virtualNetworkRule.ts#L152">property <b>serverName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2059,7 +2059,7 @@ The name of the resource group where the MySQL server resides. Changing this for
 The name of the SQL Server to which this MySQL virtual network rule will be applied to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkRuleState-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/mysql/virtualNetworkRule.ts#L156">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/mysql/virtualNetworkRule.ts#L156">property <b>subnetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

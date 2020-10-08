@@ -3,7 +3,7 @@ title: "Module devtest"
 title_tag: "Module devtest | Package @pulumi/azure | Node.js SDK"
 linktitle: "devtest"
 meta_desc: "Explore members of the devtest module in the @pulumi/azure package."
-git_sha: "6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155"
+git_sha: "4458e2dce0815e5cc0e8221a9ab77d2466eb9bba"
 block_external_search_index: true
 ---
 
@@ -57,7 +57,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="GlobalVMShutdownSchedule" data-link-title="GlobalVMShutdownSchedule">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L74">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L74">
         Resource <strong>GlobalVMShutdownSchedule</strong>
     </a>
 </h3>
@@ -129,7 +129,7 @@ const exampleGlobalVMShutdownSchedule = new azure.devtest.GlobalVMShutdownSchedu
 ```
 
 <h4 class="pdoc-member-header" id="GlobalVMShutdownSchedule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L126"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L126"> <b>constructor</b></a>
 </h4>
 
 
@@ -143,7 +143,7 @@ Create a GlobalVMShutdownSchedule resource with the given unique name, arguments
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="GlobalVMShutdownSchedule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L84">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L84">method <b>get</b></a>
 </h4>
 
 
@@ -154,14 +154,14 @@ Get an existing GlobalVMShutdownSchedule resource's state with the given name, I
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="GlobalVMShutdownSchedule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L74">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L74">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="GlobalVMShutdownSchedule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L95">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L95">method <b>isInstance</b></a>
 </h4>
 
 
@@ -172,7 +172,7 @@ Returns true if the given object is an instance of GlobalVMShutdownSchedule.  Th
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="GlobalVMShutdownSchedule-dailyRecurrenceTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L105">property <b>dailyRecurrenceTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L105">property <b>dailyRecurrenceTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dailyRecurrenceTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -180,7 +180,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The time each day when the schedule takes effect. Must match the format HHmm where HH is 00-23 and mm is 00-59 (e.g. 0930, 2300, etc.)
 
 <h4 class="pdoc-member-header" id="GlobalVMShutdownSchedule-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L109">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L109">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -188,7 +188,7 @@ The time each day when the schedule takes effect. Must match the format HHmm whe
 Whether to enable the schedule. Possible values are `true` and `false`. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="GlobalVMShutdownSchedule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L74">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L74">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -197,7 +197,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="GlobalVMShutdownSchedule-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L113">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L113">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -205,12 +205,12 @@ deployments and may be missing (undefined) during planning phases.
 The location where the schedule is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="GlobalVMShutdownSchedule-notificationSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L114">property <b>notificationSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L114">property <b>notificationSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notificationSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GlobalVMShutdownScheduleNotificationSettings'>GlobalVMShutdownScheduleNotificationSettings</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GlobalVMShutdownSchedule-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L118">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L118">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -218,7 +218,7 @@ The location where the schedule is created. Changing this forces a new resource 
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="GlobalVMShutdownSchedule-timezone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L122">property <b>timezone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L122">property <b>timezone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>timezone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -226,7 +226,7 @@ A mapping of tags to assign to the resource.
 The time zone ID (e.g. Pacific Standard time). Refer to this guide for a [full list of accepted time zone names](https://jackstromberg.com/2017/01/list-of-time-zones-consumed-by-azure/).
 
 <h4 class="pdoc-member-header" id="GlobalVMShutdownSchedule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L74">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L74">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -235,7 +235,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="GlobalVMShutdownSchedule-virtualMachineId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L126">property <b>virtualMachineId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L126">property <b>virtualMachineId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>virtualMachineId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -243,7 +243,7 @@ deployments.
 The resource ID of the target ARM-based Virtual Machine. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="Lab" data-link-title="Lab">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/lab.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/lab.ts#L26">
         Resource <strong>Lab</strong>
     </a>
 </h3>
@@ -269,7 +269,7 @@ const exampleLab = new azure.devtest.Lab("exampleLab", {
 ```
 
 <h4 class="pdoc-member-header" id="Lab-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/lab.ts#L97"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/lab.ts#L97"> <b>constructor</b></a>
 </h4>
 
 
@@ -283,7 +283,7 @@ Create a Lab resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Lab-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/lab.ts#L36">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/lab.ts#L36">method <b>get</b></a>
 </h4>
 
 
@@ -294,14 +294,14 @@ Get an existing Lab resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Lab-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/lab.ts#L26">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/lab.ts#L26">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Lab-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/lab.ts#L47">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/lab.ts#L47">method <b>isInstance</b></a>
 </h4>
 
 
@@ -312,7 +312,7 @@ Returns true if the given object is an instance of Lab.  This is designed to wor
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Lab-artifactsStorageAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/lab.ts#L57">property <b>artifactsStorageAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/lab.ts#L57">property <b>artifactsStorageAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>artifactsStorageAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -320,7 +320,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ID of the Storage Account used for Artifact Storage.
 
 <h4 class="pdoc-member-header" id="Lab-defaultPremiumStorageAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/lab.ts#L61">property <b>defaultPremiumStorageAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/lab.ts#L61">property <b>defaultPremiumStorageAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultPremiumStorageAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -328,7 +328,7 @@ The ID of the Storage Account used for Artifact Storage.
 The ID of the Default Premium Storage Account for this Dev Test Lab.
 
 <h4 class="pdoc-member-header" id="Lab-defaultStorageAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/lab.ts#L65">property <b>defaultStorageAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/lab.ts#L65">property <b>defaultStorageAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultStorageAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -336,7 +336,7 @@ The ID of the Default Premium Storage Account for this Dev Test Lab.
 The ID of the Default Storage Account for this Dev Test Lab.
 
 <h4 class="pdoc-member-header" id="Lab-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/lab.ts#L26">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/lab.ts#L26">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -345,7 +345,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Lab-keyVaultId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/lab.ts#L69">property <b>keyVaultId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/lab.ts#L69">property <b>keyVaultId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyVaultId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -353,7 +353,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the Key used for this Dev Test Lab.
 
 <h4 class="pdoc-member-header" id="Lab-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/lab.ts#L73">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/lab.ts#L73">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -361,7 +361,7 @@ The ID of the Key used for this Dev Test Lab.
 Specifies the supported Azure location where the Dev Test Lab should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Lab-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/lab.ts#L77">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/lab.ts#L77">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -369,7 +369,7 @@ Specifies the supported Azure location where the Dev Test Lab should exist. Chan
 Specifies the name of the Dev Test Lab. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Lab-premiumDataDiskStorageAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/lab.ts#L81">property <b>premiumDataDiskStorageAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/lab.ts#L81">property <b>premiumDataDiskStorageAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>premiumDataDiskStorageAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -377,7 +377,7 @@ Specifies the name of the Dev Test Lab. Changing this forces a new resource to b
 The ID of the Storage Account used for Storage of Premium Data Disk.
 
 <h4 class="pdoc-member-header" id="Lab-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/lab.ts#L85">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/lab.ts#L85">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -385,7 +385,7 @@ The ID of the Storage Account used for Storage of Premium Data Disk.
 The name of the resource group under which the Dev Test Lab resource has to be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Lab-storageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/lab.ts#L89">property <b>storageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/lab.ts#L89">property <b>storageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -393,7 +393,7 @@ The name of the resource group under which the Dev Test Lab resource has to be c
 The type of storage used by the Dev Test Lab. Possible values are `Standard` and `Premium`. Defaults to `Premium`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Lab-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/lab.ts#L93">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/lab.ts#L93">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -401,7 +401,7 @@ The type of storage used by the Dev Test Lab. Possible values are `Standard` and
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Lab-uniqueIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/lab.ts#L97">property <b>uniqueIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/lab.ts#L97">property <b>uniqueIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>uniqueIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -409,7 +409,7 @@ A mapping of tags to assign to the resource.
 The unique immutable identifier of the Dev Test Lab.
 
 <h4 class="pdoc-member-header" id="Lab-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/lab.ts#L26">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/lab.ts#L26">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -418,7 +418,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="LinuxVirtualMachine" data-link-title="LinuxVirtualMachine">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L12">
         Resource <strong>LinuxVirtualMachine</strong>
     </a>
 </h3>
@@ -428,7 +428,7 @@ deployments.
 Manages a Linux Virtual Machine within a Dev Test Lab.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachine-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L115"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L115"> <b>constructor</b></a>
 </h4>
 
 
@@ -442,7 +442,7 @@ Create a LinuxVirtualMachine resource with the given unique name, arguments, and
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachine-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L22">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L22">method <b>get</b></a>
 </h4>
 
 
@@ -453,14 +453,14 @@ Get an existing LinuxVirtualMachine resource's state with the given name, ID, an
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachine-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachine-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L33">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L33">method <b>isInstance</b></a>
 </h4>
 
 
@@ -471,7 +471,7 @@ Returns true if the given object is an instance of LinuxVirtualMachine.  This is
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachine-allowClaim">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L43">property <b>allowClaim</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L43">property <b>allowClaim</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allowClaim: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -479,7 +479,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Can this Virtual Machine be claimed by users? Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachine-disallowPublicIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L47">property <b>disallowPublicIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L47">property <b>disallowPublicIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>disallowPublicIpAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -487,7 +487,7 @@ Can this Virtual Machine be claimed by users? Defaults to `true`.
 Should the Virtual Machine be created without a Public IP Address? Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachine-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L51">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L51">property <b>fqdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fqdn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -495,7 +495,7 @@ Should the Virtual Machine be created without a Public IP Address? Changing this
 The FQDN of the Virtual Machine.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachine-galleryImageReference">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L55">property <b>galleryImageReference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L55">property <b>galleryImageReference</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>galleryImageReference: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LinuxVirtualMachineGalleryImageReference'>LinuxVirtualMachineGalleryImageReference</a>&gt;;</code></pre>
@@ -503,7 +503,7 @@ The FQDN of the Virtual Machine.
 A `galleryImageReference` block as defined below.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachine-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -512,7 +512,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachine-inboundNatRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L59">property <b>inboundNatRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L59">property <b>inboundNatRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>inboundNatRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LinuxVirtualMachineInboundNatRule'>LinuxVirtualMachineInboundNatRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -520,7 +520,7 @@ deployments and may be missing (undefined) during planning phases.
 One or more `inboundNatRule` blocks as defined below. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachine-labName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L63">property <b>labName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L63">property <b>labName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>labName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -528,7 +528,7 @@ One or more `inboundNatRule` blocks as defined below. Changing this forces a new
 Specifies the name of the Dev Test Lab in which the Virtual Machine should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachine-labSubnetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L67">property <b>labSubnetName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L67">property <b>labSubnetName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>labSubnetName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -536,7 +536,7 @@ Specifies the name of the Dev Test Lab in which the Virtual Machine should be cr
 The name of a Subnet within the Dev Test Virtual Network where this machine should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachine-labVirtualNetworkId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L71">property <b>labVirtualNetworkId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L71">property <b>labVirtualNetworkId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>labVirtualNetworkId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -544,7 +544,7 @@ The name of a Subnet within the Dev Test Virtual Network where this machine shou
 The ID of the Dev Test Virtual Network where this Virtual Machine should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachine-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L75">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L75">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -552,7 +552,7 @@ The ID of the Dev Test Virtual Network where this Virtual Machine should be crea
 Specifies the supported Azure location where the Dev Test Lab exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachine-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L79">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L79">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -560,7 +560,7 @@ Specifies the supported Azure location where the Dev Test Lab exists. Changing t
 Specifies the name of the Dev Test Machine. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachine-notes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L83">property <b>notes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L83">property <b>notes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -568,7 +568,7 @@ Specifies the name of the Dev Test Machine. Changing this forces a new resource 
 Any notes about the Virtual Machine.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachine-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L87">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L87">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -576,7 +576,7 @@ Any notes about the Virtual Machine.
 The Password associated with the `username` used to login to this Virtual Machine. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachine-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L91">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L91">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -584,7 +584,7 @@ The Password associated with the `username` used to login to this Virtual Machin
 The name of the resource group in which the Dev Test Lab resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachine-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L95">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L95">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -592,7 +592,7 @@ The name of the resource group in which the Dev Test Lab resource exists. Changi
 The Machine Size to use for this Virtual Machine, such as `Standard_F2`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachine-sshKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L99">property <b>sshKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L99">property <b>sshKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sshKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -600,7 +600,7 @@ The Machine Size to use for this Virtual Machine, such as `Standard_F2`. Changin
 The SSH Key associated with the `username` used to login to this Virtual Machine. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachine-storageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L103">property <b>storageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L103">property <b>storageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -608,7 +608,7 @@ The SSH Key associated with the `username` used to login to this Virtual Machine
 The type of Storage to use on this Virtual Machine. Possible values are `Standard` and `Premium`.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachine-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L107">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L107">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -616,7 +616,7 @@ The type of Storage to use on this Virtual Machine. Possible values are `Standar
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachine-uniqueIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L111">property <b>uniqueIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L111">property <b>uniqueIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>uniqueIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -624,7 +624,7 @@ A mapping of tags to assign to the resource.
 The unique immutable identifier of the Virtual Machine.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachine-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -633,7 +633,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachine-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L115">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L115">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -641,7 +641,7 @@ deployments.
 The Username associated with the local administrator on this Virtual Machine. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="Policy" data-link-title="Policy">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/policy.ts#L37">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/policy.ts#L37">
         Resource <strong>Policy</strong>
     </a>
 </h3>
@@ -678,7 +678,7 @@ const examplePolicy = new azure.devtest.Policy("examplePolicy", {
 ```
 
 <h4 class="pdoc-member-header" id="Policy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/policy.ts#L100"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/policy.ts#L100"> <b>constructor</b></a>
 </h4>
 
 
@@ -692,7 +692,7 @@ Create a Policy resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Policy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/policy.ts#L47">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/policy.ts#L47">method <b>get</b></a>
 </h4>
 
 
@@ -703,14 +703,14 @@ Get an existing Policy resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Policy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/policy.ts#L37">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/policy.ts#L37">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Policy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/policy.ts#L58">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/policy.ts#L58">method <b>isInstance</b></a>
 </h4>
 
 
@@ -721,7 +721,7 @@ Returns true if the given object is an instance of Policy.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Policy-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/policy.ts#L68">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/policy.ts#L68">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -729,7 +729,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A description for the Policy.
 
 <h4 class="pdoc-member-header" id="Policy-evaluatorType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/policy.ts#L72">property <b>evaluatorType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/policy.ts#L72">property <b>evaluatorType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>evaluatorType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -737,7 +737,7 @@ A description for the Policy.
 The Evaluation Type used for this Policy. Possible values include: 'AllowedValuesPolicy', 'MaxValuePolicy'. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Policy-factData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/policy.ts#L76">property <b>factData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/policy.ts#L76">property <b>factData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>factData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -745,7 +745,7 @@ The Evaluation Type used for this Policy. Possible values include: 'AllowedValue
 The Fact Data for this Policy.
 
 <h4 class="pdoc-member-header" id="Policy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/policy.ts#L37">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/policy.ts#L37">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -754,7 +754,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Policy-labName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/policy.ts#L80">property <b>labName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/policy.ts#L80">property <b>labName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>labName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -762,7 +762,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the name of the Dev Test Lab in which the Policy should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Policy-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/policy.ts#L84">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/policy.ts#L84">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -770,7 +770,7 @@ Specifies the name of the Dev Test Lab in which the Policy should be created. Ch
 Specifies the name of the Dev Test Policy. Possible values are `GalleryImage`, `LabPremiumVmCount`, `LabTargetCost`, `LabVmCount`, `LabVmSize`, `UserOwnedLabPremiumVmCount`, `UserOwnedLabVmCount` and `UserOwnedLabVmCountInSubnet`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Policy-policySetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/policy.ts#L88">property <b>policySetName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/policy.ts#L88">property <b>policySetName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policySetName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -778,7 +778,7 @@ Specifies the name of the Dev Test Policy. Possible values are `GalleryImage`, `
 Specifies the name of the Policy Set within the Dev Test Lab where this policy should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Policy-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/policy.ts#L92">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/policy.ts#L92">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -786,7 +786,7 @@ Specifies the name of the Policy Set within the Dev Test Lab where this policy s
 The name of the resource group in which the Dev Test Lab resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Policy-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/policy.ts#L96">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/policy.ts#L96">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -794,7 +794,7 @@ The name of the resource group in which the Dev Test Lab resource exists. Changi
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Policy-threshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/policy.ts#L100">property <b>threshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/policy.ts#L100">property <b>threshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>threshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -802,7 +802,7 @@ A mapping of tags to assign to the resource.
 The Threshold for this Policy.
 
 <h4 class="pdoc-member-header" id="Policy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/policy.ts#L37">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/policy.ts#L37">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -811,7 +811,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Schedule" data-link-title="Schedule">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L43">
         Resource <strong>Schedule</strong>
     </a>
 </h3>
@@ -852,7 +852,7 @@ const exampleSchedule = new azure.devtest.Schedule("exampleSchedule", {
 ```
 
 <h4 class="pdoc-member-header" id="Schedule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L106"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L106"> <b>constructor</b></a>
 </h4>
 
 
@@ -866,7 +866,7 @@ Create a Schedule resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Schedule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L53">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L53">method <b>get</b></a>
 </h4>
 
 
@@ -877,14 +877,14 @@ Get an existing Schedule resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Schedule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L43">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L43">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Schedule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L64">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L64">method <b>isInstance</b></a>
 </h4>
 
 
@@ -895,17 +895,17 @@ Returns true if the given object is an instance of Schedule.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Schedule-dailyRecurrence">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L71">property <b>dailyRecurrence</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L71">property <b>dailyRecurrence</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dailyRecurrence: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScheduleDailyRecurrence'>ScheduleDailyRecurrence</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Schedule-hourlyRecurrence">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L72">property <b>hourlyRecurrence</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L72">property <b>hourlyRecurrence</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hourlyRecurrence: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScheduleHourlyRecurrence'>ScheduleHourlyRecurrence</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Schedule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L43">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L43">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -914,7 +914,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Schedule-labName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L76">property <b>labName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L76">property <b>labName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>labName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -922,7 +922,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the dev test lab. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Schedule-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L80">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L80">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -930,7 +930,7 @@ The name of the dev test lab. Changing this forces a new resource to be created.
 The location where the schedule is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Schedule-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L84">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L84">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -938,12 +938,12 @@ The location where the schedule is created. Changing this forces a new resource 
 The name of the dev test lab schedule. Valid value for name depends on the `taskType`. For instance for taskType `LabVmsStartupTask` the name needs to be `LabVmAutoStart`.
 
 <h4 class="pdoc-member-header" id="Schedule-notificationSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L85">property <b>notificationSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L85">property <b>notificationSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notificationSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScheduleNotificationSettings'>ScheduleNotificationSettings</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Schedule-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L89">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L89">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -951,7 +951,7 @@ The name of the dev test lab schedule. Valid value for name depends on the `task
 The name of the resource group in which to create the dev test lab schedule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Schedule-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L93">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L93">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -959,7 +959,7 @@ The name of the resource group in which to create the dev test lab schedule. Cha
 The status of this schedule. Possible values are `Enabled` and `Disabled`. Defaults to `Disabled`.
 
 <h4 class="pdoc-member-header" id="Schedule-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L97">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L97">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -967,7 +967,7 @@ The status of this schedule. Possible values are `Enabled` and `Disabled`. Defau
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Schedule-taskType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L101">property <b>taskType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L101">property <b>taskType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>taskType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -975,7 +975,7 @@ A mapping of tags to assign to the resource.
 The task type of the schedule. Possible values include `LabVmsShutdownTask` and `LabVmAutoStart`.
 
 <h4 class="pdoc-member-header" id="Schedule-timeZoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L105">property <b>timeZoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L105">property <b>timeZoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>timeZoneId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -983,7 +983,7 @@ The task type of the schedule. Possible values include `LabVmsShutdownTask` and 
 The time zone ID (e.g. Pacific Standard time).
 
 <h4 class="pdoc-member-header" id="Schedule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L43">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L43">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -992,12 +992,12 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Schedule-weeklyRecurrence">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L106">property <b>weeklyRecurrence</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L106">property <b>weeklyRecurrence</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>weeklyRecurrence: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScheduleWeeklyRecurrence'>ScheduleWeeklyRecurrence</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="VirtualNetwork" data-link-title="VirtualNetwork">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/virtualNetwork.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/virtualNetwork.ts#L36">
         Resource <strong>VirtualNetwork</strong>
     </a>
 </h3>
@@ -1031,7 +1031,7 @@ const exampleVirtualNetwork = new azure.devtest.VirtualNetwork("exampleVirtualNe
 ```
 
 <h4 class="pdoc-member-header" id="VirtualNetwork-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/virtualNetwork.ts#L91"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/virtualNetwork.ts#L91"> <b>constructor</b></a>
 </h4>
 
 
@@ -1045,7 +1045,7 @@ Create a VirtualNetwork resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="VirtualNetwork-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/virtualNetwork.ts#L46">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/virtualNetwork.ts#L46">method <b>get</b></a>
 </h4>
 
 
@@ -1056,14 +1056,14 @@ Get an existing VirtualNetwork resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="VirtualNetwork-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/virtualNetwork.ts#L36">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/virtualNetwork.ts#L36">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="VirtualNetwork-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/virtualNetwork.ts#L57">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/virtualNetwork.ts#L57">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1074,7 +1074,7 @@ Returns true if the given object is an instance of VirtualNetwork.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="VirtualNetwork-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/virtualNetwork.ts#L67">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/virtualNetwork.ts#L67">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1082,7 +1082,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A description for the Virtual Network.
 
 <h4 class="pdoc-member-header" id="VirtualNetwork-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/virtualNetwork.ts#L36">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/virtualNetwork.ts#L36">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1091,7 +1091,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="VirtualNetwork-labName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/virtualNetwork.ts#L71">property <b>labName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/virtualNetwork.ts#L71">property <b>labName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>labName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1099,7 +1099,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the name of the Dev Test Lab in which the Virtual Network should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="VirtualNetwork-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/virtualNetwork.ts#L75">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/virtualNetwork.ts#L75">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1107,7 +1107,7 @@ Specifies the name of the Dev Test Lab in which the Virtual Network should be cr
 Specifies the name of the Dev Test Virtual Network. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="VirtualNetwork-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/virtualNetwork.ts#L79">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/virtualNetwork.ts#L79">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1115,7 +1115,7 @@ Specifies the name of the Dev Test Virtual Network. Changing this forces a new r
 The name of the resource group in which the Dev Test Lab resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="VirtualNetwork-subnet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/virtualNetwork.ts#L83">property <b>subnet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/virtualNetwork.ts#L83">property <b>subnet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subnet: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualNetworkSubnet'>VirtualNetworkSubnet</a>&gt;;</code></pre>
@@ -1123,7 +1123,7 @@ The name of the resource group in which the Dev Test Lab resource exists. Changi
 A `subnet` block as defined below.
 
 <h4 class="pdoc-member-header" id="VirtualNetwork-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/virtualNetwork.ts#L87">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/virtualNetwork.ts#L87">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1131,7 +1131,7 @@ A `subnet` block as defined below.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="VirtualNetwork-uniqueIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/virtualNetwork.ts#L91">property <b>uniqueIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/virtualNetwork.ts#L91">property <b>uniqueIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>uniqueIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1139,7 +1139,7 @@ A mapping of tags to assign to the resource.
 The unique immutable identifier of the Dev Test Virtual Network.
 
 <h4 class="pdoc-member-header" id="VirtualNetwork-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/virtualNetwork.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/virtualNetwork.ts#L36">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1148,7 +1148,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="WindowsVirtualMachine" data-link-title="WindowsVirtualMachine">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L12">
         Resource <strong>WindowsVirtualMachine</strong>
     </a>
 </h3>
@@ -1158,7 +1158,7 @@ deployments.
 Manages a Windows Virtual Machine within a Dev Test Lab.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachine-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L111"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L111"> <b>constructor</b></a>
 </h4>
 
 
@@ -1172,7 +1172,7 @@ Create a WindowsVirtualMachine resource with the given unique name, arguments, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachine-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L22">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L22">method <b>get</b></a>
 </h4>
 
 
@@ -1183,14 +1183,14 @@ Get an existing WindowsVirtualMachine resource's state with the given name, ID, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachine-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachine-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L33">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L33">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1201,7 +1201,7 @@ Returns true if the given object is an instance of WindowsVirtualMachine.  This 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachine-allowClaim">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L43">property <b>allowClaim</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L43">property <b>allowClaim</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allowClaim: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1209,7 +1209,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Can this Virtual Machine be claimed by users? Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachine-disallowPublicIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L47">property <b>disallowPublicIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L47">property <b>disallowPublicIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>disallowPublicIpAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1217,7 +1217,7 @@ Can this Virtual Machine be claimed by users? Defaults to `true`.
 Should the Virtual Machine be created without a Public IP Address? Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachine-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L51">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L51">property <b>fqdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fqdn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1225,7 +1225,7 @@ Should the Virtual Machine be created without a Public IP Address? Changing this
 The FQDN of the Virtual Machine.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachine-galleryImageReference">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L55">property <b>galleryImageReference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L55">property <b>galleryImageReference</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>galleryImageReference: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#WindowsVirtualMachineGalleryImageReference'>WindowsVirtualMachineGalleryImageReference</a>&gt;;</code></pre>
@@ -1233,7 +1233,7 @@ The FQDN of the Virtual Machine.
 A `galleryImageReference` block as defined below.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachine-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1242,7 +1242,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachine-inboundNatRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L59">property <b>inboundNatRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L59">property <b>inboundNatRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>inboundNatRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#WindowsVirtualMachineInboundNatRule'>WindowsVirtualMachineInboundNatRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1250,7 +1250,7 @@ deployments and may be missing (undefined) during planning phases.
 One or more `inboundNatRule` blocks as defined below. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachine-labName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L63">property <b>labName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L63">property <b>labName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>labName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1258,7 +1258,7 @@ One or more `inboundNatRule` blocks as defined below. Changing this forces a new
 Specifies the name of the Dev Test Lab in which the Virtual Machine should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachine-labSubnetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L67">property <b>labSubnetName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L67">property <b>labSubnetName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>labSubnetName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1266,7 +1266,7 @@ Specifies the name of the Dev Test Lab in which the Virtual Machine should be cr
 The name of a Subnet within the Dev Test Virtual Network where this machine should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachine-labVirtualNetworkId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L71">property <b>labVirtualNetworkId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L71">property <b>labVirtualNetworkId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>labVirtualNetworkId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1274,7 +1274,7 @@ The name of a Subnet within the Dev Test Virtual Network where this machine shou
 The ID of the Dev Test Virtual Network where this Virtual Machine should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachine-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L75">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L75">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1282,7 +1282,7 @@ The ID of the Dev Test Virtual Network where this Virtual Machine should be crea
 Specifies the supported Azure location where the Dev Test Lab exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachine-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L79">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L79">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1290,7 +1290,7 @@ Specifies the supported Azure location where the Dev Test Lab exists. Changing t
 Specifies the name of the Dev Test Machine. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachine-notes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L83">property <b>notes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L83">property <b>notes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1298,7 +1298,7 @@ Specifies the name of the Dev Test Machine. Changing this forces a new resource 
 Any notes about the Virtual Machine.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachine-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L87">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L87">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1306,7 +1306,7 @@ Any notes about the Virtual Machine.
 The Password associated with the `username` used to login to this Virtual Machine. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachine-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L91">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L91">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1314,7 +1314,7 @@ The Password associated with the `username` used to login to this Virtual Machin
 The name of the resource group in which the Dev Test Lab resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachine-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L95">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L95">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1322,7 +1322,7 @@ The name of the resource group in which the Dev Test Lab resource exists. Changi
 The Machine Size to use for this Virtual Machine, such as `Standard_F2`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachine-storageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L99">property <b>storageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L99">property <b>storageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1330,7 +1330,7 @@ The Machine Size to use for this Virtual Machine, such as `Standard_F2`. Changin
 The type of Storage to use on this Virtual Machine. Possible values are `Standard` and `Premium`.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachine-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L103">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L103">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1338,7 +1338,7 @@ The type of Storage to use on this Virtual Machine. Possible values are `Standar
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachine-uniqueIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L107">property <b>uniqueIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L107">property <b>uniqueIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>uniqueIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1346,7 +1346,7 @@ A mapping of tags to assign to the resource.
 The unique immutable identifier of the Virtual Machine.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachine-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1355,7 +1355,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachine-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L111">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L111">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1365,7 +1365,7 @@ The Username associated with the local administrator on this Virtual Machine. Ch
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getLab" data-link-title="getLab">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/getLab.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/getLab.ts#L25">
         Function <strong>getLab</strong>
     </a>
 </h3>
@@ -1390,7 +1390,7 @@ export const uniqueIdentifier = example.then(example => example.uniqueIdentifier
 ```
 
 <h3 class="pdoc-module-header" id="getVirtualNetwork" data-link-title="getVirtualNetwork">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/getVirtualNetwork.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/getVirtualNetwork.ts#L26">
         Function <strong>getVirtualNetwork</strong>
     </a>
 </h3>
@@ -1418,7 +1418,7 @@ export const labSubnetName = example.then(example => example.allowedSubnets[0].l
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetLabArgs" data-link-title="GetLabArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/getLab.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/getLab.ts#L42">
         interface <strong>GetLabArgs</strong>
     </a>
 </h3>
@@ -1428,7 +1428,7 @@ export const labSubnetName = example.then(example => example.allowedSubnets[0].l
 A collection of arguments for invoking getLab.
 
 <h4 class="pdoc-member-header" id="GetLabArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/getLab.ts#L46">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/getLab.ts#L46">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1436,7 +1436,7 @@ A collection of arguments for invoking getLab.
 The name of the Dev Test Lab.
 
 <h4 class="pdoc-member-header" id="GetLabArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/getLab.ts#L50">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/getLab.ts#L50">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1444,7 +1444,7 @@ The name of the Dev Test Lab.
 The Name of the Resource Group where the Dev Test Lab exists.
 
 <h3 class="pdoc-module-header" id="GetLabResult" data-link-title="GetLabResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/getLab.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/getLab.ts#L56">
         interface <strong>GetLabResult</strong>
     </a>
 </h3>
@@ -1454,7 +1454,7 @@ The Name of the Resource Group where the Dev Test Lab exists.
 A collection of values returned by getLab.
 
 <h4 class="pdoc-member-header" id="GetLabResult-artifactsStorageAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/getLab.ts#L60">property <b>artifactsStorageAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/getLab.ts#L60">property <b>artifactsStorageAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>artifactsStorageAccountId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1462,7 +1462,7 @@ A collection of values returned by getLab.
 The ID of the Storage Account used for Artifact Storage.
 
 <h4 class="pdoc-member-header" id="GetLabResult-defaultPremiumStorageAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/getLab.ts#L64">property <b>defaultPremiumStorageAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/getLab.ts#L64">property <b>defaultPremiumStorageAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultPremiumStorageAccountId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1470,7 +1470,7 @@ The ID of the Storage Account used for Artifact Storage.
 The ID of the Default Premium Storage Account for this Dev Test Lab.
 
 <h4 class="pdoc-member-header" id="GetLabResult-defaultStorageAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/getLab.ts#L68">property <b>defaultStorageAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/getLab.ts#L68">property <b>defaultStorageAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultStorageAccountId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1478,7 +1478,7 @@ The ID of the Default Premium Storage Account for this Dev Test Lab.
 The ID of the Default Storage Account for this Dev Test Lab.
 
 <h4 class="pdoc-member-header" id="GetLabResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/getLab.ts#L72">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/getLab.ts#L72">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1486,7 +1486,7 @@ The ID of the Default Storage Account for this Dev Test Lab.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetLabResult-keyVaultId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/getLab.ts#L76">property <b>keyVaultId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/getLab.ts#L76">property <b>keyVaultId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyVaultId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1494,7 +1494,7 @@ The provider-assigned unique ID for this managed resource.
 The ID of the Key used for this Dev Test Lab.
 
 <h4 class="pdoc-member-header" id="GetLabResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/getLab.ts#L80">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/getLab.ts#L80">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1502,12 +1502,12 @@ The ID of the Key used for this Dev Test Lab.
 The Azure location where the Dev Test Lab exists.
 
 <h4 class="pdoc-member-header" id="GetLabResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/getLab.ts#L81">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/getLab.ts#L81">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetLabResult-premiumDataDiskStorageAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/getLab.ts#L85">property <b>premiumDataDiskStorageAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/getLab.ts#L85">property <b>premiumDataDiskStorageAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>premiumDataDiskStorageAccountId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1515,12 +1515,12 @@ The Azure location where the Dev Test Lab exists.
 The ID of the Storage Account used for Storage of Premium Data Disk.
 
 <h4 class="pdoc-member-header" id="GetLabResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/getLab.ts#L86">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/getLab.ts#L86">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetLabResult-storageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/getLab.ts#L90">property <b>storageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/getLab.ts#L90">property <b>storageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1528,7 +1528,7 @@ The ID of the Storage Account used for Storage of Premium Data Disk.
 The type of storage used by the Dev Test Lab.
 
 <h4 class="pdoc-member-header" id="GetLabResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/getLab.ts#L94">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/getLab.ts#L94">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1536,7 +1536,7 @@ The type of storage used by the Dev Test Lab.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="GetLabResult-uniqueIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/getLab.ts#L98">property <b>uniqueIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/getLab.ts#L98">property <b>uniqueIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uniqueIdentifier: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1544,7 +1544,7 @@ A mapping of tags to assign to the resource.
 The unique immutable identifier of the Dev Test Lab.
 
 <h3 class="pdoc-module-header" id="GetVirtualNetworkArgs" data-link-title="GetVirtualNetworkArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/getVirtualNetwork.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/getVirtualNetwork.ts#L44">
         interface <strong>GetVirtualNetworkArgs</strong>
     </a>
 </h3>
@@ -1554,7 +1554,7 @@ The unique immutable identifier of the Dev Test Lab.
 A collection of arguments for invoking getVirtualNetwork.
 
 <h4 class="pdoc-member-header" id="GetVirtualNetworkArgs-labName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/getVirtualNetwork.ts#L48">property <b>labName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/getVirtualNetwork.ts#L48">property <b>labName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1562,7 +1562,7 @@ A collection of arguments for invoking getVirtualNetwork.
 Specifies the name of the Dev Test Lab.
 
 <h4 class="pdoc-member-header" id="GetVirtualNetworkArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/getVirtualNetwork.ts#L52">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/getVirtualNetwork.ts#L52">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1570,7 +1570,7 @@ Specifies the name of the Dev Test Lab.
 Specifies the name of the Virtual Network.
 
 <h4 class="pdoc-member-header" id="GetVirtualNetworkArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/getVirtualNetwork.ts#L56">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/getVirtualNetwork.ts#L56">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1578,7 +1578,7 @@ Specifies the name of the Virtual Network.
 Specifies the name of the resource group that contains the Virtual Network.
 
 <h3 class="pdoc-module-header" id="GetVirtualNetworkResult" data-link-title="GetVirtualNetworkResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/getVirtualNetwork.ts#L62">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/getVirtualNetwork.ts#L62">
         interface <strong>GetVirtualNetworkResult</strong>
     </a>
 </h3>
@@ -1588,7 +1588,7 @@ Specifies the name of the resource group that contains the Virtual Network.
 A collection of values returned by getVirtualNetwork.
 
 <h4 class="pdoc-member-header" id="GetVirtualNetworkResult-allowedSubnets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/getVirtualNetwork.ts#L66">property <b>allowedSubnets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/getVirtualNetwork.ts#L66">property <b>allowedSubnets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedSubnets: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetVirtualNetworkAllowedSubnet'>GetVirtualNetworkAllowedSubnet</a>[];</code></pre>
@@ -1596,7 +1596,7 @@ A collection of values returned by getVirtualNetwork.
 The list of subnets enabled for the virtual network as defined below.
 
 <h4 class="pdoc-member-header" id="GetVirtualNetworkResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/getVirtualNetwork.ts#L70">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/getVirtualNetwork.ts#L70">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1604,22 +1604,22 @@ The list of subnets enabled for the virtual network as defined below.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetVirtualNetworkResult-labName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/getVirtualNetwork.ts#L71">property <b>labName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/getVirtualNetwork.ts#L71">property <b>labName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVirtualNetworkResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/getVirtualNetwork.ts#L72">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/getVirtualNetwork.ts#L72">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVirtualNetworkResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/getVirtualNetwork.ts#L73">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/getVirtualNetwork.ts#L73">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVirtualNetworkResult-subnetOverrides">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/getVirtualNetwork.ts#L77">property <b>subnetOverrides</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/getVirtualNetwork.ts#L77">property <b>subnetOverrides</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetOverrides: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetVirtualNetworkSubnetOverride'>GetVirtualNetworkSubnetOverride</a>[];</code></pre>
@@ -1627,7 +1627,7 @@ The provider-assigned unique ID for this managed resource.
 The list of permission overrides for the subnets as defined below.
 
 <h4 class="pdoc-member-header" id="GetVirtualNetworkResult-uniqueIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/getVirtualNetwork.ts#L81">property <b>uniqueIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/getVirtualNetwork.ts#L81">property <b>uniqueIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uniqueIdentifier: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1635,7 +1635,7 @@ The list of permission overrides for the subnets as defined below.
 The unique immutable identifier of the virtual network.
 
 <h3 class="pdoc-module-header" id="GlobalVMShutdownScheduleArgs" data-link-title="GlobalVMShutdownScheduleArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L214">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L214">
         interface <strong>GlobalVMShutdownScheduleArgs</strong>
     </a>
 </h3>
@@ -1645,7 +1645,7 @@ The unique immutable identifier of the virtual network.
 The set of arguments for constructing a GlobalVMShutdownSchedule resource.
 
 <h4 class="pdoc-member-header" id="GlobalVMShutdownScheduleArgs-dailyRecurrenceTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L218">property <b>dailyRecurrenceTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L218">property <b>dailyRecurrenceTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dailyRecurrenceTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1653,7 +1653,7 @@ The set of arguments for constructing a GlobalVMShutdownSchedule resource.
 The time each day when the schedule takes effect. Must match the format HHmm where HH is 00-23 and mm is 00-59 (e.g. 0930, 2300, etc.)
 
 <h4 class="pdoc-member-header" id="GlobalVMShutdownScheduleArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L222">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L222">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1661,7 +1661,7 @@ The time each day when the schedule takes effect. Must match the format HHmm whe
 Whether to enable the schedule. Possible values are `true` and `false`. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="GlobalVMShutdownScheduleArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L226">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L226">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1669,12 +1669,12 @@ Whether to enable the schedule. Possible values are `true` and `false`. Defaults
 The location where the schedule is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="GlobalVMShutdownScheduleArgs-notificationSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L227">property <b>notificationSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L227">property <b>notificationSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notificationSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GlobalVMShutdownScheduleNotificationSettings'>GlobalVMShutdownScheduleNotificationSettings</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GlobalVMShutdownScheduleArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L231">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L231">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1682,7 +1682,7 @@ The location where the schedule is created. Changing this forces a new resource 
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="GlobalVMShutdownScheduleArgs-timezone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L235">property <b>timezone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L235">property <b>timezone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timezone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1690,7 +1690,7 @@ A mapping of tags to assign to the resource.
 The time zone ID (e.g. Pacific Standard time). Refer to this guide for a [full list of accepted time zone names](https://jackstromberg.com/2017/01/list-of-time-zones-consumed-by-azure/).
 
 <h4 class="pdoc-member-header" id="GlobalVMShutdownScheduleArgs-virtualMachineId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L239">property <b>virtualMachineId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L239">property <b>virtualMachineId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>virtualMachineId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1698,7 +1698,7 @@ The time zone ID (e.g. Pacific Standard time). Refer to this guide for a [full l
 The resource ID of the target ARM-based Virtual Machine. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="GlobalVMShutdownScheduleState" data-link-title="GlobalVMShutdownScheduleState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L183">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L183">
         interface <strong>GlobalVMShutdownScheduleState</strong>
     </a>
 </h3>
@@ -1708,7 +1708,7 @@ The resource ID of the target ARM-based Virtual Machine. Changing this forces a 
 Input properties used for looking up and filtering GlobalVMShutdownSchedule resources.
 
 <h4 class="pdoc-member-header" id="GlobalVMShutdownScheduleState-dailyRecurrenceTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L187">property <b>dailyRecurrenceTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L187">property <b>dailyRecurrenceTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dailyRecurrenceTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1716,7 +1716,7 @@ Input properties used for looking up and filtering GlobalVMShutdownSchedule reso
 The time each day when the schedule takes effect. Must match the format HHmm where HH is 00-23 and mm is 00-59 (e.g. 0930, 2300, etc.)
 
 <h4 class="pdoc-member-header" id="GlobalVMShutdownScheduleState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L191">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L191">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1724,7 +1724,7 @@ The time each day when the schedule takes effect. Must match the format HHmm whe
 Whether to enable the schedule. Possible values are `true` and `false`. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="GlobalVMShutdownScheduleState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L195">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L195">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1732,12 +1732,12 @@ Whether to enable the schedule. Possible values are `true` and `false`. Defaults
 The location where the schedule is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="GlobalVMShutdownScheduleState-notificationSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L196">property <b>notificationSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L196">property <b>notificationSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notificationSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GlobalVMShutdownScheduleNotificationSettings'>GlobalVMShutdownScheduleNotificationSettings</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GlobalVMShutdownScheduleState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L200">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L200">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1745,7 +1745,7 @@ The location where the schedule is created. Changing this forces a new resource 
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="GlobalVMShutdownScheduleState-timezone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L204">property <b>timezone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L204">property <b>timezone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timezone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1753,7 +1753,7 @@ A mapping of tags to assign to the resource.
 The time zone ID (e.g. Pacific Standard time). Refer to this guide for a [full list of accepted time zone names](https://jackstromberg.com/2017/01/list-of-time-zones-consumed-by-azure/).
 
 <h4 class="pdoc-member-header" id="GlobalVMShutdownScheduleState-virtualMachineId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L208">property <b>virtualMachineId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/globalVMShutdownSchedule.ts#L208">property <b>virtualMachineId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>virtualMachineId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1761,7 +1761,7 @@ The time zone ID (e.g. Pacific Standard time). Refer to this guide for a [full l
 The resource ID of the target ARM-based Virtual Machine. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="LabArgs" data-link-title="LabArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/lab.ts#L203">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/lab.ts#L203">
         interface <strong>LabArgs</strong>
     </a>
 </h3>
@@ -1771,7 +1771,7 @@ The resource ID of the target ARM-based Virtual Machine. Changing this forces a 
 The set of arguments for constructing a Lab resource.
 
 <h4 class="pdoc-member-header" id="LabArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/lab.ts#L207">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/lab.ts#L207">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1779,7 +1779,7 @@ The set of arguments for constructing a Lab resource.
 Specifies the supported Azure location where the Dev Test Lab should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LabArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/lab.ts#L211">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/lab.ts#L211">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1787,7 +1787,7 @@ Specifies the supported Azure location where the Dev Test Lab should exist. Chan
 Specifies the name of the Dev Test Lab. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LabArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/lab.ts#L215">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/lab.ts#L215">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1795,7 +1795,7 @@ Specifies the name of the Dev Test Lab. Changing this forces a new resource to b
 The name of the resource group under which the Dev Test Lab resource has to be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LabArgs-storageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/lab.ts#L219">property <b>storageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/lab.ts#L219">property <b>storageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1803,7 +1803,7 @@ The name of the resource group under which the Dev Test Lab resource has to be c
 The type of storage used by the Dev Test Lab. Possible values are `Standard` and `Premium`. Defaults to `Premium`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LabArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/lab.ts#L223">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/lab.ts#L223">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1811,7 +1811,7 @@ The type of storage used by the Dev Test Lab. Possible values are `Standard` and
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="LabState" data-link-title="LabState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/lab.ts#L153">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/lab.ts#L153">
         interface <strong>LabState</strong>
     </a>
 </h3>
@@ -1821,7 +1821,7 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering Lab resources.
 
 <h4 class="pdoc-member-header" id="LabState-artifactsStorageAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/lab.ts#L157">property <b>artifactsStorageAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/lab.ts#L157">property <b>artifactsStorageAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>artifactsStorageAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1829,7 +1829,7 @@ Input properties used for looking up and filtering Lab resources.
 The ID of the Storage Account used for Artifact Storage.
 
 <h4 class="pdoc-member-header" id="LabState-defaultPremiumStorageAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/lab.ts#L161">property <b>defaultPremiumStorageAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/lab.ts#L161">property <b>defaultPremiumStorageAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultPremiumStorageAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1837,7 +1837,7 @@ The ID of the Storage Account used for Artifact Storage.
 The ID of the Default Premium Storage Account for this Dev Test Lab.
 
 <h4 class="pdoc-member-header" id="LabState-defaultStorageAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/lab.ts#L165">property <b>defaultStorageAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/lab.ts#L165">property <b>defaultStorageAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultStorageAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1845,7 +1845,7 @@ The ID of the Default Premium Storage Account for this Dev Test Lab.
 The ID of the Default Storage Account for this Dev Test Lab.
 
 <h4 class="pdoc-member-header" id="LabState-keyVaultId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/lab.ts#L169">property <b>keyVaultId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/lab.ts#L169">property <b>keyVaultId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyVaultId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1853,7 +1853,7 @@ The ID of the Default Storage Account for this Dev Test Lab.
 The ID of the Key used for this Dev Test Lab.
 
 <h4 class="pdoc-member-header" id="LabState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/lab.ts#L173">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/lab.ts#L173">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1861,7 +1861,7 @@ The ID of the Key used for this Dev Test Lab.
 Specifies the supported Azure location where the Dev Test Lab should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LabState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/lab.ts#L177">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/lab.ts#L177">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1869,7 +1869,7 @@ Specifies the supported Azure location where the Dev Test Lab should exist. Chan
 Specifies the name of the Dev Test Lab. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LabState-premiumDataDiskStorageAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/lab.ts#L181">property <b>premiumDataDiskStorageAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/lab.ts#L181">property <b>premiumDataDiskStorageAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>premiumDataDiskStorageAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1877,7 +1877,7 @@ Specifies the name of the Dev Test Lab. Changing this forces a new resource to b
 The ID of the Storage Account used for Storage of Premium Data Disk.
 
 <h4 class="pdoc-member-header" id="LabState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/lab.ts#L185">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/lab.ts#L185">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1885,7 +1885,7 @@ The ID of the Storage Account used for Storage of Premium Data Disk.
 The name of the resource group under which the Dev Test Lab resource has to be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LabState-storageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/lab.ts#L189">property <b>storageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/lab.ts#L189">property <b>storageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1893,7 +1893,7 @@ The name of the resource group under which the Dev Test Lab resource has to be c
 The type of storage used by the Dev Test Lab. Possible values are `Standard` and `Premium`. Defaults to `Premium`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LabState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/lab.ts#L193">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/lab.ts#L193">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1901,7 +1901,7 @@ The type of storage used by the Dev Test Lab. Possible values are `Standard` and
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="LabState-uniqueIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/lab.ts#L197">property <b>uniqueIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/lab.ts#L197">property <b>uniqueIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uniqueIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1909,7 +1909,7 @@ A mapping of tags to assign to the resource.
 The unique immutable identifier of the Dev Test Lab.
 
 <h3 class="pdoc-module-header" id="LinuxVirtualMachineArgs" data-link-title="LinuxVirtualMachineArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L290">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L290">
         interface <strong>LinuxVirtualMachineArgs</strong>
     </a>
 </h3>
@@ -1919,7 +1919,7 @@ The unique immutable identifier of the Dev Test Lab.
 The set of arguments for constructing a LinuxVirtualMachine resource.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachineArgs-allowClaim">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L294">property <b>allowClaim</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L294">property <b>allowClaim</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowClaim?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1927,7 +1927,7 @@ The set of arguments for constructing a LinuxVirtualMachine resource.
 Can this Virtual Machine be claimed by users? Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachineArgs-disallowPublicIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L298">property <b>disallowPublicIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L298">property <b>disallowPublicIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disallowPublicIpAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1935,7 +1935,7 @@ Can this Virtual Machine be claimed by users? Defaults to `true`.
 Should the Virtual Machine be created without a Public IP Address? Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachineArgs-galleryImageReference">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L302">property <b>galleryImageReference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L302">property <b>galleryImageReference</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>galleryImageReference: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LinuxVirtualMachineGalleryImageReference'>LinuxVirtualMachineGalleryImageReference</a>&gt;;</code></pre>
@@ -1943,7 +1943,7 @@ Should the Virtual Machine be created without a Public IP Address? Changing this
 A `galleryImageReference` block as defined below.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachineArgs-inboundNatRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L306">property <b>inboundNatRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L306">property <b>inboundNatRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inboundNatRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LinuxVirtualMachineInboundNatRule'>LinuxVirtualMachineInboundNatRule</a>&gt;[]&gt;;</code></pre>
@@ -1951,7 +1951,7 @@ A `galleryImageReference` block as defined below.
 One or more `inboundNatRule` blocks as defined below. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachineArgs-labName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L310">property <b>labName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L310">property <b>labName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1959,7 +1959,7 @@ One or more `inboundNatRule` blocks as defined below. Changing this forces a new
 Specifies the name of the Dev Test Lab in which the Virtual Machine should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachineArgs-labSubnetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L314">property <b>labSubnetName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L314">property <b>labSubnetName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labSubnetName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1967,7 +1967,7 @@ Specifies the name of the Dev Test Lab in which the Virtual Machine should be cr
 The name of a Subnet within the Dev Test Virtual Network where this machine should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachineArgs-labVirtualNetworkId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L318">property <b>labVirtualNetworkId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L318">property <b>labVirtualNetworkId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labVirtualNetworkId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1975,7 +1975,7 @@ The name of a Subnet within the Dev Test Virtual Network where this machine shou
 The ID of the Dev Test Virtual Network where this Virtual Machine should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachineArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L322">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L322">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1983,7 +1983,7 @@ The ID of the Dev Test Virtual Network where this Virtual Machine should be crea
 Specifies the supported Azure location where the Dev Test Lab exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachineArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L326">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L326">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1991,7 +1991,7 @@ Specifies the supported Azure location where the Dev Test Lab exists. Changing t
 Specifies the name of the Dev Test Machine. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachineArgs-notes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L330">property <b>notes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L330">property <b>notes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1999,7 +1999,7 @@ Specifies the name of the Dev Test Machine. Changing this forces a new resource 
 Any notes about the Virtual Machine.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachineArgs-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L334">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L334">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2007,7 +2007,7 @@ Any notes about the Virtual Machine.
 The Password associated with the `username` used to login to this Virtual Machine. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachineArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L338">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L338">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2015,7 +2015,7 @@ The Password associated with the `username` used to login to this Virtual Machin
 The name of the resource group in which the Dev Test Lab resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachineArgs-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L342">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L342">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2023,7 +2023,7 @@ The name of the resource group in which the Dev Test Lab resource exists. Changi
 The Machine Size to use for this Virtual Machine, such as `Standard_F2`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachineArgs-sshKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L346">property <b>sshKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L346">property <b>sshKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sshKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2031,7 +2031,7 @@ The Machine Size to use for this Virtual Machine, such as `Standard_F2`. Changin
 The SSH Key associated with the `username` used to login to this Virtual Machine. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachineArgs-storageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L350">property <b>storageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L350">property <b>storageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2039,7 +2039,7 @@ The SSH Key associated with the `username` used to login to this Virtual Machine
 The type of Storage to use on this Virtual Machine. Possible values are `Standard` and `Premium`.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachineArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L354">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L354">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2047,7 +2047,7 @@ The type of Storage to use on this Virtual Machine. Possible values are `Standar
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachineArgs-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L358">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L358">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2055,7 +2055,7 @@ A mapping of tags to assign to the resource.
 The Username associated with the local administrator on this Virtual Machine. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="LinuxVirtualMachineState" data-link-title="LinuxVirtualMachineState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L208">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L208">
         interface <strong>LinuxVirtualMachineState</strong>
     </a>
 </h3>
@@ -2065,7 +2065,7 @@ The Username associated with the local administrator on this Virtual Machine. Ch
 Input properties used for looking up and filtering LinuxVirtualMachine resources.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachineState-allowClaim">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L212">property <b>allowClaim</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L212">property <b>allowClaim</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowClaim?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2073,7 +2073,7 @@ Input properties used for looking up and filtering LinuxVirtualMachine resources
 Can this Virtual Machine be claimed by users? Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachineState-disallowPublicIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L216">property <b>disallowPublicIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L216">property <b>disallowPublicIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disallowPublicIpAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2081,7 +2081,7 @@ Can this Virtual Machine be claimed by users? Defaults to `true`.
 Should the Virtual Machine be created without a Public IP Address? Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachineState-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L220">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L220">property <b>fqdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fqdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2089,7 +2089,7 @@ Should the Virtual Machine be created without a Public IP Address? Changing this
 The FQDN of the Virtual Machine.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachineState-galleryImageReference">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L224">property <b>galleryImageReference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L224">property <b>galleryImageReference</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>galleryImageReference?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LinuxVirtualMachineGalleryImageReference'>LinuxVirtualMachineGalleryImageReference</a>&gt;;</code></pre>
@@ -2097,7 +2097,7 @@ The FQDN of the Virtual Machine.
 A `galleryImageReference` block as defined below.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachineState-inboundNatRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L228">property <b>inboundNatRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L228">property <b>inboundNatRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inboundNatRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LinuxVirtualMachineInboundNatRule'>LinuxVirtualMachineInboundNatRule</a>&gt;[]&gt;;</code></pre>
@@ -2105,7 +2105,7 @@ A `galleryImageReference` block as defined below.
 One or more `inboundNatRule` blocks as defined below. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachineState-labName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L232">property <b>labName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L232">property <b>labName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2113,7 +2113,7 @@ One or more `inboundNatRule` blocks as defined below. Changing this forces a new
 Specifies the name of the Dev Test Lab in which the Virtual Machine should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachineState-labSubnetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L236">property <b>labSubnetName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L236">property <b>labSubnetName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labSubnetName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2121,7 +2121,7 @@ Specifies the name of the Dev Test Lab in which the Virtual Machine should be cr
 The name of a Subnet within the Dev Test Virtual Network where this machine should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachineState-labVirtualNetworkId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L240">property <b>labVirtualNetworkId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L240">property <b>labVirtualNetworkId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labVirtualNetworkId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2129,7 +2129,7 @@ The name of a Subnet within the Dev Test Virtual Network where this machine shou
 The ID of the Dev Test Virtual Network where this Virtual Machine should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachineState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L244">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L244">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2137,7 +2137,7 @@ The ID of the Dev Test Virtual Network where this Virtual Machine should be crea
 Specifies the supported Azure location where the Dev Test Lab exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachineState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L248">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L248">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2145,7 +2145,7 @@ Specifies the supported Azure location where the Dev Test Lab exists. Changing t
 Specifies the name of the Dev Test Machine. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachineState-notes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L252">property <b>notes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L252">property <b>notes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2153,7 +2153,7 @@ Specifies the name of the Dev Test Machine. Changing this forces a new resource 
 Any notes about the Virtual Machine.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachineState-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L256">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L256">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2161,7 +2161,7 @@ Any notes about the Virtual Machine.
 The Password associated with the `username` used to login to this Virtual Machine. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachineState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L260">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L260">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2169,7 +2169,7 @@ The Password associated with the `username` used to login to this Virtual Machin
 The name of the resource group in which the Dev Test Lab resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachineState-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L264">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L264">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2177,7 +2177,7 @@ The name of the resource group in which the Dev Test Lab resource exists. Changi
 The Machine Size to use for this Virtual Machine, such as `Standard_F2`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachineState-sshKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L268">property <b>sshKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L268">property <b>sshKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sshKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2185,7 +2185,7 @@ The Machine Size to use for this Virtual Machine, such as `Standard_F2`. Changin
 The SSH Key associated with the `username` used to login to this Virtual Machine. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachineState-storageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L272">property <b>storageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L272">property <b>storageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2193,7 +2193,7 @@ The SSH Key associated with the `username` used to login to this Virtual Machine
 The type of Storage to use on this Virtual Machine. Possible values are `Standard` and `Premium`.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachineState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L276">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L276">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2201,7 +2201,7 @@ The type of Storage to use on this Virtual Machine. Possible values are `Standar
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachineState-uniqueIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L280">property <b>uniqueIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L280">property <b>uniqueIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uniqueIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2209,7 +2209,7 @@ A mapping of tags to assign to the resource.
 The unique immutable identifier of the Virtual Machine.
 
 <h4 class="pdoc-member-header" id="LinuxVirtualMachineState-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/linuxVirtualMachine.ts#L284">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/linuxVirtualMachine.ts#L284">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2217,7 +2217,7 @@ The unique immutable identifier of the Virtual Machine.
 The Username associated with the local administrator on this Virtual Machine. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="PolicyArgs" data-link-title="PolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/policy.ts#L206">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/policy.ts#L206">
         interface <strong>PolicyArgs</strong>
     </a>
 </h3>
@@ -2227,7 +2227,7 @@ The Username associated with the local administrator on this Virtual Machine. Ch
 The set of arguments for constructing a Policy resource.
 
 <h4 class="pdoc-member-header" id="PolicyArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/policy.ts#L210">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/policy.ts#L210">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2235,7 +2235,7 @@ The set of arguments for constructing a Policy resource.
 A description for the Policy.
 
 <h4 class="pdoc-member-header" id="PolicyArgs-evaluatorType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/policy.ts#L214">property <b>evaluatorType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/policy.ts#L214">property <b>evaluatorType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>evaluatorType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2243,7 +2243,7 @@ A description for the Policy.
 The Evaluation Type used for this Policy. Possible values include: 'AllowedValuesPolicy', 'MaxValuePolicy'. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="PolicyArgs-factData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/policy.ts#L218">property <b>factData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/policy.ts#L218">property <b>factData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>factData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2251,7 +2251,7 @@ The Evaluation Type used for this Policy. Possible values include: 'AllowedValue
 The Fact Data for this Policy.
 
 <h4 class="pdoc-member-header" id="PolicyArgs-labName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/policy.ts#L222">property <b>labName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/policy.ts#L222">property <b>labName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2259,7 +2259,7 @@ The Fact Data for this Policy.
 Specifies the name of the Dev Test Lab in which the Policy should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="PolicyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/policy.ts#L226">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/policy.ts#L226">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2267,7 +2267,7 @@ Specifies the name of the Dev Test Lab in which the Policy should be created. Ch
 Specifies the name of the Dev Test Policy. Possible values are `GalleryImage`, `LabPremiumVmCount`, `LabTargetCost`, `LabVmCount`, `LabVmSize`, `UserOwnedLabPremiumVmCount`, `UserOwnedLabVmCount` and `UserOwnedLabVmCountInSubnet`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="PolicyArgs-policySetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/policy.ts#L230">property <b>policySetName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/policy.ts#L230">property <b>policySetName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policySetName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2275,7 +2275,7 @@ Specifies the name of the Dev Test Policy. Possible values are `GalleryImage`, `
 Specifies the name of the Policy Set within the Dev Test Lab where this policy should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="PolicyArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/policy.ts#L234">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/policy.ts#L234">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2283,7 +2283,7 @@ Specifies the name of the Policy Set within the Dev Test Lab where this policy s
 The name of the resource group in which the Dev Test Lab resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="PolicyArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/policy.ts#L238">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/policy.ts#L238">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2291,7 +2291,7 @@ The name of the resource group in which the Dev Test Lab resource exists. Changi
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="PolicyArgs-threshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/policy.ts#L242">property <b>threshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/policy.ts#L242">property <b>threshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2299,7 +2299,7 @@ A mapping of tags to assign to the resource.
 The Threshold for this Policy.
 
 <h3 class="pdoc-module-header" id="PolicyState" data-link-title="PolicyState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/policy.ts#L164">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/policy.ts#L164">
         interface <strong>PolicyState</strong>
     </a>
 </h3>
@@ -2309,7 +2309,7 @@ The Threshold for this Policy.
 Input properties used for looking up and filtering Policy resources.
 
 <h4 class="pdoc-member-header" id="PolicyState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/policy.ts#L168">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/policy.ts#L168">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2317,7 +2317,7 @@ Input properties used for looking up and filtering Policy resources.
 A description for the Policy.
 
 <h4 class="pdoc-member-header" id="PolicyState-evaluatorType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/policy.ts#L172">property <b>evaluatorType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/policy.ts#L172">property <b>evaluatorType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>evaluatorType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2325,7 +2325,7 @@ A description for the Policy.
 The Evaluation Type used for this Policy. Possible values include: 'AllowedValuesPolicy', 'MaxValuePolicy'. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="PolicyState-factData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/policy.ts#L176">property <b>factData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/policy.ts#L176">property <b>factData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>factData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2333,7 +2333,7 @@ The Evaluation Type used for this Policy. Possible values include: 'AllowedValue
 The Fact Data for this Policy.
 
 <h4 class="pdoc-member-header" id="PolicyState-labName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/policy.ts#L180">property <b>labName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/policy.ts#L180">property <b>labName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2341,7 +2341,7 @@ The Fact Data for this Policy.
 Specifies the name of the Dev Test Lab in which the Policy should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="PolicyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/policy.ts#L184">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/policy.ts#L184">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2349,7 +2349,7 @@ Specifies the name of the Dev Test Lab in which the Policy should be created. Ch
 Specifies the name of the Dev Test Policy. Possible values are `GalleryImage`, `LabPremiumVmCount`, `LabTargetCost`, `LabVmCount`, `LabVmSize`, `UserOwnedLabPremiumVmCount`, `UserOwnedLabVmCount` and `UserOwnedLabVmCountInSubnet`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="PolicyState-policySetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/policy.ts#L188">property <b>policySetName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/policy.ts#L188">property <b>policySetName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policySetName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2357,7 +2357,7 @@ Specifies the name of the Dev Test Policy. Possible values are `GalleryImage`, `
 Specifies the name of the Policy Set within the Dev Test Lab where this policy should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="PolicyState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/policy.ts#L192">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/policy.ts#L192">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2365,7 +2365,7 @@ Specifies the name of the Policy Set within the Dev Test Lab where this policy s
 The name of the resource group in which the Dev Test Lab resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="PolicyState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/policy.ts#L196">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/policy.ts#L196">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2373,7 +2373,7 @@ The name of the resource group in which the Dev Test Lab resource exists. Changi
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="PolicyState-threshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/policy.ts#L200">property <b>threshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/policy.ts#L200">property <b>threshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2381,7 +2381,7 @@ A mapping of tags to assign to the resource.
 The Threshold for this Policy.
 
 <h3 class="pdoc-module-header" id="ScheduleArgs" data-link-title="ScheduleArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L218">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L218">
         interface <strong>ScheduleArgs</strong>
     </a>
 </h3>
@@ -2391,17 +2391,17 @@ The Threshold for this Policy.
 The set of arguments for constructing a Schedule resource.
 
 <h4 class="pdoc-member-header" id="ScheduleArgs-dailyRecurrence">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L219">property <b>dailyRecurrence</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L219">property <b>dailyRecurrence</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dailyRecurrence?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScheduleDailyRecurrence'>ScheduleDailyRecurrence</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduleArgs-hourlyRecurrence">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L220">property <b>hourlyRecurrence</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L220">property <b>hourlyRecurrence</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hourlyRecurrence?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScheduleHourlyRecurrence'>ScheduleHourlyRecurrence</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduleArgs-labName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L224">property <b>labName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L224">property <b>labName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2409,7 +2409,7 @@ The set of arguments for constructing a Schedule resource.
 The name of the dev test lab. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ScheduleArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L228">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L228">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2417,7 +2417,7 @@ The name of the dev test lab. Changing this forces a new resource to be created.
 The location where the schedule is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ScheduleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L232">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L232">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2425,12 +2425,12 @@ The location where the schedule is created. Changing this forces a new resource 
 The name of the dev test lab schedule. Valid value for name depends on the `taskType`. For instance for taskType `LabVmsStartupTask` the name needs to be `LabVmAutoStart`.
 
 <h4 class="pdoc-member-header" id="ScheduleArgs-notificationSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L233">property <b>notificationSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L233">property <b>notificationSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notificationSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScheduleNotificationSettings'>ScheduleNotificationSettings</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduleArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L237">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L237">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2438,7 +2438,7 @@ The name of the dev test lab schedule. Valid value for name depends on the `task
 The name of the resource group in which to create the dev test lab schedule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ScheduleArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L241">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L241">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2446,7 +2446,7 @@ The name of the resource group in which to create the dev test lab schedule. Cha
 The status of this schedule. Possible values are `Enabled` and `Disabled`. Defaults to `Disabled`.
 
 <h4 class="pdoc-member-header" id="ScheduleArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L245">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L245">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2454,7 +2454,7 @@ The status of this schedule. Possible values are `Enabled` and `Disabled`. Defau
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ScheduleArgs-taskType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L249">property <b>taskType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L249">property <b>taskType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taskType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2462,7 +2462,7 @@ A mapping of tags to assign to the resource.
 The task type of the schedule. Possible values include `LabVmsShutdownTask` and `LabVmAutoStart`.
 
 <h4 class="pdoc-member-header" id="ScheduleArgs-timeZoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L253">property <b>timeZoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L253">property <b>timeZoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeZoneId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2470,12 +2470,12 @@ The task type of the schedule. Possible values include `LabVmsShutdownTask` and 
 The time zone ID (e.g. Pacific Standard time).
 
 <h4 class="pdoc-member-header" id="ScheduleArgs-weeklyRecurrence">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L254">property <b>weeklyRecurrence</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L254">property <b>weeklyRecurrence</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>weeklyRecurrence?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScheduleWeeklyRecurrence'>ScheduleWeeklyRecurrence</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ScheduleState" data-link-title="ScheduleState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L176">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L176">
         interface <strong>ScheduleState</strong>
     </a>
 </h3>
@@ -2485,17 +2485,17 @@ The time zone ID (e.g. Pacific Standard time).
 Input properties used for looking up and filtering Schedule resources.
 
 <h4 class="pdoc-member-header" id="ScheduleState-dailyRecurrence">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L177">property <b>dailyRecurrence</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L177">property <b>dailyRecurrence</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dailyRecurrence?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScheduleDailyRecurrence'>ScheduleDailyRecurrence</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduleState-hourlyRecurrence">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L178">property <b>hourlyRecurrence</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L178">property <b>hourlyRecurrence</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hourlyRecurrence?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScheduleHourlyRecurrence'>ScheduleHourlyRecurrence</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduleState-labName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L182">property <b>labName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L182">property <b>labName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2503,7 +2503,7 @@ Input properties used for looking up and filtering Schedule resources.
 The name of the dev test lab. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ScheduleState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L186">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L186">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2511,7 +2511,7 @@ The name of the dev test lab. Changing this forces a new resource to be created.
 The location where the schedule is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ScheduleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L190">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L190">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2519,12 +2519,12 @@ The location where the schedule is created. Changing this forces a new resource 
 The name of the dev test lab schedule. Valid value for name depends on the `taskType`. For instance for taskType `LabVmsStartupTask` the name needs to be `LabVmAutoStart`.
 
 <h4 class="pdoc-member-header" id="ScheduleState-notificationSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L191">property <b>notificationSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L191">property <b>notificationSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notificationSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScheduleNotificationSettings'>ScheduleNotificationSettings</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduleState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L195">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L195">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2532,7 +2532,7 @@ The name of the dev test lab schedule. Valid value for name depends on the `task
 The name of the resource group in which to create the dev test lab schedule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ScheduleState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L199">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L199">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2540,7 +2540,7 @@ The name of the resource group in which to create the dev test lab schedule. Cha
 The status of this schedule. Possible values are `Enabled` and `Disabled`. Defaults to `Disabled`.
 
 <h4 class="pdoc-member-header" id="ScheduleState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L203">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L203">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2548,7 +2548,7 @@ The status of this schedule. Possible values are `Enabled` and `Disabled`. Defau
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ScheduleState-taskType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L207">property <b>taskType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L207">property <b>taskType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taskType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2556,7 +2556,7 @@ A mapping of tags to assign to the resource.
 The task type of the schedule. Possible values include `LabVmsShutdownTask` and `LabVmAutoStart`.
 
 <h4 class="pdoc-member-header" id="ScheduleState-timeZoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L211">property <b>timeZoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L211">property <b>timeZoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeZoneId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2564,12 +2564,12 @@ The task type of the schedule. Possible values include `LabVmsShutdownTask` and 
 The time zone ID (e.g. Pacific Standard time).
 
 <h4 class="pdoc-member-header" id="ScheduleState-weeklyRecurrence">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/schedule.ts#L212">property <b>weeklyRecurrence</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/schedule.ts#L212">property <b>weeklyRecurrence</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>weeklyRecurrence?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScheduleWeeklyRecurrence'>ScheduleWeeklyRecurrence</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="VirtualNetworkArgs" data-link-title="VirtualNetworkArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/virtualNetwork.ts#L176">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/virtualNetwork.ts#L176">
         interface <strong>VirtualNetworkArgs</strong>
     </a>
 </h3>
@@ -2579,7 +2579,7 @@ The time zone ID (e.g. Pacific Standard time).
 The set of arguments for constructing a VirtualNetwork resource.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/virtualNetwork.ts#L180">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/virtualNetwork.ts#L180">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2587,7 +2587,7 @@ The set of arguments for constructing a VirtualNetwork resource.
 A description for the Virtual Network.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkArgs-labName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/virtualNetwork.ts#L184">property <b>labName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/virtualNetwork.ts#L184">property <b>labName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2595,7 +2595,7 @@ A description for the Virtual Network.
 Specifies the name of the Dev Test Lab in which the Virtual Network should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/virtualNetwork.ts#L188">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/virtualNetwork.ts#L188">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2603,7 +2603,7 @@ Specifies the name of the Dev Test Lab in which the Virtual Network should be cr
 Specifies the name of the Dev Test Virtual Network. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/virtualNetwork.ts#L192">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/virtualNetwork.ts#L192">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2611,7 +2611,7 @@ Specifies the name of the Dev Test Virtual Network. Changing this forces a new r
 The name of the resource group in which the Dev Test Lab resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkArgs-subnet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/virtualNetwork.ts#L196">property <b>subnet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/virtualNetwork.ts#L196">property <b>subnet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualNetworkSubnet'>VirtualNetworkSubnet</a>&gt;;</code></pre>
@@ -2619,7 +2619,7 @@ The name of the resource group in which the Dev Test Lab resource exists. Changi
 A `subnet` block as defined below.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/virtualNetwork.ts#L200">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/virtualNetwork.ts#L200">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2627,7 +2627,7 @@ A `subnet` block as defined below.
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="VirtualNetworkState" data-link-title="VirtualNetworkState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/virtualNetwork.ts#L142">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/virtualNetwork.ts#L142">
         interface <strong>VirtualNetworkState</strong>
     </a>
 </h3>
@@ -2637,7 +2637,7 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering VirtualNetwork resources.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/virtualNetwork.ts#L146">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/virtualNetwork.ts#L146">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2645,7 +2645,7 @@ Input properties used for looking up and filtering VirtualNetwork resources.
 A description for the Virtual Network.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkState-labName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/virtualNetwork.ts#L150">property <b>labName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/virtualNetwork.ts#L150">property <b>labName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2653,7 +2653,7 @@ A description for the Virtual Network.
 Specifies the name of the Dev Test Lab in which the Virtual Network should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/virtualNetwork.ts#L154">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/virtualNetwork.ts#L154">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2661,7 +2661,7 @@ Specifies the name of the Dev Test Lab in which the Virtual Network should be cr
 Specifies the name of the Dev Test Virtual Network. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/virtualNetwork.ts#L158">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/virtualNetwork.ts#L158">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2669,7 +2669,7 @@ Specifies the name of the Dev Test Virtual Network. Changing this forces a new r
 The name of the resource group in which the Dev Test Lab resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkState-subnet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/virtualNetwork.ts#L162">property <b>subnet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/virtualNetwork.ts#L162">property <b>subnet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualNetworkSubnet'>VirtualNetworkSubnet</a>&gt;;</code></pre>
@@ -2677,7 +2677,7 @@ The name of the resource group in which the Dev Test Lab resource exists. Changi
 A `subnet` block as defined below.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/virtualNetwork.ts#L166">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/virtualNetwork.ts#L166">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2685,7 +2685,7 @@ A `subnet` block as defined below.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkState-uniqueIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/virtualNetwork.ts#L170">property <b>uniqueIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/virtualNetwork.ts#L170">property <b>uniqueIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uniqueIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2693,7 +2693,7 @@ A mapping of tags to assign to the resource.
 The unique immutable identifier of the Dev Test Virtual Network.
 
 <h3 class="pdoc-module-header" id="WindowsVirtualMachineArgs" data-link-title="WindowsVirtualMachineArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L283">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L283">
         interface <strong>WindowsVirtualMachineArgs</strong>
     </a>
 </h3>
@@ -2703,7 +2703,7 @@ The unique immutable identifier of the Dev Test Virtual Network.
 The set of arguments for constructing a WindowsVirtualMachine resource.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachineArgs-allowClaim">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L287">property <b>allowClaim</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L287">property <b>allowClaim</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowClaim?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2711,7 +2711,7 @@ The set of arguments for constructing a WindowsVirtualMachine resource.
 Can this Virtual Machine be claimed by users? Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachineArgs-disallowPublicIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L291">property <b>disallowPublicIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L291">property <b>disallowPublicIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disallowPublicIpAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2719,7 +2719,7 @@ Can this Virtual Machine be claimed by users? Defaults to `true`.
 Should the Virtual Machine be created without a Public IP Address? Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachineArgs-galleryImageReference">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L295">property <b>galleryImageReference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L295">property <b>galleryImageReference</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>galleryImageReference: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#WindowsVirtualMachineGalleryImageReference'>WindowsVirtualMachineGalleryImageReference</a>&gt;;</code></pre>
@@ -2727,7 +2727,7 @@ Should the Virtual Machine be created without a Public IP Address? Changing this
 A `galleryImageReference` block as defined below.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachineArgs-inboundNatRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L299">property <b>inboundNatRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L299">property <b>inboundNatRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inboundNatRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#WindowsVirtualMachineInboundNatRule'>WindowsVirtualMachineInboundNatRule</a>&gt;[]&gt;;</code></pre>
@@ -2735,7 +2735,7 @@ A `galleryImageReference` block as defined below.
 One or more `inboundNatRule` blocks as defined below. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachineArgs-labName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L303">property <b>labName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L303">property <b>labName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2743,7 +2743,7 @@ One or more `inboundNatRule` blocks as defined below. Changing this forces a new
 Specifies the name of the Dev Test Lab in which the Virtual Machine should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachineArgs-labSubnetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L307">property <b>labSubnetName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L307">property <b>labSubnetName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labSubnetName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2751,7 +2751,7 @@ Specifies the name of the Dev Test Lab in which the Virtual Machine should be cr
 The name of a Subnet within the Dev Test Virtual Network where this machine should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachineArgs-labVirtualNetworkId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L311">property <b>labVirtualNetworkId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L311">property <b>labVirtualNetworkId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labVirtualNetworkId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2759,7 +2759,7 @@ The name of a Subnet within the Dev Test Virtual Network where this machine shou
 The ID of the Dev Test Virtual Network where this Virtual Machine should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachineArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L315">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L315">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2767,7 +2767,7 @@ The ID of the Dev Test Virtual Network where this Virtual Machine should be crea
 Specifies the supported Azure location where the Dev Test Lab exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachineArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L319">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L319">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2775,7 +2775,7 @@ Specifies the supported Azure location where the Dev Test Lab exists. Changing t
 Specifies the name of the Dev Test Machine. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachineArgs-notes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L323">property <b>notes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L323">property <b>notes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2783,7 +2783,7 @@ Specifies the name of the Dev Test Machine. Changing this forces a new resource 
 Any notes about the Virtual Machine.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachineArgs-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L327">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L327">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2791,7 +2791,7 @@ Any notes about the Virtual Machine.
 The Password associated with the `username` used to login to this Virtual Machine. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachineArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L331">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L331">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2799,7 +2799,7 @@ The Password associated with the `username` used to login to this Virtual Machin
 The name of the resource group in which the Dev Test Lab resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachineArgs-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L335">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L335">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2807,7 +2807,7 @@ The name of the resource group in which the Dev Test Lab resource exists. Changi
 The Machine Size to use for this Virtual Machine, such as `Standard_F2`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachineArgs-storageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L339">property <b>storageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L339">property <b>storageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2815,7 +2815,7 @@ The Machine Size to use for this Virtual Machine, such as `Standard_F2`. Changin
 The type of Storage to use on this Virtual Machine. Possible values are `Standard` and `Premium`.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachineArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L343">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L343">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2823,7 +2823,7 @@ The type of Storage to use on this Virtual Machine. Possible values are `Standar
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachineArgs-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L347">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L347">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2831,7 +2831,7 @@ A mapping of tags to assign to the resource.
 The Username associated with the local administrator on this Virtual Machine. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="WindowsVirtualMachineState" data-link-title="WindowsVirtualMachineState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L205">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L205">
         interface <strong>WindowsVirtualMachineState</strong>
     </a>
 </h3>
@@ -2841,7 +2841,7 @@ The Username associated with the local administrator on this Virtual Machine. Ch
 Input properties used for looking up and filtering WindowsVirtualMachine resources.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachineState-allowClaim">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L209">property <b>allowClaim</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L209">property <b>allowClaim</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowClaim?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2849,7 +2849,7 @@ Input properties used for looking up and filtering WindowsVirtualMachine resourc
 Can this Virtual Machine be claimed by users? Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachineState-disallowPublicIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L213">property <b>disallowPublicIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L213">property <b>disallowPublicIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disallowPublicIpAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2857,7 +2857,7 @@ Can this Virtual Machine be claimed by users? Defaults to `true`.
 Should the Virtual Machine be created without a Public IP Address? Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachineState-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L217">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L217">property <b>fqdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fqdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2865,7 +2865,7 @@ Should the Virtual Machine be created without a Public IP Address? Changing this
 The FQDN of the Virtual Machine.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachineState-galleryImageReference">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L221">property <b>galleryImageReference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L221">property <b>galleryImageReference</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>galleryImageReference?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#WindowsVirtualMachineGalleryImageReference'>WindowsVirtualMachineGalleryImageReference</a>&gt;;</code></pre>
@@ -2873,7 +2873,7 @@ The FQDN of the Virtual Machine.
 A `galleryImageReference` block as defined below.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachineState-inboundNatRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L225">property <b>inboundNatRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L225">property <b>inboundNatRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inboundNatRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#WindowsVirtualMachineInboundNatRule'>WindowsVirtualMachineInboundNatRule</a>&gt;[]&gt;;</code></pre>
@@ -2881,7 +2881,7 @@ A `galleryImageReference` block as defined below.
 One or more `inboundNatRule` blocks as defined below. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachineState-labName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L229">property <b>labName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L229">property <b>labName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2889,7 +2889,7 @@ One or more `inboundNatRule` blocks as defined below. Changing this forces a new
 Specifies the name of the Dev Test Lab in which the Virtual Machine should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachineState-labSubnetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L233">property <b>labSubnetName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L233">property <b>labSubnetName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labSubnetName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2897,7 +2897,7 @@ Specifies the name of the Dev Test Lab in which the Virtual Machine should be cr
 The name of a Subnet within the Dev Test Virtual Network where this machine should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachineState-labVirtualNetworkId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L237">property <b>labVirtualNetworkId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L237">property <b>labVirtualNetworkId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labVirtualNetworkId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2905,7 +2905,7 @@ The name of a Subnet within the Dev Test Virtual Network where this machine shou
 The ID of the Dev Test Virtual Network where this Virtual Machine should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachineState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L241">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L241">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2913,7 +2913,7 @@ The ID of the Dev Test Virtual Network where this Virtual Machine should be crea
 Specifies the supported Azure location where the Dev Test Lab exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachineState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L245">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L245">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2921,7 +2921,7 @@ Specifies the supported Azure location where the Dev Test Lab exists. Changing t
 Specifies the name of the Dev Test Machine. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachineState-notes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L249">property <b>notes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L249">property <b>notes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2929,7 +2929,7 @@ Specifies the name of the Dev Test Machine. Changing this forces a new resource 
 Any notes about the Virtual Machine.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachineState-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L253">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L253">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2937,7 +2937,7 @@ Any notes about the Virtual Machine.
 The Password associated with the `username` used to login to this Virtual Machine. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachineState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L257">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L257">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2945,7 +2945,7 @@ The Password associated with the `username` used to login to this Virtual Machin
 The name of the resource group in which the Dev Test Lab resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachineState-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L261">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L261">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2953,7 +2953,7 @@ The name of the resource group in which the Dev Test Lab resource exists. Changi
 The Machine Size to use for this Virtual Machine, such as `Standard_F2`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachineState-storageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L265">property <b>storageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L265">property <b>storageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2961,7 +2961,7 @@ The Machine Size to use for this Virtual Machine, such as `Standard_F2`. Changin
 The type of Storage to use on this Virtual Machine. Possible values are `Standard` and `Premium`.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachineState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L269">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L269">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2969,7 +2969,7 @@ The type of Storage to use on this Virtual Machine. Possible values are `Standar
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachineState-uniqueIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L273">property <b>uniqueIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L273">property <b>uniqueIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uniqueIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2977,7 +2977,7 @@ A mapping of tags to assign to the resource.
 The unique immutable identifier of the Virtual Machine.
 
 <h4 class="pdoc-member-header" id="WindowsVirtualMachineState-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6035dd0f5a68a1eaa16ab0484b18d1ab67d8c155/sdk/nodejs/devtest/windowsVirtualMachine.ts#L277">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/devtest/windowsVirtualMachine.ts#L277">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
