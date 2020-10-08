@@ -18,6 +18,9 @@ import {
   ChooserOptionStyle,
   ChooserType as ChooserType1,
 } from './components/chooser/chooser';
+import {
+  SourceKind,
+} from './components/convert/convert';
 
 export namespace Components {
   interface PulumiBanner {
@@ -38,6 +41,12 @@ export namespace Components {
     'options': string;
     'selection': ChooserKey;
     'type': ChooserType;
+  }
+  interface PulumiConvert {
+    'endpoint': string;
+    'examples': string;
+    'from': SourceKind;
+    'theme': string;
   }
   interface PulumiExample {}
   interface PulumiExamples {}
@@ -68,6 +77,12 @@ declare global {
   var HTMLPulumiChooserElement: {
     prototype: HTMLPulumiChooserElement;
     new (): HTMLPulumiChooserElement;
+  };
+
+  interface HTMLPulumiConvertElement extends Components.PulumiConvert, HTMLStencilElement {}
+  var HTMLPulumiConvertElement: {
+    prototype: HTMLPulumiConvertElement;
+    new (): HTMLPulumiConvertElement;
   };
 
   interface HTMLPulumiExampleElement extends Components.PulumiExample, HTMLStencilElement {}
@@ -103,6 +118,7 @@ declare global {
     'pulumi-banner': HTMLPulumiBannerElement;
     'pulumi-choosable': HTMLPulumiChoosableElement;
     'pulumi-chooser': HTMLPulumiChooserElement;
+    'pulumi-convert': HTMLPulumiConvertElement;
     'pulumi-example': HTMLPulumiExampleElement;
     'pulumi-examples': HTMLPulumiExamplesElement;
     'pulumi-root': HTMLPulumiRootElement;
@@ -131,6 +147,12 @@ declare namespace LocalJSX {
     'selection'?: ChooserKey;
     'type'?: ChooserType;
   }
+  interface PulumiConvert {
+    'endpoint'?: string;
+    'examples'?: string;
+    'from'?: SourceKind;
+    'theme'?: string;
+  }
   interface PulumiExample {}
   interface PulumiExamples {}
   interface PulumiRoot {
@@ -143,6 +165,7 @@ declare namespace LocalJSX {
     'pulumi-banner': PulumiBanner;
     'pulumi-choosable': PulumiChoosable;
     'pulumi-chooser': PulumiChooser;
+    'pulumi-convert': PulumiConvert;
     'pulumi-example': PulumiExample;
     'pulumi-examples': PulumiExamples;
     'pulumi-root': PulumiRoot;
@@ -160,6 +183,7 @@ declare module "@stencil/core" {
       'pulumi-banner': LocalJSX.PulumiBanner & JSXBase.HTMLAttributes<HTMLPulumiBannerElement>;
       'pulumi-choosable': LocalJSX.PulumiChoosable & JSXBase.HTMLAttributes<HTMLPulumiChoosableElement>;
       'pulumi-chooser': LocalJSX.PulumiChooser & JSXBase.HTMLAttributes<HTMLPulumiChooserElement>;
+      'pulumi-convert': LocalJSX.PulumiConvert & JSXBase.HTMLAttributes<HTMLPulumiConvertElement>;
       'pulumi-example': LocalJSX.PulumiExample & JSXBase.HTMLAttributes<HTMLPulumiExampleElement>;
       'pulumi-examples': LocalJSX.PulumiExamples & JSXBase.HTMLAttributes<HTMLPulumiExamplesElement>;
       'pulumi-root': LocalJSX.PulumiRoot & JSXBase.HTMLAttributes<HTMLPulumiRootElement>;

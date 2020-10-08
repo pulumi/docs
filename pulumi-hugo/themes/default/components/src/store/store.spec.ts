@@ -32,7 +32,6 @@ describe("normalizeState", () => {
                         language: "typescript",
                         os: "macos",
                         cloud: "aws",
-                        inputKind: "code",
                         k8sLanguage: "typescript",
                     },
                 });
