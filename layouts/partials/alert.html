@@ -1,12 +1,6 @@
 {{ $text := "The Cloud Engineering Summit talks are live! Watch the keynote." }}
 {{ $url := "https://cloudengineering.heysummit.com/talks/welcome-keynote/?utm_campaign=summit&utm_source=pulumi.com&utm_medium=keynote-alert" }}
-{{ $color := "blue"}}
-
-{{ if .IsHome }}
-    {{ $text = "The Cloud Engineering Summit talks are live! Watch the keynote." }}
-    {{ $url = "https://cloudengineering.heysummit.com/talks/welcome-keynote/?utm_campaign=summit&utm_source=pulumi.com&utm_medium=keynote-alert" }}
-    {{ $color = "orange"}}
-{{ end }}
+{{ $color := "orange"}}
 
 <div class="mx-auto mb-12">
     <div class="inline-block">
