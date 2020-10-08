@@ -2,11 +2,11 @@
     <header class="header-hero">
         <div class="header-hero-items">
             <div class="header-hero-item">
-                <h1 class="text-center max-w-5xl mx-auto">Convert Your Terraform to a Modern Language</h1>
+                <h1 class="text-center max-w-5xl mx-auto">Upgrade Your Kubernetes YAML to a Modern Language</h1>
                 <p class="text-center max-w-3xl mx-auto">
-                    If you already have some Terraform and want to see what it would look like
-                    in your favorite language, we've got you covered. This
-                    conversion tool will do the magic of translating your HCL into modern code using Pulumi.
+                    If you already have some Kubernetes YAML and want to see what it would look like
+                    in your favorite language, we've got you covered. This conversion tool will do the
+                    magic of translating your YAML into modern code using Pulumi.
                 </p>
                 <div class="mt-8 text-center">
                     {{ partial "supported-languages" }}
@@ -16,12 +16,13 @@
     </header>
     <section class="mx-auto bg-gray-200 px-4 py-8 lg:p-16">
         <div class="container container-wide mx-auto">
-            {{ partial "convert" (dict "from" "tf" "examples" .Params.examples ) }}
+            {{ partial "convert" (dict "from" "kube" "examples" .Params.examples) }}
         </div>
     </section>
 {{ end }}
 
 {{ define "main" }}
+
     {{ partial "get-started.html" . }}
 
     <section class="bg-gray-300 py-16 px-4">
@@ -30,33 +31,27 @@
                 <h2>Learn More</h2>
                 <p class="text-xl">
                     Pulumi is a modern infrastructure as code platform that supports many clouds and many
-                    languages. It supports any Terraform provider in addition to great native providers.
+                    languages. It supports any Terraform provider in addition to great native providers like Kubernetes.
                 </p>
                 <div class="md:flex mx-auto max-w-5xl mb-8 text-center">
                     <div class="md:w-1/2 p-4">
                         <img class="inline-block w-32" src="/icons/icon-why-dev-lang.svg">
-                        <h3 class="mt-2">Compare Pulumi to Terraform</h3>
+                        <h3 class="mt-2">Pulumi + Kubernetes</h3>
                         <p class="text-gray-600 mb-8">
-                            Pulumi is a comprehensive infrastructure as code platform. Instead of using a proprietary
+                            Pulumi is a comprehensive infrastructure as code platform. Instead of using proprietary
                             DSLs, you can use the industry's best languages and tools, with real sharing and reuse.
+                            Learn how <a href="{{ relref . "/topics/kubernetes" }}">
+                            Pulumi gives superpowers to Kubernetes engineers</a>.
                         </p>
-                        <a class="btn btn-lg"
-                                href="{{ relref . "/docs/intro/vs/terraform" }}">
-                            LEARN HOW THEY COMPARE
-                        </a>
                     </div>
                     <div class="md:w-1/2 p-4">
                         <img class="inline-block w-32" src="/icons/icon-why-dev-model.svg">
                         <h3 class="mt-2">Check Out the Tool</h3>
                         <p class="text-gray-600 mb-8">
-                            The tool that powers this webpage is called <span class="font-mono">tf2pulumi</span>. It's
-                            <a href="https://github.com/pulumi/tf2pulumi">open source</a> and you can download it to
-                            tackle complex conversions, including importing existing resource state.
+                            The tool that powers this webpage is called <span class="font-mono">kube2pulumi</span>. It's
+                            <a href="https://github.com/pulumi/kube2pulumi">open source</a> and you can download it to
+                            tackle complex conversions.
                         </p>
-                        <a class="btn btn-lg btn-orange"
-                                href="{{ relref . "/docs/guides/adopting/from_terraform#converting-terraform-hcl-to-pulumi" }}">
-                            LEARN HOW TO CONVERT
-                        </a>
                     </div>
                 </div>
 
@@ -65,4 +60,5 @@
     </section>
 
     {{ partial "contact-us.html" . }}
+
 {{ end }}
