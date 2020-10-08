@@ -29,6 +29,16 @@ class MyStack : Stack
         var ioTSpace = new AzureNextGen.IoTSpaces.V20171001Preview.IoTSpace("ioTSpace", new AzureNextGen.IoTSpaces.V20171001Preview.IoTSpaceArgs
         {
             Location = "string",
+            Properties = new AzureNextGen.IoTSpaces.V20171001Preview.Inputs.IoTSpacesPropertiesArgs
+            {
+                StorageContainer = new AzureNextGen.IoTSpaces.V20171001Preview.Inputs.StorageContainerPropertiesArgs
+                {
+                    ConnectionString = "string",
+                    ContainerName = "string",
+                    ResourceGroup = "string",
+                    SubscriptionId = "string",
+                },
+            },
             ResourceGroupName = "resRg",
             ResourceName = "myIoTSpacesService",
             Sku = new AzureNextGen.IoTSpaces.V20171001Preview.Inputs.IoTSpacesSkuInfoArgs
@@ -50,14 +60,22 @@ class MyStack : Stack
 package main
 
 import (
-	iotspaces "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/iotspaces/v20171001preview"
+	iotspaces "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/iotspaces/v20171001preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := iotspaces.NewIoTSpace(ctx, "ioTSpace", &iotspaces.IoTSpaceArgs{
-			Location:          pulumi.String("string"),
+			Location: pulumi.String("string"),
+			Properties: &iotspaces.IoTSpacesPropertiesArgs{
+				StorageContainer: &iotspaces.StorageContainerPropertiesArgs{
+					ConnectionString: pulumi.String("string"),
+					ContainerName:    pulumi.String("string"),
+					ResourceGroup:    pulumi.String("string"),
+					SubscriptionId:   pulumi.String("string"),
+				},
+			},
 			ResourceGroupName: pulumi.String("resRg"),
 			ResourceName:      pulumi.String("myIoTSpacesService"),
 			Sku: &iotspaces.IoTSpacesSkuInfoArgs{
@@ -83,6 +101,14 @@ import pulumi_azure_nextgen as azure_nextgen
 
 io_t_space = azure_nextgen.iotspaces.v20171001preview.IoTSpace("ioTSpace",
     location="string",
+    properties={
+        "storageContainer": {
+            "connectionString": "string",
+            "containerName": "string",
+            "resourceGroup": "string",
+            "subscriptionId": "string",
+        },
+    },
     resource_group_name="resRg",
     resource_name="myIoTSpacesService",
     sku={
@@ -101,6 +127,14 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const ioTSpace = new azure_nextgen.iotspaces.v20171001preview.IoTSpace("ioTSpace", {
     location: "string",
+    properties: {
+        storageContainer: {
+            connectionString: "string",
+            containerName: "string",
+            resourceGroup: "string",
+            subscriptionId: "string",
+        },
+    },
     resourceGroupName: "resRg",
     resourceName: "myIoTSpacesService",
     sku: {

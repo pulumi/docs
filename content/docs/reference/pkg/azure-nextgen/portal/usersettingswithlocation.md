@@ -29,6 +29,23 @@ class MyStack : Stack
         var userSettingsWithLocation = new AzureNextGen.Portal.Latest.UserSettingsWithLocation("userSettingsWithLocation", new AzureNextGen.Portal.Latest.UserSettingsWithLocationArgs
         {
             Location = "eastus",
+            Properties = new AzureNextGen.Portal.Latest.Inputs.UserPropertiesArgs
+            {
+                PreferredLocation = "eastus",
+                PreferredOsType = "Linux",
+                PreferredShellType = "bash",
+                StorageProfile = new AzureNextGen.Portal.Latest.Inputs.StorageProfileArgs
+                {
+                    DiskSizeInGB = 5,
+                    FileShareName = "string",
+                    StorageAccountResourceId = "string",
+                },
+                TerminalSettings = new AzureNextGen.Portal.Latest.Inputs.TerminalSettingsArgs
+                {
+                    FontSize = "Medium",
+                    FontStyle = "Monospace",
+                },
+            },
             UserSettingsName = "cloudconsole",
         });
     }
@@ -45,14 +62,28 @@ class MyStack : Stack
 package main
 
 import (
-	portal "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/portal/latest"
+	portal "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/portal/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := portal.NewUserSettingsWithLocation(ctx, "userSettingsWithLocation", &portal.UserSettingsWithLocationArgs{
-			Location:         pulumi.String("eastus"),
+			Location: pulumi.String("eastus"),
+			Properties: &portal.UserPropertiesArgs{
+				PreferredLocation:  pulumi.String("eastus"),
+				PreferredOsType:    pulumi.String("Linux"),
+				PreferredShellType: pulumi.String("bash"),
+				StorageProfile: &portal.StorageProfileArgs{
+					DiskSizeInGB:             pulumi.Int(5),
+					FileShareName:            pulumi.String("string"),
+					StorageAccountResourceId: pulumi.String("string"),
+				},
+				TerminalSettings: &portal.TerminalSettingsArgs{
+					FontSize:  pulumi.String("Medium"),
+					FontStyle: pulumi.String("Monospace"),
+				},
+			},
 			UserSettingsName: pulumi.String("cloudconsole"),
 		})
 		if err != nil {
@@ -74,6 +105,20 @@ import pulumi_azure_nextgen as azure_nextgen
 
 user_settings_with_location = azure_nextgen.portal.latest.UserSettingsWithLocation("userSettingsWithLocation",
     location="eastus",
+    properties={
+        "preferredLocation": "eastus",
+        "preferredOsType": "Linux",
+        "preferredShellType": "bash",
+        "storageProfile": {
+            "diskSizeInGB": 5,
+            "fileShareName": "string",
+            "storageAccountResourceId": "string",
+        },
+        "terminalSettings": {
+            "fontSize": "Medium",
+            "fontStyle": "Monospace",
+        },
+    },
     user_settings_name="cloudconsole")
 
 ```
@@ -88,6 +133,20 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const userSettingsWithLocation = new azure_nextgen.portal.latest.UserSettingsWithLocation("userSettingsWithLocation", {
     location: "eastus",
+    properties: {
+        preferredLocation: "eastus",
+        preferredOsType: "Linux",
+        preferredShellType: "bash",
+        storageProfile: {
+            diskSizeInGB: 5,
+            fileShareName: "string",
+            storageAccountResourceId: "string",
+        },
+        terminalSettings: {
+            fontSize: "Medium",
+            fontStyle: "Monospace",
+        },
+    },
     userSettingsName: "cloudconsole",
 });
 

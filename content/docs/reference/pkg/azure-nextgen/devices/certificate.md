@@ -29,6 +29,10 @@ class MyStack : Stack
         var certificate = new AzureNextGen.Devices.Latest.Certificate("certificate", new AzureNextGen.Devices.Latest.CertificateArgs
         {
             CertificateName = "cert",
+            Properties = new AzureNextGen.Devices.Latest.Inputs.CertificatePropertiesArgs
+            {
+                Certificate = "############################################",
+            },
             ResourceGroupName = "myResourceGroup",
             ResourceName = "iothub",
         });
@@ -46,14 +50,17 @@ class MyStack : Stack
 package main
 
 import (
-	devices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/devices/latest"
+	devices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/devices/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := devices.NewCertificate(ctx, "certificate", &devices.CertificateArgs{
-			CertificateName:   pulumi.String("cert"),
+			CertificateName: pulumi.String("cert"),
+			Properties: &devices.CertificatePropertiesArgs{
+				Certificate: pulumi.String("############################################"),
+			},
 			ResourceGroupName: pulumi.String("myResourceGroup"),
 			ResourceName:      pulumi.String("iothub"),
 		})
@@ -76,6 +83,9 @@ import pulumi_azure_nextgen as azure_nextgen
 
 certificate = azure_nextgen.devices.latest.Certificate("certificate",
     certificate_name="cert",
+    properties={
+        "certificate": "############################################",
+    },
     resource_group_name="myResourceGroup",
     resource_name="iothub")
 
@@ -91,6 +101,9 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const certificate = new azure_nextgen.devices.latest.Certificate("certificate", {
     certificateName: "cert",
+    properties: {
+        certificate: "############################################",
+    },
     resourceGroupName: "myResourceGroup",
     resourceName: "iothub",
 });

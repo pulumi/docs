@@ -122,7 +122,7 @@ class MyStack : Stack
 package main
 
 import (
-	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices/v20200901preview"
+	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices/v20200901preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1273,7 +1273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modelconfigmap_csharp" style="color: inherit; text-decoration: inherit;">Model<wbr>Config<wbr>Map</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Details on the models and configurations.{{% /md %}}</dd>
 
@@ -1520,7 +1520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modelconfigmap_go" style="color: inherit; text-decoration: inherit;">Model<wbr>Config<wbr>Map</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]map[string]interface{}</span>
+        <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Details on the models and configurations.{{% /md %}}</dd>
 
@@ -1767,7 +1767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modelconfigmap_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Config<wbr>Map</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: {[key: string]: any}}</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Details on the models and configurations.{{% /md %}}</dd>
 
@@ -2014,7 +2014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modelconfigmap_python" style="color: inherit; text-decoration: inherit;">model<wbr>Config<wbr>Map</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any>]</span>
+        <span class="property-type">Dict[str, Any]</span>
     </dt>
     <dd>{{% md %}}Details on the models and configurations.{{% /md %}}</dd>
 
@@ -7329,7 +7329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#condadependencies_csharp" style="color: inherit; text-decoration: inherit;">Conda<wbr>Dependencies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}A JObject containing Conda dependencies.{{% /md %}}</dd>
 
@@ -7376,7 +7376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#condadependencies_go" style="color: inherit; text-decoration: inherit;">Conda<wbr>Dependencies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}A JObject containing Conda dependencies.{{% /md %}}</dd>
 
@@ -7423,7 +7423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#condadependencies_nodejs" style="color: inherit; text-decoration: inherit;">conda<wbr>Dependencies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}A JObject containing Conda dependencies.{{% /md %}}</dd>
 
@@ -7470,7 +7470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conda_dependencies_python" style="color: inherit; text-decoration: inherit;">conda_<wbr>dependencies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}A JObject containing Conda dependencies.{{% /md %}}</dd>
 
@@ -8050,7 +8050,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 <a href="#condadependencies_csharp" style="color: inherit; text-decoration: inherit;">Conda<wbr>Dependencies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}A JObject containing Conda dependencies.{{% /md %}}</dd>
 
@@ -8097,7 +8097,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 <a href="#condadependencies_go" style="color: inherit; text-decoration: inherit;">Conda<wbr>Dependencies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}A JObject containing Conda dependencies.{{% /md %}}</dd>
 
@@ -8144,7 +8144,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 <a href="#condadependencies_nodejs" style="color: inherit; text-decoration: inherit;">conda<wbr>Dependencies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}A JObject containing Conda dependencies.{{% /md %}}</dd>
 
@@ -8191,7 +8191,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 <a href="#conda_dependencies_python" style="color: inherit; text-decoration: inherit;">conda_<wbr>dependencies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}A JObject containing Conda dependencies.{{% /md %}}</dd>
 

@@ -12,6 +12,149 @@ meta_desc: "Explore the ManagementGroupDiagnosticSetting resource of the managem
 
 The management group diagnostic setting resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates or Updates the management group diagnostic setting
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managementGroupDiagnosticSetting = new AzureNextGen.Management.V20200101Preview.ManagementGroupDiagnosticSetting("managementGroupDiagnosticSetting", new AzureNextGen.Management.V20200101Preview.ManagementGroupDiagnosticSettingArgs
+        {
+            EventHubAuthorizationRuleId = "/subscriptions/fb9f25f9-5785-4510-a38f-a62f188eb9f8/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",
+            EventHubName = "myeventhub",
+            Logs = 
+            {
+                new AzureNextGen.Management.V20200101Preview.Inputs.ManagementGroupLogSettingsArgs
+                {
+                    Category = "Administrative",
+                    Enabled = true,
+                },
+                new AzureNextGen.Management.V20200101Preview.Inputs.ManagementGroupLogSettingsArgs
+                {
+                    Category = "Policy",
+                    Enabled = true,
+                },
+            },
+            ManagementGroupId = "testChildMG7",
+            Name = "setting1",
+            StorageAccountId = "/subscriptions/bfaef57f-297e-4210-bfe5-27c18cc671f7/resourceGroups/FuncAppRunners/providers/Microsoft.Storage/storageAccounts/testpersonalb6a5",
+            WorkspaceId = "/subscriptions/9cf7cc0a-0ba1-4624-bc82-97e1ee25dc45/resourceGroups/mgTest/providers/Microsoft.OperationalInsights/workspaces/mgTestWorkspace",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	management "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/management/v20200101preview"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := management.NewManagementGroupDiagnosticSetting(ctx, "managementGroupDiagnosticSetting", &management.ManagementGroupDiagnosticSettingArgs{
+			EventHubAuthorizationRuleId: pulumi.String("/subscriptions/fb9f25f9-5785-4510-a38f-a62f188eb9f8/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule"),
+			EventHubName:                pulumi.String("myeventhub"),
+			Logs: management.ManagementGroupLogSettingsArray{
+				&management.ManagementGroupLogSettingsArgs{
+					Category: pulumi.String("Administrative"),
+					Enabled:  pulumi.Bool(true),
+				},
+				&management.ManagementGroupLogSettingsArgs{
+					Category: pulumi.String("Policy"),
+					Enabled:  pulumi.Bool(true),
+				},
+			},
+			ManagementGroupId: pulumi.String("testChildMG7"),
+			Name:              pulumi.String("setting1"),
+			StorageAccountId:  pulumi.String("/subscriptions/bfaef57f-297e-4210-bfe5-27c18cc671f7/resourceGroups/FuncAppRunners/providers/Microsoft.Storage/storageAccounts/testpersonalb6a5"),
+			WorkspaceId:       pulumi.String("/subscriptions/9cf7cc0a-0ba1-4624-bc82-97e1ee25dc45/resourceGroups/mgTest/providers/Microsoft.OperationalInsights/workspaces/mgTestWorkspace"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+management_group_diagnostic_setting = azure_nextgen.management.v20200101preview.ManagementGroupDiagnosticSetting("managementGroupDiagnosticSetting",
+    event_hub_authorization_rule_id="/subscriptions/fb9f25f9-5785-4510-a38f-a62f188eb9f8/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",
+    event_hub_name="myeventhub",
+    logs=[
+        {
+            "category": "Administrative",
+            "enabled": True,
+        },
+        {
+            "category": "Policy",
+            "enabled": True,
+        },
+    ],
+    management_group_id="testChildMG7",
+    name="setting1",
+    storage_account_id="/subscriptions/bfaef57f-297e-4210-bfe5-27c18cc671f7/resourceGroups/FuncAppRunners/providers/Microsoft.Storage/storageAccounts/testpersonalb6a5",
+    workspace_id="/subscriptions/9cf7cc0a-0ba1-4624-bc82-97e1ee25dc45/resourceGroups/mgTest/providers/Microsoft.OperationalInsights/workspaces/mgTestWorkspace")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const managementGroupDiagnosticSetting = new azure_nextgen.management.v20200101preview.ManagementGroupDiagnosticSetting("managementGroupDiagnosticSetting", {
+    eventHubAuthorizationRuleId: "/subscriptions/fb9f25f9-5785-4510-a38f-a62f188eb9f8/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",
+    eventHubName: "myeventhub",
+    logs: [
+        {
+            category: "Administrative",
+            enabled: true,
+        },
+        {
+            category: "Policy",
+            enabled: true,
+        },
+    ],
+    managementGroupId: "testChildMG7",
+    name: "setting1",
+    storageAccountId: "/subscriptions/bfaef57f-297e-4210-bfe5-27c18cc671f7/resourceGroups/FuncAppRunners/providers/Microsoft.Storage/storageAccounts/testpersonalb6a5",
+    workspaceId: "/subscriptions/9cf7cc0a-0ba1-4624-bc82-97e1ee25dc45/resourceGroups/mgTest/providers/Microsoft.OperationalInsights/workspaces/mgTestWorkspace",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ManagementGroupDiagnosticSetting Resource {#create}

@@ -12,6 +12,207 @@ meta_desc: "Explore the RouteTable resource of the network module, including exa
 
 Route table resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create route table
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var routeTable = new AzureNextGen.Network.Latest.RouteTable("routeTable", new AzureNextGen.Network.Latest.RouteTableArgs
+        {
+            Location = "westus",
+            ResourceGroupName = "rg1",
+            RouteTableName = "testrt",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewRouteTable(ctx, "routeTable", &network.RouteTableArgs{
+			Location:          pulumi.String("westus"),
+			ResourceGroupName: pulumi.String("rg1"),
+			RouteTableName:    pulumi.String("testrt"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+route_table = azure_nextgen.network.latest.RouteTable("routeTable",
+    location="westus",
+    resource_group_name="rg1",
+    route_table_name="testrt")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const routeTable = new azure_nextgen.network.latest.RouteTable("routeTable", {
+    location: "westus",
+    resourceGroupName: "rg1",
+    routeTableName: "testrt",
+});
+
+```
+
+{{% /example %}}
+
+### Create route table with route
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var routeTable = new AzureNextGen.Network.Latest.RouteTable("routeTable", new AzureNextGen.Network.Latest.RouteTableArgs
+        {
+            DisableBgpRoutePropagation = true,
+            Location = "westus",
+            ResourceGroupName = "rg1",
+            RouteTableName = "testrt",
+            Routes = 
+            {
+                new AzureNextGen.Network.Latest.Inputs.RouteArgs
+                {
+                    AddressPrefix = "10.0.3.0/24",
+                    Name = "route1",
+                    NextHopType = "VirtualNetworkGateway",
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewRouteTable(ctx, "routeTable", &network.RouteTableArgs{
+			DisableBgpRoutePropagation: pulumi.Bool(true),
+			Location:                   pulumi.String("westus"),
+			ResourceGroupName:          pulumi.String("rg1"),
+			RouteTableName:             pulumi.String("testrt"),
+			Routes: network.RouteArray{
+				&network.RouteArgs{
+					AddressPrefix: pulumi.String("10.0.3.0/24"),
+					Name:          pulumi.String("route1"),
+					NextHopType:   pulumi.String("VirtualNetworkGateway"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+route_table = azure_nextgen.network.latest.RouteTable("routeTable",
+    disable_bgp_route_propagation=True,
+    location="westus",
+    resource_group_name="rg1",
+    route_table_name="testrt",
+    routes=[{
+        "addressPrefix": "10.0.3.0/24",
+        "name": "route1",
+        "nextHopType": "VirtualNetworkGateway",
+    }])
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const routeTable = new azure_nextgen.network.latest.RouteTable("routeTable", {
+    disableBgpRoutePropagation: true,
+    location: "westus",
+    resourceGroupName: "rg1",
+    routeTableName: "testrt",
+    routes: [{
+        addressPrefix: "10.0.3.0/24",
+        name: "route1",
+        nextHopType: "VirtualNetworkGateway",
+    }],
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a RouteTable Resource {#create}
@@ -13933,7 +14134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -13950,7 +14151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -13967,7 +14168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -13984,7 +14185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

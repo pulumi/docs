@@ -34,10 +34,7 @@ class MyStack : Stack
             {
                 Binding = 
                 {
-                    { "properties", 
-                    {
-                        { "script", "function (x, y) { return x + y; }" },
-                    } },
+                    { "script", "function (x, y) { return x + y; }" },
                     { "type", "Microsoft.StreamAnalytics/JavascriptUdf" },
                 },
                 Inputs = 
@@ -51,6 +48,7 @@ class MyStack : Stack
                 {
                     DataType = "Any",
                 },
+                Type = "Scalar",
             },
             ResourceGroupName = "sjrg1637",
         });
@@ -77,9 +75,7 @@ function = azure_nextgen.streamanalytics.latest.Function("function",
     job_name="sj8653",
     properties={
         "binding": {
-            "properties": {
-                "script": "function (x, y) { return x + y; }",
-            },
+            "script": "function (x, y) { return x + y; }",
             "type": "Microsoft.StreamAnalytics/JavascriptUdf",
         },
         "inputs": [{
@@ -88,6 +84,7 @@ function = azure_nextgen.streamanalytics.latest.Function("function",
         "output": {
             "dataType": "Any",
         },
+        "type": "Scalar",
     },
     resource_group_name="sjrg1637")
 
@@ -106,9 +103,7 @@ const _function = new azure_nextgen.streamanalytics.latest.Function("function", 
     jobName: "sj8653",
     properties: {
         binding: {
-            properties: {
-                script: "function (x, y) { return x + y; }",
-            },
+            script: "function (x, y) { return x + y; }",
             type: "Microsoft.StreamAnalytics/JavascriptUdf",
         },
         inputs: [{
@@ -117,6 +112,7 @@ const _function = new azure_nextgen.streamanalytics.latest.Function("function", 
         output: {
             dataType: "Any",
         },
+        type: "Scalar",
     },
     resourceGroupName: "sjrg1637",
 });
@@ -143,32 +139,29 @@ class MyStack : Stack
             {
                 Binding = 
                 {
-                    { "properties", 
+                    { "apiKey", "someApiKey==" },
+                    { "batchSize", 1000 },
+                    { "endpoint", "someAzureMLEndpointURL" },
+                    { "inputs", new AzureNextGen.StreamAnalytics.Latest.Inputs.AzureMachineLearningWebServiceInputsArgs
                     {
-                        { "apiKey", "someApiKey==" },
-                        { "batchSize", 1000 },
-                        { "endpoint", "someAzureMLEndpointURL" },
-                        { "inputs", 
+                        ColumnNames = 
                         {
-                            { "columnNames", 
+                            new AzureNextGen.StreamAnalytics.Latest.Inputs.AzureMachineLearningWebServiceInputColumnArgs
                             {
-                                
-                                {
-                                    { "dataType", "string" },
-                                    { "mapTo", 0 },
-                                    { "name", "tweet" },
-                                },
-                            } },
-                            { "name", "input1" },
-                        } },
-                        { "outputs", 
-                        {
-                            
-                            {
-                                { "dataType", "string" },
-                                { "name", "Sentiment" },
+                                DataType = "string",
+                                MapTo = 0,
+                                Name = "tweet",
                             },
-                        } },
+                        },
+                        Name = "input1",
+                    } },
+                    { "outputs", 
+                    {
+                        new AzureNextGen.StreamAnalytics.Latest.Inputs.AzureMachineLearningWebServiceOutputColumnArgs
+                        {
+                            DataType = "string",
+                            Name = "Sentiment",
+                        },
                     } },
                     { "type", "Microsoft.MachineLearning/WebService" },
                 },
@@ -183,6 +176,7 @@ class MyStack : Stack
                 {
                     DataType = "nvarchar(max)",
                 },
+                Type = "Scalar",
             },
             ResourceGroupName = "sjrg7",
         });
@@ -209,23 +203,21 @@ function = azure_nextgen.streamanalytics.latest.Function("function",
     job_name="sj9093",
     properties={
         "binding": {
-            "properties": {
-                "apiKey": "someApiKey==",
-                "batchSize": 1000,
-                "endpoint": "someAzureMLEndpointURL",
-                "inputs": {
-                    "columnNames": [{
-                        "dataType": "string",
-                        "mapTo": 0,
-                        "name": "tweet",
-                    }],
-                    "name": "input1",
-                },
-                "outputs": [{
+            "apiKey": "someApiKey==",
+            "batchSize": 1000,
+            "endpoint": "someAzureMLEndpointURL",
+            "inputs": {
+                "columnNames": [{
                     "dataType": "string",
-                    "name": "Sentiment",
+                    "mapTo": 0,
+                    "name": "tweet",
                 }],
+                "name": "input1",
             },
+            "outputs": [{
+                "dataType": "string",
+                "name": "Sentiment",
+            }],
             "type": "Microsoft.MachineLearning/WebService",
         },
         "inputs": [{
@@ -234,6 +226,7 @@ function = azure_nextgen.streamanalytics.latest.Function("function",
         "output": {
             "dataType": "nvarchar(max)",
         },
+        "type": "Scalar",
     },
     resource_group_name="sjrg7")
 
@@ -252,23 +245,21 @@ const _function = new azure_nextgen.streamanalytics.latest.Function("function", 
     jobName: "sj9093",
     properties: {
         binding: {
-            properties: {
-                apiKey: "someApiKey==",
-                batchSize: 1000,
-                endpoint: "someAzureMLEndpointURL",
-                inputs: {
-                    columnNames: [{
-                        dataType: "string",
-                        mapTo: 0,
-                        name: "tweet",
-                    }],
-                    name: "input1",
-                },
-                outputs: [{
+            apiKey: "someApiKey==",
+            batchSize: 1000,
+            endpoint: "someAzureMLEndpointURL",
+            inputs: {
+                columnNames: [{
                     dataType: "string",
-                    name: "Sentiment",
+                    mapTo: 0,
+                    name: "tweet",
                 }],
+                name: "input1",
             },
+            outputs: [{
+                dataType: "string",
+                name: "Sentiment",
+            }],
             type: "Microsoft.MachineLearning/WebService",
         },
         inputs: [{
@@ -277,6 +268,7 @@ const _function = new azure_nextgen.streamanalytics.latest.Function("function", 
         output: {
             dataType: "nvarchar(max)",
         },
+        type: "Scalar",
     },
     resourceGroupName: "sjrg7",
 });

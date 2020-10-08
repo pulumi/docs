@@ -12,6 +12,219 @@ meta_desc: "Explore the ViewByScope resource of the costmanagement module, inclu
 
 States and configurations of Cost Analysis.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ResourceGroupCreateOrUpdateView
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var viewByScope = new AzureNextGen.CostManagement.Latest.ViewByScope("viewByScope", new AzureNextGen.CostManagement.Latest.ViewByScopeArgs
+        {
+            Accumulated = "true",
+            Chart = "Table",
+            Dataset = new AzureNextGen.CostManagement.Latest.Inputs.ReportConfigDatasetArgs
+            {
+                Aggregation = 
+                {
+                    { "totalCost", new AzureNextGen.CostManagement.Latest.Inputs.ReportConfigAggregationArgs
+                    {
+                        Function = "Sum",
+                        Name = "PreTaxCost",
+                    } },
+                },
+                Granularity = "Daily",
+                Grouping = {},
+                Sorting = 
+                {
+                    new AzureNextGen.CostManagement.Latest.Inputs.ReportConfigSortingArgs
+                    {
+                        Direction = "Ascending",
+                        Name = "UsageDate",
+                    },
+                },
+            },
+            DisplayName = "swagger Example",
+            ETag = "\"1d4ff9fe66f1d10\"",
+            Kpis = 
+            {
+                new AzureNextGen.CostManagement.Latest.Inputs.KpiPropertiesArgs
+                {
+                    Enabled = true,
+                    Type = "Forecast",
+                },
+                new AzureNextGen.CostManagement.Latest.Inputs.KpiPropertiesArgs
+                {
+                    Enabled = true,
+                    Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Consumption/budgets/swaggerDemo",
+                    Type = "Budget",
+                },
+            },
+            Metric = "ActualCost",
+            Pivots = 
+            {
+                new AzureNextGen.CostManagement.Latest.Inputs.PivotPropertiesArgs
+                {
+                    Name = "ServiceName",
+                    Type = "Dimension",
+                },
+                new AzureNextGen.CostManagement.Latest.Inputs.PivotPropertiesArgs
+                {
+                    Name = "MeterCategory",
+                    Type = "Dimension",
+                },
+                new AzureNextGen.CostManagement.Latest.Inputs.PivotPropertiesArgs
+                {
+                    Name = "swaggerTagKey",
+                    Type = "TagKey",
+                },
+            },
+            Scope = "subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG",
+            Timeframe = "MonthToDate",
+            Type = "Usage",
+            ViewName = "swaggerExample",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+view_by_scope = azure_nextgen.costmanagement.latest.ViewByScope("viewByScope",
+    accumulated="true",
+    chart="Table",
+    dataset={
+        "aggregation": {
+            "totalCost": {
+                "function": "Sum",
+                "name": "PreTaxCost",
+            },
+        },
+        "granularity": "Daily",
+        "grouping": [],
+        "sorting": [{
+            "direction": "Ascending",
+            "name": "UsageDate",
+        }],
+    },
+    display_name="swagger Example",
+    e_tag="\"1d4ff9fe66f1d10\"",
+    kpis=[
+        {
+            "enabled": True,
+            "type": "Forecast",
+        },
+        {
+            "enabled": True,
+            "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Consumption/budgets/swaggerDemo",
+            "type": "Budget",
+        },
+    ],
+    metric="ActualCost",
+    pivots=[
+        {
+            "name": "ServiceName",
+            "type": "Dimension",
+        },
+        {
+            "name": "MeterCategory",
+            "type": "Dimension",
+        },
+        {
+            "name": "swaggerTagKey",
+            "type": "TagKey",
+        },
+    ],
+    scope="subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG",
+    timeframe="MonthToDate",
+    type="Usage",
+    view_name="swaggerExample")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const viewByScope = new azure_nextgen.costmanagement.latest.ViewByScope("viewByScope", {
+    accumulated: "true",
+    chart: "Table",
+    dataset: {
+        aggregation: {
+            totalCost: {
+                "function": "Sum",
+                name: "PreTaxCost",
+            },
+        },
+        granularity: "Daily",
+        grouping: [],
+        sorting: [{
+            direction: "Ascending",
+            name: "UsageDate",
+        }],
+    },
+    displayName: "swagger Example",
+    eTag: "\"1d4ff9fe66f1d10\"",
+    kpis: [
+        {
+            enabled: true,
+            type: "Forecast",
+        },
+        {
+            enabled: true,
+            id: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Consumption/budgets/swaggerDemo",
+            type: "Budget",
+        },
+    ],
+    metric: "ActualCost",
+    pivots: [
+        {
+            name: "ServiceName",
+            type: "Dimension",
+        },
+        {
+            name: "MeterCategory",
+            type: "Dimension",
+        },
+        {
+            name: "swaggerTagKey",
+            type: "TagKey",
+        },
+    ],
+    scope: "subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG",
+    timeframe: "MonthToDate",
+    type: "Usage",
+    viewName: "swaggerExample",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ViewByScope Resource {#create}

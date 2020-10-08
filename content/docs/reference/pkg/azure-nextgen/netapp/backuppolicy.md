@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	netapp "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/netapp/latest"
+	netapp "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/netapp/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

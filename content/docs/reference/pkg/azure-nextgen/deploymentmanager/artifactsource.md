@@ -31,6 +31,7 @@ class MyStack : Stack
             ArtifactSourceName = "myArtifactSource",
             Authentication = new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.SasAuthenticationArgs
             {
+                SasUri = "https://mystorageaccount.blob.core.windows.net/myartifactsource?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D",
                 Type = "Sas",
             },
             Location = "centralus",
@@ -52,7 +53,9 @@ class MyStack : Stack
 package main
 
 import (
-	deploymentmanager "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/deploymentmanager/v20191101preview"
+	"fmt"
+
+	deploymentmanager "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/deploymentmanager/v20191101preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -61,7 +64,8 @@ func main() {
 		_, err := deploymentmanager.NewArtifactSource(ctx, "artifactSource", &deploymentmanager.ArtifactSourceArgs{
 			ArtifactSourceName: pulumi.String("myArtifactSource"),
 			Authentication: &deploymentmanager.SasAuthenticationArgs{
-				Type: pulumi.String("Sas"),
+				SasUri: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "https://mystorageaccount.blob.core.windows.net/myartifactsource?st=2018-07-07T14", "%", "3A10", "%", "3A00Z&se=2019-12-31T15", "%", "3A10", "%", "3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de", "%", "2Fkabcdefghijklmno5sWEIk", "%", "3D")),
+				Type:   pulumi.String("Sas"),
 			},
 			Location:          pulumi.String("centralus"),
 			ResourceGroupName: pulumi.String("myResourceGroup"),
@@ -88,6 +92,7 @@ import pulumi_azure_nextgen as azure_nextgen
 artifact_source = azure_nextgen.deploymentmanager.v20191101preview.ArtifactSource("artifactSource",
     artifact_source_name="myArtifactSource",
     authentication={
+        "sasUri": "https://mystorageaccount.blob.core.windows.net/myartifactsource?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D",
         "type": "Sas",
     },
     location="centralus",
@@ -108,6 +113,7 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const artifactSource = new azure_nextgen.deploymentmanager.v20191101preview.ArtifactSource("artifactSource", {
     artifactSourceName: "myArtifactSource",
     authentication: {
+        sasUri: `https://mystorageaccount.blob.core.windows.net/myartifactsource?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D`,
         type: "Sas",
     },
     location: "centralus",
@@ -136,6 +142,7 @@ class MyStack : Stack
             ArtifactSourceName = "myArtifactSource",
             Authentication = new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.SasAuthenticationArgs
             {
+                SasUri = "https://mystorageaccount.blob.core.windows.net/myartifactsource?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D",
                 Type = "Sas",
             },
             Location = "centralus",
@@ -157,7 +164,9 @@ class MyStack : Stack
 package main
 
 import (
-	deploymentmanager "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/deploymentmanager/v20191101preview"
+	"fmt"
+
+	deploymentmanager "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/deploymentmanager/v20191101preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -167,7 +176,8 @@ func main() {
 			ArtifactRoot:       pulumi.String("1.0.0.0"),
 			ArtifactSourceName: pulumi.String("myArtifactSource"),
 			Authentication: &deploymentmanager.SasAuthenticationArgs{
-				Type: pulumi.String("Sas"),
+				SasUri: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "https://mystorageaccount.blob.core.windows.net/myartifactsource?st=2018-07-07T14", "%", "3A10", "%", "3A00Z&se=2019-12-31T15", "%", "3A10", "%", "3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de", "%", "2Fkabcdefghijklmno5sWEIk", "%", "3D")),
+				Type:   pulumi.String("Sas"),
 			},
 			Location:          pulumi.String("centralus"),
 			ResourceGroupName: pulumi.String("myResourceGroup"),
@@ -195,6 +205,7 @@ artifact_source = azure_nextgen.deploymentmanager.v20191101preview.ArtifactSourc
     artifact_root="1.0.0.0",
     artifact_source_name="myArtifactSource",
     authentication={
+        "sasUri": "https://mystorageaccount.blob.core.windows.net/myartifactsource?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D",
         "type": "Sas",
     },
     location="centralus",
@@ -216,6 +227,7 @@ const artifactSource = new azure_nextgen.deploymentmanager.v20191101preview.Arti
     artifactRoot: "1.0.0.0",
     artifactSourceName: "myArtifactSource",
     authentication: {
+        sasUri: `https://mystorageaccount.blob.core.windows.net/myartifactsource?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D`,
         type: "Sas",
     },
     location: "centralus",

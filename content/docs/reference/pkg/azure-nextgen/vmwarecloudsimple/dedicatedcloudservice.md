@@ -47,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	vmwarecloudsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/vmwarecloudsimple/latest"
+	vmwarecloudsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/vmwarecloudsimple/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

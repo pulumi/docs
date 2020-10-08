@@ -30,6 +30,10 @@ class MyStack : Stack
         {
             ComputeName = "compute123",
             Location = "eastus",
+            Properties = 
+            {
+                { "computeType", "AKS" },
+            },
             ResourceGroupName = "testrg123",
             WorkspaceName = "workspaces123",
         });
@@ -42,32 +46,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-package main
-
-import (
-	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := machinelearningservices.NewMachineLearningCompute(ctx, "machineLearningCompute", &machinelearningservices.MachineLearningComputeArgs{
-			ComputeName:       pulumi.String("compute123"),
-			Location:          pulumi.String("eastus"),
-			ResourceGroupName: pulumi.String("testrg123"),
-			WorkspaceName:     pulumi.String("workspaces123"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -79,6 +58,9 @@ import pulumi_azure_nextgen as azure_nextgen
 machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute",
     compute_name="compute123",
     location="eastus",
+    properties={
+        "computeType": "AKS",
+    },
     resource_group_name="testrg123",
     workspace_name="workspaces123")
 
@@ -95,6 +77,9 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute", {
     computeName: "compute123",
     location: "eastus",
+    properties: {
+        computeType: "AKS",
+    },
     resourceGroupName: "testrg123",
     workspaceName: "workspaces123",
 });
@@ -123,15 +108,19 @@ class MyStack : Stack
             Location = "eastus",
             Properties = 
             {
-                { "remoteLoginPortPublicAccess", "NotSpecified" },
-                { "scaleSettings", 
+                { "computeType", "AmlCompute" },
+                { "properties", 
                 {
-                    { "maxNodeCount", 1 },
-                    { "minNodeCount", 0 },
-                    { "nodeIdleTimeBeforeScaleDown", "PT5M" },
+                    { "remoteLoginPortPublicAccess", "NotSpecified" },
+                    { "scaleSettings", new AzureNextGen.MachineLearningServices.Latest.Inputs.ScaleSettingsArgs
+                    {
+                        MaxNodeCount = 1,
+                        MinNodeCount = 0,
+                        NodeIdleTimeBeforeScaleDown = "PT5M",
+                    } },
+                    { "vmPriority", "Dedicated" },
+                    { "vmSize", "STANDARD_NC6" },
                 } },
-                { "vmPriority", "Dedicated" },
-                { "vmSize", "STANDARD_NC6" },
             },
             ResourceGroupName = "testrg123",
             WorkspaceName = "workspaces123",
@@ -161,14 +150,17 @@ machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineL
     },
     location="eastus",
     properties={
-        "remoteLoginPortPublicAccess": "NotSpecified",
-        "scaleSettings": {
-            "maxNodeCount": 1,
-            "minNodeCount": 0,
-            "nodeIdleTimeBeforeScaleDown": "PT5M",
+        "computeType": "AmlCompute",
+        "properties": {
+            "remoteLoginPortPublicAccess": "NotSpecified",
+            "scaleSettings": {
+                "maxNodeCount": 1,
+                "minNodeCount": 0,
+                "nodeIdleTimeBeforeScaleDown": "PT5M",
+            },
+            "vmPriority": "Dedicated",
+            "vmSize": "STANDARD_NC6",
         },
-        "vmPriority": "Dedicated",
-        "vmSize": "STANDARD_NC6",
     },
     resource_group_name="testrg123",
     workspace_name="workspaces123")
@@ -190,14 +182,17 @@ const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.
     },
     location: "eastus",
     properties: {
-        remoteLoginPortPublicAccess: "NotSpecified",
-        scaleSettings: {
-            maxNodeCount: 1,
-            minNodeCount: 0,
-            nodeIdleTimeBeforeScaleDown: "PT5M",
+        computeType: "AmlCompute",
+        properties: {
+            remoteLoginPortPublicAccess: "NotSpecified",
+            scaleSettings: {
+                maxNodeCount: 1,
+                minNodeCount: 0,
+                nodeIdleTimeBeforeScaleDown: "PT5M",
+            },
+            vmPriority: "Dedicated",
+            vmSize: "STANDARD_NC6",
         },
-        vmPriority: "Dedicated",
-        vmSize: "STANDARD_NC6",
     },
     resourceGroupName: "testrg123",
     workspaceName: "workspaces123",
@@ -223,13 +218,17 @@ class MyStack : Stack
             Location = "eastus",
             Properties = 
             {
-                { "applicationSharingPolicy", "Personal" },
-                { "sshSettings", 
+                { "computeType", "ComputeInstance" },
+                { "properties", 
                 {
-                    { "sshPublicAccess", "Disabled" },
+                    { "applicationSharingPolicy", "Personal" },
+                    { "sshSettings", new AzureNextGen.MachineLearningServices.Latest.Inputs.ComputeInstanceSshSettingsArgs
+                    {
+                        SshPublicAccess = "Disabled",
+                    } },
+                    { "subnet", "test-subnet-resource-id" },
+                    { "vmSize", "STANDARD_NC6" },
                 } },
-                { "subnet", "test-subnet-resource-id" },
-                { "vmSize", "STANDARD_NC6" },
             },
             ResourceGroupName = "testrg123",
             WorkspaceName = "workspaces123",
@@ -256,12 +255,15 @@ machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineL
     compute_name="compute123",
     location="eastus",
     properties={
-        "applicationSharingPolicy": "Personal",
-        "sshSettings": {
-            "sshPublicAccess": "Disabled",
+        "computeType": "ComputeInstance",
+        "properties": {
+            "applicationSharingPolicy": "Personal",
+            "sshSettings": {
+                "sshPublicAccess": "Disabled",
+            },
+            "subnet": "test-subnet-resource-id",
+            "vmSize": "STANDARD_NC6",
         },
-        "subnet": "test-subnet-resource-id",
-        "vmSize": "STANDARD_NC6",
     },
     resource_group_name="testrg123",
     workspace_name="workspaces123")
@@ -280,12 +282,15 @@ const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.
     computeName: "compute123",
     location: "eastus",
     properties: {
-        applicationSharingPolicy: "Personal",
-        sshSettings: {
-            sshPublicAccess: "Disabled",
+        computeType: "ComputeInstance",
+        properties: {
+            applicationSharingPolicy: "Personal",
+            sshSettings: {
+                sshPublicAccess: "Disabled",
+            },
+            subnet: "test-subnet-resource-id",
+            vmSize: "STANDARD_NC6",
         },
-        subnet: "test-subnet-resource-id",
-        vmSize: "STANDARD_NC6",
     },
     resourceGroupName: "testrg123",
     workspaceName: "workspaces123",
@@ -311,7 +316,11 @@ class MyStack : Stack
             Location = "eastus",
             Properties = 
             {
-                { "vmSize", "STANDARD_NC6" },
+                { "computeType", "ComputeInstance" },
+                { "properties", 
+                {
+                    { "vmSize", "STANDARD_NC6" },
+                } },
             },
             ResourceGroupName = "testrg123",
             WorkspaceName = "workspaces123",
@@ -338,7 +347,10 @@ machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineL
     compute_name="compute123",
     location="eastus",
     properties={
-        "vmSize": "STANDARD_NC6",
+        "computeType": "ComputeInstance",
+        "properties": {
+            "vmSize": "STANDARD_NC6",
+        },
     },
     resource_group_name="testrg123",
     workspace_name="workspaces123")
@@ -357,7 +369,10 @@ const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.
     computeName: "compute123",
     location: "eastus",
     properties: {
-        vmSize: "STANDARD_NC6",
+        computeType: "ComputeInstance",
+        properties: {
+            vmSize: "STANDARD_NC6",
+        },
     },
     resourceGroupName: "testrg123",
     workspaceName: "workspaces123",
@@ -381,6 +396,10 @@ class MyStack : Stack
         {
             ComputeName = "compute123",
             Location = "eastus",
+            Properties = 
+            {
+                { "computeType", "DataFactory" },
+            },
             ResourceGroupName = "testrg123",
             WorkspaceName = "workspaces123",
         });
@@ -393,32 +412,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-package main
-
-import (
-	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := machinelearningservices.NewMachineLearningCompute(ctx, "machineLearningCompute", &machinelearningservices.MachineLearningComputeArgs{
-			ComputeName:       pulumi.String("compute123"),
-			Location:          pulumi.String("eastus"),
-			ResourceGroupName: pulumi.String("testrg123"),
-			WorkspaceName:     pulumi.String("workspaces123"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -430,6 +424,9 @@ import pulumi_azure_nextgen as azure_nextgen
 machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute",
     compute_name="compute123",
     location="eastus",
+    properties={
+        "computeType": "DataFactory",
+    },
     resource_group_name="testrg123",
     workspace_name="workspaces123")
 
@@ -446,6 +443,9 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute", {
     computeName: "compute123",
     location: "eastus",
+    properties: {
+        computeType: "DataFactory",
+    },
     resourceGroupName: "testrg123",
     workspaceName: "workspaces123",
 });
@@ -470,7 +470,13 @@ class MyStack : Stack
             Location = "eastus",
             Properties = 
             {
-                { "agentCount", 4 },
+                { "computeType", "AKS" },
+                { "description", "some compute" },
+                { "properties", 
+                {
+                    { "agentCount", 4 },
+                } },
+                { "resourceId", "/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourcegroups/testrg123/providers/Microsoft.ContainerService/managedClusters/compute123-56826-c9b00420020b2" },
             },
             ResourceGroupName = "testrg123",
             WorkspaceName = "workspaces123",
@@ -497,7 +503,12 @@ machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineL
     compute_name="compute123",
     location="eastus",
     properties={
-        "agentCount": 4,
+        "computeType": "AKS",
+        "description": "some compute",
+        "properties": {
+            "agentCount": 4,
+        },
+        "resourceId": "/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourcegroups/testrg123/providers/Microsoft.ContainerService/managedClusters/compute123-56826-c9b00420020b2",
     },
     resource_group_name="testrg123",
     workspace_name="workspaces123")
@@ -516,7 +527,12 @@ const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.
     computeName: "compute123",
     location: "eastus",
     properties: {
-        agentCount: 4,
+        computeType: "AKS",
+        description: "some compute",
+        properties: {
+            agentCount: 4,
+        },
+        resourceId: "/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourcegroups/testrg123/providers/Microsoft.ContainerService/managedClusters/compute123-56826-c9b00420020b2",
     },
     resourceGroupName: "testrg123",
     workspaceName: "workspaces123",
@@ -546,11 +562,15 @@ class MyStack : Stack
             Location = "eastus",
             Properties = 
             {
-                { "scaleSettings", 
+                { "computeType", "AmlCompute" },
+                { "properties", 
                 {
-                    { "maxNodeCount", 1 },
-                    { "minNodeCount", 0 },
-                    { "nodeIdleTimeBeforeScaleDown", "PT5M" },
+                    { "scaleSettings", new AzureNextGen.MachineLearningServices.Latest.Inputs.ScaleSettingsArgs
+                    {
+                        MaxNodeCount = 1,
+                        MinNodeCount = 0,
+                        NodeIdleTimeBeforeScaleDown = "PT5M",
+                    } },
                 } },
             },
             ResourceGroupName = "testrg123",
@@ -581,10 +601,13 @@ machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineL
     },
     location="eastus",
     properties={
-        "scaleSettings": {
-            "maxNodeCount": 1,
-            "minNodeCount": 0,
-            "nodeIdleTimeBeforeScaleDown": "PT5M",
+        "computeType": "AmlCompute",
+        "properties": {
+            "scaleSettings": {
+                "maxNodeCount": 1,
+                "minNodeCount": 0,
+                "nodeIdleTimeBeforeScaleDown": "PT5M",
+            },
         },
     },
     resource_group_name="testrg123",
@@ -607,10 +630,13 @@ const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.
     },
     location: "eastus",
     properties: {
-        scaleSettings: {
-            maxNodeCount: 1,
-            minNodeCount: 0,
-            nodeIdleTimeBeforeScaleDown: "PT5M",
+        computeType: "AmlCompute",
+        properties: {
+            scaleSettings: {
+                maxNodeCount: 1,
+                minNodeCount: 0,
+                nodeIdleTimeBeforeScaleDown: "PT5M",
+            },
         },
     },
     resourceGroupName: "testrg123",
@@ -4827,6 +4853,165 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="computeinstancelastoperationresponse">Compute<wbr>Instance<wbr>Last<wbr>Operation<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationname_csharp">
+<a href="#operationname_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the last operation.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationstatus_csharp">
+<a href="#operationstatus_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Operation status.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationtime_csharp">
+<a href="#operationtime_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Time of the last operation.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationname_go">
+<a href="#operationname_go" style="color: inherit; text-decoration: inherit;">Operation<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the last operation.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationstatus_go">
+<a href="#operationstatus_go" style="color: inherit; text-decoration: inherit;">Operation<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Operation status.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationtime_go">
+<a href="#operationtime_go" style="color: inherit; text-decoration: inherit;">Operation<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Time of the last operation.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationname_nodejs">
+<a href="#operationname_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the last operation.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationstatus_nodejs">
+<a href="#operationstatus_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Operation status.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationtime_nodejs">
+<a href="#operationtime_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Time of the last operation.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationname_python">
+<a href="#operationname_python" style="color: inherit; text-decoration: inherit;">operation<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the last operation.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationtime_python">
+<a href="#operationtime_python" style="color: inherit; text-decoration: inherit;">operation<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Time of the last operation.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operation_status_python">
+<a href="#operation_status_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Operation status.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="computeinstanceproperties">Compute<wbr>Instance<wbr>Properties</h4>
 
 
@@ -5478,6 +5663,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
+        <span id="lastoperation_csharp">
+<a href="#lastoperation_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Operation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeinstancelastoperationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Last<wbr>Operation<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The last operation on ComputeInstance.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span> 
@@ -5572,6 +5767,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">[]Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Collection of errors encountered on this ComputeInstance.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastoperation_go">
+<a href="#lastoperation_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Operation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeinstancelastoperationresponse">Compute<wbr>Instance<wbr>Last<wbr>Operation<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The last operation on ComputeInstance.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5672,6 +5877,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
+        <span id="lastoperation_nodejs">
+<a href="#lastoperation_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Operation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeinstancelastoperationresponse">Compute<wbr>Instance<wbr>Last<wbr>Operation<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The last operation on ComputeInstance.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span> 
@@ -5766,6 +5981,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">List[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Collection of errors encountered on this ComputeInstance.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastoperation_python">
+<a href="#lastoperation_python" style="color: inherit; text-decoration: inherit;">last<wbr>Operation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeinstancelastoperationresponse">Dict[Compute<wbr>Instance<wbr>Last<wbr>Operation<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The last operation on ComputeInstance.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">

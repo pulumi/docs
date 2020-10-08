@@ -46,7 +46,7 @@ class MyStack : Stack
 package main
 
 import (
-	hybriddata "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/hybriddata/latest"
+	hybriddata "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hybriddata/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

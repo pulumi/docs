@@ -12,6 +12,265 @@ meta_desc: "Explore the PrivateEndpoint resource of the network module, includin
 
 Private endpoint resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create private endpoint
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateEndpoint = new AzureNextGen.Network.Latest.PrivateEndpoint("privateEndpoint", new AzureNextGen.Network.Latest.PrivateEndpointArgs
+        {
+            Location = "eastus2euap",
+            PrivateEndpointName = "testPe",
+            PrivateLinkServiceConnections = 
+            {
+                new AzureNextGen.Network.Latest.Inputs.PrivateLinkServiceConnectionArgs
+                {
+                    GroupIds = 
+                    {
+                        "groupIdFromResource",
+                    },
+                    PrivateLinkServiceId = "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls",
+                    RequestMessage = "Please approve my connection.",
+                },
+            },
+            ResourceGroupName = "rg1",
+            Subnet = new AzureNextGen.Network.Latest.Inputs.SubnetArgs
+            {
+                Id = "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewPrivateEndpoint(ctx, "privateEndpoint", &network.PrivateEndpointArgs{
+			Location:            pulumi.String("eastus2euap"),
+			PrivateEndpointName: pulumi.String("testPe"),
+			PrivateLinkServiceConnections: network.PrivateLinkServiceConnectionArray{
+				&network.PrivateLinkServiceConnectionArgs{
+					GroupIds: pulumi.StringArray{
+						pulumi.String("groupIdFromResource"),
+					},
+					PrivateLinkServiceId: pulumi.String("/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls"),
+					RequestMessage:       pulumi.String("Please approve my connection."),
+				},
+			},
+			ResourceGroupName: pulumi.String("rg1"),
+			Subnet: &network.SubnetArgs{
+				Id: pulumi.String("/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+private_endpoint = azure_nextgen.network.latest.PrivateEndpoint("privateEndpoint",
+    location="eastus2euap",
+    private_endpoint_name="testPe",
+    private_link_service_connections=[{
+        "groupIds": ["groupIdFromResource"],
+        "privateLinkServiceId": "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls",
+        "requestMessage": "Please approve my connection.",
+    }],
+    resource_group_name="rg1",
+    subnet={
+        "id": "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const privateEndpoint = new azure_nextgen.network.latest.PrivateEndpoint("privateEndpoint", {
+    location: "eastus2euap",
+    privateEndpointName: "testPe",
+    privateLinkServiceConnections: [{
+        groupIds: ["groupIdFromResource"],
+        privateLinkServiceId: "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls",
+        requestMessage: "Please approve my connection.",
+    }],
+    resourceGroupName: "rg1",
+    subnet: {
+        id: "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Create private endpoint with manual approval connection
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateEndpoint = new AzureNextGen.Network.Latest.PrivateEndpoint("privateEndpoint", new AzureNextGen.Network.Latest.PrivateEndpointArgs
+        {
+            Location = "eastus",
+            ManualPrivateLinkServiceConnections = 
+            {
+                new AzureNextGen.Network.Latest.Inputs.PrivateLinkServiceConnectionArgs
+                {
+                    GroupIds = 
+                    {
+                        "groupIdFromResource",
+                    },
+                    PrivateLinkServiceId = "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls",
+                    RequestMessage = "Please manually approve my connection.",
+                },
+            },
+            PrivateEndpointName = "testPe",
+            ResourceGroupName = "rg1",
+            Subnet = new AzureNextGen.Network.Latest.Inputs.SubnetArgs
+            {
+                Id = "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewPrivateEndpoint(ctx, "privateEndpoint", &network.PrivateEndpointArgs{
+			Location: pulumi.String("eastus"),
+			ManualPrivateLinkServiceConnections: network.PrivateLinkServiceConnectionArray{
+				&network.PrivateLinkServiceConnectionArgs{
+					GroupIds: pulumi.StringArray{
+						pulumi.String("groupIdFromResource"),
+					},
+					PrivateLinkServiceId: pulumi.String("/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls"),
+					RequestMessage:       pulumi.String("Please manually approve my connection."),
+				},
+			},
+			PrivateEndpointName: pulumi.String("testPe"),
+			ResourceGroupName:   pulumi.String("rg1"),
+			Subnet: &network.SubnetArgs{
+				Id: pulumi.String("/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+private_endpoint = azure_nextgen.network.latest.PrivateEndpoint("privateEndpoint",
+    location="eastus",
+    manual_private_link_service_connections=[{
+        "groupIds": ["groupIdFromResource"],
+        "privateLinkServiceId": "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls",
+        "requestMessage": "Please manually approve my connection.",
+    }],
+    private_endpoint_name="testPe",
+    resource_group_name="rg1",
+    subnet={
+        "id": "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const privateEndpoint = new azure_nextgen.network.latest.PrivateEndpoint("privateEndpoint", {
+    location: "eastus",
+    manualPrivateLinkServiceConnections: [{
+        groupIds: ["groupIdFromResource"],
+        privateLinkServiceId: "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls",
+        requestMessage: "Please manually approve my connection.",
+    }],
+    privateEndpointName: "testPe",
+    resourceGroupName: "rg1",
+    subnet: {
+        id: "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PrivateEndpoint Resource {#create}
@@ -16681,7 +16940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -16698,7 +16957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -16715,7 +16974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -16732,7 +16991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

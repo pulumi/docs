@@ -30,6 +30,60 @@ class MyStack : Stack
         {
             DataFlowName = "exampleDataFlow",
             FactoryName = "exampleFactoryName",
+            Properties = new AzureNextGen.DataFactory.Latest.Inputs.MappingDataFlowArgs
+            {
+                Description = "Sample demo data flow to convert currencies showing usage of union, derive and conditional split transformation.",
+                Script = @"source(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: false,validateSchema: false) ~> USDCurrency
+source(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: true,validateSchema: false) ~> CADSource
+USDCurrency, CADSource union(byName: true)~> Union
+Union derive(NewCurrencyRate = round(CurrentConversionRate*1.25)) ~> NewCurrencyColumn
+NewCurrencyColumn split(Country == 'USD',Country == 'CAD',disjoint: false) ~> ConditionalSplit1@(USD, CAD)
+ConditionalSplit1@USD sink(saveMode:'overwrite' ) ~> USDSink
+ConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink",
+                Sinks = 
+                {
+                    new AzureNextGen.DataFactory.Latest.Inputs.DataFlowSinkArgs
+                    {
+                        Dataset = new AzureNextGen.DataFactory.Latest.Inputs.DatasetReferenceArgs
+                        {
+                            ReferenceName = "USDOutput",
+                            Type = "DatasetReference",
+                        },
+                        Name = "USDSink",
+                    },
+                    new AzureNextGen.DataFactory.Latest.Inputs.DataFlowSinkArgs
+                    {
+                        Dataset = new AzureNextGen.DataFactory.Latest.Inputs.DatasetReferenceArgs
+                        {
+                            ReferenceName = "CADOutput",
+                            Type = "DatasetReference",
+                        },
+                        Name = "CADSink",
+                    },
+                },
+                Sources = 
+                {
+                    new AzureNextGen.DataFactory.Latest.Inputs.DataFlowSourceArgs
+                    {
+                        Dataset = new AzureNextGen.DataFactory.Latest.Inputs.DatasetReferenceArgs
+                        {
+                            ReferenceName = "CurrencyDatasetUSD",
+                            Type = "DatasetReference",
+                        },
+                        Name = "USDCurrency",
+                    },
+                    new AzureNextGen.DataFactory.Latest.Inputs.DataFlowSourceArgs
+                    {
+                        Dataset = new AzureNextGen.DataFactory.Latest.Inputs.DatasetReferenceArgs
+                        {
+                            ReferenceName = "CurrencyDatasetCAD",
+                            Type = "DatasetReference",
+                        },
+                        Name = "CADSource",
+                    },
+                },
+                Type = "MappingDataFlow",
+            },
             ResourceGroupName = "exampleResourceGroup",
         });
     }
@@ -46,15 +100,52 @@ class MyStack : Stack
 package main
 
 import (
-	datafactory "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datafactory/latest"
+	datafactory "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datafactory/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := datafactory.NewDataFlow(ctx, "dataFlow", &datafactory.DataFlowArgs{
-			DataFlowName:      pulumi.String("exampleDataFlow"),
-			FactoryName:       pulumi.String("exampleFactoryName"),
+			DataFlowName: pulumi.String("exampleDataFlow"),
+			FactoryName:  pulumi.String("exampleFactoryName"),
+			Properties: &datafactory.MappingDataFlowArgs{
+				Description: pulumi.String("Sample demo data flow to convert currencies showing usage of union, derive and conditional split transformation."),
+				Script:      pulumi.String("source(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: false,validateSchema: false) ~> USDCurrency\nsource(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: true,validateSchema: false) ~> CADSource\nUSDCurrency, CADSource union(byName: true)~> Union\nUnion derive(NewCurrencyRate = round(CurrentConversionRate*1.25)) ~> NewCurrencyColumn\nNewCurrencyColumn split(Country == 'USD',Country == 'CAD',disjoint: false) ~> ConditionalSplit1@(USD, CAD)\nConditionalSplit1@USD sink(saveMode:'overwrite' ) ~> USDSink\nConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink"),
+				Sinks: datafactory.DataFlowSinkArray{
+					&datafactory.DataFlowSinkArgs{
+						Dataset: &datafactory.DatasetReferenceArgs{
+							ReferenceName: pulumi.String("USDOutput"),
+							Type:          pulumi.String("DatasetReference"),
+						},
+						Name: pulumi.String("USDSink"),
+					},
+					&datafactory.DataFlowSinkArgs{
+						Dataset: &datafactory.DatasetReferenceArgs{
+							ReferenceName: pulumi.String("CADOutput"),
+							Type:          pulumi.String("DatasetReference"),
+						},
+						Name: pulumi.String("CADSink"),
+					},
+				},
+				Sources: datafactory.DataFlowSourceArray{
+					&datafactory.DataFlowSourceArgs{
+						Dataset: &datafactory.DatasetReferenceArgs{
+							ReferenceName: pulumi.String("CurrencyDatasetUSD"),
+							Type:          pulumi.String("DatasetReference"),
+						},
+						Name: pulumi.String("USDCurrency"),
+					},
+					&datafactory.DataFlowSourceArgs{
+						Dataset: &datafactory.DatasetReferenceArgs{
+							ReferenceName: pulumi.String("CurrencyDatasetCAD"),
+							Type:          pulumi.String("DatasetReference"),
+						},
+						Name: pulumi.String("CADSource"),
+					},
+				},
+				Type: pulumi.String("MappingDataFlow"),
+			},
 			ResourceGroupName: pulumi.String("exampleResourceGroup"),
 		})
 		if err != nil {
@@ -77,6 +168,49 @@ import pulumi_azure_nextgen as azure_nextgen
 data_flow = azure_nextgen.datafactory.latest.DataFlow("dataFlow",
     data_flow_name="exampleDataFlow",
     factory_name="exampleFactoryName",
+    properties={
+        "description": "Sample demo data flow to convert currencies showing usage of union, derive and conditional split transformation.",
+        "script": """source(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: false,validateSchema: false) ~> USDCurrency
+source(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: true,validateSchema: false) ~> CADSource
+USDCurrency, CADSource union(byName: true)~> Union
+Union derive(NewCurrencyRate = round(CurrentConversionRate*1.25)) ~> NewCurrencyColumn
+NewCurrencyColumn split(Country == 'USD',Country == 'CAD',disjoint: false) ~> ConditionalSplit1@(USD, CAD)
+ConditionalSplit1@USD sink(saveMode:'overwrite' ) ~> USDSink
+ConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink""",
+        "sinks": [
+            {
+                "dataset": {
+                    "referenceName": "USDOutput",
+                    "type": "DatasetReference",
+                },
+                "name": "USDSink",
+            },
+            {
+                "dataset": {
+                    "referenceName": "CADOutput",
+                    "type": "DatasetReference",
+                },
+                "name": "CADSink",
+            },
+        ],
+        "sources": [
+            {
+                "dataset": {
+                    "referenceName": "CurrencyDatasetUSD",
+                    "type": "DatasetReference",
+                },
+                "name": "USDCurrency",
+            },
+            {
+                "dataset": {
+                    "referenceName": "CurrencyDatasetCAD",
+                    "type": "DatasetReference",
+                },
+                "name": "CADSource",
+            },
+        ],
+        "type": "MappingDataFlow",
+    },
     resource_group_name="exampleResourceGroup")
 
 ```
@@ -92,6 +226,49 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const dataFlow = new azure_nextgen.datafactory.latest.DataFlow("dataFlow", {
     dataFlowName: "exampleDataFlow",
     factoryName: "exampleFactoryName",
+    properties: {
+        description: "Sample demo data flow to convert currencies showing usage of union, derive and conditional split transformation.",
+        script: `source(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: false,validateSchema: false) ~> USDCurrency
+source(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: true,validateSchema: false) ~> CADSource
+USDCurrency, CADSource union(byName: true)~> Union
+Union derive(NewCurrencyRate = round(CurrentConversionRate*1.25)) ~> NewCurrencyColumn
+NewCurrencyColumn split(Country == 'USD',Country == 'CAD',disjoint: false) ~> ConditionalSplit1@(USD, CAD)
+ConditionalSplit1@USD sink(saveMode:'overwrite' ) ~> USDSink
+ConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink`,
+        sinks: [
+            {
+                dataset: {
+                    referenceName: "USDOutput",
+                    type: "DatasetReference",
+                },
+                name: "USDSink",
+            },
+            {
+                dataset: {
+                    referenceName: "CADOutput",
+                    type: "DatasetReference",
+                },
+                name: "CADSink",
+            },
+        ],
+        sources: [
+            {
+                dataset: {
+                    referenceName: "CurrencyDatasetUSD",
+                    type: "DatasetReference",
+                },
+                name: "USDCurrency",
+            },
+            {
+                dataset: {
+                    referenceName: "CurrencyDatasetCAD",
+                    type: "DatasetReference",
+                },
+                name: "CADSource",
+            },
+        ],
+        type: "MappingDataFlow",
+    },
     resourceGroupName: "exampleResourceGroup",
 });
 
@@ -113,6 +290,60 @@ class MyStack : Stack
         {
             DataFlowName = "exampleDataFlow",
             FactoryName = "exampleFactoryName",
+            Properties = new AzureNextGen.DataFactory.Latest.Inputs.MappingDataFlowArgs
+            {
+                Description = "Sample demo data flow to convert currencies showing usage of union, derive and conditional split transformation.",
+                Script = @"source(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: false,validateSchema: false) ~> USDCurrency
+source(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: true,validateSchema: false) ~> CADSource
+USDCurrency, CADSource union(byName: true)~> Union
+Union derive(NewCurrencyRate = round(CurrentConversionRate*1.25)) ~> NewCurrencyColumn
+NewCurrencyColumn split(Country == 'USD',Country == 'CAD',disjoint: false) ~> ConditionalSplit1@(USD, CAD)
+ConditionalSplit1@USD sink(saveMode:'overwrite' ) ~> USDSink
+ConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink",
+                Sinks = 
+                {
+                    new AzureNextGen.DataFactory.Latest.Inputs.DataFlowSinkArgs
+                    {
+                        Dataset = new AzureNextGen.DataFactory.Latest.Inputs.DatasetReferenceArgs
+                        {
+                            ReferenceName = "USDOutput",
+                            Type = "DatasetReference",
+                        },
+                        Name = "USDSink",
+                    },
+                    new AzureNextGen.DataFactory.Latest.Inputs.DataFlowSinkArgs
+                    {
+                        Dataset = new AzureNextGen.DataFactory.Latest.Inputs.DatasetReferenceArgs
+                        {
+                            ReferenceName = "CADOutput",
+                            Type = "DatasetReference",
+                        },
+                        Name = "CADSink",
+                    },
+                },
+                Sources = 
+                {
+                    new AzureNextGen.DataFactory.Latest.Inputs.DataFlowSourceArgs
+                    {
+                        Dataset = new AzureNextGen.DataFactory.Latest.Inputs.DatasetReferenceArgs
+                        {
+                            ReferenceName = "CurrencyDatasetUSD",
+                            Type = "DatasetReference",
+                        },
+                        Name = "USDCurrency",
+                    },
+                    new AzureNextGen.DataFactory.Latest.Inputs.DataFlowSourceArgs
+                    {
+                        Dataset = new AzureNextGen.DataFactory.Latest.Inputs.DatasetReferenceArgs
+                        {
+                            ReferenceName = "CurrencyDatasetCAD",
+                            Type = "DatasetReference",
+                        },
+                        Name = "CADSource",
+                    },
+                },
+                Type = "MappingDataFlow",
+            },
             ResourceGroupName = "exampleResourceGroup",
         });
     }
@@ -129,15 +360,52 @@ class MyStack : Stack
 package main
 
 import (
-	datafactory "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datafactory/latest"
+	datafactory "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datafactory/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := datafactory.NewDataFlow(ctx, "dataFlow", &datafactory.DataFlowArgs{
-			DataFlowName:      pulumi.String("exampleDataFlow"),
-			FactoryName:       pulumi.String("exampleFactoryName"),
+			DataFlowName: pulumi.String("exampleDataFlow"),
+			FactoryName:  pulumi.String("exampleFactoryName"),
+			Properties: &datafactory.MappingDataFlowArgs{
+				Description: pulumi.String("Sample demo data flow to convert currencies showing usage of union, derive and conditional split transformation."),
+				Script:      pulumi.String("source(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: false,validateSchema: false) ~> USDCurrency\nsource(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: true,validateSchema: false) ~> CADSource\nUSDCurrency, CADSource union(byName: true)~> Union\nUnion derive(NewCurrencyRate = round(CurrentConversionRate*1.25)) ~> NewCurrencyColumn\nNewCurrencyColumn split(Country == 'USD',Country == 'CAD',disjoint: false) ~> ConditionalSplit1@(USD, CAD)\nConditionalSplit1@USD sink(saveMode:'overwrite' ) ~> USDSink\nConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink"),
+				Sinks: datafactory.DataFlowSinkArray{
+					&datafactory.DataFlowSinkArgs{
+						Dataset: &datafactory.DatasetReferenceArgs{
+							ReferenceName: pulumi.String("USDOutput"),
+							Type:          pulumi.String("DatasetReference"),
+						},
+						Name: pulumi.String("USDSink"),
+					},
+					&datafactory.DataFlowSinkArgs{
+						Dataset: &datafactory.DatasetReferenceArgs{
+							ReferenceName: pulumi.String("CADOutput"),
+							Type:          pulumi.String("DatasetReference"),
+						},
+						Name: pulumi.String("CADSink"),
+					},
+				},
+				Sources: datafactory.DataFlowSourceArray{
+					&datafactory.DataFlowSourceArgs{
+						Dataset: &datafactory.DatasetReferenceArgs{
+							ReferenceName: pulumi.String("CurrencyDatasetUSD"),
+							Type:          pulumi.String("DatasetReference"),
+						},
+						Name: pulumi.String("USDCurrency"),
+					},
+					&datafactory.DataFlowSourceArgs{
+						Dataset: &datafactory.DatasetReferenceArgs{
+							ReferenceName: pulumi.String("CurrencyDatasetCAD"),
+							Type:          pulumi.String("DatasetReference"),
+						},
+						Name: pulumi.String("CADSource"),
+					},
+				},
+				Type: pulumi.String("MappingDataFlow"),
+			},
 			ResourceGroupName: pulumi.String("exampleResourceGroup"),
 		})
 		if err != nil {
@@ -160,6 +428,49 @@ import pulumi_azure_nextgen as azure_nextgen
 data_flow = azure_nextgen.datafactory.latest.DataFlow("dataFlow",
     data_flow_name="exampleDataFlow",
     factory_name="exampleFactoryName",
+    properties={
+        "description": "Sample demo data flow to convert currencies showing usage of union, derive and conditional split transformation.",
+        "script": """source(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: false,validateSchema: false) ~> USDCurrency
+source(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: true,validateSchema: false) ~> CADSource
+USDCurrency, CADSource union(byName: true)~> Union
+Union derive(NewCurrencyRate = round(CurrentConversionRate*1.25)) ~> NewCurrencyColumn
+NewCurrencyColumn split(Country == 'USD',Country == 'CAD',disjoint: false) ~> ConditionalSplit1@(USD, CAD)
+ConditionalSplit1@USD sink(saveMode:'overwrite' ) ~> USDSink
+ConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink""",
+        "sinks": [
+            {
+                "dataset": {
+                    "referenceName": "USDOutput",
+                    "type": "DatasetReference",
+                },
+                "name": "USDSink",
+            },
+            {
+                "dataset": {
+                    "referenceName": "CADOutput",
+                    "type": "DatasetReference",
+                },
+                "name": "CADSink",
+            },
+        ],
+        "sources": [
+            {
+                "dataset": {
+                    "referenceName": "CurrencyDatasetUSD",
+                    "type": "DatasetReference",
+                },
+                "name": "USDCurrency",
+            },
+            {
+                "dataset": {
+                    "referenceName": "CurrencyDatasetCAD",
+                    "type": "DatasetReference",
+                },
+                "name": "CADSource",
+            },
+        ],
+        "type": "MappingDataFlow",
+    },
     resource_group_name="exampleResourceGroup")
 
 ```
@@ -175,6 +486,49 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const dataFlow = new azure_nextgen.datafactory.latest.DataFlow("dataFlow", {
     dataFlowName: "exampleDataFlow",
     factoryName: "exampleFactoryName",
+    properties: {
+        description: "Sample demo data flow to convert currencies showing usage of union, derive and conditional split transformation.",
+        script: `source(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: false,validateSchema: false) ~> USDCurrency
+source(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: true,validateSchema: false) ~> CADSource
+USDCurrency, CADSource union(byName: true)~> Union
+Union derive(NewCurrencyRate = round(CurrentConversionRate*1.25)) ~> NewCurrencyColumn
+NewCurrencyColumn split(Country == 'USD',Country == 'CAD',disjoint: false) ~> ConditionalSplit1@(USD, CAD)
+ConditionalSplit1@USD sink(saveMode:'overwrite' ) ~> USDSink
+ConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink`,
+        sinks: [
+            {
+                dataset: {
+                    referenceName: "USDOutput",
+                    type: "DatasetReference",
+                },
+                name: "USDSink",
+            },
+            {
+                dataset: {
+                    referenceName: "CADOutput",
+                    type: "DatasetReference",
+                },
+                name: "CADSink",
+            },
+        ],
+        sources: [
+            {
+                dataset: {
+                    referenceName: "CurrencyDatasetUSD",
+                    type: "DatasetReference",
+                },
+                name: "USDCurrency",
+            },
+            {
+                dataset: {
+                    referenceName: "CurrencyDatasetCAD",
+                    type: "DatasetReference",
+                },
+                name: "CADSource",
+            },
+        ],
+        type: "MappingDataFlow",
+    },
     resourceGroupName: "exampleResourceGroup",
 });
 
@@ -1913,7 +2267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Arguments for dataset.{{% /md %}}</dd>
 
@@ -1950,7 +2304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]map[string]interface{}</span>
+        <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Arguments for dataset.{{% /md %}}</dd>
 
@@ -1987,7 +2341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: {[key: string]: any}}</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Arguments for dataset.{{% /md %}}</dd>
 
@@ -2024,7 +2378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any>]</span>
+        <span class="property-type">Dict[str, Any]</span>
     </dt>
     <dd>{{% md %}}Arguments for dataset.{{% /md %}}</dd>
 
@@ -2072,7 +2426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Arguments for dataset.{{% /md %}}</dd>
 
@@ -2109,7 +2463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]map[string]interface{}</span>
+        <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Arguments for dataset.{{% /md %}}</dd>
 
@@ -2146,7 +2500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: {[key: string]: any}}</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Arguments for dataset.{{% /md %}}</dd>
 
@@ -2183,7 +2537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any>]</span>
+        <span class="property-type">Dict[str, Any]</span>
     </dt>
     <dd>{{% md %}}Arguments for dataset.{{% /md %}}</dd>
 
@@ -2231,7 +2585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd>
 
@@ -2268,7 +2622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]map[string]interface{}</span>
+        <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd>
 
@@ -2305,7 +2659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: {[key: string]: any}}</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd>
 
@@ -2342,7 +2696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any>]</span>
+        <span class="property-type">Dict[str, Any]</span>
     </dt>
     <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd>
 
@@ -2390,7 +2744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd>
 
@@ -2427,7 +2781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]map[string]interface{}</span>
+        <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd>
 
@@ -2464,7 +2818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: {[key: string]: any}}</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd>
 
@@ -2501,7 +2855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any>]</span>
+        <span class="property-type">Dict[str, Any]</span>
     </dt>
     <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd>
 
@@ -2529,7 +2883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;object&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the data flow.{{% /md %}}</dd>
 
@@ -2606,7 +2960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">[]map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">[]interface{}</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the data flow.{{% /md %}}</dd>
 
@@ -2683,7 +3037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any[]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the data flow.{{% /md %}}</dd>
 
@@ -2760,7 +3114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Any>]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the data flow.{{% /md %}}</dd>
 
@@ -2848,7 +3202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;object&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the data flow.{{% /md %}}</dd>
 
@@ -2925,7 +3279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">[]map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">[]interface{}</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the data flow.{{% /md %}}</dd>
 
@@ -3002,7 +3356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any[]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the data flow.{{% /md %}}</dd>
 
@@ -3079,7 +3433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Any>]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the data flow.{{% /md %}}</dd>
 

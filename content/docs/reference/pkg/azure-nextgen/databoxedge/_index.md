@@ -28,6 +28,7 @@ Explore the resources and functions of the databoxedge module in the Azure NextG
     <li><a href="getbandwidthschedule" title="GetBandwidthSchedule"><span class="symbol function"></span>GetBandwidthSchedule</a></li>
     <li><a href="getcontainer" title="GetContainer"><span class="symbol function"></span>GetContainer</a></li>
     <li><a href="getdevice" title="GetDevice"><span class="symbol function"></span>GetDevice</a></li>
+    <li><a href="getdeviceextendedinformation" title="GetDeviceExtendedInformation"><span class="symbol function"></span>GetDeviceExtendedInformation</a></li>
     <li><a href="getorder" title="GetOrder"><span class="symbol function"></span>GetOrder</a></li>
     <li><a href="getrole" title="GetRole"><span class="symbol function"></span>GetRole</a></li>
     <li><a href="getshare" title="GetShare"><span class="symbol function"></span>GetShare</a></li>
@@ -44,7 +45,7 @@ Explore the resources and functions of the databoxedge module in the Azure NextG
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.1</dd>
 </dl>
 
 

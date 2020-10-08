@@ -30,6 +30,12 @@ class MyStack : Stack
         {
             FabricName = "Azure",
             IntentObjectName = "vm;iaasvmcontainerv2;chamsrgtest;chamscandel",
+            Properties = 
+            {
+                { "policyId", "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/Microsoft.RecoveryServices/vaults/myVault/backupPolicies/myPolicy" },
+                { "protectionIntentItemType", "AzureResourceItem" },
+                { "sourceResourceId", "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/chamsrgtest/providers/Microsoft.Compute/virtualMachines/chamscandel" },
+            },
             ResourceGroupName = "myRG",
             VaultName = "myVault",
         });
@@ -42,32 +48,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-package main
-
-import (
-	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/recoveryservices/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := recoveryservices.NewProtectionIntent(ctx, "protectionIntent", &recoveryservices.ProtectionIntentArgs{
-			FabricName:        pulumi.String("Azure"),
-			IntentObjectName:  pulumi.String("vm;iaasvmcontainerv2;chamsrgtest;chamscandel"),
-			ResourceGroupName: pulumi.String("myRG"),
-			VaultName:         pulumi.String("myVault"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -79,6 +60,11 @@ import pulumi_azure_nextgen as azure_nextgen
 protection_intent = azure_nextgen.recoveryservices.latest.ProtectionIntent("protectionIntent",
     fabric_name="Azure",
     intent_object_name="vm;iaasvmcontainerv2;chamsrgtest;chamscandel",
+    properties={
+        "policyId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/Microsoft.RecoveryServices/vaults/myVault/backupPolicies/myPolicy",
+        "protectionIntentItemType": "AzureResourceItem",
+        "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/chamsrgtest/providers/Microsoft.Compute/virtualMachines/chamscandel",
+    },
     resource_group_name="myRG",
     vault_name="myVault")
 
@@ -95,6 +81,11 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const protectionIntent = new azure_nextgen.recoveryservices.latest.ProtectionIntent("protectionIntent", {
     fabricName: "Azure",
     intentObjectName: "vm;iaasvmcontainerv2;chamsrgtest;chamscandel",
+    properties: {
+        policyId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/Microsoft.RecoveryServices/vaults/myVault/backupPolicies/myPolicy",
+        protectionIntentItemType: "AzureResourceItem",
+        sourceResourceId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/chamsrgtest/providers/Microsoft.Compute/virtualMachines/chamscandel",
+    },
     resourceGroupName: "myRG",
     vaultName: "myVault",
 });

@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	managedidentity "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/managedidentity/latest"
+	managedidentity "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/managedidentity/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

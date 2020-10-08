@@ -31,6 +31,15 @@ class MyStack : Stack
             FabricName = "b0cef6e9a4437b81803d0b55ada4f700ab66caae59c35d62723a1589c0cd13ac",
             NetworkMappingName = "corpe2amap",
             NetworkName = "e2267b5c-2650-49bd-ab3f-d66aae694c06",
+            Properties = new AzureNextGen.RecoveryServices.Latest.Inputs.CreateNetworkMappingInputPropertiesArgs
+            {
+                FabricSpecificDetails = 
+                {
+                    { "instanceType", "VmmToAzure" },
+                },
+                RecoveryFabricName = "Microsoft Azure",
+                RecoveryNetworkId = "/subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/siterecoveryProd1/providers/Microsoft.Network/virtualNetworks/vnetavrai",
+            },
             ResourceGroupName = "srcBvte2a14C27",
             ResourceName = "srce2avaultbvtaC27",
         });
@@ -43,33 +52,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-package main
-
-import (
-	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/recoveryservices/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := recoveryservices.NewReplicationNetworkMapping(ctx, "replicationNetworkMapping", &recoveryservices.ReplicationNetworkMappingArgs{
-			FabricName:         pulumi.String("b0cef6e9a4437b81803d0b55ada4f700ab66caae59c35d62723a1589c0cd13ac"),
-			NetworkMappingName: pulumi.String("corpe2amap"),
-			NetworkName:        pulumi.String("e2267b5c-2650-49bd-ab3f-d66aae694c06"),
-			ResourceGroupName:  pulumi.String("srcBvte2a14C27"),
-			ResourceName:       pulumi.String("srce2avaultbvtaC27"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -82,6 +65,13 @@ replication_network_mapping = azure_nextgen.recoveryservices.latest.ReplicationN
     fabric_name="b0cef6e9a4437b81803d0b55ada4f700ab66caae59c35d62723a1589c0cd13ac",
     network_mapping_name="corpe2amap",
     network_name="e2267b5c-2650-49bd-ab3f-d66aae694c06",
+    properties={
+        "fabricSpecificDetails": {
+            "instanceType": "VmmToAzure",
+        },
+        "recoveryFabricName": "Microsoft Azure",
+        "recoveryNetworkId": "/subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/siterecoveryProd1/providers/Microsoft.Network/virtualNetworks/vnetavrai",
+    },
     resource_group_name="srcBvte2a14C27",
     resource_name="srce2avaultbvtaC27")
 
@@ -99,6 +89,13 @@ const replicationNetworkMapping = new azure_nextgen.recoveryservices.latest.Repl
     fabricName: "b0cef6e9a4437b81803d0b55ada4f700ab66caae59c35d62723a1589c0cd13ac",
     networkMappingName: "corpe2amap",
     networkName: "e2267b5c-2650-49bd-ab3f-d66aae694c06",
+    properties: {
+        fabricSpecificDetails: {
+            instanceType: "VmmToAzure",
+        },
+        recoveryFabricName: "Microsoft Azure",
+        recoveryNetworkId: "/subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/siterecoveryProd1/providers/Microsoft.Network/virtualNetworks/vnetavrai",
+    },
     resourceGroupName: "srcBvte2a14C27",
     resourceName: "srce2avaultbvtaC27",
 });

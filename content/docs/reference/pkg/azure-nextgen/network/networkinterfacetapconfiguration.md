@@ -12,6 +12,107 @@ meta_desc: "Explore the NetworkInterfaceTapConfiguration resource of the network
 
 Tap configuration in a Network Interface.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create Network Interface Tap Configurations
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var networkInterfaceTapConfiguration = new AzureNextGen.Network.Latest.NetworkInterfaceTapConfiguration("networkInterfaceTapConfiguration", new AzureNextGen.Network.Latest.NetworkInterfaceTapConfigurationArgs
+        {
+            NetworkInterfaceName = "mynic",
+            ResourceGroupName = "testrg",
+            TapConfigurationName = "tapconfiguration1",
+            VirtualNetworkTap = new AzureNextGen.Network.Latest.Inputs.VirtualNetworkTapArgs
+            {
+                Id = "/subscriptions/subid/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworkTaps/testvtap",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewNetworkInterfaceTapConfiguration(ctx, "networkInterfaceTapConfiguration", &network.NetworkInterfaceTapConfigurationArgs{
+			NetworkInterfaceName: pulumi.String("mynic"),
+			ResourceGroupName:    pulumi.String("testrg"),
+			TapConfigurationName: pulumi.String("tapconfiguration1"),
+			VirtualNetworkTap: &network.VirtualNetworkTapArgs{
+				Id: pulumi.String("/subscriptions/subid/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworkTaps/testvtap"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+network_interface_tap_configuration = azure_nextgen.network.latest.NetworkInterfaceTapConfiguration("networkInterfaceTapConfiguration",
+    network_interface_name="mynic",
+    resource_group_name="testrg",
+    tap_configuration_name="tapconfiguration1",
+    virtual_network_tap={
+        "id": "/subscriptions/subid/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworkTaps/testvtap",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const networkInterfaceTapConfiguration = new azure_nextgen.network.latest.NetworkInterfaceTapConfiguration("networkInterfaceTapConfiguration", {
+    networkInterfaceName: "mynic",
+    resourceGroupName: "testrg",
+    tapConfigurationName: "tapconfiguration1",
+    virtualNetworkTap: {
+        id: "/subscriptions/subid/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworkTaps/testvtap",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NetworkInterfaceTapConfiguration Resource {#create}
@@ -18952,7 +19053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -18969,7 +19070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -18986,7 +19087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -19003,7 +19104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

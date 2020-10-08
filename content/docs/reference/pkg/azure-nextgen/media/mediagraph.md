@@ -51,19 +51,22 @@ class MyStack : Stack
                 {
                     Endpoint = 
                     {
-                        { "@odata.type", "#Microsoft.Media.MediaGraphClearEndpoint" },
                         { "credentials", new AzureNextGen.Media.V20200201Preview.Inputs.MediaGraphUsernamePasswordCredentialsArgs
                         {
-                            %!v(PANIC=Format method: interface conversion: model.Expression is *model.TemplateExpression, not *model.LiteralValueExpression) },
-                            { "url", "rtsp://contoso.com:554/stream1" },
-                        },
-                        Name = "rtspSource",
-                        OdataType = "#Microsoft.Media.MediaGraphRtspSource",
-                        Transport = "Http",
+                            OdataType = "#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
+                            Password = "examplepassword",
+                            Username = "exampleusername",
+                        } },
+                        { "odataType", "#Microsoft.Media.MediaGraphClearEndpoint" },
+                        { "url", "rtsp://contoso.com:554/stream1" },
                     },
+                    Name = "rtspSource",
+                    OdataType = "#Microsoft.Media.MediaGraphRtspSource",
+                    Transport = "Http",
                 },
-            });
-        }
+            },
+        });
+    }
 
 }
 
@@ -94,12 +97,12 @@ media_graph = azure_nextgen.media.v20200201preview.MediaGraph("mediaGraph",
     }],
     sources=[{
         "endpoint": {
-            "@odata.type": "#Microsoft.Media.MediaGraphClearEndpoint",
             "credentials": {
-                "@odata.type": "#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
+                "odataType": "#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
                 "password": "examplepassword",
                 "username": "exampleusername",
             },
+            "odataType": "#Microsoft.Media.MediaGraphClearEndpoint",
             "url": "rtsp://contoso.com:554/stream1",
         },
         "name": "rtspSource",
@@ -130,12 +133,12 @@ const mediaGraph = new azure_nextgen.media.v20200201preview.MediaGraph("mediaGra
     }],
     sources: [{
         endpoint: {
-            "@odata.type": "#Microsoft.Media.MediaGraphClearEndpoint",
             credentials: {
-                "@odata.type": "#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
+                odataType: "#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
                 password: "examplepassword",
                 username: "exampleusername",
             },
+            odataType: "#Microsoft.Media.MediaGraphClearEndpoint",
             url: "rtsp://contoso.com:554/stream1",
         },
         name: "rtspSource",
@@ -183,27 +186,55 @@ class MyStack : Stack
                 {
                     Endpoint = 
                     {
-                        { "@odata.type", "#Microsoft.Media.MediaGraphTlsEndpoint" },
                         { "credentials", new AzureNextGen.Media.V20200201Preview.Inputs.MediaGraphUsernamePasswordCredentialsArgs
                         {
-                            %!v(PANIC=Format method: interface conversion: model.Expression is *model.TemplateExpression, not *model.LiteralValueExpression) },
-                            { "trustedCertificates", new AzureNextGen.Media.V20200201Preview.Inputs.MediaGraphPemCertificateListArgs
+                            OdataType = "#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
+                            Password = "examplepassword",
+                            Username = "exampleusername",
+                        } },
+                        { "odataType", "#Microsoft.Media.MediaGraphTlsEndpoint" },
+                        { "trustedCertificates", new AzureNextGen.Media.V20200201Preview.Inputs.MediaGraphPemCertificateListArgs
+                        {
+                            Certificates = 
                             {
-                                %!v(PANIC=Format method: interface conversion: model.Expression is *model.TemplateExpression, not *model.LiteralValueExpression) },
-                                { "url", "rtsps://contoso.com:443/stream1" },
-                                { "validationOptions", new AzureNextGen.Media.V20200201Preview.Inputs.MediaGraphTlsValidationOptionsArgs
-                                {
-                                    IgnoreHostname = true,
-                                    IgnoreSignature = false,
-                                } },
+                                @"-----BEGIN CERTIFICATE-----
+MIIDhTCCAm2gAwIBAgIUajvPKmoO+8qaO89/ZGATl7ZYnTswDQYJKoZIhvcNAQEL
+BQAwUTESMBAGA1UECgwJTWljcm9zb2Z0MRQwEgYDVQQLDAtBenVyZSBNZWRpYTEl
+MCMGA1UEAwwcKFVudHJ1c3RlZCkgVGVzdCBDZXJ0aWZpY2F0ZTAgFw0yMDAyMDYy
+MTI5MTlaGA8zMDE5MDYwOTIxMjkxOVowUTESMBAGA1UECgwJTWljcm9zb2Z0MRQw
+EgYDVQQLDAtBenVyZSBNZWRpYTElMCMGA1UEAwwcKFVudHJ1c3RlZCkgVGVzdCBD
+ZXJ0aWZpY2F0ZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK2lg5ff
+7xXPaBZXHl/zrTukdiBtu7BNIOchHba51eloruPRzpvQx7Pedk3CVTut7LYinijf
+uol0EwkQ2FLt2i2jOqiva9nXR95ujIZHcKsEeMC4RSNSP4++k6SpP8FgyYVdv5ru
+f8GC+HyYQ4j0TqpR/cJs53l/LGRSldaFZ6fcDde1jeyca4VivAbAH1/WDIOvmjzo
+9XIGxZ10VSS5l5+DIgdkJZ+mDMLJIuVZ0YVF16ZGEB3beq1trk5lItvmSjQLTllH
+qMFm9UGY8jKZSo/BY8ewHEtnGSAFQK0TVuRx1HhUWwu6C9jk+2zmRS2090BNpQWa
+JMKFJrSPzFDPRX8CAwEAAaNTMFEwHQYDVR0OBBYEFIumbhu0lYk0EFDThEg0yyIn
+/wZZMB8GA1UdIwQYMBaAFIumbhu0lYk0EFDThEg0yyIn/wZZMA8GA1UdEwEB/wQF
+MAMBAf8wDQYJKoZIhvcNAQELBQADggEBADUNw+/NGNVtigq9tMJKqlk39MTpDn1s
+Z1BVIAuAWSQjlevYZJeDIPUiWNWFhRe+xN7oOLnn2+NIXEKKeMSyuPoZYbN0mBkB
+99oS3XVipSANpmDvIepNdCrOnjfqDFIifRF1Dqjtb6i1hb6v/qYKVPLQvcrgGur7
+PKKkAu9p4YRZ3RBdwwaUuMgojrj/l6DGbeJY6IRVnVMY39rryMnZjA5xUlhCu55n
+oB3t/jsJLwnQN+JbAjLAeuqgOWtgARsEFzvpt+VvDsaj0YLOJPhyJwTvHgaa/slB
+nECzd3TuyFKYeGssSni/QQ1e7yZcLapQqz66g5otdriw0IRdOfDxm5M=
+-----END CERTIFICATE-----",
                             },
-                            Name = "rtspSource",
-                            OdataType = "#Microsoft.Media.MediaGraphRtspSource",
-                            Transport = "Http",
-                        },
+                            OdataType = "#Microsoft.Media.MediaGraphPemCertificateList",
+                        } },
+                        { "url", "rtsps://contoso.com:443/stream1" },
+                        { "validationOptions", new AzureNextGen.Media.V20200201Preview.Inputs.MediaGraphTlsValidationOptionsArgs
+                        {
+                            IgnoreHostname = true,
+                            IgnoreSignature = false,
+                        } },
                     },
-                });
-            }
+                    Name = "rtspSource",
+                    OdataType = "#Microsoft.Media.MediaGraphRtspSource",
+                    Transport = "Http",
+                },
+            },
+        });
+    }
 
 }
 
@@ -234,14 +265,13 @@ media_graph = azure_nextgen.media.v20200201preview.MediaGraph("mediaGraph",
     }],
     sources=[{
         "endpoint": {
-            "@odata.type": "#Microsoft.Media.MediaGraphTlsEndpoint",
             "credentials": {
-                "@odata.type": "#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
+                "odataType": "#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
                 "password": "examplepassword",
                 "username": "exampleusername",
             },
+            "odataType": "#Microsoft.Media.MediaGraphTlsEndpoint",
             "trustedCertificates": {
-                "@odata.type": "#Microsoft.Media.MediaGraphPemCertificateList",
                 "certificates": ["""-----BEGIN CERTIFICATE-----
 MIIDhTCCAm2gAwIBAgIUajvPKmoO+8qaO89/ZGATl7ZYnTswDQYJKoZIhvcNAQEL
 BQAwUTESMBAGA1UECgwJTWljcm9zb2Z0MRQwEgYDVQQLDAtBenVyZSBNZWRpYTEl
@@ -263,6 +293,7 @@ PKKkAu9p4YRZ3RBdwwaUuMgojrj/l6DGbeJY6IRVnVMY39rryMnZjA5xUlhCu55n
 oB3t/jsJLwnQN+JbAjLAeuqgOWtgARsEFzvpt+VvDsaj0YLOJPhyJwTvHgaa/slB
 nECzd3TuyFKYeGssSni/QQ1e7yZcLapQqz66g5otdriw0IRdOfDxm5M=
 -----END CERTIFICATE-----"""],
+                "odataType": "#Microsoft.Media.MediaGraphPemCertificateList",
             },
             "url": "rtsps://contoso.com:443/stream1",
             "validationOptions": {
@@ -298,14 +329,13 @@ const mediaGraph = new azure_nextgen.media.v20200201preview.MediaGraph("mediaGra
     }],
     sources: [{
         endpoint: {
-            "@odata.type": "#Microsoft.Media.MediaGraphTlsEndpoint",
             credentials: {
-                "@odata.type": "#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
+                odataType: "#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
                 password: "examplepassword",
                 username: "exampleusername",
             },
+            odataType: "#Microsoft.Media.MediaGraphTlsEndpoint",
             trustedCertificates: {
-                "@odata.type": "#Microsoft.Media.MediaGraphPemCertificateList",
                 certificates: [`-----BEGIN CERTIFICATE-----
 MIIDhTCCAm2gAwIBAgIUajvPKmoO+8qaO89/ZGATl7ZYnTswDQYJKoZIhvcNAQEL
 BQAwUTESMBAGA1UECgwJTWljcm9zb2Z0MRQwEgYDVQQLDAtBenVyZSBNZWRpYTEl
@@ -327,6 +357,7 @@ PKKkAu9p4YRZ3RBdwwaUuMgojrj/l6DGbeJY6IRVnVMY39rryMnZjA5xUlhCu55n
 oB3t/jsJLwnQN+JbAjLAeuqgOWtgARsEFzvpt+VvDsaj0YLOJPhyJwTvHgaa/slB
 nECzd3TuyFKYeGssSni/QQ1e7yZcLapQqz66g5otdriw0IRdOfDxm5M=
 -----END CERTIFICATE-----`],
+                odataType: "#Microsoft.Media.MediaGraphPemCertificateList",
             },
             url: "rtsps://contoso.com:443/stream1",
             validationOptions: {

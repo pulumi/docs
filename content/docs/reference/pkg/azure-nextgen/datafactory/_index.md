@@ -25,12 +25,20 @@ Explore the resources and functions of the datafactory module in the Azure NextG
 <ul class="api">
     <li><a href="getdataflow" title="GetDataFlow"><span class="symbol function"></span>GetDataFlow</a></li>
     <li><a href="getdataset" title="GetDataset"><span class="symbol function"></span>GetDataset</a></li>
+    <li><a href="getexposurecontrolfeaturevalue" title="GetExposureControlFeatureValue"><span class="symbol function"></span>GetExposureControlFeatureValue</a></li>
+    <li><a href="getexposurecontrolfeaturevaluebyfactory" title="GetExposureControlFeatureValueByFactory"><span class="symbol function"></span>GetExposureControlFeatureValueByFactory</a></li>
     <li><a href="getfactory" title="GetFactory"><span class="symbol function"></span>GetFactory</a></li>
+    <li><a href="getfactorydataplaneaccess" title="GetFactoryDataPlaneAccess"><span class="symbol function"></span>GetFactoryDataPlaneAccess</a></li>
+    <li><a href="getfactorygithubaccesstoken" title="GetFactoryGitHubAccessToken"><span class="symbol function"></span>GetFactoryGitHubAccessToken</a></li>
     <li><a href="getintegrationruntime" title="GetIntegrationRuntime"><span class="symbol function"></span>GetIntegrationRuntime</a></li>
+    <li><a href="getintegrationruntimeconnectioninfo" title="GetIntegrationRuntimeConnectionInfo"><span class="symbol function"></span>GetIntegrationRuntimeConnectionInfo</a></li>
+    <li><a href="getintegrationruntimeobjectmetadatum" title="GetIntegrationRuntimeObjectMetadatum"><span class="symbol function"></span>GetIntegrationRuntimeObjectMetadatum</a></li>
+    <li><a href="getintegrationruntimestatus" title="GetIntegrationRuntimeStatus"><span class="symbol function"></span>GetIntegrationRuntimeStatus</a></li>
     <li><a href="getlinkedservice" title="GetLinkedService"><span class="symbol function"></span>GetLinkedService</a></li>
     <li><a href="getmanagedprivateendpoint" title="GetManagedPrivateEndpoint"><span class="symbol function"></span>GetManagedPrivateEndpoint</a></li>
     <li><a href="getpipeline" title="GetPipeline"><span class="symbol function"></span>GetPipeline</a></li>
     <li><a href="gettrigger" title="GetTrigger"><span class="symbol function"></span>GetTrigger</a></li>
+    <li><a href="gettriggereventsubscriptionstatus" title="GetTriggerEventSubscriptionStatus"><span class="symbol function"></span>GetTriggerEventSubscriptionStatus</a></li>
     <li><a href="listintegrationruntimeauthkeys" title="ListIntegrationRuntimeAuthKeys"><span class="symbol function"></span>ListIntegrationRuntimeAuthKeys</a></li>
 </ul>
 
@@ -41,7 +49,7 @@ Explore the resources and functions of the datafactory module in the Azure NextG
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.1</dd>
 </dl>
 
 

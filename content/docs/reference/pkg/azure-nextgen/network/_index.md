@@ -20,7 +20,6 @@ Explore the resources and functions of the network module in the Azure NextGen p
     <li><a href="customipprefix" title="CustomIPPrefix"><span class="symbol resource"></span>CustomIPPrefix</a></li>
     <li><a href="ddoscustompolicy" title="DdosCustomPolicy"><span class="symbol resource"></span>DdosCustomPolicy</a></li>
     <li><a href="ddosprotectionplan" title="DdosProtectionPlan"><span class="symbol resource"></span>DdosProtectionPlan</a></li>
-    <li><a href="delegatedsubnetservicedetails" title="DelegatedSubnetServiceDetails"><span class="symbol resource"></span>DelegatedSubnetServiceDetails</a></li>
     <li><a href="dscpconfiguration" title="DscpConfiguration"><span class="symbol resource"></span>DscpConfiguration</a></li>
     <li><a href="endpoint" title="Endpoint"><span class="symbol resource"></span>Endpoint</a></li>
     <li><a href="experiment" title="Experiment"><span class="symbol resource"></span>Experiment</a></li>
@@ -102,16 +101,19 @@ Explore the resources and functions of the network module in the Azure NextGen p
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getactivesessions" title="GetActiveSessions"><span class="symbol function"></span>GetActiveSessions</a></li>
     <li><a href="getapplicationgateway" title="GetApplicationGateway"><span class="symbol function"></span>GetApplicationGateway</a></li>
+    <li><a href="getapplicationgatewaybackendhealthondemand" title="GetApplicationGatewayBackendHealthOnDemand"><span class="symbol function"></span>GetApplicationGatewayBackendHealthOnDemand</a></li>
     <li><a href="getapplicationgatewayprivateendpointconnection" title="GetApplicationGatewayPrivateEndpointConnection"><span class="symbol function"></span>GetApplicationGatewayPrivateEndpointConnection</a></li>
     <li><a href="getapplicationsecuritygroup" title="GetApplicationSecurityGroup"><span class="symbol function"></span>GetApplicationSecurityGroup</a></li>
     <li><a href="getazurefirewall" title="GetAzureFirewall"><span class="symbol function"></span>GetAzureFirewall</a></li>
     <li><a href="getbastionhost" title="GetBastionHost"><span class="symbol function"></span>GetBastionHost</a></li>
+    <li><a href="getbastionshareablelink" title="GetBastionShareableLink"><span class="symbol function"></span>GetBastionShareableLink</a></li>
     <li><a href="getconnectionmonitor" title="GetConnectionMonitor"><span class="symbol function"></span>GetConnectionMonitor</a></li>
     <li><a href="getcustomipprefix" title="GetCustomIPPrefix"><span class="symbol function"></span>GetCustomIPPrefix</a></li>
     <li><a href="getddoscustompolicy" title="GetDdosCustomPolicy"><span class="symbol function"></span>GetDdosCustomPolicy</a></li>
     <li><a href="getddosprotectionplan" title="GetDdosProtectionPlan"><span class="symbol function"></span>GetDdosProtectionPlan</a></li>
-    <li><a href="getdelegatedsubnetservicedetails" title="GetDelegatedSubnetServiceDetails"><span class="symbol function"></span>GetDelegatedSubnetServiceDetails</a></li>
+    <li><a href="getdnsresourcereferencebytarresources" title="GetDnsResourceReferenceByTarResources"><span class="symbol function"></span>GetDnsResourceReferenceByTarResources</a></li>
     <li><a href="getdscpconfiguration" title="GetDscpConfiguration"><span class="symbol function"></span>GetDscpConfiguration</a></li>
     <li><a href="getendpoint" title="GetEndpoint"><span class="symbol function"></span>GetEndpoint</a></li>
     <li><a href="getexperiment" title="GetExperiment"><span class="symbol function"></span>GetExperiment</a></li>
@@ -146,6 +148,8 @@ Explore the resources and functions of the network module in the Azure NextGen p
     <li><a href="getnetworkvirtualappliance" title="GetNetworkVirtualAppliance"><span class="symbol function"></span>GetNetworkVirtualAppliance</a></li>
     <li><a href="getnetworkwatcher" title="GetNetworkWatcher"><span class="symbol function"></span>GetNetworkWatcher</a></li>
     <li><a href="getp2svpngateway" title="GetP2sVpnGateway"><span class="symbol function"></span>GetP2sVpnGateway</a></li>
+    <li><a href="getp2svpngatewayp2svpnconnectionhealth" title="GetP2sVpnGatewayP2sVpnConnectionHealth"><span class="symbol function"></span>GetP2sVpnGatewayP2sVpnConnectionHealth</a></li>
+    <li><a href="getp2svpngatewayp2svpnconnectionhealthdetailed" title="GetP2sVpnGatewayP2sVpnConnectionHealthDetailed"><span class="symbol function"></span>GetP2sVpnGatewayP2sVpnConnectionHealthDetailed</a></li>
     <li><a href="getp2svpnserverconfiguration" title="GetP2sVpnServerConfiguration"><span class="symbol function"></span>GetP2sVpnServerConfiguration</a></li>
     <li><a href="getpacketcapture" title="GetPacketCapture"><span class="symbol function"></span>GetPacketCapture</a></li>
     <li><a href="getpolicy" title="GetPolicy"><span class="symbol function"></span>GetPolicy</a></li>
@@ -176,7 +180,12 @@ Explore the resources and functions of the network module in the Azure NextGen p
     <li><a href="getvirtualhubroutetablev2" title="GetVirtualHubRouteTableV2"><span class="symbol function"></span>GetVirtualHubRouteTableV2</a></li>
     <li><a href="getvirtualnetwork" title="GetVirtualNetwork"><span class="symbol function"></span>GetVirtualNetwork</a></li>
     <li><a href="getvirtualnetworkgateway" title="GetVirtualNetworkGateway"><span class="symbol function"></span>GetVirtualNetworkGateway</a></li>
+    <li><a href="getvirtualnetworkgatewayadvertisedroutes" title="GetVirtualNetworkGatewayAdvertisedRoutes"><span class="symbol function"></span>GetVirtualNetworkGatewayAdvertisedRoutes</a></li>
+    <li><a href="getvirtualnetworkgatewaybgppeerstatus" title="GetVirtualNetworkGatewayBgpPeerStatus"><span class="symbol function"></span>GetVirtualNetworkGatewayBgpPeerStatus</a></li>
     <li><a href="getvirtualnetworkgatewayconnection" title="GetVirtualNetworkGatewayConnection"><span class="symbol function"></span>GetVirtualNetworkGatewayConnection</a></li>
+    <li><a href="getvirtualnetworkgatewaylearnedroutes" title="GetVirtualNetworkGatewayLearnedRoutes"><span class="symbol function"></span>GetVirtualNetworkGatewayLearnedRoutes</a></li>
+    <li><a href="getvirtualnetworkgatewayvpnclientconnectionhealth" title="GetVirtualNetworkGatewayVpnclientConnectionHealth"><span class="symbol function"></span>GetVirtualNetworkGatewayVpnclientConnectionHealth</a></li>
+    <li><a href="getvirtualnetworkgatewayvpnclientipsecparameters" title="GetVirtualNetworkGatewayVpnclientIpsecParameters"><span class="symbol function"></span>GetVirtualNetworkGatewayVpnclientIpsecParameters</a></li>
     <li><a href="getvirtualnetworklink" title="GetVirtualNetworkLink"><span class="symbol function"></span>GetVirtualNetworkLink</a></li>
     <li><a href="getvirtualnetworkpeering" title="GetVirtualNetworkPeering"><span class="symbol function"></span>GetVirtualNetworkPeering</a></li>
     <li><a href="getvirtualnetworktap" title="GetVirtualNetworkTap"><span class="symbol function"></span>GetVirtualNetworkTap</a></li>
@@ -198,7 +207,7 @@ Explore the resources and functions of the network module in the Azure NextGen p
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.1</dd>
 </dl>
 
 

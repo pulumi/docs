@@ -28,6 +28,11 @@ class MyStack : Stack
     {
         var roleAssignment = new AzureNextGen.Authorization.Latest.RoleAssignment("roleAssignment", new AzureNextGen.Authorization.Latest.RoleAssignmentArgs
         {
+            Properties = new AzureNextGen.Authorization.Latest.Inputs.RoleAssignmentPropertiesArgs
+            {
+                PrincipalId = "d93a38bc-d029-4160-bfb0-fbda779ac214",
+                RoleDefinitionId = "/subscriptions/4004a9fd-d58e-48dc-aeb2-4a4aec58606f/providers/Microsoft.Authorization/roleDefinitions/de139f84-1756-47ae-9be6-808fbbe84772",
+            },
             RoleAssignmentName = "roleAssignmentName",
             Scope = "scope",
         });
@@ -45,13 +50,17 @@ class MyStack : Stack
 package main
 
 import (
-	authorization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/authorization/latest"
+	authorization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/authorization/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := authorization.NewRoleAssignment(ctx, "roleAssignment", &authorization.RoleAssignmentArgs{
+			Properties: &authorization.RoleAssignmentPropertiesArgs{
+				PrincipalId:      pulumi.String("d93a38bc-d029-4160-bfb0-fbda779ac214"),
+				RoleDefinitionId: pulumi.String("/subscriptions/4004a9fd-d58e-48dc-aeb2-4a4aec58606f/providers/Microsoft.Authorization/roleDefinitions/de139f84-1756-47ae-9be6-808fbbe84772"),
+			},
 			RoleAssignmentName: pulumi.String("roleAssignmentName"),
 			Scope:              pulumi.String("scope"),
 		})
@@ -73,6 +82,10 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 role_assignment = azure_nextgen.authorization.latest.RoleAssignment("roleAssignment",
+    properties={
+        "principalId": "d93a38bc-d029-4160-bfb0-fbda779ac214",
+        "roleDefinitionId": "/subscriptions/4004a9fd-d58e-48dc-aeb2-4a4aec58606f/providers/Microsoft.Authorization/roleDefinitions/de139f84-1756-47ae-9be6-808fbbe84772",
+    },
     role_assignment_name="roleAssignmentName",
     scope="scope")
 
@@ -87,6 +100,10 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const roleAssignment = new azure_nextgen.authorization.latest.RoleAssignment("roleAssignment", {
+    properties: {
+        principalId: "d93a38bc-d029-4160-bfb0-fbda779ac214",
+        roleDefinitionId: "/subscriptions/4004a9fd-d58e-48dc-aeb2-4a4aec58606f/providers/Microsoft.Authorization/roleDefinitions/de139f84-1756-47ae-9be6-808fbbe84772",
+    },
     roleAssignmentName: "roleAssignmentName",
     scope: "scope",
 });

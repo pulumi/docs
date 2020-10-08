@@ -31,6 +31,23 @@ class MyStack : Stack
             Etag = "etag1",
             Kind = "sdk",
             Location = "West US",
+            Properties = new AzureNextGen.BotService.Latest.Inputs.BotPropertiesArgs
+            {
+                Description = "The description of the bot",
+                DeveloperAppInsightKey = "appinsightskey",
+                DeveloperAppInsightsApiKey = "appinsightsapikey",
+                DeveloperAppInsightsApplicationId = "appinsightsappid",
+                DisplayName = "The Name of the bot",
+                Endpoint = "http://mybot.coffee",
+                IconUrl = "http://myicon",
+                LuisAppIds = 
+                {
+                    "luisappid1",
+                    "luisappid2",
+                },
+                LuisKey = "luiskey",
+                MsaAppId = "exampleappid",
+            },
             ResourceGroupName = "OneResourceGroupName",
             ResourceName = "samplebotname",
             Sku = new AzureNextGen.BotService.Latest.Inputs.SkuArgs
@@ -57,16 +74,31 @@ class MyStack : Stack
 package main
 
 import (
-	botservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/botservice/latest"
+	botservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/botservice/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := botservice.NewBot(ctx, "bot", &botservice.BotArgs{
-			Etag:              pulumi.String("etag1"),
-			Kind:              pulumi.String("sdk"),
-			Location:          pulumi.String("West US"),
+			Etag:     pulumi.String("etag1"),
+			Kind:     pulumi.String("sdk"),
+			Location: pulumi.String("West US"),
+			Properties: &botservice.BotPropertiesArgs{
+				Description:                       pulumi.String("The description of the bot"),
+				DeveloperAppInsightKey:            pulumi.String("appinsightskey"),
+				DeveloperAppInsightsApiKey:        pulumi.String("appinsightsapikey"),
+				DeveloperAppInsightsApplicationId: pulumi.String("appinsightsappid"),
+				DisplayName:                       pulumi.String("The Name of the bot"),
+				Endpoint:                          pulumi.String("http://mybot.coffee"),
+				IconUrl:                           pulumi.String("http://myicon"),
+				LuisAppIds: pulumi.StringArray{
+					pulumi.String("luisappid1"),
+					pulumi.String("luisappid2"),
+				},
+				LuisKey:  pulumi.String("luiskey"),
+				MsaAppId: pulumi.String("exampleappid"),
+			},
 			ResourceGroupName: pulumi.String("OneResourceGroupName"),
 			ResourceName:      pulumi.String("samplebotname"),
 			Sku: &botservice.SkuArgs{
@@ -98,6 +130,21 @@ bot = azure_nextgen.botservice.latest.Bot("bot",
     etag="etag1",
     kind="sdk",
     location="West US",
+    properties={
+        "description": "The description of the bot",
+        "developerAppInsightKey": "appinsightskey",
+        "developerAppInsightsApiKey": "appinsightsapikey",
+        "developerAppInsightsApplicationId": "appinsightsappid",
+        "displayName": "The Name of the bot",
+        "endpoint": "http://mybot.coffee",
+        "iconUrl": "http://myicon",
+        "luisAppIds": [
+            "luisappid1",
+            "luisappid2",
+        ],
+        "luisKey": "luiskey",
+        "msaAppId": "exampleappid",
+    },
     resource_group_name="OneResourceGroupName",
     resource_name="samplebotname",
     sku={
@@ -122,6 +169,21 @@ const bot = new azure_nextgen.botservice.latest.Bot("bot", {
     etag: "etag1",
     kind: "sdk",
     location: "West US",
+    properties: {
+        description: "The description of the bot",
+        developerAppInsightKey: "appinsightskey",
+        developerAppInsightsApiKey: "appinsightsapikey",
+        developerAppInsightsApplicationId: "appinsightsappid",
+        displayName: "The Name of the bot",
+        endpoint: "http://mybot.coffee",
+        iconUrl: "http://myicon",
+        luisAppIds: [
+            "luisappid1",
+            "luisappid2",
+        ],
+        luisKey: "luiskey",
+        msaAppId: "exampleappid",
+    },
     resourceGroupName: "OneResourceGroupName",
     resourceName: "samplebotname",
     sku: {

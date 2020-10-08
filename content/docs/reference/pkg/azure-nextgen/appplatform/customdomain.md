@@ -30,6 +30,11 @@ class MyStack : Stack
         {
             AppName = "myapp",
             DomainName = "mydomain.com",
+            Properties = new AzureNextGen.AppPlatform.Latest.Inputs.CustomDomainPropertiesArgs
+            {
+                CertName = "mycert",
+                Thumbprint = "934367bf1c97033f877db0f15cb1b586957d3133",
+            },
             ResourceGroupName = "myResourceGroup",
             ServiceName = "myservice",
         });
@@ -47,15 +52,19 @@ class MyStack : Stack
 package main
 
 import (
-	appplatform "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/appplatform/latest"
+	appplatform "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/appplatform/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := appplatform.NewCustomDomain(ctx, "customDomain", &appplatform.CustomDomainArgs{
-			AppName:           pulumi.String("myapp"),
-			DomainName:        pulumi.String("mydomain.com"),
+			AppName:    pulumi.String("myapp"),
+			DomainName: pulumi.String("mydomain.com"),
+			Properties: &appplatform.CustomDomainPropertiesArgs{
+				CertName:   pulumi.String("mycert"),
+				Thumbprint: pulumi.String("934367bf1c97033f877db0f15cb1b586957d3133"),
+			},
 			ResourceGroupName: pulumi.String("myResourceGroup"),
 			ServiceName:       pulumi.String("myservice"),
 		})
@@ -79,6 +88,10 @@ import pulumi_azure_nextgen as azure_nextgen
 custom_domain = azure_nextgen.appplatform.latest.CustomDomain("customDomain",
     app_name="myapp",
     domain_name="mydomain.com",
+    properties={
+        "certName": "mycert",
+        "thumbprint": "934367bf1c97033f877db0f15cb1b586957d3133",
+    },
     resource_group_name="myResourceGroup",
     service_name="myservice")
 
@@ -95,6 +108,10 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const customDomain = new azure_nextgen.appplatform.latest.CustomDomain("customDomain", {
     appName: "myapp",
     domainName: "mydomain.com",
+    properties: {
+        certName: "mycert",
+        thumbprint: "934367bf1c97033f877db0f15cb1b586957d3133",
+    },
     resourceGroupName: "myResourceGroup",
     serviceName: "myservice",
 });

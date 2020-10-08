@@ -31,6 +31,12 @@ class MyStack : Stack
             FactoryName = "exampleFactoryName",
             ManagedPrivateEndpointName = "exampleManagedPrivateEndpointName",
             ManagedVirtualNetworkName = "exampleManagedVirtualNetworkName",
+            Properties = new AzureNextGen.DataFactory.Latest.Inputs.ManagedPrivateEndpointArgs
+            {
+                Fqdns = {},
+                GroupId = "blob",
+                PrivateLinkResourceId = "/subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.Storage/storageAccounts/exampleBlobStorage",
+            },
             ResourceGroupName = "exampleResourceGroup",
         });
     }
@@ -47,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	datafactory "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datafactory/latest"
+	datafactory "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datafactory/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -57,7 +63,12 @@ func main() {
 			FactoryName:                pulumi.String("exampleFactoryName"),
 			ManagedPrivateEndpointName: pulumi.String("exampleManagedPrivateEndpointName"),
 			ManagedVirtualNetworkName:  pulumi.String("exampleManagedVirtualNetworkName"),
-			ResourceGroupName:          pulumi.String("exampleResourceGroup"),
+			Properties: &datafactory.ManagedPrivateEndpointArgs{
+				Fqdns:                 []interface{}{},
+				GroupId:               pulumi.String("blob"),
+				PrivateLinkResourceId: pulumi.String("/subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.Storage/storageAccounts/exampleBlobStorage"),
+			},
+			ResourceGroupName: pulumi.String("exampleResourceGroup"),
 		})
 		if err != nil {
 			return err
@@ -80,6 +91,11 @@ managed_private_endpoint = azure_nextgen.datafactory.latest.ManagedPrivateEndpoi
     factory_name="exampleFactoryName",
     managed_private_endpoint_name="exampleManagedPrivateEndpointName",
     managed_virtual_network_name="exampleManagedVirtualNetworkName",
+    properties={
+        "fqdns": [],
+        "groupId": "blob",
+        "privateLinkResourceId": "/subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.Storage/storageAccounts/exampleBlobStorage",
+    },
     resource_group_name="exampleResourceGroup")
 
 ```
@@ -96,6 +112,11 @@ const managedPrivateEndpoint = new azure_nextgen.datafactory.latest.ManagedPriva
     factoryName: "exampleFactoryName",
     managedPrivateEndpointName: "exampleManagedPrivateEndpointName",
     managedVirtualNetworkName: "exampleManagedVirtualNetworkName",
+    properties: {
+        fqdns: [],
+        groupId: "blob",
+        privateLinkResourceId: "/subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.Storage/storageAccounts/exampleBlobStorage",
+    },
     resourceGroupName: "exampleResourceGroup",
 });
 

@@ -30,6 +30,12 @@ class MyStack : Stack
         {
             ContainerName = "IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
             FabricName = "Azure",
+            Properties = 
+            {
+                { "policyId", "/Subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/SwaggerTestRg/providers/Microsoft.RecoveryServices/vaults/NetSDKTestRsVault/backupPolicies/DefaultPolicy" },
+                { "protectedItemType", "Microsoft.Compute/virtualMachines" },
+                { "sourceResourceId", "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/netsdktestrg/providers/Microsoft.Compute/virtualMachines/netvmtestv2vm1" },
+            },
             ProtectedItemName = "VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
             ResourceGroupName = "SwaggerTestRg",
             VaultName = "NetSDKTestRsVault",
@@ -43,33 +49,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-package main
-
-import (
-	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/recoveryservices/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := recoveryservices.NewProtectedItem(ctx, "protectedItem", &recoveryservices.ProtectedItemArgs{
-			ContainerName:     pulumi.String("IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1"),
-			FabricName:        pulumi.String("Azure"),
-			ProtectedItemName: pulumi.String("VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1"),
-			ResourceGroupName: pulumi.String("SwaggerTestRg"),
-			VaultName:         pulumi.String("NetSDKTestRsVault"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -81,6 +61,11 @@ import pulumi_azure_nextgen as azure_nextgen
 protected_item = azure_nextgen.recoveryservices.latest.ProtectedItem("protectedItem",
     container_name="IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
     fabric_name="Azure",
+    properties={
+        "policyId": "/Subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/SwaggerTestRg/providers/Microsoft.RecoveryServices/vaults/NetSDKTestRsVault/backupPolicies/DefaultPolicy",
+        "protectedItemType": "Microsoft.Compute/virtualMachines",
+        "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/netsdktestrg/providers/Microsoft.Compute/virtualMachines/netvmtestv2vm1",
+    },
     protected_item_name="VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
     resource_group_name="SwaggerTestRg",
     vault_name="NetSDKTestRsVault")
@@ -98,6 +83,11 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const protectedItem = new azure_nextgen.recoveryservices.latest.ProtectedItem("protectedItem", {
     containerName: "IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
     fabricName: "Azure",
+    properties: {
+        policyId: "/Subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/SwaggerTestRg/providers/Microsoft.RecoveryServices/vaults/NetSDKTestRsVault/backupPolicies/DefaultPolicy",
+        protectedItemType: "Microsoft.Compute/virtualMachines",
+        sourceResourceId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/netsdktestrg/providers/Microsoft.Compute/virtualMachines/netvmtestv2vm1",
+    },
     protectedItemName: "VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
     resourceGroupName: "SwaggerTestRg",
     vaultName: "NetSDKTestRsVault",
@@ -121,6 +111,12 @@ class MyStack : Stack
         {
             ContainerName = "IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
             FabricName = "Azure",
+            Properties = 
+            {
+                { "protectedItemType", "Microsoft.Compute/virtualMachines" },
+                { "protectionState", "ProtectionStopped" },
+                { "sourceResourceId", "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/netsdktestrg/providers/Microsoft.Compute/virtualMachines/netvmtestv2vm1" },
+            },
             ProtectedItemName = "VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
             ResourceGroupName = "SwaggerTestRg",
             VaultName = "NetSDKTestRsVault",
@@ -134,33 +130,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-package main
-
-import (
-	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/recoveryservices/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := recoveryservices.NewProtectedItem(ctx, "protectedItem", &recoveryservices.ProtectedItemArgs{
-			ContainerName:     pulumi.String("IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1"),
-			FabricName:        pulumi.String("Azure"),
-			ProtectedItemName: pulumi.String("VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1"),
-			ResourceGroupName: pulumi.String("SwaggerTestRg"),
-			VaultName:         pulumi.String("NetSDKTestRsVault"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -172,6 +142,11 @@ import pulumi_azure_nextgen as azure_nextgen
 protected_item = azure_nextgen.recoveryservices.latest.ProtectedItem("protectedItem",
     container_name="IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
     fabric_name="Azure",
+    properties={
+        "protectedItemType": "Microsoft.Compute/virtualMachines",
+        "protectionState": "ProtectionStopped",
+        "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/netsdktestrg/providers/Microsoft.Compute/virtualMachines/netvmtestv2vm1",
+    },
     protected_item_name="VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
     resource_group_name="SwaggerTestRg",
     vault_name="NetSDKTestRsVault")
@@ -189,6 +164,11 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const protectedItem = new azure_nextgen.recoveryservices.latest.ProtectedItem("protectedItem", {
     containerName: "IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
     fabricName: "Azure",
+    properties: {
+        protectedItemType: "Microsoft.Compute/virtualMachines",
+        protectionState: "ProtectionStopped",
+        sourceResourceId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/netsdktestrg/providers/Microsoft.Compute/virtualMachines/netvmtestv2vm1",
+    },
     protectedItemName: "VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
     resourceGroupName: "SwaggerTestRg",
     vaultName: "NetSDKTestRsVault",

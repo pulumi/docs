@@ -29,6 +29,14 @@ class MyStack : Stack
         var replicationvCenter = new AzureNextGen.RecoveryServices.Latest.ReplicationvCenter("replicationvCenter", new AzureNextGen.RecoveryServices.Latest.ReplicationvCenterArgs
         {
             FabricName = "MadhaviFabric",
+            Properties = new AzureNextGen.RecoveryServices.Latest.Inputs.AddVCenterRequestPropertiesArgs
+            {
+                FriendlyName = "esx-78",
+                IpAddress = "inmtest78",
+                Port = "443",
+                ProcessServerId = "5A720CAB-39CB-F445-BD1662B0B33164B5",
+                RunAsAccountId = "2",
+            },
             ResourceGroupName = "MadhaviVRG",
             ResourceName = "MadhaviVault",
             VCenterName = "esx-78",
@@ -47,14 +55,21 @@ class MyStack : Stack
 package main
 
 import (
-	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/recoveryservices/latest"
+	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := recoveryservices.NewReplicationvCenter(ctx, "replicationvCenter", &recoveryservices.ReplicationvCenterArgs{
-			FabricName:        pulumi.String("MadhaviFabric"),
+			FabricName: pulumi.String("MadhaviFabric"),
+			Properties: &recoveryservices.AddVCenterRequestPropertiesArgs{
+				FriendlyName:    pulumi.String("esx-78"),
+				IpAddress:       pulumi.String("inmtest78"),
+				Port:            pulumi.String("443"),
+				ProcessServerId: pulumi.String("5A720CAB-39CB-F445-BD1662B0B33164B5"),
+				RunAsAccountId:  pulumi.String("2"),
+			},
 			ResourceGroupName: pulumi.String("MadhaviVRG"),
 			ResourceName:      pulumi.String("MadhaviVault"),
 			VCenterName:       pulumi.String("esx-78"),
@@ -78,6 +93,13 @@ import pulumi_azure_nextgen as azure_nextgen
 
 replicationv_center = azure_nextgen.recoveryservices.latest.ReplicationvCenter("replicationvCenter",
     fabric_name="MadhaviFabric",
+    properties={
+        "friendlyName": "esx-78",
+        "ipAddress": "inmtest78",
+        "port": "443",
+        "processServerId": "5A720CAB-39CB-F445-BD1662B0B33164B5",
+        "runAsAccountId": "2",
+    },
     resource_group_name="MadhaviVRG",
     resource_name="MadhaviVault",
     v_center_name="esx-78")
@@ -94,6 +116,13 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const replicationvCenter = new azure_nextgen.recoveryservices.latest.ReplicationvCenter("replicationvCenter", {
     fabricName: "MadhaviFabric",
+    properties: {
+        friendlyName: "esx-78",
+        ipAddress: "inmtest78",
+        port: "443",
+        processServerId: "5A720CAB-39CB-F445-BD1662B0B33164B5",
+        runAsAccountId: "2",
+    },
     resourceGroupName: "MadhaviVRG",
     resourceName: "MadhaviVault",
     vCenterName: "esx-78",

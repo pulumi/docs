@@ -34,10 +34,10 @@ class MyStack : Stack
                 { "dataSource", 
                 {
                     { "metricName", "Requests" },
-                    { "odata.type", "Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource" },
+                    { "odataType", "Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource" },
                     { "resourceUri", "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.Web/sites/leoalerttest" },
                 } },
-                { "odata.type", "Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition" },
+                { "odataType", "Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition" },
                 { "operator", "GreaterThan" },
                 { "threshold", 3 },
                 { "timeAggregation", "Total" },
@@ -74,10 +74,10 @@ alert_rule = azure_nextgen.insights.latest.AlertRule("alertRule",
     condition={
         "dataSource": {
             "metricName": "Requests",
-            "odata.type": "Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource",
+            "odataType": "Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource",
             "resourceUri": "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.Web/sites/leoalerttest",
         },
-        "odata.type": "Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition",
+        "odataType": "Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition",
         "operator": "GreaterThan",
         "threshold": 3,
         "timeAggregation": "Total",
@@ -106,10 +106,10 @@ const alertRule = new azure_nextgen.insights.latest.AlertRule("alertRule", {
     condition: {
         dataSource: {
             metricName: "Requests",
-            "odata.type": "Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource",
+            odataType: "Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource",
             resourceUri: "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.Web/sites/leoalerttest",
         },
-        "odata.type": "Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition",
+        odataType: "Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition",
         operator: "GreaterThan",
         threshold: 3,
         timeAggregation: "Total",

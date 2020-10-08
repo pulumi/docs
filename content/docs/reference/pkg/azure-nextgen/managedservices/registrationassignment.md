@@ -28,6 +28,10 @@ class MyStack : Stack
     {
         var registrationAssignment = new AzureNextGen.ManagedServices.Latest.RegistrationAssignment("registrationAssignment", new AzureNextGen.ManagedServices.Latest.RegistrationAssignmentArgs
         {
+            Properties = new AzureNextGen.ManagedServices.Latest.Inputs.RegistrationAssignmentPropertiesArgs
+            {
+                RegistrationDefinitionId = "/subscriptions/0afefe50-734e-4610-8a82-a144ahf49dea/providers/Microsoft.ManagedServices/registrationDefinitions/26c128c2-fefa-4340-9bb1-6e081c90ada2",
+            },
             RegistrationAssignmentId = "26c128c2-fefa-4340-9bb1-6e081c90ada2",
             Scope = "subscription/0afefe50-734e-4610-8a82-a144ahf49dea",
         });
@@ -45,13 +49,16 @@ class MyStack : Stack
 package main
 
 import (
-	managedservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/managedservices/latest"
+	managedservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/managedservices/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := managedservices.NewRegistrationAssignment(ctx, "registrationAssignment", &managedservices.RegistrationAssignmentArgs{
+			Properties: &managedservices.RegistrationAssignmentPropertiesArgs{
+				RegistrationDefinitionId: pulumi.String("/subscriptions/0afefe50-734e-4610-8a82-a144ahf49dea/providers/Microsoft.ManagedServices/registrationDefinitions/26c128c2-fefa-4340-9bb1-6e081c90ada2"),
+			},
 			RegistrationAssignmentId: pulumi.String("26c128c2-fefa-4340-9bb1-6e081c90ada2"),
 			Scope:                    pulumi.String("subscription/0afefe50-734e-4610-8a82-a144ahf49dea"),
 		})
@@ -73,6 +80,9 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 registration_assignment = azure_nextgen.managedservices.latest.RegistrationAssignment("registrationAssignment",
+    properties={
+        "registrationDefinitionId": "/subscriptions/0afefe50-734e-4610-8a82-a144ahf49dea/providers/Microsoft.ManagedServices/registrationDefinitions/26c128c2-fefa-4340-9bb1-6e081c90ada2",
+    },
     registration_assignment_id="26c128c2-fefa-4340-9bb1-6e081c90ada2",
     scope="subscription/0afefe50-734e-4610-8a82-a144ahf49dea")
 
@@ -87,6 +97,9 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const registrationAssignment = new azure_nextgen.managedservices.latest.RegistrationAssignment("registrationAssignment", {
+    properties: {
+        registrationDefinitionId: "/subscriptions/0afefe50-734e-4610-8a82-a144ahf49dea/providers/Microsoft.ManagedServices/registrationDefinitions/26c128c2-fefa-4340-9bb1-6e081c90ada2",
+    },
     registrationAssignmentId: "26c128c2-fefa-4340-9bb1-6e081c90ada2",
     scope: "subscription/0afefe50-734e-4610-8a82-a144ahf49dea",
 });

@@ -12,6 +12,87 @@ meta_desc: "Explore the ReplicationFabric resource of the recoveryservices modul
 
 Fabric definition.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates an Azure Site Recovery fabric.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var replicationFabric = new AzureNextGen.RecoveryServices.Latest.ReplicationFabric("replicationFabric", new AzureNextGen.RecoveryServices.Latest.ReplicationFabricArgs
+        {
+            FabricName = "cloud1",
+            Properties = new AzureNextGen.RecoveryServices.Latest.Inputs.FabricCreationInputPropertiesArgs
+            {
+                CustomDetails = 
+                {
+                    { "instanceType", "FabricSpecificCreationInput" },
+                },
+            },
+            ResourceGroupName = "resourceGroupPS1",
+            ResourceName = "vault1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+replication_fabric = azure_nextgen.recoveryservices.latest.ReplicationFabric("replicationFabric",
+    fabric_name="cloud1",
+    properties={
+        "customDetails": {
+            "instanceType": "FabricSpecificCreationInput",
+        },
+    },
+    resource_group_name="resourceGroupPS1",
+    resource_name="vault1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const replicationFabric = new azure_nextgen.recoveryservices.latest.ReplicationFabric("replicationFabric", {
+    fabricName: "cloud1",
+    properties: {
+        customDetails: {
+            instanceType: "FabricSpecificCreationInput",
+        },
+    },
+    resourceGroupName: "resourceGroupPS1",
+    resourceName: "vault1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ReplicationFabric Resource {#create}

@@ -29,6 +29,13 @@ class MyStack : Stack
         var replicationPolicy = new AzureNextGen.RecoveryServices.Latest.ReplicationPolicy("replicationPolicy", new AzureNextGen.RecoveryServices.Latest.ReplicationPolicyArgs
         {
             PolicyName = "protectionprofile1",
+            Properties = new AzureNextGen.RecoveryServices.Latest.Inputs.CreatePolicyInputPropertiesArgs
+            {
+                ProviderSpecificInput = 
+                {
+                    { "instanceType", "HyperVReplicaAzure" },
+                },
+            },
             ResourceGroupName = "resourceGroupPS1",
             ResourceName = "vault1",
         });
@@ -41,31 +48,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-package main
-
-import (
-	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/recoveryservices/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := recoveryservices.NewReplicationPolicy(ctx, "replicationPolicy", &recoveryservices.ReplicationPolicyArgs{
-			PolicyName:        pulumi.String("protectionprofile1"),
-			ResourceGroupName: pulumi.String("resourceGroupPS1"),
-			ResourceName:      pulumi.String("vault1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -76,6 +59,11 @@ import pulumi_azure_nextgen as azure_nextgen
 
 replication_policy = azure_nextgen.recoveryservices.latest.ReplicationPolicy("replicationPolicy",
     policy_name="protectionprofile1",
+    properties={
+        "providerSpecificInput": {
+            "instanceType": "HyperVReplicaAzure",
+        },
+    },
     resource_group_name="resourceGroupPS1",
     resource_name="vault1")
 
@@ -91,6 +79,11 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const replicationPolicy = new azure_nextgen.recoveryservices.latest.ReplicationPolicy("replicationPolicy", {
     policyName: "protectionprofile1",
+    properties: {
+        providerSpecificInput: {
+            instanceType: "HyperVReplicaAzure",
+        },
+    },
     resourceGroupName: "resourceGroupPS1",
     resourceName: "vault1",
 });

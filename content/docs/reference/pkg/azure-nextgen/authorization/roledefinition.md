@@ -45,7 +45,7 @@ class MyStack : Stack
 package main
 
 import (
-	authorization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/authorization/latest"
+	authorization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/authorization/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

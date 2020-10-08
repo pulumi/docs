@@ -30,7 +30,9 @@ class MyStack : Stack
         {
             AvailabilityZoneId = "az1",
             DedicatedCloudNodeName = "myNode",
+            Id = "general",
             Location = "westus",
+            Name = "CS28-Node",
             NodesCount = 1,
             PlacementGroupId = "n1",
             PurchaseId = "56acbd46-3d36-4bbf-9b08-57c30fdf6932",
@@ -54,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	vmwarecloudsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/vmwarecloudsimple/latest"
+	vmwarecloudsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/vmwarecloudsimple/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -63,7 +65,9 @@ func main() {
 		_, err := vmwarecloudsimple.NewDedicatedCloudNode(ctx, "dedicatedCloudNode", &vmwarecloudsimple.DedicatedCloudNodeArgs{
 			AvailabilityZoneId:     pulumi.String("az1"),
 			DedicatedCloudNodeName: pulumi.String("myNode"),
+			Id:                     pulumi.String("general"),
 			Location:               pulumi.String("westus"),
+			Name:                   pulumi.String("CS28-Node"),
 			NodesCount:             pulumi.Int(1),
 			PlacementGroupId:       pulumi.String("n1"),
 			PurchaseId:             pulumi.String("56acbd46-3d36-4bbf-9b08-57c30fdf6932"),
@@ -92,7 +96,9 @@ import pulumi_azure_nextgen as azure_nextgen
 dedicated_cloud_node = azure_nextgen.vmwarecloudsimple.latest.DedicatedCloudNode("dedicatedCloudNode",
     availability_zone_id="az1",
     dedicated_cloud_node_name="myNode",
+    id="general",
     location="westus",
+    name="CS28-Node",
     nodes_count=1,
     placement_group_id="n1",
     purchase_id="56acbd46-3d36-4bbf-9b08-57c30fdf6932",
@@ -114,7 +120,9 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const dedicatedCloudNode = new azure_nextgen.vmwarecloudsimple.latest.DedicatedCloudNode("dedicatedCloudNode", {
     availabilityZoneId: "az1",
     dedicatedCloudNodeName: "myNode",
+    id: "general",
     location: "westus",
+    name: "CS28-Node",
     nodesCount: 1,
     placementGroupId: "n1",
     purchaseId: "56acbd46-3d36-4bbf-9b08-57c30fdf6932",
@@ -817,7 +825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}date time the resource was created{{% /md %}}</dd>
 
@@ -934,7 +942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_go" style="color: inherit; text-decoration: inherit;">Created</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}date time the resource was created{{% /md %}}</dd>
 
@@ -1051,7 +1059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}date time the resource was created{{% /md %}}</dd>
 
@@ -1168,7 +1176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_python" style="color: inherit; text-decoration: inherit;">created</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}date time the resource was created{{% /md %}}</dd>
 

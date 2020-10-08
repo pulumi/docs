@@ -1338,6 +1338,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="circuitconnectionstatus_csharp">
+<a href="#circuitconnectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Circuit<wbr>Connection<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
 </span> 
@@ -1385,16 +1395,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The authorization key.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="circuitconnectionstatus_csharp">
-<a href="#circuitconnectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Circuit<wbr>Connection<wbr>Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1455,6 +1455,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="circuitconnectionstatus_go">
+<a href="#circuitconnectionstatus_go" style="color: inherit; text-decoration: inherit;">Circuit<wbr>Connection<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
 </span> 
@@ -1502,16 +1512,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The authorization key.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="circuitconnectionstatus_go">
-<a href="#circuitconnectionstatus_go" style="color: inherit; text-decoration: inherit;">Circuit<wbr>Connection<wbr>Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1572,6 +1572,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="circuitconnectionstatus_nodejs">
+<a href="#circuitconnectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">circuit<wbr>Connection<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span> 
@@ -1619,16 +1629,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The authorization key.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="circuitconnectionstatus_nodejs">
-<a href="#circuitconnectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">circuit<wbr>Connection<wbr>Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1689,6 +1689,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="circuit_connection_status_python">
+<a href="#circuit_connection_status_python" style="color: inherit; text-decoration: inherit;">circuit_<wbr>connection_<wbr>status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span> 
@@ -1736,16 +1746,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The authorization key.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="circuit_connection_status_python">
-<a href="#circuit_connection_status_python" style="color: inherit; text-decoration: inherit;">circuit_<wbr>connection_<wbr>status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4049,6 +4049,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="circuitconnectionstatus_csharp">
+<a href="#circuitconnectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Circuit<wbr>Connection<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
 </span> 
@@ -4096,16 +4106,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The resource guid of the authorization used for the express route circuit connection.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="circuitconnectionstatus_csharp">
-<a href="#circuitconnectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Circuit<wbr>Connection<wbr>Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4166,6 +4166,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="circuitconnectionstatus_go">
+<a href="#circuitconnectionstatus_go" style="color: inherit; text-decoration: inherit;">Circuit<wbr>Connection<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
 </span> 
@@ -4213,16 +4223,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The resource guid of the authorization used for the express route circuit connection.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="circuitconnectionstatus_go">
-<a href="#circuitconnectionstatus_go" style="color: inherit; text-decoration: inherit;">Circuit<wbr>Connection<wbr>Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4283,6 +4283,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="circuitconnectionstatus_nodejs">
+<a href="#circuitconnectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">circuit<wbr>Connection<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span> 
@@ -4330,16 +4340,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The resource guid of the authorization used for the express route circuit connection.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="circuitconnectionstatus_nodejs">
-<a href="#circuitconnectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">circuit<wbr>Connection<wbr>Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4400,6 +4400,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="circuit_connection_status_python">
+<a href="#circuit_connection_status_python" style="color: inherit; text-decoration: inherit;">circuit_<wbr>connection_<wbr>status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span> 
@@ -4447,16 +4457,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The resource guid of the authorization used for the express route circuit connection.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="circuit_connection_status_python">
-<a href="#circuit_connection_status_python" style="color: inherit; text-decoration: inherit;">circuit_<wbr>connection_<wbr>status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4534,7 +4534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4551,7 +4551,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4568,7 +4568,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4585,7 +4585,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

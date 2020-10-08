@@ -49,7 +49,20 @@ class MyStack : Stack
                     {
                         new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
                         {
+                            EnableIPForwarding = true,
+                            IpConfigurations = 
+                            {
+                                new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+                                {
+                                    Name = "{vmss-name}",
+                                    Subnet = new AzureNextGen.Compute.Latest.Inputs.ApiEntityReferenceArgs
+                                    {
+                                        Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                                    },
+                                },
+                            },
                             Name = "{vmss-name}",
+                            Primary = true,
                         },
                     },
                 },
@@ -89,7 +102,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -111,7 +124,17 @@ func main() {
 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
-							Name: pulumi.String("{vmss-name}"),
+							EnableIPForwarding: pulumi.Bool(true),
+							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+									Name: pulumi.String("{vmss-name}"),
+									Subnet: &compute.ApiEntityReferenceArgs{
+										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+									},
+								},
+							},
+							Name:    pulumi.String("{vmss-name}"),
+							Primary: pulumi.Bool(true),
 						},
 					},
 				},
@@ -165,7 +188,15 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
     virtual_machine_profile={
         "networkProfile": {
             "networkInterfaceConfigurations": [{
+                "enableIPForwarding": True,
+                "ipConfigurations": [{
+                    "name": "{vmss-name}",
+                    "subnet": {
+                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    },
+                }],
                 "name": "{vmss-name}",
+                "primary": True,
             }],
         },
         "osProfile": {
@@ -211,7 +242,15 @@ const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineSc
     virtualMachineProfile: {
         networkProfile: {
             networkInterfaceConfigurations: [{
+                enableIPForwarding: true,
+                ipConfigurations: [{
+                    name: "{vmss-name}",
+                    subnet: {
+                        id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    },
+                }],
                 name: "{vmss-name}",
+                primary: true,
             }],
         },
         osProfile: {
@@ -270,7 +309,20 @@ class MyStack : Stack
                     {
                         new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
                         {
+                            EnableIPForwarding = true,
+                            IpConfigurations = 
+                            {
+                                new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+                                {
+                                    Name = "{vmss-name}",
+                                    Subnet = new AzureNextGen.Compute.Latest.Inputs.ApiEntityReferenceArgs
+                                    {
+                                        Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                                    },
+                                },
+                            },
                             Name = "{vmss-name}",
+                            Primary = true,
                         },
                     },
                 },
@@ -321,7 +373,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -343,7 +395,17 @@ func main() {
 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
-							Name: pulumi.String("{vmss-name}"),
+							EnableIPForwarding: pulumi.Bool(true),
+							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+									Name: pulumi.String("{vmss-name}"),
+									Subnet: &compute.ApiEntityReferenceArgs{
+										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+									},
+								},
+							},
+							Name:    pulumi.String("{vmss-name}"),
+							Primary: pulumi.Bool(true),
 						},
 					},
 				},
@@ -407,7 +469,15 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
     virtual_machine_profile={
         "networkProfile": {
             "networkInterfaceConfigurations": [{
+                "enableIPForwarding": True,
+                "ipConfigurations": [{
+                    "name": "{vmss-name}",
+                    "subnet": {
+                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    },
+                }],
                 "name": "{vmss-name}",
+                "primary": True,
             }],
         },
         "osProfile": {
@@ -463,7 +533,15 @@ const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineSc
     virtualMachineProfile: {
         networkProfile: {
             networkInterfaceConfigurations: [{
+                enableIPForwarding: true,
+                ipConfigurations: [{
+                    name: "{vmss-name}",
+                    subnet: {
+                        id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    },
+                }],
                 name: "{vmss-name}",
+                primary: true,
             }],
         },
         osProfile: {
@@ -532,7 +610,20 @@ class MyStack : Stack
                     {
                         new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
                         {
+                            EnableIPForwarding = true,
+                            IpConfigurations = 
+                            {
+                                new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+                                {
+                                    Name = "{vmss-name}",
+                                    Subnet = new AzureNextGen.Compute.Latest.Inputs.ApiEntityReferenceArgs
+                                    {
+                                        Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                                    },
+                                },
+                            },
                             Name = "{vmss-name}",
+                            Primary = true,
                         },
                     },
                 },
@@ -575,7 +666,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -597,7 +688,17 @@ func main() {
 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
-							Name: pulumi.String("{vmss-name}"),
+							EnableIPForwarding: pulumi.Bool(true),
+							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+									Name: pulumi.String("{vmss-name}"),
+									Subnet: &compute.ApiEntityReferenceArgs{
+										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+									},
+								},
+							},
+							Name:    pulumi.String("{vmss-name}"),
+							Primary: pulumi.Bool(true),
 						},
 					},
 				},
@@ -653,7 +754,15 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
     virtual_machine_profile={
         "networkProfile": {
             "networkInterfaceConfigurations": [{
+                "enableIPForwarding": True,
+                "ipConfigurations": [{
+                    "name": "{vmss-name}",
+                    "subnet": {
+                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    },
+                }],
                 "name": "{vmss-name}",
+                "primary": True,
             }],
         },
         "osProfile": {
@@ -701,7 +810,15 @@ const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineSc
     virtualMachineProfile: {
         networkProfile: {
             networkInterfaceConfigurations: [{
+                enableIPForwarding: true,
+                ipConfigurations: [{
+                    name: "{vmss-name}",
+                    subnet: {
+                        id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    },
+                }],
                 name: "{vmss-name}",
+                primary: true,
             }],
         },
         osProfile: {
@@ -762,7 +879,20 @@ class MyStack : Stack
                     {
                         new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
                         {
+                            EnableIPForwarding = true,
+                            IpConfigurations = 
+                            {
+                                new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+                                {
+                                    Name = "{vmss-name}",
+                                    Subnet = new AzureNextGen.Compute.Latest.Inputs.ApiEntityReferenceArgs
+                                    {
+                                        Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                                    },
+                                },
+                            },
                             Name = "{vmss-name}",
+                            Primary = true,
                         },
                     },
                 },
@@ -827,7 +957,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -849,7 +979,17 @@ func main() {
 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
-							Name: pulumi.String("{vmss-name}"),
+							EnableIPForwarding: pulumi.Bool(true),
+							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+									Name: pulumi.String("{vmss-name}"),
+									Subnet: &compute.ApiEntityReferenceArgs{
+										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+									},
+								},
+							},
+							Name:    pulumi.String("{vmss-name}"),
+							Primary: pulumi.Bool(true),
 						},
 					},
 				},
@@ -922,7 +1062,15 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
     virtual_machine_profile={
         "networkProfile": {
             "networkInterfaceConfigurations": [{
+                "enableIPForwarding": True,
+                "ipConfigurations": [{
+                    "name": "{vmss-name}",
+                    "subnet": {
+                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    },
+                }],
                 "name": "{vmss-name}",
+                "primary": True,
             }],
         },
         "osProfile": {
@@ -985,7 +1133,15 @@ const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineSc
     virtualMachineProfile: {
         networkProfile: {
             networkInterfaceConfigurations: [{
+                enableIPForwarding: true,
+                ipConfigurations: [{
+                    name: "{vmss-name}",
+                    subnet: {
+                        id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    },
+                }],
                 name: "{vmss-name}",
+                primary: true,
             }],
         },
         osProfile: {
@@ -1067,7 +1223,20 @@ class MyStack : Stack
                     {
                         new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
                         {
+                            EnableIPForwarding = true,
+                            IpConfigurations = 
+                            {
+                                new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+                                {
+                                    Name = "{vmss-name}",
+                                    Subnet = new AzureNextGen.Compute.Latest.Inputs.ApiEntityReferenceArgs
+                                    {
+                                        Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                                    },
+                                },
+                            },
                             Name = "{vmss-name}",
+                            Primary = true,
                         },
                     },
                 },
@@ -1117,7 +1286,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1144,7 +1313,17 @@ func main() {
 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
-							Name: pulumi.String("{vmss-name}"),
+							EnableIPForwarding: pulumi.Bool(true),
+							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+									Name: pulumi.String("{vmss-name}"),
+									Subnet: &compute.ApiEntityReferenceArgs{
+										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+									},
+								},
+							},
+							Name:    pulumi.String("{vmss-name}"),
+							Primary: pulumi.Bool(true),
 						},
 					},
 				},
@@ -1211,7 +1390,15 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
     virtual_machine_profile={
         "networkProfile": {
             "networkInterfaceConfigurations": [{
+                "enableIPForwarding": True,
+                "ipConfigurations": [{
+                    "name": "{vmss-name}",
+                    "subnet": {
+                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    },
+                }],
                 "name": "{vmss-name}",
+                "primary": True,
             }],
         },
         "osProfile": {
@@ -1270,7 +1457,15 @@ const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineSc
     virtualMachineProfile: {
         networkProfile: {
             networkInterfaceConfigurations: [{
+                enableIPForwarding: true,
+                ipConfigurations: [{
+                    name: "{vmss-name}",
+                    subnet: {
+                        id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    },
+                }],
                 name: "{vmss-name}",
+                primary: true,
             }],
         },
         osProfile: {
@@ -1343,7 +1538,20 @@ class MyStack : Stack
                     {
                         new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
                         {
+                            EnableIPForwarding = true,
+                            IpConfigurations = 
+                            {
+                                new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+                                {
+                                    Name = "{vmss-name}",
+                                    Subnet = new AzureNextGen.Compute.Latest.Inputs.ApiEntityReferenceArgs
+                                    {
+                                        Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                                    },
+                                },
+                            },
                             Name = "{vmss-name}",
+                            Primary = true,
                         },
                     },
                 },
@@ -1389,7 +1597,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1416,7 +1624,17 @@ func main() {
 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
-							Name: pulumi.String("{vmss-name}"),
+							EnableIPForwarding: pulumi.Bool(true),
+							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+									Name: pulumi.String("{vmss-name}"),
+									Subnet: &compute.ApiEntityReferenceArgs{
+										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+									},
+								},
+							},
+							Name:    pulumi.String("{vmss-name}"),
+							Primary: pulumi.Bool(true),
 						},
 					},
 				},
@@ -1480,7 +1698,15 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
     virtual_machine_profile={
         "networkProfile": {
             "networkInterfaceConfigurations": [{
+                "enableIPForwarding": True,
+                "ipConfigurations": [{
+                    "name": "{vmss-name}",
+                    "subnet": {
+                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    },
+                }],
                 "name": "{vmss-name}",
+                "primary": True,
             }],
         },
         "osProfile": {
@@ -1536,7 +1762,15 @@ const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineSc
     virtualMachineProfile: {
         networkProfile: {
             networkInterfaceConfigurations: [{
+                enableIPForwarding: true,
+                ipConfigurations: [{
+                    name: "{vmss-name}",
+                    subnet: {
+                        id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    },
+                }],
                 name: "{vmss-name}",
+                primary: true,
             }],
         },
         osProfile: {
@@ -1600,7 +1834,27 @@ class MyStack : Stack
                     {
                         new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
                         {
+                            EnableIPForwarding = true,
+                            IpConfigurations = 
+                            {
+                                new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+                                {
+                                    ApplicationGatewayBackendAddressPools = 
+                                    {
+                                        new AzureNextGen.Compute.Latest.Inputs.SubResourceArgs
+                                        {
+                                            Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/applicationGateways/{existing-application-gateway-name}/backendAddressPools/{existing-backend-address-pool-name}",
+                                        },
+                                    },
+                                    Name = "{vmss-name}",
+                                    Subnet = new AzureNextGen.Compute.Latest.Inputs.ApiEntityReferenceArgs
+                                    {
+                                        Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                                    },
+                                },
+                            },
                             Name = "{vmss-name}",
+                            Primary = true,
                         },
                     },
                 },
@@ -1646,7 +1900,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1668,7 +1922,22 @@ func main() {
 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
-							Name: pulumi.String("{vmss-name}"),
+							EnableIPForwarding: pulumi.Bool(true),
+							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+									ApplicationGatewayBackendAddressPools: compute.SubResourceArray{
+										&compute.SubResourceArgs{
+											Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/applicationGateways/{existing-application-gateway-name}/backendAddressPools/{existing-backend-address-pool-name}"),
+										},
+									},
+									Name: pulumi.String("{vmss-name}"),
+									Subnet: &compute.ApiEntityReferenceArgs{
+										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+									},
+								},
+							},
+							Name:    pulumi.String("{vmss-name}"),
+							Primary: pulumi.Bool(true),
 						},
 					},
 				},
@@ -1727,7 +1996,18 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
     virtual_machine_profile={
         "networkProfile": {
             "networkInterfaceConfigurations": [{
+                "enableIPForwarding": True,
+                "ipConfigurations": [{
+                    "applicationGatewayBackendAddressPools": [{
+                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/applicationGateways/{existing-application-gateway-name}/backendAddressPools/{existing-backend-address-pool-name}",
+                    }],
+                    "name": "{vmss-name}",
+                    "subnet": {
+                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    },
+                }],
                 "name": "{vmss-name}",
+                "primary": True,
             }],
         },
         "osProfile": {
@@ -1778,7 +2058,18 @@ const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineSc
     virtualMachineProfile: {
         networkProfile: {
             networkInterfaceConfigurations: [{
+                enableIPForwarding: true,
+                ipConfigurations: [{
+                    applicationGatewayBackendAddressPools: [{
+                        id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/applicationGateways/{existing-application-gateway-name}/backendAddressPools/{existing-backend-address-pool-name}",
+                    }],
+                    name: "{vmss-name}",
+                    subnet: {
+                        id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    },
+                }],
                 name: "{vmss-name}",
+                primary: true,
             }],
         },
         osProfile: {
@@ -1842,7 +2133,39 @@ class MyStack : Stack
                     {
                         new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
                         {
+                            EnableIPForwarding = true,
+                            IpConfigurations = 
+                            {
+                                new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+                                {
+                                    LoadBalancerBackendAddressPools = 
+                                    {
+                                        new AzureNextGen.Compute.Latest.Inputs.SubResourceArgs
+                                        {
+                                            Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/loadBalancers/{existing-load-balancer-name}/backendAddressPools/{existing-backend-address-pool-name}",
+                                        },
+                                    },
+                                    LoadBalancerInboundNatPools = 
+                                    {
+                                        new AzureNextGen.Compute.Latest.Inputs.SubResourceArgs
+                                        {
+                                            Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/loadBalancers/{existing-load-balancer-name}/inboundNatPools/{existing-nat-pool-name}",
+                                        },
+                                    },
+                                    Name = "{vmss-name}",
+                                    PublicIPAddressConfiguration = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetPublicIPAddressConfigurationArgs
+                                    {
+                                        Name = "{vmss-name}",
+                                        PublicIPAddressVersion = "IPv4",
+                                    },
+                                    Subnet = new AzureNextGen.Compute.Latest.Inputs.ApiEntityReferenceArgs
+                                    {
+                                        Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                                    },
+                                },
+                            },
                             Name = "{vmss-name}",
+                            Primary = true,
                         },
                     },
                 },
@@ -1888,7 +2211,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -1910,7 +2233,31 @@ func main() {
 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
-							Name: pulumi.String("{vmss-name}"),
+							EnableIPForwarding: pulumi.Bool(true),
+							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+									LoadBalancerBackendAddressPools: compute.SubResourceArray{
+										&compute.SubResourceArgs{
+											Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/loadBalancers/{existing-load-balancer-name}/backendAddressPools/{existing-backend-address-pool-name}"),
+										},
+									},
+									LoadBalancerInboundNatPools: compute.SubResourceArray{
+										&compute.SubResourceArgs{
+											Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/loadBalancers/{existing-load-balancer-name}/inboundNatPools/{existing-nat-pool-name}"),
+										},
+									},
+									Name: pulumi.String("{vmss-name}"),
+									PublicIPAddressConfiguration: &compute.VirtualMachineScaleSetPublicIPAddressConfigurationArgs{
+										Name:                   pulumi.String("{vmss-name}"),
+										PublicIPAddressVersion: pulumi.String("IPv4"),
+									},
+									Subnet: &compute.ApiEntityReferenceArgs{
+										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+									},
+								},
+							},
+							Name:    pulumi.String("{vmss-name}"),
+							Primary: pulumi.Bool(true),
 						},
 					},
 				},
@@ -1969,7 +2316,25 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
     virtual_machine_profile={
         "networkProfile": {
             "networkInterfaceConfigurations": [{
+                "enableIPForwarding": True,
+                "ipConfigurations": [{
+                    "loadBalancerBackendAddressPools": [{
+                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/loadBalancers/{existing-load-balancer-name}/backendAddressPools/{existing-backend-address-pool-name}",
+                    }],
+                    "loadBalancerInboundNatPools": [{
+                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/loadBalancers/{existing-load-balancer-name}/inboundNatPools/{existing-nat-pool-name}",
+                    }],
+                    "name": "{vmss-name}",
+                    "publicIPAddressConfiguration": {
+                        "name": "{vmss-name}",
+                        "publicIPAddressVersion": "IPv4",
+                    },
+                    "subnet": {
+                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    },
+                }],
                 "name": "{vmss-name}",
+                "primary": True,
             }],
         },
         "osProfile": {
@@ -2020,7 +2385,25 @@ const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineSc
     virtualMachineProfile: {
         networkProfile: {
             networkInterfaceConfigurations: [{
+                enableIPForwarding: true,
+                ipConfigurations: [{
+                    loadBalancerBackendAddressPools: [{
+                        id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/loadBalancers/{existing-load-balancer-name}/backendAddressPools/{existing-backend-address-pool-name}",
+                    }],
+                    loadBalancerInboundNatPools: [{
+                        id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/loadBalancers/{existing-load-balancer-name}/inboundNatPools/{existing-nat-pool-name}",
+                    }],
+                    name: "{vmss-name}",
+                    publicIPAddressConfiguration: {
+                        name: "{vmss-name}",
+                        publicIPAddressVersion: "IPv4",
+                    },
+                    subnet: {
+                        id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    },
+                }],
                 name: "{vmss-name}",
+                primary: true,
             }],
         },
         osProfile: {
@@ -2089,7 +2472,20 @@ class MyStack : Stack
                     {
                         new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
                         {
+                            EnableIPForwarding = true,
+                            IpConfigurations = 
+                            {
+                                new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+                                {
+                                    Name = "{vmss-name}",
+                                    Subnet = new AzureNextGen.Compute.Latest.Inputs.ApiEntityReferenceArgs
+                                    {
+                                        Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                                    },
+                                },
+                            },
                             Name = "{vmss-name}",
+                            Primary = true,
                         },
                     },
                 },
@@ -2135,7 +2531,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -2161,7 +2557,17 @@ func main() {
 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
-							Name: pulumi.String("{vmss-name}"),
+							EnableIPForwarding: pulumi.Bool(true),
+							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+									Name: pulumi.String("{vmss-name}"),
+									Subnet: &compute.ApiEntityReferenceArgs{
+										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+									},
+								},
+							},
+							Name:    pulumi.String("{vmss-name}"),
+							Primary: pulumi.Bool(true),
 						},
 					},
 				},
@@ -2224,7 +2630,15 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
     virtual_machine_profile={
         "networkProfile": {
             "networkInterfaceConfigurations": [{
+                "enableIPForwarding": True,
+                "ipConfigurations": [{
+                    "name": "{vmss-name}",
+                    "subnet": {
+                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    },
+                }],
                 "name": "{vmss-name}",
+                "primary": True,
             }],
         },
         "osProfile": {
@@ -2279,7 +2693,15 @@ const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineSc
     virtualMachineProfile: {
         networkProfile: {
             networkInterfaceConfigurations: [{
+                enableIPForwarding: true,
+                ipConfigurations: [{
+                    name: "{vmss-name}",
+                    subnet: {
+                        id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    },
+                }],
                 name: "{vmss-name}",
+                primary: true,
             }],
         },
         osProfile: {
@@ -2351,7 +2773,20 @@ class MyStack : Stack
                     {
                         new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
                         {
+                            EnableIPForwarding = true,
+                            IpConfigurations = 
+                            {
+                                new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+                                {
+                                    Name = "{vmss-name}",
+                                    Subnet = new AzureNextGen.Compute.Latest.Inputs.ApiEntityReferenceArgs
+                                    {
+                                        Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                                    },
+                                },
+                            },
                             Name = "{vmss-name}",
+                            Primary = true,
                         },
                     },
                 },
@@ -2397,7 +2832,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -2425,7 +2860,17 @@ func main() {
 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
-							Name: pulumi.String("{vmss-name}"),
+							EnableIPForwarding: pulumi.Bool(true),
+							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+									Name: pulumi.String("{vmss-name}"),
+									Subnet: &compute.ApiEntityReferenceArgs{
+										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+									},
+								},
+							},
+							Name:    pulumi.String("{vmss-name}"),
+							Primary: pulumi.Bool(true),
 						},
 					},
 				},
@@ -2490,7 +2935,15 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
         },
         "networkProfile": {
             "networkInterfaceConfigurations": [{
+                "enableIPForwarding": True,
+                "ipConfigurations": [{
+                    "name": "{vmss-name}",
+                    "subnet": {
+                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    },
+                }],
                 "name": "{vmss-name}",
+                "primary": True,
             }],
         },
         "osProfile": {
@@ -2547,7 +3000,15 @@ const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineSc
         },
         networkProfile: {
             networkInterfaceConfigurations: [{
+                enableIPForwarding: true,
+                ipConfigurations: [{
+                    name: "{vmss-name}",
+                    subnet: {
+                        id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    },
+                }],
                 name: "{vmss-name}",
+                primary: true,
             }],
         },
         osProfile: {
@@ -2611,7 +3072,20 @@ class MyStack : Stack
                     {
                         new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
                         {
+                            EnableIPForwarding = true,
+                            IpConfigurations = 
+                            {
+                                new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+                                {
+                                    Name = "{vmss-name}",
+                                    Subnet = new AzureNextGen.Compute.Latest.Inputs.ApiEntityReferenceArgs
+                                    {
+                                        Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                                    },
+                                },
+                            },
                             Name = "{vmss-name}",
+                            Primary = true,
                         },
                     },
                 },
@@ -2673,7 +3147,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -2695,7 +3169,17 @@ func main() {
 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
-							Name: pulumi.String("{vmss-name}"),
+							EnableIPForwarding: pulumi.Bool(true),
+							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+									Name: pulumi.String("{vmss-name}"),
+									Subnet: &compute.ApiEntityReferenceArgs{
+										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+									},
+								},
+							},
+							Name:    pulumi.String("{vmss-name}"),
+							Primary: pulumi.Bool(true),
 						},
 					},
 				},
@@ -2767,7 +3251,15 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
     virtual_machine_profile={
         "networkProfile": {
             "networkInterfaceConfigurations": [{
+                "enableIPForwarding": True,
+                "ipConfigurations": [{
+                    "name": "{vmss-name}",
+                    "subnet": {
+                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    },
+                }],
                 "name": "{vmss-name}",
+                "primary": True,
             }],
         },
         "osProfile": {
@@ -2831,7 +3323,15 @@ const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineSc
     virtualMachineProfile: {
         networkProfile: {
             networkInterfaceConfigurations: [{
+                enableIPForwarding: true,
+                ipConfigurations: [{
+                    name: "{vmss-name}",
+                    subnet: {
+                        id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    },
+                }],
                 name: "{vmss-name}",
+                primary: true,
             }],
         },
         osProfile: {
@@ -2914,7 +3414,20 @@ class MyStack : Stack
                     {
                         new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
                         {
+                            EnableIPForwarding = true,
+                            IpConfigurations = 
+                            {
+                                new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+                                {
+                                    Name = "{vmss-name}",
+                                    Subnet = new AzureNextGen.Compute.Latest.Inputs.ApiEntityReferenceArgs
+                                    {
+                                        Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                                    },
+                                },
+                            },
                             Name = "{vmss-name}",
+                            Primary = true,
                         },
                     },
                 },
@@ -2965,7 +3478,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -2992,7 +3505,17 @@ func main() {
 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
-							Name: pulumi.String("{vmss-name}"),
+							EnableIPForwarding: pulumi.Bool(true),
+							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+									Name: pulumi.String("{vmss-name}"),
+									Subnet: &compute.ApiEntityReferenceArgs{
+										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+									},
+								},
+							},
+							Name:    pulumi.String("{vmss-name}"),
+							Primary: pulumi.Bool(true),
 						},
 					},
 				},
@@ -3060,7 +3583,15 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
     virtual_machine_profile={
         "networkProfile": {
             "networkInterfaceConfigurations": [{
+                "enableIPForwarding": True,
+                "ipConfigurations": [{
+                    "name": "{vmss-name}",
+                    "subnet": {
+                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    },
+                }],
                 "name": "{vmss-name}",
+                "primary": True,
             }],
         },
         "osProfile": {
@@ -3120,7 +3651,15 @@ const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineSc
     virtualMachineProfile: {
         networkProfile: {
             networkInterfaceConfigurations: [{
+                enableIPForwarding: true,
+                ipConfigurations: [{
+                    name: "{vmss-name}",
+                    subnet: {
+                        id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    },
+                }],
                 name: "{vmss-name}",
+                primary: true,
             }],
         },
         osProfile: {
@@ -3194,7 +3733,20 @@ class MyStack : Stack
                     {
                         new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
                         {
+                            EnableIPForwarding = true,
+                            IpConfigurations = 
+                            {
+                                new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+                                {
+                                    Name = "{vmss-name}",
+                                    Subnet = new AzureNextGen.Compute.Latest.Inputs.ApiEntityReferenceArgs
+                                    {
+                                        Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                                    },
+                                },
+                            },
                             Name = "{vmss-name}",
+                            Primary = true,
                         },
                     },
                 },
@@ -3244,7 +3796,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -3271,7 +3823,17 @@ func main() {
 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
-							Name: pulumi.String("{vmss-name}"),
+							EnableIPForwarding: pulumi.Bool(true),
+							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+									Name: pulumi.String("{vmss-name}"),
+									Subnet: &compute.ApiEntityReferenceArgs{
+										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+									},
+								},
+							},
+							Name:    pulumi.String("{vmss-name}"),
+							Primary: pulumi.Bool(true),
 						},
 					},
 				},
@@ -3338,7 +3900,15 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
     virtual_machine_profile={
         "networkProfile": {
             "networkInterfaceConfigurations": [{
+                "enableIPForwarding": True,
+                "ipConfigurations": [{
+                    "name": "{vmss-name}",
+                    "subnet": {
+                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    },
+                }],
                 "name": "{vmss-name}",
+                "primary": True,
             }],
         },
         "osProfile": {
@@ -3397,7 +3967,15 @@ const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineSc
     virtualMachineProfile: {
         networkProfile: {
             networkInterfaceConfigurations: [{
+                enableIPForwarding: true,
+                ipConfigurations: [{
+                    name: "{vmss-name}",
+                    subnet: {
+                        id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    },
+                }],
                 name: "{vmss-name}",
+                primary: true,
             }],
         },
         osProfile: {
@@ -3472,7 +4050,12 @@ class MyStack : Stack
                     {
                         new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetExtensionArgs
                         {
+                            AutoUpgradeMinorVersion = false,
                             Name = "{extension-name}",
+                            Publisher = "{extension-Publisher}",
+                            Settings = ,
+                            Type = "{extension-Type}",
+                            TypeHandlerVersion = "{handler-version}",
                         },
                     },
                     ExtensionsTimeBudget = "PT1H20M",
@@ -3483,7 +4066,20 @@ class MyStack : Stack
                     {
                         new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
                         {
+                            EnableIPForwarding = true,
+                            IpConfigurations = 
+                            {
+                                new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+                                {
+                                    Name = "{vmss-name}",
+                                    Subnet = new AzureNextGen.Compute.Latest.Inputs.ApiEntityReferenceArgs
+                                    {
+                                        Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                                    },
+                                },
+                            },
                             Name = "{vmss-name}",
+                            Primary = true,
                         },
                     },
                 },
@@ -3529,7 +4125,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -3557,7 +4153,12 @@ func main() {
 				ExtensionProfile: &compute.VirtualMachineScaleSetExtensionProfileArgs{
 					Extensions: compute.VirtualMachineScaleSetExtensionArray{
 						&compute.VirtualMachineScaleSetExtensionArgs{
-							Name: pulumi.String("{extension-name}"),
+							AutoUpgradeMinorVersion: pulumi.Bool(false),
+							Name:                    pulumi.String("{extension-name}"),
+							Publisher:               pulumi.String("{extension-Publisher}"),
+							Settings:                nil,
+							Type:                    pulumi.String("{extension-Type}"),
+							TypeHandlerVersion:      pulumi.String("{handler-version}"),
 						},
 					},
 					ExtensionsTimeBudget: pulumi.String("PT1H20M"),
@@ -3565,7 +4166,17 @@ func main() {
 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
-							Name: pulumi.String("{vmss-name}"),
+							EnableIPForwarding: pulumi.Bool(true),
+							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+									Name: pulumi.String("{vmss-name}"),
+									Subnet: &compute.ApiEntityReferenceArgs{
+										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+									},
+								},
+							},
+							Name:    pulumi.String("{vmss-name}"),
+							Primary: pulumi.Bool(true),
 						},
 					},
 				},
@@ -3630,13 +4241,26 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
         },
         "extensionProfile": {
             "extensions": [{
+                "autoUpgradeMinorVersion": False,
                 "name": "{extension-name}",
+                "publisher": "{extension-Publisher}",
+                "settings": {},
+                "type": "{extension-Type}",
+                "typeHandlerVersion": "{handler-version}",
             }],
             "extensionsTimeBudget": "PT1H20M",
         },
         "networkProfile": {
             "networkInterfaceConfigurations": [{
+                "enableIPForwarding": True,
+                "ipConfigurations": [{
+                    "name": "{vmss-name}",
+                    "subnet": {
+                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    },
+                }],
                 "name": "{vmss-name}",
+                "primary": True,
             }],
         },
         "osProfile": {
@@ -3693,13 +4317,26 @@ const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineSc
         },
         extensionProfile: {
             extensions: [{
+                autoUpgradeMinorVersion: false,
                 name: "{extension-name}",
+                publisher: "{extension-Publisher}",
+                settings: {},
+                type: "{extension-Type}",
+                typeHandlerVersion: "{handler-version}",
             }],
             extensionsTimeBudget: "PT1H20M",
         },
         networkProfile: {
             networkInterfaceConfigurations: [{
+                enableIPForwarding: true,
+                ipConfigurations: [{
+                    name: "{vmss-name}",
+                    subnet: {
+                        id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    },
+                }],
                 name: "{vmss-name}",
+                primary: true,
             }],
         },
         osProfile: {
@@ -3770,7 +4407,20 @@ class MyStack : Stack
                     {
                         new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
                         {
+                            EnableIPForwarding = true,
+                            IpConfigurations = 
+                            {
+                                new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+                                {
+                                    Name = "{vmss-name}",
+                                    Subnet = new AzureNextGen.Compute.Latest.Inputs.ApiEntityReferenceArgs
+                                    {
+                                        Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                                    },
+                                },
+                            },
                             Name = "{vmss-name}",
+                            Primary = true,
                         },
                     },
                 },
@@ -3816,7 +4466,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -3843,7 +4493,17 @@ func main() {
 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
-							Name: pulumi.String("{vmss-name}"),
+							EnableIPForwarding: pulumi.Bool(true),
+							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+									Name: pulumi.String("{vmss-name}"),
+									Subnet: &compute.ApiEntityReferenceArgs{
+										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+									},
+								},
+							},
+							Name:    pulumi.String("{vmss-name}"),
+							Primary: pulumi.Bool(true),
 						},
 					},
 				},
@@ -3907,7 +4567,15 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
         },
         "networkProfile": {
             "networkInterfaceConfigurations": [{
+                "enableIPForwarding": True,
+                "ipConfigurations": [{
+                    "name": "{vmss-name}",
+                    "subnet": {
+                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    },
+                }],
                 "name": "{vmss-name}",
+                "primary": True,
             }],
         },
         "osProfile": {
@@ -3963,7 +4631,15 @@ const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineSc
         },
         networkProfile: {
             networkInterfaceConfigurations: [{
+                enableIPForwarding: true,
+                ipConfigurations: [{
+                    name: "{vmss-name}",
+                    subnet: {
+                        id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    },
+                }],
                 name: "{vmss-name}",
+                primary: true,
             }],
         },
         osProfile: {
@@ -4027,7 +4703,20 @@ class MyStack : Stack
                     {
                         new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
                         {
+                            EnableIPForwarding = true,
+                            IpConfigurations = 
+                            {
+                                new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+                                {
+                                    Name = "{vmss-name}",
+                                    Subnet = new AzureNextGen.Compute.Latest.Inputs.ApiEntityReferenceArgs
+                                    {
+                                        Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                                    },
+                                },
+                            },
                             Name = "{vmss-name}",
+                            Primary = true,
                         },
                     },
                 },
@@ -4073,7 +4762,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -4095,7 +4784,17 @@ func main() {
 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
-							Name: pulumi.String("{vmss-name}"),
+							EnableIPForwarding: pulumi.Bool(true),
+							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+									Name: pulumi.String("{vmss-name}"),
+									Subnet: &compute.ApiEntityReferenceArgs{
+										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+									},
+								},
+							},
+							Name:    pulumi.String("{vmss-name}"),
+							Primary: pulumi.Bool(true),
 						},
 					},
 				},
@@ -4154,7 +4853,15 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
     virtual_machine_profile={
         "networkProfile": {
             "networkInterfaceConfigurations": [{
+                "enableIPForwarding": True,
+                "ipConfigurations": [{
+                    "name": "{vmss-name}",
+                    "subnet": {
+                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    },
+                }],
                 "name": "{vmss-name}",
+                "primary": True,
             }],
         },
         "osProfile": {
@@ -4205,7 +4912,15 @@ const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineSc
     virtualMachineProfile: {
         networkProfile: {
             networkInterfaceConfigurations: [{
+                enableIPForwarding: true,
+                ipConfigurations: [{
+                    name: "{vmss-name}",
+                    subnet: {
+                        id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    },
+                }],
                 name: "{vmss-name}",
+                primary: true,
             }],
         },
         osProfile: {
@@ -4269,7 +4984,20 @@ class MyStack : Stack
                     {
                         new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
                         {
+                            EnableIPForwarding = true,
+                            IpConfigurations = 
+                            {
+                                new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+                                {
+                                    Name = "{vmss-name}",
+                                    Subnet = new AzureNextGen.Compute.Latest.Inputs.ApiEntityReferenceArgs
+                                    {
+                                        Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                                    },
+                                },
+                            },
                             Name = "{vmss-name}",
+                            Primary = true,
                         },
                     },
                 },
@@ -4315,7 +5043,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -4337,7 +5065,17 @@ func main() {
 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
-							Name: pulumi.String("{vmss-name}"),
+							EnableIPForwarding: pulumi.Bool(true),
+							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+									Name: pulumi.String("{vmss-name}"),
+									Subnet: &compute.ApiEntityReferenceArgs{
+										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+									},
+								},
+							},
+							Name:    pulumi.String("{vmss-name}"),
+							Primary: pulumi.Bool(true),
 						},
 					},
 				},
@@ -4396,7 +5134,15 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
     virtual_machine_profile={
         "networkProfile": {
             "networkInterfaceConfigurations": [{
+                "enableIPForwarding": True,
+                "ipConfigurations": [{
+                    "name": "{vmss-name}",
+                    "subnet": {
+                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    },
+                }],
                 "name": "{vmss-name}",
+                "primary": True,
             }],
         },
         "osProfile": {
@@ -4447,7 +5193,15 @@ const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineSc
     virtualMachineProfile: {
         networkProfile: {
             networkInterfaceConfigurations: [{
+                enableIPForwarding: true,
+                ipConfigurations: [{
+                    name: "{vmss-name}",
+                    subnet: {
+                        id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    },
+                }],
                 name: "{vmss-name}",
+                primary: true,
             }],
         },
         osProfile: {
@@ -4511,7 +5265,20 @@ class MyStack : Stack
                     {
                         new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
                         {
+                            EnableIPForwarding = true,
+                            IpConfigurations = 
+                            {
+                                new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+                                {
+                                    Name = "{vmss-name}",
+                                    Subnet = new AzureNextGen.Compute.Latest.Inputs.ApiEntityReferenceArgs
+                                    {
+                                        Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                                    },
+                                },
+                            },
                             Name = "{vmss-name}",
+                            Primary = true,
                         },
                     },
                 },
@@ -4571,7 +5338,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -4593,7 +5360,17 @@ func main() {
 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
-							Name: pulumi.String("{vmss-name}"),
+							EnableIPForwarding: pulumi.Bool(true),
+							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+									Name: pulumi.String("{vmss-name}"),
+									Subnet: &compute.ApiEntityReferenceArgs{
+										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+									},
+								},
+							},
+							Name:    pulumi.String("{vmss-name}"),
+							Primary: pulumi.Bool(true),
 						},
 					},
 				},
@@ -4662,7 +5439,15 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
     virtual_machine_profile={
         "networkProfile": {
             "networkInterfaceConfigurations": [{
+                "enableIPForwarding": True,
+                "ipConfigurations": [{
+                    "name": "{vmss-name}",
+                    "subnet": {
+                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    },
+                }],
                 "name": "{vmss-name}",
+                "primary": True,
             }],
         },
         "osProfile": {
@@ -4721,7 +5506,15 @@ const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineSc
     virtualMachineProfile: {
         networkProfile: {
             networkInterfaceConfigurations: [{
+                enableIPForwarding: true,
+                ipConfigurations: [{
+                    name: "{vmss-name}",
+                    subnet: {
+                        id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    },
+                }],
                 name: "{vmss-name}",
+                primary: true,
             }],
         },
         osProfile: {
@@ -4793,7 +5586,20 @@ class MyStack : Stack
                     {
                         new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
                         {
+                            EnableIPForwarding = true,
+                            IpConfigurations = 
+                            {
+                                new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+                                {
+                                    Name = "{vmss-name}",
+                                    Subnet = new AzureNextGen.Compute.Latest.Inputs.ApiEntityReferenceArgs
+                                    {
+                                        Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                                    },
+                                },
+                            },
                             Name = "{vmss-name}",
+                            Primary = true,
                         },
                     },
                 },
@@ -4847,7 +5653,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -4869,7 +5675,17 @@ func main() {
 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
-							Name: pulumi.String("{vmss-name}"),
+							EnableIPForwarding: pulumi.Bool(true),
+							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+									Name: pulumi.String("{vmss-name}"),
+									Subnet: &compute.ApiEntityReferenceArgs{
+										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+									},
+								},
+							},
+							Name:    pulumi.String("{vmss-name}"),
+							Primary: pulumi.Bool(true),
 						},
 					},
 				},
@@ -4934,7 +5750,15 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
     virtual_machine_profile={
         "networkProfile": {
             "networkInterfaceConfigurations": [{
+                "enableIPForwarding": True,
+                "ipConfigurations": [{
+                    "name": "{vmss-name}",
+                    "subnet": {
+                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    },
+                }],
                 "name": "{vmss-name}",
+                "primary": True,
             }],
         },
         "osProfile": {
@@ -4991,7 +5815,15 @@ const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineSc
     virtualMachineProfile: {
         networkProfile: {
             networkInterfaceConfigurations: [{
+                enableIPForwarding: true,
+                ipConfigurations: [{
+                    name: "{vmss-name}",
+                    subnet: {
+                        id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    },
+                }],
                 name: "{vmss-name}",
+                primary: true,
             }],
         },
         osProfile: {
@@ -5061,7 +5893,20 @@ class MyStack : Stack
                     {
                         new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
                         {
+                            EnableIPForwarding = true,
+                            IpConfigurations = 
+                            {
+                                new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+                                {
+                                    Name = "{vmss-name}",
+                                    Subnet = new AzureNextGen.Compute.Latest.Inputs.ApiEntityReferenceArgs
+                                    {
+                                        Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                                    },
+                                },
+                            },
                             Name = "{vmss-name}",
+                            Primary = true,
                         },
                     },
                 },
@@ -5128,7 +5973,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -5150,7 +5995,17 @@ func main() {
 				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
 					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
 						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
-							Name: pulumi.String("{vmss-name}"),
+							EnableIPForwarding: pulumi.Bool(true),
+							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+									Name: pulumi.String("{vmss-name}"),
+									Subnet: &compute.ApiEntityReferenceArgs{
+										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+									},
+								},
+							},
+							Name:    pulumi.String("{vmss-name}"),
+							Primary: pulumi.Bool(true),
 						},
 					},
 				},
@@ -5226,7 +6081,15 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
     virtual_machine_profile={
         "networkProfile": {
             "networkInterfaceConfigurations": [{
+                "enableIPForwarding": True,
+                "ipConfigurations": [{
+                    "name": "{vmss-name}",
+                    "subnet": {
+                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    },
+                }],
                 "name": "{vmss-name}",
+                "primary": True,
             }],
         },
         "osProfile": {
@@ -5294,7 +6157,15 @@ const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineSc
     virtualMachineProfile: {
         networkProfile: {
             networkInterfaceConfigurations: [{
+                enableIPForwarding: true,
+                ipConfigurations: [{
+                    name: "{vmss-name}",
+                    subnet: {
+                        id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                    },
+                }],
                 name: "{vmss-name}",
+                primary: true,
             }],
         },
         osProfile: {
@@ -13923,7 +14794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectedsettings_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.{{% /md %}}</dd>
 
@@ -13953,7 +14824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}Json formatted public settings for the extension.{{% /md %}}</dd>
 
@@ -14030,7 +14901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectedsettings_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.{{% /md %}}</dd>
 
@@ -14060,7 +14931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}Json formatted public settings for the extension.{{% /md %}}</dd>
 
@@ -14137,7 +15008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectedsettings_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.{{% /md %}}</dd>
 
@@ -14167,7 +15038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}Json formatted public settings for the extension.{{% /md %}}</dd>
 
@@ -14244,7 +15115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_settings_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.{{% /md %}}</dd>
 
@@ -14274,7 +15145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}Json formatted public settings for the extension.{{% /md %}}</dd>
 
@@ -14630,7 +15501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectedsettings_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.{{% /md %}}</dd>
 
@@ -14660,7 +15531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}Json formatted public settings for the extension.{{% /md %}}</dd>
 
@@ -14757,7 +15628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectedsettings_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.{{% /md %}}</dd>
 
@@ -14787,7 +15658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}Json formatted public settings for the extension.{{% /md %}}</dd>
 
@@ -14884,7 +15755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectedsettings_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.{{% /md %}}</dd>
 
@@ -14914,7 +15785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}Json formatted public settings for the extension.{{% /md %}}</dd>
 
@@ -15011,7 +15882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_settings_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.{{% /md %}}</dd>
 
@@ -15041,7 +15912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}Json formatted public settings for the extension.{{% /md %}}</dd>
 

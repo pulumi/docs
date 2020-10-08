@@ -48,7 +48,38 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := automation.NewSchedule(ctx, "schedule", &automation.ScheduleArgs{
+			AdvancedSchedule:      nil,
+			AutomationAccountName: pulumi.String("myAutomationAccount33"),
+			Description:           pulumi.String("my description of schedule goes here"),
+			ExpiryTime:            pulumi.String("2017-04-01T17:28:57.2494819Z"),
+			Frequency:             pulumi.String("Hour"),
+			Interval:              pulumi.Float64(1),
+			Name:                  pulumi.String("mySchedule"),
+			ResourceGroupName:     pulumi.String("rg"),
+			ScheduleName:          pulumi.String("mySchedule"),
+			StartTime:             pulumi.String("2017-03-27T17:28:57.2494819Z"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -376,7 +407,7 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the interval of the schedule.{{% /md %}}</dd>
 
@@ -493,7 +524,7 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the interval of the schedule.{{% /md %}}</dd>
 
@@ -610,7 +641,7 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the interval of the schedule.{{% /md %}}</dd>
 
@@ -727,7 +758,7 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the interval of the schedule.{{% /md %}}</dd>
 

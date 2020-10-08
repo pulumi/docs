@@ -58,7 +58,7 @@ class MyStack : Stack
 package main
 
 import (
-	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/automation/v20170515preview"
+	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation/v20170515preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

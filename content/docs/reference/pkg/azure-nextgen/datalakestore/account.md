@@ -46,7 +46,9 @@ class MyStack : Stack
             {
                 new AzureNextGen.DataLakeStore.Latest.Inputs.CreateFirewallRuleWithAccountParametersArgs
                 {
+                    EndIpAddress = "2.2.2.2",
                     Name = "test_rule",
+                    StartIpAddress = "1.1.1.1",
                 },
             },
             FirewallState = "Enabled",
@@ -66,6 +68,7 @@ class MyStack : Stack
             {
                 new AzureNextGen.DataLakeStore.Latest.Inputs.CreateTrustedIdProviderWithAccountParametersArgs
                 {
+                    IdProvider = "https://sts.windows.net/ea9ec534-a3e3-4e45-ad36-3afc5bb291c1",
                     Name = "test_trusted_id_provider_name",
                 },
             },
@@ -84,7 +87,7 @@ class MyStack : Stack
 package main
 
 import (
-	datalakestore "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datalakestore/latest"
+	datalakestore "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datalakestore/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -105,7 +108,9 @@ func main() {
 			FirewallAllowAzureIps: pulumi.String("Enabled"),
 			FirewallRules: datalakestore.CreateFirewallRuleWithAccountParametersArray{
 				&datalakestore.CreateFirewallRuleWithAccountParametersArgs{
-					Name: pulumi.String("test_rule"),
+					EndIpAddress:   pulumi.String("2.2.2.2"),
+					Name:           pulumi.String("test_rule"),
+					StartIpAddress: pulumi.String("1.1.1.1"),
 				},
 			},
 			FirewallState: pulumi.String("Enabled"),
@@ -121,7 +126,8 @@ func main() {
 			TrustedIdProviderState: pulumi.String("Enabled"),
 			TrustedIdProviders: datalakestore.CreateTrustedIdProviderWithAccountParametersArray{
 				&datalakestore.CreateTrustedIdProviderWithAccountParametersArgs{
-					Name: pulumi.String("test_trusted_id_provider_name"),
+					IdProvider: pulumi.String("https://sts.windows.net/ea9ec534-a3e3-4e45-ad36-3afc5bb291c1"),
+					Name:       pulumi.String("test_trusted_id_provider_name"),
 				},
 			},
 		})
@@ -156,7 +162,9 @@ account = azure_nextgen.datalakestore.latest.Account("account",
     encryption_state="Enabled",
     firewall_allow_azure_ips="Enabled",
     firewall_rules=[{
+        "endIpAddress": "2.2.2.2",
         "name": "test_rule",
+        "startIpAddress": "1.1.1.1",
     }],
     firewall_state="Enabled",
     identity={
@@ -170,6 +178,7 @@ account = azure_nextgen.datalakestore.latest.Account("account",
     },
     trusted_id_provider_state="Enabled",
     trusted_id_providers=[{
+        "idProvider": "https://sts.windows.net/ea9ec534-a3e3-4e45-ad36-3afc5bb291c1",
         "name": "test_trusted_id_provider_name",
     }])
 
@@ -197,7 +206,9 @@ const account = new azure_nextgen.datalakestore.latest.Account("account", {
     encryptionState: "Enabled",
     firewallAllowAzureIps: "Enabled",
     firewallRules: [{
+        endIpAddress: "2.2.2.2",
         name: "test_rule",
+        startIpAddress: "1.1.1.1",
     }],
     firewallState: "Enabled",
     identity: {
@@ -211,6 +222,7 @@ const account = new azure_nextgen.datalakestore.latest.Account("account", {
     },
     trustedIdProviderState: "Enabled",
     trustedIdProviders: [{
+        idProvider: "https://sts.windows.net/ea9ec534-a3e3-4e45-ad36-3afc5bb291c1",
         name: "test_trusted_id_provider_name",
     }],
 });

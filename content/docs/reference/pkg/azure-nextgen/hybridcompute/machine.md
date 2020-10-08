@@ -12,6 +12,128 @@ meta_desc: "Explore the Machine resource of the hybridcompute module, including 
 
 Describes a hybrid machine.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or Update a Machine
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var machine = new AzureNextGen.HybridCompute.Latest.Machine("machine", new AzureNextGen.HybridCompute.Latest.MachineArgs
+        {
+            ClientPublicKey = "string",
+            Identity = new AzureNextGen.HybridCompute.Latest.Inputs.MachineIdentityArgs
+            {
+                Type = "SystemAssigned",
+            },
+            Location = "eastus2euap",
+            LocationData = new AzureNextGen.HybridCompute.Latest.Inputs.LocationDataArgs
+            {
+                Name = "Redmond",
+            },
+            Name = "myMachine",
+            ResourceGroupName = "myResourceGroup",
+            VmId = "b7a098cc-b0b8-46e8-a205-62f301a62a8f",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	hybridcompute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hybridcompute/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := hybridcompute.NewMachine(ctx, "machine", &hybridcompute.MachineArgs{
+			ClientPublicKey: pulumi.String("string"),
+			Identity: &hybridcompute.MachineIdentityArgs{
+				Type: pulumi.String("SystemAssigned"),
+			},
+			Location: pulumi.String("eastus2euap"),
+			LocationData: &hybridcompute.LocationDataArgs{
+				Name: pulumi.String("Redmond"),
+			},
+			Name:              pulumi.String("myMachine"),
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			VmId:              pulumi.String("b7a098cc-b0b8-46e8-a205-62f301a62a8f"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+machine = azure_nextgen.hybridcompute.latest.Machine("machine",
+    client_public_key="string",
+    identity={
+        "type": "SystemAssigned",
+    },
+    location="eastus2euap",
+    location_data={
+        "name": "Redmond",
+    },
+    name="myMachine",
+    resource_group_name="myResourceGroup",
+    vm_id="b7a098cc-b0b8-46e8-a205-62f301a62a8f")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const machine = new azure_nextgen.hybridcompute.latest.Machine("machine", {
+    clientPublicKey: "string",
+    identity: {
+        type: "SystemAssigned",
+    },
+    location: "eastus2euap",
+    locationData: {
+        name: "Redmond",
+    },
+    name: "myMachine",
+    resourceGroupName: "myResourceGroup",
+    vmId: "b7a098cc-b0b8-46e8-a205-62f301a62a8f",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Machine Resource {#create}

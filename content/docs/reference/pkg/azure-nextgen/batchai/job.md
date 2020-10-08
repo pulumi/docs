@@ -84,7 +84,7 @@ package main
 import (
 	"fmt"
 
-	batchai "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/batchai/latest"
+	batchai "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batchai/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/synapse/v20200401preview"
+	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse/v20200401preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

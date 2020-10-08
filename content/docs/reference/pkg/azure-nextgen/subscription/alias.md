@@ -29,6 +29,12 @@ class MyStack : Stack
         var @alias = new AzureNextGen.Subscription.Latest.Alias("alias", new AzureNextGen.Subscription.Latest.AliasArgs
         {
             AliasName = "aliasForNewSub",
+            Properties = new AzureNextGen.Subscription.Latest.Inputs.PutAliasRequestPropertiesArgs
+            {
+                BillingScope = "/providers/Microsoft.Billing/billingAccounts/e879cf0f-2b4d-5431-109a-f72fc9868693:024cabf4-7321-4cf9-be59-df0c77ca51de_2019-05-31/billingProfiles/PE2Q-NOIT-BG7-TGB/invoiceSections/MTT4-OBS7-PJA-TGB",
+                DisplayName = "Contoso MCA subscription",
+                Workload = "Production",
+            },
         });
     }
 
@@ -44,7 +50,7 @@ class MyStack : Stack
 package main
 
 import (
-	subscription "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/subscription/latest"
+	subscription "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/subscription/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -52,6 +58,11 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := subscription.NewAlias(ctx, "alias", &subscription.AliasArgs{
 			AliasName: pulumi.String("aliasForNewSub"),
+			Properties: &subscription.PutAliasRequestPropertiesArgs{
+				BillingScope: pulumi.String("/providers/Microsoft.Billing/billingAccounts/e879cf0f-2b4d-5431-109a-f72fc9868693:024cabf4-7321-4cf9-be59-df0c77ca51de_2019-05-31/billingProfiles/PE2Q-NOIT-BG7-TGB/invoiceSections/MTT4-OBS7-PJA-TGB"),
+				DisplayName:  pulumi.String("Contoso MCA subscription"),
+				Workload:     pulumi.String("Production"),
+			},
 		})
 		if err != nil {
 			return err
@@ -70,7 +81,13 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-alias = azure_nextgen.subscription.latest.Alias("alias", alias_name="aliasForNewSub")
+alias = azure_nextgen.subscription.latest.Alias("alias",
+    alias_name="aliasForNewSub",
+    properties={
+        "billingScope": "/providers/Microsoft.Billing/billingAccounts/e879cf0f-2b4d-5431-109a-f72fc9868693:024cabf4-7321-4cf9-be59-df0c77ca51de_2019-05-31/billingProfiles/PE2Q-NOIT-BG7-TGB/invoiceSections/MTT4-OBS7-PJA-TGB",
+        "displayName": "Contoso MCA subscription",
+        "workload": "Production",
+    })
 
 ```
 
@@ -82,7 +99,14 @@ alias = azure_nextgen.subscription.latest.Alias("alias", alias_name="aliasForNew
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const alias = new azure_nextgen.subscription.latest.Alias("alias", {aliasName: "aliasForNewSub"});
+const alias = new azure_nextgen.subscription.latest.Alias("alias", {
+    aliasName: "aliasForNewSub",
+    properties: {
+        billingScope: "/providers/Microsoft.Billing/billingAccounts/e879cf0f-2b4d-5431-109a-f72fc9868693:024cabf4-7321-4cf9-be59-df0c77ca51de_2019-05-31/billingProfiles/PE2Q-NOIT-BG7-TGB/invoiceSections/MTT4-OBS7-PJA-TGB",
+        displayName: "Contoso MCA subscription",
+        workload: "Production",
+    },
+});
 
 ```
 
@@ -581,6 +605,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="resellerid_csharp">
+<a href="#resellerid_csharp" style="color: inherit; text-decoration: inherit;">Reseller<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Reseller ID, basically MPN Id{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="subscriptionid_csharp">
 <a href="#subscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
 </span> 
@@ -625,6 +659,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The friendly name of the subscription.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resellerid_go">
+<a href="#resellerid_go" style="color: inherit; text-decoration: inherit;">Reseller<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Reseller ID, basically MPN Id{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -675,6 +719,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="resellerid_nodejs">
+<a href="#resellerid_nodejs" style="color: inherit; text-decoration: inherit;">reseller<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Reseller ID, basically MPN Id{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="subscriptionid_nodejs">
 <a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
 </span> 
@@ -719,6 +773,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The friendly name of the subscription.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="reseller_id_python">
+<a href="#reseller_id_python" style="color: inherit; text-decoration: inherit;">reseller_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Reseller ID, basically MPN Id{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

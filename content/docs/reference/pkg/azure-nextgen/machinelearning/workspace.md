@@ -57,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	machinelearning "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearning/latest"
+	machinelearning "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearning/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

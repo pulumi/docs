@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	dbforpostgresql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/dbforpostgresql/latest"
+	dbforpostgresql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/dbforpostgresql/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

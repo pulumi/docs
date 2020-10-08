@@ -32,6 +32,7 @@ Explore the resources and functions of the migrate module in the Azure NextGen p
     <li><a href="getmoveresource" title="GetMoveResource"><span class="symbol function"></span>GetMoveResource</a></li>
     <li><a href="getproject" title="GetProject"><span class="symbol function"></span>GetProject</a></li>
     <li><a href="getsolution" title="GetSolution"><span class="symbol function"></span>GetSolution</a></li>
+    <li><a href="getsolutionconfig" title="GetSolutionConfig"><span class="symbol function"></span>GetSolutionConfig</a></li>
     <li><a href="getvmwarecollector" title="GetVMwareCollector"><span class="symbol function"></span>GetVMwareCollector</a></li>
 </ul>
 
@@ -42,7 +43,7 @@ Explore the resources and functions of the migrate module in the Azure NextGen p
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.1</dd>
 </dl>
 
 

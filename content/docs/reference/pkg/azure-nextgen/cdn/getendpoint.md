@@ -1537,16 +1537,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_csharp">
-<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="odatatype_csharp">
 <a href="#odatatype_csharp" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
 </span> 
@@ -1565,15 +1555,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="selector_csharp">
-<a href="#selector_csharp" style="color: inherit; text-decoration: inherit;">Selector</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_csharp">
+<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Name of Cookies to be matched{{% /md %}}</dd>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1584,6 +1574,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="selector_csharp">
+<a href="#selector_csharp" style="color: inherit; text-decoration: inherit;">Selector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of Cookies to be matched{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1601,16 +1601,6 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="matchvalues_go">
-<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1632,15 +1622,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="selector_go">
-<a href="#selector_go" style="color: inherit; text-decoration: inherit;">Selector</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_go">
+<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}Name of Cookies to be matched{{% /md %}}</dd>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1651,6 +1641,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="selector_go">
+<a href="#selector_go" style="color: inherit; text-decoration: inherit;">Selector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of Cookies to be matched{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1668,16 +1668,6 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="matchvalues_nodejs">
-<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1699,15 +1689,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="selector_nodejs">
-<a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_nodejs">
+<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}Name of Cookies to be matched{{% /md %}}</dd>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1718,6 +1708,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="selector_nodejs">
+<a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of Cookies to be matched{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1735,16 +1735,6 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1766,15 +1756,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="selector_python">
-<a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_python">
+<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}Name of Cookies to be matched{{% /md %}}</dd>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1785,6 +1775,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="selector_python">
+<a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of Cookies to be matched{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5069,16 +5069,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_csharp">
-<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="odatatype_csharp">
 <a href="#odatatype_csharp" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
 </span> 
@@ -5099,6 +5089,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="matchvalues_csharp">
+<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="negatecondition_csharp">
 <a href="#negatecondition_csharp" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
 </span> 
@@ -5113,16 +5113,6 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="matchvalues_go">
-<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5146,6 +5136,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="matchvalues_go">
+<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="negatecondition_go">
 <a href="#negatecondition_go" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
 </span> 
@@ -5160,16 +5160,6 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="matchvalues_nodejs">
-<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5193,6 +5183,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="matchvalues_nodejs">
+<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="negatecondition_nodejs">
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span> 
@@ -5207,16 +5207,6 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5237,6 +5227,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_python">
+<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5268,16 +5268,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_csharp">
-<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="odatatype_csharp">
 <a href="#odatatype_csharp" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
 </span> 
@@ -5295,6 +5285,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_csharp">
+<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5325,16 +5325,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_go">
-<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="odatatype_go">
 <a href="#odatatype_go" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
 </span> 
@@ -5352,6 +5342,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_go">
+<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5382,16 +5382,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_nodejs">
-<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="odatatype_nodejs">
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span> 
@@ -5409,6 +5399,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_nodejs">
+<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5439,16 +5439,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="odatatype_python">
 <a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span> 
@@ -5466,6 +5456,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_python">
+<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5786,16 +5786,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_csharp">
-<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="odatatype_csharp">
 <a href="#odatatype_csharp" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
 </span> 
@@ -5814,15 +5804,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="selector_csharp">
-<a href="#selector_csharp" style="color: inherit; text-decoration: inherit;">Selector</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_csharp">
+<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Name of PostArg to be matched{{% /md %}}</dd>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5833,6 +5823,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="selector_csharp">
+<a href="#selector_csharp" style="color: inherit; text-decoration: inherit;">Selector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of PostArg to be matched{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5850,16 +5850,6 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="matchvalues_go">
-<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5881,15 +5871,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="selector_go">
-<a href="#selector_go" style="color: inherit; text-decoration: inherit;">Selector</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_go">
+<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}Name of PostArg to be matched{{% /md %}}</dd>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5900,6 +5890,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="selector_go">
+<a href="#selector_go" style="color: inherit; text-decoration: inherit;">Selector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of PostArg to be matched{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5917,16 +5917,6 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="matchvalues_nodejs">
-<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5948,15 +5938,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="selector_nodejs">
-<a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_nodejs">
+<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}Name of PostArg to be matched{{% /md %}}</dd>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5967,6 +5957,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="selector_nodejs">
+<a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of PostArg to be matched{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5984,16 +5984,6 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -6015,15 +6005,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="selector_python">
-<a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_python">
+<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}Name of PostArg to be matched{{% /md %}}</dd>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6034,6 +6024,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="selector_python">
+<a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of PostArg to be matched{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6065,16 +6065,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_csharp">
-<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="odatatype_csharp">
 <a href="#odatatype_csharp" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
 </span> 
@@ -6092,6 +6082,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_csharp">
+<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6122,16 +6122,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_go">
-<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="odatatype_go">
 <a href="#odatatype_go" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
 </span> 
@@ -6149,6 +6139,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_go">
+<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6179,16 +6179,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_nodejs">
-<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="odatatype_nodejs">
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span> 
@@ -6206,6 +6196,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_nodejs">
+<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6236,16 +6236,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="odatatype_python">
 <a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span> 
@@ -6263,6 +6253,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_python">
+<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6304,16 +6304,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_csharp">
-<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="odatatype_csharp">
 <a href="#odatatype_csharp" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
 </span> 
@@ -6331,6 +6321,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_csharp">
+<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6361,16 +6361,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_go">
-<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="odatatype_go">
 <a href="#odatatype_go" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
 </span> 
@@ -6388,6 +6378,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_go">
+<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6418,16 +6418,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_nodejs">
-<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="odatatype_nodejs">
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span> 
@@ -6445,6 +6435,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_nodejs">
+<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6475,16 +6475,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="odatatype_python">
 <a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span> 
@@ -6502,6 +6492,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_python">
+<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6543,16 +6543,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_csharp">
-<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="odatatype_csharp">
 <a href="#odatatype_csharp" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
 </span> 
@@ -6570,6 +6560,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_csharp">
+<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6600,16 +6600,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_go">
-<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="odatatype_go">
 <a href="#odatatype_go" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
 </span> 
@@ -6627,6 +6617,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_go">
+<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6657,16 +6657,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_nodejs">
-<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="odatatype_nodejs">
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span> 
@@ -6684,6 +6674,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_nodejs">
+<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6714,16 +6714,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="odatatype_python">
 <a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span> 
@@ -6741,6 +6731,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_python">
+<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6782,16 +6782,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_csharp">
-<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="odatatype_csharp">
 <a href="#odatatype_csharp" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
 </span> 
@@ -6810,15 +6800,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="selector_csharp">
-<a href="#selector_csharp" style="color: inherit; text-decoration: inherit;">Selector</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_csharp">
+<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Name of Header to be matched{{% /md %}}</dd>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6829,6 +6819,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="selector_csharp">
+<a href="#selector_csharp" style="color: inherit; text-decoration: inherit;">Selector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of Header to be matched{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6846,16 +6846,6 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="matchvalues_go">
-<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -6877,15 +6867,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="selector_go">
-<a href="#selector_go" style="color: inherit; text-decoration: inherit;">Selector</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_go">
+<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}Name of Header to be matched{{% /md %}}</dd>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6896,6 +6886,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="selector_go">
+<a href="#selector_go" style="color: inherit; text-decoration: inherit;">Selector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of Header to be matched{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6913,16 +6913,6 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="matchvalues_nodejs">
-<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -6944,15 +6934,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="selector_nodejs">
-<a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_nodejs">
+<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}Name of Header to be matched{{% /md %}}</dd>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6963,6 +6953,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="selector_nodejs">
+<a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of Header to be matched{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6980,16 +6980,6 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -7011,15 +7001,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="selector_python">
-<a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_python">
+<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}Name of Header to be matched{{% /md %}}</dd>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7030,6 +7020,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="selector_python">
+<a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of Header to be matched{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7061,16 +7061,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_csharp">
-<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="odatatype_csharp">
 <a href="#odatatype_csharp" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
 </span> 
@@ -7091,6 +7081,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="matchvalues_csharp">
+<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="negatecondition_csharp">
 <a href="#negatecondition_csharp" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
 </span> 
@@ -7105,16 +7105,6 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="matchvalues_go">
-<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -7138,6 +7128,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="matchvalues_go">
+<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="negatecondition_go">
 <a href="#negatecondition_go" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
 </span> 
@@ -7152,16 +7152,6 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="matchvalues_nodejs">
-<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -7185,6 +7175,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="matchvalues_nodejs">
+<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="negatecondition_nodejs">
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span> 
@@ -7199,16 +7199,6 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -7229,6 +7219,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_python">
+<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7260,16 +7260,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_csharp">
-<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="odatatype_csharp">
 <a href="#odatatype_csharp" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
 </span> 
@@ -7290,6 +7280,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="matchvalues_csharp">
+<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="negatecondition_csharp">
 <a href="#negatecondition_csharp" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
 </span> 
@@ -7304,16 +7304,6 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="matchvalues_go">
-<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -7337,6 +7327,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="matchvalues_go">
+<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="negatecondition_go">
 <a href="#negatecondition_go" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
 </span> 
@@ -7351,16 +7351,6 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="matchvalues_nodejs">
-<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -7384,6 +7374,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="matchvalues_nodejs">
+<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="negatecondition_nodejs">
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span> 
@@ -7398,16 +7398,6 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -7428,6 +7418,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_python">
+<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7459,16 +7459,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_csharp">
-<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="odatatype_csharp">
 <a href="#odatatype_csharp" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
 </span> 
@@ -7486,6 +7476,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_csharp">
+<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7516,16 +7516,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_go">
-<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="odatatype_go">
 <a href="#odatatype_go" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
 </span> 
@@ -7543,6 +7533,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_go">
+<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7573,16 +7573,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_nodejs">
-<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="odatatype_nodejs">
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span> 
@@ -7600,6 +7590,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_nodejs">
+<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7630,16 +7630,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="odatatype_python">
 <a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span> 
@@ -7657,6 +7647,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_python">
+<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7936,16 +7936,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_csharp">
-<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="odatatype_csharp">
 <a href="#odatatype_csharp" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
 </span> 
@@ -7963,6 +7953,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_csharp">
+<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7993,16 +7993,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_go">
-<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="odatatype_go">
 <a href="#odatatype_go" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
 </span> 
@@ -8020,6 +8010,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_go">
+<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8050,16 +8050,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_nodejs">
-<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="odatatype_nodejs">
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span> 
@@ -8077,6 +8067,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_nodejs">
+<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8107,16 +8107,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="odatatype_python">
 <a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span> 
@@ -8134,6 +8124,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_python">
+<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8175,16 +8175,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_csharp">
-<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="odatatype_csharp">
 <a href="#odatatype_csharp" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
 </span> 
@@ -8202,6 +8192,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_csharp">
+<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8232,16 +8232,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_go">
-<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="odatatype_go">
 <a href="#odatatype_go" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
 </span> 
@@ -8259,6 +8249,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_go">
+<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8289,16 +8289,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_nodejs">
-<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="odatatype_nodejs">
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span> 
@@ -8316,6 +8306,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_nodejs">
+<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8346,16 +8346,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="odatatype_python">
 <a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span> 
@@ -8373,6 +8363,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_python">
+<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8414,16 +8414,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_csharp">
-<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="odatatype_csharp">
 <a href="#odatatype_csharp" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
 </span> 
@@ -8441,6 +8431,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_csharp">
+<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8471,16 +8471,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_go">
-<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="odatatype_go">
 <a href="#odatatype_go" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
 </span> 
@@ -8498,6 +8488,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_go">
+<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8528,16 +8528,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_nodejs">
-<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="odatatype_nodejs">
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span> 
@@ -8555,6 +8545,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_nodejs">
+<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8585,16 +8585,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="odatatype_python">
 <a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span> 
@@ -8612,6 +8602,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchvalues_python">
+<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

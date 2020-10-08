@@ -34,6 +34,57 @@ class MyStack : Stack
             },
             Kind = "fhir-R4",
             Location = "westus2",
+            Properties = new AzureNextGen.HealthcareApis.Latest.Inputs.ServicesPropertiesArgs
+            {
+                AccessPolicies = 
+                {
+                    new AzureNextGen.HealthcareApis.Latest.Inputs.ServiceAccessPolicyEntryArgs
+                    {
+                        ObjectId = "c487e7d1-3210-41a3-8ccc-e9372b78da47",
+                    },
+                    new AzureNextGen.HealthcareApis.Latest.Inputs.ServiceAccessPolicyEntryArgs
+                    {
+                        ObjectId = "5b307da8-43d4-492b-8b66-b0294ade872f",
+                    },
+                },
+                AuthenticationConfiguration = new AzureNextGen.HealthcareApis.Latest.Inputs.ServiceAuthenticationConfigurationInfoArgs
+                {
+                    Audience = "https://azurehealthcareapis.com",
+                    Authority = "https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc",
+                    SmartProxyEnabled = true,
+                },
+                CorsConfiguration = new AzureNextGen.HealthcareApis.Latest.Inputs.ServiceCorsConfigurationInfoArgs
+                {
+                    AllowCredentials = false,
+                    Headers = 
+                    {
+                        "*",
+                    },
+                    MaxAge = 1440,
+                    Methods = 
+                    {
+                        "DELETE",
+                        "GET",
+                        "OPTIONS",
+                        "PATCH",
+                        "POST",
+                        "PUT",
+                    },
+                    Origins = 
+                    {
+                        "*",
+                    },
+                },
+                CosmosDbConfiguration = new AzureNextGen.HealthcareApis.Latest.Inputs.ServiceCosmosDbConfigurationInfoArgs
+                {
+                    KeyVaultKeyUri = "https://my-vault.vault.azure.net/keys/my-key",
+                    OfferThroughput = 1000,
+                },
+                ExportConfiguration = new AzureNextGen.HealthcareApis.Latest.Inputs.ServiceExportConfigurationInfoArgs
+                {
+                    StorageAccountName = "existingStorageAccount",
+                },
+            },
             ResourceGroupName = "rg1",
             ResourceName = "service1",
             Tags = ,
@@ -52,7 +103,7 @@ class MyStack : Stack
 package main
 
 import (
-	healthcareapis "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/healthcareapis/latest"
+	healthcareapis "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/healthcareapis/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -62,8 +113,48 @@ func main() {
 			Identity: &healthcareapis.ResourceIdentityArgs{
 				Type: pulumi.String("SystemAssigned"),
 			},
-			Kind:              pulumi.String("fhir-R4"),
-			Location:          pulumi.String("westus2"),
+			Kind:     pulumi.String("fhir-R4"),
+			Location: pulumi.String("westus2"),
+			Properties: &healthcareapis.ServicesPropertiesArgs{
+				AccessPolicies: healthcareapis.ServiceAccessPolicyEntryArray{
+					&healthcareapis.ServiceAccessPolicyEntryArgs{
+						ObjectId: pulumi.String("c487e7d1-3210-41a3-8ccc-e9372b78da47"),
+					},
+					&healthcareapis.ServiceAccessPolicyEntryArgs{
+						ObjectId: pulumi.String("5b307da8-43d4-492b-8b66-b0294ade872f"),
+					},
+				},
+				AuthenticationConfiguration: &healthcareapis.ServiceAuthenticationConfigurationInfoArgs{
+					Audience:          pulumi.String("https://azurehealthcareapis.com"),
+					Authority:         pulumi.String("https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc"),
+					SmartProxyEnabled: pulumi.Bool(true),
+				},
+				CorsConfiguration: &healthcareapis.ServiceCorsConfigurationInfoArgs{
+					AllowCredentials: pulumi.Bool(false),
+					Headers: pulumi.StringArray{
+						pulumi.String("*"),
+					},
+					MaxAge: pulumi.Int(1440),
+					Methods: pulumi.StringArray{
+						pulumi.String("DELETE"),
+						pulumi.String("GET"),
+						pulumi.String("OPTIONS"),
+						pulumi.String("PATCH"),
+						pulumi.String("POST"),
+						pulumi.String("PUT"),
+					},
+					Origins: pulumi.StringArray{
+						pulumi.String("*"),
+					},
+				},
+				CosmosDbConfiguration: &healthcareapis.ServiceCosmosDbConfigurationInfoArgs{
+					KeyVaultKeyUri:  pulumi.String("https://my-vault.vault.azure.net/keys/my-key"),
+					OfferThroughput: pulumi.Int(1000),
+				},
+				ExportConfiguration: &healthcareapis.ServiceExportConfigurationInfoArgs{
+					StorageAccountName: pulumi.String("existingStorageAccount"),
+				},
+			},
 			ResourceGroupName: pulumi.String("rg1"),
 			ResourceName:      pulumi.String("service1"),
 			Tags:              nil,
@@ -91,6 +182,42 @@ service = azure_nextgen.healthcareapis.latest.Service("service",
     },
     kind="fhir-R4",
     location="westus2",
+    properties={
+        "accessPolicies": [
+            {
+                "objectId": "c487e7d1-3210-41a3-8ccc-e9372b78da47",
+            },
+            {
+                "objectId": "5b307da8-43d4-492b-8b66-b0294ade872f",
+            },
+        ],
+        "authenticationConfiguration": {
+            "audience": "https://azurehealthcareapis.com",
+            "authority": "https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc",
+            "smartProxyEnabled": True,
+        },
+        "corsConfiguration": {
+            "allowCredentials": False,
+            "headers": ["*"],
+            "maxAge": 1440,
+            "methods": [
+                "DELETE",
+                "GET",
+                "OPTIONS",
+                "PATCH",
+                "POST",
+                "PUT",
+            ],
+            "origins": ["*"],
+        },
+        "cosmosDbConfiguration": {
+            "keyVaultKeyUri": "https://my-vault.vault.azure.net/keys/my-key",
+            "offerThroughput": 1000,
+        },
+        "exportConfiguration": {
+            "storageAccountName": "existingStorageAccount",
+        },
+    },
     resource_group_name="rg1",
     resource_name="service1",
     tags={})
@@ -111,6 +238,42 @@ const service = new azure_nextgen.healthcareapis.latest.Service("service", {
     },
     kind: "fhir-R4",
     location: "westus2",
+    properties: {
+        accessPolicies: [
+            {
+                objectId: "c487e7d1-3210-41a3-8ccc-e9372b78da47",
+            },
+            {
+                objectId: "5b307da8-43d4-492b-8b66-b0294ade872f",
+            },
+        ],
+        authenticationConfiguration: {
+            audience: "https://azurehealthcareapis.com",
+            authority: "https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc",
+            smartProxyEnabled: true,
+        },
+        corsConfiguration: {
+            allowCredentials: false,
+            headers: ["*"],
+            maxAge: 1440,
+            methods: [
+                "DELETE",
+                "GET",
+                "OPTIONS",
+                "PATCH",
+                "POST",
+                "PUT",
+            ],
+            origins: ["*"],
+        },
+        cosmosDbConfiguration: {
+            keyVaultKeyUri: "https://my-vault.vault.azure.net/keys/my-key",
+            offerThroughput: 1000,
+        },
+        exportConfiguration: {
+            storageAccountName: "existingStorageAccount",
+        },
+    },
     resourceGroupName: "rg1",
     resourceName: "service1",
     tags: {},
@@ -134,6 +297,16 @@ class MyStack : Stack
         {
             Kind = "fhir-R4",
             Location = "westus2",
+            Properties = new AzureNextGen.HealthcareApis.Latest.Inputs.ServicesPropertiesArgs
+            {
+                AccessPolicies = 
+                {
+                    new AzureNextGen.HealthcareApis.Latest.Inputs.ServiceAccessPolicyEntryArgs
+                    {
+                        ObjectId = "c487e7d1-3210-41a3-8ccc-e9372b78da47",
+                    },
+                },
+            },
             ResourceGroupName = "rg1",
             ResourceName = "service2",
             Tags = ,
@@ -152,15 +325,22 @@ class MyStack : Stack
 package main
 
 import (
-	healthcareapis "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/healthcareapis/latest"
+	healthcareapis "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/healthcareapis/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := healthcareapis.NewService(ctx, "service", &healthcareapis.ServiceArgs{
-			Kind:              pulumi.String("fhir-R4"),
-			Location:          pulumi.String("westus2"),
+			Kind:     pulumi.String("fhir-R4"),
+			Location: pulumi.String("westus2"),
+			Properties: &healthcareapis.ServicesPropertiesArgs{
+				AccessPolicies: healthcareapis.ServiceAccessPolicyEntryArray{
+					&healthcareapis.ServiceAccessPolicyEntryArgs{
+						ObjectId: pulumi.String("c487e7d1-3210-41a3-8ccc-e9372b78da47"),
+					},
+				},
+			},
 			ResourceGroupName: pulumi.String("rg1"),
 			ResourceName:      pulumi.String("service2"),
 			Tags:              nil,
@@ -185,6 +365,11 @@ import pulumi_azure_nextgen as azure_nextgen
 service = azure_nextgen.healthcareapis.latest.Service("service",
     kind="fhir-R4",
     location="westus2",
+    properties={
+        "accessPolicies": [{
+            "objectId": "c487e7d1-3210-41a3-8ccc-e9372b78da47",
+        }],
+    },
     resource_group_name="rg1",
     resource_name="service2",
     tags={})
@@ -202,6 +387,11 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const service = new azure_nextgen.healthcareapis.latest.Service("service", {
     kind: "fhir-R4",
     location: "westus2",
+    properties: {
+        accessPolicies: [{
+            objectId: "c487e7d1-3210-41a3-8ccc-e9372b78da47",
+        }],
+    },
     resourceGroupName: "rg1",
     resourceName: "service2",
     tags: {},

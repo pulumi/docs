@@ -30,6 +30,10 @@ class MyStack : Stack
         {
             Location = "East US",
             ManagementAssociationName = "managementAssociation1",
+            Properties = new AzureNextGen.OperationsManagement.V20151101Preview.Inputs.ManagementAssociationPropertiesArgs
+            {
+                ApplicationId = "/subscriptions/sub1/resourcegroups/rg1/providers/Microsoft.Appliance/Appliances/appliance1",
+            },
             ProviderName = "providerName",
             ResourceGroupName = "rg1",
             ResourceName = "resourceName",
@@ -49,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	operationsmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/operationsmanagement/v20151101preview"
+	operationsmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationsmanagement/v20151101preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -58,10 +62,13 @@ func main() {
 		_, err := operationsmanagement.NewManagementAssociation(ctx, "managementAssociation", &operationsmanagement.ManagementAssociationArgs{
 			Location:                  pulumi.String("East US"),
 			ManagementAssociationName: pulumi.String("managementAssociation1"),
-			ProviderName:              pulumi.String("providerName"),
-			ResourceGroupName:         pulumi.String("rg1"),
-			ResourceName:              pulumi.String("resourceName"),
-			ResourceType:              pulumi.String("resourceType"),
+			Properties: &operationsmanagement.ManagementAssociationPropertiesArgs{
+				ApplicationId: pulumi.String("/subscriptions/sub1/resourcegroups/rg1/providers/Microsoft.Appliance/Appliances/appliance1"),
+			},
+			ProviderName:      pulumi.String("providerName"),
+			ResourceGroupName: pulumi.String("rg1"),
+			ResourceName:      pulumi.String("resourceName"),
+			ResourceType:      pulumi.String("resourceType"),
 		})
 		if err != nil {
 			return err
@@ -83,6 +90,9 @@ import pulumi_azure_nextgen as azure_nextgen
 management_association = azure_nextgen.operationsmanagement.v20151101preview.ManagementAssociation("managementAssociation",
     location="East US",
     management_association_name="managementAssociation1",
+    properties={
+        "applicationId": "/subscriptions/sub1/resourcegroups/rg1/providers/Microsoft.Appliance/Appliances/appliance1",
+    },
     provider_name="providerName",
     resource_group_name="rg1",
     resource_name="resourceName",
@@ -101,6 +111,9 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const managementAssociation = new azure_nextgen.operationsmanagement.v20151101preview.ManagementAssociation("managementAssociation", {
     location: "East US",
     managementAssociationName: "managementAssociation1",
+    properties: {
+        applicationId: "/subscriptions/sub1/resourcegroups/rg1/providers/Microsoft.Appliance/Appliances/appliance1",
+    },
     providerName: "providerName",
     resourceGroupName: "rg1",
     resourceName: "resourceName",

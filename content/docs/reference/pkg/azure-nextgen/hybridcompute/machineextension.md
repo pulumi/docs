@@ -12,6 +12,125 @@ meta_desc: "Explore the MachineExtension resource of the hybridcompute module, i
 
 Describes a Machine Extension.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or Update a Machine Extension
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var machineExtension = new AzureNextGen.HybridCompute.Latest.MachineExtension("machineExtension", new AzureNextGen.HybridCompute.Latest.MachineExtensionArgs
+        {
+            ExtensionName = "CustomScriptExtension",
+            Location = "eastus2euap",
+            Name = "myMachine",
+            Publisher = "Microsoft.Compute",
+            ResourceGroupName = "myResourceGroup",
+            Settings = 
+            {
+                { "commandToExecute", "powershell.exe -c \"Get-Process | Where-Object { $_.CPU -gt 10000 }\"" },
+            },
+            Type = "CustomScriptExtension",
+            TypeHandlerVersion = "1.10",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	"fmt"
+
+	hybridcompute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hybridcompute/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := hybridcompute.NewMachineExtension(ctx, "machineExtension", &hybridcompute.MachineExtensionArgs{
+			ExtensionName:     pulumi.String("CustomScriptExtension"),
+			Location:          pulumi.String("eastus2euap"),
+			Name:              pulumi.String("myMachine"),
+			Publisher:         pulumi.String("Microsoft.Compute"),
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			Settings: pulumi.StringMap{
+				"commandToExecute": pulumi.String(fmt.Sprintf("%v%v%v", "powershell.exe -c \"Get-Process | Where-Object { ", "$", "_.CPU -gt 10000 }\"")),
+			},
+			Type:               pulumi.String("CustomScriptExtension"),
+			TypeHandlerVersion: pulumi.String("1.10"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+machine_extension = azure_nextgen.hybridcompute.latest.MachineExtension("machineExtension",
+    extension_name="CustomScriptExtension",
+    location="eastus2euap",
+    name="myMachine",
+    publisher="Microsoft.Compute",
+    resource_group_name="myResourceGroup",
+    settings={
+        "commandToExecute": "powershell.exe -c \"Get-Process | Where-Object { $_.CPU -gt 10000 }\"",
+    },
+    type="CustomScriptExtension",
+    type_handler_version="1.10")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const machineExtension = new azure_nextgen.hybridcompute.latest.MachineExtension("machineExtension", {
+    extensionName: "CustomScriptExtension",
+    location: "eastus2euap",
+    name: "myMachine",
+    publisher: "Microsoft.Compute",
+    resourceGroupName: "myResourceGroup",
+    settings: {
+        commandToExecute: `powershell.exe -c "Get-Process | Where-Object { $_.CPU -gt 10000 }"`,
+    },
+    type: "CustomScriptExtension",
+    typeHandlerVersion: "1.10",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a MachineExtension Resource {#create}
@@ -261,7 +380,7 @@ The MachineExtension resource accepts the following [input]({{< relref "/docs/in
 <a href="#protectedsettings_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.{{% /md %}}</dd>
 
@@ -281,7 +400,7 @@ The MachineExtension resource accepts the following [input]({{< relref "/docs/in
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}Json formatted public settings for the extension.{{% /md %}}</dd>
 
@@ -388,7 +507,7 @@ The MachineExtension resource accepts the following [input]({{< relref "/docs/in
 <a href="#protectedsettings_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.{{% /md %}}</dd>
 
@@ -408,7 +527,7 @@ The MachineExtension resource accepts the following [input]({{< relref "/docs/in
 <a href="#settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}Json formatted public settings for the extension.{{% /md %}}</dd>
 
@@ -515,7 +634,7 @@ The MachineExtension resource accepts the following [input]({{< relref "/docs/in
 <a href="#protectedsettings_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.{{% /md %}}</dd>
 
@@ -535,7 +654,7 @@ The MachineExtension resource accepts the following [input]({{< relref "/docs/in
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}Json formatted public settings for the extension.{{% /md %}}</dd>
 
@@ -642,7 +761,7 @@ The MachineExtension resource accepts the following [input]({{< relref "/docs/in
 <a href="#protected_settings_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.{{% /md %}}</dd>
 
@@ -662,7 +781,7 @@ The MachineExtension resource accepts the following [input]({{< relref "/docs/in
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}Json formatted public settings for the extension.{{% /md %}}</dd>
 

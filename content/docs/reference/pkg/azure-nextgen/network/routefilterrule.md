@@ -12,6 +12,119 @@ meta_desc: "Explore the RouteFilterRule resource of the network module, includin
 
 Route Filter Rule Resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### RouteFilterRuleCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var routeFilterRule = new AzureNextGen.Network.Latest.RouteFilterRule("routeFilterRule", new AzureNextGen.Network.Latest.RouteFilterRuleArgs
+        {
+            Access = "Allow",
+            Communities = 
+            {
+                "12076:5030",
+                "12076:5040",
+            },
+            ResourceGroupName = "rg1",
+            RouteFilterName = "filterName",
+            RouteFilterRuleType = "Community",
+            RuleName = "ruleName",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewRouteFilterRule(ctx, "routeFilterRule", &network.RouteFilterRuleArgs{
+			Access: pulumi.String("Allow"),
+			Communities: pulumi.StringArray{
+				pulumi.String("12076:5030"),
+				pulumi.String("12076:5040"),
+			},
+			ResourceGroupName:   pulumi.String("rg1"),
+			RouteFilterName:     pulumi.String("filterName"),
+			RouteFilterRuleType: pulumi.String("Community"),
+			RuleName:            pulumi.String("ruleName"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+route_filter_rule = azure_nextgen.network.latest.RouteFilterRule("routeFilterRule",
+    access="Allow",
+    communities=[
+        "12076:5030",
+        "12076:5040",
+    ],
+    resource_group_name="rg1",
+    route_filter_name="filterName",
+    route_filter_rule_type="Community",
+    rule_name="ruleName")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const routeFilterRule = new azure_nextgen.network.latest.RouteFilterRule("routeFilterRule", {
+    access: "Allow",
+    communities: [
+        "12076:5030",
+        "12076:5040",
+    ],
+    resourceGroupName: "rg1",
+    routeFilterName: "filterName",
+    routeFilterRuleType: "Community",
+    ruleName: "ruleName",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a RouteFilterRule Resource {#create}

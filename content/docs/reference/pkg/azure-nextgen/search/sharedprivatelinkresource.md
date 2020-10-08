@@ -28,6 +28,12 @@ class MyStack : Stack
     {
         var sharedPrivateLinkResource = new AzureNextGen.Search.Latest.SharedPrivateLinkResource("sharedPrivateLinkResource", new AzureNextGen.Search.Latest.SharedPrivateLinkResourceArgs
         {
+            Properties = new AzureNextGen.Search.Latest.Inputs.SharedPrivateLinkResourcePropertiesArgs
+            {
+                GroupId = "blob",
+                PrivateLinkResourceId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Storage/storageAccounts/storageAccountName",
+                RequestMessage = "please approve",
+            },
             ResourceGroupName = "rg1",
             SearchServiceName = "mysearchservice",
             SharedPrivateLinkResourceName = "testResource",
@@ -46,13 +52,18 @@ class MyStack : Stack
 package main
 
 import (
-	search "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/search/latest"
+	search "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/search/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := search.NewSharedPrivateLinkResource(ctx, "sharedPrivateLinkResource", &search.SharedPrivateLinkResourceArgs{
+			Properties: &search.SharedPrivateLinkResourcePropertiesArgs{
+				GroupId:               pulumi.String("blob"),
+				PrivateLinkResourceId: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Storage/storageAccounts/storageAccountName"),
+				RequestMessage:        pulumi.String("please approve"),
+			},
 			ResourceGroupName:             pulumi.String("rg1"),
 			SearchServiceName:             pulumi.String("mysearchservice"),
 			SharedPrivateLinkResourceName: pulumi.String("testResource"),
@@ -75,6 +86,11 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 shared_private_link_resource = azure_nextgen.search.latest.SharedPrivateLinkResource("sharedPrivateLinkResource",
+    properties={
+        "groupId": "blob",
+        "privateLinkResourceId": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Storage/storageAccounts/storageAccountName",
+        "requestMessage": "please approve",
+    },
     resource_group_name="rg1",
     search_service_name="mysearchservice",
     shared_private_link_resource_name="testResource")
@@ -90,6 +106,11 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const sharedPrivateLinkResource = new azure_nextgen.search.latest.SharedPrivateLinkResource("sharedPrivateLinkResource", {
+    properties: {
+        groupId: "blob",
+        privateLinkResourceId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Storage/storageAccounts/storageAccountName",
+        requestMessage: "please approve",
+    },
     resourceGroupName: "rg1",
     searchServiceName: "mysearchservice",
     sharedPrivateLinkResourceName: "testResource",

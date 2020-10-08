@@ -56,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	notificationhubs "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/notificationhubs/latest"
+	notificationhubs "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/notificationhubs/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

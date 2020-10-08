@@ -12,6 +12,150 @@ meta_desc: "Explore the CapacityDetails resource of the powerbidedicated module,
 
 Represents an instance of a Dedicated Capacity resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create capacity
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var capacityDetails = new AzureNextGen.PowerBIDedicated.Latest.CapacityDetails("capacityDetails", new AzureNextGen.PowerBIDedicated.Latest.CapacityDetailsArgs
+        {
+            Administration = new AzureNextGen.PowerBIDedicated.Latest.Inputs.DedicatedCapacityAdministratorsArgs
+            {
+                Members = 
+                {
+                    "azsdktest@microsoft.com",
+                    "azsdktest2@microsoft.com",
+                },
+            },
+            DedicatedCapacityName = "azsdktest",
+            Location = "West US",
+            ResourceGroupName = "TestRG",
+            Sku = new AzureNextGen.PowerBIDedicated.Latest.Inputs.ResourceSkuArgs
+            {
+                Name = "A1",
+                Tier = "PBIE_Azure",
+            },
+            Tags = 
+            {
+                { "testKey", "testValue" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	powerbidedicated "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/powerbidedicated/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := powerbidedicated.NewCapacityDetails(ctx, "capacityDetails", &powerbidedicated.CapacityDetailsArgs{
+			Administration: &powerbidedicated.DedicatedCapacityAdministratorsArgs{
+				Members: pulumi.StringArray{
+					pulumi.String("azsdktest@microsoft.com"),
+					pulumi.String("azsdktest2@microsoft.com"),
+				},
+			},
+			DedicatedCapacityName: pulumi.String("azsdktest"),
+			Location:              pulumi.String("West US"),
+			ResourceGroupName:     pulumi.String("TestRG"),
+			Sku: &powerbidedicated.ResourceSkuArgs{
+				Name: pulumi.String("A1"),
+				Tier: pulumi.String("PBIE_Azure"),
+			},
+			Tags: pulumi.StringMap{
+				"testKey": pulumi.String("testValue"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+capacity_details = azure_nextgen.powerbidedicated.latest.CapacityDetails("capacityDetails",
+    administration={
+        "members": [
+            "azsdktest@microsoft.com",
+            "azsdktest2@microsoft.com",
+        ],
+    },
+    dedicated_capacity_name="azsdktest",
+    location="West US",
+    resource_group_name="TestRG",
+    sku={
+        "name": "A1",
+        "tier": "PBIE_Azure",
+    },
+    tags={
+        "testKey": "testValue",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const capacityDetails = new azure_nextgen.powerbidedicated.latest.CapacityDetails("capacityDetails", {
+    administration: {
+        members: [
+            "azsdktest@microsoft.com",
+            "azsdktest2@microsoft.com",
+        ],
+    },
+    dedicatedCapacityName: "azsdktest",
+    location: "West US",
+    resourceGroupName: "TestRG",
+    sku: {
+        name: "A1",
+        tier: "PBIE_Azure",
+    },
+    tags: {
+        testKey: "testValue",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a CapacityDetails Resource {#create}

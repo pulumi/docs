@@ -61,7 +61,7 @@ class MyStack : Stack
 package main
 
 import (
-	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/containerregistry/v20191201preview"
+	containerregistry "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry/v20191201preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

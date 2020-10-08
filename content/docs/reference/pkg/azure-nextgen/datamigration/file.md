@@ -31,6 +31,10 @@ class MyStack : Stack
             FileName = "x114d023d8",
             GroupName = "DmsSdkRg",
             ProjectName = "DmsSdkProject",
+            Properties = new AzureNextGen.DataMigration.V20180715Preview.Inputs.ProjectFilePropertiesArgs
+            {
+                FilePath = "DmsSdkFilePath/DmsSdkFile.sql",
+            },
             ServiceName = "DmsSdkService",
         });
     }
@@ -47,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	datamigration "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration/v20180715preview"
+	datamigration "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration/v20180715preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -57,6 +61,9 @@ func main() {
 			FileName:    pulumi.String("x114d023d8"),
 			GroupName:   pulumi.String("DmsSdkRg"),
 			ProjectName: pulumi.String("DmsSdkProject"),
+			Properties: &datamigration.ProjectFilePropertiesArgs{
+				FilePath: pulumi.String("DmsSdkFilePath/DmsSdkFile.sql"),
+			},
 			ServiceName: pulumi.String("DmsSdkService"),
 		})
 		if err != nil {
@@ -80,6 +87,9 @@ file = azure_nextgen.datamigration.v20180715preview.File("file",
     file_name="x114d023d8",
     group_name="DmsSdkRg",
     project_name="DmsSdkProject",
+    properties={
+        "filePath": "DmsSdkFilePath/DmsSdkFile.sql",
+    },
     service_name="DmsSdkService")
 
 ```
@@ -96,6 +106,9 @@ const file = new azure_nextgen.datamigration.v20180715preview.File("file", {
     fileName: "x114d023d8",
     groupName: "DmsSdkRg",
     projectName: "DmsSdkProject",
+    properties: {
+        filePath: "DmsSdkFilePath/DmsSdkFile.sql",
+    },
     serviceName: "DmsSdkService",
 });
 

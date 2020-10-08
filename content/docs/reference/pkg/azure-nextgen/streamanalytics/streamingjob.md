@@ -43,27 +43,21 @@ class MyStack : Stack
                     {
                         { "datasource", 
                         {
-                            { "properties", 
+                            { "container", "containerName" },
+                            { "pathPattern", "" },
+                            { "storageAccounts", 
                             {
-                                { "container", "containerName" },
-                                { "pathPattern", "" },
-                                { "storageAccounts", 
+                                new AzureNextGen.StreamAnalytics.Latest.Inputs.StorageAccountArgs
                                 {
-                                    
-                                    {
-                                        { "accountKey", "yourAccountKey==" },
-                                        { "accountName", "yourAccountName" },
-                                    },
-                                } },
+                                    AccountKey = "yourAccountKey==",
+                                    AccountName = "yourAccountName",
+                                },
                             } },
                             { "type", "Microsoft.Storage/Blob" },
                         } },
                         { "serialization", 
                         {
-                            { "properties", 
-                            {
-                                { "encoding", "UTF8" },
-                            } },
+                            { "encoding", "UTF8" },
                             { "type", "Json" },
                         } },
                         { "type", "Stream" },
@@ -77,6 +71,15 @@ class MyStack : Stack
             {
                 new AzureNextGen.StreamAnalytics.Latest.Inputs.OutputArgs
                 {
+                    Datasource = 
+                    {
+                        { "database", "databaseName" },
+                        { "password", "userPassword" },
+                        { "server", "serverName" },
+                        { "table", "tableName" },
+                        { "type", "Microsoft.Sql/Server/Database" },
+                        { "user", "userName" },
+                    },
                     Name = "outputtest",
                 },
             },
@@ -94,6 +97,8 @@ class MyStack : Stack
             Transformation = new AzureNextGen.StreamAnalytics.Latest.Inputs.TransformationArgs
             {
                 Name = "transformationtest",
+                Query = "Select Id, Name from inputtest",
+                StreamingUnits = 1,
             },
         });
     }
@@ -125,20 +130,16 @@ streaming_job = azure_nextgen.streamanalytics.latest.StreamingJob("streamingJob"
         "name": "inputtest",
         "properties": {
             "datasource": {
-                "properties": {
-                    "container": "containerName",
-                    "pathPattern": "",
-                    "storageAccounts": [{
-                        "accountKey": "yourAccountKey==",
-                        "accountName": "yourAccountName",
-                    }],
-                },
+                "container": "containerName",
+                "pathPattern": "",
+                "storageAccounts": [{
+                    "accountKey": "yourAccountKey==",
+                    "accountName": "yourAccountName",
+                }],
                 "type": "Microsoft.Storage/Blob",
             },
             "serialization": {
-                "properties": {
-                    "encoding": "UTF8",
-                },
+                "encoding": "UTF8",
                 "type": "Json",
             },
             "type": "Stream",
@@ -148,6 +149,14 @@ streaming_job = azure_nextgen.streamanalytics.latest.StreamingJob("streamingJob"
     location="West US",
     output_error_policy="Drop",
     outputs=[{
+        "datasource": {
+            "database": "databaseName",
+            "password": "userPassword",
+            "server": "serverName",
+            "table": "tableName",
+            "type": "Microsoft.Sql/Server/Database",
+            "user": "userName",
+        },
         "name": "outputtest",
     }],
     resource_group_name="sjrg3276",
@@ -161,6 +170,8 @@ streaming_job = azure_nextgen.streamanalytics.latest.StreamingJob("streamingJob"
     },
     transformation={
         "name": "transformationtest",
+        "query": "Select Id, Name from inputtest",
+        "streamingUnits": 1,
     })
 
 ```
@@ -184,20 +195,16 @@ const streamingJob = new azure_nextgen.streamanalytics.latest.StreamingJob("stre
         name: "inputtest",
         properties: {
             datasource: {
-                properties: {
-                    container: "containerName",
-                    pathPattern: "",
-                    storageAccounts: [{
-                        accountKey: "yourAccountKey==",
-                        accountName: "yourAccountName",
-                    }],
-                },
+                container: "containerName",
+                pathPattern: "",
+                storageAccounts: [{
+                    accountKey: "yourAccountKey==",
+                    accountName: "yourAccountName",
+                }],
                 type: "Microsoft.Storage/Blob",
             },
             serialization: {
-                properties: {
-                    encoding: "UTF8",
-                },
+                encoding: "UTF8",
                 type: "Json",
             },
             type: "Stream",
@@ -207,6 +214,14 @@ const streamingJob = new azure_nextgen.streamanalytics.latest.StreamingJob("stre
     location: "West US",
     outputErrorPolicy: "Drop",
     outputs: [{
+        datasource: {
+            database: "databaseName",
+            password: "userPassword",
+            server: "serverName",
+            table: "tableName",
+            type: "Microsoft.Sql/Server/Database",
+            user: "userName",
+        },
         name: "outputtest",
     }],
     resourceGroupName: "sjrg3276",
@@ -220,6 +235,8 @@ const streamingJob = new azure_nextgen.streamanalytics.latest.StreamingJob("stre
     },
     transformation: {
         name: "transformationtest",
+        query: "Select Id, Name from inputtest",
+        streamingUnits: 1,
     },
 });
 
@@ -276,7 +293,7 @@ class MyStack : Stack
 package main
 
 import (
-	streamanalytics "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/streamanalytics/latest"
+	streamanalytics "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/streamanalytics/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

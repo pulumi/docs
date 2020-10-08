@@ -32,7 +32,7 @@ class MyStack : Stack
             ApplicationGroupType = "RemoteApp",
             Description = "des1",
             FriendlyName = "friendly",
-            HostPoolArmPath = "/subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/hostPools/hostPool1",
+            HostPoolArmPath = "/subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourcegroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/hostpools/hostPool1",
             Location = "centralus",
             ResourceGroupName = "resourceGroup1",
             Tags = 
@@ -55,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	desktopvirtualization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/desktopvirtualization/v20191210preview"
+	desktopvirtualization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/desktopvirtualization/v20191210preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -66,7 +66,7 @@ func main() {
 			ApplicationGroupType: pulumi.String("RemoteApp"),
 			Description:          pulumi.String("des1"),
 			FriendlyName:         pulumi.String("friendly"),
-			HostPoolArmPath:      pulumi.String("/subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/hostPools/hostPool1"),
+			HostPoolArmPath:      pulumi.String("/subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourcegroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/hostpools/hostPool1"),
 			Location:             pulumi.String("centralus"),
 			ResourceGroupName:    pulumi.String("resourceGroup1"),
 			Tags: pulumi.StringMap{
@@ -96,7 +96,7 @@ application_group = azure_nextgen.desktopvirtualization.v20191210preview.Applica
     application_group_type="RemoteApp",
     description="des1",
     friendly_name="friendly",
-    host_pool_arm_path="/subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/hostPools/hostPool1",
+    host_pool_arm_path="/subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourcegroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/hostpools/hostPool1",
     location="centralus",
     resource_group_name="resourceGroup1",
     tags={
@@ -119,7 +119,7 @@ const applicationGroup = new azure_nextgen.desktopvirtualization.v20191210previe
     applicationGroupType: "RemoteApp",
     description: "des1",
     friendlyName: "friendly",
-    hostPoolArmPath: "/subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/hostPools/hostPool1",
+    hostPoolArmPath: "/subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourcegroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/hostpools/hostPool1",
     location: "centralus",
     resourceGroupName: "resourceGroup1",
     tags: {

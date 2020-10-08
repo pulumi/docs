@@ -31,7 +31,7 @@ Explore the resources and functions of the machinelearning module in the Azure N
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.1</dd>
 </dl>
 
 

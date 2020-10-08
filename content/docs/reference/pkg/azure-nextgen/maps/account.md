@@ -54,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	maps "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/maps/latest"
+	maps "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/maps/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

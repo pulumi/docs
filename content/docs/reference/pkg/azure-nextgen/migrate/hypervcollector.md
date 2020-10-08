@@ -30,6 +30,21 @@ class MyStack : Stack
             ETag = "\"00000981-0000-0300-0000-5d74cd5f0000\"",
             HyperVCollectorName = "migrateprojectce73collector",
             ProjectName = "migrateprojectce73project",
+            Properties = new AzureNextGen.Migrate.Latest.Inputs.CollectorPropertiesArgs
+            {
+                AgentProperties = new AzureNextGen.Migrate.Latest.Inputs.CollectorAgentPropertiesArgs
+                {
+                    SpnDetails = new AzureNextGen.Migrate.Latest.Inputs.CollectorBodyAgentSpnPropertiesArgs
+                    {
+                        ApplicationId = "827f1053-44dc-439f-b832-05416dcce12b",
+                        Audience = "https://72f988bf-86f1-41af-91ab-2d7cd011db47/migrateprojectce73agentauthaadapp",
+                        Authority = "https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47",
+                        ObjectId = "be75098e-c0fc-4ac4-98c7-282ebbcf8370",
+                        TenantId = "72f988bf-86f1-41af-91ab-2d7cd011db47",
+                    },
+                },
+                DiscoverySiteId = "/subscriptions/8c3c936a-c09b-4de3-830b-3f5f244d72e9/resourceGroups/ContosoITHyperV/providers/Microsoft.OffAzure/HyperVSites/migrateprojectce73site",
+            },
             ResourceGroupName = "contosoithyperv",
         });
     }
@@ -46,7 +61,7 @@ class MyStack : Stack
 package main
 
 import (
-	migrate "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/migrate/latest"
+	migrate "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/migrate/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -56,7 +71,19 @@ func main() {
 			ETag:                pulumi.String("\"00000981-0000-0300-0000-5d74cd5f0000\""),
 			HyperVCollectorName: pulumi.String("migrateprojectce73collector"),
 			ProjectName:         pulumi.String("migrateprojectce73project"),
-			ResourceGroupName:   pulumi.String("contosoithyperv"),
+			Properties: &migrate.CollectorPropertiesArgs{
+				AgentProperties: &migrate.CollectorAgentPropertiesArgs{
+					SpnDetails: &migrate.CollectorBodyAgentSpnPropertiesArgs{
+						ApplicationId: pulumi.String("827f1053-44dc-439f-b832-05416dcce12b"),
+						Audience:      pulumi.String("https://72f988bf-86f1-41af-91ab-2d7cd011db47/migrateprojectce73agentauthaadapp"),
+						Authority:     pulumi.String("https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47"),
+						ObjectId:      pulumi.String("be75098e-c0fc-4ac4-98c7-282ebbcf8370"),
+						TenantId:      pulumi.String("72f988bf-86f1-41af-91ab-2d7cd011db47"),
+					},
+				},
+				DiscoverySiteId: pulumi.String("/subscriptions/8c3c936a-c09b-4de3-830b-3f5f244d72e9/resourceGroups/ContosoITHyperV/providers/Microsoft.OffAzure/HyperVSites/migrateprojectce73site"),
+			},
+			ResourceGroupName: pulumi.String("contosoithyperv"),
 		})
 		if err != nil {
 			return err
@@ -79,6 +106,18 @@ hyper_v_collector = azure_nextgen.migrate.latest.HyperVCollector("hyperVCollecto
     e_tag="\"00000981-0000-0300-0000-5d74cd5f0000\"",
     hyper_v_collector_name="migrateprojectce73collector",
     project_name="migrateprojectce73project",
+    properties={
+        "agentProperties": {
+            "spnDetails": {
+                "applicationId": "827f1053-44dc-439f-b832-05416dcce12b",
+                "audience": "https://72f988bf-86f1-41af-91ab-2d7cd011db47/migrateprojectce73agentauthaadapp",
+                "authority": "https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47",
+                "objectId": "be75098e-c0fc-4ac4-98c7-282ebbcf8370",
+                "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+            },
+        },
+        "discoverySiteId": "/subscriptions/8c3c936a-c09b-4de3-830b-3f5f244d72e9/resourceGroups/ContosoITHyperV/providers/Microsoft.OffAzure/HyperVSites/migrateprojectce73site",
+    },
     resource_group_name="contosoithyperv")
 
 ```
@@ -95,6 +134,18 @@ const hyperVCollector = new azure_nextgen.migrate.latest.HyperVCollector("hyperV
     eTag: "\"00000981-0000-0300-0000-5d74cd5f0000\"",
     hyperVCollectorName: "migrateprojectce73collector",
     projectName: "migrateprojectce73project",
+    properties: {
+        agentProperties: {
+            spnDetails: {
+                applicationId: "827f1053-44dc-439f-b832-05416dcce12b",
+                audience: "https://72f988bf-86f1-41af-91ab-2d7cd011db47/migrateprojectce73agentauthaadapp",
+                authority: "https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47",
+                objectId: "be75098e-c0fc-4ac4-98c7-282ebbcf8370",
+                tenantId: "72f988bf-86f1-41af-91ab-2d7cd011db47",
+            },
+        },
+        discoverySiteId: "/subscriptions/8c3c936a-c09b-4de3-830b-3f5f244d72e9/resourceGroups/ContosoITHyperV/providers/Microsoft.OffAzure/HyperVSites/migrateprojectce73site",
+    },
     resourceGroupName: "contosoithyperv",
 });
 

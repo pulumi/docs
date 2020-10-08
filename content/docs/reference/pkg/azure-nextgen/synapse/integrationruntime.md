@@ -29,6 +29,11 @@ class MyStack : Stack
         var integrationRuntime = new AzureNextGen.Synapse.V20190601Preview.IntegrationRuntime("integrationRuntime", new AzureNextGen.Synapse.V20190601Preview.IntegrationRuntimeArgs
         {
             IntegrationRuntimeName = "exampleIntegrationRuntime",
+            Properties = 
+            {
+                { "description", "A selfhosted integration runtime" },
+                { "type", "SelfHosted" },
+            },
             ResourceGroupName = "exampleResourceGroup",
             WorkspaceName = "exampleWorkspace",
         });
@@ -41,31 +46,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-package main
-
-import (
-	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/synapse/v20190601preview"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := synapse.NewIntegrationRuntime(ctx, "integrationRuntime", &synapse.IntegrationRuntimeArgs{
-			IntegrationRuntimeName: pulumi.String("exampleIntegrationRuntime"),
-			ResourceGroupName:      pulumi.String("exampleResourceGroup"),
-			WorkspaceName:          pulumi.String("exampleWorkspace"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -76,6 +57,10 @@ import pulumi_azure_nextgen as azure_nextgen
 
 integration_runtime = azure_nextgen.synapse.v20190601preview.IntegrationRuntime("integrationRuntime",
     integration_runtime_name="exampleIntegrationRuntime",
+    properties={
+        "description": "A selfhosted integration runtime",
+        "type": "SelfHosted",
+    },
     resource_group_name="exampleResourceGroup",
     workspace_name="exampleWorkspace")
 
@@ -91,6 +76,10 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const integrationRuntime = new azure_nextgen.synapse.v20190601preview.IntegrationRuntime("integrationRuntime", {
     integrationRuntimeName: "exampleIntegrationRuntime",
+    properties: {
+        description: "A selfhosted integration runtime",
+        type: "SelfHosted",
+    },
     resourceGroupName: "exampleResourceGroup",
     workspaceName: "exampleWorkspace",
 });
@@ -706,7 +695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetname_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}The server name of data source access.{{% /md %}}</dd>
 
@@ -716,7 +705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}The user name of data source access.{{% /md %}}</dd>
 
@@ -743,7 +732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetname_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}The server name of data source access.{{% /md %}}</dd>
 
@@ -753,7 +742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}The user name of data source access.{{% /md %}}</dd>
 
@@ -780,7 +769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetname_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}The server name of data source access.{{% /md %}}</dd>
 
@@ -790,7 +779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}The user name of data source access.{{% /md %}}</dd>
 
@@ -817,7 +806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetname_python" style="color: inherit; text-decoration: inherit;">target<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}The server name of data source access.{{% /md %}}</dd>
 
@@ -827,7 +816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}The user name of data source access.{{% /md %}}</dd>
 
@@ -865,7 +854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetname_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}The server name of data source access.{{% /md %}}</dd>
 
@@ -875,7 +864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}The user name of data source access.{{% /md %}}</dd>
 
@@ -902,7 +891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetname_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}The server name of data source access.{{% /md %}}</dd>
 
@@ -912,7 +901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}The user name of data source access.{{% /md %}}</dd>
 
@@ -939,7 +928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetname_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}The server name of data source access.{{% /md %}}</dd>
 
@@ -949,7 +938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}The user name of data source access.{{% /md %}}</dd>
 
@@ -976,7 +965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetname_python" style="color: inherit; text-decoration: inherit;">target<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}The server name of data source access.{{% /md %}}</dd>
 
@@ -986,7 +975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}The user name of data source access.{{% /md %}}</dd>
 

@@ -111,7 +111,7 @@ class MyStack : Stack
 package main
 
 import (
-	deploymentmanager "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/deploymentmanager/v20191101preview"
+	deploymentmanager "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/deploymentmanager/v20191101preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

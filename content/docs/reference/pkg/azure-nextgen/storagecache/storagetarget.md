@@ -67,7 +67,7 @@ class MyStack : Stack
 package main
 
 import (
-	storagecache "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/storagecache/latest"
+	storagecache "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagecache/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

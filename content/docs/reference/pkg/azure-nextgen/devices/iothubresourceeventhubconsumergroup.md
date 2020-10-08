@@ -30,6 +30,10 @@ class MyStack : Stack
         {
             EventHubEndpointName = "events",
             Name = "test",
+            Properties = new AzureNextGen.Devices.Latest.Inputs.EventHubConsumerGroupNameArgs
+            {
+                Name = "test",
+            },
             ResourceGroupName = "myResourceGroup",
             ResourceName = "testHub",
         });
@@ -47,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	devices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/devices/latest"
+	devices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/devices/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -56,8 +60,11 @@ func main() {
 		_, err := devices.NewIotHubResourceEventHubConsumerGroup(ctx, "iotHubResourceEventHubConsumerGroup", &devices.IotHubResourceEventHubConsumerGroupArgs{
 			EventHubEndpointName: pulumi.String("events"),
 			Name:                 pulumi.String("test"),
-			ResourceGroupName:    pulumi.String("myResourceGroup"),
-			ResourceName:         pulumi.String("testHub"),
+			Properties: &devices.EventHubConsumerGroupNameArgs{
+				Name: pulumi.String("test"),
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			ResourceName:      pulumi.String("testHub"),
 		})
 		if err != nil {
 			return err
@@ -79,6 +86,9 @@ import pulumi_azure_nextgen as azure_nextgen
 iot_hub_resource_event_hub_consumer_group = azure_nextgen.devices.latest.IotHubResourceEventHubConsumerGroup("iotHubResourceEventHubConsumerGroup",
     event_hub_endpoint_name="events",
     name="test",
+    properties={
+        "name": "test",
+    },
     resource_group_name="myResourceGroup",
     resource_name="testHub")
 
@@ -95,6 +105,9 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const iotHubResourceEventHubConsumerGroup = new azure_nextgen.devices.latest.IotHubResourceEventHubConsumerGroup("iotHubResourceEventHubConsumerGroup", {
     eventHubEndpointName: "events",
     name: "test",
+    properties: {
+        name: "test",
+    },
     resourceGroupName: "myResourceGroup",
     resourceName: "testHub",
 });

@@ -77,7 +77,7 @@ class MyStack : Stack
 package main
 
 import (
-	vmwarecloudsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/vmwarecloudsimple/latest"
+	vmwarecloudsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/vmwarecloudsimple/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -3246,7 +3246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dt class="property-required"
             title="Required">
         <span id="controllerid_python">
-<a href="#controllerid_python" style="color: inherit; text-decoration: inherit;">controller<wbr>ID</a>
+<a href="#controllerid_python" style="color: inherit; text-decoration: inherit;">controller<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3674,7 +3674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dt class="property-required"
             title="Required">
         <span id="controllerid_python">
-<a href="#controllerid_python" style="color: inherit; text-decoration: inherit;">controller<wbr>ID</a>
+<a href="#controllerid_python" style="color: inherit; text-decoration: inherit;">controller<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

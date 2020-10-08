@@ -36,6 +36,20 @@ class MyStack : Stack
                 PromotionCode = "promocode1",
                 Publisher = "publisher1",
             },
+            Properties = new AzureNextGen.OperationsManagement.V20151101Preview.Inputs.SolutionPropertiesArgs
+            {
+                ContainedResources = 
+                {
+                    "/subscriptions/sub2/resourceGroups/rg2/providers/provider1/resources/resource1",
+                    "/subscriptions/sub2/resourceGroups/rg2/providers/provider2/resources/resource2",
+                },
+                ReferencedResources = 
+                {
+                    "/subscriptions/sub2/resourceGroups/rg2/providers/provider1/resources/resource2",
+                    "/subscriptions/sub2/resourceGroups/rg2/providers/provider2/resources/resource3",
+                },
+                WorkspaceResourceId = "/subscriptions/sub2/resourceGroups/rg2/providers/Microsoft.OperationalInsights/workspaces/ws1",
+            },
             ResourceGroupName = "rg1",
             SolutionName = "solution1",
         });
@@ -53,7 +67,7 @@ class MyStack : Stack
 package main
 
 import (
-	operationsmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/operationsmanagement/v20151101preview"
+	operationsmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationsmanagement/v20151101preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -66,6 +80,17 @@ func main() {
 				Product:       pulumi.String("product1"),
 				PromotionCode: pulumi.String("promocode1"),
 				Publisher:     pulumi.String("publisher1"),
+			},
+			Properties: &operationsmanagement.SolutionPropertiesArgs{
+				ContainedResources: pulumi.StringArray{
+					pulumi.String("/subscriptions/sub2/resourceGroups/rg2/providers/provider1/resources/resource1"),
+					pulumi.String("/subscriptions/sub2/resourceGroups/rg2/providers/provider2/resources/resource2"),
+				},
+				ReferencedResources: pulumi.StringArray{
+					pulumi.String("/subscriptions/sub2/resourceGroups/rg2/providers/provider1/resources/resource2"),
+					pulumi.String("/subscriptions/sub2/resourceGroups/rg2/providers/provider2/resources/resource3"),
+				},
+				WorkspaceResourceId: pulumi.String("/subscriptions/sub2/resourceGroups/rg2/providers/Microsoft.OperationalInsights/workspaces/ws1"),
 			},
 			ResourceGroupName: pulumi.String("rg1"),
 			SolutionName:      pulumi.String("solution1"),
@@ -95,6 +120,17 @@ solution = azure_nextgen.operationsmanagement.v20151101preview.Solution("solutio
         "promotionCode": "promocode1",
         "publisher": "publisher1",
     },
+    properties={
+        "containedResources": [
+            "/subscriptions/sub2/resourceGroups/rg2/providers/provider1/resources/resource1",
+            "/subscriptions/sub2/resourceGroups/rg2/providers/provider2/resources/resource2",
+        ],
+        "referencedResources": [
+            "/subscriptions/sub2/resourceGroups/rg2/providers/provider1/resources/resource2",
+            "/subscriptions/sub2/resourceGroups/rg2/providers/provider2/resources/resource3",
+        ],
+        "workspaceResourceId": "/subscriptions/sub2/resourceGroups/rg2/providers/Microsoft.OperationalInsights/workspaces/ws1",
+    },
     resource_group_name="rg1",
     solution_name="solution1")
 
@@ -115,6 +151,17 @@ const solution = new azure_nextgen.operationsmanagement.v20151101preview.Solutio
         product: "product1",
         promotionCode: "promocode1",
         publisher: "publisher1",
+    },
+    properties: {
+        containedResources: [
+            "/subscriptions/sub2/resourceGroups/rg2/providers/provider1/resources/resource1",
+            "/subscriptions/sub2/resourceGroups/rg2/providers/provider2/resources/resource2",
+        ],
+        referencedResources: [
+            "/subscriptions/sub2/resourceGroups/rg2/providers/provider1/resources/resource2",
+            "/subscriptions/sub2/resourceGroups/rg2/providers/provider2/resources/resource3",
+        ],
+        workspaceResourceId: "/subscriptions/sub2/resourceGroups/rg2/providers/Microsoft.OperationalInsights/workspaces/ws1",
     },
     resourceGroupName: "rg1",
     solutionName: "solution1",

@@ -64,7 +64,7 @@ class MyStack : Stack
 package main
 
 import (
-	customproviders "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/customproviders/v20180901preview"
+	customproviders "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/customproviders/v20180901preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

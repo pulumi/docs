@@ -12,6 +12,128 @@ meta_desc: "Explore the VirtualNetworkLink resource of the network module, inclu
 
 Describes a link to virtual network for a Private DNS zone.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### PUT Private DNS Zone Virtual Network Link
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualNetworkLink = new AzureNextGen.Network.Latest.VirtualNetworkLink("virtualNetworkLink", new AzureNextGen.Network.Latest.VirtualNetworkLinkArgs
+        {
+            Location = "Global",
+            PrivateZoneName = "privatezone1.com",
+            RegistrationEnabled = false,
+            ResourceGroupName = "resourceGroup1",
+            Tags = 
+            {
+                { "key1", "value1" },
+            },
+            VirtualNetwork = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+            {
+                Id = "/subscriptions/virtualNetworkSubscriptionId/resourceGroups/virtualNetworkResourceGroup/providers/Microsoft.Network/virtualNetworks/virtualNetworkName",
+            },
+            VirtualNetworkLinkName = "virtualNetworkLink1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewVirtualNetworkLink(ctx, "virtualNetworkLink", &network.VirtualNetworkLinkArgs{
+			Location:            pulumi.String("Global"),
+			PrivateZoneName:     pulumi.String("privatezone1.com"),
+			RegistrationEnabled: pulumi.Bool(false),
+			ResourceGroupName:   pulumi.String("resourceGroup1"),
+			Tags: pulumi.StringMap{
+				"key1": pulumi.String("value1"),
+			},
+			VirtualNetwork: &network.SubResourceArgs{
+				Id: pulumi.String("/subscriptions/virtualNetworkSubscriptionId/resourceGroups/virtualNetworkResourceGroup/providers/Microsoft.Network/virtualNetworks/virtualNetworkName"),
+			},
+			VirtualNetworkLinkName: pulumi.String("virtualNetworkLink1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+virtual_network_link = azure_nextgen.network.latest.VirtualNetworkLink("virtualNetworkLink",
+    location="Global",
+    private_zone_name="privatezone1.com",
+    registration_enabled=False,
+    resource_group_name="resourceGroup1",
+    tags={
+        "key1": "value1",
+    },
+    virtual_network={
+        "id": "/subscriptions/virtualNetworkSubscriptionId/resourceGroups/virtualNetworkResourceGroup/providers/Microsoft.Network/virtualNetworks/virtualNetworkName",
+    },
+    virtual_network_link_name="virtualNetworkLink1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const virtualNetworkLink = new azure_nextgen.network.latest.VirtualNetworkLink("virtualNetworkLink", {
+    location: "Global",
+    privateZoneName: "privatezone1.com",
+    registrationEnabled: false,
+    resourceGroupName: "resourceGroup1",
+    tags: {
+        key1: "value1",
+    },
+    virtualNetwork: {
+        id: "/subscriptions/virtualNetworkSubscriptionId/resourceGroups/virtualNetworkResourceGroup/providers/Microsoft.Network/virtualNetworks/virtualNetworkName",
+    },
+    virtualNetworkLinkName: "virtualNetworkLink1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VirtualNetworkLink Resource {#create}
@@ -889,7 +1011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -906,7 +1028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -923,7 +1045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -940,7 +1062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

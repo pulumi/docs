@@ -27,6 +27,7 @@ Explore the resources and functions of the cdn module in the Azure NextGen packa
     <li><a href="getorigingroup" title="GetOriginGroup"><span class="symbol function"></span>GetOriginGroup</a></li>
     <li><a href="getpolicy" title="GetPolicy"><span class="symbol function"></span>GetPolicy</a></li>
     <li><a href="getprofile" title="GetProfile"><span class="symbol function"></span>GetProfile</a></li>
+    <li><a href="getprofilesupportedoptimizationtypes" title="GetProfileSupportedOptimizationTypes"><span class="symbol function"></span>GetProfileSupportedOptimizationTypes</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -36,7 +37,7 @@ Explore the resources and functions of the cdn module in the Azure NextGen packa
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.1</dd>
 </dl>
 
 

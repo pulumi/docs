@@ -29,6 +29,10 @@ class MyStack : Stack
         var console = new AzureNextGen.Portal.Latest.Console("console", new AzureNextGen.Portal.Latest.ConsoleArgs
         {
             ConsoleName = "default",
+            Properties = new AzureNextGen.Portal.Latest.Inputs.ConsoleCreatePropertiesArgs
+            {
+                OsType = "Linux",
+            },
         });
     }
 
@@ -44,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	portal "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/portal/latest"
+	portal "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/portal/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -52,6 +56,9 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := portal.NewConsole(ctx, "console", &portal.ConsoleArgs{
 			ConsoleName: pulumi.String("default"),
+			Properties: &portal.ConsoleCreatePropertiesArgs{
+				OsType: pulumi.String("Linux"),
+			},
 		})
 		if err != nil {
 			return err
@@ -70,7 +77,11 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-console = azure_nextgen.portal.latest.Console("console", console_name="default")
+console = azure_nextgen.portal.latest.Console("console",
+    console_name="default",
+    properties={
+        "osType": "Linux",
+    })
 
 ```
 
@@ -82,7 +93,12 @@ console = azure_nextgen.portal.latest.Console("console", console_name="default")
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const console = new azure_nextgen.portal.latest.Console("console", {consoleName: "default"});
+const console = new azure_nextgen.portal.latest.Console("console", {
+    consoleName: "default",
+    properties: {
+        osType: "Linux",
+    },
+});
 
 ```
 

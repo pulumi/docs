@@ -63,7 +63,7 @@ class MyStack : Stack
 package main
 
 import (
-	hanaonazure "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/hanaonazure/v20171103preview"
+	hanaonazure "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hanaonazure/v20171103preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

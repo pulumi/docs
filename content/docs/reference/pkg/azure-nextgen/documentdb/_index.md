@@ -31,6 +31,8 @@ Explore the resources and functions of the documentdb module in the Azure NextGe
     <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
     <li><a href="sqlresourcesqlcontainer" title="SqlResourceSqlContainer"><span class="symbol resource"></span>SqlResourceSqlContainer</a></li>
     <li><a href="sqlresourcesqldatabase" title="SqlResourceSqlDatabase"><span class="symbol resource"></span>SqlResourceSqlDatabase</a></li>
+    <li><a href="sqlresourcesqlroleassignment" title="SqlResourceSqlRoleAssignment"><span class="symbol resource"></span>SqlResourceSqlRoleAssignment</a></li>
+    <li><a href="sqlresourcesqlroledefinition" title="SqlResourceSqlRoleDefinition"><span class="symbol resource"></span>SqlResourceSqlRoleDefinition</a></li>
     <li><a href="sqlresourcesqlstoredprocedure" title="SqlResourceSqlStoredProcedure"><span class="symbol resource"></span>SqlResourceSqlStoredProcedure</a></li>
     <li><a href="sqlresourcesqltrigger" title="SqlResourceSqlTrigger"><span class="symbol resource"></span>SqlResourceSqlTrigger</a></li>
     <li><a href="sqlresourcesqluserdefinedfunction" title="SqlResourceSqlUserDefinedFunction"><span class="symbol resource"></span>SqlResourceSqlUserDefinedFunction</a></li>
@@ -59,6 +61,8 @@ Explore the resources and functions of the documentdb module in the Azure NextGe
     <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
     <li><a href="getsqlresourcesqlcontainer" title="GetSqlResourceSqlContainer"><span class="symbol function"></span>GetSqlResourceSqlContainer</a></li>
     <li><a href="getsqlresourcesqldatabase" title="GetSqlResourceSqlDatabase"><span class="symbol function"></span>GetSqlResourceSqlDatabase</a></li>
+    <li><a href="getsqlresourcesqlroleassignment" title="GetSqlResourceSqlRoleAssignment"><span class="symbol function"></span>GetSqlResourceSqlRoleAssignment</a></li>
+    <li><a href="getsqlresourcesqlroledefinition" title="GetSqlResourceSqlRoleDefinition"><span class="symbol function"></span>GetSqlResourceSqlRoleDefinition</a></li>
     <li><a href="getsqlresourcesqlstoredprocedure" title="GetSqlResourceSqlStoredProcedure"><span class="symbol function"></span>GetSqlResourceSqlStoredProcedure</a></li>
     <li><a href="getsqlresourcesqltrigger" title="GetSqlResourceSqlTrigger"><span class="symbol function"></span>GetSqlResourceSqlTrigger</a></li>
     <li><a href="getsqlresourcesqluserdefinedfunction" title="GetSqlResourceSqlUserDefinedFunction"><span class="symbol function"></span>GetSqlResourceSqlUserDefinedFunction</a></li>
@@ -75,7 +79,7 @@ Explore the resources and functions of the documentdb module in the Azure NextGe
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.1</dd>
 </dl>
 
 

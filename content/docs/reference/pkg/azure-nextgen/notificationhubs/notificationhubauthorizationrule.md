@@ -31,6 +31,14 @@ class MyStack : Stack
             AuthorizationRuleName = "DefaultListenSharedAccessSignature",
             NamespaceName = "nh-sdk-ns",
             NotificationHubName = "nh-sdk-hub",
+            Properties = new AzureNextGen.NotificationHubs.Latest.Inputs.SharedAccessAuthorizationRulePropertiesArgs
+            {
+                Rights = 
+                {
+                    "Listen",
+                    "Send",
+                },
+            },
             ResourceGroupName = "5ktrial",
         });
     }
@@ -47,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	notificationhubs "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/notificationhubs/latest"
+	notificationhubs "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/notificationhubs/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -57,7 +65,13 @@ func main() {
 			AuthorizationRuleName: pulumi.String("DefaultListenSharedAccessSignature"),
 			NamespaceName:         pulumi.String("nh-sdk-ns"),
 			NotificationHubName:   pulumi.String("nh-sdk-hub"),
-			ResourceGroupName:     pulumi.String("5ktrial"),
+			Properties: &notificationhubs.SharedAccessAuthorizationRulePropertiesArgs{
+				Rights: pulumi.StringArray{
+					pulumi.String("Listen"),
+					pulumi.String("Send"),
+				},
+			},
+			ResourceGroupName: pulumi.String("5ktrial"),
 		})
 		if err != nil {
 			return err
@@ -80,6 +94,12 @@ notification_hub_authorization_rule = azure_nextgen.notificationhubs.latest.Noti
     authorization_rule_name="DefaultListenSharedAccessSignature",
     namespace_name="nh-sdk-ns",
     notification_hub_name="nh-sdk-hub",
+    properties={
+        "rights": [
+            "Listen",
+            "Send",
+        ],
+    },
     resource_group_name="5ktrial")
 
 ```
@@ -96,6 +116,12 @@ const notificationHubAuthorizationRule = new azure_nextgen.notificationhubs.late
     authorizationRuleName: "DefaultListenSharedAccessSignature",
     namespaceName: "nh-sdk-ns",
     notificationHubName: "nh-sdk-hub",
+    properties: {
+        rights: [
+            "Listen",
+            "Send",
+        ],
+    },
     resourceGroupName: "5ktrial",
 });
 

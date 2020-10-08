@@ -260,7 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The UTC date and time when the Job was created, in 'YYYY-MM-DDThh:mm:ssZ' format.{{% /md %}}</dd>
+    <dd>{{% md %}}The UTC date and time when the customer has created the Job, in 'YYYY-MM-DDThh:mm:ssZ' format.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -290,7 +290,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The UTC date and time when the Job was last updated, in 'YYYY-MM-DDThh:mm:ssZ' format.{{% /md %}}</dd>
+    <dd>{{% md %}}The UTC date and time when the customer has last updated the Job, in 'YYYY-MM-DDThh:mm:ssZ' format.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -387,7 +387,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The UTC date and time when the Job was created, in 'YYYY-MM-DDThh:mm:ssZ' format.{{% /md %}}</dd>
+    <dd>{{% md %}}The UTC date and time when the customer has created the Job, in 'YYYY-MM-DDThh:mm:ssZ' format.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -417,7 +417,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The UTC date and time when the Job was last updated, in 'YYYY-MM-DDThh:mm:ssZ' format.{{% /md %}}</dd>
+    <dd>{{% md %}}The UTC date and time when the customer has last updated the Job, in 'YYYY-MM-DDThh:mm:ssZ' format.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -514,7 +514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The UTC date and time when the Job was created, in 'YYYY-MM-DDThh:mm:ssZ' format.{{% /md %}}</dd>
+    <dd>{{% md %}}The UTC date and time when the customer has created the Job, in 'YYYY-MM-DDThh:mm:ssZ' format.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -544,7 +544,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The UTC date and time when the Job was last updated, in 'YYYY-MM-DDThh:mm:ssZ' format.{{% /md %}}</dd>
+    <dd>{{% md %}}The UTC date and time when the customer has last updated the Job, in 'YYYY-MM-DDThh:mm:ssZ' format.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -641,7 +641,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The UTC date and time when the Job was created, in 'YYYY-MM-DDThh:mm:ssZ' format.{{% /md %}}</dd>
+    <dd>{{% md %}}The UTC date and time when the customer has created the Job, in 'YYYY-MM-DDThh:mm:ssZ' format.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -671,7 +671,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The UTC date and time when the Job was last updated, in 'YYYY-MM-DDThh:mm:ssZ' format.{{% /md %}}</dd>
+    <dd>{{% md %}}The UTC date and time when the customer has last updated the Job, in 'YYYY-MM-DDThh:mm:ssZ' format.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1220,7 +1220,7 @@ The following output properties are available:
 <a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
+        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
 
@@ -1250,7 +1250,7 @@ The following output properties are available:
 <a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
+        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
 
@@ -1267,7 +1267,7 @@ The following output properties are available:
 <a href="#end_go" style="color: inherit; text-decoration: inherit;">End</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
 
@@ -1297,7 +1297,7 @@ The following output properties are available:
 <a href="#start_go" style="color: inherit; text-decoration: inherit;">Start</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
 
@@ -1314,7 +1314,7 @@ The following output properties are available:
 <a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response</a></span>
+        <span class="property-type">Absolute<wbr>Clip<wbr>Time<wbr>Response | Utc<wbr>Clip<wbr>Time<wbr>Response</span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
 
@@ -1344,7 +1344,7 @@ The following output properties are available:
 <a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response</a></span>
+        <span class="property-type">Absolute<wbr>Clip<wbr>Time<wbr>Response | Utc<wbr>Clip<wbr>Time<wbr>Response</span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
 
@@ -1361,7 +1361,7 @@ The following output properties are available:
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutecliptimeresponse">Dict[Absolute<wbr>Clip<wbr>Time<wbr>Response]</a></span>
+        <span class="property-type">Dict[Absolute<wbr>Clip<wbr>Time<wbr>Response] | Dict[Utc<wbr>Clip<wbr>Time<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
 
@@ -1391,7 +1391,7 @@ The following output properties are available:
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutecliptimeresponse">Dict[Absolute<wbr>Clip<wbr>Time<wbr>Response]</a></span>
+        <span class="property-type">Dict[Absolute<wbr>Clip<wbr>Time<wbr>Response] | Dict[Utc<wbr>Clip<wbr>Time<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
 
@@ -1792,6 +1792,85 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A label that is assigned to a JobOutput in order to help uniquely identify it. This is useful when your Transform has more than one TransformOutput, whereby your Job has more than one JobOutput. In such cases, when you submit the Job, you will add two or more JobOutputs, in the same order as TransformOutputs in the Transform. Subsequently, when you retrieve the Job, either through events or on a GET request, you can use the label to easily identify the JobOutput. If a label is not provided, a default value of '{presetName}_{outputIndex}' will be used, where the preset name is the name of the preset in the corresponding TransformOutput and the output index is the relative index of the this JobOutput within the Job. Note that this index is the same as the relative index of the corresponding TransformOutput within its Transform.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="time_csharp">
+<a href="#time_csharp" style="color: inherit; text-decoration: inherit;">Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The time position on the timeline of the input media based on Utc time.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="time_go">
+<a href="#time_go" style="color: inherit; text-decoration: inherit;">Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The time position on the timeline of the input media based on Utc time.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="time_nodejs">
+<a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The time position on the timeline of the input media based on Utc time.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="time_python">
+<a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The time position on the timeline of the input media based on Utc time.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

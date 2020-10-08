@@ -12,6 +12,330 @@ meta_desc: "Explore the WebApplicationFirewallPolicy resource of the network mod
 
 Defines web application firewall policy.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates or updates a WAF policy within a resource group
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var webApplicationFirewallPolicy = new AzureNextGen.Network.Latest.WebApplicationFirewallPolicy("webApplicationFirewallPolicy", new AzureNextGen.Network.Latest.WebApplicationFirewallPolicyArgs
+        {
+            CustomRules = 
+            {
+                new AzureNextGen.Network.Latest.Inputs.WebApplicationFirewallCustomRuleArgs
+                {
+                    Action = "Block",
+                    MatchConditions = 
+                    {
+                        new AzureNextGen.Network.Latest.Inputs.MatchConditionArgs
+                        {
+                            MatchValues = 
+                            {
+                                "192.168.1.0/24",
+                                "10.0.0.0/24",
+                            },
+                            MatchVariables = 
+                            {
+                                new AzureNextGen.Network.Latest.Inputs.MatchVariableArgs
+                                {
+                                    VariableName = "RemoteAddr",
+                                },
+                            },
+                            Operator = "IPMatch",
+                        },
+                    },
+                    Name = "Rule1",
+                    Priority = 1,
+                    RuleType = "MatchRule",
+                },
+                new AzureNextGen.Network.Latest.Inputs.WebApplicationFirewallCustomRuleArgs
+                {
+                    Action = "Block",
+                    MatchConditions = 
+                    {
+                        new AzureNextGen.Network.Latest.Inputs.MatchConditionArgs
+                        {
+                            MatchValues = 
+                            {
+                                "192.168.1.0/24",
+                            },
+                            MatchVariables = 
+                            {
+                                new AzureNextGen.Network.Latest.Inputs.MatchVariableArgs
+                                {
+                                    VariableName = "RemoteAddr",
+                                },
+                            },
+                            Operator = "IPMatch",
+                        },
+                        new AzureNextGen.Network.Latest.Inputs.MatchConditionArgs
+                        {
+                            MatchValues = 
+                            {
+                                "Windows",
+                            },
+                            MatchVariables = 
+                            {
+                                new AzureNextGen.Network.Latest.Inputs.MatchVariableArgs
+                                {
+                                    Selector = "UserAgent",
+                                    VariableName = "RequestHeaders",
+                                },
+                            },
+                            Operator = "Contains",
+                        },
+                    },
+                    Name = "Rule2",
+                    Priority = 2,
+                    RuleType = "MatchRule",
+                },
+            },
+            Location = "WestUs",
+            ManagedRules = new AzureNextGen.Network.Latest.Inputs.ManagedRulesDefinitionArgs
+            {
+                ManagedRuleSets = 
+                {
+                    new AzureNextGen.Network.Latest.Inputs.ManagedRuleSetArgs
+                    {
+                        RuleSetType = "OWASP",
+                        RuleSetVersion = "3.0",
+                    },
+                },
+            },
+            PolicyName = "Policy1",
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewWebApplicationFirewallPolicy(ctx, "webApplicationFirewallPolicy", &network.WebApplicationFirewallPolicyArgs{
+			CustomRules: network.WebApplicationFirewallCustomRuleArray{
+				&network.WebApplicationFirewallCustomRuleArgs{
+					Action: pulumi.String("Block"),
+					MatchConditions: network.MatchConditionArray{
+						&network.MatchConditionArgs{
+							MatchValues: pulumi.StringArray{
+								pulumi.String("192.168.1.0/24"),
+								pulumi.String("10.0.0.0/24"),
+							},
+							MatchVariables: network.MatchVariableArray{
+								&network.MatchVariableArgs{
+									VariableName: pulumi.String("RemoteAddr"),
+								},
+							},
+							Operator: pulumi.String("IPMatch"),
+						},
+					},
+					Name:     pulumi.String("Rule1"),
+					Priority: pulumi.Int(1),
+					RuleType: pulumi.String("MatchRule"),
+				},
+				&network.WebApplicationFirewallCustomRuleArgs{
+					Action: pulumi.String("Block"),
+					MatchConditions: network.MatchConditionArray{
+						&network.MatchConditionArgs{
+							MatchValues: pulumi.StringArray{
+								pulumi.String("192.168.1.0/24"),
+							},
+							MatchVariables: network.MatchVariableArray{
+								&network.MatchVariableArgs{
+									VariableName: pulumi.String("RemoteAddr"),
+								},
+							},
+							Operator: pulumi.String("IPMatch"),
+						},
+						&network.MatchConditionArgs{
+							MatchValues: pulumi.StringArray{
+								pulumi.String("Windows"),
+							},
+							MatchVariables: network.MatchVariableArray{
+								&network.MatchVariableArgs{
+									Selector:     pulumi.String("UserAgent"),
+									VariableName: pulumi.String("RequestHeaders"),
+								},
+							},
+							Operator: pulumi.String("Contains"),
+						},
+					},
+					Name:     pulumi.String("Rule2"),
+					Priority: pulumi.Int(2),
+					RuleType: pulumi.String("MatchRule"),
+				},
+			},
+			Location: pulumi.String("WestUs"),
+			ManagedRules: &network.ManagedRulesDefinitionArgs{
+				ManagedRuleSets: network.ManagedRuleSetArray{
+					&network.ManagedRuleSetArgs{
+						RuleSetType:    pulumi.String("OWASP"),
+						RuleSetVersion: pulumi.String("3.0"),
+					},
+				},
+			},
+			PolicyName:        pulumi.String("Policy1"),
+			ResourceGroupName: pulumi.String("rg1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+web_application_firewall_policy = azure_nextgen.network.latest.WebApplicationFirewallPolicy("webApplicationFirewallPolicy",
+    custom_rules=[
+        {
+            "action": "Block",
+            "matchConditions": [{
+                "matchValues": [
+                    "192.168.1.0/24",
+                    "10.0.0.0/24",
+                ],
+                "matchVariables": [{
+                    "variableName": "RemoteAddr",
+                }],
+                "operator": "IPMatch",
+            }],
+            "name": "Rule1",
+            "priority": 1,
+            "ruleType": "MatchRule",
+        },
+        {
+            "action": "Block",
+            "matchConditions": [
+                {
+                    "matchValues": ["192.168.1.0/24"],
+                    "matchVariables": [{
+                        "variableName": "RemoteAddr",
+                    }],
+                    "operator": "IPMatch",
+                },
+                {
+                    "matchValues": ["Windows"],
+                    "matchVariables": [{
+                        "selector": "UserAgent",
+                        "variableName": "RequestHeaders",
+                    }],
+                    "operator": "Contains",
+                },
+            ],
+            "name": "Rule2",
+            "priority": 2,
+            "ruleType": "MatchRule",
+        },
+    ],
+    location="WestUs",
+    managed_rules={
+        "managedRuleSets": [{
+            "ruleSetType": "OWASP",
+            "ruleSetVersion": "3.0",
+        }],
+    },
+    policy_name="Policy1",
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const webApplicationFirewallPolicy = new azure_nextgen.network.latest.WebApplicationFirewallPolicy("webApplicationFirewallPolicy", {
+    customRules: [
+        {
+            action: "Block",
+            matchConditions: [{
+                matchValues: [
+                    "192.168.1.0/24",
+                    "10.0.0.0/24",
+                ],
+                matchVariables: [{
+                    variableName: "RemoteAddr",
+                }],
+                operator: "IPMatch",
+            }],
+            name: "Rule1",
+            priority: 1,
+            ruleType: "MatchRule",
+        },
+        {
+            action: "Block",
+            matchConditions: [
+                {
+                    matchValues: ["192.168.1.0/24"],
+                    matchVariables: [{
+                        variableName: "RemoteAddr",
+                    }],
+                    operator: "IPMatch",
+                },
+                {
+                    matchValues: ["Windows"],
+                    matchVariables: [{
+                        selector: "UserAgent",
+                        variableName: "RequestHeaders",
+                    }],
+                    operator: "Contains",
+                },
+            ],
+            name: "Rule2",
+            priority: 2,
+            ruleType: "MatchRule",
+        },
+    ],
+    location: "WestUs",
+    managedRules: {
+        managedRuleSets: [{
+            ruleSetType: "OWASP",
+            ruleSetVersion: "3.0",
+        }],
+    },
+    policyName: "Policy1",
+    resourceGroupName: "rg1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a WebApplicationFirewallPolicy Resource {#create}
@@ -28721,7 +29045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -28738,7 +29062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -28755,7 +29079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -28772,7 +29096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

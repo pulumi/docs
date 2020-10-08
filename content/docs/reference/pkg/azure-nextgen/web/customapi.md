@@ -29,6 +29,18 @@ class MyStack : Stack
         var customApi = new AzureNextGen.Web.Latest.CustomApi("customApi", new AzureNextGen.Web.Latest.CustomApiArgs
         {
             ApiName = "testCustomApi",
+            Properties = new AzureNextGen.Web.Latest.Inputs.CustomApiPropertiesDefinitionArgs
+            {
+                ApiDefinitions = new AzureNextGen.Web.Latest.Inputs.ApiResourceDefinitionsArgs
+                {
+                    OriginalSwaggerUrl = "https://tempuri.org/swagger.json",
+                },
+                ApiType = "Rest",
+                Capabilities = {},
+                Description = "",
+                DisplayName = "testCustomApi",
+                IconUri = "/testIcon.svg",
+            },
             ResourceGroupName = "testResourceGroup",
         });
     }
@@ -45,14 +57,24 @@ class MyStack : Stack
 package main
 
 import (
-	web "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/web/latest"
+	web "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/web/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := web.NewCustomApi(ctx, "customApi", &web.CustomApiArgs{
-			ApiName:           pulumi.String("testCustomApi"),
+			ApiName: pulumi.String("testCustomApi"),
+			Properties: &web.CustomApiPropertiesDefinitionArgs{
+				ApiDefinitions: &web.ApiResourceDefinitionsArgs{
+					OriginalSwaggerUrl: pulumi.String("https://tempuri.org/swagger.json"),
+				},
+				ApiType:      pulumi.String("Rest"),
+				Capabilities: []interface{}{},
+				Description:  pulumi.String(""),
+				DisplayName:  pulumi.String("testCustomApi"),
+				IconUri:      pulumi.String("/testIcon.svg"),
+			},
 			ResourceGroupName: pulumi.String("testResourceGroup"),
 		})
 		if err != nil {
@@ -74,6 +96,16 @@ import pulumi_azure_nextgen as azure_nextgen
 
 custom_api = azure_nextgen.web.latest.CustomApi("customApi",
     api_name="testCustomApi",
+    properties={
+        "apiDefinitions": {
+            "originalSwaggerUrl": "https://tempuri.org/swagger.json",
+        },
+        "apiType": "Rest",
+        "capabilities": [],
+        "description": "",
+        "displayName": "testCustomApi",
+        "iconUri": "/testIcon.svg",
+    },
     resource_group_name="testResourceGroup")
 
 ```
@@ -88,6 +120,16 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const customApi = new azure_nextgen.web.latest.CustomApi("customApi", {
     apiName: "testCustomApi",
+    properties: {
+        apiDefinitions: {
+            originalSwaggerUrl: "https://tempuri.org/swagger.json",
+        },
+        apiType: "Rest",
+        capabilities: [],
+        description: "",
+        displayName: "testCustomApi",
+        iconUri: "/testIcon.svg",
+    },
     resourceGroupName: "testResourceGroup",
 });
 
@@ -772,7 +814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}Read only properties for this oauth setting.{{% /md %}}</dd>
 
@@ -849,7 +891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}Read only properties for this oauth setting.{{% /md %}}</dd>
 
@@ -926,7 +968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}Read only properties for this oauth setting.{{% /md %}}</dd>
 
@@ -1003,7 +1045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}Read only properties for this oauth setting.{{% /md %}}</dd>
 
@@ -1051,7 +1093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}Options available to this parameter{{% /md %}}</dd>
 
@@ -1061,7 +1103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uidefinition_csharp" style="color: inherit; text-decoration: inherit;">Ui<wbr>Definition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}UI definitions per culture as caller can specify the culture{{% /md %}}</dd>
 
@@ -1088,7 +1130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#options_go" style="color: inherit; text-decoration: inherit;">Options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}Options available to this parameter{{% /md %}}</dd>
 
@@ -1098,7 +1140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uidefinition_go" style="color: inherit; text-decoration: inherit;">Ui<wbr>Definition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}UI definitions per culture as caller can specify the culture{{% /md %}}</dd>
 
@@ -1125,7 +1167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}Options available to this parameter{{% /md %}}</dd>
 
@@ -1135,7 +1177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uidefinition_nodejs" style="color: inherit; text-decoration: inherit;">ui<wbr>Definition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}UI definitions per culture as caller can specify the culture{{% /md %}}</dd>
 
@@ -1162,7 +1204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}Options available to this parameter{{% /md %}}</dd>
 
@@ -1172,7 +1214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uidefinition_python" style="color: inherit; text-decoration: inherit;">ui<wbr>Definition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}UI definitions per culture as caller can specify the culture{{% /md %}}</dd>
 
@@ -1210,7 +1252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}Options available to this parameter{{% /md %}}</dd>
 
@@ -1220,7 +1262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uidefinition_csharp" style="color: inherit; text-decoration: inherit;">Ui<wbr>Definition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}UI definitions per culture as caller can specify the culture{{% /md %}}</dd>
 
@@ -1247,7 +1289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#options_go" style="color: inherit; text-decoration: inherit;">Options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}Options available to this parameter{{% /md %}}</dd>
 
@@ -1257,7 +1299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uidefinition_go" style="color: inherit; text-decoration: inherit;">Ui<wbr>Definition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}UI definitions per culture as caller can specify the culture{{% /md %}}</dd>
 
@@ -1284,7 +1326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}Options available to this parameter{{% /md %}}</dd>
 
@@ -1294,7 +1336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uidefinition_nodejs" style="color: inherit; text-decoration: inherit;">ui<wbr>Definition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}UI definitions per culture as caller can specify the culture{{% /md %}}</dd>
 
@@ -1321,7 +1363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}Options available to this parameter{{% /md %}}</dd>
 
@@ -1331,7 +1373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uidefinition_python" style="color: inherit; text-decoration: inherit;">ui<wbr>Definition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}UI definitions per culture as caller can specify the culture{{% /md %}}</dd>
 
@@ -1409,7 +1451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}Read only properties for this oauth setting.{{% /md %}}</dd>
 
@@ -1486,7 +1528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}Read only properties for this oauth setting.{{% /md %}}</dd>
 
@@ -1563,7 +1605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}Read only properties for this oauth setting.{{% /md %}}</dd>
 
@@ -1640,7 +1682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}Read only properties for this oauth setting.{{% /md %}}</dd>
 
@@ -2422,7 +2464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#swagger_csharp" style="color: inherit; text-decoration: inherit;">Swagger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}The JSON representation of the swagger{{% /md %}}</dd>
 
@@ -2549,7 +2591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#swagger_go" style="color: inherit; text-decoration: inherit;">Swagger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}The JSON representation of the swagger{{% /md %}}</dd>
 
@@ -2676,7 +2718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#swagger_nodejs" style="color: inherit; text-decoration: inherit;">swagger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}The JSON representation of the swagger{{% /md %}}</dd>
 
@@ -2803,7 +2845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#swagger_python" style="color: inherit; text-decoration: inherit;">swagger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}The JSON representation of the swagger{{% /md %}}</dd>
 
@@ -2941,7 +2983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#swagger_csharp" style="color: inherit; text-decoration: inherit;">Swagger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}The JSON representation of the swagger{{% /md %}}</dd>
 
@@ -3068,7 +3110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#swagger_go" style="color: inherit; text-decoration: inherit;">Swagger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}The JSON representation of the swagger{{% /md %}}</dd>
 
@@ -3195,7 +3237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#swagger_nodejs" style="color: inherit; text-decoration: inherit;">swagger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}The JSON representation of the swagger{{% /md %}}</dd>
 
@@ -3322,7 +3364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#swagger_python" style="color: inherit; text-decoration: inherit;">swagger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}The JSON representation of the swagger{{% /md %}}</dd>
 

@@ -30,6 +30,72 @@ class MyStack : Stack
         {
             Etag = "AAAAAAFD6M4=",
             Location = "centraluseuap",
+            Properties = new AzureNextGen.Devices.Latest.Inputs.IotHubPropertiesArgs
+            {
+                CloudToDevice = new AzureNextGen.Devices.Latest.Inputs.CloudToDevicePropertiesArgs
+                {
+                    DefaultTtlAsIso8601 = "PT1H",
+                    Feedback = new AzureNextGen.Devices.Latest.Inputs.FeedbackPropertiesArgs
+                    {
+                        LockDurationAsIso8601 = "PT1M",
+                        MaxDeliveryCount = 10,
+                        TtlAsIso8601 = "PT1H",
+                    },
+                    MaxDeliveryCount = 10,
+                },
+                EnableFileUploadNotifications = false,
+                EventHubEndpoints = 
+                {
+                    { "events", new AzureNextGen.Devices.Latest.Inputs.EventHubPropertiesArgs
+                    {
+                        PartitionCount = 2,
+                        RetentionTimeInDays = 1,
+                    } },
+                },
+                Features = "None",
+                IpFilterRules = {},
+                MessagingEndpoints = 
+                {
+                    { "fileNotifications", new AzureNextGen.Devices.Latest.Inputs.MessagingEndpointPropertiesArgs
+                    {
+                        LockDurationAsIso8601 = "PT1M",
+                        MaxDeliveryCount = 10,
+                        TtlAsIso8601 = "PT1H",
+                    } },
+                },
+                MinTlsVersion = "1.2",
+                Routing = new AzureNextGen.Devices.Latest.Inputs.RoutingPropertiesArgs
+                {
+                    Endpoints = new AzureNextGen.Devices.Latest.Inputs.RoutingEndpointsArgs
+                    {
+                        EventHubs = {},
+                        ServiceBusQueues = {},
+                        ServiceBusTopics = {},
+                        StorageContainers = {},
+                    },
+                    FallbackRoute = new AzureNextGen.Devices.Latest.Inputs.FallbackRoutePropertiesArgs
+                    {
+                        Condition = "true",
+                        EndpointNames = 
+                        {
+                            "events",
+                        },
+                        IsEnabled = true,
+                        Name = "$fallback",
+                        Source = "DeviceMessages",
+                    },
+                    Routes = {},
+                },
+                StorageEndpoints = 
+                {
+                    { "$default", new AzureNextGen.Devices.Latest.Inputs.StorageEndpointPropertiesArgs
+                    {
+                        ConnectionString = "",
+                        ContainerName = "",
+                        SasTtlAsIso8601 = "PT1H",
+                    } },
+                },
+            },
             ResourceGroupName = "myResourceGroup",
             ResourceName = "testHub",
             Sku = new AzureNextGen.Devices.Latest.Inputs.IotHubSkuInfoArgs
@@ -48,37 +114,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-package main
-
-import (
-	devices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/devices/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := devices.NewIotHubResource(ctx, "iotHubResource", &devices.IotHubResourceArgs{
-			Etag:              pulumi.String("AAAAAAFD6M4="),
-			Location:          pulumi.String("centraluseuap"),
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-			ResourceName:      pulumi.String("testHub"),
-			Sku: &devices.IotHubSkuInfoArgs{
-				Capacity: pulumi.Int(1),
-				Name:     pulumi.String("S1"),
-			},
-			Tags: nil,
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -90,6 +126,57 @@ import pulumi_azure_nextgen as azure_nextgen
 iot_hub_resource = azure_nextgen.devices.latest.IotHubResource("iotHubResource",
     etag="AAAAAAFD6M4=",
     location="centraluseuap",
+    properties={
+        "cloudToDevice": {
+            "defaultTtlAsIso8601": "PT1H",
+            "feedback": {
+                "lockDurationAsIso8601": "PT1M",
+                "maxDeliveryCount": 10,
+                "ttlAsIso8601": "PT1H",
+            },
+            "maxDeliveryCount": 10,
+        },
+        "enableFileUploadNotifications": False,
+        "eventHubEndpoints": {
+            "events": {
+                "partitionCount": 2,
+                "retentionTimeInDays": 1,
+            },
+        },
+        "features": "None",
+        "ipFilterRules": [],
+        "messagingEndpoints": {
+            "fileNotifications": {
+                "lockDurationAsIso8601": "PT1M",
+                "maxDeliveryCount": 10,
+                "ttlAsIso8601": "PT1H",
+            },
+        },
+        "minTlsVersion": "1.2",
+        "routing": {
+            "endpoints": {
+                "eventHubs": [],
+                "serviceBusQueues": [],
+                "serviceBusTopics": [],
+                "storageContainers": [],
+            },
+            "fallbackRoute": {
+                "condition": "true",
+                "endpointNames": ["events"],
+                "isEnabled": True,
+                "name": "$fallback",
+                "source": "DeviceMessages",
+            },
+            "routes": [],
+        },
+        "storageEndpoints": {
+            "$default": {
+                "connectionString": "",
+                "containerName": "",
+                "sasTtlAsIso8601": "PT1H",
+            },
+        },
+    },
     resource_group_name="myResourceGroup",
     resource_name="testHub",
     sku={
@@ -111,6 +198,57 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const iotHubResource = new azure_nextgen.devices.latest.IotHubResource("iotHubResource", {
     etag: "AAAAAAFD6M4=",
     location: "centraluseuap",
+    properties: {
+        cloudToDevice: {
+            defaultTtlAsIso8601: "PT1H",
+            feedback: {
+                lockDurationAsIso8601: "PT1M",
+                maxDeliveryCount: 10,
+                ttlAsIso8601: "PT1H",
+            },
+            maxDeliveryCount: 10,
+        },
+        enableFileUploadNotifications: false,
+        eventHubEndpoints: {
+            events: {
+                partitionCount: 2,
+                retentionTimeInDays: 1,
+            },
+        },
+        features: "None",
+        ipFilterRules: [],
+        messagingEndpoints: {
+            fileNotifications: {
+                lockDurationAsIso8601: "PT1M",
+                maxDeliveryCount: 10,
+                ttlAsIso8601: "PT1H",
+            },
+        },
+        minTlsVersion: "1.2",
+        routing: {
+            endpoints: {
+                eventHubs: [],
+                serviceBusQueues: [],
+                serviceBusTopics: [],
+                storageContainers: [],
+            },
+            fallbackRoute: {
+                condition: "true",
+                endpointNames: ["events"],
+                isEnabled: true,
+                name: `$fallback`,
+                source: "DeviceMessages",
+            },
+            routes: [],
+        },
+        storageEndpoints: {
+            `$default`: {
+                connectionString: "",
+                containerName: "",
+                sasTtlAsIso8601: "PT1H",
+            },
+        },
+    },
     resourceGroupName: "myResourceGroup",
     resourceName: "testHub",
     sku: {

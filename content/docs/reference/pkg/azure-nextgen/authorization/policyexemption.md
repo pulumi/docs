@@ -57,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	authorization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/authorization/v20200701preview"
+	authorization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/authorization/v20200701preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -393,7 +393,7 @@ The PolicyExemption resource accepts the following [input]({{< relref "/docs/int
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}The policy exemption metadata. Metadata is an open ended object and is typically a collection of key value pairs.{{% /md %}}</dd>
 
@@ -490,7 +490,7 @@ The PolicyExemption resource accepts the following [input]({{< relref "/docs/int
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}The policy exemption metadata. Metadata is an open ended object and is typically a collection of key value pairs.{{% /md %}}</dd>
 
@@ -587,7 +587,7 @@ The PolicyExemption resource accepts the following [input]({{< relref "/docs/int
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}The policy exemption metadata. Metadata is an open ended object and is typically a collection of key value pairs.{{% /md %}}</dd>
 
@@ -684,7 +684,7 @@ The PolicyExemption resource accepts the following [input]({{< relref "/docs/int
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}The policy exemption metadata. Metadata is an open ended object and is typically a collection of key value pairs.{{% /md %}}</dd>
 

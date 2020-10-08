@@ -32,7 +32,10 @@ class MyStack : Stack
             {
                 Destination = new AzureNextGen.EventHub.Latest.Inputs.DestinationArgs
                 {
+                    ArchiveNameFormat = "{Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}",
+                    BlobContainer = "container",
                     Name = "EventHubArchive.AzureBlockBlob",
+                    StorageAccountResourceId = "/subscriptions/e2f361f0-3b27-4503-a9cc-21cfba380093/resourceGroups/Default-Storage-SouthCentralUS/providers/Microsoft.ClassicStorage/storageAccounts/arjunteststorage",
                 },
                 Enabled = true,
                 Encoding = "Avro",
@@ -60,7 +63,7 @@ class MyStack : Stack
 package main
 
 import (
-	eventhub "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/eventhub/latest"
+	eventhub "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventhub/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -69,7 +72,10 @@ func main() {
 		_, err := eventhub.NewEventHub(ctx, "eventHub", &eventhub.EventHubArgs{
 			CaptureDescription: &eventhub.CaptureDescriptionArgs{
 				Destination: &eventhub.DestinationArgs{
-					Name: pulumi.String("EventHubArchive.AzureBlockBlob"),
+					ArchiveNameFormat:        pulumi.String("{Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}"),
+					BlobContainer:            pulumi.String("container"),
+					Name:                     pulumi.String("EventHubArchive.AzureBlockBlob"),
+					StorageAccountResourceId: pulumi.String("/subscriptions/e2f361f0-3b27-4503-a9cc-21cfba380093/resourceGroups/Default-Storage-SouthCentralUS/providers/Microsoft.ClassicStorage/storageAccounts/arjunteststorage"),
 				},
 				Enabled:           pulumi.Bool(true),
 				Encoding:          pulumi.String("Avro"),
@@ -103,7 +109,10 @@ import pulumi_azure_nextgen as azure_nextgen
 event_hub = azure_nextgen.eventhub.latest.EventHub("eventHub",
     capture_description={
         "destination": {
+            "archiveNameFormat": "{Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}",
+            "blobContainer": "container",
             "name": "EventHubArchive.AzureBlockBlob",
+            "storageAccountResourceId": "/subscriptions/e2f361f0-3b27-4503-a9cc-21cfba380093/resourceGroups/Default-Storage-SouthCentralUS/providers/Microsoft.ClassicStorage/storageAccounts/arjunteststorage",
         },
         "enabled": True,
         "encoding": "Avro",
@@ -130,7 +139,10 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const eventHub = new azure_nextgen.eventhub.latest.EventHub("eventHub", {
     captureDescription: {
         destination: {
+            archiveNameFormat: "{Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}",
+            blobContainer: "container",
             name: "EventHubArchive.AzureBlockBlob",
+            storageAccountResourceId: "/subscriptions/e2f361f0-3b27-4503-a9cc-21cfba380093/resourceGroups/Default-Storage-SouthCentralUS/providers/Microsoft.ClassicStorage/storageAccounts/arjunteststorage",
         },
         enabled: true,
         encoding: "Avro",

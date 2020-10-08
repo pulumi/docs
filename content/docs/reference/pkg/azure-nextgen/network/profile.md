@@ -59,7 +59,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -166,7 +166,18 @@ class MyStack : Stack
             {
                 new AzureNextGen.Network.Latest.Inputs.EndpointArgs
                 {
+                    CustomHeaders = 
+                    {
+                        new AzureNextGen.Network.Latest.Inputs.EndpointPropertiesCustomHeadersArgs
+                        {
+                            Name = "header-2",
+                            Value = "value-2-overridden",
+                        },
+                    },
+                    EndpointLocation = "North Europe",
+                    EndpointStatus = "Enabled",
                     Name = "My external endpoint",
+                    Target = "foobar.contoso.com",
                     Type = "Microsoft.network/TrafficManagerProfiles/ExternalEndpoints",
                 },
             },
@@ -226,7 +237,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -239,8 +250,17 @@ func main() {
 			},
 			Endpoints: network.EndpointArray{
 				&network.EndpointArgs{
-					Name: pulumi.String("My external endpoint"),
-					Type: pulumi.String("Microsoft.network/TrafficManagerProfiles/ExternalEndpoints"),
+					CustomHeaders: network.EndpointPropertiesCustomHeadersArray{
+						&network.EndpointPropertiesCustomHeadersArgs{
+							Name:  pulumi.String("header-2"),
+							Value: pulumi.String("value-2-overridden"),
+						},
+					},
+					EndpointLocation: pulumi.String("North Europe"),
+					EndpointStatus:   pulumi.String("Enabled"),
+					Name:             pulumi.String("My external endpoint"),
+					Target:           pulumi.String("foobar.contoso.com"),
+					Type:             pulumi.String("Microsoft.network/TrafficManagerProfiles/ExternalEndpoints"),
 				},
 			},
 			Location: pulumi.String("global"),
@@ -301,7 +321,14 @@ profile = azure_nextgen.network.latest.Profile("profile",
         "ttl": 35,
     },
     endpoints=[{
+        "customHeaders": [{
+            "name": "header-2",
+            "value": "value-2-overridden",
+        }],
+        "endpointLocation": "North Europe",
+        "endpointStatus": "Enabled",
         "name": "My external endpoint",
+        "target": "foobar.contoso.com",
         "type": "Microsoft.network/TrafficManagerProfiles/ExternalEndpoints",
     }],
     location="global",
@@ -355,7 +382,14 @@ const profile = new azure_nextgen.network.latest.Profile("profile", {
         ttl: 35,
     },
     endpoints: [{
+        customHeaders: [{
+            name: "header-2",
+            value: "value-2-overridden",
+        }],
+        endpointLocation: "North Europe",
+        endpointStatus: "Enabled",
         name: "My external endpoint",
+        target: "foobar.contoso.com",
         type: "Microsoft.network/TrafficManagerProfiles/ExternalEndpoints",
     }],
     location: "global",
@@ -419,7 +453,10 @@ class MyStack : Stack
             {
                 new AzureNextGen.Network.Latest.Inputs.EndpointArgs
                 {
+                    EndpointLocation = "North Europe",
+                    EndpointStatus = "Enabled",
                     Name = "My external endpoint",
+                    Target = "foobar.contoso.com",
                     Type = "Microsoft.network/TrafficManagerProfiles/ExternalEndpoints",
                 },
             },
@@ -452,7 +489,7 @@ class MyStack : Stack
 package main
 
 import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/network/latest"
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -465,8 +502,11 @@ func main() {
 			},
 			Endpoints: network.EndpointArray{
 				&network.EndpointArgs{
-					Name: pulumi.String("My external endpoint"),
-					Type: pulumi.String("Microsoft.network/TrafficManagerProfiles/ExternalEndpoints"),
+					EndpointLocation: pulumi.String("North Europe"),
+					EndpointStatus:   pulumi.String("Enabled"),
+					Name:             pulumi.String("My external endpoint"),
+					Target:           pulumi.String("foobar.contoso.com"),
+					Type:             pulumi.String("Microsoft.network/TrafficManagerProfiles/ExternalEndpoints"),
 				},
 			},
 			Location: pulumi.String("global"),
@@ -506,7 +546,10 @@ profile = azure_nextgen.network.latest.Profile("profile",
         "ttl": 35,
     },
     endpoints=[{
+        "endpointLocation": "North Europe",
+        "endpointStatus": "Enabled",
         "name": "My external endpoint",
+        "target": "foobar.contoso.com",
         "type": "Microsoft.network/TrafficManagerProfiles/ExternalEndpoints",
     }],
     location="global",
@@ -539,7 +582,10 @@ const profile = new azure_nextgen.network.latest.Profile("profile", {
         ttl: 35,
     },
     endpoints: [{
+        endpointLocation: "North Europe",
+        endpointStatus: "Enabled",
         name: "My external endpoint",
+        target: "foobar.contoso.com",
         type: "Microsoft.network/TrafficManagerProfiles/ExternalEndpoints",
     }],
     location: "global",

@@ -12,6 +12,300 @@ meta_desc: "Explore the VirtualNetworkGatewayConnection resource of the network 
 
 A common class for general resource information.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CreateVirtualNetworkGatewayConnection_S2S
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualNetworkGatewayConnection = new AzureNextGen.Network.Latest.VirtualNetworkGatewayConnection("virtualNetworkGatewayConnection", new AzureNextGen.Network.Latest.VirtualNetworkGatewayConnectionArgs
+        {
+            ConnectionProtocol = "IKEv2",
+            ConnectionType = "IPsec",
+            DpdTimeoutSeconds = 30,
+            EnableBgp = false,
+            IpsecPolicies = {},
+            LocalNetworkGateway2 = new AzureNextGen.Network.Latest.Inputs.LocalNetworkGatewayArgs
+            {
+                GatewayIpAddress = "x.x.x.x",
+                Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/localNetworkGateways/localgw",
+                LocalNetworkAddressSpace = new AzureNextGen.Network.Latest.Inputs.AddressSpaceArgs
+                {
+                    AddressPrefixes = 
+                    {
+                        "10.1.0.0/16",
+                    },
+                },
+                Location = "centralus",
+                Tags = ,
+            },
+            Location = "centralus",
+            ResourceGroupName = "rg1",
+            RoutingWeight = 0,
+            SharedKey = "Abc123",
+            TrafficSelectorPolicies = {},
+            UsePolicyBasedTrafficSelectors = false,
+            VirtualNetworkGateway1 = new AzureNextGen.Network.Latest.Inputs.VirtualNetworkGatewayArgs
+            {
+                ActiveActive = false,
+                BgpSettings = new AzureNextGen.Network.Latest.Inputs.BgpSettingsArgs
+                {
+                    Asn = 65514,
+                    BgpPeeringAddress = "10.0.1.30",
+                    PeerWeight = 0,
+                },
+                EnableBgp = false,
+                GatewayType = "Vpn",
+                Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw",
+                IpConfigurations = 
+                {
+                    new AzureNextGen.Network.Latest.Inputs.VirtualNetworkGatewayIPConfigurationArgs
+                    {
+                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw/ipConfigurations/gwipconfig1",
+                        Name = "gwipconfig1",
+                        PrivateIPAllocationMethod = "Dynamic",
+                        PublicIPAddress = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                        {
+                            Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/gwpip",
+                        },
+                        Subnet = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                        {
+                            Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/GatewaySubnet",
+                        },
+                    },
+                },
+                Location = "centralus",
+                Sku = new AzureNextGen.Network.Latest.Inputs.VirtualNetworkGatewaySkuArgs
+                {
+                    Name = "VpnGw1",
+                    Tier = "VpnGw1",
+                },
+                Tags = ,
+                VpnType = "RouteBased",
+            },
+            VirtualNetworkGatewayConnectionName = "connS2S",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewVirtualNetworkGatewayConnection(ctx, "virtualNetworkGatewayConnection", &network.VirtualNetworkGatewayConnectionArgs{
+			ConnectionProtocol: pulumi.String("IKEv2"),
+			ConnectionType:     pulumi.String("IPsec"),
+			DpdTimeoutSeconds:  pulumi.Int(30),
+			EnableBgp:          pulumi.Bool(false),
+			IpsecPolicies:      network.IpsecPolicyArray{},
+			LocalNetworkGateway2: &network.LocalNetworkGatewayArgs{
+				GatewayIpAddress: pulumi.String("x.x.x.x"),
+				Id:               pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/localNetworkGateways/localgw"),
+				LocalNetworkAddressSpace: &network.AddressSpaceArgs{
+					AddressPrefixes: pulumi.StringArray{
+						pulumi.String("10.1.0.0/16"),
+					},
+				},
+				Location: pulumi.String("centralus"),
+				Tags:     nil,
+			},
+			Location:                       pulumi.String("centralus"),
+			ResourceGroupName:              pulumi.String("rg1"),
+			RoutingWeight:                  pulumi.Int(0),
+			SharedKey:                      pulumi.String("Abc123"),
+			TrafficSelectorPolicies:        network.TrafficSelectorPolicyArray{},
+			UsePolicyBasedTrafficSelectors: pulumi.Bool(false),
+			VirtualNetworkGateway1: &network.VirtualNetworkGatewayArgs{
+				ActiveActive: pulumi.Bool(false),
+				BgpSettings: &network.BgpSettingsArgs{
+					Asn:               pulumi.Int(65514),
+					BgpPeeringAddress: pulumi.String("10.0.1.30"),
+					PeerWeight:        pulumi.Int(0),
+				},
+				EnableBgp:   pulumi.Bool(false),
+				GatewayType: pulumi.String("Vpn"),
+				Id:          pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw"),
+				IpConfigurations: network.VirtualNetworkGatewayIPConfigurationArray{
+					&network.VirtualNetworkGatewayIPConfigurationArgs{
+						Id:                        pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw/ipConfigurations/gwipconfig1"),
+						Name:                      pulumi.String("gwipconfig1"),
+						PrivateIPAllocationMethod: pulumi.String("Dynamic"),
+						PublicIPAddress: &network.SubResourceArgs{
+							Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/gwpip"),
+						},
+						Subnet: &network.SubResourceArgs{
+							Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/GatewaySubnet"),
+						},
+					},
+				},
+				Location: pulumi.String("centralus"),
+				Sku: &network.VirtualNetworkGatewaySkuArgs{
+					Name: pulumi.String("VpnGw1"),
+					Tier: pulumi.String("VpnGw1"),
+				},
+				Tags:    nil,
+				VpnType: pulumi.String("RouteBased"),
+			},
+			VirtualNetworkGatewayConnectionName: pulumi.String("connS2S"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+virtual_network_gateway_connection = azure_nextgen.network.latest.VirtualNetworkGatewayConnection("virtualNetworkGatewayConnection",
+    connection_protocol="IKEv2",
+    connection_type="IPsec",
+    dpd_timeout_seconds=30,
+    enable_bgp=False,
+    ipsec_policies=[],
+    local_network_gateway2={
+        "gatewayIpAddress": "x.x.x.x",
+        "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/localNetworkGateways/localgw",
+        "localNetworkAddressSpace": {
+            "addressPrefixes": ["10.1.0.0/16"],
+        },
+        "location": "centralus",
+        "tags": {},
+    },
+    location="centralus",
+    resource_group_name="rg1",
+    routing_weight=0,
+    shared_key="Abc123",
+    traffic_selector_policies=[],
+    use_policy_based_traffic_selectors=False,
+    virtual_network_gateway1={
+        "activeActive": False,
+        "bgpSettings": {
+            "asn": 65514,
+            "bgpPeeringAddress": "10.0.1.30",
+            "peerWeight": 0,
+        },
+        "enableBgp": False,
+        "gatewayType": "Vpn",
+        "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw",
+        "ipConfigurations": [{
+            "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw/ipConfigurations/gwipconfig1",
+            "name": "gwipconfig1",
+            "privateIPAllocationMethod": "Dynamic",
+            "publicIPAddress": {
+                "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/gwpip",
+            },
+            "subnet": {
+                "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/GatewaySubnet",
+            },
+        }],
+        "location": "centralus",
+        "sku": {
+            "name": "VpnGw1",
+            "tier": "VpnGw1",
+        },
+        "tags": {},
+        "vpnType": "RouteBased",
+    },
+    virtual_network_gateway_connection_name="connS2S")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const virtualNetworkGatewayConnection = new azure_nextgen.network.latest.VirtualNetworkGatewayConnection("virtualNetworkGatewayConnection", {
+    connectionProtocol: "IKEv2",
+    connectionType: "IPsec",
+    dpdTimeoutSeconds: 30,
+    enableBgp: false,
+    ipsecPolicies: [],
+    localNetworkGateway2: {
+        gatewayIpAddress: "x.x.x.x",
+        id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/localNetworkGateways/localgw",
+        localNetworkAddressSpace: {
+            addressPrefixes: ["10.1.0.0/16"],
+        },
+        location: "centralus",
+        tags: {},
+    },
+    location: "centralus",
+    resourceGroupName: "rg1",
+    routingWeight: 0,
+    sharedKey: "Abc123",
+    trafficSelectorPolicies: [],
+    usePolicyBasedTrafficSelectors: false,
+    virtualNetworkGateway1: {
+        activeActive: false,
+        bgpSettings: {
+            asn: 65514,
+            bgpPeeringAddress: "10.0.1.30",
+            peerWeight: 0,
+        },
+        enableBgp: false,
+        gatewayType: "Vpn",
+        id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw",
+        ipConfigurations: [{
+            id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw/ipConfigurations/gwipconfig1",
+            name: "gwipconfig1",
+            privateIPAllocationMethod: "Dynamic",
+            publicIPAddress: {
+                id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/gwpip",
+            },
+            subnet: {
+                id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/GatewaySubnet",
+            },
+        }],
+        location: "centralus",
+        sku: {
+            name: "VpnGw1",
+            tier: "VpnGw1",
+        },
+        tags: {},
+        vpnType: "RouteBased",
+    },
+    virtualNetworkGatewayConnectionName: "connS2S",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VirtualNetworkGatewayConnection Resource {#create}
@@ -4357,7 +4651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4374,7 +4668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4391,7 +4685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4408,7 +4702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

@@ -30,6 +30,11 @@ class MyStack : Stack
         {
             LinkName = "link-1",
             Name = "link-1",
+            Properties = new AzureNextGen.MachineLearningServices.Latest.Inputs.LinkedWorkspacePropsArgs
+            {
+                LinkedWorkspaceResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.Synapse/workspaces/linkedWorkspace-1",
+                UserAssignedIdentityResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai1",
+            },
             ResourceGroupName = "resourceGroup-1",
             WorkspaceName = "workspace-1",
         });
@@ -47,15 +52,19 @@ class MyStack : Stack
 package main
 
 import (
-	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices/latest"
+	machinelearningservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := machinelearningservices.NewLinkedWorkspace(ctx, "linkedWorkspace", &machinelearningservices.LinkedWorkspaceArgs{
-			LinkName:          pulumi.String("link-1"),
-			Name:              pulumi.String("link-1"),
+			LinkName: pulumi.String("link-1"),
+			Name:     pulumi.String("link-1"),
+			Properties: &machinelearningservices.LinkedWorkspacePropsArgs{
+				LinkedWorkspaceResourceId:      pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.Synapse/workspaces/linkedWorkspace-1"),
+				UserAssignedIdentityResourceId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai1"),
+			},
 			ResourceGroupName: pulumi.String("resourceGroup-1"),
 			WorkspaceName:     pulumi.String("workspace-1"),
 		})
@@ -79,6 +88,10 @@ import pulumi_azure_nextgen as azure_nextgen
 linked_workspace = azure_nextgen.machinelearningservices.latest.LinkedWorkspace("linkedWorkspace",
     link_name="link-1",
     name="link-1",
+    properties={
+        "linkedWorkspaceResourceId": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.Synapse/workspaces/linkedWorkspace-1",
+        "userAssignedIdentityResourceId": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai1",
+    },
     resource_group_name="resourceGroup-1",
     workspace_name="workspace-1")
 
@@ -95,6 +108,10 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const linkedWorkspace = new azure_nextgen.machinelearningservices.latest.LinkedWorkspace("linkedWorkspace", {
     linkName: "link-1",
     name: "link-1",
+    properties: {
+        linkedWorkspaceResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.Synapse/workspaces/linkedWorkspace-1",
+        userAssignedIdentityResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai1",
+    },
     resourceGroupName: "resourceGroup-1",
     workspaceName: "workspace-1",
 });

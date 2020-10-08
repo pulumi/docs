@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	dbformysql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/dbformysql/latest"
+	dbformysql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/dbformysql/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

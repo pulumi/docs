@@ -70,7 +70,7 @@ class MyStack : Stack
 package main
 
 import (
-	hardwaresecuritymodules "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/hardwaresecuritymodules/v20181031preview"
+	hardwaresecuritymodules "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hardwaresecuritymodules/v20181031preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

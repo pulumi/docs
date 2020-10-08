@@ -49,6 +49,7 @@ Explore the resources and functions of the devtestlab module in the Azure NextGe
     <li><a href="getservicerunner" title="GetServiceRunner"><span class="symbol function"></span>GetServiceRunner</a></li>
     <li><a href="getuser" title="GetUser"><span class="symbol function"></span>GetUser</a></li>
     <li><a href="getvirtualmachine" title="GetVirtualMachine"><span class="symbol function"></span>GetVirtualMachine</a></li>
+    <li><a href="getvirtualmachinerdpfilecontents" title="GetVirtualMachineRdpFileContents"><span class="symbol function"></span>GetVirtualMachineRdpFileContents</a></li>
     <li><a href="getvirtualmachineschedule" title="GetVirtualMachineSchedule"><span class="symbol function"></span>GetVirtualMachineSchedule</a></li>
     <li><a href="getvirtualnetwork" title="GetVirtualNetwork"><span class="symbol function"></span>GetVirtualNetwork</a></li>
     <li><a href="listlabvhds" title="ListLabVhds"><span class="symbol function"></span>ListLabVhds</a></li>
@@ -64,7 +65,7 @@ Explore the resources and functions of the devtestlab module in the Azure NextGe
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.1</dd>
 </dl>
 
 

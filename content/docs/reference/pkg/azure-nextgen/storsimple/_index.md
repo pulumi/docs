@@ -42,6 +42,7 @@ Explore the resources and functions of the storsimple module in the Azure NextGe
     <li><a href="getiscsidisk" title="GetIscsiDisk"><span class="symbol function"></span>GetIscsiDisk</a></li>
     <li><a href="getiscsiserver" title="GetIscsiServer"><span class="symbol function"></span>GetIscsiServer</a></li>
     <li><a href="getmanager" title="GetManager"><span class="symbol function"></span>GetManager</a></li>
+    <li><a href="getmanagerencryptionkey" title="GetManagerEncryptionKey"><span class="symbol function"></span>GetManagerEncryptionKey</a></li>
     <li><a href="getmanagerextendedinfo" title="GetManagerExtendedInfo"><span class="symbol function"></span>GetManagerExtendedInfo</a></li>
     <li><a href="getstorageaccountcredential" title="GetStorageAccountCredential"><span class="symbol function"></span>GetStorageAccountCredential</a></li>
     <li><a href="getstoragedomain" title="GetStorageDomain"><span class="symbol function"></span>GetStorageDomain</a></li>
@@ -60,7 +61,7 @@ Explore the resources and functions of the storsimple module in the Azure NextGe
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.1</dd>
 </dl>
 
 

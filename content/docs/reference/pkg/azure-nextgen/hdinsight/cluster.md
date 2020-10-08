@@ -29,6 +29,138 @@ class MyStack : Stack
         var cluster = new AzureNextGen.HDInsight.V20180601Preview.Cluster("cluster", new AzureNextGen.HDInsight.V20180601Preview.ClusterArgs
         {
             ClusterName = "cluster1",
+            Properties = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterCreatePropertiesArgs
+            {
+                ClusterDefinition = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterDefinitionArgs
+                {
+                    ComponentVersion = 
+                    {
+                        { "Hadoop", "2.7" },
+                    },
+                    Configurations = 
+                    {
+                        { "gateway", 
+                        {
+                            { "restAuthCredential.isEnabled", true },
+                            { "restAuthCredential.password", "**********" },
+                            { "restAuthCredential.username", "admin" },
+                        } },
+                    },
+                    Kind = "hadoop",
+                },
+                ClusterVersion = "3.6",
+                ComputeProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ComputeProfileArgs
+                {
+                    Roles = 
+                    {
+                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        {
+                            AutoscaleConfiguration = new AzureNextGen.HDInsight.V20180601Preview.Inputs.AutoscaleArgs
+                            {
+                                Recurrence = new AzureNextGen.HDInsight.V20180601Preview.Inputs.AutoscaleRecurrenceArgs
+                                {
+                                    Schedule = 
+                                    {
+                                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.AutoscaleScheduleArgs
+                                        {
+                                            Days = 
+                                            {
+                                                "Monday",
+                                                "Tuesday",
+                                                "Wednesday",
+                                                "Thursday",
+                                                "Friday",
+                                            },
+                                            TimeAndCapacity = new AzureNextGen.HDInsight.V20180601Preview.Inputs.AutoscaleTimeAndCapacityArgs
+                                            {
+                                                MaxInstanceCount = 3,
+                                                MinInstanceCount = 3,
+                                                Time = "09:00",
+                                            },
+                                        },
+                                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.AutoscaleScheduleArgs
+                                        {
+                                            Days = 
+                                            {
+                                                "Monday",
+                                                "Tuesday",
+                                                "Wednesday",
+                                                "Thursday",
+                                                "Friday",
+                                            },
+                                            TimeAndCapacity = new AzureNextGen.HDInsight.V20180601Preview.Inputs.AutoscaleTimeAndCapacityArgs
+                                            {
+                                                MaxInstanceCount = 6,
+                                                MinInstanceCount = 6,
+                                                Time = "18:00",
+                                            },
+                                        },
+                                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.AutoscaleScheduleArgs
+                                        {
+                                            Days = 
+                                            {
+                                                "Saturday",
+                                                "Sunday",
+                                            },
+                                            TimeAndCapacity = new AzureNextGen.HDInsight.V20180601Preview.Inputs.AutoscaleTimeAndCapacityArgs
+                                            {
+                                                MaxInstanceCount = 2,
+                                                MinInstanceCount = 2,
+                                                Time = "09:00",
+                                            },
+                                        },
+                                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.AutoscaleScheduleArgs
+                                        {
+                                            Days = 
+                                            {
+                                                "Saturday",
+                                                "Sunday",
+                                            },
+                                            TimeAndCapacity = new AzureNextGen.HDInsight.V20180601Preview.Inputs.AutoscaleTimeAndCapacityArgs
+                                            {
+                                                MaxInstanceCount = 4,
+                                                MinInstanceCount = 4,
+                                                Time = "18:00",
+                                            },
+                                        },
+                                    },
+                                    TimeZone = "China Standard Time",
+                                },
+                            },
+                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            {
+                                VmSize = "Standard_D4_V2",
+                            },
+                            Name = "workernode",
+                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            {
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                {
+                                    Password = "**********",
+                                    Username = "sshuser",
+                                },
+                            },
+                            ScriptActions = {},
+                            TargetInstanceCount = 4,
+                        },
+                    },
+                },
+                OsType = "Linux",
+                StorageProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageProfileArgs
+                {
+                    Storageaccounts = 
+                    {
+                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageAccountArgs
+                        {
+                            Container = "hdinsight-autoscale-tes-2019-06-18t05-49-16-591z",
+                            IsDefault = true,
+                            Key = "storagekey",
+                            Name = "mystorage.blob.core.windows.net",
+                        },
+                    },
+                },
+                Tier = "Standard",
+            },
             ResourceGroupName = "rg1",
         });
     }
@@ -45,14 +177,117 @@ class MyStack : Stack
 package main
 
 import (
-	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/hdinsight/v20180601preview"
+	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hdinsight/v20180601preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := hdinsight.NewCluster(ctx, "cluster", &hdinsight.ClusterArgs{
-			ClusterName:       pulumi.String("cluster1"),
+			ClusterName: pulumi.String("cluster1"),
+			Properties: &hdinsight.ClusterCreatePropertiesArgs{
+				ClusterDefinition: &hdinsight.ClusterDefinitionArgs{
+					ComponentVersion: pulumi.StringMap{
+						"Hadoop": pulumi.String("2.7"),
+					},
+					Configurations: pulumi.MapMap{
+						"gateway": pulumi.Map{
+							"restAuthCredential.isEnabled": pulumi.Bool(true),
+							"restAuthCredential.password":  pulumi.String("**********"),
+							"restAuthCredential.username":  pulumi.String("admin"),
+						},
+					},
+					Kind: pulumi.String("hadoop"),
+				},
+				ClusterVersion: pulumi.String("3.6"),
+				ComputeProfile: &hdinsight.ComputeProfileArgs{
+					Roles: hdinsight.RoleArray{
+						&hdinsight.RoleArgs{
+							AutoscaleConfiguration: &hdinsight.AutoscaleArgs{
+								Recurrence: &hdinsight.AutoscaleRecurrenceArgs{
+									Schedule: hdinsight.AutoscaleScheduleArray{
+										&hdinsight.AutoscaleScheduleArgs{
+											Days: pulumi.StringArray{
+												pulumi.String("Monday"),
+												pulumi.String("Tuesday"),
+												pulumi.String("Wednesday"),
+												pulumi.String("Thursday"),
+												pulumi.String("Friday"),
+											},
+											TimeAndCapacity: &hdinsight.AutoscaleTimeAndCapacityArgs{
+												MaxInstanceCount: pulumi.Int(3),
+												MinInstanceCount: pulumi.Int(3),
+												Time:             pulumi.String("09:00"),
+											},
+										},
+										&hdinsight.AutoscaleScheduleArgs{
+											Days: pulumi.StringArray{
+												pulumi.String("Monday"),
+												pulumi.String("Tuesday"),
+												pulumi.String("Wednesday"),
+												pulumi.String("Thursday"),
+												pulumi.String("Friday"),
+											},
+											TimeAndCapacity: &hdinsight.AutoscaleTimeAndCapacityArgs{
+												MaxInstanceCount: pulumi.Int(6),
+												MinInstanceCount: pulumi.Int(6),
+												Time:             pulumi.String("18:00"),
+											},
+										},
+										&hdinsight.AutoscaleScheduleArgs{
+											Days: pulumi.StringArray{
+												pulumi.String("Saturday"),
+												pulumi.String("Sunday"),
+											},
+											TimeAndCapacity: &hdinsight.AutoscaleTimeAndCapacityArgs{
+												MaxInstanceCount: pulumi.Int(2),
+												MinInstanceCount: pulumi.Int(2),
+												Time:             pulumi.String("09:00"),
+											},
+										},
+										&hdinsight.AutoscaleScheduleArgs{
+											Days: pulumi.StringArray{
+												pulumi.String("Saturday"),
+												pulumi.String("Sunday"),
+											},
+											TimeAndCapacity: &hdinsight.AutoscaleTimeAndCapacityArgs{
+												MaxInstanceCount: pulumi.Int(4),
+												MinInstanceCount: pulumi.Int(4),
+												Time:             pulumi.String("18:00"),
+											},
+										},
+									},
+									TimeZone: pulumi.String("China Standard Time"),
+								},
+							},
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Standard_D4_V2"),
+							},
+							Name: pulumi.String("workernode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							ScriptActions:       hdinsight.ScriptActionArray{},
+							TargetInstanceCount: pulumi.Int(4),
+						},
+					},
+				},
+				OsType: pulumi.String("Linux"),
+				StorageProfile: &hdinsight.StorageProfileArgs{
+					Storageaccounts: hdinsight.StorageAccountArray{
+						&hdinsight.StorageAccountArgs{
+							Container: pulumi.String("hdinsight-autoscale-tes-2019-06-18t05-49-16-591z"),
+							IsDefault: pulumi.Bool(true),
+							Key:       pulumi.String("storagekey"),
+							Name:      pulumi.String("mystorage.blob.core.windows.net"),
+						},
+					},
+				},
+				Tier: pulumi.String("Standard"),
+			},
 			ResourceGroupName: pulumi.String("rg1"),
 		})
 		if err != nil {
@@ -74,6 +309,105 @@ import pulumi_azure_nextgen as azure_nextgen
 
 cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
     cluster_name="cluster1",
+    properties={
+        "clusterDefinition": {
+            "componentVersion": {
+                "Hadoop": "2.7",
+            },
+            "configurations": {
+                "gateway": {
+                    "restAuthCredential.isEnabled": True,
+                    "restAuthCredential.password": "**********",
+                    "restAuthCredential.username": "admin",
+                },
+            },
+            "kind": "hadoop",
+        },
+        "clusterVersion": "3.6",
+        "computeProfile": {
+            "roles": [{
+                "autoscaleConfiguration": {
+                    "recurrence": {
+                        "schedule": [
+                            {
+                                "days": [
+                                    "Monday",
+                                    "Tuesday",
+                                    "Wednesday",
+                                    "Thursday",
+                                    "Friday",
+                                ],
+                                "timeAndCapacity": {
+                                    "maxInstanceCount": 3,
+                                    "minInstanceCount": 3,
+                                    "time": "09:00",
+                                },
+                            },
+                            {
+                                "days": [
+                                    "Monday",
+                                    "Tuesday",
+                                    "Wednesday",
+                                    "Thursday",
+                                    "Friday",
+                                ],
+                                "timeAndCapacity": {
+                                    "maxInstanceCount": 6,
+                                    "minInstanceCount": 6,
+                                    "time": "18:00",
+                                },
+                            },
+                            {
+                                "days": [
+                                    "Saturday",
+                                    "Sunday",
+                                ],
+                                "timeAndCapacity": {
+                                    "maxInstanceCount": 2,
+                                    "minInstanceCount": 2,
+                                    "time": "09:00",
+                                },
+                            },
+                            {
+                                "days": [
+                                    "Saturday",
+                                    "Sunday",
+                                ],
+                                "timeAndCapacity": {
+                                    "maxInstanceCount": 4,
+                                    "minInstanceCount": 4,
+                                    "time": "18:00",
+                                },
+                            },
+                        ],
+                        "timeZone": "China Standard Time",
+                    },
+                },
+                "hardwareProfile": {
+                    "vmSize": "Standard_D4_V2",
+                },
+                "name": "workernode",
+                "osProfile": {
+                    "linuxOperatingSystemProfile": {
+                        "password": "**********",
+                        "username": "sshuser",
+                    },
+                },
+                "scriptActions": [],
+                "targetInstanceCount": 4,
+            }],
+        },
+        "osType": "Linux",
+        "storageProfile": {
+            "storageaccounts": [{
+                "container": "hdinsight-autoscale-tes-2019-06-18t05-49-16-591z",
+                "isDefault": True,
+                "key": "storagekey",
+                "name": "mystorage.blob.core.windows.net",
+            }],
+        },
+        "tier": "Standard",
+    },
     resource_group_name="rg1")
 
 ```
@@ -88,6 +422,105 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
     clusterName: "cluster1",
+    properties: {
+        clusterDefinition: {
+            componentVersion: {
+                Hadoop: "2.7",
+            },
+            configurations: {
+                gateway: {
+                    "restAuthCredential.isEnabled": true,
+                    "restAuthCredential.password": "**********",
+                    "restAuthCredential.username": "admin",
+                },
+            },
+            kind: "hadoop",
+        },
+        clusterVersion: "3.6",
+        computeProfile: {
+            roles: [{
+                autoscaleConfiguration: {
+                    recurrence: {
+                        schedule: [
+                            {
+                                days: [
+                                    "Monday",
+                                    "Tuesday",
+                                    "Wednesday",
+                                    "Thursday",
+                                    "Friday",
+                                ],
+                                timeAndCapacity: {
+                                    maxInstanceCount: 3,
+                                    minInstanceCount: 3,
+                                    time: "09:00",
+                                },
+                            },
+                            {
+                                days: [
+                                    "Monday",
+                                    "Tuesday",
+                                    "Wednesday",
+                                    "Thursday",
+                                    "Friday",
+                                ],
+                                timeAndCapacity: {
+                                    maxInstanceCount: 6,
+                                    minInstanceCount: 6,
+                                    time: "18:00",
+                                },
+                            },
+                            {
+                                days: [
+                                    "Saturday",
+                                    "Sunday",
+                                ],
+                                timeAndCapacity: {
+                                    maxInstanceCount: 2,
+                                    minInstanceCount: 2,
+                                    time: "09:00",
+                                },
+                            },
+                            {
+                                days: [
+                                    "Saturday",
+                                    "Sunday",
+                                ],
+                                timeAndCapacity: {
+                                    maxInstanceCount: 4,
+                                    minInstanceCount: 4,
+                                    time: "18:00",
+                                },
+                            },
+                        ],
+                        timeZone: "China Standard Time",
+                    },
+                },
+                hardwareProfile: {
+                    vmSize: "Standard_D4_V2",
+                },
+                name: "workernode",
+                osProfile: {
+                    linuxOperatingSystemProfile: {
+                        password: "**********",
+                        username: "sshuser",
+                    },
+                },
+                scriptActions: [],
+                targetInstanceCount: 4,
+            }],
+        },
+        osType: "Linux",
+        storageProfile: {
+            storageaccounts: [{
+                container: "hdinsight-autoscale-tes-2019-06-18t05-49-16-591z",
+                isDefault: true,
+                key: "storagekey",
+                name: "mystorage.blob.core.windows.net",
+            }],
+        },
+        tier: "Standard",
+    },
     resourceGroupName: "rg1",
 });
 
@@ -108,6 +541,98 @@ class MyStack : Stack
         var cluster = new AzureNextGen.HDInsight.V20180601Preview.Cluster("cluster", new AzureNextGen.HDInsight.V20180601Preview.ClusterArgs
         {
             ClusterName = "cluster1",
+            Properties = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterCreatePropertiesArgs
+            {
+                ClusterDefinition = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterDefinitionArgs
+                {
+                    Configurations = 
+                    {
+                        { "gateway", 
+                        {
+                            { "restAuthCredential.isEnabled", "true" },
+                            { "restAuthCredential.password", "**********" },
+                            { "restAuthCredential.username", "admin" },
+                        } },
+                    },
+                    Kind = "Hadoop",
+                },
+                ClusterVersion = "3.6",
+                ComputeProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ComputeProfileArgs
+                {
+                    Roles = 
+                    {
+                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        {
+                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            {
+                                VmSize = "Standard_D3_V2",
+                            },
+                            MinInstanceCount = 1,
+                            Name = "headnode",
+                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            {
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                {
+                                    Password = "**********",
+                                    Username = "sshuser",
+                                },
+                            },
+                            TargetInstanceCount = 2,
+                        },
+                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        {
+                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            {
+                                VmSize = "Standard_D3_V2",
+                            },
+                            MinInstanceCount = 1,
+                            Name = "workernode",
+                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            {
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                {
+                                    Password = "**********",
+                                    Username = "sshuser",
+                                },
+                            },
+                            TargetInstanceCount = 4,
+                        },
+                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        {
+                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            {
+                                VmSize = "Small",
+                            },
+                            MinInstanceCount = 1,
+                            Name = "zookeepernode",
+                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            {
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                {
+                                    Password = "**********",
+                                    Username = "sshuser",
+                                },
+                            },
+                            TargetInstanceCount = 3,
+                        },
+                    },
+                },
+                OsType = "Linux",
+                StorageProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageProfileArgs
+                {
+                    Storageaccounts = 
+                    {
+                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageAccountArgs
+                        {
+                            FileSystem = "default",
+                            IsDefault = true,
+                            Key = "storagekey",
+                            Name = "mystorage.dfs.core.windows.net",
+                        },
+                    },
+                },
+                Tier = "Standard",
+            },
             ResourceGroupName = "rg1",
             Tags = 
             {
@@ -128,14 +653,85 @@ class MyStack : Stack
 package main
 
 import (
-	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/hdinsight/v20180601preview"
+	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hdinsight/v20180601preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := hdinsight.NewCluster(ctx, "cluster", &hdinsight.ClusterArgs{
-			ClusterName:       pulumi.String("cluster1"),
+			ClusterName: pulumi.String("cluster1"),
+			Properties: &hdinsight.ClusterCreatePropertiesArgs{
+				ClusterDefinition: &hdinsight.ClusterDefinitionArgs{
+					Configurations: pulumi.StringMapMap{
+						"gateway": pulumi.StringMap{
+							"restAuthCredential.isEnabled": pulumi.String("true"),
+							"restAuthCredential.password":  pulumi.String("**********"),
+							"restAuthCredential.username":  pulumi.String("admin"),
+						},
+					},
+					Kind: pulumi.String("Hadoop"),
+				},
+				ClusterVersion: pulumi.String("3.6"),
+				ComputeProfile: &hdinsight.ComputeProfileArgs{
+					Roles: hdinsight.RoleArray{
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Standard_D3_V2"),
+							},
+							MinInstanceCount: pulumi.Int(1),
+							Name:             pulumi.String("headnode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(2),
+						},
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Standard_D3_V2"),
+							},
+							MinInstanceCount: pulumi.Int(1),
+							Name:             pulumi.String("workernode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(4),
+						},
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Small"),
+							},
+							MinInstanceCount: pulumi.Int(1),
+							Name:             pulumi.String("zookeepernode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(3),
+						},
+					},
+				},
+				OsType: pulumi.String("Linux"),
+				StorageProfile: &hdinsight.StorageProfileArgs{
+					Storageaccounts: hdinsight.StorageAccountArray{
+						&hdinsight.StorageAccountArgs{
+							FileSystem: pulumi.String("default"),
+							IsDefault:  pulumi.Bool(true),
+							Key:        pulumi.String("storagekey"),
+							Name:       pulumi.String("mystorage.dfs.core.windows.net"),
+						},
+					},
+				},
+				Tier: pulumi.String("Standard"),
+			},
 			ResourceGroupName: pulumi.String("rg1"),
 			Tags: pulumi.StringMap{
 				"key1": pulumi.String("val1"),
@@ -160,6 +756,75 @@ import pulumi_azure_nextgen as azure_nextgen
 
 cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
     cluster_name="cluster1",
+    properties={
+        "clusterDefinition": {
+            "configurations": {
+                "gateway": {
+                    "restAuthCredential.isEnabled": "true",
+                    "restAuthCredential.password": "**********",
+                    "restAuthCredential.username": "admin",
+                },
+            },
+            "kind": "Hadoop",
+        },
+        "clusterVersion": "3.6",
+        "computeProfile": {
+            "roles": [
+                {
+                    "hardwareProfile": {
+                        "vmSize": "Standard_D3_V2",
+                    },
+                    "minInstanceCount": 1,
+                    "name": "headnode",
+                    "osProfile": {
+                        "linuxOperatingSystemProfile": {
+                            "password": "**********",
+                            "username": "sshuser",
+                        },
+                    },
+                    "targetInstanceCount": 2,
+                },
+                {
+                    "hardwareProfile": {
+                        "vmSize": "Standard_D3_V2",
+                    },
+                    "minInstanceCount": 1,
+                    "name": "workernode",
+                    "osProfile": {
+                        "linuxOperatingSystemProfile": {
+                            "password": "**********",
+                            "username": "sshuser",
+                        },
+                    },
+                    "targetInstanceCount": 4,
+                },
+                {
+                    "hardwareProfile": {
+                        "vmSize": "Small",
+                    },
+                    "minInstanceCount": 1,
+                    "name": "zookeepernode",
+                    "osProfile": {
+                        "linuxOperatingSystemProfile": {
+                            "password": "**********",
+                            "username": "sshuser",
+                        },
+                    },
+                    "targetInstanceCount": 3,
+                },
+            ],
+        },
+        "osType": "Linux",
+        "storageProfile": {
+            "storageaccounts": [{
+                "fileSystem": "default",
+                "isDefault": True,
+                "key": "storagekey",
+                "name": "mystorage.dfs.core.windows.net",
+            }],
+        },
+        "tier": "Standard",
+    },
     resource_group_name="rg1",
     tags={
         "key1": "val1",
@@ -177,6 +842,75 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
     clusterName: "cluster1",
+    properties: {
+        clusterDefinition: {
+            configurations: {
+                gateway: {
+                    "restAuthCredential.isEnabled": "true",
+                    "restAuthCredential.password": "**********",
+                    "restAuthCredential.username": "admin",
+                },
+            },
+            kind: "Hadoop",
+        },
+        clusterVersion: "3.6",
+        computeProfile: {
+            roles: [
+                {
+                    hardwareProfile: {
+                        vmSize: "Standard_D3_V2",
+                    },
+                    minInstanceCount: 1,
+                    name: "headnode",
+                    osProfile: {
+                        linuxOperatingSystemProfile: {
+                            password: "**********",
+                            username: "sshuser",
+                        },
+                    },
+                    targetInstanceCount: 2,
+                },
+                {
+                    hardwareProfile: {
+                        vmSize: "Standard_D3_V2",
+                    },
+                    minInstanceCount: 1,
+                    name: "workernode",
+                    osProfile: {
+                        linuxOperatingSystemProfile: {
+                            password: "**********",
+                            username: "sshuser",
+                        },
+                    },
+                    targetInstanceCount: 4,
+                },
+                {
+                    hardwareProfile: {
+                        vmSize: "Small",
+                    },
+                    minInstanceCount: 1,
+                    name: "zookeepernode",
+                    osProfile: {
+                        linuxOperatingSystemProfile: {
+                            password: "**********",
+                            username: "sshuser",
+                        },
+                    },
+                    targetInstanceCount: 3,
+                },
+            ],
+        },
+        osType: "Linux",
+        storageProfile: {
+            storageaccounts: [{
+                fileSystem: "default",
+                isDefault: true,
+                key: "storagekey",
+                name: "mystorage.dfs.core.windows.net",
+            }],
+        },
+        tier: "Standard",
+    },
     resourceGroupName: "rg1",
     tags: {
         key1: "val1",
@@ -200,6 +934,98 @@ class MyStack : Stack
         var cluster = new AzureNextGen.HDInsight.V20180601Preview.Cluster("cluster", new AzureNextGen.HDInsight.V20180601Preview.ClusterArgs
         {
             ClusterName = "cluster1",
+            Properties = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterCreatePropertiesArgs
+            {
+                ClusterDefinition = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterDefinitionArgs
+                {
+                    Configurations = 
+                    {
+                        { "gateway", 
+                        {
+                            { "restAuthCredential.isEnabled", "true" },
+                            { "restAuthCredential.password", "**********" },
+                            { "restAuthCredential.username", "admin" },
+                        } },
+                    },
+                    Kind = "Hadoop",
+                },
+                ClusterVersion = "3.5",
+                ComputeProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ComputeProfileArgs
+                {
+                    Roles = 
+                    {
+                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        {
+                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            {
+                                VmSize = "Standard_D3_V2",
+                            },
+                            MinInstanceCount = 1,
+                            Name = "headnode",
+                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            {
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                {
+                                    Password = "**********",
+                                    Username = "sshuser",
+                                },
+                            },
+                            TargetInstanceCount = 2,
+                        },
+                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        {
+                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            {
+                                VmSize = "Standard_D3_V2",
+                            },
+                            MinInstanceCount = 1,
+                            Name = "workernode",
+                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            {
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                {
+                                    Password = "**********",
+                                    Username = "sshuser",
+                                },
+                            },
+                            TargetInstanceCount = 4,
+                        },
+                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        {
+                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            {
+                                VmSize = "Small",
+                            },
+                            MinInstanceCount = 1,
+                            Name = "zookeepernode",
+                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            {
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                {
+                                    Password = "**********",
+                                    Username = "sshuser",
+                                },
+                            },
+                            TargetInstanceCount = 3,
+                        },
+                    },
+                },
+                OsType = "Linux",
+                StorageProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageProfileArgs
+                {
+                    Storageaccounts = 
+                    {
+                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageAccountArgs
+                        {
+                            Container = "containername",
+                            IsDefault = true,
+                            Key = "storagekey",
+                            Name = "mystorage.blob.core.windows.net",
+                        },
+                    },
+                },
+                Tier = "Standard",
+            },
             ResourceGroupName = "rg1",
             Tags = 
             {
@@ -220,14 +1046,85 @@ class MyStack : Stack
 package main
 
 import (
-	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/hdinsight/v20180601preview"
+	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hdinsight/v20180601preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := hdinsight.NewCluster(ctx, "cluster", &hdinsight.ClusterArgs{
-			ClusterName:       pulumi.String("cluster1"),
+			ClusterName: pulumi.String("cluster1"),
+			Properties: &hdinsight.ClusterCreatePropertiesArgs{
+				ClusterDefinition: &hdinsight.ClusterDefinitionArgs{
+					Configurations: pulumi.StringMapMap{
+						"gateway": pulumi.StringMap{
+							"restAuthCredential.isEnabled": pulumi.String("true"),
+							"restAuthCredential.password":  pulumi.String("**********"),
+							"restAuthCredential.username":  pulumi.String("admin"),
+						},
+					},
+					Kind: pulumi.String("Hadoop"),
+				},
+				ClusterVersion: pulumi.String("3.5"),
+				ComputeProfile: &hdinsight.ComputeProfileArgs{
+					Roles: hdinsight.RoleArray{
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Standard_D3_V2"),
+							},
+							MinInstanceCount: pulumi.Int(1),
+							Name:             pulumi.String("headnode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(2),
+						},
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Standard_D3_V2"),
+							},
+							MinInstanceCount: pulumi.Int(1),
+							Name:             pulumi.String("workernode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(4),
+						},
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Small"),
+							},
+							MinInstanceCount: pulumi.Int(1),
+							Name:             pulumi.String("zookeepernode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(3),
+						},
+					},
+				},
+				OsType: pulumi.String("Linux"),
+				StorageProfile: &hdinsight.StorageProfileArgs{
+					Storageaccounts: hdinsight.StorageAccountArray{
+						&hdinsight.StorageAccountArgs{
+							Container: pulumi.String("containername"),
+							IsDefault: pulumi.Bool(true),
+							Key:       pulumi.String("storagekey"),
+							Name:      pulumi.String("mystorage.blob.core.windows.net"),
+						},
+					},
+				},
+				Tier: pulumi.String("Standard"),
+			},
 			ResourceGroupName: pulumi.String("rg1"),
 			Tags: pulumi.StringMap{
 				"key1": pulumi.String("val1"),
@@ -252,6 +1149,75 @@ import pulumi_azure_nextgen as azure_nextgen
 
 cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
     cluster_name="cluster1",
+    properties={
+        "clusterDefinition": {
+            "configurations": {
+                "gateway": {
+                    "restAuthCredential.isEnabled": "true",
+                    "restAuthCredential.password": "**********",
+                    "restAuthCredential.username": "admin",
+                },
+            },
+            "kind": "Hadoop",
+        },
+        "clusterVersion": "3.5",
+        "computeProfile": {
+            "roles": [
+                {
+                    "hardwareProfile": {
+                        "vmSize": "Standard_D3_V2",
+                    },
+                    "minInstanceCount": 1,
+                    "name": "headnode",
+                    "osProfile": {
+                        "linuxOperatingSystemProfile": {
+                            "password": "**********",
+                            "username": "sshuser",
+                        },
+                    },
+                    "targetInstanceCount": 2,
+                },
+                {
+                    "hardwareProfile": {
+                        "vmSize": "Standard_D3_V2",
+                    },
+                    "minInstanceCount": 1,
+                    "name": "workernode",
+                    "osProfile": {
+                        "linuxOperatingSystemProfile": {
+                            "password": "**********",
+                            "username": "sshuser",
+                        },
+                    },
+                    "targetInstanceCount": 4,
+                },
+                {
+                    "hardwareProfile": {
+                        "vmSize": "Small",
+                    },
+                    "minInstanceCount": 1,
+                    "name": "zookeepernode",
+                    "osProfile": {
+                        "linuxOperatingSystemProfile": {
+                            "password": "**********",
+                            "username": "sshuser",
+                        },
+                    },
+                    "targetInstanceCount": 3,
+                },
+            ],
+        },
+        "osType": "Linux",
+        "storageProfile": {
+            "storageaccounts": [{
+                "container": "containername",
+                "isDefault": True,
+                "key": "storagekey",
+                "name": "mystorage.blob.core.windows.net",
+            }],
+        },
+        "tier": "Standard",
+    },
     resource_group_name="rg1",
     tags={
         "key1": "val1",
@@ -269,6 +1235,75 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
     clusterName: "cluster1",
+    properties: {
+        clusterDefinition: {
+            configurations: {
+                gateway: {
+                    "restAuthCredential.isEnabled": "true",
+                    "restAuthCredential.password": "**********",
+                    "restAuthCredential.username": "admin",
+                },
+            },
+            kind: "Hadoop",
+        },
+        clusterVersion: "3.5",
+        computeProfile: {
+            roles: [
+                {
+                    hardwareProfile: {
+                        vmSize: "Standard_D3_V2",
+                    },
+                    minInstanceCount: 1,
+                    name: "headnode",
+                    osProfile: {
+                        linuxOperatingSystemProfile: {
+                            password: "**********",
+                            username: "sshuser",
+                        },
+                    },
+                    targetInstanceCount: 2,
+                },
+                {
+                    hardwareProfile: {
+                        vmSize: "Standard_D3_V2",
+                    },
+                    minInstanceCount: 1,
+                    name: "workernode",
+                    osProfile: {
+                        linuxOperatingSystemProfile: {
+                            password: "**********",
+                            username: "sshuser",
+                        },
+                    },
+                    targetInstanceCount: 4,
+                },
+                {
+                    hardwareProfile: {
+                        vmSize: "Small",
+                    },
+                    minInstanceCount: 1,
+                    name: "zookeepernode",
+                    osProfile: {
+                        linuxOperatingSystemProfile: {
+                            password: "**********",
+                            username: "sshuser",
+                        },
+                    },
+                    targetInstanceCount: 3,
+                },
+            ],
+        },
+        osType: "Linux",
+        storageProfile: {
+            storageaccounts: [{
+                container: "containername",
+                isDefault: true,
+                key: "storagekey",
+                name: "mystorage.blob.core.windows.net",
+            }],
+        },
+        tier: "Standard",
+    },
     resourceGroupName: "rg1",
     tags: {
         key1: "val1",
@@ -292,6 +1327,107 @@ class MyStack : Stack
         var cluster = new AzureNextGen.HDInsight.V20180601Preview.Cluster("cluster", new AzureNextGen.HDInsight.V20180601Preview.ClusterArgs
         {
             ClusterName = "cluster1",
+            Properties = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterCreatePropertiesArgs
+            {
+                ClusterDefinition = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterDefinitionArgs
+                {
+                    Configurations = 
+                    {
+                        { "gateway", 
+                        {
+                            { "restAuthCredential.isEnabled", true },
+                            { "restAuthCredential.password", "**********" },
+                            { "restAuthCredential.username", "admin" },
+                        } },
+                    },
+                    Kind = "Hadoop",
+                },
+                ClusterVersion = "3.5",
+                ComputeProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ComputeProfileArgs
+                {
+                    Roles = 
+                    {
+                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        {
+                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            {
+                                VmSize = "Standard_D3_V2",
+                            },
+                            MinInstanceCount = 1,
+                            Name = "headnode",
+                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            {
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                {
+                                    SshProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.SshProfileArgs
+                                    {
+                                        PublicKeys = 
+                                        {
+                                            new AzureNextGen.HDInsight.V20180601Preview.Inputs.SshPublicKeyArgs
+                                            {
+                                                CertificateData = "**********",
+                                            },
+                                        },
+                                    },
+                                    Username = "sshuser",
+                                },
+                            },
+                            TargetInstanceCount = 2,
+                        },
+                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        {
+                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            {
+                                VmSize = "Standard_D3_V2",
+                            },
+                            MinInstanceCount = 1,
+                            Name = "workernode",
+                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            {
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                {
+                                    Password = "**********",
+                                    Username = "sshuser",
+                                },
+                            },
+                            TargetInstanceCount = 4,
+                        },
+                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        {
+                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            {
+                                VmSize = "Small",
+                            },
+                            MinInstanceCount = 1,
+                            Name = "zookeepernode",
+                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            {
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                {
+                                    Password = "**********",
+                                    Username = "sshuser",
+                                },
+                            },
+                            TargetInstanceCount = 3,
+                        },
+                    },
+                },
+                OsType = "Linux",
+                StorageProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageProfileArgs
+                {
+                    Storageaccounts = 
+                    {
+                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageAccountArgs
+                        {
+                            Container = "containername",
+                            IsDefault = true,
+                            Key = "storagekey",
+                            Name = "mystorage.blob.core.windows.net",
+                        },
+                    },
+                },
+                Tier = "Standard",
+            },
             ResourceGroupName = "rg1",
             Tags = 
             {
@@ -312,14 +1448,91 @@ class MyStack : Stack
 package main
 
 import (
-	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/hdinsight/v20180601preview"
+	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hdinsight/v20180601preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := hdinsight.NewCluster(ctx, "cluster", &hdinsight.ClusterArgs{
-			ClusterName:       pulumi.String("cluster1"),
+			ClusterName: pulumi.String("cluster1"),
+			Properties: &hdinsight.ClusterCreatePropertiesArgs{
+				ClusterDefinition: &hdinsight.ClusterDefinitionArgs{
+					Configurations: pulumi.MapMap{
+						"gateway": pulumi.Map{
+							"restAuthCredential.isEnabled": pulumi.Bool(true),
+							"restAuthCredential.password":  pulumi.String("**********"),
+							"restAuthCredential.username":  pulumi.String("admin"),
+						},
+					},
+					Kind: pulumi.String("Hadoop"),
+				},
+				ClusterVersion: pulumi.String("3.5"),
+				ComputeProfile: &hdinsight.ComputeProfileArgs{
+					Roles: hdinsight.RoleArray{
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Standard_D3_V2"),
+							},
+							MinInstanceCount: pulumi.Int(1),
+							Name:             pulumi.String("headnode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									SshProfile: &hdinsight.SshProfileArgs{
+										PublicKeys: hdinsight.SshPublicKeyArray{
+											&hdinsight.SshPublicKeyArgs{
+												CertificateData: pulumi.String("**********"),
+											},
+										},
+									},
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(2),
+						},
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Standard_D3_V2"),
+							},
+							MinInstanceCount: pulumi.Int(1),
+							Name:             pulumi.String("workernode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(4),
+						},
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Small"),
+							},
+							MinInstanceCount: pulumi.Int(1),
+							Name:             pulumi.String("zookeepernode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(3),
+						},
+					},
+				},
+				OsType: pulumi.String("Linux"),
+				StorageProfile: &hdinsight.StorageProfileArgs{
+					Storageaccounts: hdinsight.StorageAccountArray{
+						&hdinsight.StorageAccountArgs{
+							Container: pulumi.String("containername"),
+							IsDefault: pulumi.Bool(true),
+							Key:       pulumi.String("storagekey"),
+							Name:      pulumi.String("mystorage.blob.core.windows.net"),
+						},
+					},
+				},
+				Tier: pulumi.String("Standard"),
+			},
 			ResourceGroupName: pulumi.String("rg1"),
 			Tags: pulumi.StringMap{
 				"key1": pulumi.String("val1"),
@@ -344,6 +1557,79 @@ import pulumi_azure_nextgen as azure_nextgen
 
 cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
     cluster_name="cluster1",
+    properties={
+        "clusterDefinition": {
+            "configurations": {
+                "gateway": {
+                    "restAuthCredential.isEnabled": True,
+                    "restAuthCredential.password": "**********",
+                    "restAuthCredential.username": "admin",
+                },
+            },
+            "kind": "Hadoop",
+        },
+        "clusterVersion": "3.5",
+        "computeProfile": {
+            "roles": [
+                {
+                    "hardwareProfile": {
+                        "vmSize": "Standard_D3_V2",
+                    },
+                    "minInstanceCount": 1,
+                    "name": "headnode",
+                    "osProfile": {
+                        "linuxOperatingSystemProfile": {
+                            "sshProfile": {
+                                "publicKeys": [{
+                                    "certificateData": "**********",
+                                }],
+                            },
+                            "username": "sshuser",
+                        },
+                    },
+                    "targetInstanceCount": 2,
+                },
+                {
+                    "hardwareProfile": {
+                        "vmSize": "Standard_D3_V2",
+                    },
+                    "minInstanceCount": 1,
+                    "name": "workernode",
+                    "osProfile": {
+                        "linuxOperatingSystemProfile": {
+                            "password": "**********",
+                            "username": "sshuser",
+                        },
+                    },
+                    "targetInstanceCount": 4,
+                },
+                {
+                    "hardwareProfile": {
+                        "vmSize": "Small",
+                    },
+                    "minInstanceCount": 1,
+                    "name": "zookeepernode",
+                    "osProfile": {
+                        "linuxOperatingSystemProfile": {
+                            "password": "**********",
+                            "username": "sshuser",
+                        },
+                    },
+                    "targetInstanceCount": 3,
+                },
+            ],
+        },
+        "osType": "Linux",
+        "storageProfile": {
+            "storageaccounts": [{
+                "container": "containername",
+                "isDefault": True,
+                "key": "storagekey",
+                "name": "mystorage.blob.core.windows.net",
+            }],
+        },
+        "tier": "Standard",
+    },
     resource_group_name="rg1",
     tags={
         "key1": "val1",
@@ -361,6 +1647,79 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
     clusterName: "cluster1",
+    properties: {
+        clusterDefinition: {
+            configurations: {
+                gateway: {
+                    "restAuthCredential.isEnabled": true,
+                    "restAuthCredential.password": "**********",
+                    "restAuthCredential.username": "admin",
+                },
+            },
+            kind: "Hadoop",
+        },
+        clusterVersion: "3.5",
+        computeProfile: {
+            roles: [
+                {
+                    hardwareProfile: {
+                        vmSize: "Standard_D3_V2",
+                    },
+                    minInstanceCount: 1,
+                    name: "headnode",
+                    osProfile: {
+                        linuxOperatingSystemProfile: {
+                            sshProfile: {
+                                publicKeys: [{
+                                    certificateData: "**********",
+                                }],
+                            },
+                            username: "sshuser",
+                        },
+                    },
+                    targetInstanceCount: 2,
+                },
+                {
+                    hardwareProfile: {
+                        vmSize: "Standard_D3_V2",
+                    },
+                    minInstanceCount: 1,
+                    name: "workernode",
+                    osProfile: {
+                        linuxOperatingSystemProfile: {
+                            password: "**********",
+                            username: "sshuser",
+                        },
+                    },
+                    targetInstanceCount: 4,
+                },
+                {
+                    hardwareProfile: {
+                        vmSize: "Small",
+                    },
+                    minInstanceCount: 1,
+                    name: "zookeepernode",
+                    osProfile: {
+                        linuxOperatingSystemProfile: {
+                            password: "**********",
+                            username: "sshuser",
+                        },
+                    },
+                    targetInstanceCount: 3,
+                },
+            ],
+        },
+        osType: "Linux",
+        storageProfile: {
+            storageaccounts: [{
+                container: "containername",
+                isDefault: true,
+                key: "storagekey",
+                name: "mystorage.blob.core.windows.net",
+            }],
+        },
+        tier: "Standard",
+    },
     resourceGroupName: "rg1",
     tags: {
         key1: "val1",
@@ -384,6 +1743,131 @@ class MyStack : Stack
         var cluster = new AzureNextGen.HDInsight.V20180601Preview.Cluster("cluster", new AzureNextGen.HDInsight.V20180601Preview.ClusterArgs
         {
             ClusterName = "cluster1",
+            Properties = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterCreatePropertiesArgs
+            {
+                ClusterDefinition = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterDefinitionArgs
+                {
+                    ComponentVersion = 
+                    {
+                        { "Kafka", "2.1" },
+                    },
+                    Configurations = 
+                    {
+                        { "gateway", 
+                        {
+                            { "restAuthCredential.isEnabled", true },
+                            { "restAuthCredential.password", "**********" },
+                            { "restAuthCredential.username", "admin" },
+                        } },
+                    },
+                    Kind = "kafka",
+                },
+                ClusterVersion = "4.0",
+                ComputeProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ComputeProfileArgs
+                {
+                    Roles = 
+                    {
+                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        {
+                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            {
+                                VmSize = "Large",
+                            },
+                            Name = "headnode",
+                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            {
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                {
+                                    Password = "**********",
+                                    Username = "sshuser",
+                                },
+                            },
+                            TargetInstanceCount = 2,
+                        },
+                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        {
+                            DataDisksGroups = 
+                            {
+                                new AzureNextGen.HDInsight.V20180601Preview.Inputs.DataDisksGroupsArgs
+                                {
+                                    DisksPerNode = 8,
+                                },
+                            },
+                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            {
+                                VmSize = "Large",
+                            },
+                            Name = "workernode",
+                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            {
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                {
+                                    Password = "**********",
+                                    Username = "sshuser",
+                                },
+                            },
+                            TargetInstanceCount = 3,
+                        },
+                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        {
+                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            {
+                                VmSize = "Small",
+                            },
+                            Name = "zookeepernode",
+                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            {
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                {
+                                    Password = "**********",
+                                    Username = "sshuser",
+                                },
+                            },
+                            TargetInstanceCount = 3,
+                        },
+                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        {
+                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            {
+                                VmSize = "Standard_D4_v2",
+                            },
+                            Name = "kafkamanagementnode",
+                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            {
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                {
+                                    Password = "**********",
+                                    Username = "kafkauser",
+                                },
+                            },
+                            TargetInstanceCount = 2,
+                        },
+                    },
+                },
+                KafkaRestProperties = new AzureNextGen.HDInsight.V20180601Preview.Inputs.KafkaRestPropertiesArgs
+                {
+                    ClientGroupInfo = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClientGroupInfoArgs
+                    {
+                        GroupId = "00000000-0000-0000-0000-111111111111",
+                        GroupName = "Kafka security group name",
+                    },
+                },
+                OsType = "Linux",
+                StorageProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageProfileArgs
+                {
+                    Storageaccounts = 
+                    {
+                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageAccountArgs
+                        {
+                            Container = "containername",
+                            IsDefault = true,
+                            Key = "storagekey",
+                            Name = "mystorage.blob.core.windows.net",
+                        },
+                    },
+                },
+                Tier = "Standard",
+            },
             ResourceGroupName = "rg1",
         });
     }
@@ -400,14 +1884,109 @@ class MyStack : Stack
 package main
 
 import (
-	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/hdinsight/v20180601preview"
+	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hdinsight/v20180601preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := hdinsight.NewCluster(ctx, "cluster", &hdinsight.ClusterArgs{
-			ClusterName:       pulumi.String("cluster1"),
+			ClusterName: pulumi.String("cluster1"),
+			Properties: &hdinsight.ClusterCreatePropertiesArgs{
+				ClusterDefinition: &hdinsight.ClusterDefinitionArgs{
+					ComponentVersion: pulumi.StringMap{
+						"Kafka": pulumi.String("2.1"),
+					},
+					Configurations: pulumi.MapMap{
+						"gateway": pulumi.Map{
+							"restAuthCredential.isEnabled": pulumi.Bool(true),
+							"restAuthCredential.password":  pulumi.String("**********"),
+							"restAuthCredential.username":  pulumi.String("admin"),
+						},
+					},
+					Kind: pulumi.String("kafka"),
+				},
+				ClusterVersion: pulumi.String("4.0"),
+				ComputeProfile: &hdinsight.ComputeProfileArgs{
+					Roles: hdinsight.RoleArray{
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Large"),
+							},
+							Name: pulumi.String("headnode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(2),
+						},
+						&hdinsight.RoleArgs{
+							DataDisksGroups: hdinsight.DataDisksGroupsArray{
+								&hdinsight.DataDisksGroupsArgs{
+									DisksPerNode: pulumi.Int(8),
+								},
+							},
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Large"),
+							},
+							Name: pulumi.String("workernode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(3),
+						},
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Small"),
+							},
+							Name: pulumi.String("zookeepernode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(3),
+						},
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Standard_D4_v2"),
+							},
+							Name: pulumi.String("kafkamanagementnode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("kafkauser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(2),
+						},
+					},
+				},
+				KafkaRestProperties: &hdinsight.KafkaRestPropertiesArgs{
+					ClientGroupInfo: &hdinsight.ClientGroupInfoArgs{
+						GroupId:   pulumi.String("00000000-0000-0000-0000-111111111111"),
+						GroupName: pulumi.String("Kafka security group name"),
+					},
+				},
+				OsType: pulumi.String("Linux"),
+				StorageProfile: &hdinsight.StorageProfileArgs{
+					Storageaccounts: hdinsight.StorageAccountArray{
+						&hdinsight.StorageAccountArgs{
+							Container: pulumi.String("containername"),
+							IsDefault: pulumi.Bool(true),
+							Key:       pulumi.String("storagekey"),
+							Name:      pulumi.String("mystorage.blob.core.windows.net"),
+						},
+					},
+				},
+				Tier: pulumi.String("Standard"),
+			},
 			ResourceGroupName: pulumi.String("rg1"),
 		})
 		if err != nil {
@@ -429,6 +2008,97 @@ import pulumi_azure_nextgen as azure_nextgen
 
 cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
     cluster_name="cluster1",
+    properties={
+        "clusterDefinition": {
+            "componentVersion": {
+                "Kafka": "2.1",
+            },
+            "configurations": {
+                "gateway": {
+                    "restAuthCredential.isEnabled": True,
+                    "restAuthCredential.password": "**********",
+                    "restAuthCredential.username": "admin",
+                },
+            },
+            "kind": "kafka",
+        },
+        "clusterVersion": "4.0",
+        "computeProfile": {
+            "roles": [
+                {
+                    "hardwareProfile": {
+                        "vmSize": "Large",
+                    },
+                    "name": "headnode",
+                    "osProfile": {
+                        "linuxOperatingSystemProfile": {
+                            "password": "**********",
+                            "username": "sshuser",
+                        },
+                    },
+                    "targetInstanceCount": 2,
+                },
+                {
+                    "dataDisksGroups": [{
+                        "disksPerNode": 8,
+                    }],
+                    "hardwareProfile": {
+                        "vmSize": "Large",
+                    },
+                    "name": "workernode",
+                    "osProfile": {
+                        "linuxOperatingSystemProfile": {
+                            "password": "**********",
+                            "username": "sshuser",
+                        },
+                    },
+                    "targetInstanceCount": 3,
+                },
+                {
+                    "hardwareProfile": {
+                        "vmSize": "Small",
+                    },
+                    "name": "zookeepernode",
+                    "osProfile": {
+                        "linuxOperatingSystemProfile": {
+                            "password": "**********",
+                            "username": "sshuser",
+                        },
+                    },
+                    "targetInstanceCount": 3,
+                },
+                {
+                    "hardwareProfile": {
+                        "vmSize": "Standard_D4_v2",
+                    },
+                    "name": "kafkamanagementnode",
+                    "osProfile": {
+                        "linuxOperatingSystemProfile": {
+                            "password": "**********",
+                            "username": "kafkauser",
+                        },
+                    },
+                    "targetInstanceCount": 2,
+                },
+            ],
+        },
+        "kafkaRestProperties": {
+            "clientGroupInfo": {
+                "groupId": "00000000-0000-0000-0000-111111111111",
+                "groupName": "Kafka security group name",
+            },
+        },
+        "osType": "Linux",
+        "storageProfile": {
+            "storageaccounts": [{
+                "container": "containername",
+                "isDefault": True,
+                "key": "storagekey",
+                "name": "mystorage.blob.core.windows.net",
+            }],
+        },
+        "tier": "Standard",
+    },
     resource_group_name="rg1")
 
 ```
@@ -443,6 +2113,97 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
     clusterName: "cluster1",
+    properties: {
+        clusterDefinition: {
+            componentVersion: {
+                Kafka: "2.1",
+            },
+            configurations: {
+                gateway: {
+                    "restAuthCredential.isEnabled": true,
+                    "restAuthCredential.password": "**********",
+                    "restAuthCredential.username": "admin",
+                },
+            },
+            kind: "kafka",
+        },
+        clusterVersion: "4.0",
+        computeProfile: {
+            roles: [
+                {
+                    hardwareProfile: {
+                        vmSize: "Large",
+                    },
+                    name: "headnode",
+                    osProfile: {
+                        linuxOperatingSystemProfile: {
+                            password: "**********",
+                            username: "sshuser",
+                        },
+                    },
+                    targetInstanceCount: 2,
+                },
+                {
+                    dataDisksGroups: [{
+                        disksPerNode: 8,
+                    }],
+                    hardwareProfile: {
+                        vmSize: "Large",
+                    },
+                    name: "workernode",
+                    osProfile: {
+                        linuxOperatingSystemProfile: {
+                            password: "**********",
+                            username: "sshuser",
+                        },
+                    },
+                    targetInstanceCount: 3,
+                },
+                {
+                    hardwareProfile: {
+                        vmSize: "Small",
+                    },
+                    name: "zookeepernode",
+                    osProfile: {
+                        linuxOperatingSystemProfile: {
+                            password: "**********",
+                            username: "sshuser",
+                        },
+                    },
+                    targetInstanceCount: 3,
+                },
+                {
+                    hardwareProfile: {
+                        vmSize: "Standard_D4_v2",
+                    },
+                    name: "kafkamanagementnode",
+                    osProfile: {
+                        linuxOperatingSystemProfile: {
+                            password: "**********",
+                            username: "kafkauser",
+                        },
+                    },
+                    targetInstanceCount: 2,
+                },
+            ],
+        },
+        kafkaRestProperties: {
+            clientGroupInfo: {
+                groupId: "00000000-0000-0000-0000-111111111111",
+                groupName: "Kafka security group name",
+            },
+        },
+        osType: "Linux",
+        storageProfile: {
+            storageaccounts: [{
+                container: "containername",
+                isDefault: true,
+                key: "storagekey",
+                name: "mystorage.blob.core.windows.net",
+            }],
+        },
+        tier: "Standard",
+    },
     resourceGroupName: "rg1",
 });
 
@@ -463,6 +2224,162 @@ class MyStack : Stack
         var cluster = new AzureNextGen.HDInsight.V20180601Preview.Cluster("cluster", new AzureNextGen.HDInsight.V20180601Preview.ClusterArgs
         {
             ClusterName = "cluster1",
+            Properties = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterCreatePropertiesArgs
+            {
+                ClusterDefinition = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterDefinitionArgs
+                {
+                    Configurations = 
+                    {
+                        { "gateway", 
+                        {
+                            { "restAuthCredential.isEnabled", true },
+                            { "restAuthCredential.password", "**********" },
+                            { "restAuthCredential.username", "admin" },
+                        } },
+                    },
+                    Kind = "Hadoop",
+                },
+                ClusterVersion = "3.5",
+                ComputeProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ComputeProfileArgs
+                {
+                    Roles = 
+                    {
+                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        {
+                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            {
+                                VmSize = "Standard_D3_V2",
+                            },
+                            MinInstanceCount = 1,
+                            Name = "headnode",
+                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            {
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                {
+                                    Password = "**********",
+                                    SshProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.SshProfileArgs
+                                    {
+                                        PublicKeys = 
+                                        {
+                                            new AzureNextGen.HDInsight.V20180601Preview.Inputs.SshPublicKeyArgs
+                                            {
+                                                CertificateData = "**********",
+                                            },
+                                        },
+                                    },
+                                    Username = "sshuser",
+                                },
+                            },
+                            ScriptActions = {},
+                            TargetInstanceCount = 2,
+                            VirtualNetworkProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.VirtualNetworkProfileArgs
+                            {
+                                Id = "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname",
+                                Subnet = "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet",
+                            },
+                        },
+                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        {
+                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            {
+                                VmSize = "Standard_D3_V2",
+                            },
+                            MinInstanceCount = 1,
+                            Name = "workernode",
+                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            {
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                {
+                                    Password = "**********",
+                                    SshProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.SshProfileArgs
+                                    {
+                                        PublicKeys = 
+                                        {
+                                            new AzureNextGen.HDInsight.V20180601Preview.Inputs.SshPublicKeyArgs
+                                            {
+                                                CertificateData = "**********",
+                                            },
+                                        },
+                                    },
+                                    Username = "sshuser",
+                                },
+                            },
+                            ScriptActions = {},
+                            TargetInstanceCount = 4,
+                            VirtualNetworkProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.VirtualNetworkProfileArgs
+                            {
+                                Id = "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname",
+                                Subnet = "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet",
+                            },
+                        },
+                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        {
+                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            {
+                                VmSize = "Small",
+                            },
+                            MinInstanceCount = 1,
+                            Name = "zookeepernode",
+                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            {
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                {
+                                    Password = "**********",
+                                    SshProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.SshProfileArgs
+                                    {
+                                        PublicKeys = 
+                                        {
+                                            new AzureNextGen.HDInsight.V20180601Preview.Inputs.SshPublicKeyArgs
+                                            {
+                                                CertificateData = "**********",
+                                            },
+                                        },
+                                    },
+                                    Username = "sshuser",
+                                },
+                            },
+                            ScriptActions = {},
+                            TargetInstanceCount = 3,
+                            VirtualNetworkProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.VirtualNetworkProfileArgs
+                            {
+                                Id = "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname",
+                                Subnet = "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet",
+                            },
+                        },
+                    },
+                },
+                OsType = "Linux",
+                SecurityProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.SecurityProfileArgs
+                {
+                    ClusterUsersGroupDNs = 
+                    {
+                        "hdiusers",
+                    },
+                    DirectoryType = "ActiveDirectory",
+                    Domain = "DomainName",
+                    DomainUserPassword = "**********",
+                    DomainUsername = "DomainUsername",
+                    LdapsUrls = 
+                    {
+                        "ldaps://10.10.0.4:636",
+                    },
+                    OrganizationalUnitDN = "OU=Hadoop,DC=hdinsight,DC=test",
+                },
+                StorageProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageProfileArgs
+                {
+                    Storageaccounts = 
+                    {
+                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageAccountArgs
+                        {
+                            Container = "containername",
+                            IsDefault = true,
+                            Key = "storage account key",
+                            Name = "mystorage.blob.core.windows.net",
+                        },
+                    },
+                },
+                Tier = "Premium",
+            },
             ResourceGroupName = "rg1",
             Tags = 
             {
@@ -483,14 +2400,134 @@ class MyStack : Stack
 package main
 
 import (
-	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/hdinsight/v20180601preview"
+	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hdinsight/v20180601preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := hdinsight.NewCluster(ctx, "cluster", &hdinsight.ClusterArgs{
-			ClusterName:       pulumi.String("cluster1"),
+			ClusterName: pulumi.String("cluster1"),
+			Properties: &hdinsight.ClusterCreatePropertiesArgs{
+				ClusterDefinition: &hdinsight.ClusterDefinitionArgs{
+					Configurations: pulumi.MapMap{
+						"gateway": pulumi.Map{
+							"restAuthCredential.isEnabled": pulumi.Bool(true),
+							"restAuthCredential.password":  pulumi.String("**********"),
+							"restAuthCredential.username":  pulumi.String("admin"),
+						},
+					},
+					Kind: pulumi.String("Hadoop"),
+				},
+				ClusterVersion: pulumi.String("3.5"),
+				ComputeProfile: &hdinsight.ComputeProfileArgs{
+					Roles: hdinsight.RoleArray{
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Standard_D3_V2"),
+							},
+							MinInstanceCount: pulumi.Int(1),
+							Name:             pulumi.String("headnode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									SshProfile: &hdinsight.SshProfileArgs{
+										PublicKeys: hdinsight.SshPublicKeyArray{
+											&hdinsight.SshPublicKeyArgs{
+												CertificateData: pulumi.String("**********"),
+											},
+										},
+									},
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							ScriptActions:       hdinsight.ScriptActionArray{},
+							TargetInstanceCount: pulumi.Int(2),
+							VirtualNetworkProfile: &hdinsight.VirtualNetworkProfileArgs{
+								Id:     pulumi.String("/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname"),
+								Subnet: pulumi.String("/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet"),
+							},
+						},
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Standard_D3_V2"),
+							},
+							MinInstanceCount: pulumi.Int(1),
+							Name:             pulumi.String("workernode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									SshProfile: &hdinsight.SshProfileArgs{
+										PublicKeys: hdinsight.SshPublicKeyArray{
+											&hdinsight.SshPublicKeyArgs{
+												CertificateData: pulumi.String("**********"),
+											},
+										},
+									},
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							ScriptActions:       hdinsight.ScriptActionArray{},
+							TargetInstanceCount: pulumi.Int(4),
+							VirtualNetworkProfile: &hdinsight.VirtualNetworkProfileArgs{
+								Id:     pulumi.String("/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname"),
+								Subnet: pulumi.String("/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet"),
+							},
+						},
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Small"),
+							},
+							MinInstanceCount: pulumi.Int(1),
+							Name:             pulumi.String("zookeepernode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									SshProfile: &hdinsight.SshProfileArgs{
+										PublicKeys: hdinsight.SshPublicKeyArray{
+											&hdinsight.SshPublicKeyArgs{
+												CertificateData: pulumi.String("**********"),
+											},
+										},
+									},
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							ScriptActions:       hdinsight.ScriptActionArray{},
+							TargetInstanceCount: pulumi.Int(3),
+							VirtualNetworkProfile: &hdinsight.VirtualNetworkProfileArgs{
+								Id:     pulumi.String("/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname"),
+								Subnet: pulumi.String("/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet"),
+							},
+						},
+					},
+				},
+				OsType: pulumi.String("Linux"),
+				SecurityProfile: &hdinsight.SecurityProfileArgs{
+					ClusterUsersGroupDNs: pulumi.StringArray{
+						pulumi.String("hdiusers"),
+					},
+					DirectoryType:      pulumi.String("ActiveDirectory"),
+					Domain:             pulumi.String("DomainName"),
+					DomainUserPassword: pulumi.String("**********"),
+					DomainUsername:     pulumi.String("DomainUsername"),
+					LdapsUrls: pulumi.StringArray{
+						pulumi.String("ldaps://10.10.0.4:636"),
+					},
+					OrganizationalUnitDN: pulumi.String("OU=Hadoop,DC=hdinsight,DC=test"),
+				},
+				StorageProfile: &hdinsight.StorageProfileArgs{
+					Storageaccounts: hdinsight.StorageAccountArray{
+						&hdinsight.StorageAccountArgs{
+							Container: pulumi.String("containername"),
+							IsDefault: pulumi.Bool(true),
+							Key:       pulumi.String("storage account key"),
+							Name:      pulumi.String("mystorage.blob.core.windows.net"),
+						},
+					},
+				},
+				Tier: pulumi.String("Premium"),
+			},
 			ResourceGroupName: pulumi.String("rg1"),
 			Tags: pulumi.StringMap{
 				"key1": pulumi.String("val1"),
@@ -515,6 +2552,114 @@ import pulumi_azure_nextgen as azure_nextgen
 
 cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
     cluster_name="cluster1",
+    properties={
+        "clusterDefinition": {
+            "configurations": {
+                "gateway": {
+                    "restAuthCredential.isEnabled": True,
+                    "restAuthCredential.password": "**********",
+                    "restAuthCredential.username": "admin",
+                },
+            },
+            "kind": "Hadoop",
+        },
+        "clusterVersion": "3.5",
+        "computeProfile": {
+            "roles": [
+                {
+                    "hardwareProfile": {
+                        "vmSize": "Standard_D3_V2",
+                    },
+                    "minInstanceCount": 1,
+                    "name": "headnode",
+                    "osProfile": {
+                        "linuxOperatingSystemProfile": {
+                            "password": "**********",
+                            "sshProfile": {
+                                "publicKeys": [{
+                                    "certificateData": "**********",
+                                }],
+                            },
+                            "username": "sshuser",
+                        },
+                    },
+                    "scriptActions": [],
+                    "targetInstanceCount": 2,
+                    "virtualNetworkProfile": {
+                        "id": "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname",
+                        "subnet": "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet",
+                    },
+                },
+                {
+                    "hardwareProfile": {
+                        "vmSize": "Standard_D3_V2",
+                    },
+                    "minInstanceCount": 1,
+                    "name": "workernode",
+                    "osProfile": {
+                        "linuxOperatingSystemProfile": {
+                            "password": "**********",
+                            "sshProfile": {
+                                "publicKeys": [{
+                                    "certificateData": "**********",
+                                }],
+                            },
+                            "username": "sshuser",
+                        },
+                    },
+                    "scriptActions": [],
+                    "targetInstanceCount": 4,
+                    "virtualNetworkProfile": {
+                        "id": "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname",
+                        "subnet": "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet",
+                    },
+                },
+                {
+                    "hardwareProfile": {
+                        "vmSize": "Small",
+                    },
+                    "minInstanceCount": 1,
+                    "name": "zookeepernode",
+                    "osProfile": {
+                        "linuxOperatingSystemProfile": {
+                            "password": "**********",
+                            "sshProfile": {
+                                "publicKeys": [{
+                                    "certificateData": "**********",
+                                }],
+                            },
+                            "username": "sshuser",
+                        },
+                    },
+                    "scriptActions": [],
+                    "targetInstanceCount": 3,
+                    "virtualNetworkProfile": {
+                        "id": "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname",
+                        "subnet": "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet",
+                    },
+                },
+            ],
+        },
+        "osType": "Linux",
+        "securityProfile": {
+            "clusterUsersGroupDNs": ["hdiusers"],
+            "directoryType": "ActiveDirectory",
+            "domain": "DomainName",
+            "domainUserPassword": "**********",
+            "domainUsername": "DomainUsername",
+            "ldapsUrls": ["ldaps://10.10.0.4:636"],
+            "organizationalUnitDN": "OU=Hadoop,DC=hdinsight,DC=test",
+        },
+        "storageProfile": {
+            "storageaccounts": [{
+                "container": "containername",
+                "isDefault": True,
+                "key": "storage account key",
+                "name": "mystorage.blob.core.windows.net",
+            }],
+        },
+        "tier": "Premium",
+    },
     resource_group_name="rg1",
     tags={
         "key1": "val1",
@@ -532,6 +2677,114 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
     clusterName: "cluster1",
+    properties: {
+        clusterDefinition: {
+            configurations: {
+                gateway: {
+                    "restAuthCredential.isEnabled": true,
+                    "restAuthCredential.password": "**********",
+                    "restAuthCredential.username": "admin",
+                },
+            },
+            kind: "Hadoop",
+        },
+        clusterVersion: "3.5",
+        computeProfile: {
+            roles: [
+                {
+                    hardwareProfile: {
+                        vmSize: "Standard_D3_V2",
+                    },
+                    minInstanceCount: 1,
+                    name: "headnode",
+                    osProfile: {
+                        linuxOperatingSystemProfile: {
+                            password: "**********",
+                            sshProfile: {
+                                publicKeys: [{
+                                    certificateData: "**********",
+                                }],
+                            },
+                            username: "sshuser",
+                        },
+                    },
+                    scriptActions: [],
+                    targetInstanceCount: 2,
+                    virtualNetworkProfile: {
+                        id: "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname",
+                        subnet: "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet",
+                    },
+                },
+                {
+                    hardwareProfile: {
+                        vmSize: "Standard_D3_V2",
+                    },
+                    minInstanceCount: 1,
+                    name: "workernode",
+                    osProfile: {
+                        linuxOperatingSystemProfile: {
+                            password: "**********",
+                            sshProfile: {
+                                publicKeys: [{
+                                    certificateData: "**********",
+                                }],
+                            },
+                            username: "sshuser",
+                        },
+                    },
+                    scriptActions: [],
+                    targetInstanceCount: 4,
+                    virtualNetworkProfile: {
+                        id: "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname",
+                        subnet: "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet",
+                    },
+                },
+                {
+                    hardwareProfile: {
+                        vmSize: "Small",
+                    },
+                    minInstanceCount: 1,
+                    name: "zookeepernode",
+                    osProfile: {
+                        linuxOperatingSystemProfile: {
+                            password: "**********",
+                            sshProfile: {
+                                publicKeys: [{
+                                    certificateData: "**********",
+                                }],
+                            },
+                            username: "sshuser",
+                        },
+                    },
+                    scriptActions: [],
+                    targetInstanceCount: 3,
+                    virtualNetworkProfile: {
+                        id: "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname",
+                        subnet: "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet",
+                    },
+                },
+            ],
+        },
+        osType: "Linux",
+        securityProfile: {
+            clusterUsersGroupDNs: ["hdiusers"],
+            directoryType: "ActiveDirectory",
+            domain: "DomainName",
+            domainUserPassword: "**********",
+            domainUsername: "DomainUsername",
+            ldapsUrls: ["ldaps://10.10.0.4:636"],
+            organizationalUnitDN: "OU=Hadoop,DC=hdinsight,DC=test",
+        },
+        storageProfile: {
+            storageaccounts: [{
+                container: "containername",
+                isDefault: true,
+                key: "storage account key",
+                name: "mystorage.blob.core.windows.net",
+            }],
+        },
+        tier: "Premium",
+    },
     resourceGroupName: "rg1",
     tags: {
         key1: "val1",
@@ -555,6 +2808,84 @@ class MyStack : Stack
         var cluster = new AzureNextGen.HDInsight.V20180601Preview.Cluster("cluster", new AzureNextGen.HDInsight.V20180601Preview.ClusterArgs
         {
             ClusterName = "cluster1",
+            Properties = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterCreatePropertiesArgs
+            {
+                ClusterDefinition = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterDefinitionArgs
+                {
+                    ComponentVersion = 
+                    {
+                        { "Spark", "2.0" },
+                    },
+                    Configurations = 
+                    {
+                        { "gateway", 
+                        {
+                            { "restAuthCredential.isEnabled", true },
+                            { "restAuthCredential.password", "**********" },
+                            { "restAuthCredential.username", "admin" },
+                        } },
+                    },
+                    Kind = "Spark",
+                },
+                ClusterVersion = "3.5",
+                ComputeProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ComputeProfileArgs
+                {
+                    Roles = 
+                    {
+                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        {
+                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            {
+                                VmSize = "Standard_D12_V2",
+                            },
+                            MinInstanceCount = 1,
+                            Name = "headnode",
+                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            {
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                {
+                                    Password = "**********",
+                                    Username = "sshuser",
+                                },
+                            },
+                            TargetInstanceCount = 2,
+                        },
+                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        {
+                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            {
+                                VmSize = "Standard_D4_V2",
+                            },
+                            MinInstanceCount = 1,
+                            Name = "workernode",
+                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            {
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                {
+                                    Password = "**********",
+                                    Username = "sshuser",
+                                },
+                            },
+                            TargetInstanceCount = 4,
+                        },
+                    },
+                },
+                OsType = "Linux",
+                StorageProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageProfileArgs
+                {
+                    Storageaccounts = 
+                    {
+                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageAccountArgs
+                        {
+                            Container = "containername",
+                            IsDefault = true,
+                            Key = "storageapikey*",
+                            Name = "mystorage.blob.core.windows.net",
+                        },
+                    },
+                },
+                Tier = "Standard",
+            },
             ResourceGroupName = "rg1",
             Tags = 
             {
@@ -575,14 +2906,74 @@ class MyStack : Stack
 package main
 
 import (
-	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/hdinsight/v20180601preview"
+	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hdinsight/v20180601preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := hdinsight.NewCluster(ctx, "cluster", &hdinsight.ClusterArgs{
-			ClusterName:       pulumi.String("cluster1"),
+			ClusterName: pulumi.String("cluster1"),
+			Properties: &hdinsight.ClusterCreatePropertiesArgs{
+				ClusterDefinition: &hdinsight.ClusterDefinitionArgs{
+					ComponentVersion: pulumi.StringMap{
+						"Spark": pulumi.String("2.0"),
+					},
+					Configurations: pulumi.MapMap{
+						"gateway": pulumi.Map{
+							"restAuthCredential.isEnabled": pulumi.Bool(true),
+							"restAuthCredential.password":  pulumi.String("**********"),
+							"restAuthCredential.username":  pulumi.String("admin"),
+						},
+					},
+					Kind: pulumi.String("Spark"),
+				},
+				ClusterVersion: pulumi.String("3.5"),
+				ComputeProfile: &hdinsight.ComputeProfileArgs{
+					Roles: hdinsight.RoleArray{
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Standard_D12_V2"),
+							},
+							MinInstanceCount: pulumi.Int(1),
+							Name:             pulumi.String("headnode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(2),
+						},
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Standard_D4_V2"),
+							},
+							MinInstanceCount: pulumi.Int(1),
+							Name:             pulumi.String("workernode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(4),
+						},
+					},
+				},
+				OsType: pulumi.String("Linux"),
+				StorageProfile: &hdinsight.StorageProfileArgs{
+					Storageaccounts: hdinsight.StorageAccountArray{
+						&hdinsight.StorageAccountArgs{
+							Container: pulumi.String("containername"),
+							IsDefault: pulumi.Bool(true),
+							Key:       pulumi.String("storageapikey*"),
+							Name:      pulumi.String("mystorage.blob.core.windows.net"),
+						},
+					},
+				},
+				Tier: pulumi.String("Standard"),
+			},
 			ResourceGroupName: pulumi.String("rg1"),
 			Tags: pulumi.StringMap{
 				"key1": pulumi.String("val1"),
@@ -607,6 +2998,64 @@ import pulumi_azure_nextgen as azure_nextgen
 
 cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
     cluster_name="cluster1",
+    properties={
+        "clusterDefinition": {
+            "componentVersion": {
+                "Spark": "2.0",
+            },
+            "configurations": {
+                "gateway": {
+                    "restAuthCredential.isEnabled": True,
+                    "restAuthCredential.password": "**********",
+                    "restAuthCredential.username": "admin",
+                },
+            },
+            "kind": "Spark",
+        },
+        "clusterVersion": "3.5",
+        "computeProfile": {
+            "roles": [
+                {
+                    "hardwareProfile": {
+                        "vmSize": "Standard_D12_V2",
+                    },
+                    "minInstanceCount": 1,
+                    "name": "headnode",
+                    "osProfile": {
+                        "linuxOperatingSystemProfile": {
+                            "password": "**********",
+                            "username": "sshuser",
+                        },
+                    },
+                    "targetInstanceCount": 2,
+                },
+                {
+                    "hardwareProfile": {
+                        "vmSize": "Standard_D4_V2",
+                    },
+                    "minInstanceCount": 1,
+                    "name": "workernode",
+                    "osProfile": {
+                        "linuxOperatingSystemProfile": {
+                            "password": "**********",
+                            "username": "sshuser",
+                        },
+                    },
+                    "targetInstanceCount": 4,
+                },
+            ],
+        },
+        "osType": "Linux",
+        "storageProfile": {
+            "storageaccounts": [{
+                "container": "containername",
+                "isDefault": True,
+                "key": "storageapikey*",
+                "name": "mystorage.blob.core.windows.net",
+            }],
+        },
+        "tier": "Standard",
+    },
     resource_group_name="rg1",
     tags={
         "key1": "val1",
@@ -624,6 +3073,64 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
     clusterName: "cluster1",
+    properties: {
+        clusterDefinition: {
+            componentVersion: {
+                Spark: "2.0",
+            },
+            configurations: {
+                gateway: {
+                    "restAuthCredential.isEnabled": true,
+                    "restAuthCredential.password": "**********",
+                    "restAuthCredential.username": "admin",
+                },
+            },
+            kind: "Spark",
+        },
+        clusterVersion: "3.5",
+        computeProfile: {
+            roles: [
+                {
+                    hardwareProfile: {
+                        vmSize: "Standard_D12_V2",
+                    },
+                    minInstanceCount: 1,
+                    name: "headnode",
+                    osProfile: {
+                        linuxOperatingSystemProfile: {
+                            password: "**********",
+                            username: "sshuser",
+                        },
+                    },
+                    targetInstanceCount: 2,
+                },
+                {
+                    hardwareProfile: {
+                        vmSize: "Standard_D4_V2",
+                    },
+                    minInstanceCount: 1,
+                    name: "workernode",
+                    osProfile: {
+                        linuxOperatingSystemProfile: {
+                            password: "**********",
+                            username: "sshuser",
+                        },
+                    },
+                    targetInstanceCount: 4,
+                },
+            ],
+        },
+        osType: "Linux",
+        storageProfile: {
+            storageaccounts: [{
+                container: "containername",
+                isDefault: true,
+                key: "storageapikey*",
+                name: "mystorage.blob.core.windows.net",
+            }],
+        },
+        tier: "Standard",
+    },
     resourceGroupName: "rg1",
     tags: {
         key1: "val1",
@@ -647,6 +3154,96 @@ class MyStack : Stack
         var cluster = new AzureNextGen.HDInsight.V20180601Preview.Cluster("cluster", new AzureNextGen.HDInsight.V20180601Preview.ClusterArgs
         {
             ClusterName = "cluster1",
+            Properties = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterCreatePropertiesArgs
+            {
+                ClusterDefinition = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterDefinitionArgs
+                {
+                    Configurations = 
+                    {
+                        { "gateway", 
+                        {
+                            { "restAuthCredential.isEnabled", true },
+                            { "restAuthCredential.password", "**********" },
+                            { "restAuthCredential.username", "admin" },
+                        } },
+                    },
+                    Kind = "Hadoop",
+                },
+                ClusterVersion = "3.6",
+                ComputeProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ComputeProfileArgs
+                {
+                    Roles = 
+                    {
+                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        {
+                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            {
+                                VmSize = "Large",
+                            },
+                            Name = "headnode",
+                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            {
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                {
+                                    Password = "**********",
+                                    Username = "sshuser",
+                                },
+                            },
+                            TargetInstanceCount = 2,
+                        },
+                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        {
+                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            {
+                                VmSize = "Large",
+                            },
+                            Name = "workernode",
+                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            {
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                {
+                                    Password = "**********",
+                                    Username = "sshuser",
+                                },
+                            },
+                            TargetInstanceCount = 3,
+                        },
+                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        {
+                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            {
+                                VmSize = "Small",
+                            },
+                            Name = "zookeepernode",
+                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            {
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                {
+                                    Password = "**********",
+                                    Username = "sshuser",
+                                },
+                            },
+                            TargetInstanceCount = 3,
+                        },
+                    },
+                },
+                MinSupportedTlsVersion = "1.2",
+                OsType = "Linux",
+                StorageProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageProfileArgs
+                {
+                    Storageaccounts = 
+                    {
+                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageAccountArgs
+                        {
+                            Container = "default8525",
+                            IsDefault = true,
+                            Key = "storagekey",
+                            Name = "mystorage.blob.core.windows.net",
+                        },
+                    },
+                },
+                Tier = "Standard",
+            },
             ResourceGroupName = "rg1",
         });
     }
@@ -663,14 +3260,83 @@ class MyStack : Stack
 package main
 
 import (
-	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/hdinsight/v20180601preview"
+	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hdinsight/v20180601preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := hdinsight.NewCluster(ctx, "cluster", &hdinsight.ClusterArgs{
-			ClusterName:       pulumi.String("cluster1"),
+			ClusterName: pulumi.String("cluster1"),
+			Properties: &hdinsight.ClusterCreatePropertiesArgs{
+				ClusterDefinition: &hdinsight.ClusterDefinitionArgs{
+					Configurations: pulumi.MapMap{
+						"gateway": pulumi.Map{
+							"restAuthCredential.isEnabled": pulumi.Bool(true),
+							"restAuthCredential.password":  pulumi.String("**********"),
+							"restAuthCredential.username":  pulumi.String("admin"),
+						},
+					},
+					Kind: pulumi.String("Hadoop"),
+				},
+				ClusterVersion: pulumi.String("3.6"),
+				ComputeProfile: &hdinsight.ComputeProfileArgs{
+					Roles: hdinsight.RoleArray{
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Large"),
+							},
+							Name: pulumi.String("headnode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(2),
+						},
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Large"),
+							},
+							Name: pulumi.String("workernode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(3),
+						},
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Small"),
+							},
+							Name: pulumi.String("zookeepernode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(3),
+						},
+					},
+				},
+				MinSupportedTlsVersion: pulumi.String("1.2"),
+				OsType:                 pulumi.String("Linux"),
+				StorageProfile: &hdinsight.StorageProfileArgs{
+					Storageaccounts: hdinsight.StorageAccountArray{
+						&hdinsight.StorageAccountArgs{
+							Container: pulumi.String("default8525"),
+							IsDefault: pulumi.Bool(true),
+							Key:       pulumi.String("storagekey"),
+							Name:      pulumi.String("mystorage.blob.core.windows.net"),
+						},
+					},
+				},
+				Tier: pulumi.String("Standard"),
+			},
 			ResourceGroupName: pulumi.String("rg1"),
 		})
 		if err != nil {
@@ -692,6 +3358,73 @@ import pulumi_azure_nextgen as azure_nextgen
 
 cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
     cluster_name="cluster1",
+    properties={
+        "clusterDefinition": {
+            "configurations": {
+                "gateway": {
+                    "restAuthCredential.isEnabled": True,
+                    "restAuthCredential.password": "**********",
+                    "restAuthCredential.username": "admin",
+                },
+            },
+            "kind": "Hadoop",
+        },
+        "clusterVersion": "3.6",
+        "computeProfile": {
+            "roles": [
+                {
+                    "hardwareProfile": {
+                        "vmSize": "Large",
+                    },
+                    "name": "headnode",
+                    "osProfile": {
+                        "linuxOperatingSystemProfile": {
+                            "password": "**********",
+                            "username": "sshuser",
+                        },
+                    },
+                    "targetInstanceCount": 2,
+                },
+                {
+                    "hardwareProfile": {
+                        "vmSize": "Large",
+                    },
+                    "name": "workernode",
+                    "osProfile": {
+                        "linuxOperatingSystemProfile": {
+                            "password": "**********",
+                            "username": "sshuser",
+                        },
+                    },
+                    "targetInstanceCount": 3,
+                },
+                {
+                    "hardwareProfile": {
+                        "vmSize": "Small",
+                    },
+                    "name": "zookeepernode",
+                    "osProfile": {
+                        "linuxOperatingSystemProfile": {
+                            "password": "**********",
+                            "username": "sshuser",
+                        },
+                    },
+                    "targetInstanceCount": 3,
+                },
+            ],
+        },
+        "minSupportedTlsVersion": "1.2",
+        "osType": "Linux",
+        "storageProfile": {
+            "storageaccounts": [{
+                "container": "default8525",
+                "isDefault": True,
+                "key": "storagekey",
+                "name": "mystorage.blob.core.windows.net",
+            }],
+        },
+        "tier": "Standard",
+    },
     resource_group_name="rg1")
 
 ```
@@ -706,6 +3439,73 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
     clusterName: "cluster1",
+    properties: {
+        clusterDefinition: {
+            configurations: {
+                gateway: {
+                    "restAuthCredential.isEnabled": true,
+                    "restAuthCredential.password": "**********",
+                    "restAuthCredential.username": "admin",
+                },
+            },
+            kind: "Hadoop",
+        },
+        clusterVersion: "3.6",
+        computeProfile: {
+            roles: [
+                {
+                    hardwareProfile: {
+                        vmSize: "Large",
+                    },
+                    name: "headnode",
+                    osProfile: {
+                        linuxOperatingSystemProfile: {
+                            password: "**********",
+                            username: "sshuser",
+                        },
+                    },
+                    targetInstanceCount: 2,
+                },
+                {
+                    hardwareProfile: {
+                        vmSize: "Large",
+                    },
+                    name: "workernode",
+                    osProfile: {
+                        linuxOperatingSystemProfile: {
+                            password: "**********",
+                            username: "sshuser",
+                        },
+                    },
+                    targetInstanceCount: 3,
+                },
+                {
+                    hardwareProfile: {
+                        vmSize: "Small",
+                    },
+                    name: "zookeepernode",
+                    osProfile: {
+                        linuxOperatingSystemProfile: {
+                            password: "**********",
+                            username: "sshuser",
+                        },
+                    },
+                    targetInstanceCount: 3,
+                },
+            ],
+        },
+        minSupportedTlsVersion: "1.2",
+        osType: "Linux",
+        storageProfile: {
+            storageaccounts: [{
+                container: "default8525",
+                isDefault: true,
+                key: "storagekey",
+                name: "mystorage.blob.core.windows.net",
+            }],
+        },
+        tier: "Standard",
+    },
     resourceGroupName: "rg1",
 });
 
@@ -726,6 +3526,112 @@ class MyStack : Stack
         var cluster = new AzureNextGen.HDInsight.V20180601Preview.Cluster("cluster", new AzureNextGen.HDInsight.V20180601Preview.ClusterArgs
         {
             ClusterName = "cluster1",
+            Properties = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterCreatePropertiesArgs
+            {
+                ClusterDefinition = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterDefinitionArgs
+                {
+                    Configurations = 
+                    {
+                        { "gateway", 
+                        {
+                            { "restAuthCredential.isEnabled", true },
+                            { "restAuthCredential.password", "**********" },
+                            { "restAuthCredential.username", "admin" },
+                        } },
+                    },
+                    Kind = "hadoop",
+                },
+                ClusterVersion = "3.6",
+                ComputeProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ComputeProfileArgs
+                {
+                    Roles = 
+                    {
+                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        {
+                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            {
+                                VmSize = "standard_d3",
+                            },
+                            Name = "headnode",
+                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            {
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                {
+                                    Password = "**********",
+                                    SshProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.SshProfileArgs
+                                    {
+                                        PublicKeys = 
+                                        {
+                                            new AzureNextGen.HDInsight.V20180601Preview.Inputs.SshPublicKeyArgs
+                                            {
+                                                CertificateData = "**********",
+                                            },
+                                        },
+                                    },
+                                    Username = "sshuser",
+                                },
+                            },
+                            TargetInstanceCount = 2,
+                            VirtualNetworkProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.VirtualNetworkProfileArgs
+                            {
+                                Id = "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname",
+                                Subnet = "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet",
+                            },
+                        },
+                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        {
+                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            {
+                                VmSize = "standard_d3",
+                            },
+                            Name = "workernode",
+                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            {
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                {
+                                    Password = "**********",
+                                    SshProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.SshProfileArgs
+                                    {
+                                        PublicKeys = 
+                                        {
+                                            new AzureNextGen.HDInsight.V20180601Preview.Inputs.SshPublicKeyArgs
+                                            {
+                                                CertificateData = "**********",
+                                            },
+                                        },
+                                    },
+                                    Username = "sshuser",
+                                },
+                            },
+                            TargetInstanceCount = 2,
+                            VirtualNetworkProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.VirtualNetworkProfileArgs
+                            {
+                                Id = "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname",
+                                Subnet = "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet",
+                            },
+                        },
+                    },
+                },
+                NetworkSettings = new AzureNextGen.HDInsight.V20180601Preview.Inputs.NetworkSettingsArgs
+                {
+                    OutboundOnlyPublicNetworkAccessType = "PublicLoadBalancer",
+                    PublicNetworkAccess = "OutboundOnly",
+                },
+                OsType = "Linux",
+                StorageProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageProfileArgs
+                {
+                    Storageaccounts = 
+                    {
+                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageAccountArgs
+                        {
+                            Container = "containername",
+                            IsDefault = true,
+                            Key = "storage account key",
+                            Name = "mystorage",
+                        },
+                    },
+                },
+            },
             ResourceGroupName = "rg1",
         });
     }
@@ -742,14 +3648,94 @@ class MyStack : Stack
 package main
 
 import (
-	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/hdinsight/v20180601preview"
+	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hdinsight/v20180601preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := hdinsight.NewCluster(ctx, "cluster", &hdinsight.ClusterArgs{
-			ClusterName:       pulumi.String("cluster1"),
+			ClusterName: pulumi.String("cluster1"),
+			Properties: &hdinsight.ClusterCreatePropertiesArgs{
+				ClusterDefinition: &hdinsight.ClusterDefinitionArgs{
+					Configurations: pulumi.MapMap{
+						"gateway": pulumi.Map{
+							"restAuthCredential.isEnabled": pulumi.Bool(true),
+							"restAuthCredential.password":  pulumi.String("**********"),
+							"restAuthCredential.username":  pulumi.String("admin"),
+						},
+					},
+					Kind: pulumi.String("hadoop"),
+				},
+				ClusterVersion: pulumi.String("3.6"),
+				ComputeProfile: &hdinsight.ComputeProfileArgs{
+					Roles: hdinsight.RoleArray{
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("standard_d3"),
+							},
+							Name: pulumi.String("headnode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									SshProfile: &hdinsight.SshProfileArgs{
+										PublicKeys: hdinsight.SshPublicKeyArray{
+											&hdinsight.SshPublicKeyArgs{
+												CertificateData: pulumi.String("**********"),
+											},
+										},
+									},
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(2),
+							VirtualNetworkProfile: &hdinsight.VirtualNetworkProfileArgs{
+								Id:     pulumi.String("/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname"),
+								Subnet: pulumi.String("/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet"),
+							},
+						},
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("standard_d3"),
+							},
+							Name: pulumi.String("workernode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									SshProfile: &hdinsight.SshProfileArgs{
+										PublicKeys: hdinsight.SshPublicKeyArray{
+											&hdinsight.SshPublicKeyArgs{
+												CertificateData: pulumi.String("**********"),
+											},
+										},
+									},
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(2),
+							VirtualNetworkProfile: &hdinsight.VirtualNetworkProfileArgs{
+								Id:     pulumi.String("/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname"),
+								Subnet: pulumi.String("/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet"),
+							},
+						},
+					},
+				},
+				NetworkSettings: &hdinsight.NetworkSettingsArgs{
+					OutboundOnlyPublicNetworkAccessType: pulumi.String("PublicLoadBalancer"),
+					PublicNetworkAccess:                 pulumi.String("OutboundOnly"),
+				},
+				OsType: pulumi.String("Linux"),
+				StorageProfile: &hdinsight.StorageProfileArgs{
+					Storageaccounts: hdinsight.StorageAccountArray{
+						&hdinsight.StorageAccountArgs{
+							Container: pulumi.String("containername"),
+							IsDefault: pulumi.Bool(true),
+							Key:       pulumi.String("storage account key"),
+							Name:      pulumi.String("mystorage"),
+						},
+					},
+				},
+			},
 			ResourceGroupName: pulumi.String("rg1"),
 		})
 		if err != nil {
@@ -771,6 +3757,80 @@ import pulumi_azure_nextgen as azure_nextgen
 
 cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
     cluster_name="cluster1",
+    properties={
+        "clusterDefinition": {
+            "configurations": {
+                "gateway": {
+                    "restAuthCredential.isEnabled": True,
+                    "restAuthCredential.password": "**********",
+                    "restAuthCredential.username": "admin",
+                },
+            },
+            "kind": "hadoop",
+        },
+        "clusterVersion": "3.6",
+        "computeProfile": {
+            "roles": [
+                {
+                    "hardwareProfile": {
+                        "vmSize": "standard_d3",
+                    },
+                    "name": "headnode",
+                    "osProfile": {
+                        "linuxOperatingSystemProfile": {
+                            "password": "**********",
+                            "sshProfile": {
+                                "publicKeys": [{
+                                    "certificateData": "**********",
+                                }],
+                            },
+                            "username": "sshuser",
+                        },
+                    },
+                    "targetInstanceCount": 2,
+                    "virtualNetworkProfile": {
+                        "id": "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname",
+                        "subnet": "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet",
+                    },
+                },
+                {
+                    "hardwareProfile": {
+                        "vmSize": "standard_d3",
+                    },
+                    "name": "workernode",
+                    "osProfile": {
+                        "linuxOperatingSystemProfile": {
+                            "password": "**********",
+                            "sshProfile": {
+                                "publicKeys": [{
+                                    "certificateData": "**********",
+                                }],
+                            },
+                            "username": "sshuser",
+                        },
+                    },
+                    "targetInstanceCount": 2,
+                    "virtualNetworkProfile": {
+                        "id": "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname",
+                        "subnet": "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet",
+                    },
+                },
+            ],
+        },
+        "networkSettings": {
+            "outboundOnlyPublicNetworkAccessType": "PublicLoadBalancer",
+            "publicNetworkAccess": "OutboundOnly",
+        },
+        "osType": "Linux",
+        "storageProfile": {
+            "storageaccounts": [{
+                "container": "containername",
+                "isDefault": True,
+                "key": "storage account key",
+                "name": "mystorage",
+            }],
+        },
+    },
     resource_group_name="rg1")
 
 ```
@@ -785,6 +3845,80 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
     clusterName: "cluster1",
+    properties: {
+        clusterDefinition: {
+            configurations: {
+                gateway: {
+                    "restAuthCredential.isEnabled": true,
+                    "restAuthCredential.password": "**********",
+                    "restAuthCredential.username": "admin",
+                },
+            },
+            kind: "hadoop",
+        },
+        clusterVersion: "3.6",
+        computeProfile: {
+            roles: [
+                {
+                    hardwareProfile: {
+                        vmSize: "standard_d3",
+                    },
+                    name: "headnode",
+                    osProfile: {
+                        linuxOperatingSystemProfile: {
+                            password: "**********",
+                            sshProfile: {
+                                publicKeys: [{
+                                    certificateData: "**********",
+                                }],
+                            },
+                            username: "sshuser",
+                        },
+                    },
+                    targetInstanceCount: 2,
+                    virtualNetworkProfile: {
+                        id: "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname",
+                        subnet: "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet",
+                    },
+                },
+                {
+                    hardwareProfile: {
+                        vmSize: "standard_d3",
+                    },
+                    name: "workernode",
+                    osProfile: {
+                        linuxOperatingSystemProfile: {
+                            password: "**********",
+                            sshProfile: {
+                                publicKeys: [{
+                                    certificateData: "**********",
+                                }],
+                            },
+                            username: "sshuser",
+                        },
+                    },
+                    targetInstanceCount: 2,
+                    virtualNetworkProfile: {
+                        id: "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname",
+                        subnet: "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet",
+                    },
+                },
+            ],
+        },
+        networkSettings: {
+            outboundOnlyPublicNetworkAccessType: "PublicLoadBalancer",
+            publicNetworkAccess: "OutboundOnly",
+        },
+        osType: "Linux",
+        storageProfile: {
+            storageaccounts: [{
+                container: "containername",
+                isDefault: true,
+                key: "storage account key",
+                name: "mystorage",
+            }],
+        },
+    },
     resourceGroupName: "rg1",
 });
 
@@ -805,6 +3939,99 @@ class MyStack : Stack
         var cluster = new AzureNextGen.HDInsight.V20180601Preview.Cluster("cluster", new AzureNextGen.HDInsight.V20180601Preview.ClusterArgs
         {
             ClusterName = "cluster1",
+            Properties = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterCreatePropertiesArgs
+            {
+                ClusterDefinition = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterDefinitionArgs
+                {
+                    Configurations = 
+                    {
+                        { "gateway", 
+                        {
+                            { "restAuthCredential.isEnabled", true },
+                            { "restAuthCredential.password", "**********" },
+                            { "restAuthCredential.username", "admin" },
+                        } },
+                    },
+                    Kind = "Hadoop",
+                },
+                ClusterVersion = "3.6",
+                ComputeProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ComputeProfileArgs
+                {
+                    Roles = 
+                    {
+                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        {
+                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            {
+                                VmSize = "Standard_DS14_v2",
+                            },
+                            Name = "headnode",
+                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            {
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                {
+                                    Password = "**********",
+                                    Username = "sshuser",
+                                },
+                            },
+                            TargetInstanceCount = 2,
+                        },
+                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        {
+                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            {
+                                VmSize = "Standard_DS14_v2",
+                            },
+                            Name = "workernode",
+                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            {
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                {
+                                    Password = "**********",
+                                    Username = "sshuser",
+                                },
+                            },
+                            TargetInstanceCount = 3,
+                        },
+                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        {
+                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            {
+                                VmSize = "Standard_DS14_v2",
+                            },
+                            Name = "zookeepernode",
+                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            {
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                {
+                                    Password = "**********",
+                                    Username = "sshuser",
+                                },
+                            },
+                            TargetInstanceCount = 3,
+                        },
+                    },
+                },
+                DiskEncryptionProperties = new AzureNextGen.HDInsight.V20180601Preview.Inputs.DiskEncryptionPropertiesArgs
+                {
+                    EncryptionAtHost = true,
+                },
+                OsType = "Linux",
+                StorageProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageProfileArgs
+                {
+                    Storageaccounts = 
+                    {
+                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageAccountArgs
+                        {
+                            Container = "default8525",
+                            IsDefault = true,
+                            Key = "storagekey",
+                            Name = "mystorage.blob.core.windows.net",
+                        },
+                    },
+                },
+                Tier = "Standard",
+            },
             ResourceGroupName = "rg1",
         });
     }
@@ -821,14 +4048,85 @@ class MyStack : Stack
 package main
 
 import (
-	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/hdinsight/v20180601preview"
+	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hdinsight/v20180601preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := hdinsight.NewCluster(ctx, "cluster", &hdinsight.ClusterArgs{
-			ClusterName:       pulumi.String("cluster1"),
+			ClusterName: pulumi.String("cluster1"),
+			Properties: &hdinsight.ClusterCreatePropertiesArgs{
+				ClusterDefinition: &hdinsight.ClusterDefinitionArgs{
+					Configurations: pulumi.MapMap{
+						"gateway": pulumi.Map{
+							"restAuthCredential.isEnabled": pulumi.Bool(true),
+							"restAuthCredential.password":  pulumi.String("**********"),
+							"restAuthCredential.username":  pulumi.String("admin"),
+						},
+					},
+					Kind: pulumi.String("Hadoop"),
+				},
+				ClusterVersion: pulumi.String("3.6"),
+				ComputeProfile: &hdinsight.ComputeProfileArgs{
+					Roles: hdinsight.RoleArray{
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Standard_DS14_v2"),
+							},
+							Name: pulumi.String("headnode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(2),
+						},
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Standard_DS14_v2"),
+							},
+							Name: pulumi.String("workernode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(3),
+						},
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Standard_DS14_v2"),
+							},
+							Name: pulumi.String("zookeepernode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(3),
+						},
+					},
+				},
+				DiskEncryptionProperties: &hdinsight.DiskEncryptionPropertiesArgs{
+					EncryptionAtHost: pulumi.Bool(true),
+				},
+				OsType: pulumi.String("Linux"),
+				StorageProfile: &hdinsight.StorageProfileArgs{
+					Storageaccounts: hdinsight.StorageAccountArray{
+						&hdinsight.StorageAccountArgs{
+							Container: pulumi.String("default8525"),
+							IsDefault: pulumi.Bool(true),
+							Key:       pulumi.String("storagekey"),
+							Name:      pulumi.String("mystorage.blob.core.windows.net"),
+						},
+					},
+				},
+				Tier: pulumi.String("Standard"),
+			},
 			ResourceGroupName: pulumi.String("rg1"),
 		})
 		if err != nil {
@@ -850,6 +4148,75 @@ import pulumi_azure_nextgen as azure_nextgen
 
 cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
     cluster_name="cluster1",
+    properties={
+        "clusterDefinition": {
+            "configurations": {
+                "gateway": {
+                    "restAuthCredential.isEnabled": True,
+                    "restAuthCredential.password": "**********",
+                    "restAuthCredential.username": "admin",
+                },
+            },
+            "kind": "Hadoop",
+        },
+        "clusterVersion": "3.6",
+        "computeProfile": {
+            "roles": [
+                {
+                    "hardwareProfile": {
+                        "vmSize": "Standard_DS14_v2",
+                    },
+                    "name": "headnode",
+                    "osProfile": {
+                        "linuxOperatingSystemProfile": {
+                            "password": "**********",
+                            "username": "sshuser",
+                        },
+                    },
+                    "targetInstanceCount": 2,
+                },
+                {
+                    "hardwareProfile": {
+                        "vmSize": "Standard_DS14_v2",
+                    },
+                    "name": "workernode",
+                    "osProfile": {
+                        "linuxOperatingSystemProfile": {
+                            "password": "**********",
+                            "username": "sshuser",
+                        },
+                    },
+                    "targetInstanceCount": 3,
+                },
+                {
+                    "hardwareProfile": {
+                        "vmSize": "Standard_DS14_v2",
+                    },
+                    "name": "zookeepernode",
+                    "osProfile": {
+                        "linuxOperatingSystemProfile": {
+                            "password": "**********",
+                            "username": "sshuser",
+                        },
+                    },
+                    "targetInstanceCount": 3,
+                },
+            ],
+        },
+        "diskEncryptionProperties": {
+            "encryptionAtHost": True,
+        },
+        "osType": "Linux",
+        "storageProfile": {
+            "storageaccounts": [{
+                "container": "default8525",
+                "isDefault": True,
+                "key": "storagekey",
+                "name": "mystorage.blob.core.windows.net",
+            }],
+        },
+        "tier": "Standard",
+    },
     resource_group_name="rg1")
 
 ```
@@ -864,6 +4231,75 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
     clusterName: "cluster1",
+    properties: {
+        clusterDefinition: {
+            configurations: {
+                gateway: {
+                    "restAuthCredential.isEnabled": true,
+                    "restAuthCredential.password": "**********",
+                    "restAuthCredential.username": "admin",
+                },
+            },
+            kind: "Hadoop",
+        },
+        clusterVersion: "3.6",
+        computeProfile: {
+            roles: [
+                {
+                    hardwareProfile: {
+                        vmSize: "Standard_DS14_v2",
+                    },
+                    name: "headnode",
+                    osProfile: {
+                        linuxOperatingSystemProfile: {
+                            password: "**********",
+                            username: "sshuser",
+                        },
+                    },
+                    targetInstanceCount: 2,
+                },
+                {
+                    hardwareProfile: {
+                        vmSize: "Standard_DS14_v2",
+                    },
+                    name: "workernode",
+                    osProfile: {
+                        linuxOperatingSystemProfile: {
+                            password: "**********",
+                            username: "sshuser",
+                        },
+                    },
+                    targetInstanceCount: 3,
+                },
+                {
+                    hardwareProfile: {
+                        vmSize: "Standard_DS14_v2",
+                    },
+                    name: "zookeepernode",
+                    osProfile: {
+                        linuxOperatingSystemProfile: {
+                            password: "**********",
+                            username: "sshuser",
+                        },
+                    },
+                    targetInstanceCount: 3,
+                },
+            ],
+        },
+        diskEncryptionProperties: {
+            encryptionAtHost: true,
+        },
+        osType: "Linux",
+        storageProfile: {
+            storageaccounts: [{
+                container: "default8525",
+                isDefault: true,
+                key: "storagekey",
+                name: "mystorage.blob.core.windows.net",
+            }],
+        },
+        tier: "Standard",
+    },
     resourceGroupName: "rg1",
 });
 
@@ -884,6 +4320,99 @@ class MyStack : Stack
         var cluster = new AzureNextGen.HDInsight.V20180601Preview.Cluster("cluster", new AzureNextGen.HDInsight.V20180601Preview.ClusterArgs
         {
             ClusterName = "cluster1",
+            Properties = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterCreatePropertiesArgs
+            {
+                ClusterDefinition = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ClusterDefinitionArgs
+                {
+                    Configurations = 
+                    {
+                        { "gateway", 
+                        {
+                            { "restAuthCredential.isEnabled", true },
+                            { "restAuthCredential.password", "**********" },
+                            { "restAuthCredential.username", "admin" },
+                        } },
+                    },
+                    Kind = "Hadoop",
+                },
+                ClusterVersion = "3.6",
+                ComputeProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ComputeProfileArgs
+                {
+                    Roles = 
+                    {
+                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        {
+                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            {
+                                VmSize = "Large",
+                            },
+                            Name = "headnode",
+                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            {
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                {
+                                    Password = "**********",
+                                    Username = "sshuser",
+                                },
+                            },
+                            TargetInstanceCount = 2,
+                        },
+                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        {
+                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            {
+                                VmSize = "Large",
+                            },
+                            Name = "workernode",
+                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            {
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                {
+                                    Password = "**********",
+                                    Username = "sshuser",
+                                },
+                            },
+                            TargetInstanceCount = 3,
+                        },
+                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        {
+                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            {
+                                VmSize = "Small",
+                            },
+                            Name = "zookeepernode",
+                            OsProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.OsProfileArgs
+                            {
+                                LinuxOperatingSystemProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.LinuxOperatingSystemProfileArgs
+                                {
+                                    Password = "**********",
+                                    Username = "sshuser",
+                                },
+                            },
+                            TargetInstanceCount = 3,
+                        },
+                    },
+                },
+                EncryptionInTransitProperties = new AzureNextGen.HDInsight.V20180601Preview.Inputs.EncryptionInTransitPropertiesArgs
+                {
+                    IsEncryptionInTransitEnabled = true,
+                },
+                OsType = "Linux",
+                StorageProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageProfileArgs
+                {
+                    Storageaccounts = 
+                    {
+                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.StorageAccountArgs
+                        {
+                            Container = "default8525",
+                            IsDefault = true,
+                            Key = "storagekey",
+                            Name = "mystorage.blob.core.windows.net",
+                        },
+                    },
+                },
+                Tier = "Standard",
+            },
             ResourceGroupName = "rg1",
         });
     }
@@ -900,14 +4429,85 @@ class MyStack : Stack
 package main
 
 import (
-	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/hdinsight/v20180601preview"
+	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hdinsight/v20180601preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := hdinsight.NewCluster(ctx, "cluster", &hdinsight.ClusterArgs{
-			ClusterName:       pulumi.String("cluster1"),
+			ClusterName: pulumi.String("cluster1"),
+			Properties: &hdinsight.ClusterCreatePropertiesArgs{
+				ClusterDefinition: &hdinsight.ClusterDefinitionArgs{
+					Configurations: pulumi.MapMap{
+						"gateway": pulumi.Map{
+							"restAuthCredential.isEnabled": pulumi.Bool(true),
+							"restAuthCredential.password":  pulumi.String("**********"),
+							"restAuthCredential.username":  pulumi.String("admin"),
+						},
+					},
+					Kind: pulumi.String("Hadoop"),
+				},
+				ClusterVersion: pulumi.String("3.6"),
+				ComputeProfile: &hdinsight.ComputeProfileArgs{
+					Roles: hdinsight.RoleArray{
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Large"),
+							},
+							Name: pulumi.String("headnode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(2),
+						},
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Large"),
+							},
+							Name: pulumi.String("workernode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(3),
+						},
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Small"),
+							},
+							Name: pulumi.String("zookeepernode"),
+							OsProfile: &hdinsight.OsProfileArgs{
+								LinuxOperatingSystemProfile: &hdinsight.LinuxOperatingSystemProfileArgs{
+									Password: pulumi.String("**********"),
+									Username: pulumi.String("sshuser"),
+								},
+							},
+							TargetInstanceCount: pulumi.Int(3),
+						},
+					},
+				},
+				EncryptionInTransitProperties: &hdinsight.EncryptionInTransitPropertiesArgs{
+					IsEncryptionInTransitEnabled: pulumi.Bool(true),
+				},
+				OsType: pulumi.String("Linux"),
+				StorageProfile: &hdinsight.StorageProfileArgs{
+					Storageaccounts: hdinsight.StorageAccountArray{
+						&hdinsight.StorageAccountArgs{
+							Container: pulumi.String("default8525"),
+							IsDefault: pulumi.Bool(true),
+							Key:       pulumi.String("storagekey"),
+							Name:      pulumi.String("mystorage.blob.core.windows.net"),
+						},
+					},
+				},
+				Tier: pulumi.String("Standard"),
+			},
 			ResourceGroupName: pulumi.String("rg1"),
 		})
 		if err != nil {
@@ -929,6 +4529,75 @@ import pulumi_azure_nextgen as azure_nextgen
 
 cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
     cluster_name="cluster1",
+    properties={
+        "clusterDefinition": {
+            "configurations": {
+                "gateway": {
+                    "restAuthCredential.isEnabled": True,
+                    "restAuthCredential.password": "**********",
+                    "restAuthCredential.username": "admin",
+                },
+            },
+            "kind": "Hadoop",
+        },
+        "clusterVersion": "3.6",
+        "computeProfile": {
+            "roles": [
+                {
+                    "hardwareProfile": {
+                        "vmSize": "Large",
+                    },
+                    "name": "headnode",
+                    "osProfile": {
+                        "linuxOperatingSystemProfile": {
+                            "password": "**********",
+                            "username": "sshuser",
+                        },
+                    },
+                    "targetInstanceCount": 2,
+                },
+                {
+                    "hardwareProfile": {
+                        "vmSize": "Large",
+                    },
+                    "name": "workernode",
+                    "osProfile": {
+                        "linuxOperatingSystemProfile": {
+                            "password": "**********",
+                            "username": "sshuser",
+                        },
+                    },
+                    "targetInstanceCount": 3,
+                },
+                {
+                    "hardwareProfile": {
+                        "vmSize": "Small",
+                    },
+                    "name": "zookeepernode",
+                    "osProfile": {
+                        "linuxOperatingSystemProfile": {
+                            "password": "**********",
+                            "username": "sshuser",
+                        },
+                    },
+                    "targetInstanceCount": 3,
+                },
+            ],
+        },
+        "encryptionInTransitProperties": {
+            "isEncryptionInTransitEnabled": True,
+        },
+        "osType": "Linux",
+        "storageProfile": {
+            "storageaccounts": [{
+                "container": "default8525",
+                "isDefault": True,
+                "key": "storagekey",
+                "name": "mystorage.blob.core.windows.net",
+            }],
+        },
+        "tier": "Standard",
+    },
     resource_group_name="rg1")
 
 ```
@@ -943,6 +4612,75 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
     clusterName: "cluster1",
+    properties: {
+        clusterDefinition: {
+            configurations: {
+                gateway: {
+                    "restAuthCredential.isEnabled": true,
+                    "restAuthCredential.password": "**********",
+                    "restAuthCredential.username": "admin",
+                },
+            },
+            kind: "Hadoop",
+        },
+        clusterVersion: "3.6",
+        computeProfile: {
+            roles: [
+                {
+                    hardwareProfile: {
+                        vmSize: "Large",
+                    },
+                    name: "headnode",
+                    osProfile: {
+                        linuxOperatingSystemProfile: {
+                            password: "**********",
+                            username: "sshuser",
+                        },
+                    },
+                    targetInstanceCount: 2,
+                },
+                {
+                    hardwareProfile: {
+                        vmSize: "Large",
+                    },
+                    name: "workernode",
+                    osProfile: {
+                        linuxOperatingSystemProfile: {
+                            password: "**********",
+                            username: "sshuser",
+                        },
+                    },
+                    targetInstanceCount: 3,
+                },
+                {
+                    hardwareProfile: {
+                        vmSize: "Small",
+                    },
+                    name: "zookeepernode",
+                    osProfile: {
+                        linuxOperatingSystemProfile: {
+                            password: "**********",
+                            username: "sshuser",
+                        },
+                    },
+                    targetInstanceCount: 3,
+                },
+            ],
+        },
+        encryptionInTransitProperties: {
+            isEncryptionInTransitEnabled: true,
+        },
+        osType: "Linux",
+        storageProfile: {
+            storageaccounts: [{
+                container: "default8525",
+                isDefault: true,
+                key: "storagekey",
+                name: "mystorage.blob.core.windows.net",
+            }],
+        },
+        tier: "Standard",
+    },
     resourceGroupName: "rg1",
 });
 
@@ -3674,7 +7412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configurations_csharp" style="color: inherit; text-decoration: inherit;">Configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}The cluster configurations.{{% /md %}}</dd>
 
@@ -3721,7 +7459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configurations_go" style="color: inherit; text-decoration: inherit;">Configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}The cluster configurations.{{% /md %}}</dd>
 
@@ -3768,7 +7506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configurations_nodejs" style="color: inherit; text-decoration: inherit;">configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}The cluster configurations.{{% /md %}}</dd>
 
@@ -3815,7 +7553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configurations_python" style="color: inherit; text-decoration: inherit;">configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}The cluster configurations.{{% /md %}}</dd>
 
@@ -3873,7 +7611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configurations_csharp" style="color: inherit; text-decoration: inherit;">Configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}The cluster configurations.{{% /md %}}</dd>
 
@@ -3920,7 +7658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configurations_go" style="color: inherit; text-decoration: inherit;">Configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}The cluster configurations.{{% /md %}}</dd>
 
@@ -3967,7 +7705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configurations_nodejs" style="color: inherit; text-decoration: inherit;">configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}The cluster configurations.{{% /md %}}</dd>
 
@@ -4014,7 +7752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configurations_python" style="color: inherit; text-decoration: inherit;">configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}The cluster configurations.{{% /md %}}</dd>
 

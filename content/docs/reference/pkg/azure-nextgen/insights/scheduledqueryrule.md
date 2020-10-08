@@ -36,7 +36,7 @@ class MyStack : Stack
                     CustomWebhookPayload = "{}",
                     EmailSubject = "Email Header",
                 } },
-                { "odata.type", "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction" },
+                { "odataType", "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction" },
                 { "severity", "1" },
                 { "trigger", new AzureNextGen.Insights.Latest.Inputs.TriggerConditionArgs
                 {
@@ -94,7 +94,7 @@ scheduled_query_rule = azure_nextgen.insights.latest.ScheduledQueryRule("schedul
             "customWebhookPayload": "{}",
             "emailSubject": "Email Header",
         },
-        "odata.type": "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction",
+        "odataType": "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction",
         "severity": "1",
         "trigger": {
             "metricTrigger": {
@@ -140,7 +140,7 @@ const scheduledQueryRule = new azure_nextgen.insights.latest.ScheduledQueryRule(
             customWebhookPayload: "{}",
             emailSubject: "Email Header",
         },
-        "odata.type": "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction",
+        odataType: "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction",
         severity: "1",
         trigger: {
             metricTrigger: {
@@ -196,7 +196,7 @@ class MyStack : Stack
                     },
                     EmailSubject = "Cross Resource Mail!!",
                 } },
-                { "odata.type", "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction" },
+                { "odataType", "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction" },
                 { "severity", "3" },
                 { "trigger", new AzureNextGen.Insights.Latest.Inputs.TriggerConditionArgs
                 {
@@ -251,7 +251,7 @@ scheduled_query_rule = azure_nextgen.insights.latest.ScheduledQueryRule("schedul
             "actionGroup": ["/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/actiongroups/test-ag"],
             "emailSubject": "Cross Resource Mail!!",
         },
-        "odata.type": "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction",
+        "odataType": "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction",
         "severity": "3",
         "trigger": {
             "threshold": 5000,
@@ -294,7 +294,7 @@ const scheduledQueryRule = new azure_nextgen.insights.latest.ScheduledQueryRule(
             actionGroup: ["/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/actiongroups/test-ag"],
             emailSubject: "Cross Resource Mail!!",
         },
-        "odata.type": "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction",
+        odataType: "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction",
         severity: "3",
         trigger: {
             threshold: 5000,
@@ -348,7 +348,7 @@ class MyStack : Stack
                         MetricName = "Average_% Idle Time",
                     },
                 } },
-                { "odata.type", "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction" },
+                { "odataType", "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction" },
             },
             Description = "log to metric description",
             Enabled = "true",
@@ -385,7 +385,7 @@ scheduled_query_rule = azure_nextgen.insights.latest.ScheduledQueryRule("schedul
             "dimensions": [],
             "metricName": "Average_% Idle Time",
         }],
-        "odata.type": "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction",
+        "odataType": "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction",
     },
     description="log to metric description",
     enabled="true",
@@ -413,7 +413,7 @@ const scheduledQueryRule = new azure_nextgen.insights.latest.ScheduledQueryRule(
             dimensions: [],
             metricName: `Average_% Idle Time`,
         }],
-        "odata.type": "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction",
+        odataType: "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction",
     },
     description: "log to metric description",
     enabled: "true",

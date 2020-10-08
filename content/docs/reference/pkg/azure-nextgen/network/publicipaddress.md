@@ -12,6 +12,298 @@ meta_desc: "Explore the PublicIPAddress resource of the network module, includin
 
 Public IP address resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create public IP address DNS
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var publicIPAddress = new AzureNextGen.Network.Latest.PublicIPAddress("publicIPAddress", new AzureNextGen.Network.Latest.PublicIPAddressArgs
+        {
+            DnsSettings = new AzureNextGen.Network.Latest.Inputs.PublicIPAddressDnsSettingsArgs
+            {
+                DomainNameLabel = "dnslbl",
+            },
+            Location = "eastus",
+            PublicIpAddressName = "test-ip",
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewPublicIPAddress(ctx, "publicIPAddress", &network.PublicIPAddressArgs{
+			DnsSettings: &network.PublicIPAddressDnsSettingsArgs{
+				DomainNameLabel: pulumi.String("dnslbl"),
+			},
+			Location:            pulumi.String("eastus"),
+			PublicIpAddressName: pulumi.String("test-ip"),
+			ResourceGroupName:   pulumi.String("rg1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+public_ip_address = azure_nextgen.network.latest.PublicIPAddress("publicIPAddress",
+    dns_settings={
+        "domainNameLabel": "dnslbl",
+    },
+    location="eastus",
+    public_ip_address_name="test-ip",
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const publicIPAddress = new azure_nextgen.network.latest.PublicIPAddress("publicIPAddress", {
+    dnsSettings: {
+        domainNameLabel: "dnslbl",
+    },
+    location: "eastus",
+    publicIpAddressName: "test-ip",
+    resourceGroupName: "rg1",
+});
+
+```
+
+{{% /example %}}
+
+### Create public IP address allocation method
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var publicIPAddress = new AzureNextGen.Network.Latest.PublicIPAddress("publicIPAddress", new AzureNextGen.Network.Latest.PublicIPAddressArgs
+        {
+            IdleTimeoutInMinutes = 10,
+            Location = "eastus",
+            PublicIPAddressVersion = "IPv4",
+            PublicIPAllocationMethod = "Static",
+            PublicIpAddressName = "test-ip",
+            ResourceGroupName = "rg1",
+            Sku = new AzureNextGen.Network.Latest.Inputs.PublicIPAddressSkuArgs
+            {
+                Name = "Standard",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewPublicIPAddress(ctx, "publicIPAddress", &network.PublicIPAddressArgs{
+			IdleTimeoutInMinutes:     pulumi.Int(10),
+			Location:                 pulumi.String("eastus"),
+			PublicIPAddressVersion:   pulumi.String("IPv4"),
+			PublicIPAllocationMethod: pulumi.String("Static"),
+			PublicIpAddressName:      pulumi.String("test-ip"),
+			ResourceGroupName:        pulumi.String("rg1"),
+			Sku: &network.PublicIPAddressSkuArgs{
+				Name: pulumi.String("Standard"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+public_ip_address = azure_nextgen.network.latest.PublicIPAddress("publicIPAddress",
+    idle_timeout_in_minutes=10,
+    location="eastus",
+    public_ip_address_version="IPv4",
+    public_ip_allocation_method="Static",
+    public_ip_address_name="test-ip",
+    resource_group_name="rg1",
+    sku={
+        "name": "Standard",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const publicIPAddress = new azure_nextgen.network.latest.PublicIPAddress("publicIPAddress", {
+    idleTimeoutInMinutes: 10,
+    location: "eastus",
+    publicIPAddressVersion: "IPv4",
+    publicIPAllocationMethod: "Static",
+    publicIpAddressName: "test-ip",
+    resourceGroupName: "rg1",
+    sku: {
+        name: "Standard",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Create public IP address defaults
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var publicIPAddress = new AzureNextGen.Network.Latest.PublicIPAddress("publicIPAddress", new AzureNextGen.Network.Latest.PublicIPAddressArgs
+        {
+            Location = "eastus",
+            PublicIpAddressName = "test-ip",
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewPublicIPAddress(ctx, "publicIPAddress", &network.PublicIPAddressArgs{
+			Location:            pulumi.String("eastus"),
+			PublicIpAddressName: pulumi.String("test-ip"),
+			ResourceGroupName:   pulumi.String("rg1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+public_ip_address = azure_nextgen.network.latest.PublicIPAddress("publicIPAddress",
+    location="eastus",
+    public_ip_address_name="test-ip",
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const publicIPAddress = new azure_nextgen.network.latest.PublicIPAddress("publicIPAddress", {
+    location: "eastus",
+    publicIpAddressName: "test-ip",
+    resourceGroupName: "rg1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PublicIPAddress Resource {#create}
@@ -14649,7 +14941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -14666,7 +14958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -14683,7 +14975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -14700,7 +14992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
