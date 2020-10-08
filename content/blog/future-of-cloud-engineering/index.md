@@ -1,7 +1,7 @@
 ---
-title: "Cloud Engineering Summit Keynote: The Future of Cloud Engineering"
+title: "The Past, Present, and Future of Cloud Engineering"
 date: 2020-10-08
-meta_desc: "Cloud Engineering Summit Keynote: The Future of Cloud Engineering"
+meta_desc: "Learn about the past, present, and future of Cloud Engineering, with the Cloud Engineering Summit keynote."
 meta_image: cloud_engineering.png
 authors:
     - joe-duffy
@@ -35,7 +35,7 @@ Cloud engineering takes the best practices from DevOps and extends them. There i
 
 And at the same time, infrastructure experts, capabilities, and teams are key to enabling innovation more than ever before. During the cloud era, infrastructure became _programmable software_, which allows us to apply all the software engineering practices we know and love to infrastructure, including testing, refactoring, security, continuous delivery, and agile.
 
-More cloud infrastructure capabilities have moved into application land, while at the same time more application development practices have moved into infrastructure land. What this means is that the whole team is collaborating more closely than ever before. Everyone is empowered to bring their unique skillsets to the table to enable moving faster and deliver amazing software capabilities, regardless of title &mdash; developer, DevOps, systems engineer, infrastructure architect, security engineer, etc. This is the modern cloud engineering organization. 
+More cloud infrastructure capabilities have moved into application land, while at the same time more application development practices have moved into infrastructure land. What this means is that the whole team is collaborating more closely than ever before. Everyone is empowered to bring their unique skillsets to the table to enable moving faster and deliver amazing software capabilities, regardless of title &mdash; developer, DevOps, systems engineer, infrastructure architect, security engineer, etc. This is the modern cloud engineering organization.
 
 ### Cloud Engineering Architectures
 
