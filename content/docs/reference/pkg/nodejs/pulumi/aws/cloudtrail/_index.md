@@ -3,7 +3,7 @@ title: "Module cloudtrail"
 title_tag: "Module cloudtrail | Package @pulumi/aws | Node.js SDK"
 linktitle: "cloudtrail"
 meta_desc: "Explore members of the cloudtrail module in the @pulumi/aws package."
-git_sha: "ddc4d5623c8bb2e25428f11ab0de487b17795614"
+git_sha: "356019d7fa51942d84b18c9fa5df67dfe857ffe3"
 block_external_search_index: true
 ---
 
@@ -36,7 +36,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Trail" data-link-title="Trail">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L136">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L136">
         Resource <strong>Trail</strong>
     </a>
 </h3>
@@ -170,7 +170,7 @@ const exampleTrail = new aws.cloudtrail.Trail("example", {
 ```
 
 <h4 class="pdoc-member-header" id="Trail-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L239"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L239"> <b>constructor</b></a>
 </h4>
 
 
@@ -184,7 +184,7 @@ Create a Trail resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Trail-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L146">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L146">method <b>get</b></a>
 </h4>
 
 
@@ -195,14 +195,14 @@ Get an existing Trail resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Trail-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L136">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L136">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Trail-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L157">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L157">method <b>isInstance</b></a>
 </h4>
 
 
@@ -213,7 +213,7 @@ Returns true if the given object is an instance of Trail.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Trail-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L167">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L167">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -221,7 +221,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Amazon Resource Name of the trail.
 
 <h4 class="pdoc-member-header" id="Trail-cloudWatchLogsGroupArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L172">property <b>cloudWatchLogsGroupArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L172">property <b>cloudWatchLogsGroupArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cloudWatchLogsGroupArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -230,7 +230,7 @@ Specifies a log group name using an Amazon Resource Name (ARN),
 that represents the log group to which CloudTrail logs will be delivered. Note that CloudTrail requires the Log Stream wildcard.
 
 <h4 class="pdoc-member-header" id="Trail-cloudWatchLogsRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L177">property <b>cloudWatchLogsRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L177">property <b>cloudWatchLogsRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cloudWatchLogsRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -239,7 +239,7 @@ Specifies the role for the CloudWatch Logs
 endpoint to assume to write to a user’s log group.
 
 <h4 class="pdoc-member-header" id="Trail-enableLogFileValidation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L182">property <b>enableLogFileValidation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L182">property <b>enableLogFileValidation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enableLogFileValidation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -248,7 +248,7 @@ Specifies whether log file integrity validation is enabled.
 Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="Trail-enableLogging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L187">property <b>enableLogging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L187">property <b>enableLogging</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enableLogging: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -257,7 +257,7 @@ Enables logging for the trail. Defaults to `true`.
 Setting this to `false` will pause logging.
 
 <h4 class="pdoc-member-header" id="Trail-eventSelectors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L191">property <b>eventSelectors</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L191">property <b>eventSelectors</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eventSelectors: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TrailEventSelector'>TrailEventSelector</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -265,7 +265,7 @@ Setting this to `false` will pause logging.
 Specifies an event selector for enabling data event logging. Fields documented below. Please note the [CloudTrail limits](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html) when configuring these.
 
 <h4 class="pdoc-member-header" id="Trail-homeRegion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L195">property <b>homeRegion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L195">property <b>homeRegion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>homeRegion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -273,7 +273,7 @@ Specifies an event selector for enabling data event logging. Fields documented b
 The region in which the trail was created.
 
 <h4 class="pdoc-member-header" id="Trail-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L136">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L136">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -282,7 +282,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Trail-includeGlobalServiceEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L200">property <b>includeGlobalServiceEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L200">property <b>includeGlobalServiceEvents</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>includeGlobalServiceEvents: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -291,7 +291,7 @@ Specifies whether the trail is publishing events
 from global services such as IAM to the log files. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="Trail-insightSelectors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L204">property <b>insightSelectors</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L204">property <b>insightSelectors</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>insightSelectors: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TrailInsightSelector'>TrailInsightSelector</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -299,7 +299,7 @@ from global services such as IAM to the log files. Defaults to `true`.
 Specifies an insight selector for identifying unusual operational activity. Fields documented below.
 
 <h4 class="pdoc-member-header" id="Trail-isMultiRegionTrail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L209">property <b>isMultiRegionTrail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L209">property <b>isMultiRegionTrail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>isMultiRegionTrail: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -308,7 +308,7 @@ Specifies whether the trail is created in the current
 region or in all regions. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="Trail-isOrganizationTrail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L213">property <b>isOrganizationTrail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L213">property <b>isOrganizationTrail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>isOrganizationTrail: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -316,7 +316,7 @@ region or in all regions. Defaults to `false`.
 Specifies whether the trail is an AWS Organizations trail. Organization trails log events for the master account and all member accounts. Can only be created in the organization master account. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="Trail-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L217">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L217">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kmsKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -324,7 +324,7 @@ Specifies whether the trail is an AWS Organizations trail. Organization trails l
 Specifies the KMS key ARN to use to encrypt the logs delivered by CloudTrail.
 
 <h4 class="pdoc-member-header" id="Trail-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L221">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L221">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -332,7 +332,7 @@ Specifies the KMS key ARN to use to encrypt the logs delivered by CloudTrail.
 Specifies the name of the trail.
 
 <h4 class="pdoc-member-header" id="Trail-s3BucketName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L225">property <b>s3BucketName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L225">property <b>s3BucketName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>s3BucketName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -340,7 +340,7 @@ Specifies the name of the trail.
 Specifies the name of the S3 bucket designated for publishing log files.
 
 <h4 class="pdoc-member-header" id="Trail-s3KeyPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L230">property <b>s3KeyPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L230">property <b>s3KeyPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>s3KeyPrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -349,7 +349,7 @@ Specifies the S3 key prefix that follows
 the name of the bucket you have designated for log file delivery.
 
 <h4 class="pdoc-member-header" id="Trail-snsTopicName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L235">property <b>snsTopicName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L235">property <b>snsTopicName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>snsTopicName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -358,7 +358,7 @@ Specifies the name of the Amazon SNS topic
 defined for notification of log file delivery.
 
 <h4 class="pdoc-member-header" id="Trail-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L239">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L239">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -366,7 +366,7 @@ defined for notification of log file delivery.
 A map of tags to assign to the trail
 
 <h4 class="pdoc-member-header" id="Trail-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L136">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L136">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -377,7 +377,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getServiceAccount" data-link-title="getServiceAccount">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/getServiceAccount.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/getServiceAccount.ts#L49">
         Function <strong>getServiceAccount</strong>
     </a>
 </h3>
@@ -428,7 +428,7 @@ const bucket = new aws.s3.Bucket("bucket", {
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetServiceAccountArgs" data-link-title="GetServiceAccountArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/getServiceAccount.ts#L66">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/getServiceAccount.ts#L66">
         interface <strong>GetServiceAccountArgs</strong>
     </a>
 </h3>
@@ -438,7 +438,7 @@ const bucket = new aws.s3.Bucket("bucket", {
 A collection of arguments for invoking getServiceAccount.
 
 <h4 class="pdoc-member-header" id="GetServiceAccountArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/getServiceAccount.ts#L71">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/getServiceAccount.ts#L71">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -447,7 +447,7 @@ Name of the region whose AWS CloudTrail account ID is desired.
 Defaults to the region from the AWS provider configuration.
 
 <h3 class="pdoc-module-header" id="GetServiceAccountResult" data-link-title="GetServiceAccountResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/getServiceAccount.ts#L77">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/getServiceAccount.ts#L77">
         interface <strong>GetServiceAccountResult</strong>
     </a>
 </h3>
@@ -457,7 +457,7 @@ Defaults to the region from the AWS provider configuration.
 A collection of values returned by getServiceAccount.
 
 <h4 class="pdoc-member-header" id="GetServiceAccountResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/getServiceAccount.ts#L81">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/getServiceAccount.ts#L81">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -465,7 +465,7 @@ A collection of values returned by getServiceAccount.
 The ARN of the AWS CloudTrail service account in the selected region.
 
 <h4 class="pdoc-member-header" id="GetServiceAccountResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/getServiceAccount.ts#L85">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/getServiceAccount.ts#L85">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -473,12 +473,12 @@ The ARN of the AWS CloudTrail service account in the selected region.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetServiceAccountResult-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/getServiceAccount.ts#L86">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/getServiceAccount.ts#L86">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="TrailArgs" data-link-title="TrailArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L389">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L389">
         interface <strong>TrailArgs</strong>
     </a>
 </h3>
@@ -488,7 +488,7 @@ The provider-assigned unique ID for this managed resource.
 The set of arguments for constructing a Trail resource.
 
 <h4 class="pdoc-member-header" id="TrailArgs-cloudWatchLogsGroupArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L394">property <b>cloudWatchLogsGroupArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L394">property <b>cloudWatchLogsGroupArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cloudWatchLogsGroupArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -497,7 +497,7 @@ Specifies a log group name using an Amazon Resource Name (ARN),
 that represents the log group to which CloudTrail logs will be delivered. Note that CloudTrail requires the Log Stream wildcard.
 
 <h4 class="pdoc-member-header" id="TrailArgs-cloudWatchLogsRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L399">property <b>cloudWatchLogsRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L399">property <b>cloudWatchLogsRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cloudWatchLogsRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -506,7 +506,7 @@ Specifies the role for the CloudWatch Logs
 endpoint to assume to write to a user’s log group.
 
 <h4 class="pdoc-member-header" id="TrailArgs-enableLogFileValidation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L404">property <b>enableLogFileValidation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L404">property <b>enableLogFileValidation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableLogFileValidation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -515,7 +515,7 @@ Specifies whether log file integrity validation is enabled.
 Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="TrailArgs-enableLogging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L409">property <b>enableLogging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L409">property <b>enableLogging</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableLogging?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -524,7 +524,7 @@ Enables logging for the trail. Defaults to `true`.
 Setting this to `false` will pause logging.
 
 <h4 class="pdoc-member-header" id="TrailArgs-eventSelectors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L413">property <b>eventSelectors</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L413">property <b>eventSelectors</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventSelectors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TrailEventSelector'>TrailEventSelector</a>&gt;[]&gt;;</code></pre>
@@ -532,7 +532,7 @@ Setting this to `false` will pause logging.
 Specifies an event selector for enabling data event logging. Fields documented below. Please note the [CloudTrail limits](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html) when configuring these.
 
 <h4 class="pdoc-member-header" id="TrailArgs-includeGlobalServiceEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L418">property <b>includeGlobalServiceEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L418">property <b>includeGlobalServiceEvents</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includeGlobalServiceEvents?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -541,7 +541,7 @@ Specifies whether the trail is publishing events
 from global services such as IAM to the log files. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="TrailArgs-insightSelectors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L422">property <b>insightSelectors</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L422">property <b>insightSelectors</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>insightSelectors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TrailInsightSelector'>TrailInsightSelector</a>&gt;[]&gt;;</code></pre>
@@ -549,7 +549,7 @@ from global services such as IAM to the log files. Defaults to `true`.
 Specifies an insight selector for identifying unusual operational activity. Fields documented below.
 
 <h4 class="pdoc-member-header" id="TrailArgs-isMultiRegionTrail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L427">property <b>isMultiRegionTrail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L427">property <b>isMultiRegionTrail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isMultiRegionTrail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -558,7 +558,7 @@ Specifies whether the trail is created in the current
 region or in all regions. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="TrailArgs-isOrganizationTrail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L431">property <b>isOrganizationTrail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L431">property <b>isOrganizationTrail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isOrganizationTrail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -566,7 +566,7 @@ region or in all regions. Defaults to `false`.
 Specifies whether the trail is an AWS Organizations trail. Organization trails log events for the master account and all member accounts. Can only be created in the organization master account. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="TrailArgs-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L435">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L435">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -574,7 +574,7 @@ Specifies whether the trail is an AWS Organizations trail. Organization trails l
 Specifies the KMS key ARN to use to encrypt the logs delivered by CloudTrail.
 
 <h4 class="pdoc-member-header" id="TrailArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L439">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L439">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -582,7 +582,7 @@ Specifies the KMS key ARN to use to encrypt the logs delivered by CloudTrail.
 Specifies the name of the trail.
 
 <h4 class="pdoc-member-header" id="TrailArgs-s3BucketName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L443">property <b>s3BucketName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L443">property <b>s3BucketName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3BucketName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -590,7 +590,7 @@ Specifies the name of the trail.
 Specifies the name of the S3 bucket designated for publishing log files.
 
 <h4 class="pdoc-member-header" id="TrailArgs-s3KeyPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L448">property <b>s3KeyPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L448">property <b>s3KeyPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3KeyPrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -599,7 +599,7 @@ Specifies the S3 key prefix that follows
 the name of the bucket you have designated for log file delivery.
 
 <h4 class="pdoc-member-header" id="TrailArgs-snsTopicName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L453">property <b>snsTopicName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L453">property <b>snsTopicName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snsTopicName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -608,7 +608,7 @@ Specifies the name of the Amazon SNS topic
 defined for notification of log file delivery.
 
 <h4 class="pdoc-member-header" id="TrailArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L457">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L457">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -616,7 +616,7 @@ defined for notification of log file delivery.
 A map of tags to assign to the trail
 
 <h3 class="pdoc-module-header" id="TrailState" data-link-title="TrailState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L307">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L307">
         interface <strong>TrailState</strong>
     </a>
 </h3>
@@ -626,7 +626,7 @@ A map of tags to assign to the trail
 Input properties used for looking up and filtering Trail resources.
 
 <h4 class="pdoc-member-header" id="TrailState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L311">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L311">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -634,7 +634,7 @@ Input properties used for looking up and filtering Trail resources.
 The Amazon Resource Name of the trail.
 
 <h4 class="pdoc-member-header" id="TrailState-cloudWatchLogsGroupArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L316">property <b>cloudWatchLogsGroupArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L316">property <b>cloudWatchLogsGroupArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cloudWatchLogsGroupArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -643,7 +643,7 @@ Specifies a log group name using an Amazon Resource Name (ARN),
 that represents the log group to which CloudTrail logs will be delivered. Note that CloudTrail requires the Log Stream wildcard.
 
 <h4 class="pdoc-member-header" id="TrailState-cloudWatchLogsRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L321">property <b>cloudWatchLogsRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L321">property <b>cloudWatchLogsRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cloudWatchLogsRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -652,7 +652,7 @@ Specifies the role for the CloudWatch Logs
 endpoint to assume to write to a user’s log group.
 
 <h4 class="pdoc-member-header" id="TrailState-enableLogFileValidation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L326">property <b>enableLogFileValidation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L326">property <b>enableLogFileValidation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableLogFileValidation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -661,7 +661,7 @@ Specifies whether log file integrity validation is enabled.
 Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="TrailState-enableLogging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L331">property <b>enableLogging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L331">property <b>enableLogging</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableLogging?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -670,7 +670,7 @@ Enables logging for the trail. Defaults to `true`.
 Setting this to `false` will pause logging.
 
 <h4 class="pdoc-member-header" id="TrailState-eventSelectors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L335">property <b>eventSelectors</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L335">property <b>eventSelectors</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventSelectors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TrailEventSelector'>TrailEventSelector</a>&gt;[]&gt;;</code></pre>
@@ -678,7 +678,7 @@ Setting this to `false` will pause logging.
 Specifies an event selector for enabling data event logging. Fields documented below. Please note the [CloudTrail limits](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html) when configuring these.
 
 <h4 class="pdoc-member-header" id="TrailState-homeRegion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L339">property <b>homeRegion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L339">property <b>homeRegion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>homeRegion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -686,7 +686,7 @@ Specifies an event selector for enabling data event logging. Fields documented b
 The region in which the trail was created.
 
 <h4 class="pdoc-member-header" id="TrailState-includeGlobalServiceEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L344">property <b>includeGlobalServiceEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L344">property <b>includeGlobalServiceEvents</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includeGlobalServiceEvents?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -695,7 +695,7 @@ Specifies whether the trail is publishing events
 from global services such as IAM to the log files. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="TrailState-insightSelectors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L348">property <b>insightSelectors</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L348">property <b>insightSelectors</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>insightSelectors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TrailInsightSelector'>TrailInsightSelector</a>&gt;[]&gt;;</code></pre>
@@ -703,7 +703,7 @@ from global services such as IAM to the log files. Defaults to `true`.
 Specifies an insight selector for identifying unusual operational activity. Fields documented below.
 
 <h4 class="pdoc-member-header" id="TrailState-isMultiRegionTrail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L353">property <b>isMultiRegionTrail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L353">property <b>isMultiRegionTrail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isMultiRegionTrail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -712,7 +712,7 @@ Specifies whether the trail is created in the current
 region or in all regions. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="TrailState-isOrganizationTrail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L357">property <b>isOrganizationTrail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L357">property <b>isOrganizationTrail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isOrganizationTrail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -720,7 +720,7 @@ region or in all regions. Defaults to `false`.
 Specifies whether the trail is an AWS Organizations trail. Organization trails log events for the master account and all member accounts. Can only be created in the organization master account. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="TrailState-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L361">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L361">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -728,7 +728,7 @@ Specifies whether the trail is an AWS Organizations trail. Organization trails l
 Specifies the KMS key ARN to use to encrypt the logs delivered by CloudTrail.
 
 <h4 class="pdoc-member-header" id="TrailState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L365">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L365">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -736,7 +736,7 @@ Specifies the KMS key ARN to use to encrypt the logs delivered by CloudTrail.
 Specifies the name of the trail.
 
 <h4 class="pdoc-member-header" id="TrailState-s3BucketName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L369">property <b>s3BucketName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L369">property <b>s3BucketName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3BucketName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -744,7 +744,7 @@ Specifies the name of the trail.
 Specifies the name of the S3 bucket designated for publishing log files.
 
 <h4 class="pdoc-member-header" id="TrailState-s3KeyPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L374">property <b>s3KeyPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L374">property <b>s3KeyPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3KeyPrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -753,7 +753,7 @@ Specifies the S3 key prefix that follows
 the name of the bucket you have designated for log file delivery.
 
 <h4 class="pdoc-member-header" id="TrailState-snsTopicName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L379">property <b>snsTopicName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L379">property <b>snsTopicName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snsTopicName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -762,7 +762,7 @@ Specifies the name of the Amazon SNS topic
 defined for notification of log file delivery.
 
 <h4 class="pdoc-member-header" id="TrailState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ddc4d5623c8bb2e25428f11ab0de487b17795614/sdk/nodejs/cloudtrail/trail.ts#L383">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/cloudtrail/trail.ts#L383">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
