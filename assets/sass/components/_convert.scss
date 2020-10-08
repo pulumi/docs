@@ -31,7 +31,7 @@ pulumi-convert {
             }
 
             &[disabled] {
-                @apply opacity-75 cursor-default;
+                @apply cursor-default bg-blue-800 border-blue-800 text-gray-400;
             }
 
             @screen xl {
@@ -116,7 +116,7 @@ pulumi-convert {
                 }
 
                 .tab {
-                    @apply p-4 my-0 flex items-center text-sm cursor-pointer bg-black;
+                    @apply p-4 my-0 flex items-center text-sm cursor-pointer;
 
                     &:hover {
                         @apply bg-gray-900;
