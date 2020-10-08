@@ -2,7 +2,7 @@
 title: "The Future of Cloud Engineering"
 date: 2020-10-07
 meta_desc: "Cloud Engineering Summit keynote: Building the Cloud Operating System."
-meta_image: meta.png
+meta_image: cloud_engineering.png
 authors:
     - joe-duffy
 tags:
