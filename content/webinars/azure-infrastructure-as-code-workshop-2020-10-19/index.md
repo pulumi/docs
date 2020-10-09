@@ -40,5 +40,5 @@ main:
   youtube_url: ""
 form:
   gotowebinar_key: "1145386961095792398"
-  hubspot_form_id: 8a1088e2-3f4b-44a5-8129-2315b7874a9e
+  hubspot_form_id: 92324f17-4004-4b71-91b5-463f2cef83c1
 ---
