@@ -120,7 +120,7 @@ const example = pulumi.output(okta.user.getUsers({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_users(</span><span class="nx">searches</span><span class="p">:</span> <span class="nx">Optional[List[GetUsersSearchArgs]]</span> = None<span class="p">, </span><span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[List[GetUsersUserArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetUsersResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_users(</span><span class="nx">searches</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetUsersSearchArgs]]</span> = None<span class="p">, </span><span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetUsersUserArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetUsersResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -238,7 +238,7 @@ The following arguments are supported:
 <a href="#searches_python" style="color: inherit; text-decoration: inherit;">searches</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getuserssearch">List[Get<wbr>Users<wbr>Search<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getuserssearch">Sequence[Get<wbr>Users<wbr>Search<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Map of search criteria to use to find users. It supports the following properties.
 {{% /md %}}</dd>
@@ -249,7 +249,7 @@ The following arguments are supported:
 <a href="#users_python" style="color: inherit; text-decoration: inherit;">users</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusersuser">List[Get<wbr>Users<wbr>User<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getusersuser">Sequence[Get<wbr>Users<wbr>User<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}collection of users retrieved from Okta with the following properties.
 {{% /md %}}</dd>
@@ -408,7 +408,7 @@ The following output properties are available:
 <a href="#searches_python" style="color: inherit; text-decoration: inherit;">searches</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getuserssearch">List[Get<wbr>Users<wbr>Search]</a></span>
+        <span class="property-type"><a href="#getuserssearch">Sequence[Get<wbr>Users<wbr>Search]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -418,7 +418,7 @@ The following output properties are available:
 <a href="#users_python" style="color: inherit; text-decoration: inherit;">users</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusersuser">List[Get<wbr>Users<wbr>User]</a></span>
+        <span class="property-type"><a href="#getusersuser">Sequence[Get<wbr>Users<wbr>User]</a></span>
     </dt>
     <dd>{{% md %}}collection of users retrieved from Okta with the following properties.
 {{% /md %}}</dd>
@@ -1814,7 +1814,7 @@ The following output properties are available:
 <a href="#admin_roles_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Administrator roles assigned to user.
 {{% /md %}}</dd>
@@ -1935,7 +1935,7 @@ The following output properties are available:
 <a href="#group_memberships_python" style="color: inherit; text-decoration: inherit;">group_<wbr>memberships</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -2211,6 +2211,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/articulate/terraform-provider-okta).</dd>
+	<dd>This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/oktadeveloper/terraform-provider-okta).</dd>
 </dl>
 

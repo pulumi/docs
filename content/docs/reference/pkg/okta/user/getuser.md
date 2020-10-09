@@ -107,6 +107,7 @@ example = okta.user.get_user(searches=[
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
 
+// Search for a single user based on supported profile properties
 const example = pulumi.output(okta.user.getUser({
     searches: [
         {
@@ -137,7 +138,7 @@ const example = pulumi.output(okta.user.getUser({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_user(</span><span class="nx">searches</span><span class="p">:</span> <span class="nx">Optional[List[GetUserSearchArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetUserResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_user(</span><span class="nx">searches</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetUserSearchArgs]]</span> = None<span class="p">, </span><span class="nx">user_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetUserResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -164,8 +165,8 @@ The following arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="searches_csharp">
 <a href="#searches_csharp" style="color: inherit; text-decoration: inherit;">Searches</a>
 </span> 
@@ -175,6 +176,17 @@ The following arguments are supported:
     <dd>{{% md %}}Map of search criteria. It supports the following properties.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userid_csharp">
+<a href="#userid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}String representing a specific user's id value
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -182,8 +194,8 @@ The following arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="searches_go">
 <a href="#searches_go" style="color: inherit; text-decoration: inherit;">Searches</a>
 </span> 
@@ -193,6 +205,17 @@ The following arguments are supported:
     <dd>{{% md %}}Map of search criteria. It supports the following properties.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userid_go">
+<a href="#userid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}String representing a specific user's id value
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -200,8 +223,8 @@ The following arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="searches_nodejs">
 <a href="#searches_nodejs" style="color: inherit; text-decoration: inherit;">searches</a>
 </span> 
@@ -211,6 +234,17 @@ The following arguments are supported:
     <dd>{{% md %}}Map of search criteria. It supports the following properties.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userid_nodejs">
+<a href="#userid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}String representing a specific user's id value
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -218,15 +252,26 @@ The following arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="searches_python">
 <a href="#searches_python" style="color: inherit; text-decoration: inherit;">searches</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusersearch">List[Get<wbr>User<wbr>Search<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getusersearch">Sequence[Get<wbr>User<wbr>Search<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Map of search criteria. It supports the following properties.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="user_id_python">
+<a href="#user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}String representing a specific user's id value
 {{% /md %}}</dd>
 
 </dl>
@@ -559,16 +604,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="searches_csharp">
-<a href="#searches_csharp" style="color: inherit; text-decoration: inherit;">Searches</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusersearch">List&lt;Get<wbr>User<wbr>Search&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="secondemail_csharp">
 <a href="#secondemail_csharp" style="color: inherit; text-decoration: inherit;">Second<wbr>Email</a>
 </span> 
@@ -654,6 +689,26 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="searches_csharp">
+<a href="#searches_csharp" style="color: inherit; text-decoration: inherit;">Searches</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getusersearch">List&lt;Get<wbr>User<wbr>Search&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="userid_csharp">
+<a href="#userid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -972,16 +1027,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="searches_go">
-<a href="#searches_go" style="color: inherit; text-decoration: inherit;">Searches</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusersearch">[]Get<wbr>User<wbr>Search</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="secondemail_go">
 <a href="#secondemail_go" style="color: inherit; text-decoration: inherit;">Second<wbr>Email</a>
 </span> 
@@ -1067,6 +1112,26 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="searches_go">
+<a href="#searches_go" style="color: inherit; text-decoration: inherit;">Searches</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getusersearch">[]Get<wbr>User<wbr>Search</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="userid_go">
+<a href="#userid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1385,16 +1450,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="searches_nodejs">
-<a href="#searches_nodejs" style="color: inherit; text-decoration: inherit;">searches</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusersearch">Get<wbr>User<wbr>Search[]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="secondemail_nodejs">
 <a href="#secondemail_nodejs" style="color: inherit; text-decoration: inherit;">second<wbr>Email</a>
 </span> 
@@ -1481,6 +1536,26 @@ The following output properties are available:
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="searches_nodejs">
+<a href="#searches_nodejs" style="color: inherit; text-decoration: inherit;">searches</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getusersearch">Get<wbr>User<wbr>Search[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="userid_nodejs">
+<a href="#userid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1494,7 +1569,7 @@ The following output properties are available:
 <a href="#admin_roles_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Administrator roles assigned to user.
 {{% /md %}}</dd>
@@ -1615,7 +1690,7 @@ The following output properties are available:
 <a href="#group_memberships_python" style="color: inherit; text-decoration: inherit;">group_<wbr>memberships</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1798,16 +1873,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="searches_python">
-<a href="#searches_python" style="color: inherit; text-decoration: inherit;">searches</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusersearch">List[Get<wbr>User<wbr>Search]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="second_email_python">
 <a href="#second_email_python" style="color: inherit; text-decoration: inherit;">second_<wbr>email</a>
 </span> 
@@ -1893,6 +1958,26 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="searches_python">
+<a href="#searches_python" style="color: inherit; text-decoration: inherit;">searches</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getusersearch">Sequence[Get<wbr>User<wbr>Search]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="user_id_python">
+<a href="#user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2096,6 +2181,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/articulate/terraform-provider-okta).</dd>
+	<dd>This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/oktadeveloper/terraform-provider-okta).</dd>
 </dl>
 

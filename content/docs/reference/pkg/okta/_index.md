@@ -31,7 +31,9 @@ A Pulumi package for creating and managing okta resources.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="eventhook" title="EventHook"><span class="symbol resource"></span>EventHook</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
+    <li><a href="templatesms" title="TemplateSms"><span class="symbol resource"></span>TemplateSms</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -41,9 +43,9 @@ A Pulumi package for creating and managing okta resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/articulate/terraform-provider-okta).</dd>
+	<dd>This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/oktadeveloper/terraform-provider-okta).</dd>
 	<dt>Version</dt>
-	<dd>2.3.0</dd>
+	<dd>2.4.0</dd>
 </dl>
 
 

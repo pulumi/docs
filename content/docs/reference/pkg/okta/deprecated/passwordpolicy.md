@@ -22,7 +22,7 @@ meta_desc: "Explore the PasswordPolicy resource of the deprecated module, includ
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/deprecated/#pulumi_okta.deprecated.PasswordPolicy">PasswordPolicy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auth_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">email_recovery</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">groups_includeds</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password_auto_unlock_minutes</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">password_dictionary_lookup</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">password_exclude_first_name</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">password_exclude_last_name</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">password_exclude_username</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">password_expire_warn_days</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">password_history_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">password_max_age_days</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">password_max_lockout_attempts</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">password_min_age_minutes</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">password_min_length</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">password_min_lowercase</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">password_min_number</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">password_min_symbol</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">password_min_uppercase</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">password_show_lockout_failures</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">question_min_length</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">question_recovery</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recovery_email_token</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">skip_unlock</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sms_recovery</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/deprecated/#pulumi_okta.deprecated.PasswordPolicy">PasswordPolicy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auth_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">email_recovery</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">groups_includeds</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password_auto_unlock_minutes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_dictionary_lookup</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">password_exclude_first_name</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">password_exclude_last_name</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">password_exclude_username</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">password_expire_warn_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_history_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_lockout_notification_channels</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">password_max_age_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_max_lockout_attempts</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_min_age_minutes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_min_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_min_lowercase</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_min_number</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_min_symbol</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_min_uppercase</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_show_lockout_failures</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">question_min_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">question_recovery</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recovery_email_token</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">skip_unlock</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sms_recovery</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -324,6 +324,17 @@ The PasswordPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Number of distinct passwords that must be created before they can be reused: 0 = none.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="passwordlockoutnotificationchannels_csharp">
+<a href="#passwordlockoutnotificationchannels_csharp" style="color: inherit; text-decoration: inherit;">Password<wbr>Lockout<wbr>Notification<wbr>Channels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Notification channels to use to notify a user when their account has been locked.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -645,6 +656,17 @@ Windows account.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="passwordlockoutnotificationchannels_go">
+<a href="#passwordlockoutnotificationchannels_go" style="color: inherit; text-decoration: inherit;">Password<wbr>Lockout<wbr>Notification<wbr>Channels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Notification channels to use to notify a user when their account has been locked.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="passwordmaxagedays_go">
 <a href="#passwordmaxagedays_go" style="color: inherit; text-decoration: inherit;">Password<wbr>Max<wbr>Age<wbr>Days</a>
 </span> 
@@ -962,6 +984,17 @@ Windows account.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="passwordlockoutnotificationchannels_nodejs">
+<a href="#passwordlockoutnotificationchannels_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Lockout<wbr>Notification<wbr>Channels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Notification channels to use to notify a user when their account has been locked.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="passwordmaxagedays_nodejs">
 <a href="#passwordmaxagedays_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Max<wbr>Age<wbr>Days</a>
 </span> 
@@ -1184,7 +1217,7 @@ Windows account.
 <a href="#groups_includeds_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>includeds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of Group IDs to Include
 {{% /md %}}</dd>
@@ -1206,7 +1239,7 @@ Windows account.
 <a href="#password_auto_unlock_minutes_python" style="color: inherit; text-decoration: inherit;">password_<wbr>auto_<wbr>unlock_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of minutes before a locked account is unlocked: 0 = no limit.
 {{% /md %}}</dd>
@@ -1261,7 +1294,7 @@ Windows account.
 <a href="#password_expire_warn_days_python" style="color: inherit; text-decoration: inherit;">password_<wbr>expire_<wbr>warn_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Length in days a user will be warned before password expiry: 0 = no warning.
 {{% /md %}}</dd>
@@ -1272,9 +1305,20 @@ Windows account.
 <a href="#password_history_count_python" style="color: inherit; text-decoration: inherit;">password_<wbr>history_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of distinct passwords that must be created before they can be reused: 0 = none.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="password_lockout_notification_channels_python">
+<a href="#password_lockout_notification_channels_python" style="color: inherit; text-decoration: inherit;">password_<wbr>lockout_<wbr>notification_<wbr>channels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Notification channels to use to notify a user when their account has been locked.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1283,7 +1327,7 @@ Windows account.
 <a href="#password_max_age_days_python" style="color: inherit; text-decoration: inherit;">password_<wbr>max_<wbr>age_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.
 {{% /md %}}</dd>
@@ -1294,7 +1338,7 @@ Windows account.
 <a href="#password_max_lockout_attempts_python" style="color: inherit; text-decoration: inherit;">password_<wbr>max_<wbr>lockout_<wbr>attempts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of unsuccessful login attempts allowed before lockout: 0 = no limit.
 {{% /md %}}</dd>
@@ -1305,7 +1349,7 @@ Windows account.
 <a href="#password_min_age_minutes_python" style="color: inherit; text-decoration: inherit;">password_<wbr>min_<wbr>age_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum time interval in minutes between password changes: 0 = no limit.
 {{% /md %}}</dd>
@@ -1316,7 +1360,7 @@ Windows account.
 <a href="#password_min_length_python" style="color: inherit; text-decoration: inherit;">password_<wbr>min_<wbr>length</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum password length.
 {{% /md %}}</dd>
@@ -1327,7 +1371,7 @@ Windows account.
 <a href="#password_min_lowercase_python" style="color: inherit; text-decoration: inherit;">password_<wbr>min_<wbr>lowercase</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}If a password must contain at least one lower case letter: 0 = no, 1 = yes. Default = 1
 {{% /md %}}</dd>
@@ -1338,7 +1382,7 @@ Windows account.
 <a href="#password_min_number_python" style="color: inherit; text-decoration: inherit;">password_<wbr>min_<wbr>number</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}If a password must contain at least one number: 0 = no, 1 = yes. Default = 1
 {{% /md %}}</dd>
@@ -1349,7 +1393,7 @@ Windows account.
 <a href="#password_min_symbol_python" style="color: inherit; text-decoration: inherit;">password_<wbr>min_<wbr>symbol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}If a password must contain at least one symbol (!@#$%^&*): 0 = no, 1 = yes. Default = 1
 {{% /md %}}</dd>
@@ -1360,7 +1404,7 @@ Windows account.
 <a href="#password_min_uppercase_python" style="color: inherit; text-decoration: inherit;">password_<wbr>min_<wbr>uppercase</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}If a password must contain at least one upper case letter: 0 = no, 1 = yes. Default = 1
 {{% /md %}}</dd>
@@ -1382,7 +1426,7 @@ Windows account.
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Policy Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid
 priority is provided. API defaults it to the last/lowest if not there.
@@ -1394,7 +1438,7 @@ priority is provided. API defaults it to the last/lowest if not there.
 <a href="#question_min_length_python" style="color: inherit; text-decoration: inherit;">question_<wbr>min_<wbr>length</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Min length of the password recovery question answer.
 {{% /md %}}</dd>
@@ -1416,7 +1460,7 @@ priority is provided. API defaults it to the last/lowest if not there.
 <a href="#recovery_email_token_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>email_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Lifetime in minutes of the recovery email token.
 {{% /md %}}</dd>
@@ -1554,7 +1598,7 @@ Get an existing PasswordPolicy resource's state with the given name, ID, and opt
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auth_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">email_recovery</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">groups_includeds</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password_auto_unlock_minutes</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">password_dictionary_lookup</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">password_exclude_first_name</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">password_exclude_last_name</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">password_exclude_username</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">password_expire_warn_days</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">password_history_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">password_max_age_days</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">password_max_lockout_attempts</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">password_min_age_minutes</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">password_min_length</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">password_min_lowercase</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">password_min_number</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">password_min_symbol</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">password_min_uppercase</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">password_show_lockout_failures</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">question_min_length</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">question_recovery</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recovery_email_token</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">skip_unlock</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sms_recovery</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PasswordPolicy</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auth_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">email_recovery</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">groups_includeds</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password_auto_unlock_minutes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_dictionary_lookup</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">password_exclude_first_name</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">password_exclude_last_name</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">password_exclude_username</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">password_expire_warn_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_history_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_lockout_notification_channels</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">password_max_age_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_max_lockout_attempts</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_min_age_minutes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_min_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_min_lowercase</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_min_number</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_min_symbol</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_min_uppercase</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_show_lockout_failures</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">question_min_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">question_recovery</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recovery_email_token</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">skip_unlock</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sms_recovery</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PasswordPolicy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1798,6 +1842,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Number of distinct passwords that must be created before they can be reused: 0 = none.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_passwordlockoutnotificationchannels_csharp">
+<a href="#state_passwordlockoutnotificationchannels_csharp" style="color: inherit; text-decoration: inherit;">Password<wbr>Lockout<wbr>Notification<wbr>Channels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Notification channels to use to notify a user when their account has been locked.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2119,6 +2174,17 @@ Windows account.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_passwordlockoutnotificationchannels_go">
+<a href="#state_passwordlockoutnotificationchannels_go" style="color: inherit; text-decoration: inherit;">Password<wbr>Lockout<wbr>Notification<wbr>Channels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Notification channels to use to notify a user when their account has been locked.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_passwordmaxagedays_go">
 <a href="#state_passwordmaxagedays_go" style="color: inherit; text-decoration: inherit;">Password<wbr>Max<wbr>Age<wbr>Days</a>
 </span> 
@@ -2436,6 +2502,17 @@ Windows account.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_passwordlockoutnotificationchannels_nodejs">
+<a href="#state_passwordlockoutnotificationchannels_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Lockout<wbr>Notification<wbr>Channels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Notification channels to use to notify a user when their account has been locked.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_passwordmaxagedays_nodejs">
 <a href="#state_passwordmaxagedays_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Max<wbr>Age<wbr>Days</a>
 </span> 
@@ -2658,7 +2735,7 @@ Windows account.
 <a href="#state_groups_includeds_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>includeds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of Group IDs to Include
 {{% /md %}}</dd>
@@ -2680,7 +2757,7 @@ Windows account.
 <a href="#state_password_auto_unlock_minutes_python" style="color: inherit; text-decoration: inherit;">password_<wbr>auto_<wbr>unlock_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of minutes before a locked account is unlocked: 0 = no limit.
 {{% /md %}}</dd>
@@ -2735,7 +2812,7 @@ Windows account.
 <a href="#state_password_expire_warn_days_python" style="color: inherit; text-decoration: inherit;">password_<wbr>expire_<wbr>warn_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Length in days a user will be warned before password expiry: 0 = no warning.
 {{% /md %}}</dd>
@@ -2746,9 +2823,20 @@ Windows account.
 <a href="#state_password_history_count_python" style="color: inherit; text-decoration: inherit;">password_<wbr>history_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of distinct passwords that must be created before they can be reused: 0 = none.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_password_lockout_notification_channels_python">
+<a href="#state_password_lockout_notification_channels_python" style="color: inherit; text-decoration: inherit;">password_<wbr>lockout_<wbr>notification_<wbr>channels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Notification channels to use to notify a user when their account has been locked.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2757,7 +2845,7 @@ Windows account.
 <a href="#state_password_max_age_days_python" style="color: inherit; text-decoration: inherit;">password_<wbr>max_<wbr>age_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.
 {{% /md %}}</dd>
@@ -2768,7 +2856,7 @@ Windows account.
 <a href="#state_password_max_lockout_attempts_python" style="color: inherit; text-decoration: inherit;">password_<wbr>max_<wbr>lockout_<wbr>attempts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of unsuccessful login attempts allowed before lockout: 0 = no limit.
 {{% /md %}}</dd>
@@ -2779,7 +2867,7 @@ Windows account.
 <a href="#state_password_min_age_minutes_python" style="color: inherit; text-decoration: inherit;">password_<wbr>min_<wbr>age_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum time interval in minutes between password changes: 0 = no limit.
 {{% /md %}}</dd>
@@ -2790,7 +2878,7 @@ Windows account.
 <a href="#state_password_min_length_python" style="color: inherit; text-decoration: inherit;">password_<wbr>min_<wbr>length</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum password length.
 {{% /md %}}</dd>
@@ -2801,7 +2889,7 @@ Windows account.
 <a href="#state_password_min_lowercase_python" style="color: inherit; text-decoration: inherit;">password_<wbr>min_<wbr>lowercase</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}If a password must contain at least one lower case letter: 0 = no, 1 = yes. Default = 1
 {{% /md %}}</dd>
@@ -2812,7 +2900,7 @@ Windows account.
 <a href="#state_password_min_number_python" style="color: inherit; text-decoration: inherit;">password_<wbr>min_<wbr>number</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}If a password must contain at least one number: 0 = no, 1 = yes. Default = 1
 {{% /md %}}</dd>
@@ -2823,7 +2911,7 @@ Windows account.
 <a href="#state_password_min_symbol_python" style="color: inherit; text-decoration: inherit;">password_<wbr>min_<wbr>symbol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}If a password must contain at least one symbol (!@#$%^&*): 0 = no, 1 = yes. Default = 1
 {{% /md %}}</dd>
@@ -2834,7 +2922,7 @@ Windows account.
 <a href="#state_password_min_uppercase_python" style="color: inherit; text-decoration: inherit;">password_<wbr>min_<wbr>uppercase</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}If a password must contain at least one upper case letter: 0 = no, 1 = yes. Default = 1
 {{% /md %}}</dd>
@@ -2856,7 +2944,7 @@ Windows account.
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Policy Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid
 priority is provided. API defaults it to the last/lowest if not there.
@@ -2868,7 +2956,7 @@ priority is provided. API defaults it to the last/lowest if not there.
 <a href="#state_question_min_length_python" style="color: inherit; text-decoration: inherit;">question_<wbr>min_<wbr>length</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Min length of the password recovery question answer.
 {{% /md %}}</dd>
@@ -2890,7 +2978,7 @@ priority is provided. API defaults it to the last/lowest if not there.
 <a href="#state_recovery_email_token_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>email_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Lifetime in minutes of the recovery email token.
 {{% /md %}}</dd>
@@ -2949,6 +3037,6 @@ Windows account.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/articulate/terraform-provider-okta).</dd>
+	<dd>This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/oktadeveloper/terraform-provider-okta).</dd>
 </dl>
 
