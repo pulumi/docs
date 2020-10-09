@@ -20,6 +20,10 @@ main:
   presenters:
     - name: Praneet Loke
       role: Software Engineer, Pulumi
+    - name: Paul Stack
+      role: Software Engineer, Pulumi
+    - name: Joe Randazzo
+      role: Solutions Architect, GitLab
   learn:
     - Set up GitLab
     - Create Pipelines for Infrastructure Updates
