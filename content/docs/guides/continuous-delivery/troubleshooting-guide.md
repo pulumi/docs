@@ -19,7 +19,7 @@ In order to run a Pulumi command, the following are the requirements for any con
 Create one [here](https://app.pulumi.com/account/tokens) by logging in with the appropriate account.
 * A stack that you would like to update the automated pipeline.
 * Build tools (more on this below) based on the runtime of your Pulumi app.
-* Restore all dependencies for your Pulumi app.
+* Dependencies for your Pulumi app.
 * The right cloud provider credentials.
 
 ## Pulumi Access Token
@@ -48,16 +48,21 @@ beforehand using the `pulumi stack init` command and in the **appropriate organi
 * Ensure that the account represented by the token you are using, has access to the stack.
   * This can lead to 404s being returned from the Pulumi Service because the token is invalid for any number of reasons.
 * Ensure that you use the fully-qualified stack name when passing the stack name to `pulumi` commands.
+  * A fully-qualified stack name is of the format `<org_name>/<project_name>/<stack_name>`.
+  * For example, for a stack called `production` in an org called `pulumi` and project `slack-bot`, its FQDN is `pulumi/slack-bot/production`.
+  * Using an FQDN in your automated pipelines removes any ambiguity as to which stack is being used, even though Pulumi is smart to figure out
+  which one you meant based on the project name in your `Pulumi.yaml` file. It makes it explicit for anyone in your team looking at the CI configuration.
 * Ensure that you are running the `pulumi` command from the folder containing the `Pulumi.yaml` file that contains your Pulumi project's name.
 * If your stack has configuration, then the stack configuration file must also be co-located with the project file.
-  * For example, for a stack named `production`, the `Pulumi.production.yaml` file must exist alongside the `Pulumi.production.yaml`.
+  * For example, for a stack named `production`, the `Pulumi.production.yaml` file must exist alongside the `Pulumi.yaml`.
   * If your Pulumi app is in a different folder, you can use the `--cwd` flag with almost every `pulumi` command.
   Learn more about the global flags [here]({{< relref "/docs/reference/cli/#options" >}}).
 
 ## Build Tools
 
 Pulumi invokes the build tool that corresponds to your Pulumi project's runtime. If your pipeline is missing one of these tools,
-Pulumi cannot run your infrastructure app.
+Pulumi cannot run your infrastructure app. For example, if your Pulumi project uses the `nodejs` runtime, then making sure that a valid
+version of `Node` installed along with `npm` or `yarn` depending on whichever package manager you are using to manage dependencies.
 
 ### Tips
 
@@ -80,7 +85,7 @@ when you run `pulumi preview` or `pulumi update --yes`.
 * There is an exception to restoring dependencies automatically for `.NET` when you use a private package feed. You must ensure that the
 package(s) from the private feed are accessible or you can use a pre-built binary (see the `binary` option [here]({{< relref "/docs/intro/concepts/project" >}})) with Pulumi to avoid rebuilding your `.NET` solution again.
   * Note that if you do choose to use a pre-built binary, automatic plugin acquisition for Pulumi
-* You are caching the library dependencies but not the Pulumi plugins. Some services offer dependency caching by captuing a specific folder and restoring
+* You are caching the library dependencies but not the Pulumi plugins. Some services offer dependency caching by capturing a specific folder and restoring
 that folder whenever you run your pipeline subsequently. However, note that Pulumi dependencies have a post-install step that also pulls-down
 a [plugin]({{< relref "/docs/intro/concepts/how-pulumi-works/#resource-providers" >}}) binary from our CDN.
   * So be sure to cache the plugins path as well.
@@ -119,4 +124,4 @@ steps. This is a way to reduce repeating the installation step every time you wo
 If your error is not related to any of the above categories, it is likely that there is a problem with the code in your infrastructure code.
 Our Programming Model docs can be very helpful in understanding the concepts of programming an infrastructure app. If that doesn't help you solve your
 particular issue, then there is always the power of the strong, knowledgable [Pulumi Slack Community](https://slack.pulumi.com). Signup is free and quick. In addition to other
-community members, various members of the Pulumi team themsevles hang out in the Slack channels and are willing to help you.
+community members, various members of the Pulumi team themselves hang out in the Slack channels and would be happy to help you.
