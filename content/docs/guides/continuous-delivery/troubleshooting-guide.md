@@ -124,6 +124,6 @@ steps. This is a way to reduce repeating the installation step every time you wo
 ### Still need help?
 
 If your error is not related to any of the above categories, it is likely that there is a problem with the code in your infrastructure code.
-Our Programming Model docs can be very helpful in understanding the concepts of programming an infrastructure app. If that doesn't help you solve your
+Our [Programming Model]({{< relref "/docs/intro/concepts/programming-model" >}}) docs can be very helpful in understanding the concepts of programming an infrastructure app. If that doesn't help you solve your
 particular issue, then there is always the power of the strong, knowledgable [Pulumi Slack Community](https://slack.pulumi.com). Signup is free and quick. In addition to other
 community members, various members of the Pulumi team themselves hang out in the Slack channels and would be happy to help you.
