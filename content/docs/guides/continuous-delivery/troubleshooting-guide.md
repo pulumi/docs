@@ -1,6 +1,6 @@
 ---
-title: Other
-meta_desc: This page walks-through the common failures encountered while running Pulumi in CI/CD, as well as tips on how to fix them.
+title: Troubleshooting Guide for Pulumi in CI
+meta_desc: This page walks-through the common failures encountered while running Pulumi in CI, as well as tips on how to fix them.
 menu:
     userguides:
         parent: cont_delivery
@@ -8,7 +8,7 @@ menu:
 ---
 
 In order to understand the errors encountered during an automated pipeline execution, it is important to understand
-the steps involved in a typical CI/CD configuration for Pulumi regardless of the CI/CD service you are using.
+the steps involved in a typical CI configuration for Pulumi regardless of the CI service you are using.
 The type of failure you experience is likely related to one of these steps.
 
 ## Overall Requirements
@@ -24,7 +24,7 @@ Create one [here](https://app.pulumi.com/account/tokens) by logging in with the 
 
 ## Pulumi Access Token
 
-Pulumi has the smarts to know when it is run inside of a CI/CD service by detecting the environment configuration. When this happens,
+Pulumi has the smarts to know when it is run inside of a CI service by detecting the environment configuration. When this happens,
 Pulumi automatically executes a `pulumi login` command using the non-interactive mechanism.
 
 ### Tips
@@ -33,14 +33,14 @@ Pulumi automatically executes a `pulumi login` command using the non-interactive
   * Most services support marking environment variables as a secret. Your Pulumi Access Token is indeed a sensitive value
   and as such should be saved as a secret env var.
 * Ensure that the environment variable is actually accessible to the job that is running the `pulumi` command.
-* Several CI/CD systems have the concept of restricting access to environment secrets to specific branches. So make sure that your branch and the job
+* Several CI systems have the concept of restricting access to environment secrets to specific branches. So make sure that your branch and the job
 running the `pulumi` command can access the env var.
 
 ## Stack Name
 
 > Learn about [stacks]({{< relref "/docs/intro/concepts/stack" >}}) and their [configuration]({{< relref "/docs/intro/concepts/config" >}}).
 
-A stack represents a specific configuration state for your infrastructure resources. For a typical CI/CD pipeline, the stack must have been created
+A stack represents a specific configuration state for your infrastructure resources. For a typical CI pipeline, the stack must have been created
 beforehand using the `pulumi stack init` command and in the **appropriate organization**.
 
 ### Tips
@@ -66,8 +66,8 @@ version of `Node` installed along with `npm` or `yarn` depending on whichever pa
 
 ### Tips
 
-* Ensure that your Pulumi project's build tools are installed on your CI/CD runner's build agent.
-  * Many CI/CD services offer built-in mechanisms to acquire language runtimes of a specific version.
+* Ensure that your Pulumi project's build tools are installed on your CI runner's build agent.
+  * Many CI services offer built-in mechanisms to acquire language runtimes of a specific version.
     * For example, GitHub Actions offers the `actions/setup-node` action that can install `node`, `npm`, and `yarn`. Similarly, there is a GitHub Action for installing
     the runtime for [Python](https://github.com/actions/setup-python), [Go](https://github.com/actions/setup-go), as well as [.NET](https://github.com/actions/setup-dotnet).
   * If you are using a Docker container-based build, consider using one of Pulumi's [SDK images](https://github.com/pulumi/pulumi/tree/master/docker#sdk-images) for your respective language.
