@@ -56,7 +56,7 @@ beforehand using the `pulumi stack init` command and in the **appropriate organi
 * If your stack has configuration, then the stack configuration file must also be co-located with the project file.
   * For example, for a stack named `production`, the `Pulumi.production.yaml` file must exist alongside the `Pulumi.yaml`.
   * If your Pulumi app is in a different folder, you can use the `--cwd` flag with almost every `pulumi` command.
-  Learn more about the global flags [here]({{< relref "/docs/reference/cli/#options" >}}).
+  Learn more about the global flags [here]({{< relref "/docs/reference/cli#options" >}}).
 
 ## Build Tools
 
@@ -87,7 +87,7 @@ package(s) from the private feed are accessible or you can use a pre-built binar
   * Note that if you do choose to use a pre-built binary, automatic plugin acquisition for Pulumi
 * You are caching the library dependencies but not the Pulumi plugins. Some services offer dependency caching by capturing a specific folder and restoring
 that folder whenever you run your pipeline subsequently. However, note that Pulumi dependencies have a post-install step that also pulls-down
-a [plugin]({{< relref "/docs/intro/concepts/how-pulumi-works/#resource-providers" >}}) binary from our CDN.
+a [plugin]({{< relref "/docs/intro/concepts/how-pulumi-works#resource-providers" >}}) binary from our CDN.
   * So be sure to cache the plugins path as well.
   > Note that depending on the number of providers you use in your Pulumi app, the cache size can be huge.
   * If in doubt about problems encountered during execution, clear out all caches and restore dependencies from scratch.
@@ -107,7 +107,7 @@ Another common point of failure are the cloud provider credentials. The class of
 * Ensure that the Pulumi step has access to the environment variables containing the credentials.
   * If your CI service has features that allow you to restrict which pipelines or steps in a pipeline can access the secrets, then ensure that
   your pipeline/steps can access them.
-* Typo in the name of the environment variables. Refer to our [Cloud Providers]({{< relref "/docs/intro/cloud-providers/" >}}) docs and the respective setup pages for each to find the correct
+* Typo in the name of the environment variables. Refer to our [Cloud Providers]({{< relref "/docs/intro/cloud-providers" >}}) docs and the respective setup pages for each to find the correct
 environment variables to use.
 
 ## Other Errors
