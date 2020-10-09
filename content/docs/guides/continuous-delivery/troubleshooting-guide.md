@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting Guide for Pulumi in CI
+title: Troubleshooting Pulumi in CI
 meta_desc: This page walks-through the common failures encountered while running Pulumi in CI, as well as tips on how to fix them.
 menu:
     userguides:
@@ -89,8 +89,10 @@ package(s) from the private feed are accessible or you can use a pre-built binar
 that folder whenever you run your pipeline subsequently. However, note that Pulumi dependencies have a post-install step that also pulls-down
 a [plugin]({{< relref "/docs/intro/concepts/how-pulumi-works#resource-providers" >}}) binary from our CDN.
   * So be sure to cache the plugins path as well.
-  > Note that depending on the number of providers you use in your Pulumi app, the cache size can be huge.
   * If in doubt about problems encountered during execution, clear out all caches and restore dependencies from scratch.
+
+> Note that depending on the number of providers you use in your Pulumi app, the cache size can get big. Some CI services have
+> restrictions on the max size of the cache.
 
 ## Cloud Provider Credentials
 
@@ -112,7 +114,7 @@ environment variables to use.
 
 ## Other Errors
 
-### Pulumi not found in the `PATH`
+### Pulumi not found in the PATH
 
 This problem is especially prevalent for users using a Docker container-based pipeline. With most Docker container pipelines, the state of the container
 does not persist across steps, so you cannot split-out the installation step of the Pulumi CLI into another step and expect to use the modified environment
