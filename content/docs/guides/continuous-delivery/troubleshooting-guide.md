@@ -96,7 +96,7 @@ a [plugin]({{< relref "/docs/intro/concepts/how-pulumi-works#resource-providers"
 
 ## Cloud Provider Credentials
 
-Another common point of failure are the cloud provider credentials. The class of errors related to the credentials can be, but not limited to:
+Another common point of failure is the cloud provider credentials. The class of errors related to the credentials can be, but not limited to:
 
 * Incorrect credentials (wrong account, mismatched keys etc.)
 * Keys with a strict access scope that don't have access to creating specific resources
