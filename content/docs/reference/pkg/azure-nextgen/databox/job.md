@@ -12,6 +12,524 @@ meta_desc: "Explore the Job resource of the databox module, including examples, 
 
 Job Resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### JobsCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var job = new AzureNextGen.DataBox.Latest.Job("job", new AzureNextGen.DataBox.Latest.JobArgs
+        {
+            Details = 
+            {
+                { "contactDetails", new AzureNextGen.DataBox.Latest.Inputs.ContactDetailsArgs
+                {
+                    ContactName = "Public SDK Test",
+                    EmailList = 
+                    {
+                        "testing@microsoft.com",
+                    },
+                    Phone = "1234567890",
+                    PhoneExtension = "1234",
+                } },
+                { "dataImportDetails", 
+                {
+                    new AzureNextGen.DataBox.Latest.Inputs.DataImportDetailsArgs
+                    {
+                        AccountDetails = 
+                        {
+                            { "dataAccountType", "StorageAccount" },
+                            { "storageAccountId", "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourcegroups/databoxbvt/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount" },
+                        },
+                    },
+                } },
+                { "jobDetailsType", "DataBox" },
+                { "shippingAddress", new AzureNextGen.DataBox.Latest.Inputs.ShippingAddressArgs
+                {
+                    AddressType = "Commercial",
+                    City = "San Francisco",
+                    CompanyName = "Microsoft",
+                    Country = "US",
+                    PostalCode = "94107",
+                    StateOrProvince = "CA",
+                    StreetAddress1 = "16 TOWNSEND ST",
+                    StreetAddress2 = "Unit 1",
+                } },
+            },
+            JobName = "SdkJob952",
+            Location = "westus",
+            ResourceGroupName = "SdkRg5154",
+            Sku = new AzureNextGen.DataBox.Latest.Inputs.SkuArgs
+            {
+                Name = "DataBox",
+            },
+            TransferType = "ImportToAzure",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+job = azure_nextgen.databox.latest.Job("job",
+    details={
+        "contactDetails": {
+            "contactName": "Public SDK Test",
+            "emailList": ["testing@microsoft.com"],
+            "phone": "1234567890",
+            "phoneExtension": "1234",
+        },
+        "dataImportDetails": [{
+            "accountDetails": {
+                "dataAccountType": "StorageAccount",
+                "storageAccountId": "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourcegroups/databoxbvt/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount",
+            },
+        }],
+        "jobDetailsType": "DataBox",
+        "shippingAddress": {
+            "addressType": "Commercial",
+            "city": "San Francisco",
+            "companyName": "Microsoft",
+            "country": "US",
+            "postalCode": "94107",
+            "stateOrProvince": "CA",
+            "streetAddress1": "16 TOWNSEND ST",
+            "streetAddress2": "Unit 1",
+        },
+    },
+    job_name="SdkJob952",
+    location="westus",
+    resource_group_name="SdkRg5154",
+    sku={
+        "name": "DataBox",
+    },
+    transfer_type="ImportToAzure")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const job = new azure_nextgen.databox.latest.Job("job", {
+    details: {
+        contactDetails: {
+            contactName: "Public SDK Test",
+            emailList: ["testing@microsoft.com"],
+            phone: "1234567890",
+            phoneExtension: "1234",
+        },
+        dataImportDetails: [{
+            accountDetails: {
+                dataAccountType: "StorageAccount",
+                storageAccountId: "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourcegroups/databoxbvt/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount",
+            },
+        }],
+        jobDetailsType: "DataBox",
+        shippingAddress: {
+            addressType: "Commercial",
+            city: "San Francisco",
+            companyName: "Microsoft",
+            country: "US",
+            postalCode: "94107",
+            stateOrProvince: "CA",
+            streetAddress1: "16 TOWNSEND ST",
+            streetAddress2: "Unit 1",
+        },
+    },
+    jobName: "SdkJob952",
+    location: "westus",
+    resourceGroupName: "SdkRg5154",
+    sku: {
+        name: "DataBox",
+    },
+    transferType: "ImportToAzure",
+});
+
+```
+
+{{% /example %}}
+
+### JobsCreateDevicePassword
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var job = new AzureNextGen.DataBox.Latest.Job("job", new AzureNextGen.DataBox.Latest.JobArgs
+        {
+            Details = 
+            {
+                { "contactDetails", new AzureNextGen.DataBox.Latest.Inputs.ContactDetailsArgs
+                {
+                    ContactName = "Public SDK Test",
+                    EmailList = 
+                    {
+                        "testing@microsoft.com",
+                    },
+                    Phone = "1234567890",
+                    PhoneExtension = "1234",
+                } },
+                { "dataImportDetails", 
+                {
+                    new AzureNextGen.DataBox.Latest.Inputs.DataImportDetailsArgs
+                    {
+                        AccountDetails = 
+                        {
+                            { "dataAccountType", "StorageAccount" },
+                            { "sharePassword", "Abcd223@22344Abcd223@22344" },
+                            { "storageAccountId", "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/databoxbvt1/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount2" },
+                        },
+                    },
+                } },
+                { "devicePassword", "Abcd223@22344" },
+                { "jobDetailsType", "DataBox" },
+                { "shippingAddress", new AzureNextGen.DataBox.Latest.Inputs.ShippingAddressArgs
+                {
+                    AddressType = "Commercial",
+                    City = "San Francisco",
+                    CompanyName = "Microsoft",
+                    Country = "US",
+                    PostalCode = "94107",
+                    StateOrProvince = "CA",
+                    StreetAddress1 = "16 TOWNSEND ST",
+                    StreetAddress2 = "Unit 1",
+                } },
+            },
+            JobName = "SdkJob9640",
+            Location = "westus",
+            ResourceGroupName = "SdkRg7478",
+            Sku = new AzureNextGen.DataBox.Latest.Inputs.SkuArgs
+            {
+                Name = "DataBox",
+            },
+            TransferType = "ImportToAzure",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+job = azure_nextgen.databox.latest.Job("job",
+    details={
+        "contactDetails": {
+            "contactName": "Public SDK Test",
+            "emailList": ["testing@microsoft.com"],
+            "phone": "1234567890",
+            "phoneExtension": "1234",
+        },
+        "dataImportDetails": [{
+            "accountDetails": {
+                "dataAccountType": "StorageAccount",
+                "sharePassword": "Abcd223@22344Abcd223@22344",
+                "storageAccountId": "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/databoxbvt1/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount2",
+            },
+        }],
+        "devicePassword": "Abcd223@22344",
+        "jobDetailsType": "DataBox",
+        "shippingAddress": {
+            "addressType": "Commercial",
+            "city": "San Francisco",
+            "companyName": "Microsoft",
+            "country": "US",
+            "postalCode": "94107",
+            "stateOrProvince": "CA",
+            "streetAddress1": "16 TOWNSEND ST",
+            "streetAddress2": "Unit 1",
+        },
+    },
+    job_name="SdkJob9640",
+    location="westus",
+    resource_group_name="SdkRg7478",
+    sku={
+        "name": "DataBox",
+    },
+    transfer_type="ImportToAzure")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const job = new azure_nextgen.databox.latest.Job("job", {
+    details: {
+        contactDetails: {
+            contactName: "Public SDK Test",
+            emailList: ["testing@microsoft.com"],
+            phone: "1234567890",
+            phoneExtension: "1234",
+        },
+        dataImportDetails: [{
+            accountDetails: {
+                dataAccountType: "StorageAccount",
+                sharePassword: "Abcd223@22344Abcd223@22344",
+                storageAccountId: "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/databoxbvt1/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount2",
+            },
+        }],
+        devicePassword: "Abcd223@22344",
+        jobDetailsType: "DataBox",
+        shippingAddress: {
+            addressType: "Commercial",
+            city: "San Francisco",
+            companyName: "Microsoft",
+            country: "US",
+            postalCode: "94107",
+            stateOrProvince: "CA",
+            streetAddress1: "16 TOWNSEND ST",
+            streetAddress2: "Unit 1",
+        },
+    },
+    jobName: "SdkJob9640",
+    location: "westus",
+    resourceGroupName: "SdkRg7478",
+    sku: {
+        name: "DataBox",
+    },
+    transferType: "ImportToAzure",
+});
+
+```
+
+{{% /example %}}
+
+### JobsCreateExport
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var job = new AzureNextGen.DataBox.Latest.Job("job", new AzureNextGen.DataBox.Latest.JobArgs
+        {
+            Details = 
+            {
+                { "contactDetails", new AzureNextGen.DataBox.Latest.Inputs.ContactDetailsArgs
+                {
+                    ContactName = "Public SDK Test",
+                    EmailList = 
+                    {
+                        "testing@microsoft.com",
+                    },
+                    Phone = "1234567890",
+                    PhoneExtension = "1234",
+                } },
+                { "dataExportDetails", 
+                {
+                    new AzureNextGen.DataBox.Latest.Inputs.DataExportDetailsArgs
+                    {
+                        AccountDetails = 
+                        {
+                            { "dataAccountType", "StorageAccount" },
+                            { "storageAccountId", "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/akvenkat/providers/Microsoft.Storage/storageAccounts/aaaaaa2" },
+                        },
+                        TransferConfiguration = new AzureNextGen.DataBox.Latest.Inputs.TransferConfigurationArgs
+                        {
+                            TransferAllDetails = new AzureNextGen.DataBox.Latest.Inputs.TransferConfigurationTransferAllDetailsArgs
+                            {
+                                Include = new AzureNextGen.DataBox.Latest.Inputs.TransferAllDetailsArgs
+                                {
+                                    DataAccountType = "StorageAccount",
+                                    TransferAllBlobs = true,
+                                    TransferAllFiles = true,
+                                },
+                            },
+                            TransferConfigurationType = "TransferAll",
+                        },
+                    },
+                } },
+                { "jobDetailsType", "DataBox" },
+                { "shippingAddress", new AzureNextGen.DataBox.Latest.Inputs.ShippingAddressArgs
+                {
+                    AddressType = "Commercial",
+                    City = "San Francisco",
+                    CompanyName = "Microsoft",
+                    Country = "US",
+                    PostalCode = "94107",
+                    StateOrProvince = "CA",
+                    StreetAddress1 = "16 TOWNSEND ST",
+                    StreetAddress2 = "Unit 1",
+                } },
+            },
+            JobName = "SdkJob6429",
+            Location = "westus",
+            ResourceGroupName = "SdkRg8091",
+            Sku = new AzureNextGen.DataBox.Latest.Inputs.SkuArgs
+            {
+                Name = "DataBox",
+            },
+            TransferType = "ExportFromAzure",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+job = azure_nextgen.databox.latest.Job("job",
+    details={
+        "contactDetails": {
+            "contactName": "Public SDK Test",
+            "emailList": ["testing@microsoft.com"],
+            "phone": "1234567890",
+            "phoneExtension": "1234",
+        },
+        "dataExportDetails": [{
+            "accountDetails": {
+                "dataAccountType": "StorageAccount",
+                "storageAccountId": "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/akvenkat/providers/Microsoft.Storage/storageAccounts/aaaaaa2",
+            },
+            "transferConfiguration": {
+                "transferAllDetails": {
+                    "include": {
+                        "dataAccountType": "StorageAccount",
+                        "transferAllBlobs": True,
+                        "transferAllFiles": True,
+                    },
+                },
+                "transferConfigurationType": "TransferAll",
+            },
+        }],
+        "jobDetailsType": "DataBox",
+        "shippingAddress": {
+            "addressType": "Commercial",
+            "city": "San Francisco",
+            "companyName": "Microsoft",
+            "country": "US",
+            "postalCode": "94107",
+            "stateOrProvince": "CA",
+            "streetAddress1": "16 TOWNSEND ST",
+            "streetAddress2": "Unit 1",
+        },
+    },
+    job_name="SdkJob6429",
+    location="westus",
+    resource_group_name="SdkRg8091",
+    sku={
+        "name": "DataBox",
+    },
+    transfer_type="ExportFromAzure")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const job = new azure_nextgen.databox.latest.Job("job", {
+    details: {
+        contactDetails: {
+            contactName: "Public SDK Test",
+            emailList: ["testing@microsoft.com"],
+            phone: "1234567890",
+            phoneExtension: "1234",
+        },
+        dataExportDetails: [{
+            accountDetails: {
+                dataAccountType: "StorageAccount",
+                storageAccountId: "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/akvenkat/providers/Microsoft.Storage/storageAccounts/aaaaaa2",
+            },
+            transferConfiguration: {
+                transferAllDetails: {
+                    include: {
+                        dataAccountType: "StorageAccount",
+                        transferAllBlobs: true,
+                        transferAllFiles: true,
+                    },
+                },
+                transferConfigurationType: "TransferAll",
+            },
+        }],
+        jobDetailsType: "DataBox",
+        shippingAddress: {
+            addressType: "Commercial",
+            city: "San Francisco",
+            companyName: "Microsoft",
+            country: "US",
+            postalCode: "94107",
+            stateOrProvince: "CA",
+            streetAddress1: "16 TOWNSEND ST",
+            streetAddress2: "Unit 1",
+        },
+    },
+    jobName: "SdkJob6429",
+    location: "westus",
+    resourceGroupName: "SdkRg8091",
+    sku: {
+        name: "DataBox",
+    },
+    transferType: "ExportFromAzure",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Job Resource {#create}
@@ -1168,7 +1686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#info_csharp" style="color: inherit; text-decoration: inherit;">Info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}Additional error info.{{% /md %}}</dd>
 
@@ -1195,7 +1713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#info_go" style="color: inherit; text-decoration: inherit;">Info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}Additional error info.{{% /md %}}</dd>
 
@@ -1222,7 +1740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#info_nodejs" style="color: inherit; text-decoration: inherit;">info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}Additional error info.{{% /md %}}</dd>
 
@@ -1249,7 +1767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#info_python" style="color: inherit; text-decoration: inherit;">info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}Additional error info.{{% /md %}}</dd>
 
@@ -7915,7 +8433,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#jobstagedetails_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Stage<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}Job Stage Details{{% /md %}}</dd>
 
@@ -7972,7 +8490,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#jobstagedetails_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Stage<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}Job Stage Details{{% /md %}}</dd>
 
@@ -8029,7 +8547,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#jobstagedetails_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Stage<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}Job Stage Details{{% /md %}}</dd>
 
@@ -8086,7 +8604,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#jobstagedetails_python" style="color: inherit; text-decoration: inherit;">job<wbr>Stage<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}Job Stage Details{{% /md %}}</dd>
 

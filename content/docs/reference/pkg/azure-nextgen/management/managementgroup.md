@@ -12,6 +12,112 @@ meta_desc: "Explore the ManagementGroup resource of the management module, inclu
 
 The management group details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### PutManagementGroup
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managementGroup = new AzureNextGen.Management.Latest.ManagementGroup("managementGroup", new AzureNextGen.Management.Latest.ManagementGroupArgs
+        {
+            Details = new AzureNextGen.Management.Latest.Inputs.CreateManagementGroupDetailsArgs
+            {
+                Parent = new AzureNextGen.Management.Latest.Inputs.CreateParentGroupInfoArgs
+                {
+                    Id = "/providers/Microsoft.Management/managementGroups/RootGroup",
+                },
+            },
+            DisplayName = "ChildGroup",
+            GroupId = "ChildGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	management "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/management/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := management.NewManagementGroup(ctx, "managementGroup", &management.ManagementGroupArgs{
+			Details: &management.CreateManagementGroupDetailsArgs{
+				Parent: &management.CreateParentGroupInfoArgs{
+					Id: pulumi.String("/providers/Microsoft.Management/managementGroups/RootGroup"),
+				},
+			},
+			DisplayName: pulumi.String("ChildGroup"),
+			GroupId:     pulumi.String("ChildGroup"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+management_group = azure_nextgen.management.latest.ManagementGroup("managementGroup",
+    details={
+        "parent": {
+            "id": "/providers/Microsoft.Management/managementGroups/RootGroup",
+        },
+    },
+    display_name="ChildGroup",
+    group_id="ChildGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const managementGroup = new azure_nextgen.management.latest.ManagementGroup("managementGroup", {
+    details: {
+        parent: {
+            id: "/providers/Microsoft.Management/managementGroups/RootGroup",
+        },
+    },
+    displayName: "ChildGroup",
+    groupId: "ChildGroup",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ManagementGroup Resource {#create}

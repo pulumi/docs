@@ -693,7 +693,7 @@ structure is described below.
 <a href="#acls_python" style="color: inherit; text-decoration: inherit;">acls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcontaineracl">List[Get<wbr>Container<wbr>Acl]</a></span>
+        <span class="property-type"><a href="#getcontaineracl">Sequence[Get<wbr>Container<wbr>Acl]</a></span>
     </dt>
     <dd>{{% md %}}The list of ACLs assigned to a container. The `read` structure is
 described below.
@@ -705,7 +705,7 @@ described below.
 <a href="#consumers_python" style="color: inherit; text-decoration: inherit;">consumers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcontainerconsumer">List[Get<wbr>Container<wbr>Consumer]</a></span>
+        <span class="property-type"><a href="#getcontainerconsumer">Sequence[Get<wbr>Container<wbr>Consumer]</a></span>
     </dt>
     <dd>{{% md %}}The list of the container consumers. The structure is described
 below.
@@ -761,7 +761,7 @@ below.
 <a href="#secret_refs_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>refs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcontainersecretref">List[Get<wbr>Container<wbr>Secret<wbr>Ref]</a></span>
+        <span class="property-type"><a href="#getcontainersecretref">Sequence[Get<wbr>Container<wbr>Secret<wbr>Ref]</a></span>
     </dt>
     <dd>{{% md %}}A set of dictionaries containing references to secrets. The
 structure is described below.
@@ -1134,7 +1134,7 @@ when `project_access` is set to `false`.
 <a href="#users_python" style="color: inherit; text-decoration: inherit;">users</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of user IDs, which are allowed to access the container,
 when `project_access` is set to `false`.
@@ -1426,6 +1426,6 @@ when `project_access` is set to `false`.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-providers/terraform-provider-openstack).</dd>
+	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
 </dl>
 

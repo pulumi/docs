@@ -38,11 +38,11 @@ class MyStack : Stack
                     {
                         RouteConfigurationOverride = 
                         {
-                            { "@odata.type", "#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration" },
                             { "customFragment", "fragment" },
                             { "customHost", "www.bing.com" },
                             { "customPath", "/api" },
                             { "customQueryString", "a=b" },
+                            { "odataType", "#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration" },
                             { "redirectProtocol", "HttpsOnly" },
                             { "redirectType", "Moved" },
                         },
@@ -102,7 +102,6 @@ class MyStack : Stack
                     {
                         RouteConfigurationOverride = 
                         {
-                            { "@odata.type", "#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration" },
                             { "backendPool", new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
                             {
                                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/backendPools/backendPool1",
@@ -114,8 +113,8 @@ class MyStack : Stack
                                 QueryParameterStripDirective = "StripOnly",
                                 QueryParameters = "a=b,p=q",
                             } },
-                            { "customForwardingPath", null },
                             { "forwardingProtocol", "HttpsOnly" },
+                            { "odataType", "#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration" },
                         },
                     },
                     MatchConditions = 
@@ -167,11 +166,11 @@ rules_engine = azure_nextgen.network.latest.RulesEngine("rulesEngine",
         {
             "action": {
                 "routeConfigurationOverride": {
-                    "@odata.type": "#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration",
                     "customFragment": "fragment",
                     "customHost": "www.bing.com",
                     "customPath": "/api",
                     "customQueryString": "a=b",
+                    "odataType": "#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration",
                     "redirectProtocol": "HttpsOnly",
                     "redirectType": "Moved",
                 },
@@ -205,7 +204,6 @@ rules_engine = azure_nextgen.network.latest.RulesEngine("rulesEngine",
         {
             "action": {
                 "routeConfigurationOverride": {
-                    "@odata.type": "#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration",
                     "backendPool": {
                         "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/backendPools/backendPool1",
                     },
@@ -215,8 +213,8 @@ rules_engine = azure_nextgen.network.latest.RulesEngine("rulesEngine",
                         "queryParameterStripDirective": "StripOnly",
                         "queryParameters": "a=b,p=q",
                     },
-                    "customForwardingPath": None,
                     "forwardingProtocol": "HttpsOnly",
+                    "odataType": "#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration",
                 },
             },
             "matchConditions": [{
@@ -250,11 +248,11 @@ const rulesEngine = new azure_nextgen.network.latest.RulesEngine("rulesEngine", 
         {
             action: {
                 routeConfigurationOverride: {
-                    "@odata.type": "#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration",
                     customFragment: "fragment",
                     customHost: "www.bing.com",
                     customPath: "/api",
                     customQueryString: "a=b",
+                    odataType: "#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration",
                     redirectProtocol: "HttpsOnly",
                     redirectType: "Moved",
                 },
@@ -288,7 +286,6 @@ const rulesEngine = new azure_nextgen.network.latest.RulesEngine("rulesEngine", 
         {
             action: {
                 routeConfigurationOverride: {
-                    "@odata.type": "#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration",
                     backendPool: {
                         id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/backendPools/backendPool1",
                     },
@@ -298,8 +295,8 @@ const rulesEngine = new azure_nextgen.network.latest.RulesEngine("rulesEngine", 
                         queryParameterStripDirective: "StripOnly",
                         queryParameters: "a=b,p=q",
                     },
-                    customForwardingPath: undefined,
                     forwardingProtocol: "HttpsOnly",
+                    odataType: "#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration",
                 },
             },
             matchConditions: [{
@@ -333,7 +330,7 @@ const rulesEngine = new azure_nextgen.network.latest.RulesEngine("rulesEngine", 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RulesEngine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">front_door_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[RulesEngineRule]]</span> = None<span class="p">, </span><span class="nx">rules_engine_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RulesEngine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">front_door_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[RulesEngineRule]]</span> = None<span class="p">, </span><span class="nx">rules_engine_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -537,16 +534,6 @@ The RulesEngine resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resourcestate_csharp">
-<a href="#resourcestate_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="rules_csharp">
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span> 
@@ -591,16 +578,6 @@ The RulesEngine resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the Rules Engine which is unique within the Front Door.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resourcestate_go">
-<a href="#resourcestate_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -651,16 +628,6 @@ The RulesEngine resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resourcestate_nodejs">
-<a href="#resourcestate_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="rules_nodejs">
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
@@ -705,16 +672,6 @@ The RulesEngine resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the Rules Engine which is unique within the Front Door.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resource_state_python">
-<a href="#resource_state_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -766,6 +723,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="resourcestate_csharp">
+<a href="#resourcestate_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
@@ -800,6 +767,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="resourcestate_go">
+<a href="#resourcestate_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -840,6 +817,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="resourcestate_nodejs">
+<a href="#resourcestate_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
@@ -874,6 +861,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="resource_state_python">
+<a href="#resource_state_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -4025,7 +4022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4042,7 +4039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4059,7 +4056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4076,7 +4073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

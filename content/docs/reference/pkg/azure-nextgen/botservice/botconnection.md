@@ -31,6 +31,26 @@ class MyStack : Stack
             ConnectionName = "sampleConnection",
             Etag = "etag1",
             Location = "West US",
+            Properties = new AzureNextGen.BotService.Latest.Inputs.ConnectionSettingPropertiesArgs
+            {
+                ClientId = "sampleclientid",
+                ClientSecret = "samplesecret",
+                Parameters = 
+                {
+                    new AzureNextGen.BotService.Latest.Inputs.ConnectionSettingParameterArgs
+                    {
+                        Key = "key1",
+                        Value = "value1",
+                    },
+                    new AzureNextGen.BotService.Latest.Inputs.ConnectionSettingParameterArgs
+                    {
+                        Key = "key2",
+                        Value = "value2",
+                    },
+                },
+                Scopes = "samplescope",
+                ServiceProviderId = "serviceproviderid",
+            },
             ResourceGroupName = "OneResourceGroupName",
             ResourceName = "samplebotname",
         });
@@ -48,16 +68,32 @@ class MyStack : Stack
 package main
 
 import (
-	botservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/botservice/latest"
+	botservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/botservice/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := botservice.NewBotConnection(ctx, "botConnection", &botservice.BotConnectionArgs{
-			ConnectionName:    pulumi.String("sampleConnection"),
-			Etag:              pulumi.String("etag1"),
-			Location:          pulumi.String("West US"),
+			ConnectionName: pulumi.String("sampleConnection"),
+			Etag:           pulumi.String("etag1"),
+			Location:       pulumi.String("West US"),
+			Properties: &botservice.ConnectionSettingPropertiesArgs{
+				ClientId:     pulumi.String("sampleclientid"),
+				ClientSecret: pulumi.String("samplesecret"),
+				Parameters: botservice.ConnectionSettingParameterArray{
+					&botservice.ConnectionSettingParameterArgs{
+						Key:   pulumi.String("key1"),
+						Value: pulumi.String("value1"),
+					},
+					&botservice.ConnectionSettingParameterArgs{
+						Key:   pulumi.String("key2"),
+						Value: pulumi.String("value2"),
+					},
+				},
+				Scopes:            pulumi.String("samplescope"),
+				ServiceProviderId: pulumi.String("serviceproviderid"),
+			},
 			ResourceGroupName: pulumi.String("OneResourceGroupName"),
 			ResourceName:      pulumi.String("samplebotname"),
 		})
@@ -82,6 +118,22 @@ bot_connection = azure_nextgen.botservice.latest.BotConnection("botConnection",
     connection_name="sampleConnection",
     etag="etag1",
     location="West US",
+    properties={
+        "clientId": "sampleclientid",
+        "clientSecret": "samplesecret",
+        "parameters": [
+            {
+                "key": "key1",
+                "value": "value1",
+            },
+            {
+                "key": "key2",
+                "value": "value2",
+            },
+        ],
+        "scopes": "samplescope",
+        "serviceProviderId": "serviceproviderid",
+    },
     resource_group_name="OneResourceGroupName",
     resource_name="samplebotname")
 
@@ -99,6 +151,22 @@ const botConnection = new azure_nextgen.botservice.latest.BotConnection("botConn
     connectionName: "sampleConnection",
     etag: "etag1",
     location: "West US",
+    properties: {
+        clientId: "sampleclientid",
+        clientSecret: "samplesecret",
+        parameters: [
+            {
+                key: "key1",
+                value: "value1",
+            },
+            {
+                key: "key2",
+                value: "value2",
+            },
+        ],
+        scopes: "samplescope",
+        serviceProviderId: "serviceproviderid",
+    },
     resourceGroupName: "OneResourceGroupName",
     resourceName: "samplebotname",
 });

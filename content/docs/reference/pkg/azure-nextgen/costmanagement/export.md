@@ -12,6 +12,1301 @@ meta_desc: "Explore the Export resource of the costmanagement module, including 
 
 An export resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ExportCreateOrUpdateByBillingAccount
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var export = new AzureNextGen.CostManagement.Latest.Export("export", new AzureNextGen.CostManagement.Latest.ExportArgs
+        {
+            Definition = new AzureNextGen.CostManagement.Latest.Inputs.ExportDefinitionArgs
+            {
+                DataSet = new AzureNextGen.CostManagement.Latest.Inputs.ExportDatasetArgs
+                {
+                    Configuration = new AzureNextGen.CostManagement.Latest.Inputs.ExportDatasetConfigurationArgs
+                    {
+                        Columns = 
+                        {
+                            "Date",
+                            "MeterId",
+                            "ResourceId",
+                            "ResourceLocation",
+                            "Quantity",
+                        },
+                    },
+                    Granularity = "Daily",
+                },
+                Timeframe = "MonthToDate",
+                Type = "ActualCost",
+            },
+            DeliveryInfo = new AzureNextGen.CostManagement.Latest.Inputs.ExportDeliveryInfoArgs
+            {
+                Destination = new AzureNextGen.CostManagement.Latest.Inputs.ExportDeliveryDestinationArgs
+                {
+                    Container = "exports",
+                    ResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182",
+                    RootFolderPath = "ad-hoc",
+                },
+            },
+            ExportName = "TestExport",
+            Format = "Csv",
+            Schedule = new AzureNextGen.CostManagement.Latest.Inputs.ExportScheduleArgs
+            {
+                Recurrence = "Weekly",
+                RecurrencePeriod = new AzureNextGen.CostManagement.Latest.Inputs.ExportRecurrencePeriodArgs
+                {
+                    From = "2020-06-01T00:00:00Z",
+                    To = "2020-10-31T00:00:00Z",
+                },
+                Status = "Active",
+            },
+            Scope = "providers/Microsoft.Billing/billingAccounts/123456",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	costmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/costmanagement/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := costmanagement.NewExport(ctx, "export", &costmanagement.ExportArgs{
+			Definition: &costmanagement.ExportDefinitionArgs{
+				DataSet: &costmanagement.ExportDatasetArgs{
+					Configuration: &costmanagement.ExportDatasetConfigurationArgs{
+						Columns: pulumi.StringArray{
+							pulumi.String("Date"),
+							pulumi.String("MeterId"),
+							pulumi.String("ResourceId"),
+							pulumi.String("ResourceLocation"),
+							pulumi.String("Quantity"),
+						},
+					},
+					Granularity: pulumi.String("Daily"),
+				},
+				Timeframe: pulumi.String("MonthToDate"),
+				Type:      pulumi.String("ActualCost"),
+			},
+			DeliveryInfo: &costmanagement.ExportDeliveryInfoArgs{
+				Destination: &costmanagement.ExportDeliveryDestinationArgs{
+					Container:      pulumi.String("exports"),
+					ResourceId:     pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182"),
+					RootFolderPath: pulumi.String("ad-hoc"),
+				},
+			},
+			ExportName: pulumi.String("TestExport"),
+			Format:     pulumi.String("Csv"),
+			Schedule: &costmanagement.ExportScheduleArgs{
+				Recurrence: pulumi.String("Weekly"),
+				RecurrencePeriod: &costmanagement.ExportRecurrencePeriodArgs{
+					From: pulumi.String("2020-06-01T00:00:00Z"),
+					To:   pulumi.String("2020-10-31T00:00:00Z"),
+				},
+				Status: pulumi.String("Active"),
+			},
+			Scope: pulumi.String("providers/Microsoft.Billing/billingAccounts/123456"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+export = azure_nextgen.costmanagement.latest.Export("export",
+    definition={
+        "dataSet": {
+            "configuration": {
+                "columns": [
+                    "Date",
+                    "MeterId",
+                    "ResourceId",
+                    "ResourceLocation",
+                    "Quantity",
+                ],
+            },
+            "granularity": "Daily",
+        },
+        "timeframe": "MonthToDate",
+        "type": "ActualCost",
+    },
+    delivery_info={
+        "destination": {
+            "container": "exports",
+            "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182",
+            "rootFolderPath": "ad-hoc",
+        },
+    },
+    export_name="TestExport",
+    format="Csv",
+    schedule={
+        "recurrence": "Weekly",
+        "recurrencePeriod": {
+            "from": "2020-06-01T00:00:00Z",
+            "to": "2020-10-31T00:00:00Z",
+        },
+        "status": "Active",
+    },
+    scope="providers/Microsoft.Billing/billingAccounts/123456")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const _export = new azure_nextgen.costmanagement.latest.Export("export", {
+    definition: {
+        dataSet: {
+            configuration: {
+                columns: [
+                    "Date",
+                    "MeterId",
+                    "ResourceId",
+                    "ResourceLocation",
+                    "Quantity",
+                ],
+            },
+            granularity: "Daily",
+        },
+        timeframe: "MonthToDate",
+        type: "ActualCost",
+    },
+    deliveryInfo: {
+        destination: {
+            container: "exports",
+            resourceId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182",
+            rootFolderPath: "ad-hoc",
+        },
+    },
+    exportName: "TestExport",
+    format: "Csv",
+    schedule: {
+        recurrence: "Weekly",
+        recurrencePeriod: {
+            from: "2020-06-01T00:00:00Z",
+            to: "2020-10-31T00:00:00Z",
+        },
+        status: "Active",
+    },
+    scope: "providers/Microsoft.Billing/billingAccounts/123456",
+});
+
+```
+
+{{% /example %}}
+
+### ExportCreateOrUpdateByDepartment
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var export = new AzureNextGen.CostManagement.Latest.Export("export", new AzureNextGen.CostManagement.Latest.ExportArgs
+        {
+            Definition = new AzureNextGen.CostManagement.Latest.Inputs.ExportDefinitionArgs
+            {
+                DataSet = new AzureNextGen.CostManagement.Latest.Inputs.ExportDatasetArgs
+                {
+                    Configuration = new AzureNextGen.CostManagement.Latest.Inputs.ExportDatasetConfigurationArgs
+                    {
+                        Columns = 
+                        {
+                            "Date",
+                            "MeterId",
+                            "ResourceId",
+                            "ResourceLocation",
+                            "Quantity",
+                        },
+                    },
+                    Granularity = "Daily",
+                },
+                Timeframe = "MonthToDate",
+                Type = "ActualCost",
+            },
+            DeliveryInfo = new AzureNextGen.CostManagement.Latest.Inputs.ExportDeliveryInfoArgs
+            {
+                Destination = new AzureNextGen.CostManagement.Latest.Inputs.ExportDeliveryDestinationArgs
+                {
+                    Container = "exports",
+                    ResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182",
+                    RootFolderPath = "ad-hoc",
+                },
+            },
+            ExportName = "TestExport",
+            Format = "Csv",
+            Schedule = new AzureNextGen.CostManagement.Latest.Inputs.ExportScheduleArgs
+            {
+                Recurrence = "Weekly",
+                RecurrencePeriod = new AzureNextGen.CostManagement.Latest.Inputs.ExportRecurrencePeriodArgs
+                {
+                    From = "2020-06-01T00:00:00Z",
+                    To = "2020-10-31T00:00:00Z",
+                },
+                Status = "Active",
+            },
+            Scope = "providers/Microsoft.Billing/billingAccounts/12/departments/1234",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	costmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/costmanagement/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := costmanagement.NewExport(ctx, "export", &costmanagement.ExportArgs{
+			Definition: &costmanagement.ExportDefinitionArgs{
+				DataSet: &costmanagement.ExportDatasetArgs{
+					Configuration: &costmanagement.ExportDatasetConfigurationArgs{
+						Columns: pulumi.StringArray{
+							pulumi.String("Date"),
+							pulumi.String("MeterId"),
+							pulumi.String("ResourceId"),
+							pulumi.String("ResourceLocation"),
+							pulumi.String("Quantity"),
+						},
+					},
+					Granularity: pulumi.String("Daily"),
+				},
+				Timeframe: pulumi.String("MonthToDate"),
+				Type:      pulumi.String("ActualCost"),
+			},
+			DeliveryInfo: &costmanagement.ExportDeliveryInfoArgs{
+				Destination: &costmanagement.ExportDeliveryDestinationArgs{
+					Container:      pulumi.String("exports"),
+					ResourceId:     pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182"),
+					RootFolderPath: pulumi.String("ad-hoc"),
+				},
+			},
+			ExportName: pulumi.String("TestExport"),
+			Format:     pulumi.String("Csv"),
+			Schedule: &costmanagement.ExportScheduleArgs{
+				Recurrence: pulumi.String("Weekly"),
+				RecurrencePeriod: &costmanagement.ExportRecurrencePeriodArgs{
+					From: pulumi.String("2020-06-01T00:00:00Z"),
+					To:   pulumi.String("2020-10-31T00:00:00Z"),
+				},
+				Status: pulumi.String("Active"),
+			},
+			Scope: pulumi.String("providers/Microsoft.Billing/billingAccounts/12/departments/1234"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+export = azure_nextgen.costmanagement.latest.Export("export",
+    definition={
+        "dataSet": {
+            "configuration": {
+                "columns": [
+                    "Date",
+                    "MeterId",
+                    "ResourceId",
+                    "ResourceLocation",
+                    "Quantity",
+                ],
+            },
+            "granularity": "Daily",
+        },
+        "timeframe": "MonthToDate",
+        "type": "ActualCost",
+    },
+    delivery_info={
+        "destination": {
+            "container": "exports",
+            "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182",
+            "rootFolderPath": "ad-hoc",
+        },
+    },
+    export_name="TestExport",
+    format="Csv",
+    schedule={
+        "recurrence": "Weekly",
+        "recurrencePeriod": {
+            "from": "2020-06-01T00:00:00Z",
+            "to": "2020-10-31T00:00:00Z",
+        },
+        "status": "Active",
+    },
+    scope="providers/Microsoft.Billing/billingAccounts/12/departments/1234")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const _export = new azure_nextgen.costmanagement.latest.Export("export", {
+    definition: {
+        dataSet: {
+            configuration: {
+                columns: [
+                    "Date",
+                    "MeterId",
+                    "ResourceId",
+                    "ResourceLocation",
+                    "Quantity",
+                ],
+            },
+            granularity: "Daily",
+        },
+        timeframe: "MonthToDate",
+        type: "ActualCost",
+    },
+    deliveryInfo: {
+        destination: {
+            container: "exports",
+            resourceId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182",
+            rootFolderPath: "ad-hoc",
+        },
+    },
+    exportName: "TestExport",
+    format: "Csv",
+    schedule: {
+        recurrence: "Weekly",
+        recurrencePeriod: {
+            from: "2020-06-01T00:00:00Z",
+            to: "2020-10-31T00:00:00Z",
+        },
+        status: "Active",
+    },
+    scope: "providers/Microsoft.Billing/billingAccounts/12/departments/1234",
+});
+
+```
+
+{{% /example %}}
+
+### ExportCreateOrUpdateByEnrollmentAccount
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var export = new AzureNextGen.CostManagement.Latest.Export("export", new AzureNextGen.CostManagement.Latest.ExportArgs
+        {
+            Definition = new AzureNextGen.CostManagement.Latest.Inputs.ExportDefinitionArgs
+            {
+                DataSet = new AzureNextGen.CostManagement.Latest.Inputs.ExportDatasetArgs
+                {
+                    Configuration = new AzureNextGen.CostManagement.Latest.Inputs.ExportDatasetConfigurationArgs
+                    {
+                        Columns = 
+                        {
+                            "Date",
+                            "MeterId",
+                            "ResourceId",
+                            "ResourceLocation",
+                            "Quantity",
+                        },
+                    },
+                    Granularity = "Daily",
+                },
+                Timeframe = "MonthToDate",
+                Type = "ActualCost",
+            },
+            DeliveryInfo = new AzureNextGen.CostManagement.Latest.Inputs.ExportDeliveryInfoArgs
+            {
+                Destination = new AzureNextGen.CostManagement.Latest.Inputs.ExportDeliveryDestinationArgs
+                {
+                    Container = "exports",
+                    ResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182",
+                    RootFolderPath = "ad-hoc",
+                },
+            },
+            ExportName = "TestExport",
+            Format = "Csv",
+            Schedule = new AzureNextGen.CostManagement.Latest.Inputs.ExportScheduleArgs
+            {
+                Recurrence = "Weekly",
+                RecurrencePeriod = new AzureNextGen.CostManagement.Latest.Inputs.ExportRecurrencePeriodArgs
+                {
+                    From = "2020-06-01T00:00:00Z",
+                    To = "2020-10-31T00:00:00Z",
+                },
+                Status = "Active",
+            },
+            Scope = "providers/Microsoft.Billing/billingAccounts/100/enrollmentAccounts/456",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	costmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/costmanagement/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := costmanagement.NewExport(ctx, "export", &costmanagement.ExportArgs{
+			Definition: &costmanagement.ExportDefinitionArgs{
+				DataSet: &costmanagement.ExportDatasetArgs{
+					Configuration: &costmanagement.ExportDatasetConfigurationArgs{
+						Columns: pulumi.StringArray{
+							pulumi.String("Date"),
+							pulumi.String("MeterId"),
+							pulumi.String("ResourceId"),
+							pulumi.String("ResourceLocation"),
+							pulumi.String("Quantity"),
+						},
+					},
+					Granularity: pulumi.String("Daily"),
+				},
+				Timeframe: pulumi.String("MonthToDate"),
+				Type:      pulumi.String("ActualCost"),
+			},
+			DeliveryInfo: &costmanagement.ExportDeliveryInfoArgs{
+				Destination: &costmanagement.ExportDeliveryDestinationArgs{
+					Container:      pulumi.String("exports"),
+					ResourceId:     pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182"),
+					RootFolderPath: pulumi.String("ad-hoc"),
+				},
+			},
+			ExportName: pulumi.String("TestExport"),
+			Format:     pulumi.String("Csv"),
+			Schedule: &costmanagement.ExportScheduleArgs{
+				Recurrence: pulumi.String("Weekly"),
+				RecurrencePeriod: &costmanagement.ExportRecurrencePeriodArgs{
+					From: pulumi.String("2020-06-01T00:00:00Z"),
+					To:   pulumi.String("2020-10-31T00:00:00Z"),
+				},
+				Status: pulumi.String("Active"),
+			},
+			Scope: pulumi.String("providers/Microsoft.Billing/billingAccounts/100/enrollmentAccounts/456"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+export = azure_nextgen.costmanagement.latest.Export("export",
+    definition={
+        "dataSet": {
+            "configuration": {
+                "columns": [
+                    "Date",
+                    "MeterId",
+                    "ResourceId",
+                    "ResourceLocation",
+                    "Quantity",
+                ],
+            },
+            "granularity": "Daily",
+        },
+        "timeframe": "MonthToDate",
+        "type": "ActualCost",
+    },
+    delivery_info={
+        "destination": {
+            "container": "exports",
+            "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182",
+            "rootFolderPath": "ad-hoc",
+        },
+    },
+    export_name="TestExport",
+    format="Csv",
+    schedule={
+        "recurrence": "Weekly",
+        "recurrencePeriod": {
+            "from": "2020-06-01T00:00:00Z",
+            "to": "2020-10-31T00:00:00Z",
+        },
+        "status": "Active",
+    },
+    scope="providers/Microsoft.Billing/billingAccounts/100/enrollmentAccounts/456")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const _export = new azure_nextgen.costmanagement.latest.Export("export", {
+    definition: {
+        dataSet: {
+            configuration: {
+                columns: [
+                    "Date",
+                    "MeterId",
+                    "ResourceId",
+                    "ResourceLocation",
+                    "Quantity",
+                ],
+            },
+            granularity: "Daily",
+        },
+        timeframe: "MonthToDate",
+        type: "ActualCost",
+    },
+    deliveryInfo: {
+        destination: {
+            container: "exports",
+            resourceId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182",
+            rootFolderPath: "ad-hoc",
+        },
+    },
+    exportName: "TestExport",
+    format: "Csv",
+    schedule: {
+        recurrence: "Weekly",
+        recurrencePeriod: {
+            from: "2020-06-01T00:00:00Z",
+            to: "2020-10-31T00:00:00Z",
+        },
+        status: "Active",
+    },
+    scope: "providers/Microsoft.Billing/billingAccounts/100/enrollmentAccounts/456",
+});
+
+```
+
+{{% /example %}}
+
+### ExportCreateOrUpdateByManagementGroup
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var export = new AzureNextGen.CostManagement.Latest.Export("export", new AzureNextGen.CostManagement.Latest.ExportArgs
+        {
+            Definition = new AzureNextGen.CostManagement.Latest.Inputs.ExportDefinitionArgs
+            {
+                DataSet = new AzureNextGen.CostManagement.Latest.Inputs.ExportDatasetArgs
+                {
+                    Configuration = new AzureNextGen.CostManagement.Latest.Inputs.ExportDatasetConfigurationArgs
+                    {
+                        Columns = 
+                        {
+                            "Date",
+                            "MeterId",
+                            "ResourceId",
+                            "ResourceLocation",
+                            "Quantity",
+                        },
+                    },
+                    Granularity = "Daily",
+                },
+                Timeframe = "MonthToDate",
+                Type = "ActualCost",
+            },
+            DeliveryInfo = new AzureNextGen.CostManagement.Latest.Inputs.ExportDeliveryInfoArgs
+            {
+                Destination = new AzureNextGen.CostManagement.Latest.Inputs.ExportDeliveryDestinationArgs
+                {
+                    Container = "exports",
+                    ResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182",
+                    RootFolderPath = "ad-hoc",
+                },
+            },
+            ExportName = "TestExport",
+            Format = "Csv",
+            Schedule = new AzureNextGen.CostManagement.Latest.Inputs.ExportScheduleArgs
+            {
+                Recurrence = "Weekly",
+                RecurrencePeriod = new AzureNextGen.CostManagement.Latest.Inputs.ExportRecurrencePeriodArgs
+                {
+                    From = "2020-06-01T00:00:00Z",
+                    To = "2020-10-31T00:00:00Z",
+                },
+                Status = "Active",
+            },
+            Scope = "providers/Microsoft.Management/managementGroups/TestMG",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	costmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/costmanagement/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := costmanagement.NewExport(ctx, "export", &costmanagement.ExportArgs{
+			Definition: &costmanagement.ExportDefinitionArgs{
+				DataSet: &costmanagement.ExportDatasetArgs{
+					Configuration: &costmanagement.ExportDatasetConfigurationArgs{
+						Columns: pulumi.StringArray{
+							pulumi.String("Date"),
+							pulumi.String("MeterId"),
+							pulumi.String("ResourceId"),
+							pulumi.String("ResourceLocation"),
+							pulumi.String("Quantity"),
+						},
+					},
+					Granularity: pulumi.String("Daily"),
+				},
+				Timeframe: pulumi.String("MonthToDate"),
+				Type:      pulumi.String("ActualCost"),
+			},
+			DeliveryInfo: &costmanagement.ExportDeliveryInfoArgs{
+				Destination: &costmanagement.ExportDeliveryDestinationArgs{
+					Container:      pulumi.String("exports"),
+					ResourceId:     pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182"),
+					RootFolderPath: pulumi.String("ad-hoc"),
+				},
+			},
+			ExportName: pulumi.String("TestExport"),
+			Format:     pulumi.String("Csv"),
+			Schedule: &costmanagement.ExportScheduleArgs{
+				Recurrence: pulumi.String("Weekly"),
+				RecurrencePeriod: &costmanagement.ExportRecurrencePeriodArgs{
+					From: pulumi.String("2020-06-01T00:00:00Z"),
+					To:   pulumi.String("2020-10-31T00:00:00Z"),
+				},
+				Status: pulumi.String("Active"),
+			},
+			Scope: pulumi.String("providers/Microsoft.Management/managementGroups/TestMG"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+export = azure_nextgen.costmanagement.latest.Export("export",
+    definition={
+        "dataSet": {
+            "configuration": {
+                "columns": [
+                    "Date",
+                    "MeterId",
+                    "ResourceId",
+                    "ResourceLocation",
+                    "Quantity",
+                ],
+            },
+            "granularity": "Daily",
+        },
+        "timeframe": "MonthToDate",
+        "type": "ActualCost",
+    },
+    delivery_info={
+        "destination": {
+            "container": "exports",
+            "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182",
+            "rootFolderPath": "ad-hoc",
+        },
+    },
+    export_name="TestExport",
+    format="Csv",
+    schedule={
+        "recurrence": "Weekly",
+        "recurrencePeriod": {
+            "from": "2020-06-01T00:00:00Z",
+            "to": "2020-10-31T00:00:00Z",
+        },
+        "status": "Active",
+    },
+    scope="providers/Microsoft.Management/managementGroups/TestMG")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const _export = new azure_nextgen.costmanagement.latest.Export("export", {
+    definition: {
+        dataSet: {
+            configuration: {
+                columns: [
+                    "Date",
+                    "MeterId",
+                    "ResourceId",
+                    "ResourceLocation",
+                    "Quantity",
+                ],
+            },
+            granularity: "Daily",
+        },
+        timeframe: "MonthToDate",
+        type: "ActualCost",
+    },
+    deliveryInfo: {
+        destination: {
+            container: "exports",
+            resourceId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182",
+            rootFolderPath: "ad-hoc",
+        },
+    },
+    exportName: "TestExport",
+    format: "Csv",
+    schedule: {
+        recurrence: "Weekly",
+        recurrencePeriod: {
+            from: "2020-06-01T00:00:00Z",
+            to: "2020-10-31T00:00:00Z",
+        },
+        status: "Active",
+    },
+    scope: "providers/Microsoft.Management/managementGroups/TestMG",
+});
+
+```
+
+{{% /example %}}
+
+### ExportCreateOrUpdateByResourceGroup
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var export = new AzureNextGen.CostManagement.Latest.Export("export", new AzureNextGen.CostManagement.Latest.ExportArgs
+        {
+            Definition = new AzureNextGen.CostManagement.Latest.Inputs.ExportDefinitionArgs
+            {
+                DataSet = new AzureNextGen.CostManagement.Latest.Inputs.ExportDatasetArgs
+                {
+                    Configuration = new AzureNextGen.CostManagement.Latest.Inputs.ExportDatasetConfigurationArgs
+                    {
+                        Columns = 
+                        {
+                            "Date",
+                            "MeterId",
+                            "ResourceId",
+                            "ResourceLocation",
+                            "Quantity",
+                        },
+                    },
+                    Granularity = "Daily",
+                },
+                Timeframe = "MonthToDate",
+                Type = "ActualCost",
+            },
+            DeliveryInfo = new AzureNextGen.CostManagement.Latest.Inputs.ExportDeliveryInfoArgs
+            {
+                Destination = new AzureNextGen.CostManagement.Latest.Inputs.ExportDeliveryDestinationArgs
+                {
+                    Container = "exports",
+                    ResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182",
+                    RootFolderPath = "ad-hoc",
+                },
+            },
+            ExportName = "TestExport",
+            Format = "Csv",
+            Schedule = new AzureNextGen.CostManagement.Latest.Inputs.ExportScheduleArgs
+            {
+                Recurrence = "Weekly",
+                RecurrencePeriod = new AzureNextGen.CostManagement.Latest.Inputs.ExportRecurrencePeriodArgs
+                {
+                    From = "2020-06-01T00:00:00Z",
+                    To = "2020-10-31T00:00:00Z",
+                },
+                Status = "Active",
+            },
+            Scope = "subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	costmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/costmanagement/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := costmanagement.NewExport(ctx, "export", &costmanagement.ExportArgs{
+			Definition: &costmanagement.ExportDefinitionArgs{
+				DataSet: &costmanagement.ExportDatasetArgs{
+					Configuration: &costmanagement.ExportDatasetConfigurationArgs{
+						Columns: pulumi.StringArray{
+							pulumi.String("Date"),
+							pulumi.String("MeterId"),
+							pulumi.String("ResourceId"),
+							pulumi.String("ResourceLocation"),
+							pulumi.String("Quantity"),
+						},
+					},
+					Granularity: pulumi.String("Daily"),
+				},
+				Timeframe: pulumi.String("MonthToDate"),
+				Type:      pulumi.String("ActualCost"),
+			},
+			DeliveryInfo: &costmanagement.ExportDeliveryInfoArgs{
+				Destination: &costmanagement.ExportDeliveryDestinationArgs{
+					Container:      pulumi.String("exports"),
+					ResourceId:     pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182"),
+					RootFolderPath: pulumi.String("ad-hoc"),
+				},
+			},
+			ExportName: pulumi.String("TestExport"),
+			Format:     pulumi.String("Csv"),
+			Schedule: &costmanagement.ExportScheduleArgs{
+				Recurrence: pulumi.String("Weekly"),
+				RecurrencePeriod: &costmanagement.ExportRecurrencePeriodArgs{
+					From: pulumi.String("2020-06-01T00:00:00Z"),
+					To:   pulumi.String("2020-10-31T00:00:00Z"),
+				},
+				Status: pulumi.String("Active"),
+			},
+			Scope: pulumi.String("subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+export = azure_nextgen.costmanagement.latest.Export("export",
+    definition={
+        "dataSet": {
+            "configuration": {
+                "columns": [
+                    "Date",
+                    "MeterId",
+                    "ResourceId",
+                    "ResourceLocation",
+                    "Quantity",
+                ],
+            },
+            "granularity": "Daily",
+        },
+        "timeframe": "MonthToDate",
+        "type": "ActualCost",
+    },
+    delivery_info={
+        "destination": {
+            "container": "exports",
+            "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182",
+            "rootFolderPath": "ad-hoc",
+        },
+    },
+    export_name="TestExport",
+    format="Csv",
+    schedule={
+        "recurrence": "Weekly",
+        "recurrencePeriod": {
+            "from": "2020-06-01T00:00:00Z",
+            "to": "2020-10-31T00:00:00Z",
+        },
+        "status": "Active",
+    },
+    scope="subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const _export = new azure_nextgen.costmanagement.latest.Export("export", {
+    definition: {
+        dataSet: {
+            configuration: {
+                columns: [
+                    "Date",
+                    "MeterId",
+                    "ResourceId",
+                    "ResourceLocation",
+                    "Quantity",
+                ],
+            },
+            granularity: "Daily",
+        },
+        timeframe: "MonthToDate",
+        type: "ActualCost",
+    },
+    deliveryInfo: {
+        destination: {
+            container: "exports",
+            resourceId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182",
+            rootFolderPath: "ad-hoc",
+        },
+    },
+    exportName: "TestExport",
+    format: "Csv",
+    schedule: {
+        recurrence: "Weekly",
+        recurrencePeriod: {
+            from: "2020-06-01T00:00:00Z",
+            to: "2020-10-31T00:00:00Z",
+        },
+        status: "Active",
+    },
+    scope: "subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG",
+});
+
+```
+
+{{% /example %}}
+
+### ExportCreateOrUpdateBySubscription
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var export = new AzureNextGen.CostManagement.Latest.Export("export", new AzureNextGen.CostManagement.Latest.ExportArgs
+        {
+            Definition = new AzureNextGen.CostManagement.Latest.Inputs.ExportDefinitionArgs
+            {
+                DataSet = new AzureNextGen.CostManagement.Latest.Inputs.ExportDatasetArgs
+                {
+                    Configuration = new AzureNextGen.CostManagement.Latest.Inputs.ExportDatasetConfigurationArgs
+                    {
+                        Columns = 
+                        {
+                            "Date",
+                            "MeterId",
+                            "ResourceId",
+                            "ResourceLocation",
+                            "Quantity",
+                        },
+                    },
+                    Granularity = "Daily",
+                },
+                Timeframe = "MonthToDate",
+                Type = "ActualCost",
+            },
+            DeliveryInfo = new AzureNextGen.CostManagement.Latest.Inputs.ExportDeliveryInfoArgs
+            {
+                Destination = new AzureNextGen.CostManagement.Latest.Inputs.ExportDeliveryDestinationArgs
+                {
+                    Container = "exports",
+                    ResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182",
+                    RootFolderPath = "ad-hoc",
+                },
+            },
+            ExportName = "TestExport",
+            Format = "Csv",
+            Schedule = new AzureNextGen.CostManagement.Latest.Inputs.ExportScheduleArgs
+            {
+                Recurrence = "Weekly",
+                RecurrencePeriod = new AzureNextGen.CostManagement.Latest.Inputs.ExportRecurrencePeriodArgs
+                {
+                    From = "2020-06-01T00:00:00Z",
+                    To = "2020-10-31T00:00:00Z",
+                },
+                Status = "Active",
+            },
+            Scope = "subscriptions/00000000-0000-0000-0000-000000000000",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	costmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/costmanagement/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := costmanagement.NewExport(ctx, "export", &costmanagement.ExportArgs{
+			Definition: &costmanagement.ExportDefinitionArgs{
+				DataSet: &costmanagement.ExportDatasetArgs{
+					Configuration: &costmanagement.ExportDatasetConfigurationArgs{
+						Columns: pulumi.StringArray{
+							pulumi.String("Date"),
+							pulumi.String("MeterId"),
+							pulumi.String("ResourceId"),
+							pulumi.String("ResourceLocation"),
+							pulumi.String("Quantity"),
+						},
+					},
+					Granularity: pulumi.String("Daily"),
+				},
+				Timeframe: pulumi.String("MonthToDate"),
+				Type:      pulumi.String("ActualCost"),
+			},
+			DeliveryInfo: &costmanagement.ExportDeliveryInfoArgs{
+				Destination: &costmanagement.ExportDeliveryDestinationArgs{
+					Container:      pulumi.String("exports"),
+					ResourceId:     pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182"),
+					RootFolderPath: pulumi.String("ad-hoc"),
+				},
+			},
+			ExportName: pulumi.String("TestExport"),
+			Format:     pulumi.String("Csv"),
+			Schedule: &costmanagement.ExportScheduleArgs{
+				Recurrence: pulumi.String("Weekly"),
+				RecurrencePeriod: &costmanagement.ExportRecurrencePeriodArgs{
+					From: pulumi.String("2020-06-01T00:00:00Z"),
+					To:   pulumi.String("2020-10-31T00:00:00Z"),
+				},
+				Status: pulumi.String("Active"),
+			},
+			Scope: pulumi.String("subscriptions/00000000-0000-0000-0000-000000000000"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+export = azure_nextgen.costmanagement.latest.Export("export",
+    definition={
+        "dataSet": {
+            "configuration": {
+                "columns": [
+                    "Date",
+                    "MeterId",
+                    "ResourceId",
+                    "ResourceLocation",
+                    "Quantity",
+                ],
+            },
+            "granularity": "Daily",
+        },
+        "timeframe": "MonthToDate",
+        "type": "ActualCost",
+    },
+    delivery_info={
+        "destination": {
+            "container": "exports",
+            "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182",
+            "rootFolderPath": "ad-hoc",
+        },
+    },
+    export_name="TestExport",
+    format="Csv",
+    schedule={
+        "recurrence": "Weekly",
+        "recurrencePeriod": {
+            "from": "2020-06-01T00:00:00Z",
+            "to": "2020-10-31T00:00:00Z",
+        },
+        "status": "Active",
+    },
+    scope="subscriptions/00000000-0000-0000-0000-000000000000")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const _export = new azure_nextgen.costmanagement.latest.Export("export", {
+    definition: {
+        dataSet: {
+            configuration: {
+                columns: [
+                    "Date",
+                    "MeterId",
+                    "ResourceId",
+                    "ResourceLocation",
+                    "Quantity",
+                ],
+            },
+            granularity: "Daily",
+        },
+        timeframe: "MonthToDate",
+        type: "ActualCost",
+    },
+    deliveryInfo: {
+        destination: {
+            container: "exports",
+            resourceId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182",
+            rootFolderPath: "ad-hoc",
+        },
+    },
+    exportName: "TestExport",
+    format: "Csv",
+    schedule: {
+        recurrence: "Weekly",
+        recurrencePeriod: {
+            from: "2020-06-01T00:00:00Z",
+            to: "2020-10-31T00:00:00Z",
+        },
+        status: "Active",
+    },
+    scope: "subscriptions/00000000-0000-0000-0000-000000000000",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Export Resource {#create}
@@ -233,7 +1528,7 @@ The Export resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The scope associated with query and export operations. This includes '/subscriptions/{subscriptionId}/' for subscription scope, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, '/providers/Microsoft.Management/managementGroups/{managementGroupId} for Management Group scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/invoiceSections/{invoiceSectionId}' for invoiceSection scope, and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/customers/{customerId}' specific for partners.{{% /md %}}</dd>
+    <dd>{{% md %}}The scope associated with export operations. This includes '/subscriptions/{subscriptionId}/' for subscription scope, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, '/providers/Microsoft.Management/managementGroups/{managementGroupId} for Management Group scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/invoiceSections/{invoiceSectionId}' for invoiceSection scope, and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/customers/{customerId}' specific for partners.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -310,7 +1605,7 @@ The Export resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The scope associated with query and export operations. This includes '/subscriptions/{subscriptionId}/' for subscription scope, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, '/providers/Microsoft.Management/managementGroups/{managementGroupId} for Management Group scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/invoiceSections/{invoiceSectionId}' for invoiceSection scope, and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/customers/{customerId}' specific for partners.{{% /md %}}</dd>
+    <dd>{{% md %}}The scope associated with export operations. This includes '/subscriptions/{subscriptionId}/' for subscription scope, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, '/providers/Microsoft.Management/managementGroups/{managementGroupId} for Management Group scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/invoiceSections/{invoiceSectionId}' for invoiceSection scope, and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/customers/{customerId}' specific for partners.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -387,7 +1682,7 @@ The Export resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The scope associated with query and export operations. This includes '/subscriptions/{subscriptionId}/' for subscription scope, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, '/providers/Microsoft.Management/managementGroups/{managementGroupId} for Management Group scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/invoiceSections/{invoiceSectionId}' for invoiceSection scope, and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/customers/{customerId}' specific for partners.{{% /md %}}</dd>
+    <dd>{{% md %}}The scope associated with export operations. This includes '/subscriptions/{subscriptionId}/' for subscription scope, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, '/providers/Microsoft.Management/managementGroups/{managementGroupId} for Management Group scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/invoiceSections/{invoiceSectionId}' for invoiceSection scope, and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/customers/{customerId}' specific for partners.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -464,7 +1759,7 @@ The Export resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The scope associated with query and export operations. This includes '/subscriptions/{subscriptionId}/' for subscription scope, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, '/providers/Microsoft.Management/managementGroups/{managementGroupId} for Management Group scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/invoiceSections/{invoiceSectionId}' for invoiceSection scope, and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/customers/{customerId}' specific for partners.{{% /md %}}</dd>
+    <dd>{{% md %}}The scope associated with export operations. This includes '/subscriptions/{subscriptionId}/' for subscription scope, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, '/providers/Microsoft.Management/managementGroups/{managementGroupId} for Management Group scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/invoiceSections/{invoiceSectionId}' for invoiceSection scope, and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/customers/{customerId}' specific for partners.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

@@ -43,7 +43,7 @@ class MyStack : Stack
                 Version = "1.0.0",
             },
             Type = "com.okta.oauth2.tokens.transform",
-            Version = "1.0.1",
+            Version = "1.0.0",
         });
     }
 
@@ -75,7 +75,7 @@ func main() {
 				Version: pulumi.String("1.0.0"),
 			},
 			Type:    pulumi.String("com.okta.oauth2.tokens.transform"),
-			Version: pulumi.String("1.0.1"),
+			Version: pulumi.String("1.0.0"),
 		})
 		if err != nil {
 			return err
@@ -104,7 +104,7 @@ example = okta.inline.Hook("example",
         version="1.0.0",
     ),
     type="com.okta.oauth2.tokens.transform",
-    version="1.0.1")
+    version="1.0.0")
 ```
 
 {{% /example %}}
@@ -127,7 +127,7 @@ const example = new okta.inline.Hook("example", {
         version: "1.0.0",
     },
     type: "com.okta.oauth2.tokens.transform",
-    version: "1.0.1",
+    version: "1.0.0",
 });
 ```
 
@@ -145,7 +145,7 @@ const example = new okta.inline.Hook("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/inline/#pulumi_okta.inline.Hook">Hook</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auth</span><span class="p">:</span> <span class="nx">Optional[HookAuthArgs]</span> = None<span class="p">, </span><span class="nx">channel</span><span class="p">:</span> <span class="nx">Optional[HookChannelArgs]</span> = None<span class="p">, </span><span class="nx">headers</span><span class="p">:</span> <span class="nx">Optional[List[HookHeaderArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/inline/#pulumi_okta.inline.Hook">Hook</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auth</span><span class="p">:</span> <span class="nx">Optional[HookAuthArgs]</span> = None<span class="p">, </span><span class="nx">channel</span><span class="p">:</span> <span class="nx">Optional[HookChannelArgs]</span> = None<span class="p">, </span><span class="nx">headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[HookHeaderArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -616,7 +616,7 @@ The Hook resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hookheader">List[Hook<wbr>Header<wbr>Args]</a></span>
+        <span class="property-type"><a href="#hookheader">Sequence[Hook<wbr>Header<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Map of headers to send along in inline hook request.
 {{% /md %}}</dd>
@@ -741,7 +741,7 @@ Get an existing Hook resource's state with the given name, ID, and optional extr
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auth</span><span class="p">:</span> <span class="nx">Optional[HookAuthArgs]</span> = None<span class="p">, </span><span class="nx">channel</span><span class="p">:</span> <span class="nx">Optional[HookChannelArgs]</span> = None<span class="p">, </span><span class="nx">headers</span><span class="p">:</span> <span class="nx">Optional[List[HookHeaderArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Hook</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auth</span><span class="p">:</span> <span class="nx">Optional[HookAuthArgs]</span> = None<span class="p">, </span><span class="nx">channel</span><span class="p">:</span> <span class="nx">Optional[HookChannelArgs]</span> = None<span class="p">, </span><span class="nx">headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[HookHeaderArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Hook</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1132,7 +1132,7 @@ The following state arguments are supported:
 <a href="#state_headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hookheader">List[Hook<wbr>Header<wbr>Args]</a></span>
+        <span class="property-type"><a href="#hookheader">Sequence[Hook<wbr>Header<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Map of headers to send along in inline hook request.
 {{% /md %}}</dd>
@@ -1740,6 +1740,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/articulate/terraform-provider-okta).</dd>
+	<dd>This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/oktadeveloper/terraform-provider-okta).</dd>
 </dl>
 

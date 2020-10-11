@@ -509,8 +509,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hsmpooluri_csharp">
-<a href="#hsmpooluri_csharp" style="color: inherit; text-decoration: inherit;">Hsm<wbr>Pool<wbr>Uri</a>
+        <span id="hsmuri_csharp">
+<a href="#hsmuri_csharp" style="color: inherit; text-decoration: inherit;">Hsm<wbr>Uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -606,8 +606,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hsmpooluri_go">
-<a href="#hsmpooluri_go" style="color: inherit; text-decoration: inherit;">Hsm<wbr>Pool<wbr>Uri</a>
+        <span id="hsmuri_go">
+<a href="#hsmuri_go" style="color: inherit; text-decoration: inherit;">Hsm<wbr>Uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -703,8 +703,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hsmpooluri_nodejs">
-<a href="#hsmpooluri_nodejs" style="color: inherit; text-decoration: inherit;">hsm<wbr>Pool<wbr>Uri</a>
+        <span id="hsmuri_nodejs">
+<a href="#hsmuri_nodejs" style="color: inherit; text-decoration: inherit;">hsm<wbr>Uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -800,8 +800,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hsm_pool_uri_python">
-<a href="#hsm_pool_uri_python" style="color: inherit; text-decoration: inherit;">hsm_<wbr>pool_<wbr>uri</a>
+        <span id="hsm_uri_python">
+<a href="#hsm_uri_python" style="color: inherit; text-decoration: inherit;">hsm_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

@@ -208,7 +208,7 @@ The following output properties are available:
 <a href="#lenses_csharp" style="color: inherit; text-decoration: inherit;">Lenses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
+        <span class="property-type"><a href="#dashboardlensresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal.<wbr>Outputs.<wbr>Dashboard<wbr>Lens<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The dashboard lenses.{{% /md %}}</dd>
 
@@ -218,7 +218,7 @@ The following output properties are available:
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}The dashboard metadata.{{% /md %}}</dd>
 
@@ -275,7 +275,7 @@ The following output properties are available:
 <a href="#lenses_go" style="color: inherit; text-decoration: inherit;">Lenses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">[]map[string]interface{}</span>
+        <span class="property-type"><a href="#dashboardlensresponse">[]Dashboard<wbr>Lens<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The dashboard lenses.{{% /md %}}</dd>
 
@@ -285,7 +285,7 @@ The following output properties are available:
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]map[string]interface{}</span>
+        <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}The dashboard metadata.{{% /md %}}</dd>
 
@@ -342,7 +342,7 @@ The following output properties are available:
 <a href="#lenses_nodejs" style="color: inherit; text-decoration: inherit;">lenses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}[]</span>
+        <span class="property-type"><a href="#dashboardlensresponse">Dashboard<wbr>Lens<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The dashboard lenses.{{% /md %}}</dd>
 
@@ -352,7 +352,7 @@ The following output properties are available:
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: {[key: string]: any}}</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}The dashboard metadata.{{% /md %}}</dd>
 
@@ -409,7 +409,7 @@ The following output properties are available:
 <a href="#lenses_python" style="color: inherit; text-decoration: inherit;">lenses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Any>]</span>
+        <span class="property-type"><a href="#dashboardlensresponse">List[Dashboard<wbr>Lens<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The dashboard lenses.{{% /md %}}</dd>
 
@@ -419,7 +419,7 @@ The following output properties are available:
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any>]</span>
+        <span class="property-type">Dict[str, Any]</span>
     </dt>
     <dd>{{% md %}}The dashboard metadata.{{% /md %}}</dd>
 
@@ -432,6 +432,806 @@ The following output properties are available:
         <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
+## Supporting Types
+
+
+<h4 id="dashboardlensresponse">Dashboard<wbr>Lens<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="order_csharp">
+<a href="#order_csharp" style="color: inherit; text-decoration: inherit;">Order</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The lens order.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parts_csharp">
+<a href="#parts_csharp" style="color: inherit; text-decoration: inherit;">Parts</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboardpartsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal.<wbr>Inputs.<wbr>Dashboard<wbr>Parts<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The dashboard parts.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadata_csharp">
+<a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The dashboard len's metadata.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="order_go">
+<a href="#order_go" style="color: inherit; text-decoration: inherit;">Order</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The lens order.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parts_go">
+<a href="#parts_go" style="color: inherit; text-decoration: inherit;">Parts</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboardpartsresponse">[]Dashboard<wbr>Parts<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The dashboard parts.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadata_go">
+<a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The dashboard len's metadata.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="order_nodejs">
+<a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The lens order.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parts_nodejs">
+<a href="#parts_nodejs" style="color: inherit; text-decoration: inherit;">parts</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboardpartsresponse">Dashboard<wbr>Parts<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The dashboard parts.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadata_nodejs">
+<a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}The dashboard len's metadata.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="order_python">
+<a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The lens order.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parts_python">
+<a href="#parts_python" style="color: inherit; text-decoration: inherit;">parts</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboardpartsresponse">List[Dashboard<wbr>Parts<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The dashboard parts.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadata_python">
+<a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}The dashboard len's metadata.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="dashboardpartsresponse">Dashboard<wbr>Parts<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_csharp">
+<a href="#position_csharp" style="color: inherit; text-decoration: inherit;">Position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboardpartsresponseposition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal.<wbr>Inputs.<wbr>Dashboard<wbr>Parts<wbr>Response<wbr>Position<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The dashboard's part position.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadata_csharp">
+<a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal.<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_go">
+<a href="#position_go" style="color: inherit; text-decoration: inherit;">Position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboardpartsresponseposition">Dashboard<wbr>Parts<wbr>Response<wbr>Position</a></span>
+    </dt>
+    <dd>{{% md %}}The dashboard's part position.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadata_go">
+<a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponse">Markdown<wbr>Part<wbr>Metadata<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_nodejs">
+<a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboardpartsresponseposition">Dashboard<wbr>Parts<wbr>Response<wbr>Position</a></span>
+    </dt>
+    <dd>{{% md %}}The dashboard's part position.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadata_nodejs">
+<a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponse">Markdown<wbr>Part<wbr>Metadata<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_python">
+<a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboardpartsresponseposition">Dict[Dashboard<wbr>Parts<wbr>Response<wbr>Position]</a></span>
+    </dt>
+    <dd>{{% md %}}The dashboard's part position.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadata_python">
+<a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponse">Dict[Markdown<wbr>Part<wbr>Metadata<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="dashboardpartsresponseposition">Dashboard<wbr>Parts<wbr>Response<wbr>Position</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="colspan_csharp">
+<a href="#colspan_csharp" style="color: inherit; text-decoration: inherit;">Col<wbr>Span</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The dashboard's part column span.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rowspan_csharp">
+<a href="#rowspan_csharp" style="color: inherit; text-decoration: inherit;">Row<wbr>Span</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The dashboard's part row span.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="x_csharp">
+<a href="#x_csharp" style="color: inherit; text-decoration: inherit;">X</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The dashboard's part x coordinate.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="y_csharp">
+<a href="#y_csharp" style="color: inherit; text-decoration: inherit;">Y</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The dashboard's part y coordinate.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadata_csharp">
+<a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="colspan_go">
+<a href="#colspan_go" style="color: inherit; text-decoration: inherit;">Col<wbr>Span</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The dashboard's part column span.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rowspan_go">
+<a href="#rowspan_go" style="color: inherit; text-decoration: inherit;">Row<wbr>Span</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The dashboard's part row span.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="x_go">
+<a href="#x_go" style="color: inherit; text-decoration: inherit;">X</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The dashboard's part x coordinate.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="y_go">
+<a href="#y_go" style="color: inherit; text-decoration: inherit;">Y</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The dashboard's part y coordinate.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadata_go">
+<a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="colspan_nodejs">
+<a href="#colspan_nodejs" style="color: inherit; text-decoration: inherit;">col<wbr>Span</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The dashboard's part column span.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rowspan_nodejs">
+<a href="#rowspan_nodejs" style="color: inherit; text-decoration: inherit;">row<wbr>Span</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The dashboard's part row span.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="x_nodejs">
+<a href="#x_nodejs" style="color: inherit; text-decoration: inherit;">x</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The dashboard's part x coordinate.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="y_nodejs">
+<a href="#y_nodejs" style="color: inherit; text-decoration: inherit;">y</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The dashboard's part y coordinate.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadata_nodejs">
+<a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="colspan_python">
+<a href="#colspan_python" style="color: inherit; text-decoration: inherit;">col<wbr>Span</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The dashboard's part column span.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rowspan_python">
+<a href="#rowspan_python" style="color: inherit; text-decoration: inherit;">row<wbr>Span</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The dashboard's part row span.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="x_python">
+<a href="#x_python" style="color: inherit; text-decoration: inherit;">x</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The dashboard's part x coordinate.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="y_python">
+<a href="#y_python" style="color: inherit; text-decoration: inherit;">y</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The dashboard's part y coordinate.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadata_python">
+<a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="markdownpartmetadataresponse">Markdown<wbr>Part<wbr>Metadata<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inputs_csharp">
+<a href="#inputs_csharp" style="color: inherit; text-decoration: inherit;">Inputs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;object&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Input to dashboard part.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="settings_csharp">
+<a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal.<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Markdown part settings.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inputs_go">
+<a href="#inputs_go" style="color: inherit; text-decoration: inherit;">Inputs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">[]interface{}</a></span>
+    </dt>
+    <dd>{{% md %}}Input to dashboard part.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="settings_go">
+<a href="#settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}Markdown part settings.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inputs_nodejs">
+<a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any[]</a></span>
+    </dt>
+    <dd>{{% md %}}Input to dashboard part.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="settings_nodejs">
+<a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}Markdown part settings.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inputs_python">
+<a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+    </dt>
+    <dd>{{% md %}}Input to dashboard part.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="settings_python">
+<a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Dict[Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings]</a></span>
+    </dt>
+    <dd>{{% md %}}Markdown part settings.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="markdownpartmetadataresponsecontent">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Content</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="settings_csharp">
+<a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal.<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The setting of the content of markdown part.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="settings_go">
+<a href="#settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}The setting of the content of markdown part.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="settings_nodejs">
+<a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}The setting of the content of markdown part.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="settings_python">
+<a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Dict[Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings]</a></span>
+    </dt>
+    <dd>{{% md %}}The setting of the content of markdown part.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="markdownpartmetadataresponsesettings">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="content_csharp">
+<a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponsecontent">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Portal.<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Content<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The content of markdown part.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="content_go">
+<a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponsecontent">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Content</a></span>
+    </dt>
+    <dd>{{% md %}}The content of markdown part.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="content_nodejs">
+<a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponsecontent">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Content</a></span>
+    </dt>
+    <dd>{{% md %}}The content of markdown part.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="content_python">
+<a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponsecontent">Dict[Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Content]</a></span>
+    </dt>
+    <dd>{{% md %}}The content of markdown part.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

@@ -28,6 +28,14 @@ class MyStack : Stack
     {
         var tagAtScope = new AzureNextGen.Resources.Latest.TagAtScope("tagAtScope", new AzureNextGen.Resources.Latest.TagAtScopeArgs
         {
+            Properties = new AzureNextGen.Resources.Latest.Inputs.TagsArgs
+            {
+                Tags = 
+                {
+                    { "tagKey1", "tag-value-1" },
+                    { "tagKey2", "tag-value-2" },
+                },
+            },
             Scope = "subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/my-resource-group/providers/myPRNameSpace/VM/myVm",
         });
     }
@@ -44,13 +52,19 @@ class MyStack : Stack
 package main
 
 import (
-	resources "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/resources/latest"
+	resources "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resources/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := resources.NewTagAtScope(ctx, "tagAtScope", &resources.TagAtScopeArgs{
+			Properties: &resources.TagsArgs{
+				Tags: pulumi.StringMap{
+					"tagKey1": pulumi.String("tag-value-1"),
+					"tagKey2": pulumi.String("tag-value-2"),
+				},
+			},
 			Scope: pulumi.String("subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/my-resource-group/providers/myPRNameSpace/VM/myVm"),
 		})
 		if err != nil {
@@ -70,7 +84,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-tag_at_scope = azure_nextgen.resources.latest.TagAtScope("tagAtScope", scope="subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/my-resource-group/providers/myPRNameSpace/VM/myVm")
+tag_at_scope = azure_nextgen.resources.latest.TagAtScope("tagAtScope",
+    properties={
+        "tags": {
+            "tagKey1": "tag-value-1",
+            "tagKey2": "tag-value-2",
+        },
+    },
+    scope="subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/my-resource-group/providers/myPRNameSpace/VM/myVm")
 
 ```
 
@@ -82,7 +103,15 @@ tag_at_scope = azure_nextgen.resources.latest.TagAtScope("tagAtScope", scope="su
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const tagAtScope = new azure_nextgen.resources.latest.TagAtScope("tagAtScope", {scope: "subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/my-resource-group/providers/myPRNameSpace/VM/myVm"});
+const tagAtScope = new azure_nextgen.resources.latest.TagAtScope("tagAtScope", {
+    properties: {
+        tags: {
+            tagKey1: "tag-value-1",
+            tagKey2: "tag-value-2",
+        },
+    },
+    scope: "subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/my-resource-group/providers/myPRNameSpace/VM/myVm",
+});
 
 ```
 
@@ -100,6 +129,14 @@ class MyStack : Stack
     {
         var tagAtScope = new AzureNextGen.Resources.Latest.TagAtScope("tagAtScope", new AzureNextGen.Resources.Latest.TagAtScopeArgs
         {
+            Properties = new AzureNextGen.Resources.Latest.Inputs.TagsArgs
+            {
+                Tags = 
+                {
+                    { "tagKey1", "tag-value-1" },
+                    { "tagKey2", "tag-value-2" },
+                },
+            },
             Scope = "subscriptions/00000000-0000-0000-0000-000000000000",
         });
     }
@@ -116,13 +153,19 @@ class MyStack : Stack
 package main
 
 import (
-	resources "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/resources/latest"
+	resources "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resources/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := resources.NewTagAtScope(ctx, "tagAtScope", &resources.TagAtScopeArgs{
+			Properties: &resources.TagsArgs{
+				Tags: pulumi.StringMap{
+					"tagKey1": pulumi.String("tag-value-1"),
+					"tagKey2": pulumi.String("tag-value-2"),
+				},
+			},
 			Scope: pulumi.String("subscriptions/00000000-0000-0000-0000-000000000000"),
 		})
 		if err != nil {
@@ -142,7 +185,14 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-tag_at_scope = azure_nextgen.resources.latest.TagAtScope("tagAtScope", scope="subscriptions/00000000-0000-0000-0000-000000000000")
+tag_at_scope = azure_nextgen.resources.latest.TagAtScope("tagAtScope",
+    properties={
+        "tags": {
+            "tagKey1": "tag-value-1",
+            "tagKey2": "tag-value-2",
+        },
+    },
+    scope="subscriptions/00000000-0000-0000-0000-000000000000")
 
 ```
 
@@ -154,7 +204,15 @@ tag_at_scope = azure_nextgen.resources.latest.TagAtScope("tagAtScope", scope="su
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const tagAtScope = new azure_nextgen.resources.latest.TagAtScope("tagAtScope", {scope: "subscriptions/00000000-0000-0000-0000-000000000000"});
+const tagAtScope = new azure_nextgen.resources.latest.TagAtScope("tagAtScope", {
+    properties: {
+        tags: {
+            tagKey1: "tag-value-1",
+            tagKey2: "tag-value-2",
+        },
+    },
+    scope: "subscriptions/00000000-0000-0000-0000-000000000000",
+});
 
 ```
 

@@ -19,6 +19,7 @@ Explore the resources and functions of the azurestack module in the Azure NextGe
 <ul class="api">
     <li><a href="getcustomersubscription" title="GetCustomerSubscription"><span class="symbol function"></span>GetCustomerSubscription</a></li>
     <li><a href="getregistration" title="GetRegistration"><span class="symbol function"></span>GetRegistration</a></li>
+    <li><a href="getregistrationactivationkey" title="GetRegistrationActivationKey"><span class="symbol function"></span>GetRegistrationActivationKey</a></li>
     <li><a href="listproductdetails" title="ListProductDetails"><span class="symbol function"></span>ListProductDetails</a></li>
 </ul>
 
@@ -29,7 +30,7 @@ Explore the resources and functions of the azurestack module in the Azure NextGe
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.1</dd>
 </dl>
 
 

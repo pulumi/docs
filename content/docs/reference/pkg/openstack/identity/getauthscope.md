@@ -846,7 +846,7 @@ The following output properties are available:
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getauthscoperole">List[Get<wbr>Auth<wbr>Scope<wbr>Role]</a></span>
+        <span class="property-type"><a href="#getauthscoperole">Sequence[Get<wbr>Auth<wbr>Scope<wbr>Role]</a></span>
     </dt>
     <dd>{{% md %}}A list of roles in the current scope. See reference below.
 {{% /md %}}</dd>
@@ -1053,6 +1053,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-providers/terraform-provider-openstack).</dd>
+	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
 </dl>
 

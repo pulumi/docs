@@ -56,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/batch/latest"
+	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -167,7 +167,7 @@ class MyStack : Stack
 package main
 
 import (
-	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/batch/latest"
+	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -267,7 +267,7 @@ class MyStack : Stack
 package main
 
 import (
-	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/batch/latest"
+	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -378,7 +378,7 @@ class MyStack : Stack
 package main
 
 import (
-	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/batch/latest"
+	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

@@ -47,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	resources "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/resources/v20190601preview"
+	resources "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resources/v20190601preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

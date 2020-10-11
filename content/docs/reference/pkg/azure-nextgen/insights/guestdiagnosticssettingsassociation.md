@@ -48,7 +48,7 @@ class MyStack : Stack
 package main
 
 import (
-	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/insights/v20180601preview"
+	insights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights/v20180601preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

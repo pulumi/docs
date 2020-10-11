@@ -33,7 +33,11 @@ class MyStack : Stack
             {
                 new AzureNextGen.DataLakeAnalytics.Latest.Inputs.CreateComputePolicyWithAccountParametersArgs
                 {
+                    MaxDegreeOfParallelismPerJob = 1,
+                    MinPriorityPerJob = 1,
                     Name = "test_policy",
+                    ObjectId = "34adfa4f-cedf-4dc0-ba29-b6d1a69ab345",
+                    ObjectType = "User",
                 },
             },
             DataLakeStoreAccounts = 
@@ -41,6 +45,7 @@ class MyStack : Stack
                 new AzureNextGen.DataLakeAnalytics.Latest.Inputs.AddDataLakeStoreWithAccountParametersArgs
                 {
                     Name = "test_adls",
+                    Suffix = "test_suffix",
                 },
             },
             DefaultDataLakeStoreAccount = "test_adls",
@@ -49,7 +54,9 @@ class MyStack : Stack
             {
                 new AzureNextGen.DataLakeAnalytics.Latest.Inputs.CreateFirewallRuleWithAccountParametersArgs
                 {
+                    EndIpAddress = "2.2.2.2",
                     Name = "test_rule",
+                    StartIpAddress = "1.1.1.1",
                 },
             },
             FirewallState = "Enabled",
@@ -65,7 +72,9 @@ class MyStack : Stack
             {
                 new AzureNextGen.DataLakeAnalytics.Latest.Inputs.AddStorageAccountWithAccountParametersArgs
                 {
+                    AccessKey = "34adfa4f-cedf-4dc0-ba29-b6d1a69ab346",
                     Name = "test_storage",
+                    Suffix = "test_suffix",
                 },
             },
             Tags = 
@@ -87,7 +96,7 @@ class MyStack : Stack
 package main
 
 import (
-	datalakeanalytics "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datalakeanalytics/latest"
+	datalakeanalytics "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datalakeanalytics/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -97,19 +106,26 @@ func main() {
 			AccountName: pulumi.String("contosoadla"),
 			ComputePolicies: datalakeanalytics.CreateComputePolicyWithAccountParametersArray{
 				&datalakeanalytics.CreateComputePolicyWithAccountParametersArgs{
-					Name: pulumi.String("test_policy"),
+					MaxDegreeOfParallelismPerJob: pulumi.Int(1),
+					MinPriorityPerJob:            pulumi.Int(1),
+					Name:                         pulumi.String("test_policy"),
+					ObjectId:                     pulumi.String("34adfa4f-cedf-4dc0-ba29-b6d1a69ab345"),
+					ObjectType:                   pulumi.String("User"),
 				},
 			},
 			DataLakeStoreAccounts: datalakeanalytics.AddDataLakeStoreWithAccountParametersArray{
 				&datalakeanalytics.AddDataLakeStoreWithAccountParametersArgs{
-					Name: pulumi.String("test_adls"),
+					Name:   pulumi.String("test_adls"),
+					Suffix: pulumi.String("test_suffix"),
 				},
 			},
 			DefaultDataLakeStoreAccount: pulumi.String("test_adls"),
 			FirewallAllowAzureIps:       pulumi.String("Enabled"),
 			FirewallRules: datalakeanalytics.CreateFirewallRuleWithAccountParametersArray{
 				&datalakeanalytics.CreateFirewallRuleWithAccountParametersArgs{
-					Name: pulumi.String("test_rule"),
+					EndIpAddress:   pulumi.String("2.2.2.2"),
+					Name:           pulumi.String("test_rule"),
+					StartIpAddress: pulumi.String("1.1.1.1"),
 				},
 			},
 			FirewallState:                pulumi.String("Enabled"),
@@ -123,7 +139,9 @@ func main() {
 			ResourceGroupName:            pulumi.String("contosorg"),
 			StorageAccounts: datalakeanalytics.AddStorageAccountWithAccountParametersArray{
 				&datalakeanalytics.AddStorageAccountWithAccountParametersArgs{
-					Name: pulumi.String("test_storage"),
+					AccessKey: pulumi.String("34adfa4f-cedf-4dc0-ba29-b6d1a69ab346"),
+					Name:      pulumi.String("test_storage"),
+					Suffix:    pulumi.String("test_suffix"),
 				},
 			},
 			Tags: pulumi.StringMap{
@@ -150,15 +168,22 @@ import pulumi_azure_nextgen as azure_nextgen
 account = azure_nextgen.datalakeanalytics.latest.Account("account",
     account_name="contosoadla",
     compute_policies=[{
+        "maxDegreeOfParallelismPerJob": 1,
+        "minPriorityPerJob": 1,
         "name": "test_policy",
+        "objectId": "34adfa4f-cedf-4dc0-ba29-b6d1a69ab345",
+        "objectType": "User",
     }],
     data_lake_store_accounts=[{
         "name": "test_adls",
+        "suffix": "test_suffix",
     }],
     default_data_lake_store_account="test_adls",
     firewall_allow_azure_ips="Enabled",
     firewall_rules=[{
+        "endIpAddress": "2.2.2.2",
         "name": "test_rule",
+        "startIpAddress": "1.1.1.1",
     }],
     firewall_state="Enabled",
     location="eastus2",
@@ -170,7 +195,9 @@ account = azure_nextgen.datalakeanalytics.latest.Account("account",
     query_store_retention=30,
     resource_group_name="contosorg",
     storage_accounts=[{
+        "accessKey": "34adfa4f-cedf-4dc0-ba29-b6d1a69ab346",
         "name": "test_storage",
+        "suffix": "test_suffix",
     }],
     tags={
         "test_key": "test_value",
@@ -189,15 +216,22 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const account = new azure_nextgen.datalakeanalytics.latest.Account("account", {
     accountName: "contosoadla",
     computePolicies: [{
+        maxDegreeOfParallelismPerJob: 1,
+        minPriorityPerJob: 1,
         name: "test_policy",
+        objectId: "34adfa4f-cedf-4dc0-ba29-b6d1a69ab345",
+        objectType: "User",
     }],
     dataLakeStoreAccounts: [{
         name: "test_adls",
+        suffix: "test_suffix",
     }],
     defaultDataLakeStoreAccount: "test_adls",
     firewallAllowAzureIps: "Enabled",
     firewallRules: [{
+        endIpAddress: "2.2.2.2",
         name: "test_rule",
+        startIpAddress: "1.1.1.1",
     }],
     firewallState: "Enabled",
     location: "eastus2",
@@ -209,7 +243,9 @@ const account = new azure_nextgen.datalakeanalytics.latest.Account("account", {
     queryStoreRetention: 30,
     resourceGroupName: "contosorg",
     storageAccounts: [{
+        accessKey: "34adfa4f-cedf-4dc0-ba29-b6d1a69ab346",
         name: "test_storage",
+        suffix: "test_suffix",
     }],
     tags: {
         test_key: "test_value",

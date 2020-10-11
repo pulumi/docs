@@ -30,15 +30,12 @@ class MyStack : Stack
         {
             Datasource = 
             {
-                { "properties", 
-                {
-                    { "accountId", "someAccountId" },
-                    { "accountKey", "accountKey==" },
-                    { "collectionNamePattern", "collection" },
-                    { "database", "db01" },
-                    { "documentId", "documentId" },
-                    { "partitionKey", "key" },
-                } },
+                { "accountId", "someAccountId" },
+                { "accountKey", "accountKey==" },
+                { "collectionNamePattern", "collection" },
+                { "database", "db01" },
+                { "documentId", "documentId" },
+                { "partitionKey", "key" },
                 { "type", "Microsoft.Storage/DocumentDB" },
             },
             JobName = "sj2331",
@@ -65,14 +62,12 @@ import pulumi_azure_nextgen as azure_nextgen
 
 output = azure_nextgen.streamanalytics.latest.Output("output",
     datasource={
-        "properties": {
-            "accountId": "someAccountId",
-            "accountKey": "accountKey==",
-            "collectionNamePattern": "collection",
-            "database": "db01",
-            "documentId": "documentId",
-            "partitionKey": "key",
-        },
+        "accountId": "someAccountId",
+        "accountKey": "accountKey==",
+        "collectionNamePattern": "collection",
+        "database": "db01",
+        "documentId": "documentId",
+        "partitionKey": "key",
         "type": "Microsoft.Storage/DocumentDB",
     },
     job_name="sj2331",
@@ -91,14 +86,12 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const output = new azure_nextgen.streamanalytics.latest.Output("output", {
     datasource: {
-        properties: {
-            accountId: "someAccountId",
-            accountKey: "accountKey==",
-            collectionNamePattern: "collection",
-            database: "db01",
-            documentId: "documentId",
-            partitionKey: "key",
-        },
+        accountId: "someAccountId",
+        accountKey: "accountKey==",
+        collectionNamePattern: "collection",
+        database: "db01",
+        documentId: "documentId",
+        partitionKey: "key",
         type: "Microsoft.Storage/DocumentDB",
     },
     jobName: "sj2331",
@@ -124,16 +117,13 @@ class MyStack : Stack
         {
             Datasource = 
             {
-                { "properties", 
-                {
-                    { "dataset", "someDataset" },
-                    { "groupId", "ac40305e-3e8d-43ac-8161-c33799f43e95" },
-                    { "groupName", "MyPowerBIGroup" },
-                    { "refreshToken", "someRefreshToken==" },
-                    { "table", "someTable" },
-                    { "tokenUserDisplayName", "Bob Smith" },
-                    { "tokenUserPrincipalName", "bobsmith@contoso.com" },
-                } },
+                { "dataset", "someDataset" },
+                { "groupId", "ac40305e-3e8d-43ac-8161-c33799f43e95" },
+                { "groupName", "MyPowerBIGroup" },
+                { "refreshToken", "someRefreshToken==" },
+                { "table", "someTable" },
+                { "tokenUserDisplayName", "Bob Smith" },
+                { "tokenUserPrincipalName", "bobsmith@contoso.com" },
                 { "type", "PowerBI" },
             },
             JobName = "sj2331",
@@ -160,15 +150,13 @@ import pulumi_azure_nextgen as azure_nextgen
 
 output = azure_nextgen.streamanalytics.latest.Output("output",
     datasource={
-        "properties": {
-            "dataset": "someDataset",
-            "groupId": "ac40305e-3e8d-43ac-8161-c33799f43e95",
-            "groupName": "MyPowerBIGroup",
-            "refreshToken": "someRefreshToken==",
-            "table": "someTable",
-            "tokenUserDisplayName": "Bob Smith",
-            "tokenUserPrincipalName": "bobsmith@contoso.com",
-        },
+        "dataset": "someDataset",
+        "groupId": "ac40305e-3e8d-43ac-8161-c33799f43e95",
+        "groupName": "MyPowerBIGroup",
+        "refreshToken": "someRefreshToken==",
+        "table": "someTable",
+        "tokenUserDisplayName": "Bob Smith",
+        "tokenUserPrincipalName": "bobsmith@contoso.com",
         "type": "PowerBI",
     },
     job_name="sj2331",
@@ -187,15 +175,13 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const output = new azure_nextgen.streamanalytics.latest.Output("output", {
     datasource: {
-        properties: {
-            dataset: "someDataset",
-            groupId: "ac40305e-3e8d-43ac-8161-c33799f43e95",
-            groupName: "MyPowerBIGroup",
-            refreshToken: "someRefreshToken==",
-            table: "someTable",
-            tokenUserDisplayName: "Bob Smith",
-            tokenUserPrincipalName: "bobsmith@contoso.com",
-        },
+        dataset: "someDataset",
+        groupId: "ac40305e-3e8d-43ac-8161-c33799f43e95",
+        groupName: "MyPowerBIGroup",
+        refreshToken: "someRefreshToken==",
+        table: "someTable",
+        tokenUserDisplayName: "Bob Smith",
+        tokenUserPrincipalName: "bobsmith@contoso.com",
         type: "PowerBI",
     },
     jobName: "sj2331",
@@ -221,18 +207,15 @@ class MyStack : Stack
         {
             Datasource = 
             {
-                { "properties", 
+                { "propertyColumns", 
                 {
-                    { "propertyColumns", 
-                    {
-                        "column1",
-                        "column2",
-                    } },
-                    { "queueName", "sdkqueue" },
-                    { "serviceBusNamespace", "sdktest" },
-                    { "sharedAccessPolicyKey", "sharedAccessPolicyKey=" },
-                    { "sharedAccessPolicyName", "RootManageSharedAccessKey" },
+                    "column1",
+                    "column2",
                 } },
+                { "queueName", "sdkqueue" },
+                { "serviceBusNamespace", "sdktest" },
+                { "sharedAccessPolicyKey", "sharedAccessPolicyKey=" },
+                { "sharedAccessPolicyName", "RootManageSharedAccessKey" },
                 { "type", "Microsoft.ServiceBus/Queue" },
             },
             JobName = "sj5095",
@@ -263,16 +246,14 @@ import pulumi_azure_nextgen as azure_nextgen
 
 output = azure_nextgen.streamanalytics.latest.Output("output",
     datasource={
-        "properties": {
-            "propertyColumns": [
-                "column1",
-                "column2",
-            ],
-            "queueName": "sdkqueue",
-            "serviceBusNamespace": "sdktest",
-            "sharedAccessPolicyKey": "sharedAccessPolicyKey=",
-            "sharedAccessPolicyName": "RootManageSharedAccessKey",
-        },
+        "propertyColumns": [
+            "column1",
+            "column2",
+        ],
+        "queueName": "sdkqueue",
+        "serviceBusNamespace": "sdktest",
+        "sharedAccessPolicyKey": "sharedAccessPolicyKey=",
+        "sharedAccessPolicyName": "RootManageSharedAccessKey",
         "type": "Microsoft.ServiceBus/Queue",
     },
     job_name="sj5095",
@@ -294,16 +275,14 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const output = new azure_nextgen.streamanalytics.latest.Output("output", {
     datasource: {
-        properties: {
-            propertyColumns: [
-                "column1",
-                "column2",
-            ],
-            queueName: "sdkqueue",
-            serviceBusNamespace: "sdktest",
-            sharedAccessPolicyKey: "sharedAccessPolicyKey=",
-            sharedAccessPolicyName: "RootManageSharedAccessKey",
-        },
+        propertyColumns: [
+            "column1",
+            "column2",
+        ],
+        queueName: "sdkqueue",
+        serviceBusNamespace: "sdktest",
+        sharedAccessPolicyKey: "sharedAccessPolicyKey=",
+        sharedAccessPolicyName: "RootManageSharedAccessKey",
         type: "Microsoft.ServiceBus/Queue",
     },
     jobName: "sj5095",
@@ -332,18 +311,15 @@ class MyStack : Stack
         {
             Datasource = 
             {
-                { "properties", 
+                { "propertyColumns", 
                 {
-                    { "propertyColumns", 
-                    {
-                        "column1",
-                        "column2",
-                    } },
-                    { "serviceBusNamespace", "sdktest" },
-                    { "sharedAccessPolicyKey", "sharedAccessPolicyKey=" },
-                    { "sharedAccessPolicyName", "RootManageSharedAccessKey" },
-                    { "topicName", "sdktopic" },
+                    "column1",
+                    "column2",
                 } },
+                { "serviceBusNamespace", "sdktest" },
+                { "sharedAccessPolicyKey", "sharedAccessPolicyKey=" },
+                { "sharedAccessPolicyName", "RootManageSharedAccessKey" },
+                { "topicName", "sdktopic" },
                 { "type", "Microsoft.ServiceBus/Topic" },
             },
             JobName = "sj7094",
@@ -351,11 +327,8 @@ class MyStack : Stack
             ResourceGroupName = "sjrg6450",
             Serialization = 
             {
-                { "properties", 
-                {
-                    { "encoding", "UTF8" },
-                    { "fieldDelimiter", "," },
-                } },
+                { "encoding", "UTF8" },
+                { "fieldDelimiter", "," },
                 { "type", "Csv" },
             },
         });
@@ -379,26 +352,22 @@ import pulumi_azure_nextgen as azure_nextgen
 
 output = azure_nextgen.streamanalytics.latest.Output("output",
     datasource={
-        "properties": {
-            "propertyColumns": [
-                "column1",
-                "column2",
-            ],
-            "serviceBusNamespace": "sdktest",
-            "sharedAccessPolicyKey": "sharedAccessPolicyKey=",
-            "sharedAccessPolicyName": "RootManageSharedAccessKey",
-            "topicName": "sdktopic",
-        },
+        "propertyColumns": [
+            "column1",
+            "column2",
+        ],
+        "serviceBusNamespace": "sdktest",
+        "sharedAccessPolicyKey": "sharedAccessPolicyKey=",
+        "sharedAccessPolicyName": "RootManageSharedAccessKey",
+        "topicName": "sdktopic",
         "type": "Microsoft.ServiceBus/Topic",
     },
     job_name="sj7094",
     output_name="output7886",
     resource_group_name="sjrg6450",
     serialization={
-        "properties": {
-            "encoding": "UTF8",
-            "fieldDelimiter": ",",
-        },
+        "encoding": "UTF8",
+        "fieldDelimiter": ",",
         "type": "Csv",
     })
 
@@ -414,26 +383,22 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const output = new azure_nextgen.streamanalytics.latest.Output("output", {
     datasource: {
-        properties: {
-            propertyColumns: [
-                "column1",
-                "column2",
-            ],
-            serviceBusNamespace: "sdktest",
-            sharedAccessPolicyKey: "sharedAccessPolicyKey=",
-            sharedAccessPolicyName: "RootManageSharedAccessKey",
-            topicName: "sdktopic",
-        },
+        propertyColumns: [
+            "column1",
+            "column2",
+        ],
+        serviceBusNamespace: "sdktest",
+        sharedAccessPolicyKey: "sharedAccessPolicyKey=",
+        sharedAccessPolicyName: "RootManageSharedAccessKey",
+        topicName: "sdktopic",
         type: "Microsoft.ServiceBus/Topic",
     },
     jobName: "sj7094",
     outputName: "output7886",
     resourceGroupName: "sjrg6450",
     serialization: {
-        properties: {
-            encoding: "UTF8",
-            fieldDelimiter: ",",
-        },
+        encoding: "UTF8",
+        fieldDelimiter: ",",
         type: "Csv",
     },
 });
@@ -456,21 +421,18 @@ class MyStack : Stack
         {
             Datasource = 
             {
-                { "properties", 
+                { "container", "state" },
+                { "dateFormat", "yyyy/MM/dd" },
+                { "pathPattern", "{date}/{time}" },
+                { "storageAccounts", 
                 {
-                    { "container", "state" },
-                    { "dateFormat", "yyyy/MM/dd" },
-                    { "pathPattern", "{date}/{time}" },
-                    { "storageAccounts", 
+                    new AzureNextGen.StreamAnalytics.Latest.Inputs.StorageAccountArgs
                     {
-                        
-                        {
-                            { "accountKey", "accountKey==" },
-                            { "accountName", "someAccountName" },
-                        },
-                    } },
-                    { "timeFormat", "HH" },
+                        AccountKey = "accountKey==",
+                        AccountName = "someAccountName",
+                    },
                 } },
+                { "timeFormat", "HH" },
                 { "type", "Microsoft.Storage/Blob" },
             },
             JobName = "sj900",
@@ -478,11 +440,8 @@ class MyStack : Stack
             ResourceGroupName = "sjrg5023",
             Serialization = 
             {
-                { "properties", 
-                {
-                    { "encoding", "UTF8" },
-                    { "fieldDelimiter", "," },
-                } },
+                { "encoding", "UTF8" },
+                { "fieldDelimiter", "," },
                 { "type", "Csv" },
             },
         });
@@ -506,26 +465,22 @@ import pulumi_azure_nextgen as azure_nextgen
 
 output = azure_nextgen.streamanalytics.latest.Output("output",
     datasource={
-        "properties": {
-            "container": "state",
-            "dateFormat": "yyyy/MM/dd",
-            "pathPattern": "{date}/{time}",
-            "storageAccounts": [{
-                "accountKey": "accountKey==",
-                "accountName": "someAccountName",
-            }],
-            "timeFormat": "HH",
-        },
+        "container": "state",
+        "dateFormat": "yyyy/MM/dd",
+        "pathPattern": "{date}/{time}",
+        "storageAccounts": [{
+            "accountKey": "accountKey==",
+            "accountName": "someAccountName",
+        }],
+        "timeFormat": "HH",
         "type": "Microsoft.Storage/Blob",
     },
     job_name="sj900",
     output_name="output1623",
     resource_group_name="sjrg5023",
     serialization={
-        "properties": {
-            "encoding": "UTF8",
-            "fieldDelimiter": ",",
-        },
+        "encoding": "UTF8",
+        "fieldDelimiter": ",",
         "type": "Csv",
     })
 
@@ -541,26 +496,22 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const output = new azure_nextgen.streamanalytics.latest.Output("output", {
     datasource: {
-        properties: {
-            container: "state",
-            dateFormat: "yyyy/MM/dd",
-            pathPattern: "{date}/{time}",
-            storageAccounts: [{
-                accountKey: "accountKey==",
-                accountName: "someAccountName",
-            }],
-            timeFormat: "HH",
-        },
+        container: "state",
+        dateFormat: "yyyy/MM/dd",
+        pathPattern: "{date}/{time}",
+        storageAccounts: [{
+            accountKey: "accountKey==",
+            accountName: "someAccountName",
+        }],
+        timeFormat: "HH",
         type: "Microsoft.Storage/Blob",
     },
     jobName: "sj900",
     outputName: "output1623",
     resourceGroupName: "sjrg5023",
     serialization: {
-        properties: {
-            encoding: "UTF8",
-            fieldDelimiter: ",",
-        },
+        encoding: "UTF8",
+        fieldDelimiter: ",",
         type: "Csv",
     },
 });
@@ -583,17 +534,14 @@ class MyStack : Stack
         {
             Datasource = 
             {
-                { "properties", 
-                {
-                    { "accountName", "someaccount" },
-                    { "dateFormat", "yyyy/MM/dd" },
-                    { "filePathPrefix", "{date}/{time}" },
-                    { "refreshToken", "someRefreshToken==" },
-                    { "tenantId", "cea4e98b-c798-49e7-8c40-4a2b3beb47dd" },
-                    { "timeFormat", "HH" },
-                    { "tokenUserDisplayName", "Bob Smith" },
-                    { "tokenUserPrincipalName", "bobsmith@contoso.com" },
-                } },
+                { "accountName", "someaccount" },
+                { "dateFormat", "yyyy/MM/dd" },
+                { "filePathPrefix", "{date}/{time}" },
+                { "refreshToken", "someRefreshToken==" },
+                { "tenantId", "cea4e98b-c798-49e7-8c40-4a2b3beb47dd" },
+                { "timeFormat", "HH" },
+                { "tokenUserDisplayName", "Bob Smith" },
+                { "tokenUserPrincipalName", "bobsmith@contoso.com" },
                 { "type", "Microsoft.DataLake/Accounts" },
             },
             JobName = "sj3310",
@@ -601,11 +549,8 @@ class MyStack : Stack
             ResourceGroupName = "sjrg6912",
             Serialization = 
             {
-                { "properties", 
-                {
-                    { "encoding", "UTF8" },
-                    { "format", "Array" },
-                } },
+                { "encoding", "UTF8" },
+                { "format", "Array" },
                 { "type", "Json" },
             },
         });
@@ -629,26 +574,22 @@ import pulumi_azure_nextgen as azure_nextgen
 
 output = azure_nextgen.streamanalytics.latest.Output("output",
     datasource={
-        "properties": {
-            "accountName": "someaccount",
-            "dateFormat": "yyyy/MM/dd",
-            "filePathPrefix": "{date}/{time}",
-            "refreshToken": "someRefreshToken==",
-            "tenantId": "cea4e98b-c798-49e7-8c40-4a2b3beb47dd",
-            "timeFormat": "HH",
-            "tokenUserDisplayName": "Bob Smith",
-            "tokenUserPrincipalName": "bobsmith@contoso.com",
-        },
+        "accountName": "someaccount",
+        "dateFormat": "yyyy/MM/dd",
+        "filePathPrefix": "{date}/{time}",
+        "refreshToken": "someRefreshToken==",
+        "tenantId": "cea4e98b-c798-49e7-8c40-4a2b3beb47dd",
+        "timeFormat": "HH",
+        "tokenUserDisplayName": "Bob Smith",
+        "tokenUserPrincipalName": "bobsmith@contoso.com",
         "type": "Microsoft.DataLake/Accounts",
     },
     job_name="sj3310",
     output_name="output5195",
     resource_group_name="sjrg6912",
     serialization={
-        "properties": {
-            "encoding": "UTF8",
-            "format": "Array",
-        },
+        "encoding": "UTF8",
+        "format": "Array",
         "type": "Json",
     })
 
@@ -664,26 +605,22 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const output = new azure_nextgen.streamanalytics.latest.Output("output", {
     datasource: {
-        properties: {
-            accountName: "someaccount",
-            dateFormat: "yyyy/MM/dd",
-            filePathPrefix: "{date}/{time}",
-            refreshToken: "someRefreshToken==",
-            tenantId: "cea4e98b-c798-49e7-8c40-4a2b3beb47dd",
-            timeFormat: "HH",
-            tokenUserDisplayName: "Bob Smith",
-            tokenUserPrincipalName: "bobsmith@contoso.com",
-        },
+        accountName: "someaccount",
+        dateFormat: "yyyy/MM/dd",
+        filePathPrefix: "{date}/{time}",
+        refreshToken: "someRefreshToken==",
+        tenantId: "cea4e98b-c798-49e7-8c40-4a2b3beb47dd",
+        timeFormat: "HH",
+        tokenUserDisplayName: "Bob Smith",
+        tokenUserPrincipalName: "bobsmith@contoso.com",
         type: "Microsoft.DataLake/Accounts",
     },
     jobName: "sj3310",
     outputName: "output5195",
     resourceGroupName: "sjrg6912",
     serialization: {
-        properties: {
-            encoding: "UTF8",
-            format: "Array",
-        },
+        encoding: "UTF8",
+        format: "Array",
         type: "Json",
     },
 });
@@ -706,15 +643,12 @@ class MyStack : Stack
         {
             Datasource = 
             {
-                { "properties", 
-                {
-                    { "database", "someDatabase" },
-                    { "password", "somePassword" },
-                    { "server", "someServer" },
-                    { "table", "someTable" },
-                    { "user", "someUser" },
-                } },
+                { "database", "someDatabase" },
+                { "password", "somePassword" },
+                { "server", "someServer" },
+                { "table", "someTable" },
                 { "type", "Microsoft.Sql/Server/Database" },
+                { "user", "someUser" },
             },
             JobName = "sj6458",
             OutputName = "output1755",
@@ -740,14 +674,12 @@ import pulumi_azure_nextgen as azure_nextgen
 
 output = azure_nextgen.streamanalytics.latest.Output("output",
     datasource={
-        "properties": {
-            "database": "someDatabase",
-            "password": "somePassword",
-            "server": "someServer",
-            "table": "someTable",
-            "user": "someUser",
-        },
+        "database": "someDatabase",
+        "password": "somePassword",
+        "server": "someServer",
+        "table": "someTable",
         "type": "Microsoft.Sql/Server/Database",
+        "user": "someUser",
     },
     job_name="sj6458",
     output_name="output1755",
@@ -765,14 +697,12 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const output = new azure_nextgen.streamanalytics.latest.Output("output", {
     datasource: {
-        properties: {
-            database: "someDatabase",
-            password: "somePassword",
-            server: "someServer",
-            table: "someTable",
-            user: "someUser",
-        },
+        database: "someDatabase",
+        password: "somePassword",
+        server: "someServer",
+        table: "someTable",
         type: "Microsoft.Sql/Server/Database",
+        user: "someUser",
     },
     jobName: "sj6458",
     outputName: "output1755",
@@ -797,20 +727,17 @@ class MyStack : Stack
         {
             Datasource = 
             {
-                { "properties", 
+                { "accountKey", "accountKey==" },
+                { "accountName", "someAccountName" },
+                { "batchSize", 25 },
+                { "columnsToRemove", 
                 {
-                    { "accountKey", "accountKey==" },
-                    { "accountName", "someAccountName" },
-                    { "batchSize", 25 },
-                    { "columnsToRemove", 
-                    {
-                        "column1",
-                        "column2",
-                    } },
-                    { "partitionKey", "partitionKey" },
-                    { "rowKey", "rowKey" },
-                    { "table", "samples" },
+                    "column1",
+                    "column2",
                 } },
+                { "partitionKey", "partitionKey" },
+                { "rowKey", "rowKey" },
+                { "table", "samples" },
                 { "type", "Microsoft.Storage/Table" },
             },
             JobName = "sj2790",
@@ -837,18 +764,16 @@ import pulumi_azure_nextgen as azure_nextgen
 
 output = azure_nextgen.streamanalytics.latest.Output("output",
     datasource={
-        "properties": {
-            "accountKey": "accountKey==",
-            "accountName": "someAccountName",
-            "batchSize": 25,
-            "columnsToRemove": [
-                "column1",
-                "column2",
-            ],
-            "partitionKey": "partitionKey",
-            "rowKey": "rowKey",
-            "table": "samples",
-        },
+        "accountKey": "accountKey==",
+        "accountName": "someAccountName",
+        "batchSize": 25,
+        "columnsToRemove": [
+            "column1",
+            "column2",
+        ],
+        "partitionKey": "partitionKey",
+        "rowKey": "rowKey",
+        "table": "samples",
         "type": "Microsoft.Storage/Table",
     },
     job_name="sj2790",
@@ -867,18 +792,16 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const output = new azure_nextgen.streamanalytics.latest.Output("output", {
     datasource: {
-        properties: {
-            accountKey: "accountKey==",
-            accountName: "someAccountName",
-            batchSize: 25,
-            columnsToRemove: [
-                "column1",
-                "column2",
-            ],
-            partitionKey: "partitionKey",
-            rowKey: "rowKey",
-            table: "samples",
-        },
+        accountKey: "accountKey==",
+        accountName: "someAccountName",
+        batchSize: 25,
+        columnsToRemove: [
+            "column1",
+            "column2",
+        ],
+        partitionKey: "partitionKey",
+        rowKey: "rowKey",
+        table: "samples",
         type: "Microsoft.Storage/Table",
     },
     jobName: "sj2790",
@@ -904,14 +827,11 @@ class MyStack : Stack
         {
             Datasource = 
             {
-                { "properties", 
-                {
-                    { "eventHubName", "sdkeventhub" },
-                    { "partitionKey", "partitionKey" },
-                    { "serviceBusNamespace", "sdktest" },
-                    { "sharedAccessPolicyKey", "sharedAccessPolicyKey=" },
-                    { "sharedAccessPolicyName", "RootManageSharedAccessKey" },
-                } },
+                { "eventHubName", "sdkeventhub" },
+                { "partitionKey", "partitionKey" },
+                { "serviceBusNamespace", "sdktest" },
+                { "sharedAccessPolicyKey", "sharedAccessPolicyKey=" },
+                { "sharedAccessPolicyName", "RootManageSharedAccessKey" },
                 { "type", "Microsoft.ServiceBus/EventHub" },
             },
             JobName = "sj3310",
@@ -919,11 +839,8 @@ class MyStack : Stack
             ResourceGroupName = "sjrg6912",
             Serialization = 
             {
-                { "properties", 
-                {
-                    { "encoding", "UTF8" },
-                    { "format", "Array" },
-                } },
+                { "encoding", "UTF8" },
+                { "format", "Array" },
                 { "type", "Json" },
             },
         });
@@ -947,23 +864,19 @@ import pulumi_azure_nextgen as azure_nextgen
 
 output = azure_nextgen.streamanalytics.latest.Output("output",
     datasource={
-        "properties": {
-            "eventHubName": "sdkeventhub",
-            "partitionKey": "partitionKey",
-            "serviceBusNamespace": "sdktest",
-            "sharedAccessPolicyKey": "sharedAccessPolicyKey=",
-            "sharedAccessPolicyName": "RootManageSharedAccessKey",
-        },
+        "eventHubName": "sdkeventhub",
+        "partitionKey": "partitionKey",
+        "serviceBusNamespace": "sdktest",
+        "sharedAccessPolicyKey": "sharedAccessPolicyKey=",
+        "sharedAccessPolicyName": "RootManageSharedAccessKey",
         "type": "Microsoft.ServiceBus/EventHub",
     },
     job_name="sj3310",
     output_name="output5195",
     resource_group_name="sjrg6912",
     serialization={
-        "properties": {
-            "encoding": "UTF8",
-            "format": "Array",
-        },
+        "encoding": "UTF8",
+        "format": "Array",
         "type": "Json",
     })
 
@@ -979,23 +892,19 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const output = new azure_nextgen.streamanalytics.latest.Output("output", {
     datasource: {
-        properties: {
-            eventHubName: "sdkeventhub",
-            partitionKey: "partitionKey",
-            serviceBusNamespace: "sdktest",
-            sharedAccessPolicyKey: "sharedAccessPolicyKey=",
-            sharedAccessPolicyName: "RootManageSharedAccessKey",
-        },
+        eventHubName: "sdkeventhub",
+        partitionKey: "partitionKey",
+        serviceBusNamespace: "sdktest",
+        sharedAccessPolicyKey: "sharedAccessPolicyKey=",
+        sharedAccessPolicyName: "RootManageSharedAccessKey",
         type: "Microsoft.ServiceBus/EventHub",
     },
     jobName: "sj3310",
     outputName: "output5195",
     resourceGroupName: "sjrg6912",
     serialization: {
-        properties: {
-            encoding: "UTF8",
-            format: "Array",
-        },
+        encoding: "UTF8",
+        format: "Array",
         type: "Json",
     },
 });

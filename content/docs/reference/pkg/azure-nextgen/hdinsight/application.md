@@ -30,6 +30,52 @@ class MyStack : Stack
         {
             ApplicationName = "hue",
             ClusterName = "cluster1",
+            Properties = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ApplicationPropertiesArgs
+            {
+                ApplicationType = "CustomApplication",
+                ComputeProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.ComputeProfileArgs
+                {
+                    Roles = 
+                    {
+                        new AzureNextGen.HDInsight.V20180601Preview.Inputs.RoleArgs
+                        {
+                            HardwareProfile = new AzureNextGen.HDInsight.V20180601Preview.Inputs.HardwareProfileArgs
+                            {
+                                VmSize = "Standard_D12_v2",
+                            },
+                            Name = "edgenode",
+                            TargetInstanceCount = 1,
+                        },
+                    },
+                },
+                Errors = {},
+                HttpsEndpoints = 
+                {
+                    new AzureNextGen.HDInsight.V20180601Preview.Inputs.ApplicationGetHttpsEndpointArgs
+                    {
+                        AccessModes = 
+                        {
+                            "WebPage",
+                        },
+                        DestinationPort = 20000,
+                        SubDomainSuffix = "dss",
+                    },
+                },
+                InstallScriptActions = 
+                {
+                    new AzureNextGen.HDInsight.V20180601Preview.Inputs.RuntimeScriptActionArgs
+                    {
+                        Name = "app-install-app1",
+                        Parameters = "-version latest -port 20000",
+                        Roles = 
+                        {
+                            "edgenode",
+                        },
+                        Uri = "https://.../install.sh",
+                    },
+                },
+                UninstallScriptActions = {},
+            },
             ResourceGroupName = "rg1",
         });
     }
@@ -46,15 +92,50 @@ class MyStack : Stack
 package main
 
 import (
-	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/hdinsight/v20180601preview"
+	hdinsight "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hdinsight/v20180601preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := hdinsight.NewApplication(ctx, "application", &hdinsight.ApplicationArgs{
-			ApplicationName:   pulumi.String("hue"),
-			ClusterName:       pulumi.String("cluster1"),
+			ApplicationName: pulumi.String("hue"),
+			ClusterName:     pulumi.String("cluster1"),
+			Properties: &hdinsight.ApplicationPropertiesArgs{
+				ApplicationType: pulumi.String("CustomApplication"),
+				ComputeProfile: &hdinsight.ComputeProfileArgs{
+					Roles: hdinsight.RoleArray{
+						&hdinsight.RoleArgs{
+							HardwareProfile: &hdinsight.HardwareProfileArgs{
+								VmSize: pulumi.String("Standard_D12_v2"),
+							},
+							Name:                pulumi.String("edgenode"),
+							TargetInstanceCount: pulumi.Int(1),
+						},
+					},
+				},
+				Errors: hdinsight.ErrorsArray{},
+				HttpsEndpoints: hdinsight.ApplicationGetHttpsEndpointArray{
+					&hdinsight.ApplicationGetHttpsEndpointArgs{
+						AccessModes: pulumi.StringArray{
+							pulumi.String("WebPage"),
+						},
+						DestinationPort: pulumi.Int(20000),
+						SubDomainSuffix: pulumi.String("dss"),
+					},
+				},
+				InstallScriptActions: hdinsight.RuntimeScriptActionArray{
+					&hdinsight.RuntimeScriptActionArgs{
+						Name:       pulumi.String("app-install-app1"),
+						Parameters: pulumi.String("-version latest -port 20000"),
+						Roles: pulumi.StringArray{
+							pulumi.String("edgenode"),
+						},
+						Uri: pulumi.String("https://.../install.sh"),
+					},
+				},
+				UninstallScriptActions: hdinsight.RuntimeScriptActionArray{},
+			},
 			ResourceGroupName: pulumi.String("rg1"),
 		})
 		if err != nil {
@@ -77,6 +158,31 @@ import pulumi_azure_nextgen as azure_nextgen
 application = azure_nextgen.hdinsight.v20180601preview.Application("application",
     application_name="hue",
     cluster_name="cluster1",
+    properties={
+        "applicationType": "CustomApplication",
+        "computeProfile": {
+            "roles": [{
+                "hardwareProfile": {
+                    "vmSize": "Standard_D12_v2",
+                },
+                "name": "edgenode",
+                "targetInstanceCount": 1,
+            }],
+        },
+        "errors": [],
+        "httpsEndpoints": [{
+            "accessModes": ["WebPage"],
+            "destinationPort": 20000,
+            "subDomainSuffix": "dss",
+        }],
+        "installScriptActions": [{
+            "name": "app-install-app1",
+            "parameters": "-version latest -port 20000",
+            "roles": ["edgenode"],
+            "uri": "https://.../install.sh",
+        }],
+        "uninstallScriptActions": [],
+    },
     resource_group_name="rg1")
 
 ```
@@ -92,6 +198,31 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const application = new azure_nextgen.hdinsight.v20180601preview.Application("application", {
     applicationName: "hue",
     clusterName: "cluster1",
+    properties: {
+        applicationType: "CustomApplication",
+        computeProfile: {
+            roles: [{
+                hardwareProfile: {
+                    vmSize: "Standard_D12_v2",
+                },
+                name: "edgenode",
+                targetInstanceCount: 1,
+            }],
+        },
+        errors: [],
+        httpsEndpoints: [{
+            accessModes: ["WebPage"],
+            destinationPort: 20000,
+            subDomainSuffix: "dss",
+        }],
+        installScriptActions: [{
+            name: "app-install-app1",
+            parameters: "-version latest -port 20000",
+            roles: ["edgenode"],
+            uri: "https://.../install.sh",
+        }],
+        uninstallScriptActions: [],
+    },
     resourceGroupName: "rg1",
 });
 

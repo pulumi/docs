@@ -61,7 +61,7 @@ class MyStack : Stack
 package main
 
 import (
-	aadiam "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/aadiam/latest"
+	aadiam "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/aadiam/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

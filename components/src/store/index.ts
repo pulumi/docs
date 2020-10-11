@@ -76,7 +76,6 @@ export function normalizeState(persistedState: any): Partial<AppState> {
                 os: persistedState.preferences.os || "macos",
                 cloud: persistedState.preferences.cloud || "aws",
                 k8sLanguage: persistedState.preferences.k8sLanguage || "typescript",
-                inputKind: persistedState.preferences.inputKind || "code",
             };
         }
     }

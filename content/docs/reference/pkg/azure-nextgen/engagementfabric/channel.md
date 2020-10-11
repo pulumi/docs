@@ -57,7 +57,7 @@ class MyStack : Stack
 package main
 
 import (
-	engagementfabric "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/engagementfabric/v20180901preview"
+	engagementfabric "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/engagementfabric/v20180901preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

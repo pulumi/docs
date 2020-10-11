@@ -41,6 +41,10 @@ jobs:
           repository: ${{ github.event.client_payload.repo }}
           ref: ${{ github.event.client_payload.ref }}
           path: ${{ github.event.client_payload.project }}
+      - name: Install pulumictl
+        uses: jaxxstorm/action-install-gh-release@d62853bc9e466834c74cefb34fad78535582e21a
+        with:
+          repo: pulumi/pulumictl
       - name: setup go
         uses: actions/setup-go@v2
       - name: setup node

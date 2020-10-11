@@ -29,6 +29,7 @@ class MyStack : Stack
         var iotDpsResource = new AzureNextGen.Devices.Latest.IotDpsResource("iotDpsResource", new AzureNextGen.Devices.Latest.IotDpsResourceArgs
         {
             Location = "East US",
+            Properties = ,
             ProvisioningServiceName = "myFirstProvisioningService",
             ResourceGroupName = "myResourceGroup",
             Sku = new AzureNextGen.Devices.Latest.Inputs.IotDpsSkuInfoArgs
@@ -52,7 +53,7 @@ class MyStack : Stack
 package main
 
 import (
-	devices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/devices/latest"
+	devices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/devices/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -60,6 +61,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := devices.NewIotDpsResource(ctx, "iotDpsResource", &devices.IotDpsResourceArgs{
 			Location:                pulumi.String("East US"),
+			Properties:              nil,
 			ProvisioningServiceName: pulumi.String("myFirstProvisioningService"),
 			ResourceGroupName:       pulumi.String("myResourceGroup"),
 			Sku: &devices.IotDpsSkuInfoArgs{
@@ -87,6 +89,7 @@ import pulumi_azure_nextgen as azure_nextgen
 
 iot_dps_resource = azure_nextgen.devices.latest.IotDpsResource("iotDpsResource",
     location="East US",
+    properties={},
     provisioning_service_name="myFirstProvisioningService",
     resource_group_name="myResourceGroup",
     sku={
@@ -107,6 +110,7 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const iotDpsResource = new azure_nextgen.devices.latest.IotDpsResource("iotDpsResource", {
     location: "East US",
+    properties: {},
     provisioningServiceName: "myFirstProvisioningService",
     resourceGroupName: "myResourceGroup",
     sku: {

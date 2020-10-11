@@ -32,8 +32,12 @@ class MyStack : Stack
             Location = "global",
             Properties = 
             {
-                { "alexaSkillId", "XAlexaSkillIdX" },
-                { "isEnabled", true },
+                { "channelName", "AlexaChannel" },
+                { "properties", 
+                {
+                    { "alexaSkillId", "XAlexaSkillIdX" },
+                    { "isEnabled", true },
+                } },
             },
             ResourceGroupName = "OneResourceGroupName",
             ResourceName = "samplebotname",
@@ -60,8 +64,11 @@ channel = azure_nextgen.botservice.latest.Channel("channel",
     channel_name="AlexaChannel",
     location="global",
     properties={
-        "alexaSkillId": "XAlexaSkillIdX",
-        "isEnabled": True,
+        "channelName": "AlexaChannel",
+        "properties": {
+            "alexaSkillId": "XAlexaSkillIdX",
+            "isEnabled": True,
+        },
     },
     resource_group_name="OneResourceGroupName",
     resource_name="samplebotname")
@@ -80,8 +87,11 @@ const channel = new azure_nextgen.botservice.latest.Channel("channel", {
     channelName: "AlexaChannel",
     location: "global",
     properties: {
-        alexaSkillId: "XAlexaSkillIdX",
-        isEnabled: true,
+        channelName: "AlexaChannel",
+        properties: {
+            alexaSkillId: "XAlexaSkillIdX",
+            isEnabled: true,
+        },
     },
     resourceGroupName: "OneResourceGroupName",
     resourceName: "samplebotname",
@@ -107,9 +117,13 @@ class MyStack : Stack
             Location = "global",
             Properties = 
             {
-                { "emailAddress", "a@b.com" },
-                { "isEnabled", true },
-                { "password", "pwd" },
+                { "channelName", "EmailChannel" },
+                { "properties", 
+                {
+                    { "emailAddress", "a@b.com" },
+                    { "isEnabled", true },
+                    { "password", "pwd" },
+                } },
             },
             ResourceGroupName = "OneResourceGroupName",
             ResourceName = "samplebotname",
@@ -136,9 +150,12 @@ channel = azure_nextgen.botservice.latest.Channel("channel",
     channel_name="EmailChannel",
     location="global",
     properties={
-        "emailAddress": "a@b.com",
-        "isEnabled": True,
-        "password": "pwd",
+        "channelName": "EmailChannel",
+        "properties": {
+            "emailAddress": "a@b.com",
+            "isEnabled": True,
+            "password": "pwd",
+        },
     },
     resource_group_name="OneResourceGroupName",
     resource_name="samplebotname")
@@ -157,9 +174,12 @@ const channel = new azure_nextgen.botservice.latest.Channel("channel", {
     channelName: "EmailChannel",
     location: "global",
     properties: {
-        emailAddress: "a@b.com",
-        isEnabled: true,
-        password: "pwd",
+        channelName: "EmailChannel",
+        properties: {
+            emailAddress: "a@b.com",
+            isEnabled: true,
+            password: "pwd",
+        },
     },
     resourceGroupName: "OneResourceGroupName",
     resourceName: "samplebotname",
@@ -185,8 +205,12 @@ class MyStack : Stack
             Location = "global",
             Properties = 
             {
-                { "cognitiveServicesSubscriptionId", "XcognitiveServicesSubscriptionIdX" },
-                { "isEnabled", true },
+                { "channelName", "DirectLineSpeechChannel" },
+                { "properties", 
+                {
+                    { "cognitiveServicesSubscriptionId", "XcognitiveServicesSubscriptionIdX" },
+                    { "isEnabled", true },
+                } },
             },
             ResourceGroupName = "OneResourceGroupName",
             ResourceName = "samplebotname",
@@ -213,8 +237,11 @@ channel = azure_nextgen.botservice.latest.Channel("channel",
     channel_name="DirectLineSpeechChannel",
     location="global",
     properties={
-        "cognitiveServicesSubscriptionId": "XcognitiveServicesSubscriptionIdX",
-        "isEnabled": True,
+        "channelName": "DirectLineSpeechChannel",
+        "properties": {
+            "cognitiveServicesSubscriptionId": "XcognitiveServicesSubscriptionIdX",
+            "isEnabled": True,
+        },
     },
     resource_group_name="OneResourceGroupName",
     resource_name="samplebotname")
@@ -233,8 +260,11 @@ const channel = new azure_nextgen.botservice.latest.Channel("channel", {
     channelName: "DirectLineSpeechChannel",
     location: "global",
     properties: {
-        cognitiveServicesSubscriptionId: "XcognitiveServicesSubscriptionIdX",
-        isEnabled: true,
+        channelName: "DirectLineSpeechChannel",
+        properties: {
+            cognitiveServicesSubscriptionId: "XcognitiveServicesSubscriptionIdX",
+            isEnabled: true,
+        },
     },
     resourceGroupName: "OneResourceGroupName",
     resourceName: "samplebotname",
@@ -260,13 +290,17 @@ class MyStack : Stack
             Location = "global",
             Properties = 
             {
-                { "lineRegistrations", 
+                { "channelName", "LineChannel" },
+                { "properties", 
                 {
-                    
+                    { "lineRegistrations", 
                     {
-                        { "channelAccessToken", "channelAccessToken" },
-                        { "channelSecret", "channelSecret" },
-                    },
+                        new AzureNextGen.BotService.Latest.Inputs.LineRegistrationArgs
+                        {
+                            ChannelAccessToken = "channelAccessToken",
+                            ChannelSecret = "channelSecret",
+                        },
+                    } },
                 } },
             },
             ResourceGroupName = "OneResourceGroupName",
@@ -294,10 +328,13 @@ channel = azure_nextgen.botservice.latest.Channel("channel",
     channel_name="LineChannel",
     location="global",
     properties={
-        "lineRegistrations": [{
-            "channelAccessToken": "channelAccessToken",
-            "channelSecret": "channelSecret",
-        }],
+        "channelName": "LineChannel",
+        "properties": {
+            "lineRegistrations": [{
+                "channelAccessToken": "channelAccessToken",
+                "channelSecret": "channelSecret",
+            }],
+        },
     },
     resource_group_name="OneResourceGroupName",
     resource_name="samplebotname")
@@ -316,10 +353,13 @@ const channel = new azure_nextgen.botservice.latest.Channel("channel", {
     channelName: "LineChannel",
     location: "global",
     properties: {
-        lineRegistrations: [{
-            channelAccessToken: "channelAccessToken",
-            channelSecret: "channelSecret",
-        }],
+        channelName: "LineChannel",
+        properties: {
+            lineRegistrations: [{
+                channelAccessToken: "channelAccessToken",
+                channelSecret: "channelSecret",
+            }],
+        },
     },
     resourceGroupName: "OneResourceGroupName",
     resourceName: "samplebotname",

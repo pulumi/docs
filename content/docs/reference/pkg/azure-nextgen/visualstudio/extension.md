@@ -56,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	visualstudio "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/visualstudio/v20171101preview"
+	visualstudio "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/visualstudio/v20171101preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

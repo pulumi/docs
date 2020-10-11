@@ -62,7 +62,7 @@ class MyStack : Stack
                         { "timeAggregation", "Average" },
                     },
                 } },
-                { "odata.type", "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria" },
+                { "odataType", "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria" },
             },
             Description = "This is the description of the rule1",
             Enabled = true,
@@ -123,7 +123,7 @@ metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
             "operator": "GreaterOrLessThan",
             "timeAggregation": "Average",
         }],
-        "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
+        "odataType": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
     },
     description="This is the description of the rule1",
     enabled=True,
@@ -175,7 +175,7 @@ const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert",
             operator: "GreaterOrLessThan",
             timeAggregation: "Average",
         }],
-        "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
+        odataType: "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
     },
     description: "This is the description of the rule1",
     enabled: true,
@@ -245,7 +245,7 @@ class MyStack : Stack
                         { "timeAggregation", "Average" },
                     },
                 } },
-                { "odata.type", "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria" },
+                { "odataType", "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria" },
             },
             Description = "This is the description of the rule1",
             Enabled = true,
@@ -306,7 +306,7 @@ metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
             "operator": "GreaterOrLessThan",
             "timeAggregation": "Average",
         }],
-        "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
+        "odataType": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
     },
     description="This is the description of the rule1",
     enabled=True,
@@ -356,7 +356,7 @@ const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert",
             operator: "GreaterOrLessThan",
             timeAggregation: "Average",
         }],
-        "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
+        odataType: "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
     },
     description: "This is the description of the rule1",
     enabled: true,
@@ -393,7 +393,7 @@ class MyStack : Stack
             {
                 { "componentId", "/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/components/webtest-name-example" },
                 { "failedLocationCount", 2 },
-                { "odata.type", "Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria" },
+                { "odataType", "Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria" },
                 { "webTestId", "/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/webtests/component-example" },
             },
             Description = "Automatically created alert rule for availability test \"component-example\" a",
@@ -438,7 +438,7 @@ metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
     criteria={
         "componentId": "/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/components/webtest-name-example",
         "failedLocationCount": 2,
-        "odata.type": "Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria",
+        "odataType": "Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria",
         "webTestId": "/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/webtests/component-example",
     },
     description="Automatically created alert rule for availability test \"component-example\" a",
@@ -473,7 +473,7 @@ const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert",
     criteria: {
         componentId: "/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/components/webtest-name-example",
         failedLocationCount: 2,
-        "odata.type": "Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria",
+        odataType: "Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria",
         webTestId: "/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/webtests/component-example",
     },
     description: "Automatically created alert rule for availability test \"component-example\" a",
@@ -539,7 +539,7 @@ class MyStack : Stack
                         { "timeAggregation", "Average" },
                     },
                 } },
-                { "odata.type", "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria" },
+                { "odataType", "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria" },
             },
             Description = "This is the description of the rule1",
             Enabled = true,
@@ -596,7 +596,7 @@ metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
             "threshold": 80.5,
             "timeAggregation": "Average",
         }],
-        "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
+        "odataType": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
     },
     description="This is the description of the rule1",
     enabled=True,
@@ -644,7 +644,7 @@ const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert",
             threshold: 80.5,
             timeAggregation: "Average",
         }],
-        "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
+        odataType: "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
     },
     description: "This is the description of the rule1",
     enabled: true,
@@ -707,7 +707,7 @@ class MyStack : Stack
                         { "timeAggregation", "Average" },
                     },
                 } },
-                { "odata.type", "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria" },
+                { "odataType", "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria" },
             },
             Description = "This is the description of the rule1",
             Enabled = true,
@@ -760,7 +760,7 @@ metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
             "threshold": 80.5,
             "timeAggregation": "Average",
         }],
-        "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria",
+        "odataType": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria",
     },
     description="This is the description of the rule1",
     enabled=True,
@@ -802,7 +802,7 @@ const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert",
             threshold: 80.5,
             timeAggregation: "Average",
         }],
-        "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria",
+        odataType: "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria",
     },
     description: "This is the description of the rule1",
     enabled: true,
@@ -861,7 +861,7 @@ class MyStack : Stack
                         { "timeAggregation", "Average" },
                     },
                 } },
-                { "odata.type", "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria" },
+                { "odataType", "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria" },
             },
             Description = "This is the description of the rule1",
             Enabled = true,
@@ -918,7 +918,7 @@ metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
             "threshold": 80.5,
             "timeAggregation": "Average",
         }],
-        "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
+        "odataType": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
     },
     description="This is the description of the rule1",
     enabled=True,
@@ -966,7 +966,7 @@ const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert",
             threshold: 80.5,
             timeAggregation: "Average",
         }],
-        "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
+        odataType: "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
     },
     description: "This is the description of the rule1",
     enabled: true,
@@ -1030,7 +1030,7 @@ class MyStack : Stack
                         { "timeAggregation", "Average" },
                     },
                 } },
-                { "odata.type", "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria" },
+                { "odataType", "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria" },
             },
             Description = "This is the description of the rule1",
             Enabled = true,
@@ -1086,7 +1086,7 @@ metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
             "threshold": 80.5,
             "timeAggregation": "Average",
         }],
-        "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
+        "odataType": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
     },
     description="This is the description of the rule1",
     enabled=True,
@@ -1131,7 +1131,7 @@ const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert",
             threshold: 80.5,
             timeAggregation: "Average",
         }],
-        "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
+        odataType: "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
     },
     description: "This is the description of the rule1",
     enabled: true,
@@ -2238,7 +2238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeaggregation_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Aggregation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}the criteria time aggregation types.{{% /md %}}</dd>
 
@@ -2345,7 +2345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeaggregation_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Aggregation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}the criteria time aggregation types.{{% /md %}}</dd>
 
@@ -2452,7 +2452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeaggregation_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Aggregation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}the criteria time aggregation types.{{% /md %}}</dd>
 
@@ -2559,7 +2559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeaggregation_python" style="color: inherit; text-decoration: inherit;">time<wbr>Aggregation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}the criteria time aggregation types.{{% /md %}}</dd>
 
@@ -2677,7 +2677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeaggregation_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Aggregation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}the criteria time aggregation types.{{% /md %}}</dd>
 
@@ -2784,7 +2784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeaggregation_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Aggregation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}the criteria time aggregation types.{{% /md %}}</dd>
 
@@ -2891,7 +2891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeaggregation_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Aggregation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}the criteria time aggregation types.{{% /md %}}</dd>
 
@@ -2998,7 +2998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeaggregation_python" style="color: inherit; text-decoration: inherit;">time<wbr>Aggregation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}the criteria time aggregation types.{{% /md %}}</dd>
 
@@ -3898,7 +3898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeaggregation_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Aggregation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}the criteria time aggregation types.{{% /md %}}</dd>
 
@@ -3985,7 +3985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeaggregation_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Aggregation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}the criteria time aggregation types.{{% /md %}}</dd>
 
@@ -4072,7 +4072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeaggregation_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Aggregation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}the criteria time aggregation types.{{% /md %}}</dd>
 
@@ -4159,7 +4159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeaggregation_python" style="color: inherit; text-decoration: inherit;">time<wbr>Aggregation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}the criteria time aggregation types.{{% /md %}}</dd>
 
@@ -4257,7 +4257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeaggregation_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Aggregation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}the criteria time aggregation types.{{% /md %}}</dd>
 
@@ -4344,7 +4344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeaggregation_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Aggregation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}the criteria time aggregation types.{{% /md %}}</dd>
 
@@ -4431,7 +4431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeaggregation_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Aggregation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}the criteria time aggregation types.{{% /md %}}</dd>
 
@@ -4518,7 +4518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeaggregation_python" style="color: inherit; text-decoration: inherit;">time<wbr>Aggregation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}the criteria time aggregation types.{{% /md %}}</dd>
 

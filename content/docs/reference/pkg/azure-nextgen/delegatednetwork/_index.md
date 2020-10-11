@@ -12,11 +12,15 @@ Explore the resources and functions of the delegatednetwork module in the Azure 
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="controllerdetails" title="ControllerDetails"><span class="symbol resource"></span>ControllerDetails</a></li>
+    <li><a href="delegatedsubnetservicedetails" title="DelegatedSubnetServiceDetails"><span class="symbol resource"></span>DelegatedSubnetServiceDetails</a></li>
+    <li><a href="orchestratorinstanceservicedetails" title="OrchestratorInstanceServiceDetails"><span class="symbol resource"></span>OrchestratorInstanceServiceDetails</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getcontrollerdetails" title="GetControllerDetails"><span class="symbol function"></span>GetControllerDetails</a></li>
+    <li><a href="getdelegatedsubnetservicedetails" title="GetDelegatedSubnetServiceDetails"><span class="symbol function"></span>GetDelegatedSubnetServiceDetails</a></li>
+    <li><a href="getorchestratorinstanceservicedetails" title="GetOrchestratorInstanceServiceDetails"><span class="symbol function"></span>GetOrchestratorInstanceServiceDetails</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -26,7 +30,7 @@ Explore the resources and functions of the delegatednetwork module in the Azure 
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.1</dd>
 </dl>
 
 

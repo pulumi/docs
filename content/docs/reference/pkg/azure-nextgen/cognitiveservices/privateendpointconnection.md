@@ -30,6 +30,14 @@ class MyStack : Stack
         {
             AccountName = "sto9699",
             PrivateEndpointConnectionName = "{privateEndpointConnectionName}",
+            Properties = new AzureNextGen.CognitiveServices.Latest.Inputs.PrivateEndpointConnectionPropertiesArgs
+            {
+                PrivateLinkServiceConnectionState = new AzureNextGen.CognitiveServices.Latest.Inputs.PrivateLinkServiceConnectionStateArgs
+                {
+                    Description = "Auto-Approved",
+                    Status = "Approved",
+                },
+            },
             ResourceGroupName = "res7687",
         });
     }
@@ -46,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	cognitiveservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/cognitiveservices/latest"
+	cognitiveservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cognitiveservices/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -55,7 +63,13 @@ func main() {
 		_, err := cognitiveservices.NewPrivateEndpointConnection(ctx, "privateEndpointConnection", &cognitiveservices.PrivateEndpointConnectionArgs{
 			AccountName:                   pulumi.String("sto9699"),
 			PrivateEndpointConnectionName: pulumi.String("{privateEndpointConnectionName}"),
-			ResourceGroupName:             pulumi.String("res7687"),
+			Properties: &cognitiveservices.PrivateEndpointConnectionPropertiesArgs{
+				PrivateLinkServiceConnectionState: &cognitiveservices.PrivateLinkServiceConnectionStateArgs{
+					Description: pulumi.String("Auto-Approved"),
+					Status:      pulumi.String("Approved"),
+				},
+			},
+			ResourceGroupName: pulumi.String("res7687"),
 		})
 		if err != nil {
 			return err
@@ -77,6 +91,12 @@ import pulumi_azure_nextgen as azure_nextgen
 private_endpoint_connection = azure_nextgen.cognitiveservices.latest.PrivateEndpointConnection("privateEndpointConnection",
     account_name="sto9699",
     private_endpoint_connection_name="{privateEndpointConnectionName}",
+    properties={
+        "privateLinkServiceConnectionState": {
+            "description": "Auto-Approved",
+            "status": "Approved",
+        },
+    },
     resource_group_name="res7687")
 
 ```
@@ -92,6 +112,12 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const privateEndpointConnection = new azure_nextgen.cognitiveservices.latest.PrivateEndpointConnection("privateEndpointConnection", {
     accountName: "sto9699",
     privateEndpointConnectionName: "{privateEndpointConnectionName}",
+    properties: {
+        privateLinkServiceConnectionState: {
+            description: "Auto-Approved",
+            status: "Approved",
+        },
+    },
     resourceGroupName: "res7687",
 });
 

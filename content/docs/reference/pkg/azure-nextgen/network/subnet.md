@@ -12,6 +12,290 @@ meta_desc: "Explore the Subnet resource of the network module, including example
 
 Subnet in a virtual network resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create subnet
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var subnet = new AzureNextGen.Network.Latest.Subnet("subnet", new AzureNextGen.Network.Latest.SubnetArgs
+        {
+            AddressPrefix = "10.0.0.0/16",
+            ResourceGroupName = "subnet-test",
+            SubnetName = "subnet1",
+            VirtualNetworkName = "vnetname",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewSubnet(ctx, "subnet", &network.SubnetArgs{
+			AddressPrefix:      pulumi.String("10.0.0.0/16"),
+			ResourceGroupName:  pulumi.String("subnet-test"),
+			SubnetName:         pulumi.String("subnet1"),
+			VirtualNetworkName: pulumi.String("vnetname"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+subnet = azure_nextgen.network.latest.Subnet("subnet",
+    address_prefix="10.0.0.0/16",
+    resource_group_name="subnet-test",
+    subnet_name="subnet1",
+    virtual_network_name="vnetname")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const subnet = new azure_nextgen.network.latest.Subnet("subnet", {
+    addressPrefix: "10.0.0.0/16",
+    resourceGroupName: "subnet-test",
+    subnetName: "subnet1",
+    virtualNetworkName: "vnetname",
+});
+
+```
+
+{{% /example %}}
+
+### Create subnet with a delegation
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var subnet = new AzureNextGen.Network.Latest.Subnet("subnet", new AzureNextGen.Network.Latest.SubnetArgs
+        {
+            AddressPrefix = "10.0.0.0/16",
+            ResourceGroupName = "subnet-test",
+            SubnetName = "subnet1",
+            VirtualNetworkName = "vnetname",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewSubnet(ctx, "subnet", &network.SubnetArgs{
+			AddressPrefix:      pulumi.String("10.0.0.0/16"),
+			ResourceGroupName:  pulumi.String("subnet-test"),
+			SubnetName:         pulumi.String("subnet1"),
+			VirtualNetworkName: pulumi.String("vnetname"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+subnet = azure_nextgen.network.latest.Subnet("subnet",
+    address_prefix="10.0.0.0/16",
+    resource_group_name="subnet-test",
+    subnet_name="subnet1",
+    virtual_network_name="vnetname")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const subnet = new azure_nextgen.network.latest.Subnet("subnet", {
+    addressPrefix: "10.0.0.0/16",
+    resourceGroupName: "subnet-test",
+    subnetName: "subnet1",
+    virtualNetworkName: "vnetname",
+});
+
+```
+
+{{% /example %}}
+
+### Create subnet with service endpoints
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var subnet = new AzureNextGen.Network.Latest.Subnet("subnet", new AzureNextGen.Network.Latest.SubnetArgs
+        {
+            AddressPrefix = "10.0.0.0/16",
+            ResourceGroupName = "subnet-test",
+            ServiceEndpoints = 
+            {
+                new AzureNextGen.Network.Latest.Inputs.ServiceEndpointPropertiesFormatArgs
+                {
+                    Service = "Microsoft.Storage",
+                },
+            },
+            SubnetName = "subnet1",
+            VirtualNetworkName = "vnetname",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewSubnet(ctx, "subnet", &network.SubnetArgs{
+			AddressPrefix:     pulumi.String("10.0.0.0/16"),
+			ResourceGroupName: pulumi.String("subnet-test"),
+			ServiceEndpoints: network.ServiceEndpointPropertiesFormatArray{
+				&network.ServiceEndpointPropertiesFormatArgs{
+					Service: pulumi.String("Microsoft.Storage"),
+				},
+			},
+			SubnetName:         pulumi.String("subnet1"),
+			VirtualNetworkName: pulumi.String("vnetname"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+subnet = azure_nextgen.network.latest.Subnet("subnet",
+    address_prefix="10.0.0.0/16",
+    resource_group_name="subnet-test",
+    service_endpoints=[{
+        "service": "Microsoft.Storage",
+    }],
+    subnet_name="subnet1",
+    virtual_network_name="vnetname")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const subnet = new azure_nextgen.network.latest.Subnet("subnet", {
+    addressPrefix: "10.0.0.0/16",
+    resourceGroupName: "subnet-test",
+    serviceEndpoints: [{
+        service: "Microsoft.Storage",
+    }],
+    subnetName: "subnet1",
+    virtualNetworkName: "vnetname",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Subnet Resource {#create}
@@ -16524,7 +16808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -16541,7 +16825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -16558,7 +16842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -16575,7 +16859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

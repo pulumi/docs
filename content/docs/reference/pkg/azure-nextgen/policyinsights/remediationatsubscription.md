@@ -45,7 +45,7 @@ class MyStack : Stack
 package main
 
 import (
-	policyinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/policyinsights/latest"
+	policyinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/policyinsights/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -134,7 +134,7 @@ class MyStack : Stack
 package main
 
 import (
-	policyinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/policyinsights/latest"
+	policyinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/policyinsights/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

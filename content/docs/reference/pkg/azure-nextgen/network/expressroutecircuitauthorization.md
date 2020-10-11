@@ -12,6 +12,94 @@ meta_desc: "Explore the ExpressRouteCircuitAuthorization resource of the network
 
 Authorization in an ExpressRouteCircuit resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create ExpressRouteCircuit Authorization
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var expressRouteCircuitAuthorization = new AzureNextGen.Network.Latest.ExpressRouteCircuitAuthorization("expressRouteCircuitAuthorization", new AzureNextGen.Network.Latest.ExpressRouteCircuitAuthorizationArgs
+        {
+            AuthorizationName = "authorizatinName",
+            CircuitName = "circuitName",
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewExpressRouteCircuitAuthorization(ctx, "expressRouteCircuitAuthorization", &network.ExpressRouteCircuitAuthorizationArgs{
+			AuthorizationName: pulumi.String("authorizatinName"),
+			CircuitName:       pulumi.String("circuitName"),
+			ResourceGroupName: pulumi.String("rg1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+express_route_circuit_authorization = azure_nextgen.network.latest.ExpressRouteCircuitAuthorization("expressRouteCircuitAuthorization",
+    authorization_name="authorizatinName",
+    circuit_name="circuitName",
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const expressRouteCircuitAuthorization = new azure_nextgen.network.latest.ExpressRouteCircuitAuthorization("expressRouteCircuitAuthorization", {
+    authorizationName: "authorizatinName",
+    circuitName: "circuitName",
+    resourceGroupName: "rg1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ExpressRouteCircuitAuthorization Resource {#create}

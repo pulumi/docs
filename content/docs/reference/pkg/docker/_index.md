@@ -40,7 +40,7 @@ A Pulumi package for interacting with Docker in Pulumi programs
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`docker` Terraform Provider](https://github.com/terraform-providers/terraform-provider-docker).</dd>
 	<dt>Version</dt>
-	<dd>2.3.0</dd>
+	<dd>2.3.1</dd>
 </dl>
 
 

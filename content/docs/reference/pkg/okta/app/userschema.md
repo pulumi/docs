@@ -123,7 +123,7 @@ const example = new okta.app.UserSchema("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/app/#pulumi_okta.app.UserSchema">UserSchema</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">array_enums</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">array_one_ofs</span><span class="p">:</span> <span class="nx">Optional[List[UserSchemaArrayOneOfArgs]]</span> = None<span class="p">, </span><span class="nx">array_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enums</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">external_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">index</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_length</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">min_length</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">one_ofs</span><span class="p">:</span> <span class="nx">Optional[List[UserSchemaOneOfArgs]]</span> = None<span class="p">, </span><span class="nx">permissions</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/app/#pulumi_okta.app.UserSchema">UserSchema</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">array_enums</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">array_one_ofs</span><span class="p">:</span> <span class="nx">Optional[Sequence[UserSchemaArrayOneOfArgs]]</span> = None<span class="p">, </span><span class="nx">array_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enums</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">external_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">index</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">one_ofs</span><span class="p">:</span> <span class="nx">Optional[Sequence[UserSchemaOneOfArgs]]</span> = None<span class="p">, </span><span class="nx">permissions</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unique</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -407,6 +407,17 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
+        <span id="externalnamespace_csharp">
+<a href="#externalnamespace_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Namespace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}External namespace of the user schema property.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="master_csharp">
 <a href="#master_csharp" style="color: inherit; text-decoration: inherit;">Master</a>
 </span> 
@@ -480,6 +491,17 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}determines whether an app user attribute can be set at the Individual or Group Level.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="unique_csharp">
+<a href="#unique_csharp" style="color: inherit; text-decoration: inherit;">Unique</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Subschema unique restriction
 {{% /md %}}</dd>
 
 </dl>
@@ -601,6 +623,17 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
+        <span id="externalnamespace_go">
+<a href="#externalnamespace_go" style="color: inherit; text-decoration: inherit;">External<wbr>Namespace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}External namespace of the user schema property.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="master_go">
 <a href="#master_go" style="color: inherit; text-decoration: inherit;">Master</a>
 </span> 
@@ -674,6 +707,17 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}determines whether an app user attribute can be set at the Individual or Group Level.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="unique_go">
+<a href="#unique_go" style="color: inherit; text-decoration: inherit;">Unique</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Subschema unique restriction
 {{% /md %}}</dd>
 
 </dl>
@@ -795,6 +839,17 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
+        <span id="externalnamespace_nodejs">
+<a href="#externalnamespace_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Namespace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}External namespace of the user schema property.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="master_nodejs">
 <a href="#master_nodejs" style="color: inherit; text-decoration: inherit;">master</a>
 </span> 
@@ -870,6 +925,17 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}determines whether an app user attribute can be set at the Individual or Group Level.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="unique_nodejs">
+<a href="#unique_nodejs" style="color: inherit; text-decoration: inherit;">unique</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Subschema unique restriction
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -927,7 +993,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#array_enums_python" style="color: inherit; text-decoration: inherit;">array_<wbr>enums</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Array of values that an array property's items can be set to.
 {{% /md %}}</dd>
@@ -938,7 +1004,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#array_one_ofs_python" style="color: inherit; text-decoration: inherit;">array_<wbr>one_<wbr>ofs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userschemaarrayoneof">List[User<wbr>Schema<wbr>Array<wbr>One<wbr>Of<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userschemaarrayoneof">Sequence[User<wbr>Schema<wbr>Array<wbr>One<wbr>Of<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Display name and value an enum array can be set to.
 {{% /md %}}</dd>
@@ -971,7 +1037,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#enums_python" style="color: inherit; text-decoration: inherit;">enums</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Array of values a primitive property can be set to. See `array_enum` for arrays.
 {{% /md %}}</dd>
@@ -985,6 +1051,17 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}External name of the user schema property.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="external_namespace_python">
+<a href="#external_namespace_python" style="color: inherit; text-decoration: inherit;">external_<wbr>namespace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}External namespace of the user schema property.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1004,7 +1081,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#max_length_python" style="color: inherit; text-decoration: inherit;">max_<wbr>length</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum length of the user property value. Only applies to type `"string"`.
 {{% /md %}}</dd>
@@ -1015,7 +1092,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#min_length_python" style="color: inherit; text-decoration: inherit;">min_<wbr>length</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum length of the user property value. Only applies to type `"string"`.
 {{% /md %}}</dd>
@@ -1026,7 +1103,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#one_ofs_python" style="color: inherit; text-decoration: inherit;">one_<wbr>ofs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userschemaoneof">List[User<wbr>Schema<wbr>One<wbr>Of<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userschemaoneof">Sequence[User<wbr>Schema<wbr>One<wbr>Of<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of maps containing a mapping for display name to enum value.
 {{% /md %}}</dd>
@@ -1062,6 +1139,17 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}determines whether an app user attribute can be set at the Individual or Group Level.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="unique_python">
+<a href="#unique_python" style="color: inherit; text-decoration: inherit;">unique</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Subschema unique restriction
 {{% /md %}}</dd>
 
 </dl>
@@ -1163,7 +1251,7 @@ Get an existing UserSchema resource's state with the given name, ID, and optiona
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">array_enums</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">array_one_ofs</span><span class="p">:</span> <span class="nx">Optional[List[UserSchemaArrayOneOfArgs]]</span> = None<span class="p">, </span><span class="nx">array_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enums</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">external_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">index</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_length</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">min_length</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">one_ofs</span><span class="p">:</span> <span class="nx">Optional[List[UserSchemaOneOfArgs]]</span> = None<span class="p">, </span><span class="nx">permissions</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> UserSchema</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">array_enums</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">array_one_ofs</span><span class="p">:</span> <span class="nx">Optional[Sequence[UserSchemaArrayOneOfArgs]]</span> = None<span class="p">, </span><span class="nx">array_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enums</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">external_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">index</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">one_ofs</span><span class="p">:</span> <span class="nx">Optional[Sequence[UserSchemaOneOfArgs]]</span> = None<span class="p">, </span><span class="nx">permissions</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unique</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> UserSchema</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1356,6 +1444,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_externalnamespace_csharp">
+<a href="#state_externalnamespace_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Namespace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}External namespace of the user schema property.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_index_csharp">
 <a href="#state_index_csharp" style="color: inherit; text-decoration: inherit;">Index</a>
 </span> 
@@ -1464,6 +1563,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_unique_csharp">
+<a href="#state_unique_csharp" style="color: inherit; text-decoration: inherit;">Unique</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Subschema unique restriction
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1546,6 +1656,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}External name of the user schema property.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_externalnamespace_go">
+<a href="#state_externalnamespace_go" style="color: inherit; text-decoration: inherit;">External<wbr>Namespace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}External namespace of the user schema property.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1658,6 +1779,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_unique_go">
+<a href="#state_unique_go" style="color: inherit; text-decoration: inherit;">Unique</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Subschema unique restriction
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1740,6 +1872,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}External name of the user schema property.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_externalnamespace_nodejs">
+<a href="#state_externalnamespace_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Namespace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}External namespace of the user schema property.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1852,6 +1995,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_unique_nodejs">
+<a href="#state_unique_nodejs" style="color: inherit; text-decoration: inherit;">unique</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Subschema unique restriction
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1876,7 +2030,7 @@ The following state arguments are supported:
 <a href="#state_array_enums_python" style="color: inherit; text-decoration: inherit;">array_<wbr>enums</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Array of values that an array property's items can be set to.
 {{% /md %}}</dd>
@@ -1887,7 +2041,7 @@ The following state arguments are supported:
 <a href="#state_array_one_ofs_python" style="color: inherit; text-decoration: inherit;">array_<wbr>one_<wbr>ofs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userschemaarrayoneof">List[User<wbr>Schema<wbr>Array<wbr>One<wbr>Of<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userschemaarrayoneof">Sequence[User<wbr>Schema<wbr>Array<wbr>One<wbr>Of<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Display name and value an enum array can be set to.
 {{% /md %}}</dd>
@@ -1920,7 +2074,7 @@ The following state arguments are supported:
 <a href="#state_enums_python" style="color: inherit; text-decoration: inherit;">enums</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Array of values a primitive property can be set to. See `array_enum` for arrays.
 {{% /md %}}</dd>
@@ -1934,6 +2088,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}External name of the user schema property.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_external_namespace_python">
+<a href="#state_external_namespace_python" style="color: inherit; text-decoration: inherit;">external_<wbr>namespace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}External namespace of the user schema property.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1964,7 +2129,7 @@ The following state arguments are supported:
 <a href="#state_max_length_python" style="color: inherit; text-decoration: inherit;">max_<wbr>length</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum length of the user property value. Only applies to type `"string"`.
 {{% /md %}}</dd>
@@ -1975,7 +2140,7 @@ The following state arguments are supported:
 <a href="#state_min_length_python" style="color: inherit; text-decoration: inherit;">min_<wbr>length</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum length of the user property value. Only applies to type `"string"`.
 {{% /md %}}</dd>
@@ -1986,7 +2151,7 @@ The following state arguments are supported:
 <a href="#state_one_ofs_python" style="color: inherit; text-decoration: inherit;">one_<wbr>ofs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userschemaoneof">List[User<wbr>Schema<wbr>One<wbr>Of<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userschemaoneof">Sequence[User<wbr>Schema<wbr>One<wbr>Of<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of maps containing a mapping for display name to enum value.
 {{% /md %}}</dd>
@@ -2044,6 +2209,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_unique_python">
+<a href="#state_unique_python" style="color: inherit; text-decoration: inherit;">unique</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Subschema unique restriction
 {{% /md %}}</dd>
 
 </dl>
@@ -2340,6 +2516,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/articulate/terraform-provider-okta).</dd>
+	<dd>This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/oktadeveloper/terraform-provider-okta).</dd>
 </dl>
 

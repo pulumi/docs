@@ -29,6 +29,16 @@ class MyStack : Stack
         var masterSite = new AzureNextGen.OffAzure.Latest.MasterSite("masterSite", new AzureNextGen.OffAzure.Latest.MasterSiteArgs
         {
             Location = "eastus",
+            Properties = new AzureNextGen.OffAzure.Latest.Inputs.MasterSitePropertiesArgs
+            {
+                AllowMultipleSites = false,
+                PublicNetworkAccess = "Enabled",
+                Sites = 
+                {
+                    "/subscriptions/4bd2aa0f-2bd2-4d67-91a8-5a4533d58600/resourceGroups/pajindTest/providers/Microsoft.OffAzure/VMwareSites/appliance1e39site",
+                    "/subscriptions/4bd2aa0f-2bd2-4d67-91a8-5a4533d58600/resourceGroups/pajindTest/providers/Microsoft.OffAzure/HyperVSites/appliance1e39site",
+                },
+            },
             ResourceGroupName = "poshukla",
             SiteName = "masterSite1",
         });
@@ -46,14 +56,22 @@ class MyStack : Stack
 package main
 
 import (
-	offazure "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/offazure/latest"
+	offazure "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/offazure/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := offazure.NewMasterSite(ctx, "masterSite", &offazure.MasterSiteArgs{
-			Location:          pulumi.String("eastus"),
+			Location: pulumi.String("eastus"),
+			Properties: &offazure.MasterSitePropertiesArgs{
+				AllowMultipleSites:  pulumi.Bool(false),
+				PublicNetworkAccess: pulumi.String("Enabled"),
+				Sites: pulumi.StringArray{
+					pulumi.String("/subscriptions/4bd2aa0f-2bd2-4d67-91a8-5a4533d58600/resourceGroups/pajindTest/providers/Microsoft.OffAzure/VMwareSites/appliance1e39site"),
+					pulumi.String("/subscriptions/4bd2aa0f-2bd2-4d67-91a8-5a4533d58600/resourceGroups/pajindTest/providers/Microsoft.OffAzure/HyperVSites/appliance1e39site"),
+				},
+			},
 			ResourceGroupName: pulumi.String("poshukla"),
 			SiteName:          pulumi.String("masterSite1"),
 		})
@@ -76,6 +94,14 @@ import pulumi_azure_nextgen as azure_nextgen
 
 master_site = azure_nextgen.offazure.latest.MasterSite("masterSite",
     location="eastus",
+    properties={
+        "allowMultipleSites": False,
+        "publicNetworkAccess": "Enabled",
+        "sites": [
+            "/subscriptions/4bd2aa0f-2bd2-4d67-91a8-5a4533d58600/resourceGroups/pajindTest/providers/Microsoft.OffAzure/VMwareSites/appliance1e39site",
+            "/subscriptions/4bd2aa0f-2bd2-4d67-91a8-5a4533d58600/resourceGroups/pajindTest/providers/Microsoft.OffAzure/HyperVSites/appliance1e39site",
+        ],
+    },
     resource_group_name="poshukla",
     site_name="masterSite1")
 
@@ -91,6 +117,14 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const masterSite = new azure_nextgen.offazure.latest.MasterSite("masterSite", {
     location: "eastus",
+    properties: {
+        allowMultipleSites: false,
+        publicNetworkAccess: "Enabled",
+        sites: [
+            "/subscriptions/4bd2aa0f-2bd2-4d67-91a8-5a4533d58600/resourceGroups/pajindTest/providers/Microsoft.OffAzure/VMwareSites/appliance1e39site",
+            "/subscriptions/4bd2aa0f-2bd2-4d67-91a8-5a4533d58600/resourceGroups/pajindTest/providers/Microsoft.OffAzure/HyperVSites/appliance1e39site",
+        ],
+    },
     resourceGroupName: "poshukla",
     siteName: "masterSite1",
 });

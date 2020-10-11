@@ -12,6 +12,426 @@ meta_desc: "Explore the DeploymentScript resource of the resources module, inclu
 
 Deployment script object.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### DeploymentScriptsCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var deploymentScript = new AzureNextGen.Resources.Latest.DeploymentScript("deploymentScript", new AzureNextGen.Resources.Latest.DeploymentScriptArgs
+        {
+            Identity = new AzureNextGen.Resources.Latest.Inputs.ManagedServiceIdentityArgs
+            {
+                Type = "UserAssigned",
+                UserAssignedIdentities = 
+                {
+                    { "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai",  },
+                },
+            },
+            Kind = "AzurePowerShell",
+            Location = "westus",
+            ResourceGroupName = "script-rg",
+            ScriptName = "MyDeploymentScript",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+deployment_script = azure_nextgen.resources.latest.DeploymentScript("deploymentScript",
+    identity={
+        "type": "UserAssigned",
+        "userAssignedIdentities": {
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": {},
+        },
+    },
+    kind="AzurePowerShell",
+    location="westus",
+    resource_group_name="script-rg",
+    script_name="MyDeploymentScript")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const deploymentScript = new azure_nextgen.resources.latest.DeploymentScript("deploymentScript", {
+    identity: {
+        type: "UserAssigned",
+        userAssignedIdentities: {
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": {},
+        },
+    },
+    kind: "AzurePowerShell",
+    location: "westus",
+    resourceGroupName: "script-rg",
+    scriptName: "MyDeploymentScript",
+});
+
+```
+
+{{% /example %}}
+
+### DeploymentScriptsCreateNoUserManagedIdentity
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var deploymentScript = new AzureNextGen.Resources.Latest.DeploymentScript("deploymentScript", new AzureNextGen.Resources.Latest.DeploymentScriptArgs
+        {
+            Kind = "AzurePowerShell",
+            Location = "westus",
+            ResourceGroupName = "script-rg",
+            ScriptName = "MyDeploymentScript",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	resources "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resources/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := resources.NewDeploymentScript(ctx, "deploymentScript", &resources.DeploymentScriptArgs{
+			Kind:              pulumi.String("AzurePowerShell"),
+			Location:          pulumi.String("westus"),
+			ResourceGroupName: pulumi.String("script-rg"),
+			ScriptName:        pulumi.String("MyDeploymentScript"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+deployment_script = azure_nextgen.resources.latest.DeploymentScript("deploymentScript",
+    kind="AzurePowerShell",
+    location="westus",
+    resource_group_name="script-rg",
+    script_name="MyDeploymentScript")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const deploymentScript = new azure_nextgen.resources.latest.DeploymentScript("deploymentScript", {
+    kind: "AzurePowerShell",
+    location: "westus",
+    resourceGroupName: "script-rg",
+    scriptName: "MyDeploymentScript",
+});
+
+```
+
+{{% /example %}}
+
+### DeploymentScriptsCreate_MinCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var deploymentScript = new AzureNextGen.Resources.Latest.DeploymentScript("deploymentScript", new AzureNextGen.Resources.Latest.DeploymentScriptArgs
+        {
+            Identity = new AzureNextGen.Resources.Latest.Inputs.ManagedServiceIdentityArgs
+            {
+                Type = "UserAssigned",
+                UserAssignedIdentities = 
+                {
+                    { "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai",  },
+                },
+            },
+            Kind = "AzurePowerShell",
+            Location = "westus",
+            ResourceGroupName = "script-rg",
+            ScriptName = "MyDeploymentScript",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+deployment_script = azure_nextgen.resources.latest.DeploymentScript("deploymentScript",
+    identity={
+        "type": "UserAssigned",
+        "userAssignedIdentities": {
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": {},
+        },
+    },
+    kind="AzurePowerShell",
+    location="westus",
+    resource_group_name="script-rg",
+    script_name="MyDeploymentScript")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const deploymentScript = new azure_nextgen.resources.latest.DeploymentScript("deploymentScript", {
+    identity: {
+        type: "UserAssigned",
+        userAssignedIdentities: {
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": {},
+        },
+    },
+    kind: "AzurePowerShell",
+    location: "westus",
+    resourceGroupName: "script-rg",
+    scriptName: "MyDeploymentScript",
+});
+
+```
+
+{{% /example %}}
+
+### DeploymentScriptsCreate_UsingCustomACIName
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var deploymentScript = new AzureNextGen.Resources.Latest.DeploymentScript("deploymentScript", new AzureNextGen.Resources.Latest.DeploymentScriptArgs
+        {
+            Identity = new AzureNextGen.Resources.Latest.Inputs.ManagedServiceIdentityArgs
+            {
+                Type = "UserAssigned",
+                UserAssignedIdentities = 
+                {
+                    { "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai",  },
+                },
+            },
+            Kind = "AzurePowerShell",
+            Location = "westus",
+            ResourceGroupName = "script-rg",
+            ScriptName = "MyDeploymentScript",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+deployment_script = azure_nextgen.resources.latest.DeploymentScript("deploymentScript",
+    identity={
+        "type": "UserAssigned",
+        "userAssignedIdentities": {
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": {},
+        },
+    },
+    kind="AzurePowerShell",
+    location="westus",
+    resource_group_name="script-rg",
+    script_name="MyDeploymentScript")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const deploymentScript = new azure_nextgen.resources.latest.DeploymentScript("deploymentScript", {
+    identity: {
+        type: "UserAssigned",
+        userAssignedIdentities: {
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": {},
+        },
+    },
+    kind: "AzurePowerShell",
+    location: "westus",
+    resourceGroupName: "script-rg",
+    scriptName: "MyDeploymentScript",
+});
+
+```
+
+{{% /example %}}
+
+### DeploymentScriptsCreate_UsingExistingStorageAccount
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var deploymentScript = new AzureNextGen.Resources.Latest.DeploymentScript("deploymentScript", new AzureNextGen.Resources.Latest.DeploymentScriptArgs
+        {
+            Identity = new AzureNextGen.Resources.Latest.Inputs.ManagedServiceIdentityArgs
+            {
+                Type = "UserAssigned",
+                UserAssignedIdentities = 
+                {
+                    { "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai",  },
+                },
+            },
+            Kind = "AzurePowerShell",
+            Location = "westus",
+            ResourceGroupName = "script-rg",
+            ScriptName = "MyDeploymentScript",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+deployment_script = azure_nextgen.resources.latest.DeploymentScript("deploymentScript",
+    identity={
+        "type": "UserAssigned",
+        "userAssignedIdentities": {
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": {},
+        },
+    },
+    kind="AzurePowerShell",
+    location="westus",
+    resource_group_name="script-rg",
+    script_name="MyDeploymentScript")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const deploymentScript = new azure_nextgen.resources.latest.DeploymentScript("deploymentScript", {
+    identity: {
+        type: "UserAssigned",
+        userAssignedIdentities: {
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": {},
+        },
+    },
+    kind: "AzurePowerShell",
+    location: "westus",
+    resourceGroupName: "script-rg",
+    scriptName: "MyDeploymentScript",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DeploymentScript Resource {#create}

@@ -30,6 +30,17 @@ class MyStack : Stack
         {
             ConfigurationProfilePreferenceName = "defaultProfilePreference",
             Location = "East US",
+            Properties = new AzureNextGen.Automanage.V20200630Preview.Inputs.ConfigurationProfilePreferencePropertiesArgs
+            {
+                AntiMalware = new AzureNextGen.Automanage.V20200630Preview.Inputs.ConfigurationProfilePreferenceAntiMalwareArgs
+                {
+                    EnableRealTimeProtection = "True",
+                },
+                VmBackup = new AzureNextGen.Automanage.V20200630Preview.Inputs.ConfigurationProfilePreferenceVmBackupArgs
+                {
+                    TimeZone = "Pacific Standard Time",
+                },
+            },
             ResourceGroupName = "myResourceGroupName",
             Tags = 
             {
@@ -50,7 +61,7 @@ class MyStack : Stack
 package main
 
 import (
-	automanage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/automanage/v20200630preview"
+	automanage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automanage/v20200630preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -59,7 +70,15 @@ func main() {
 		_, err := automanage.NewConfigurationProfilePreference(ctx, "configurationProfilePreference", &automanage.ConfigurationProfilePreferenceArgs{
 			ConfigurationProfilePreferenceName: pulumi.String("defaultProfilePreference"),
 			Location:                           pulumi.String("East US"),
-			ResourceGroupName:                  pulumi.String("myResourceGroupName"),
+			Properties: &automanage.ConfigurationProfilePreferencePropertiesArgs{
+				AntiMalware: &automanage.ConfigurationProfilePreferenceAntiMalwareArgs{
+					EnableRealTimeProtection: pulumi.String("True"),
+				},
+				VmBackup: &automanage.ConfigurationProfilePreferenceVmBackupArgs{
+					TimeZone: pulumi.String("Pacific Standard Time"),
+				},
+			},
+			ResourceGroupName: pulumi.String("myResourceGroupName"),
 			Tags: pulumi.StringMap{
 				"Organization": pulumi.String("Administration"),
 			},
@@ -84,6 +103,14 @@ import pulumi_azure_nextgen as azure_nextgen
 configuration_profile_preference = azure_nextgen.automanage.v20200630preview.ConfigurationProfilePreference("configurationProfilePreference",
     configuration_profile_preference_name="defaultProfilePreference",
     location="East US",
+    properties={
+        "antiMalware": {
+            "enableRealTimeProtection": "True",
+        },
+        "vmBackup": {
+            "timeZone": "Pacific Standard Time",
+        },
+    },
     resource_group_name="myResourceGroupName",
     tags={
         "Organization": "Administration",
@@ -102,6 +129,14 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const configurationProfilePreference = new azure_nextgen.automanage.v20200630preview.ConfigurationProfilePreference("configurationProfilePreference", {
     configurationProfilePreferenceName: "defaultProfilePreference",
     location: "East US",
+    properties: {
+        antiMalware: {
+            enableRealTimeProtection: "True",
+        },
+        vmBackup: {
+            timeZone: "Pacific Standard Time",
+        },
+    },
     resourceGroupName: "myResourceGroupName",
     tags: {
         Organization: "Administration",
@@ -719,7 +754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusions_csharp" style="color: inherit; text-decoration: inherit;">Exclusions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}Extensions, Paths and Processes that must be excluded from scan{{% /md %}}</dd>
 
@@ -786,7 +821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusions_go" style="color: inherit; text-decoration: inherit;">Exclusions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}Extensions, Paths and Processes that must be excluded from scan{{% /md %}}</dd>
 
@@ -853,7 +888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusions_nodejs" style="color: inherit; text-decoration: inherit;">exclusions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}Extensions, Paths and Processes that must be excluded from scan{{% /md %}}</dd>
 
@@ -920,7 +955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusions_python" style="color: inherit; text-decoration: inherit;">exclusions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}Extensions, Paths and Processes that must be excluded from scan{{% /md %}}</dd>
 
@@ -998,7 +1033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusions_csharp" style="color: inherit; text-decoration: inherit;">Exclusions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}Extensions, Paths and Processes that must be excluded from scan{{% /md %}}</dd>
 
@@ -1065,7 +1100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusions_go" style="color: inherit; text-decoration: inherit;">Exclusions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}Extensions, Paths and Processes that must be excluded from scan{{% /md %}}</dd>
 
@@ -1132,7 +1167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusions_nodejs" style="color: inherit; text-decoration: inherit;">exclusions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}Extensions, Paths and Processes that must be excluded from scan{{% /md %}}</dd>
 
@@ -1199,7 +1234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusions_python" style="color: inherit; text-decoration: inherit;">exclusions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}Extensions, Paths and Processes that must be excluded from scan{{% /md %}}</dd>
 

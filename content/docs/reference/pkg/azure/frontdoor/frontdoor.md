@@ -39,6 +39,7 @@ class MyStack : Stack
         });
         var exampleFrontdoor = new Azure.FrontDoor.Frontdoor("exampleFrontdoor", new Azure.FrontDoor.FrontdoorArgs
         {
+            Location = "EastUS2",
             ResourceGroupName = exampleResourceGroup.Name,
             EnforceBackendPoolsCertificateNameCheck = false,
             RoutingRules = 
@@ -135,6 +136,7 @@ func main() {
 			return err
 		}
 		_, err = frontdoor.NewFrontdoor(ctx, "exampleFrontdoor", &frontdoor.FrontdoorArgs{
+			Location:                                pulumi.String("EastUS2"),
 			ResourceGroupName:                       exampleResourceGroup.Name,
 			EnforceBackendPoolsCertificateNameCheck: pulumi.Bool(false),
 			RoutingRules: frontdoor.FrontdoorRoutingRuleArray{
@@ -206,6 +208,7 @@ import pulumi_azure as azure
 
 example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="EastUS2")
 example_frontdoor = azure.frontdoor.Frontdoor("exampleFrontdoor",
+    location="EastUS2",
     resource_group_name=example_resource_group.name,
     enforce_backend_pools_certificate_name_check=False,
     routing_rules=[azure.frontdoor.FrontdoorRoutingRuleArgs(
@@ -255,6 +258,7 @@ import * as azure from "@pulumi/azure";
 
 const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "EastUS2"});
 const exampleFrontdoor = new azure.frontdoor.Frontdoor("exampleFrontdoor", {
+    location: "EastUS2",
     resourceGroupName: exampleResourceGroup.name,
     enforceBackendPoolsCertificateNameCheck: false,
     routingRules: [{
@@ -599,7 +603,8 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to the service&#39;s API changing &#39;location&#39; must now always be set to &#39;Global&#39; for new resources, however if the Front Door service was created prior 2020/03/10 it may continue to exist in a specific current location{{% /md %}}</p></dd>
+    <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to the service&#39;s API changing &#39;location&#39; must now always be set to &#39;Global&#39; for new resources, however if the Front Door service was created prior 2020/03/10 it may continue to exist in a specific current location{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -748,7 +753,8 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to the service&#39;s API changing &#39;location&#39; must now always be set to &#39;Global&#39; for new resources, however if the Front Door service was created prior 2020/03/10 it may continue to exist in a specific current location{{% /md %}}</p></dd>
+    <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to the service&#39;s API changing &#39;location&#39; must now always be set to &#39;Global&#39; for new resources, however if the Front Door service was created prior 2020/03/10 it may continue to exist in a specific current location{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -897,7 +903,8 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to the service&#39;s API changing &#39;location&#39; must now always be set to &#39;Global&#39; for new resources, however if the Front Door service was created prior 2020/03/10 it may continue to exist in a specific current location{{% /md %}}</p></dd>
+    <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to the service&#39;s API changing &#39;location&#39; must now always be set to &#39;Global&#39; for new resources, however if the Front Door service was created prior 2020/03/10 it may continue to exist in a specific current location{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1046,7 +1053,8 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to the service&#39;s API changing &#39;location&#39; must now always be set to &#39;Global&#39; for new resources, however if the Front Door service was created prior 2020/03/10 it may continue to exist in a specific current location{{% /md %}}</p></dd>
+    <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to the service&#39;s API changing &#39;location&#39; must now always be set to &#39;Global&#39; for new resources, however if the Front Door service was created prior 2020/03/10 it may continue to exist in a specific current location{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1489,7 +1497,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to the service&#39;s API changing &#39;location&#39; must now always be set to &#39;Global&#39; for new resources, however if the Front Door service was created prior 2020/03/10 it may continue to exist in a specific current location{{% /md %}}</p></dd>
+    <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to the service&#39;s API changing &#39;location&#39; must now always be set to &#39;Global&#39; for new resources, however if the Front Door service was created prior 2020/03/10 it may continue to exist in a specific current location{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1660,7 +1669,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to the service&#39;s API changing &#39;location&#39; must now always be set to &#39;Global&#39; for new resources, however if the Front Door service was created prior 2020/03/10 it may continue to exist in a specific current location{{% /md %}}</p></dd>
+    <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to the service&#39;s API changing &#39;location&#39; must now always be set to &#39;Global&#39; for new resources, however if the Front Door service was created prior 2020/03/10 it may continue to exist in a specific current location{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1831,7 +1841,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to the service&#39;s API changing &#39;location&#39; must now always be set to &#39;Global&#39; for new resources, however if the Front Door service was created prior 2020/03/10 it may continue to exist in a specific current location{{% /md %}}</p></dd>
+    <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to the service&#39;s API changing &#39;location&#39; must now always be set to &#39;Global&#39; for new resources, however if the Front Door service was created prior 2020/03/10 it may continue to exist in a specific current location{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2002,7 +2013,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to the service&#39;s API changing &#39;location&#39; must now always be set to &#39;Global&#39; for new resources, however if the Front Door service was created prior 2020/03/10 it may continue to exist in a specific current location{{% /md %}}</p></dd>
+    <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to the service&#39;s API changing &#39;location&#39; must now always be set to &#39;Global&#39; for new resources, however if the Front Door service was created prior 2020/03/10 it may continue to exist in a specific current location{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">

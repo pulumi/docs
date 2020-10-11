@@ -56,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	eventhub "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/eventhub/v20180101preview"
+	eventhub "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventhub/v20180101preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

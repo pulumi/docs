@@ -30,6 +30,14 @@ class MyStack : Stack
         {
             AuthorizationRuleName = "sdk-AuthRules-1788",
             NamespaceName = "nh-sdk-ns",
+            Properties = new AzureNextGen.NotificationHubs.Latest.Inputs.SharedAccessAuthorizationRulePropertiesArgs
+            {
+                Rights = 
+                {
+                    "Listen",
+                    "Send",
+                },
+            },
             ResourceGroupName = "5ktrial",
         });
     }
@@ -46,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	notificationhubs "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/notificationhubs/latest"
+	notificationhubs "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/notificationhubs/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -55,7 +63,13 @@ func main() {
 		_, err := notificationhubs.NewNamespaceAuthorizationRule(ctx, "namespaceAuthorizationRule", &notificationhubs.NamespaceAuthorizationRuleArgs{
 			AuthorizationRuleName: pulumi.String("sdk-AuthRules-1788"),
 			NamespaceName:         pulumi.String("nh-sdk-ns"),
-			ResourceGroupName:     pulumi.String("5ktrial"),
+			Properties: &notificationhubs.SharedAccessAuthorizationRulePropertiesArgs{
+				Rights: pulumi.StringArray{
+					pulumi.String("Listen"),
+					pulumi.String("Send"),
+				},
+			},
+			ResourceGroupName: pulumi.String("5ktrial"),
 		})
 		if err != nil {
 			return err
@@ -77,6 +91,12 @@ import pulumi_azure_nextgen as azure_nextgen
 namespace_authorization_rule = azure_nextgen.notificationhubs.latest.NamespaceAuthorizationRule("namespaceAuthorizationRule",
     authorization_rule_name="sdk-AuthRules-1788",
     namespace_name="nh-sdk-ns",
+    properties={
+        "rights": [
+            "Listen",
+            "Send",
+        ],
+    },
     resource_group_name="5ktrial")
 
 ```
@@ -92,6 +112,12 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const namespaceAuthorizationRule = new azure_nextgen.notificationhubs.latest.NamespaceAuthorizationRule("namespaceAuthorizationRule", {
     authorizationRuleName: "sdk-AuthRules-1788",
     namespaceName: "nh-sdk-ns",
+    properties: {
+        rights: [
+            "Listen",
+            "Send",
+        ],
+    },
     resourceGroupName: "5ktrial",
 });
 

@@ -2718,6 +2718,165 @@ The following output properties are available:
 
 
 
+<h4 id="computeinstancelastoperationresponse">Compute<wbr>Instance<wbr>Last<wbr>Operation<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationname_csharp">
+<a href="#operationname_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the last operation.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationstatus_csharp">
+<a href="#operationstatus_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Operation status.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationtime_csharp">
+<a href="#operationtime_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Time of the last operation.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationname_go">
+<a href="#operationname_go" style="color: inherit; text-decoration: inherit;">Operation<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the last operation.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationstatus_go">
+<a href="#operationstatus_go" style="color: inherit; text-decoration: inherit;">Operation<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Operation status.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationtime_go">
+<a href="#operationtime_go" style="color: inherit; text-decoration: inherit;">Operation<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Time of the last operation.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationname_nodejs">
+<a href="#operationname_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the last operation.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationstatus_nodejs">
+<a href="#operationstatus_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Operation status.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationtime_nodejs">
+<a href="#operationtime_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Time of the last operation.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationname_python">
+<a href="#operationname_python" style="color: inherit; text-decoration: inherit;">operation<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the last operation.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationtime_python">
+<a href="#operationtime_python" style="color: inherit; text-decoration: inherit;">operation<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Time of the last operation.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operation_status_python">
+<a href="#operation_status_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Operation status.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="computeinstanceresponse">Compute<wbr>Instance<wbr>Response</h4>
 
 
@@ -3170,6 +3329,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="lastoperation_csharp">
+<a href="#lastoperation_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Operation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeinstancelastoperationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Last<wbr>Operation<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The last operation on ComputeInstance.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span> 
@@ -3264,6 +3433,16 @@ The following output properties are available:
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">[]Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Collection of errors encountered on this ComputeInstance.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastoperation_go">
+<a href="#lastoperation_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Operation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeinstancelastoperationresponse">Compute<wbr>Instance<wbr>Last<wbr>Operation<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The last operation on ComputeInstance.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3364,6 +3543,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="lastoperation_nodejs">
+<a href="#lastoperation_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Operation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeinstancelastoperationresponse">Compute<wbr>Instance<wbr>Last<wbr>Operation<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The last operation on ComputeInstance.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span> 
@@ -3458,6 +3647,16 @@ The following output properties are available:
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">List[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Collection of errors encountered on this ComputeInstance.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastoperation_python">
+<a href="#lastoperation_python" style="color: inherit; text-decoration: inherit;">last<wbr>Operation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeinstancelastoperationresponse">Dict[Compute<wbr>Instance<wbr>Last<wbr>Operation<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The last operation on ComputeInstance.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">

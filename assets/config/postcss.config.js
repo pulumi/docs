@@ -64,7 +64,7 @@ module.exports = {
             whitelist: ["supported-cicd-platforms", ":not", ":target", "md:max-w-lg", "blink", "typing", "char", "resource-deprecated", "btn-scroll-top"],
 
             // Whitelist custom parent selectors and their children.
-            whitelistPatterns: [/^fa-/, /^hs-/, /^highlight$/, /^pagination$/, /^code-/, /^copy-/, /^carousel/, /^bg-/],
+            whitelistPatterns: [/^fa-/, /^hs-/, /^highlight$/, /^pagination$/, /^code-/, /^copy-/, /^carousel/, /^bg-/, /BambooHR-/],
             whitelistPatternsChildren: [
                 /^hs-/,
                 /^highlight$/,
@@ -77,6 +77,7 @@ module.exports = {
                 /^pulumi-chooser/,
                 /^pulumi-tooltip/,
                 /^pulumi-banner/,
+                /^pulumi-convert/,
             ],
 
             // We need to extract the Tailwind screen size selectors (e.g. sm, md, lg)

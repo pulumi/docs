@@ -30,6 +30,7 @@ class MyStack : Stack
         {
             DataExportName = "export1",
             ResourceGroupName = "RgTest1",
+            ResourceId = "/subscriptions/192b9f85-a39a-4276-b96d-d5cd351703f9/resourceGroups/OIAutoRest1234/providers/Microsoft.EventHub/namespaces/test",
             TableNames = 
             {
                 "Heartbeat",
@@ -50,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	operationalinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/operationalinsights/latest"
+	operationalinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationalinsights/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -59,6 +60,7 @@ func main() {
 		_, err := operationalinsights.NewDataExport(ctx, "dataExport", &operationalinsights.DataExportArgs{
 			DataExportName:    pulumi.String("export1"),
 			ResourceGroupName: pulumi.String("RgTest1"),
+			ResourceId:        pulumi.String("/subscriptions/192b9f85-a39a-4276-b96d-d5cd351703f9/resourceGroups/OIAutoRest1234/providers/Microsoft.EventHub/namespaces/test"),
 			TableNames: pulumi.StringArray{
 				pulumi.String("Heartbeat"),
 			},
@@ -84,6 +86,7 @@ import pulumi_azure_nextgen as azure_nextgen
 data_export = azure_nextgen.operationalinsights.latest.DataExport("dataExport",
     data_export_name="export1",
     resource_group_name="RgTest1",
+    resource_id="/subscriptions/192b9f85-a39a-4276-b96d-d5cd351703f9/resourceGroups/OIAutoRest1234/providers/Microsoft.EventHub/namespaces/test",
     table_names=["Heartbeat"],
     workspace_name="DeWnTest1234")
 
@@ -100,6 +103,7 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const dataExport = new azure_nextgen.operationalinsights.latest.DataExport("dataExport", {
     dataExportName: "export1",
     resourceGroupName: "RgTest1",
+    resourceId: "/subscriptions/192b9f85-a39a-4276-b96d-d5cd351703f9/resourceGroups/OIAutoRest1234/providers/Microsoft.EventHub/namespaces/test",
     tableNames: ["Heartbeat"],
     workspaceName: "DeWnTest1234",
 });

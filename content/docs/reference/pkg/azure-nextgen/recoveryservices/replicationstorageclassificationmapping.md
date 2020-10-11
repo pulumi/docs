@@ -29,6 +29,10 @@ class MyStack : Stack
         var replicationStorageClassificationMapping = new AzureNextGen.RecoveryServices.Latest.ReplicationStorageClassificationMapping("replicationStorageClassificationMapping", new AzureNextGen.RecoveryServices.Latest.ReplicationStorageClassificationMappingArgs
         {
             FabricName = "2a48e3770ac08aa2be8bfbd94fcfb1cbf2dcc487b78fb9d3bd778304441b06a0",
+            Properties = new AzureNextGen.RecoveryServices.Latest.Inputs.StorageMappingInputPropertiesArgs
+            {
+                TargetStorageClassificationId = "/Subscriptions/9112a37f-0f3e-46ec-9c00-060c6edca071/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/2a48e3770ac08aa2be8bfbd94fcfb1cbf2dcc487b78fb9d3bd778304441b06a0/replicationStorageClassifications/8891569e-aaef-4a46-a4a0-78c14f2d7b09",
+            },
             ResourceGroupName = "resourceGroupPS1",
             ResourceName = "vault1",
             StorageClassificationMappingName = "testStorageMapping",
@@ -48,14 +52,17 @@ class MyStack : Stack
 package main
 
 import (
-	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/recoveryservices/latest"
+	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := recoveryservices.NewReplicationStorageClassificationMapping(ctx, "replicationStorageClassificationMapping", &recoveryservices.ReplicationStorageClassificationMappingArgs{
-			FabricName:                       pulumi.String("2a48e3770ac08aa2be8bfbd94fcfb1cbf2dcc487b78fb9d3bd778304441b06a0"),
+			FabricName: pulumi.String("2a48e3770ac08aa2be8bfbd94fcfb1cbf2dcc487b78fb9d3bd778304441b06a0"),
+			Properties: &recoveryservices.StorageMappingInputPropertiesArgs{
+				TargetStorageClassificationId: pulumi.String("/Subscriptions/9112a37f-0f3e-46ec-9c00-060c6edca071/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/2a48e3770ac08aa2be8bfbd94fcfb1cbf2dcc487b78fb9d3bd778304441b06a0/replicationStorageClassifications/8891569e-aaef-4a46-a4a0-78c14f2d7b09"),
+			},
 			ResourceGroupName:                pulumi.String("resourceGroupPS1"),
 			ResourceName:                     pulumi.String("vault1"),
 			StorageClassificationMappingName: pulumi.String("testStorageMapping"),
@@ -80,6 +87,9 @@ import pulumi_azure_nextgen as azure_nextgen
 
 replication_storage_classification_mapping = azure_nextgen.recoveryservices.latest.ReplicationStorageClassificationMapping("replicationStorageClassificationMapping",
     fabric_name="2a48e3770ac08aa2be8bfbd94fcfb1cbf2dcc487b78fb9d3bd778304441b06a0",
+    properties={
+        "targetStorageClassificationId": "/Subscriptions/9112a37f-0f3e-46ec-9c00-060c6edca071/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/2a48e3770ac08aa2be8bfbd94fcfb1cbf2dcc487b78fb9d3bd778304441b06a0/replicationStorageClassifications/8891569e-aaef-4a46-a4a0-78c14f2d7b09",
+    },
     resource_group_name="resourceGroupPS1",
     resource_name="vault1",
     storage_classification_mapping_name="testStorageMapping",
@@ -97,6 +107,9 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const replicationStorageClassificationMapping = new azure_nextgen.recoveryservices.latest.ReplicationStorageClassificationMapping("replicationStorageClassificationMapping", {
     fabricName: "2a48e3770ac08aa2be8bfbd94fcfb1cbf2dcc487b78fb9d3bd778304441b06a0",
+    properties: {
+        targetStorageClassificationId: "/Subscriptions/9112a37f-0f3e-46ec-9c00-060c6edca071/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/2a48e3770ac08aa2be8bfbd94fcfb1cbf2dcc487b78fb9d3bd778304441b06a0/replicationStorageClassifications/8891569e-aaef-4a46-a4a0-78c14f2d7b09",
+    },
     resourceGroupName: "resourceGroupPS1",
     resourceName: "vault1",
     storageClassificationMappingName: "testStorageMapping",

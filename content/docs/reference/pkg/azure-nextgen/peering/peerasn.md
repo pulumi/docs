@@ -67,7 +67,7 @@ class MyStack : Stack
 package main
 
 import (
-	peering "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/peering/latest"
+	peering "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/peering/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

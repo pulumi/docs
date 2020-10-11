@@ -47,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	migrate "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/migrate/latest"
+	migrate "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/migrate/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

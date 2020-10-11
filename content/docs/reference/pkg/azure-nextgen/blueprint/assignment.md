@@ -75,7 +75,57 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	blueprint "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/blueprint/v20181101preview"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := blueprint.NewAssignment(ctx, "assignment", &blueprint.AssignmentArgs{
+			AssignmentName: pulumi.String("assignSimpleBlueprint"),
+			BlueprintId:    pulumi.String("/providers/Microsoft.Management/managementGroups/ContosoOnlineGroup/providers/Microsoft.Blueprint/blueprints/simpleBlueprint"),
+			Description:    pulumi.String("enforce pre-defined simpleBlueprint to this XXXXXXXX subscription."),
+			Identity: &blueprint.ManagedServiceIdentityArgs{
+				Type: pulumi.String("SystemAssigned"),
+			},
+			Location: pulumi.String("eastus"),
+			Parameters: blueprint.ParameterValueArgsMap{
+				"costCenter": &blueprint.ParameterValueArgs{
+					Value: pulumi.String("Contoso/Online/Shopping/Production"),
+				},
+				"owners": &blueprint.ParameterValueArgs{
+					Value: pulumi.StringArray{
+						pulumi.String("johnDoe@contoso.com"),
+						pulumi.String("johnsteam@contoso.com"),
+					},
+				},
+				"storage_account_type": &blueprint.ParameterValueArgs{
+					Value: pulumi.String("Standard_LRS"),
+				},
+			},
+			ResourceGroups: blueprint.ResourceGroupValueArgsMap{
+				"storageRG": &blueprint.ResourceGroupValueArgs{
+					Location: pulumi.String("eastus"),
+					Name:     pulumi.String("defaultRG"),
+				},
+			},
+			ResourceScope: pulumi.String("managementGroups/ContosoOnlineGroup"),
+			Scope:         pulumi.String("subscriptions/00000000-0000-0000-0000-000000000000"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -219,7 +269,56 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	blueprint "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/blueprint/v20181101preview"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := blueprint.NewAssignment(ctx, "assignment", &blueprint.AssignmentArgs{
+			AssignmentName: pulumi.String("assignSimpleBlueprint"),
+			BlueprintId:    pulumi.String("/providers/Microsoft.Management/managementGroups/ContosoOnlineGroup/providers/Microsoft.Blueprint/blueprints/simpleBlueprint"),
+			Description:    pulumi.String("enforce pre-defined simpleBlueprint to this XXXXXXXX subscription."),
+			Identity: &blueprint.ManagedServiceIdentityArgs{
+				Type: pulumi.String("SystemAssigned"),
+			},
+			Location: pulumi.String("eastus"),
+			Parameters: blueprint.ParameterValueArgsMap{
+				"costCenter": &blueprint.ParameterValueArgs{
+					Value: pulumi.String("Contoso/Online/Shopping/Production"),
+				},
+				"owners": &blueprint.ParameterValueArgs{
+					Value: pulumi.StringArray{
+						pulumi.String("johnDoe@contoso.com"),
+						pulumi.String("johnsteam@contoso.com"),
+					},
+				},
+				"storage_account_type": &blueprint.ParameterValueArgs{
+					Value: pulumi.String("Standard_LRS"),
+				},
+			},
+			ResourceGroups: blueprint.ResourceGroupValueArgsMap{
+				"storageRG": &blueprint.ResourceGroupValueArgs{
+					Location: pulumi.String("eastus"),
+					Name:     pulumi.String("defaultRG"),
+				},
+			},
+			ResourceScope: pulumi.String("subscriptions/00000000-0000-0000-0000-000000000000"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -2570,7 +2669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}Parameter value. Any valid JSON value is allowed including objects, arrays, strings, numbers and booleans.{{% /md %}}</dd>
 
@@ -2597,7 +2696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}Parameter value. Any valid JSON value is allowed including objects, arrays, strings, numbers and booleans.{{% /md %}}</dd>
 
@@ -2624,7 +2723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}Parameter value. Any valid JSON value is allowed including objects, arrays, strings, numbers and booleans.{{% /md %}}</dd>
 
@@ -2651,7 +2750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}Parameter value. Any valid JSON value is allowed including objects, arrays, strings, numbers and booleans.{{% /md %}}</dd>
 
@@ -2689,7 +2788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}Parameter value. Any valid JSON value is allowed including objects, arrays, strings, numbers and booleans.{{% /md %}}</dd>
 
@@ -2716,7 +2815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}Parameter value. Any valid JSON value is allowed including objects, arrays, strings, numbers and booleans.{{% /md %}}</dd>
 
@@ -2743,7 +2842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}Parameter value. Any valid JSON value is allowed including objects, arrays, strings, numbers and booleans.{{% /md %}}</dd>
 
@@ -2770,7 +2869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}Parameter value. Any valid JSON value is allowed including objects, arrays, strings, numbers and booleans.{{% /md %}}</dd>
 

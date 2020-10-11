@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	aad "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/aad/latest"
+	aad "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/aad/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

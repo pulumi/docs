@@ -50,7 +50,7 @@ class MyStack : Stack
 package main
 
 import (
-	mixedreality "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/mixedreality/v20200406preview"
+	mixedreality "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/mixedreality/v20200406preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

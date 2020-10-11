@@ -11,11 +11,15 @@ Explore the resources and functions of the lex module in the AWS package.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="bot" title="Bot"><span class="symbol resource"></span>Bot</a></li>
+    <li><a href="intent" title="Intent"><span class="symbol resource"></span>Intent</a></li>
     <li><a href="slottype" title="SlotType"><span class="symbol resource"></span>SlotType</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getbot" title="GetBot"><span class="symbol function"></span>GetBot</a></li>
+    <li><a href="getintent" title="GetIntent"><span class="symbol function"></span>GetIntent</a></li>
     <li><a href="getslottype" title="GetSlotType"><span class="symbol function"></span>GetSlotType</a></li>
 </ul>
 
@@ -28,7 +32,7 @@ Explore the resources and functions of the lex module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.5.0</dd>
+	<dd>3.6.1</dd>
 </dl>
 
 

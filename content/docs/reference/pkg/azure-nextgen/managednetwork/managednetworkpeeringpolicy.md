@@ -30,6 +30,21 @@ class MyStack : Stack
         {
             ManagedNetworkName = "myManagedNetwork",
             ManagedNetworkPeeringPolicyName = "myHubAndSpoke",
+            Properties = new AzureNextGen.ManagedNetwork.V20190601Preview.Inputs.ManagedNetworkPeeringPolicyPropertiesArgs
+            {
+                Hub = new AzureNextGen.ManagedNetwork.V20190601Preview.Inputs.ResourceIdArgs
+                {
+                    Id = "/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myHubVnet",
+                },
+                Spokes = 
+                {
+                    new AzureNextGen.ManagedNetwork.V20190601Preview.Inputs.ResourceIdArgs
+                    {
+                        Id = "/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.ManagedNetwork/managedNetworks/myManagedNetwork/managedNetworkGroups/myManagedNetworkGroup1",
+                    },
+                },
+                Type = "HubAndSpokeTopology",
+            },
             ResourceGroupName = "myResourceGroup",
         });
     }
@@ -46,7 +61,7 @@ class MyStack : Stack
 package main
 
 import (
-	managednetwork "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/managednetwork/v20190601preview"
+	managednetwork "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/managednetwork/v20190601preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -55,7 +70,18 @@ func main() {
 		_, err := managednetwork.NewManagedNetworkPeeringPolicy(ctx, "managedNetworkPeeringPolicy", &managednetwork.ManagedNetworkPeeringPolicyArgs{
 			ManagedNetworkName:              pulumi.String("myManagedNetwork"),
 			ManagedNetworkPeeringPolicyName: pulumi.String("myHubAndSpoke"),
-			ResourceGroupName:               pulumi.String("myResourceGroup"),
+			Properties: &managednetwork.ManagedNetworkPeeringPolicyPropertiesArgs{
+				Hub: &managednetwork.ResourceIdArgs{
+					Id: pulumi.String("/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myHubVnet"),
+				},
+				Spokes: managednetwork.ResourceIdArray{
+					&managednetwork.ResourceIdArgs{
+						Id: pulumi.String("/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.ManagedNetwork/managedNetworks/myManagedNetwork/managedNetworkGroups/myManagedNetworkGroup1"),
+					},
+				},
+				Type: pulumi.String("HubAndSpokeTopology"),
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
 		})
 		if err != nil {
 			return err
@@ -77,6 +103,15 @@ import pulumi_azure_nextgen as azure_nextgen
 managed_network_peering_policy = azure_nextgen.managednetwork.v20190601preview.ManagedNetworkPeeringPolicy("managedNetworkPeeringPolicy",
     managed_network_name="myManagedNetwork",
     managed_network_peering_policy_name="myHubAndSpoke",
+    properties={
+        "hub": {
+            "id": "/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myHubVnet",
+        },
+        "spokes": [{
+            "id": "/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.ManagedNetwork/managedNetworks/myManagedNetwork/managedNetworkGroups/myManagedNetworkGroup1",
+        }],
+        "type": "HubAndSpokeTopology",
+    },
     resource_group_name="myResourceGroup")
 
 ```
@@ -92,6 +127,15 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const managedNetworkPeeringPolicy = new azure_nextgen.managednetwork.v20190601preview.ManagedNetworkPeeringPolicy("managedNetworkPeeringPolicy", {
     managedNetworkName: "myManagedNetwork",
     managedNetworkPeeringPolicyName: "myHubAndSpoke",
+    properties: {
+        hub: {
+            id: "/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myHubVnet",
+        },
+        spokes: [{
+            id: "/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.ManagedNetwork/managedNetworks/myManagedNetwork/managedNetworkGroups/myManagedNetworkGroup1",
+        }],
+        type: "HubAndSpokeTopology",
+    },
     resourceGroupName: "myResourceGroup",
 });
 

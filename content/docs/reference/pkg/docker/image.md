@@ -928,7 +928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stages_python" style="color: inherit; text-decoration: inherit;">stages</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An optional list of build stages to use for caching. Each build stage in this list will be built explicitly and pushed to the target repository. A given stage’s image will be tagged as "[stage-name]".{{% /md %}}</dd>
 
@@ -1244,7 +1244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extra_options_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An optional catch-all string to provide extra CLI options to the docker build command. For example, use to specify `--network host`.{{% /md %}}</dd>
 

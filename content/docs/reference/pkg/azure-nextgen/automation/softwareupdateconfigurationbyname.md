@@ -96,7 +96,27 @@ class MyStack : Stack
                             TagSettings = new AzureNextGen.Automation.V20170515Preview.Inputs.TagSettingsPropertiesArgs
                             {
                                 FilterOperator = "All",
-                                Tags = {},
+                                Tags = 
+                                {
+                                    
+                                    {
+                                        { "tag1", 
+                                        {
+                                            "tag1Value1",
+                                            "tag1Value2",
+                                            "tag1Value3",
+                                        } },
+                                    },
+                                    
+                                    {
+                                        { "tag2", 
+                                        {
+                                            "tag2Value1",
+                                            "tag2Value2",
+                                            "tag2Value3",
+                                        } },
+                                    },
+                                },
                             },
                         },
                     },
@@ -196,7 +216,22 @@ software_update_configuration_by_name = azure_nextgen.automation.v20170515previe
                 ],
                 "tagSettings": {
                     "filterOperator": "All",
-                    "tags": [],
+                    "tags": [
+                        {
+                            "tag1": [
+                                "tag1Value1",
+                                "tag1Value2",
+                                "tag1Value3",
+                            ],
+                        },
+                        {
+                            "tag2": [
+                                "tag2Value1",
+                                "tag2Value2",
+                                "tag2Value3",
+                            ],
+                        },
+                    ],
                 },
             }],
             "nonAzureQueries": [
@@ -282,7 +317,22 @@ const softwareUpdateConfigurationByName = new azure_nextgen.automation.v20170515
                 ],
                 tagSettings: {
                     filterOperator: "All",
-                    tags: [],
+                    tags: [
+                        {
+                            tag1: [
+                                "tag1Value1",
+                                "tag1Value2",
+                                "tag1Value3",
+                            ],
+                        },
+                        {
+                            tag2: [
+                                "tag2Value1",
+                                "tag2Value2",
+                                "tag2Value3",
+                            ],
+                        },
+                    ],
                 },
             }],
             nonAzureQueries: [

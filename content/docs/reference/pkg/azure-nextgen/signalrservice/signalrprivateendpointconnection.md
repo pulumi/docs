@@ -55,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	signalrservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/signalrservice/latest"
+	signalrservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/signalrservice/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

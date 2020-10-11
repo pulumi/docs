@@ -23,6 +23,7 @@ Explore the resources and functions of the rds module in the AWS package.
     <li><a href="parametergroup" title="ParameterGroup"><span class="symbol resource"></span>ParameterGroup</a></li>
     <li><a href="proxy" title="Proxy"><span class="symbol resource"></span>Proxy</a></li>
     <li><a href="proxydefaulttargetgroup" title="ProxyDefaultTargetGroup"><span class="symbol resource"></span>ProxyDefaultTargetGroup</a></li>
+    <li><a href="proxytarget" title="ProxyTarget"><span class="symbol resource"></span>ProxyTarget</a></li>
     <li><a href="roleassociation" title="RoleAssociation"><span class="symbol resource"></span>RoleAssociation</a></li>
     <li><a href="securitygroup" title="SecurityGroup"><span class="symbol resource"></span>SecurityGroup</a></li>
     <li><a href="snapshot" title="Snapshot"><span class="symbol resource"></span>Snapshot</a></li>
@@ -50,7 +51,7 @@ Explore the resources and functions of the rds module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.5.0</dd>
+	<dd>3.6.1</dd>
 </dl>
 
 

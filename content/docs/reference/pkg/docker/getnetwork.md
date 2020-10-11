@@ -539,7 +539,7 @@ See [docker docs][networkdocs] for more details.
 <a href="#ipam_configs_python" style="color: inherit; text-decoration: inherit;">ipam_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnetworkipamconfig">List[Get<wbr>Network<wbr>Ipam<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getnetworkipamconfig">Sequence[Get<wbr>Network<wbr>Ipam<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

@@ -29,6 +29,16 @@ class MyStack : Stack
         var connection = new AzureNextGen.Web.Latest.Connection("connection", new AzureNextGen.Web.Latest.ConnectionArgs
         {
             ConnectionName = "testManagedApi",
+            Properties = new AzureNextGen.Web.Latest.Inputs.ApiConnectionDefinitionPropertiesArgs
+            {
+                Api = new AzureNextGen.Web.Latest.Inputs.ApiReferenceArgs
+                {
+                    Id = "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/providers/Microsoft.Web/locations/centralus/managedApis/testManagedApi",
+                },
+                CustomParameterValues = ,
+                DisplayName = "testManagedApi",
+                ParameterValues = ,
+            },
             ResourceGroupName = "testResourceGroup",
         });
     }
@@ -45,14 +55,22 @@ class MyStack : Stack
 package main
 
 import (
-	web "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/web/latest"
+	web "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/web/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := web.NewConnection(ctx, "connection", &web.ConnectionArgs{
-			ConnectionName:    pulumi.String("testManagedApi"),
+			ConnectionName: pulumi.String("testManagedApi"),
+			Properties: &web.ApiConnectionDefinitionPropertiesArgs{
+				Api: &web.ApiReferenceArgs{
+					Id: pulumi.String("/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/providers/Microsoft.Web/locations/centralus/managedApis/testManagedApi"),
+				},
+				CustomParameterValues: nil,
+				DisplayName:           pulumi.String("testManagedApi"),
+				ParameterValues:       nil,
+			},
 			ResourceGroupName: pulumi.String("testResourceGroup"),
 		})
 		if err != nil {
@@ -74,6 +92,14 @@ import pulumi_azure_nextgen as azure_nextgen
 
 connection = azure_nextgen.web.latest.Connection("connection",
     connection_name="testManagedApi",
+    properties={
+        "api": {
+            "id": "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/providers/Microsoft.Web/locations/centralus/managedApis/testManagedApi",
+        },
+        "customParameterValues": {},
+        "displayName": "testManagedApi",
+        "parameterValues": {},
+    },
     resource_group_name="testResourceGroup")
 
 ```
@@ -88,6 +114,14 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const connection = new azure_nextgen.web.latest.Connection("connection", {
     connectionName: "testManagedApi",
+    properties: {
+        api: {
+            id: "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/providers/Microsoft.Web/locations/centralus/managedApis/testManagedApi",
+        },
+        customParameterValues: {},
+        displayName: "testManagedApi",
+        parameterValues: {},
+    },
     resourceGroupName: "testResourceGroup",
 });
 
@@ -1828,7 +1862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#swagger_csharp" style="color: inherit; text-decoration: inherit;">Swagger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}The JSON representation of the swagger{{% /md %}}</dd>
 
@@ -1915,7 +1949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#swagger_go" style="color: inherit; text-decoration: inherit;">Swagger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}The JSON representation of the swagger{{% /md %}}</dd>
 
@@ -2002,7 +2036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#swagger_nodejs" style="color: inherit; text-decoration: inherit;">swagger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}The JSON representation of the swagger{{% /md %}}</dd>
 
@@ -2089,7 +2123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#swagger_python" style="color: inherit; text-decoration: inherit;">swagger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}The JSON representation of the swagger{{% /md %}}</dd>
 
@@ -2187,7 +2221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#swagger_csharp" style="color: inherit; text-decoration: inherit;">Swagger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}The JSON representation of the swagger{{% /md %}}</dd>
 
@@ -2274,7 +2308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#swagger_go" style="color: inherit; text-decoration: inherit;">Swagger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}The JSON representation of the swagger{{% /md %}}</dd>
 
@@ -2361,7 +2395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#swagger_nodejs" style="color: inherit; text-decoration: inherit;">swagger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}The JSON representation of the swagger{{% /md %}}</dd>
 
@@ -2448,7 +2482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#swagger_python" style="color: inherit; text-decoration: inherit;">swagger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}The JSON representation of the swagger{{% /md %}}</dd>
 

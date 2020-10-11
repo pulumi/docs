@@ -12,6 +12,131 @@ meta_desc: "Explore the InboundNatRule resource of the network module, including
 
 Inbound NAT rule of the load balancer.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### InboundNatRuleCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var inboundNatRule = new AzureNextGen.Network.Latest.InboundNatRule("inboundNatRule", new AzureNextGen.Network.Latest.InboundNatRuleArgs
+        {
+            BackendPort = 3389,
+            EnableFloatingIP = false,
+            EnableTcpReset = false,
+            FrontendIPConfiguration = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+            {
+                Id = "/subscriptions/subid/resourceGroups/testrg/providers/Microsoft.Network/loadBalancers/lb1/frontendIPConfigurations/ip1",
+            },
+            FrontendPort = 3390,
+            IdleTimeoutInMinutes = 4,
+            InboundNatRuleName = "natRule1.1",
+            LoadBalancerName = "lb1",
+            Protocol = "Tcp",
+            ResourceGroupName = "testrg",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewInboundNatRule(ctx, "inboundNatRule", &network.InboundNatRuleArgs{
+			BackendPort:      pulumi.Int(3389),
+			EnableFloatingIP: pulumi.Bool(false),
+			EnableTcpReset:   pulumi.Bool(false),
+			FrontendIPConfiguration: &network.SubResourceArgs{
+				Id: pulumi.String("/subscriptions/subid/resourceGroups/testrg/providers/Microsoft.Network/loadBalancers/lb1/frontendIPConfigurations/ip1"),
+			},
+			FrontendPort:         pulumi.Int(3390),
+			IdleTimeoutInMinutes: pulumi.Int(4),
+			InboundNatRuleName:   pulumi.String("natRule1.1"),
+			LoadBalancerName:     pulumi.String("lb1"),
+			Protocol:             pulumi.String("Tcp"),
+			ResourceGroupName:    pulumi.String("testrg"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+inbound_nat_rule = azure_nextgen.network.latest.InboundNatRule("inboundNatRule",
+    backend_port=3389,
+    enable_floating_ip=False,
+    enable_tcp_reset=False,
+    frontend_ip_configuration={
+        "id": "/subscriptions/subid/resourceGroups/testrg/providers/Microsoft.Network/loadBalancers/lb1/frontendIPConfigurations/ip1",
+    },
+    frontend_port=3390,
+    idle_timeout_in_minutes=4,
+    inbound_nat_rule_name="natRule1.1",
+    load_balancer_name="lb1",
+    protocol="Tcp",
+    resource_group_name="testrg")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const inboundNatRule = new azure_nextgen.network.latest.InboundNatRule("inboundNatRule", {
+    backendPort: 3389,
+    enableFloatingIP: false,
+    enableTcpReset: false,
+    frontendIPConfiguration: {
+        id: "/subscriptions/subid/resourceGroups/testrg/providers/Microsoft.Network/loadBalancers/lb1/frontendIPConfigurations/ip1",
+    },
+    frontendPort: 3390,
+    idleTimeoutInMinutes: 4,
+    inboundNatRuleName: "natRule1.1",
+    loadBalancerName: "lb1",
+    protocol: "Tcp",
+    resourceGroupName: "testrg",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a InboundNatRule Resource {#create}
@@ -13933,7 +14058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -13950,7 +14075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -13967,7 +14092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -13984,7 +14109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

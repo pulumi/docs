@@ -45,7 +45,7 @@ class MyStack : Stack
 package main
 
 import (
-	marketplace "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/marketplace/latest"
+	marketplace "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/marketplace/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

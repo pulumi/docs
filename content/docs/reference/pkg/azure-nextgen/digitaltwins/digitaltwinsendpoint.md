@@ -29,6 +29,12 @@ class MyStack : Stack
         var digitalTwinsEndpoint = new AzureNextGen.DigitalTwins.Latest.DigitalTwinsEndpoint("digitalTwinsEndpoint", new AzureNextGen.DigitalTwins.Latest.DigitalTwinsEndpointArgs
         {
             EndpointName = "myServiceBus",
+            Properties = 
+            {
+                { "endpointType", "ServiceBus" },
+                { "primaryConnectionString", "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=" },
+                { "secondaryConnectionString", "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=" },
+            },
             ResourceGroupName = "resRg",
             ResourceName = "myDigitalTwinsService",
         });
@@ -41,31 +47,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-package main
-
-import (
-	digitaltwins "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/digitaltwins/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := digitaltwins.NewDigitalTwinsEndpoint(ctx, "digitalTwinsEndpoint", &digitaltwins.DigitalTwinsEndpointArgs{
-			EndpointName:      pulumi.String("myServiceBus"),
-			ResourceGroupName: pulumi.String("resRg"),
-			ResourceName:      pulumi.String("myDigitalTwinsService"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -76,6 +58,11 @@ import pulumi_azure_nextgen as azure_nextgen
 
 digital_twins_endpoint = azure_nextgen.digitaltwins.latest.DigitalTwinsEndpoint("digitalTwinsEndpoint",
     endpoint_name="myServiceBus",
+    properties={
+        "endpointType": "ServiceBus",
+        "primaryConnectionString": "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=",
+        "secondaryConnectionString": "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=",
+    },
     resource_group_name="resRg",
     resource_name="myDigitalTwinsService")
 
@@ -91,6 +78,11 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const digitalTwinsEndpoint = new azure_nextgen.digitaltwins.latest.DigitalTwinsEndpoint("digitalTwinsEndpoint", {
     endpointName: "myServiceBus",
+    properties: {
+        endpointType: "ServiceBus",
+        primaryConnectionString: "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=",
+        secondaryConnectionString: "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=",
+    },
     resourceGroupName: "resRg",
     resourceName: "myDigitalTwinsService",
 });

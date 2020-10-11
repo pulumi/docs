@@ -2630,6 +2630,136 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_wavefront.ExternalLink">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_wavefront.</code><code class="sig-name descname">ExternalLink</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">is_log_integration</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metric_filter_regex</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">point_tag_filter_regexes</span><span class="p">:</span> <span class="n">Union[Mapping[str, Union[str, Awaitable[str], Output[T]]], Awaitable[Mapping[str, Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_filter_regex</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_wavefront.ExternalLink" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a Wavefront External Link Resource. This allows external links to be created, updated, and deleted.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_wavefront</span> <span class="k">as</span> <span class="nn">wavefront</span>
+
+<span class="n">basic</span> <span class="o">=</span> <span class="n">wavefront</span><span class="o">.</span><span class="n">ExternalLink</span><span class="p">(</span><span class="s2">&quot;basic&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;An external link description&quot;</span><span class="p">,</span>
+    <span class="n">template</span><span class="o">=</span><span class="s2">&quot;https://example.com/source=&#x7B;&#x7B;</span><span class="si">{source}</span><span class="s2">&#x7D;&#x7D;&amp;startTime={{startEpochMillis}}&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-readable description for this link</p></li>
+<li><p><strong>is_log_integration</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether this is a “Log Integration” subType of external link</p></li>
+<li><p><strong>metric_filter_regex</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Controls whether a link is displayed in the context menu of a highlighted series. If present, the metric name of the highlighted series must match this regular expression in order for the link to be displayed.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the external link</p></li>
+<li><p><strong>pulumi.Input</strong><strong>[</strong><strong>str</strong><strong>]</strong><strong>]</strong><strong>] </strong><strong>point_tag_filter_regexes</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – Controls whether a link is displayed in the context menu of a highlighted series. This is a map from string to regular expression. The highlighted series must contain point tags whose keys are present in the keys of this map and whose values match the regular expressions associated with those keys in order for the link to be displayed</p></li>
+<li><p><strong>source_filter_regex</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Controls whether a link is displayed in the context menu of a highlighted series. If present, the source name of the highlighted series must match this regular expression in order for the link to be displayed.</p></li>
+<li><p><strong>template</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mustache template for this link. The template must expand to a full URL, including scheme, origin, etc.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="pulumi_wavefront.ExternalLink.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">is_log_integration</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metric_filter_regex</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">point_tag_filter_regexes</span><span class="p">:</span> <span class="n">Union[Mapping[str, Union[str, Awaitable[str], Output[T]]], Awaitable[Mapping[str, Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_filter_regex</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_wavefront.external_link.ExternalLink<a class="headerlink" href="#pulumi_wavefront.ExternalLink.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ExternalLink resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-readable description for this link</p></li>
+<li><p><strong>is_log_integration</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether this is a “Log Integration” subType of external link</p></li>
+<li><p><strong>metric_filter_regex</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Controls whether a link is displayed in the context menu of a highlighted series. If present, the metric name of the highlighted series must match this regular expression in order for the link to be displayed.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the external link</p></li>
+<li><p><strong>pulumi.Input</strong><strong>[</strong><strong>str</strong><strong>]</strong><strong>]</strong><strong>] </strong><strong>point_tag_filter_regexes</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – Controls whether a link is displayed in the context menu of a highlighted series. This is a map from string to regular expression. The highlighted series must contain point tags whose keys are present in the keys of this map and whose values match the regular expressions associated with those keys in order for the link to be displayed</p></li>
+<li><p><strong>source_filter_regex</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Controls whether a link is displayed in the context menu of a highlighted series. If present, the source name of the highlighted series must match this regular expression in order for the link to be displayed.</p></li>
+<li><p><strong>template</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mustache template for this link. The template must expand to a full URL, including scheme, origin, etc.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_wavefront.ExternalLink.description">
+<em class="property">property </em><code class="sig-name descname">description</code><a class="headerlink" href="#pulumi_wavefront.ExternalLink.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Human-readable description for this link</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_wavefront.ExternalLink.is_log_integration">
+<em class="property">property </em><code class="sig-name descname">is_log_integration</code><a class="headerlink" href="#pulumi_wavefront.ExternalLink.is_log_integration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether this is a “Log Integration” subType of external link</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_wavefront.ExternalLink.metric_filter_regex">
+<em class="property">property </em><code class="sig-name descname">metric_filter_regex</code><a class="headerlink" href="#pulumi_wavefront.ExternalLink.metric_filter_regex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Controls whether a link is displayed in the context menu of a highlighted series. If present, the metric name of the highlighted series must match this regular expression in order for the link to be displayed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_wavefront.ExternalLink.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#pulumi_wavefront.ExternalLink.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the external link</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_wavefront.ExternalLink.point_tag_filter_regexes">
+<em class="property">property </em><code class="sig-name descname">point_tag_filter_regexes</code><a class="headerlink" href="#pulumi_wavefront.ExternalLink.point_tag_filter_regexes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Controls whether a link is displayed in the context menu of a highlighted series. This is a map from string to regular expression. The highlighted series must contain point tags whose keys are present in the keys of this map and whose values match the regular expressions associated with those keys in order for the link to be displayed</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_wavefront.ExternalLink.source_filter_regex">
+<em class="property">property </em><code class="sig-name descname">source_filter_regex</code><a class="headerlink" href="#pulumi_wavefront.ExternalLink.source_filter_regex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Controls whether a link is displayed in the context menu of a highlighted series. If present, the source name of the highlighted series must match this regular expression in order for the link to be displayed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_wavefront.ExternalLink.template">
+<em class="property">property </em><code class="sig-name descname">template</code><a class="headerlink" href="#pulumi_wavefront.ExternalLink.template" title="Permalink to this definition">¶</a></dt>
+<dd><p>The mustache template for this link. The template must expand to a full URL, including scheme, origin, etc.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_wavefront.ExternalLink.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_wavefront.ExternalLink.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_wavefront.ExternalLink.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_wavefront.ExternalLink.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_wavefront.GetDefaultUserGroupResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_wavefront.</code><code class="sig-name descname">GetDefaultUserGroupResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_wavefront.GetDefaultUserGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDefaultUserGroup.</p>

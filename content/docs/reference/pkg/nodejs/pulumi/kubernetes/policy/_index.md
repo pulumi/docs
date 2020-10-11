@@ -3,7 +3,7 @@ title: "Module policy"
 title_tag: "Module policy | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "policy"
 meta_desc: "Explore members of the policy module in the @pulumi/kubernetes package."
-git_sha: "37f9ccc3cc778db52fc6ffadd0524341e5efb806"
+git_sha: "657aed0b110280d348eff68abb66faea6c1388a0"
 block_external_search_index: true
 ---
 

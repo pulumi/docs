@@ -12,6 +12,952 @@ meta_desc: "Explore the VirtualNetwork resource of the network module, including
 
 Virtual Network resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create virtual network
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualNetwork = new AzureNextGen.Network.Latest.VirtualNetwork("virtualNetwork", new AzureNextGen.Network.Latest.VirtualNetworkArgs
+        {
+            AddressSpace = new AzureNextGen.Network.Latest.Inputs.AddressSpaceArgs
+            {
+                AddressPrefixes = 
+                {
+                    "10.0.0.0/16",
+                },
+            },
+            Location = "eastus",
+            ResourceGroupName = "rg1",
+            VirtualNetworkName = "test-vnet",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewVirtualNetwork(ctx, "virtualNetwork", &network.VirtualNetworkArgs{
+			AddressSpace: &network.AddressSpaceArgs{
+				AddressPrefixes: pulumi.StringArray{
+					pulumi.String("10.0.0.0/16"),
+				},
+			},
+			Location:           pulumi.String("eastus"),
+			ResourceGroupName:  pulumi.String("rg1"),
+			VirtualNetworkName: pulumi.String("test-vnet"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+virtual_network = azure_nextgen.network.latest.VirtualNetwork("virtualNetwork",
+    address_space={
+        "addressPrefixes": ["10.0.0.0/16"],
+    },
+    location="eastus",
+    resource_group_name="rg1",
+    virtual_network_name="test-vnet")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const virtualNetwork = new azure_nextgen.network.latest.VirtualNetwork("virtualNetwork", {
+    addressSpace: {
+        addressPrefixes: ["10.0.0.0/16"],
+    },
+    location: "eastus",
+    resourceGroupName: "rg1",
+    virtualNetworkName: "test-vnet",
+});
+
+```
+
+{{% /example %}}
+
+### Create virtual network with Bgp Communities
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualNetwork = new AzureNextGen.Network.Latest.VirtualNetwork("virtualNetwork", new AzureNextGen.Network.Latest.VirtualNetworkArgs
+        {
+            AddressSpace = new AzureNextGen.Network.Latest.Inputs.AddressSpaceArgs
+            {
+                AddressPrefixes = 
+                {
+                    "10.0.0.0/16",
+                },
+            },
+            BgpCommunities = new AzureNextGen.Network.Latest.Inputs.VirtualNetworkBgpCommunitiesArgs
+            {
+                VirtualNetworkCommunity = "12076:20000",
+            },
+            Location = "eastus",
+            ResourceGroupName = "rg1",
+            Subnets = 
+            {
+                new AzureNextGen.Network.Latest.Inputs.SubnetArgs
+                {
+                    AddressPrefix = "10.0.0.0/24",
+                    Name = "test-1",
+                },
+            },
+            VirtualNetworkName = "test-vnet",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewVirtualNetwork(ctx, "virtualNetwork", &network.VirtualNetworkArgs{
+			AddressSpace: &network.AddressSpaceArgs{
+				AddressPrefixes: pulumi.StringArray{
+					pulumi.String("10.0.0.0/16"),
+				},
+			},
+			BgpCommunities: &network.VirtualNetworkBgpCommunitiesArgs{
+				VirtualNetworkCommunity: pulumi.String("12076:20000"),
+			},
+			Location:          pulumi.String("eastus"),
+			ResourceGroupName: pulumi.String("rg1"),
+			Subnets: network.SubnetArray{
+				&network.SubnetArgs{
+					AddressPrefix: pulumi.String("10.0.0.0/24"),
+					Name:          pulumi.String("test-1"),
+				},
+			},
+			VirtualNetworkName: pulumi.String("test-vnet"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+virtual_network = azure_nextgen.network.latest.VirtualNetwork("virtualNetwork",
+    address_space={
+        "addressPrefixes": ["10.0.0.0/16"],
+    },
+    bgp_communities={
+        "virtualNetworkCommunity": "12076:20000",
+    },
+    location="eastus",
+    resource_group_name="rg1",
+    subnets=[{
+        "addressPrefix": "10.0.0.0/24",
+        "name": "test-1",
+    }],
+    virtual_network_name="test-vnet")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const virtualNetwork = new azure_nextgen.network.latest.VirtualNetwork("virtualNetwork", {
+    addressSpace: {
+        addressPrefixes: ["10.0.0.0/16"],
+    },
+    bgpCommunities: {
+        virtualNetworkCommunity: "12076:20000",
+    },
+    location: "eastus",
+    resourceGroupName: "rg1",
+    subnets: [{
+        addressPrefix: "10.0.0.0/24",
+        name: "test-1",
+    }],
+    virtualNetworkName: "test-vnet",
+});
+
+```
+
+{{% /example %}}
+
+### Create virtual network with delegated subnets
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualNetwork = new AzureNextGen.Network.Latest.VirtualNetwork("virtualNetwork", new AzureNextGen.Network.Latest.VirtualNetworkArgs
+        {
+            AddressSpace = new AzureNextGen.Network.Latest.Inputs.AddressSpaceArgs
+            {
+                AddressPrefixes = 
+                {
+                    "10.0.0.0/16",
+                },
+            },
+            Location = "westcentralus",
+            ResourceGroupName = "rg1",
+            Subnets = 
+            {
+                new AzureNextGen.Network.Latest.Inputs.SubnetArgs
+                {
+                    AddressPrefix = "10.0.0.0/24",
+                    Delegations = 
+                    {
+                        new AzureNextGen.Network.Latest.Inputs.DelegationArgs
+                        {
+                            Name = "myDelegation",
+                            ServiceName = "Microsoft.Sql/managedInstances",
+                        },
+                    },
+                    Name = "test-1",
+                },
+            },
+            VirtualNetworkName = "test-vnet",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewVirtualNetwork(ctx, "virtualNetwork", &network.VirtualNetworkArgs{
+			AddressSpace: &network.AddressSpaceArgs{
+				AddressPrefixes: pulumi.StringArray{
+					pulumi.String("10.0.0.0/16"),
+				},
+			},
+			Location:          pulumi.String("westcentralus"),
+			ResourceGroupName: pulumi.String("rg1"),
+			Subnets: network.SubnetArray{
+				&network.SubnetArgs{
+					AddressPrefix: pulumi.String("10.0.0.0/24"),
+					Delegations: network.DelegationArray{
+						&network.DelegationArgs{
+							Name:        pulumi.String("myDelegation"),
+							ServiceName: pulumi.String("Microsoft.Sql/managedInstances"),
+						},
+					},
+					Name: pulumi.String("test-1"),
+				},
+			},
+			VirtualNetworkName: pulumi.String("test-vnet"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+virtual_network = azure_nextgen.network.latest.VirtualNetwork("virtualNetwork",
+    address_space={
+        "addressPrefixes": ["10.0.0.0/16"],
+    },
+    location="westcentralus",
+    resource_group_name="rg1",
+    subnets=[{
+        "addressPrefix": "10.0.0.0/24",
+        "delegations": [{
+            "name": "myDelegation",
+            "serviceName": "Microsoft.Sql/managedInstances",
+        }],
+        "name": "test-1",
+    }],
+    virtual_network_name="test-vnet")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const virtualNetwork = new azure_nextgen.network.latest.VirtualNetwork("virtualNetwork", {
+    addressSpace: {
+        addressPrefixes: ["10.0.0.0/16"],
+    },
+    location: "westcentralus",
+    resourceGroupName: "rg1",
+    subnets: [{
+        addressPrefix: "10.0.0.0/24",
+        delegations: [{
+            name: "myDelegation",
+            serviceName: "Microsoft.Sql/managedInstances",
+        }],
+        name: "test-1",
+    }],
+    virtualNetworkName: "test-vnet",
+});
+
+```
+
+{{% /example %}}
+
+### Create virtual network with service endpoints
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualNetwork = new AzureNextGen.Network.Latest.VirtualNetwork("virtualNetwork", new AzureNextGen.Network.Latest.VirtualNetworkArgs
+        {
+            AddressSpace = new AzureNextGen.Network.Latest.Inputs.AddressSpaceArgs
+            {
+                AddressPrefixes = 
+                {
+                    "10.0.0.0/16",
+                },
+            },
+            Location = "eastus",
+            ResourceGroupName = "vnetTest",
+            Subnets = 
+            {
+                new AzureNextGen.Network.Latest.Inputs.SubnetArgs
+                {
+                    AddressPrefix = "10.0.0.0/16",
+                    Name = "test-1",
+                    ServiceEndpoints = 
+                    {
+                        new AzureNextGen.Network.Latest.Inputs.ServiceEndpointPropertiesFormatArgs
+                        {
+                            Service = "Microsoft.Storage",
+                        },
+                    },
+                },
+            },
+            VirtualNetworkName = "vnet1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewVirtualNetwork(ctx, "virtualNetwork", &network.VirtualNetworkArgs{
+			AddressSpace: &network.AddressSpaceArgs{
+				AddressPrefixes: pulumi.StringArray{
+					pulumi.String("10.0.0.0/16"),
+				},
+			},
+			Location:          pulumi.String("eastus"),
+			ResourceGroupName: pulumi.String("vnetTest"),
+			Subnets: network.SubnetArray{
+				&network.SubnetArgs{
+					AddressPrefix: pulumi.String("10.0.0.0/16"),
+					Name:          pulumi.String("test-1"),
+					ServiceEndpoints: network.ServiceEndpointPropertiesFormatArray{
+						&network.ServiceEndpointPropertiesFormatArgs{
+							Service: pulumi.String("Microsoft.Storage"),
+						},
+					},
+				},
+			},
+			VirtualNetworkName: pulumi.String("vnet1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+virtual_network = azure_nextgen.network.latest.VirtualNetwork("virtualNetwork",
+    address_space={
+        "addressPrefixes": ["10.0.0.0/16"],
+    },
+    location="eastus",
+    resource_group_name="vnetTest",
+    subnets=[{
+        "addressPrefix": "10.0.0.0/16",
+        "name": "test-1",
+        "serviceEndpoints": [{
+            "service": "Microsoft.Storage",
+        }],
+    }],
+    virtual_network_name="vnet1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const virtualNetwork = new azure_nextgen.network.latest.VirtualNetwork("virtualNetwork", {
+    addressSpace: {
+        addressPrefixes: ["10.0.0.0/16"],
+    },
+    location: "eastus",
+    resourceGroupName: "vnetTest",
+    subnets: [{
+        addressPrefix: "10.0.0.0/16",
+        name: "test-1",
+        serviceEndpoints: [{
+            service: "Microsoft.Storage",
+        }],
+    }],
+    virtualNetworkName: "vnet1",
+});
+
+```
+
+{{% /example %}}
+
+### Create virtual network with service endpoints and service endpoint policy
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualNetwork = new AzureNextGen.Network.Latest.VirtualNetwork("virtualNetwork", new AzureNextGen.Network.Latest.VirtualNetworkArgs
+        {
+            AddressSpace = new AzureNextGen.Network.Latest.Inputs.AddressSpaceArgs
+            {
+                AddressPrefixes = 
+                {
+                    "10.0.0.0/16",
+                },
+            },
+            Location = "eastus2euap",
+            ResourceGroupName = "vnetTest",
+            Subnets = 
+            {
+                new AzureNextGen.Network.Latest.Inputs.SubnetArgs
+                {
+                    AddressPrefix = "10.0.0.0/16",
+                    Name = "test-1",
+                    ServiceEndpointPolicies = 
+                    {
+                        new AzureNextGen.Network.Latest.Inputs.ServiceEndpointPolicyArgs
+                        {
+                            Id = "/subscriptions/subid/resourceGroups/vnetTest/providers/Microsoft.Network/serviceEndpointPolicies/ServiceEndpointPolicy1",
+                        },
+                    },
+                    ServiceEndpoints = 
+                    {
+                        new AzureNextGen.Network.Latest.Inputs.ServiceEndpointPropertiesFormatArgs
+                        {
+                            Service = "Microsoft.Storage",
+                        },
+                    },
+                },
+            },
+            VirtualNetworkName = "vnet1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewVirtualNetwork(ctx, "virtualNetwork", &network.VirtualNetworkArgs{
+			AddressSpace: &network.AddressSpaceArgs{
+				AddressPrefixes: pulumi.StringArray{
+					pulumi.String("10.0.0.0/16"),
+				},
+			},
+			Location:          pulumi.String("eastus2euap"),
+			ResourceGroupName: pulumi.String("vnetTest"),
+			Subnets: network.SubnetArray{
+				&network.SubnetArgs{
+					AddressPrefix: pulumi.String("10.0.0.0/16"),
+					Name:          pulumi.String("test-1"),
+					ServiceEndpointPolicies: network.ServiceEndpointPolicyArray{
+						&network.ServiceEndpointPolicyArgs{
+							Id: pulumi.String("/subscriptions/subid/resourceGroups/vnetTest/providers/Microsoft.Network/serviceEndpointPolicies/ServiceEndpointPolicy1"),
+						},
+					},
+					ServiceEndpoints: network.ServiceEndpointPropertiesFormatArray{
+						&network.ServiceEndpointPropertiesFormatArgs{
+							Service: pulumi.String("Microsoft.Storage"),
+						},
+					},
+				},
+			},
+			VirtualNetworkName: pulumi.String("vnet1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+virtual_network = azure_nextgen.network.latest.VirtualNetwork("virtualNetwork",
+    address_space={
+        "addressPrefixes": ["10.0.0.0/16"],
+    },
+    location="eastus2euap",
+    resource_group_name="vnetTest",
+    subnets=[{
+        "addressPrefix": "10.0.0.0/16",
+        "name": "test-1",
+        "serviceEndpointPolicies": [{
+            "id": "/subscriptions/subid/resourceGroups/vnetTest/providers/Microsoft.Network/serviceEndpointPolicies/ServiceEndpointPolicy1",
+        }],
+        "serviceEndpoints": [{
+            "service": "Microsoft.Storage",
+        }],
+    }],
+    virtual_network_name="vnet1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const virtualNetwork = new azure_nextgen.network.latest.VirtualNetwork("virtualNetwork", {
+    addressSpace: {
+        addressPrefixes: ["10.0.0.0/16"],
+    },
+    location: "eastus2euap",
+    resourceGroupName: "vnetTest",
+    subnets: [{
+        addressPrefix: "10.0.0.0/16",
+        name: "test-1",
+        serviceEndpointPolicies: [{
+            id: "/subscriptions/subid/resourceGroups/vnetTest/providers/Microsoft.Network/serviceEndpointPolicies/ServiceEndpointPolicy1",
+        }],
+        serviceEndpoints: [{
+            service: "Microsoft.Storage",
+        }],
+    }],
+    virtualNetworkName: "vnet1",
+});
+
+```
+
+{{% /example %}}
+
+### Create virtual network with subnet
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualNetwork = new AzureNextGen.Network.Latest.VirtualNetwork("virtualNetwork", new AzureNextGen.Network.Latest.VirtualNetworkArgs
+        {
+            AddressSpace = new AzureNextGen.Network.Latest.Inputs.AddressSpaceArgs
+            {
+                AddressPrefixes = 
+                {
+                    "10.0.0.0/16",
+                },
+            },
+            Location = "eastus",
+            ResourceGroupName = "rg1",
+            Subnets = 
+            {
+                new AzureNextGen.Network.Latest.Inputs.SubnetArgs
+                {
+                    AddressPrefix = "10.0.0.0/24",
+                    Name = "test-1",
+                },
+            },
+            VirtualNetworkName = "test-vnet",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewVirtualNetwork(ctx, "virtualNetwork", &network.VirtualNetworkArgs{
+			AddressSpace: &network.AddressSpaceArgs{
+				AddressPrefixes: pulumi.StringArray{
+					pulumi.String("10.0.0.0/16"),
+				},
+			},
+			Location:          pulumi.String("eastus"),
+			ResourceGroupName: pulumi.String("rg1"),
+			Subnets: network.SubnetArray{
+				&network.SubnetArgs{
+					AddressPrefix: pulumi.String("10.0.0.0/24"),
+					Name:          pulumi.String("test-1"),
+				},
+			},
+			VirtualNetworkName: pulumi.String("test-vnet"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+virtual_network = azure_nextgen.network.latest.VirtualNetwork("virtualNetwork",
+    address_space={
+        "addressPrefixes": ["10.0.0.0/16"],
+    },
+    location="eastus",
+    resource_group_name="rg1",
+    subnets=[{
+        "addressPrefix": "10.0.0.0/24",
+        "name": "test-1",
+    }],
+    virtual_network_name="test-vnet")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const virtualNetwork = new azure_nextgen.network.latest.VirtualNetwork("virtualNetwork", {
+    addressSpace: {
+        addressPrefixes: ["10.0.0.0/16"],
+    },
+    location: "eastus",
+    resourceGroupName: "rg1",
+    subnets: [{
+        addressPrefix: "10.0.0.0/24",
+        name: "test-1",
+    }],
+    virtualNetworkName: "test-vnet",
+});
+
+```
+
+{{% /example %}}
+
+### Create virtual network with subnet containing address prefixes
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualNetwork = new AzureNextGen.Network.Latest.VirtualNetwork("virtualNetwork", new AzureNextGen.Network.Latest.VirtualNetworkArgs
+        {
+            AddressSpace = new AzureNextGen.Network.Latest.Inputs.AddressSpaceArgs
+            {
+                AddressPrefixes = 
+                {
+                    "10.0.0.0/16",
+                },
+            },
+            Location = "eastus",
+            ResourceGroupName = "rg1",
+            Subnets = 
+            {
+                new AzureNextGen.Network.Latest.Inputs.SubnetArgs
+                {
+                    AddressPrefixes = 
+                    {
+                        "10.0.0.0/28",
+                        "10.0.1.0/28",
+                    },
+                    Name = "test-2",
+                },
+            },
+            VirtualNetworkName = "test-vnet",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewVirtualNetwork(ctx, "virtualNetwork", &network.VirtualNetworkArgs{
+			AddressSpace: &network.AddressSpaceArgs{
+				AddressPrefixes: pulumi.StringArray{
+					pulumi.String("10.0.0.0/16"),
+				},
+			},
+			Location:          pulumi.String("eastus"),
+			ResourceGroupName: pulumi.String("rg1"),
+			Subnets: network.SubnetArray{
+				&network.SubnetArgs{
+					AddressPrefixes: pulumi.StringArray{
+						pulumi.String("10.0.0.0/28"),
+						pulumi.String("10.0.1.0/28"),
+					},
+					Name: pulumi.String("test-2"),
+				},
+			},
+			VirtualNetworkName: pulumi.String("test-vnet"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+virtual_network = azure_nextgen.network.latest.VirtualNetwork("virtualNetwork",
+    address_space={
+        "addressPrefixes": ["10.0.0.0/16"],
+    },
+    location="eastus",
+    resource_group_name="rg1",
+    subnets=[{
+        "addressPrefixes": [
+            "10.0.0.0/28",
+            "10.0.1.0/28",
+        ],
+        "name": "test-2",
+    }],
+    virtual_network_name="test-vnet")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const virtualNetwork = new azure_nextgen.network.latest.VirtualNetwork("virtualNetwork", {
+    addressSpace: {
+        addressPrefixes: ["10.0.0.0/16"],
+    },
+    location: "eastus",
+    resourceGroupName: "rg1",
+    subnets: [{
+        addressPrefixes: [
+            "10.0.0.0/28",
+            "10.0.1.0/28",
+        ],
+        name: "test-2",
+    }],
+    virtualNetworkName: "test-vnet",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VirtualNetwork Resource {#create}
@@ -16640,7 +17586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -16657,7 +17603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -16674,7 +17620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -16691,7 +17637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

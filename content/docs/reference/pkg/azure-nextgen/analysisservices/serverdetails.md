@@ -64,7 +64,7 @@ class MyStack : Stack
 package main
 
 import (
-	analysisservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/analysisservices/latest"
+	analysisservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/analysisservices/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

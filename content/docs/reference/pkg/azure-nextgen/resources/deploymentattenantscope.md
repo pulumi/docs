@@ -12,6 +12,137 @@ meta_desc: "Explore the DeploymentAtTenantScope resource of the resources module
 
 Deployment information.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create deployment at tenant scope.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var deploymentAtTenantScope = new AzureNextGen.Resources.Latest.DeploymentAtTenantScope("deploymentAtTenantScope", new AzureNextGen.Resources.Latest.DeploymentAtTenantScopeArgs
+        {
+            DeploymentName = "tenant-dep01",
+            Location = "eastus",
+            Properties = new AzureNextGen.Resources.Latest.Inputs.DeploymentPropertiesArgs
+            {
+                Mode = "Incremental",
+                Parameters = ,
+                TemplateLink = new AzureNextGen.Resources.Latest.Inputs.TemplateLinkArgs
+                {
+                    Uri = "https://example.com/exampleTemplate.json",
+                },
+            },
+            Tags = 
+            {
+                { "tagKey1", "tag-value-1" },
+                { "tagKey2", "tag-value-2" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	resources "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resources/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := resources.NewDeploymentAtTenantScope(ctx, "deploymentAtTenantScope", &resources.DeploymentAtTenantScopeArgs{
+			DeploymentName: pulumi.String("tenant-dep01"),
+			Location:       pulumi.String("eastus"),
+			Properties: &resources.DeploymentPropertiesArgs{
+				Mode:       pulumi.String("Incremental"),
+				Parameters: nil,
+				TemplateLink: &resources.TemplateLinkArgs{
+					Uri: pulumi.String("https://example.com/exampleTemplate.json"),
+				},
+			},
+			Tags: pulumi.StringMap{
+				"tagKey1": pulumi.String("tag-value-1"),
+				"tagKey2": pulumi.String("tag-value-2"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+deployment_at_tenant_scope = azure_nextgen.resources.latest.DeploymentAtTenantScope("deploymentAtTenantScope",
+    deployment_name="tenant-dep01",
+    location="eastus",
+    properties={
+        "mode": "Incremental",
+        "parameters": {},
+        "templateLink": {
+            "uri": "https://example.com/exampleTemplate.json",
+        },
+    },
+    tags={
+        "tagKey1": "tag-value-1",
+        "tagKey2": "tag-value-2",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const deploymentAtTenantScope = new azure_nextgen.resources.latest.DeploymentAtTenantScope("deploymentAtTenantScope", {
+    deploymentName: "tenant-dep01",
+    location: "eastus",
+    properties: {
+        mode: "Incremental",
+        parameters: {},
+        templateLink: {
+            uri: "https://example.com/exampleTemplate.json",
+        },
+    },
+    tags: {
+        tagKey1: "tag-value-1",
+        tagKey2: "tag-value-2",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DeploymentAtTenantScope Resource {#create}
@@ -1989,7 +2120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}Name and value pairs that define the deployment parameters for the template. You use this element when you want to provide the parameter values directly in the request rather than link to an existing parameter file. Use either the parametersLink property or the parameters property, but not both. It can be a JObject or a well formed JSON string.{{% /md %}}</dd>
 
@@ -2009,7 +2140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#template_csharp" style="color: inherit; text-decoration: inherit;">Template</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}The template content. You use this element when you want to pass the template syntax directly in the request rather than link to an existing template. It can be a JObject or well-formed JSON string. Use either the templateLink property or the template property, but not both.{{% /md %}}</dd>
 
@@ -2066,7 +2197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}Name and value pairs that define the deployment parameters for the template. You use this element when you want to provide the parameter values directly in the request rather than link to an existing parameter file. Use either the parametersLink property or the parameters property, but not both. It can be a JObject or a well formed JSON string.{{% /md %}}</dd>
 
@@ -2086,7 +2217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#template_go" style="color: inherit; text-decoration: inherit;">Template</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}The template content. You use this element when you want to pass the template syntax directly in the request rather than link to an existing template. It can be a JObject or well-formed JSON string. Use either the templateLink property or the template property, but not both.{{% /md %}}</dd>
 
@@ -2143,7 +2274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}Name and value pairs that define the deployment parameters for the template. You use this element when you want to provide the parameter values directly in the request rather than link to an existing parameter file. Use either the parametersLink property or the parameters property, but not both. It can be a JObject or a well formed JSON string.{{% /md %}}</dd>
 
@@ -2163,7 +2294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}The template content. You use this element when you want to pass the template syntax directly in the request rather than link to an existing template. It can be a JObject or well-formed JSON string. Use either the templateLink property or the template property, but not both.{{% /md %}}</dd>
 
@@ -2220,7 +2351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}Name and value pairs that define the deployment parameters for the template. You use this element when you want to provide the parameter values directly in the request rather than link to an existing parameter file. Use either the parametersLink property or the parameters property, but not both. It can be a JObject or a well formed JSON string.{{% /md %}}</dd>
 
@@ -2240,7 +2371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#template_python" style="color: inherit; text-decoration: inherit;">template</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}The template content. You use this element when you want to pass the template syntax directly in the request rather than link to an existing template. It can be a JObject or well-formed JSON string. Use either the templateLink property or the template property, but not both.{{% /md %}}</dd>
 
@@ -2358,7 +2489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputs_csharp" style="color: inherit; text-decoration: inherit;">Outputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}Key/value pairs that represent deployment output.{{% /md %}}</dd>
 
@@ -2368,7 +2499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}Deployment parameters. {{% /md %}}</dd>
 
@@ -2535,7 +2666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputs_go" style="color: inherit; text-decoration: inherit;">Outputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}Key/value pairs that represent deployment output.{{% /md %}}</dd>
 
@@ -2545,7 +2676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}Deployment parameters. {{% /md %}}</dd>
 
@@ -2712,7 +2843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputs_nodejs" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}Key/value pairs that represent deployment output.{{% /md %}}</dd>
 
@@ -2722,7 +2853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}Deployment parameters. {{% /md %}}</dd>
 
@@ -2889,7 +3020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}Key/value pairs that represent deployment output.{{% /md %}}</dd>
 
@@ -2899,7 +3030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}Deployment parameters. {{% /md %}}</dd>
 
@@ -2997,7 +3128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#info_csharp" style="color: inherit; text-decoration: inherit;">Info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}The additional info.{{% /md %}}</dd>
 
@@ -3024,7 +3155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#info_go" style="color: inherit; text-decoration: inherit;">Info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}The additional info.{{% /md %}}</dd>
 
@@ -3051,7 +3182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#info_nodejs" style="color: inherit; text-decoration: inherit;">info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}The additional info.{{% /md %}}</dd>
 
@@ -3078,7 +3209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#info_python" style="color: inherit; text-decoration: inherit;">info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}The additional info.{{% /md %}}</dd>
 

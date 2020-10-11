@@ -29,6 +29,39 @@ class MyStack : Stack
         var trigger = new AzureNextGen.DataFactory.Latest.Trigger("trigger", new AzureNextGen.DataFactory.Latest.TriggerArgs
         {
             FactoryName = "exampleFactoryName",
+            Properties = 
+            {
+                { "pipelines", 
+                {
+                    new AzureNextGen.DataFactory.Latest.Inputs.TriggerPipelineReferenceArgs
+                    {
+                        Parameters = 
+                        {
+                            { "OutputBlobNameList", 
+                            {
+                                "exampleoutput.csv",
+                            } },
+                        },
+                        PipelineReference = new AzureNextGen.DataFactory.Latest.Inputs.PipelineReferenceArgs
+                        {
+                            ReferenceName = "examplePipeline",
+                            Type = "PipelineReference",
+                        },
+                    },
+                } },
+                { "type", "ScheduleTrigger" },
+                { "typeProperties", 
+                {
+                    { "recurrence", 
+                    {
+                        { "endTime", "2018-06-16T00:55:13.8441801Z" },
+                        { "frequency", "Minute" },
+                        { "interval", 4 },
+                        { "startTime", "2018-06-16T00:39:13.8441801Z" },
+                        { "timeZone", "UTC" },
+                    } },
+                } },
+            },
             ResourceGroupName = "exampleResourceGroup",
             TriggerName = "exampleTrigger",
         });
@@ -41,31 +74,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-package main
-
-import (
-	datafactory "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datafactory/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datafactory.NewTrigger(ctx, "trigger", &datafactory.TriggerArgs{
-			FactoryName:       pulumi.String("exampleFactoryName"),
-			ResourceGroupName: pulumi.String("exampleResourceGroup"),
-			TriggerName:       pulumi.String("exampleTrigger"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -76,6 +85,27 @@ import pulumi_azure_nextgen as azure_nextgen
 
 trigger = azure_nextgen.datafactory.latest.Trigger("trigger",
     factory_name="exampleFactoryName",
+    properties={
+        "pipelines": [{
+            "parameters": {
+                "OutputBlobNameList": ["exampleoutput.csv"],
+            },
+            "pipelineReference": {
+                "referenceName": "examplePipeline",
+                "type": "PipelineReference",
+            },
+        }],
+        "type": "ScheduleTrigger",
+        "typeProperties": {
+            "recurrence": {
+                "endTime": "2018-06-16T00:55:13.8441801Z",
+                "frequency": "Minute",
+                "interval": 4,
+                "startTime": "2018-06-16T00:39:13.8441801Z",
+                "timeZone": "UTC",
+            },
+        },
+    },
     resource_group_name="exampleResourceGroup",
     trigger_name="exampleTrigger")
 
@@ -91,6 +121,27 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const trigger = new azure_nextgen.datafactory.latest.Trigger("trigger", {
     factoryName: "exampleFactoryName",
+    properties: {
+        pipelines: [{
+            parameters: {
+                OutputBlobNameList: ["exampleoutput.csv"],
+            },
+            pipelineReference: {
+                referenceName: "examplePipeline",
+                type: "PipelineReference",
+            },
+        }],
+        type: "ScheduleTrigger",
+        typeProperties: {
+            recurrence: {
+                endTime: "2018-06-16T00:55:13.8441801Z",
+                frequency: "Minute",
+                interval: 4,
+                startTime: "2018-06-16T00:39:13.8441801Z",
+                timeZone: "UTC",
+            },
+        },
+    },
     resourceGroupName: "exampleResourceGroup",
     triggerName: "exampleTrigger",
 });
@@ -112,6 +163,40 @@ class MyStack : Stack
         var trigger = new AzureNextGen.DataFactory.Latest.Trigger("trigger", new AzureNextGen.DataFactory.Latest.TriggerArgs
         {
             FactoryName = "exampleFactoryName",
+            Properties = 
+            {
+                { "description", "Example description" },
+                { "pipelines", 
+                {
+                    new AzureNextGen.DataFactory.Latest.Inputs.TriggerPipelineReferenceArgs
+                    {
+                        Parameters = 
+                        {
+                            { "OutputBlobNameList", 
+                            {
+                                "exampleoutput.csv",
+                            } },
+                        },
+                        PipelineReference = new AzureNextGen.DataFactory.Latest.Inputs.PipelineReferenceArgs
+                        {
+                            ReferenceName = "examplePipeline",
+                            Type = "PipelineReference",
+                        },
+                    },
+                } },
+                { "type", "ScheduleTrigger" },
+                { "typeProperties", 
+                {
+                    { "recurrence", 
+                    {
+                        { "endTime", "2018-06-16T00:55:14.905167Z" },
+                        { "frequency", "Minute" },
+                        { "interval", 4 },
+                        { "startTime", "2018-06-16T00:39:14.905167Z" },
+                        { "timeZone", "UTC" },
+                    } },
+                } },
+            },
             ResourceGroupName = "exampleResourceGroup",
             TriggerName = "exampleTrigger",
         });
@@ -124,31 +209,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-package main
-
-import (
-	datafactory "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datafactory/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datafactory.NewTrigger(ctx, "trigger", &datafactory.TriggerArgs{
-			FactoryName:       pulumi.String("exampleFactoryName"),
-			ResourceGroupName: pulumi.String("exampleResourceGroup"),
-			TriggerName:       pulumi.String("exampleTrigger"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -159,6 +220,28 @@ import pulumi_azure_nextgen as azure_nextgen
 
 trigger = azure_nextgen.datafactory.latest.Trigger("trigger",
     factory_name="exampleFactoryName",
+    properties={
+        "description": "Example description",
+        "pipelines": [{
+            "parameters": {
+                "OutputBlobNameList": ["exampleoutput.csv"],
+            },
+            "pipelineReference": {
+                "referenceName": "examplePipeline",
+                "type": "PipelineReference",
+            },
+        }],
+        "type": "ScheduleTrigger",
+        "typeProperties": {
+            "recurrence": {
+                "endTime": "2018-06-16T00:55:14.905167Z",
+                "frequency": "Minute",
+                "interval": 4,
+                "startTime": "2018-06-16T00:39:14.905167Z",
+                "timeZone": "UTC",
+            },
+        },
+    },
     resource_group_name="exampleResourceGroup",
     trigger_name="exampleTrigger")
 
@@ -174,6 +257,28 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const trigger = new azure_nextgen.datafactory.latest.Trigger("trigger", {
     factoryName: "exampleFactoryName",
+    properties: {
+        description: "Example description",
+        pipelines: [{
+            parameters: {
+                OutputBlobNameList: ["exampleoutput.csv"],
+            },
+            pipelineReference: {
+                referenceName: "examplePipeline",
+                type: "PipelineReference",
+            },
+        }],
+        type: "ScheduleTrigger",
+        typeProperties: {
+            recurrence: {
+                endTime: "2018-06-16T00:55:14.905167Z",
+                frequency: "Minute",
+                interval: 4,
+                startTime: "2018-06-16T00:39:14.905167Z",
+                timeZone: "UTC",
+            },
+        },
+    },
     resourceGroupName: "exampleResourceGroup",
     triggerName: "exampleTrigger",
 });
@@ -809,7 +914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;object&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
 
@@ -866,7 +971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">[]map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">[]interface{}</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
 
@@ -923,7 +1028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any[]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
 
@@ -980,7 +1085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Any>]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
 
@@ -1058,7 +1163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;object&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
 
@@ -1125,7 +1230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">[]map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">[]interface{}</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
 
@@ -1192,7 +1297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any[]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
 
@@ -1259,7 +1364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Any>]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
 
@@ -1297,7 +1402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;object&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
 
@@ -1334,7 +1439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">[]map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">[]interface{}</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
 
@@ -1371,7 +1476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any[]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
 
@@ -1408,7 +1513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Any>]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
 
@@ -1466,7 +1571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;object&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
 
@@ -1513,7 +1618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">[]map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">[]interface{}</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
 
@@ -1560,7 +1665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any[]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
 
@@ -1607,7 +1712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Any>]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
 
@@ -1973,7 +2078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parenttrigger_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}The parent trigger reference.{{% /md %}}</dd>
 
@@ -2013,7 +2118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;object&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
 
@@ -2040,7 +2145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parenttrigger_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}The parent trigger reference.{{% /md %}}</dd>
 
@@ -2080,7 +2185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">[]map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">[]interface{}</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
 
@@ -2107,7 +2212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parenttrigger_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}The parent trigger reference.{{% /md %}}</dd>
 
@@ -2147,7 +2252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any[]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
 
@@ -2174,7 +2279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parenttrigger_python" style="color: inherit; text-decoration: inherit;">parent<wbr>Trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}The parent trigger reference.{{% /md %}}</dd>
 
@@ -2214,7 +2319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Any>]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
 
@@ -2252,7 +2357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parenttrigger_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}The parent trigger reference.{{% /md %}}</dd>
 
@@ -2302,7 +2407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;object&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
 
@@ -2329,7 +2434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parenttrigger_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}The parent trigger reference.{{% /md %}}</dd>
 
@@ -2379,7 +2484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">[]map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">[]interface{}</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
 
@@ -2406,7 +2511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parenttrigger_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}The parent trigger reference.{{% /md %}}</dd>
 
@@ -2456,7 +2561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any[]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
 
@@ -2483,7 +2588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parenttrigger_python" style="color: inherit; text-decoration: inherit;">parent<wbr>Trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}The parent trigger reference.{{% /md %}}</dd>
 
@@ -2533,7 +2638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Any>]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
 
@@ -2571,7 +2676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.{{% /md %}}</dd>
 
@@ -2598,7 +2703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.{{% /md %}}</dd>
 
@@ -2625,7 +2730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.{{% /md %}}</dd>
 
@@ -2652,7 +2757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.{{% /md %}}</dd>
 
@@ -2690,7 +2795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.{{% /md %}}</dd>
 
@@ -2717,7 +2822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.{{% /md %}}</dd>
 
@@ -2744,7 +2849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.{{% /md %}}</dd>
 
@@ -2771,7 +2876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.{{% /md %}}</dd>
 
@@ -3205,7 +3310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Pipeline parameters.{{% /md %}}</dd>
 
@@ -3232,7 +3337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]map[string]interface{}</span>
+        <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Pipeline parameters.{{% /md %}}</dd>
 
@@ -3259,7 +3364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: {[key: string]: any}}</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Pipeline parameters.{{% /md %}}</dd>
 
@@ -3286,7 +3391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any>]</span>
+        <span class="property-type">Dict[str, Any]</span>
     </dt>
     <dd>{{% md %}}Pipeline parameters.{{% /md %}}</dd>
 
@@ -3324,7 +3429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Pipeline parameters.{{% /md %}}</dd>
 
@@ -3351,7 +3456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]map[string]interface{}</span>
+        <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Pipeline parameters.{{% /md %}}</dd>
 
@@ -3378,7 +3483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: {[key: string]: any}}</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Pipeline parameters.{{% /md %}}</dd>
 
@@ -3405,7 +3510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any>]</span>
+        <span class="property-type">Dict[str, Any]</span>
     </dt>
     <dd>{{% md %}}Pipeline parameters.{{% /md %}}</dd>
 
@@ -3731,7 +3836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;object&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
 
@@ -3741,7 +3846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delay_csharp" style="color: inherit; text-decoration: inherit;">Delay</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}Specifies how long the trigger waits past due time before triggering new run. It doesn't alter window start and end time. The default is 0. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd>
 
@@ -3848,7 +3953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">[]map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">[]interface{}</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
 
@@ -3858,7 +3963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delay_go" style="color: inherit; text-decoration: inherit;">Delay</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}Specifies how long the trigger waits past due time before triggering new run. It doesn't alter window start and end time. The default is 0. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd>
 
@@ -3965,7 +4070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any[]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
 
@@ -3975,7 +4080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delay_nodejs" style="color: inherit; text-decoration: inherit;">delay</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}Specifies how long the trigger waits past due time before triggering new run. It doesn't alter window start and end time. The default is 0. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd>
 
@@ -4082,7 +4187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Any>]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
 
@@ -4092,7 +4197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delay_python" style="color: inherit; text-decoration: inherit;">delay</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}Specifies how long the trigger waits past due time before triggering new run. It doesn't alter window start and end time. The default is 0. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd>
 
@@ -4220,7 +4325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;object&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
 
@@ -4230,7 +4335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delay_csharp" style="color: inherit; text-decoration: inherit;">Delay</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}Specifies how long the trigger waits past due time before triggering new run. It doesn't alter window start and end time. The default is 0. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd>
 
@@ -4347,7 +4452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">[]map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">[]interface{}</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
 
@@ -4357,7 +4462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delay_go" style="color: inherit; text-decoration: inherit;">Delay</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}Specifies how long the trigger waits past due time before triggering new run. It doesn't alter window start and end time. The default is 0. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd>
 
@@ -4474,7 +4579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any[]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
 
@@ -4484,7 +4589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delay_nodejs" style="color: inherit; text-decoration: inherit;">delay</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}Specifies how long the trigger waits past due time before triggering new run. It doesn't alter window start and end time. The default is 0. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd>
 
@@ -4601,7 +4706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Any>]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
 
@@ -4611,7 +4716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delay_python" style="color: inherit; text-decoration: inherit;">delay</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}Specifies how long the trigger waits past due time before triggering new run. It doesn't alter window start and end time. The default is 0. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd>
 

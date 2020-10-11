@@ -29,6 +29,87 @@ class MyStack : Stack
         var step = new AzureNextGen.DeploymentManager.V20191101Preview.Step("step", new AzureNextGen.DeploymentManager.V20191101Preview.StepArgs
         {
             Location = "centralus",
+            Properties = 
+            {
+                { "attributes", 
+                {
+                    { "healthChecks", 
+                    {
+                        new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.RestHealthCheckArgs
+                        {
+                            Name = "appHealth",
+                            Request = new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.RestRequestArgs
+                            {
+                                Authentication = 
+                                {
+                                    { "in", "Query" },
+                                    { "name", "Code" },
+                                    { "type", "ApiKey" },
+                                    { "value", "NBCapiMOBQyAAbCkeytoPadnvO0eGHmidwFz5rXpappznKp3Jt7LLg==" },
+                                },
+                                Method = "GET",
+                                Uri = "https://resthealth.healthservice.com/api/applications/contosoApp/healthStatus",
+                            },
+                            Response = new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.RestResponseArgs
+                            {
+                                Regex = new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.RestResponseRegexArgs
+                                {
+                                    MatchQuantifier = "All",
+                                    Matches = 
+                                    {
+                                        "(?i)Contoso-App",
+                                        @"(?i)""health_status"":((.|
+)*)""(green|yellow)""",
+                                        "(?mi)^(\"application_host\": 94781052)$",
+                                    },
+                                },
+                                SuccessStatusCodes = 
+                                {
+                                    "OK",
+                                },
+                            },
+                        },
+                        new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.RestHealthCheckArgs
+                        {
+                            Name = "serviceHealth",
+                            Request = new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.RestRequestArgs
+                            {
+                                Authentication = 
+                                {
+                                    { "in", "Header" },
+                                    { "name", "code" },
+                                    { "type", "ApiKey" },
+                                    { "value", "NBCapiMOBQyAAbCkeytoPadnvO0eGHmidwFz5rXpappznKp3Jt7LLg==" },
+                                },
+                                Method = "GET",
+                                Uri = "https://resthealth.healthservice.com/api/services/contosoService/healthStatus",
+                            },
+                            Response = new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.RestResponseArgs
+                            {
+                                Regex = new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.RestResponseRegexArgs
+                                {
+                                    MatchQuantifier = "All",
+                                    Matches = 
+                                    {
+                                        "(?i)Contoso-Service-EndToEnd",
+                                        @"(?i)""health_status"":((.|
+)*)""(green)""",
+                                    },
+                                },
+                                SuccessStatusCodes = 
+                                {
+                                    "OK",
+                                },
+                            },
+                        },
+                    } },
+                    { "healthyStateDuration", "PT2H" },
+                    { "maxElasticDuration", "PT30M" },
+                    { "type", "REST" },
+                    { "waitDuration", "PT15M" },
+                } },
+                { "stepType", "HealthCheck" },
+            },
             ResourceGroupName = "myResourceGroup",
             StepName = "healthCheckStep",
             Tags = ,
@@ -42,32 +123,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-package main
-
-import (
-	deploymentmanager "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/deploymentmanager/v20191101preview"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := deploymentmanager.NewStep(ctx, "step", &deploymentmanager.StepArgs{
-			Location:          pulumi.String("centralus"),
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-			StepName:          pulumi.String("healthCheckStep"),
-			Tags:              nil,
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -78,6 +134,66 @@ import pulumi_azure_nextgen as azure_nextgen
 
 step = azure_nextgen.deploymentmanager.v20191101preview.Step("step",
     location="centralus",
+    properties={
+        "attributes": {
+            "healthChecks": [
+                {
+                    "name": "appHealth",
+                    "request": {
+                        "authentication": {
+                            "in": "Query",
+                            "name": "Code",
+                            "type": "ApiKey",
+                            "value": "NBCapiMOBQyAAbCkeytoPadnvO0eGHmidwFz5rXpappznKp3Jt7LLg==",
+                        },
+                        "method": "GET",
+                        "uri": "https://resthealth.healthservice.com/api/applications/contosoApp/healthStatus",
+                    },
+                    "response": {
+                        "regex": {
+                            "matchQuantifier": "All",
+                            "matches": [
+                                "(?i)Contoso-App",
+                                """(?i)"health_status":((.|
+)*)"(green|yellow)"""",
+                                "(?mi)^(\"application_host\": 94781052)$",
+                            ],
+                        },
+                        "successStatusCodes": ["OK"],
+                    },
+                },
+                {
+                    "name": "serviceHealth",
+                    "request": {
+                        "authentication": {
+                            "in": "Header",
+                            "name": "code",
+                            "type": "ApiKey",
+                            "value": "NBCapiMOBQyAAbCkeytoPadnvO0eGHmidwFz5rXpappznKp3Jt7LLg==",
+                        },
+                        "method": "GET",
+                        "uri": "https://resthealth.healthservice.com/api/services/contosoService/healthStatus",
+                    },
+                    "response": {
+                        "regex": {
+                            "matchQuantifier": "All",
+                            "matches": [
+                                "(?i)Contoso-Service-EndToEnd",
+                                """(?i)"health_status":((.|
+)*)"(green)"""",
+                            ],
+                        },
+                        "successStatusCodes": ["OK"],
+                    },
+                },
+            ],
+            "healthyStateDuration": "PT2H",
+            "maxElasticDuration": "PT30M",
+            "type": "REST",
+            "waitDuration": "PT15M",
+        },
+        "stepType": "HealthCheck",
+    },
     resource_group_name="myResourceGroup",
     step_name="healthCheckStep",
     tags={})
@@ -94,6 +210,66 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const step = new azure_nextgen.deploymentmanager.v20191101preview.Step("step", {
     location: "centralus",
+    properties: {
+        attributes: {
+            healthChecks: [
+                {
+                    name: "appHealth",
+                    request: {
+                        authentication: {
+                            "in": "Query",
+                            name: "Code",
+                            type: "ApiKey",
+                            value: "NBCapiMOBQyAAbCkeytoPadnvO0eGHmidwFz5rXpappznKp3Jt7LLg==",
+                        },
+                        method: "GET",
+                        uri: "https://resthealth.healthservice.com/api/applications/contosoApp/healthStatus",
+                    },
+                    response: {
+                        regex: {
+                            matchQuantifier: "All",
+                            matches: [
+                                "(?i)Contoso-App",
+                                `(?i)"health_status":((.|
+)*)"(green|yellow)"`,
+                                `(?mi)^("application_host": 94781052)$`,
+                            ],
+                        },
+                        successStatusCodes: ["OK"],
+                    },
+                },
+                {
+                    name: "serviceHealth",
+                    request: {
+                        authentication: {
+                            "in": "Header",
+                            name: "code",
+                            type: "ApiKey",
+                            value: "NBCapiMOBQyAAbCkeytoPadnvO0eGHmidwFz5rXpappznKp3Jt7LLg==",
+                        },
+                        method: "GET",
+                        uri: "https://resthealth.healthservice.com/api/services/contosoService/healthStatus",
+                    },
+                    response: {
+                        regex: {
+                            matchQuantifier: "All",
+                            matches: [
+                                "(?i)Contoso-Service-EndToEnd",
+                                `(?i)"health_status":((.|
+)*)"(green)"`,
+                            ],
+                        },
+                        successStatusCodes: ["OK"],
+                    },
+                },
+            ],
+            healthyStateDuration: "PT2H",
+            maxElasticDuration: "PT30M",
+            type: "REST",
+            waitDuration: "PT15M",
+        },
+        stepType: "HealthCheck",
+    },
     resourceGroupName: "myResourceGroup",
     stepName: "healthCheckStep",
     tags: {},
@@ -116,6 +292,14 @@ class MyStack : Stack
         var step = new AzureNextGen.DeploymentManager.V20191101Preview.Step("step", new AzureNextGen.DeploymentManager.V20191101Preview.StepArgs
         {
             Location = "centralus",
+            Properties = 
+            {
+                { "attributes", 
+                {
+                    { "duration", "PT20M" },
+                } },
+                { "stepType", "Wait" },
+            },
             ResourceGroupName = "myResourceGroup",
             StepName = "waitStep",
             Tags = ,
@@ -129,32 +313,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-package main
-
-import (
-	deploymentmanager "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/deploymentmanager/v20191101preview"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := deploymentmanager.NewStep(ctx, "step", &deploymentmanager.StepArgs{
-			Location:          pulumi.String("centralus"),
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-			StepName:          pulumi.String("waitStep"),
-			Tags:              nil,
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -165,6 +324,12 @@ import pulumi_azure_nextgen as azure_nextgen
 
 step = azure_nextgen.deploymentmanager.v20191101preview.Step("step",
     location="centralus",
+    properties={
+        "attributes": {
+            "duration": "PT20M",
+        },
+        "stepType": "Wait",
+    },
     resource_group_name="myResourceGroup",
     step_name="waitStep",
     tags={})
@@ -181,6 +346,12 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const step = new azure_nextgen.deploymentmanager.v20191101preview.Step("step", {
     location: "centralus",
+    properties: {
+        attributes: {
+            duration: "PT20M",
+        },
+        stepType: "Wait",
+    },
     resourceGroupName: "myResourceGroup",
     stepName: "waitStep",
     tags: {},

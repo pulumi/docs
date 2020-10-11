@@ -593,7 +593,7 @@ The following output properties are available:
 <a href="#modelconfigmap_csharp" style="color: inherit; text-decoration: inherit;">Model<wbr>Config<wbr>Map</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Details on the models and configurations.{{% /md %}}</dd>
 
@@ -840,7 +840,7 @@ The following output properties are available:
 <a href="#modelconfigmap_go" style="color: inherit; text-decoration: inherit;">Model<wbr>Config<wbr>Map</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]map[string]interface{}</span>
+        <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Details on the models and configurations.{{% /md %}}</dd>
 
@@ -1087,7 +1087,7 @@ The following output properties are available:
 <a href="#modelconfigmap_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Config<wbr>Map</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: {[key: string]: any}}</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Details on the models and configurations.{{% /md %}}</dd>
 
@@ -1334,7 +1334,7 @@ The following output properties are available:
 <a href="#modelconfigmap_python" style="color: inherit; text-decoration: inherit;">model<wbr>Config<wbr>Map</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any>]</span>
+        <span class="property-type">Dict[str, Any]</span>
     </dt>
     <dd>{{% md %}}Details on the models and configurations.{{% /md %}}</dd>
 
@@ -4218,7 +4218,7 @@ The following output properties are available:
 <a href="#condadependencies_csharp" style="color: inherit; text-decoration: inherit;">Conda<wbr>Dependencies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}A JObject containing Conda dependencies.{{% /md %}}</dd>
 
@@ -4265,7 +4265,7 @@ The following output properties are available:
 <a href="#condadependencies_go" style="color: inherit; text-decoration: inherit;">Conda<wbr>Dependencies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}A JObject containing Conda dependencies.{{% /md %}}</dd>
 
@@ -4312,7 +4312,7 @@ The following output properties are available:
 <a href="#condadependencies_nodejs" style="color: inherit; text-decoration: inherit;">conda<wbr>Dependencies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}A JObject containing Conda dependencies.{{% /md %}}</dd>
 
@@ -4359,7 +4359,7 @@ The following output properties are available:
 <a href="#conda_dependencies_python" style="color: inherit; text-decoration: inherit;">conda_<wbr>dependencies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}A JObject containing Conda dependencies.{{% /md %}}</dd>
 

@@ -29,6 +29,17 @@ class MyStack : Stack
         var hyperVSite = new AzureNextGen.OffAzure.Latest.HyperVSite("hyperVSite", new AzureNextGen.OffAzure.Latest.HyperVSiteArgs
         {
             Location = "eastus",
+            Properties = new AzureNextGen.OffAzure.Latest.Inputs.SitePropertiesArgs
+            {
+                ServicePrincipalIdentityDetails = new AzureNextGen.OffAzure.Latest.Inputs.SiteSpnPropertiesArgs
+                {
+                    AadAuthority = "https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47",
+                    ApplicationId = "e9f013df-2a2a-4871-b766-e79867f30348",
+                    Audience = "https://72f988bf-86f1-41af-91ab-2d7cd011db47/MaheshSite17ac9agentauthaadapp",
+                    ObjectId = "2cd492bc-7ef3-4ee0-b301-59a88108b47b",
+                    TenantId = "72f988bf-86f1-41af-91ab-2d7cd011db47",
+                },
+            },
             ResourceGroupName = "pajindTest",
             SiteName = "appliance1e39site",
         });
@@ -46,14 +57,23 @@ class MyStack : Stack
 package main
 
 import (
-	offazure "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/offazure/latest"
+	offazure "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/offazure/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := offazure.NewHyperVSite(ctx, "hyperVSite", &offazure.HyperVSiteArgs{
-			Location:          pulumi.String("eastus"),
+			Location: pulumi.String("eastus"),
+			Properties: &offazure.SitePropertiesArgs{
+				ServicePrincipalIdentityDetails: &offazure.SiteSpnPropertiesArgs{
+					AadAuthority:  pulumi.String("https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47"),
+					ApplicationId: pulumi.String("e9f013df-2a2a-4871-b766-e79867f30348"),
+					Audience:      pulumi.String("https://72f988bf-86f1-41af-91ab-2d7cd011db47/MaheshSite17ac9agentauthaadapp"),
+					ObjectId:      pulumi.String("2cd492bc-7ef3-4ee0-b301-59a88108b47b"),
+					TenantId:      pulumi.String("72f988bf-86f1-41af-91ab-2d7cd011db47"),
+				},
+			},
 			ResourceGroupName: pulumi.String("pajindTest"),
 			SiteName:          pulumi.String("appliance1e39site"),
 		})
@@ -76,6 +96,15 @@ import pulumi_azure_nextgen as azure_nextgen
 
 hyper_v_site = azure_nextgen.offazure.latest.HyperVSite("hyperVSite",
     location="eastus",
+    properties={
+        "servicePrincipalIdentityDetails": {
+            "aadAuthority": "https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47",
+            "applicationId": "e9f013df-2a2a-4871-b766-e79867f30348",
+            "audience": "https://72f988bf-86f1-41af-91ab-2d7cd011db47/MaheshSite17ac9agentauthaadapp",
+            "objectId": "2cd492bc-7ef3-4ee0-b301-59a88108b47b",
+            "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+        },
+    },
     resource_group_name="pajindTest",
     site_name="appliance1e39site")
 
@@ -91,6 +120,15 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const hyperVSite = new azure_nextgen.offazure.latest.HyperVSite("hyperVSite", {
     location: "eastus",
+    properties: {
+        servicePrincipalIdentityDetails: {
+            aadAuthority: "https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47",
+            applicationId: "e9f013df-2a2a-4871-b766-e79867f30348",
+            audience: "https://72f988bf-86f1-41af-91ab-2d7cd011db47/MaheshSite17ac9agentauthaadapp",
+            objectId: "2cd492bc-7ef3-4ee0-b301-59a88108b47b",
+            tenantId: "72f988bf-86f1-41af-91ab-2d7cd011db47",
+        },
+    },
     resourceGroupName: "pajindTest",
     siteName: "appliance1e39site",
 });

@@ -12,6 +12,232 @@ meta_desc: "Explore the PrivateLinkService resource of the network module, inclu
 
 Private link service resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create private link service
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateLinkService = new AzureNextGen.Network.Latest.PrivateLinkService("privateLinkService", new AzureNextGen.Network.Latest.PrivateLinkServiceArgs
+        {
+            AutoApproval = new AzureNextGen.Network.Latest.Inputs.PrivateLinkServicePropertiesAutoApprovalArgs
+            {
+                Subscriptions = 
+                {
+                    "subscription1",
+                    "subscription2",
+                },
+            },
+            Fqdns = 
+            {
+                "fqdn1",
+                "fqdn2",
+                "fqdn3",
+            },
+            IpConfigurations = 
+            {
+                new AzureNextGen.Network.Latest.Inputs.PrivateLinkServiceIpConfigurationArgs
+                {
+                    Name = "fe-lb",
+                    PrivateIPAddress = "10.0.1.4",
+                    PrivateIPAddressVersion = "IPv4",
+                    PrivateIPAllocationMethod = "Static",
+                    Subnet = new AzureNextGen.Network.Latest.Inputs.SubnetArgs
+                    {
+                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb",
+                    },
+                },
+            },
+            LoadBalancerFrontendIpConfigurations = 
+            {
+                new AzureNextGen.Network.Latest.Inputs.FrontendIPConfigurationArgs
+                {
+                    Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb",
+                },
+            },
+            Location = "eastus",
+            ResourceGroupName = "rg1",
+            ServiceName = "testPls",
+            Visibility = new AzureNextGen.Network.Latest.Inputs.PrivateLinkServicePropertiesVisibilityArgs
+            {
+                Subscriptions = 
+                {
+                    "subscription1",
+                    "subscription2",
+                    "subscription3",
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewPrivateLinkService(ctx, "privateLinkService", &network.PrivateLinkServiceArgs{
+			AutoApproval: &network.PrivateLinkServicePropertiesAutoApprovalArgs{
+				Subscriptions: pulumi.StringArray{
+					pulumi.String("subscription1"),
+					pulumi.String("subscription2"),
+				},
+			},
+			Fqdns: pulumi.StringArray{
+				pulumi.String("fqdn1"),
+				pulumi.String("fqdn2"),
+				pulumi.String("fqdn3"),
+			},
+			IpConfigurations: network.PrivateLinkServiceIpConfigurationArray{
+				&network.PrivateLinkServiceIpConfigurationArgs{
+					Name:                      pulumi.String("fe-lb"),
+					PrivateIPAddress:          pulumi.String("10.0.1.4"),
+					PrivateIPAddressVersion:   pulumi.String("IPv4"),
+					PrivateIPAllocationMethod: pulumi.String("Static"),
+					Subnet: &network.SubnetArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb"),
+					},
+				},
+			},
+			LoadBalancerFrontendIpConfigurations: network.FrontendIPConfigurationArray{
+				&network.FrontendIPConfigurationArgs{
+					Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb"),
+				},
+			},
+			Location:          pulumi.String("eastus"),
+			ResourceGroupName: pulumi.String("rg1"),
+			ServiceName:       pulumi.String("testPls"),
+			Visibility: &network.PrivateLinkServicePropertiesVisibilityArgs{
+				Subscriptions: pulumi.StringArray{
+					pulumi.String("subscription1"),
+					pulumi.String("subscription2"),
+					pulumi.String("subscription3"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+private_link_service = azure_nextgen.network.latest.PrivateLinkService("privateLinkService",
+    auto_approval={
+        "subscriptions": [
+            "subscription1",
+            "subscription2",
+        ],
+    },
+    fqdns=[
+        "fqdn1",
+        "fqdn2",
+        "fqdn3",
+    ],
+    ip_configurations=[{
+        "name": "fe-lb",
+        "privateIPAddress": "10.0.1.4",
+        "privateIPAddressVersion": "IPv4",
+        "privateIPAllocationMethod": "Static",
+        "subnet": {
+            "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb",
+        },
+    }],
+    load_balancer_frontend_ip_configurations=[{
+        "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb",
+    }],
+    location="eastus",
+    resource_group_name="rg1",
+    service_name="testPls",
+    visibility={
+        "subscriptions": [
+            "subscription1",
+            "subscription2",
+            "subscription3",
+        ],
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const privateLinkService = new azure_nextgen.network.latest.PrivateLinkService("privateLinkService", {
+    autoApproval: {
+        subscriptions: [
+            "subscription1",
+            "subscription2",
+        ],
+    },
+    fqdns: [
+        "fqdn1",
+        "fqdn2",
+        "fqdn3",
+    ],
+    ipConfigurations: [{
+        name: "fe-lb",
+        privateIPAddress: "10.0.1.4",
+        privateIPAddressVersion: "IPv4",
+        privateIPAllocationMethod: "Static",
+        subnet: {
+            id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb",
+        },
+    }],
+    loadBalancerFrontendIpConfigurations: [{
+        id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb",
+    }],
+    location: "eastus",
+    resourceGroupName: "rg1",
+    serviceName: "testPls",
+    visibility: {
+        subscriptions: [
+            "subscription1",
+            "subscription2",
+            "subscription3",
+        ],
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PrivateLinkService Resource {#create}
@@ -19191,7 +19417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -19208,7 +19434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -19225,7 +19451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -19242,7 +19468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

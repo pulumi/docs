@@ -30,6 +30,16 @@ class MyStack : Stack
         {
             AppName = "myapp",
             BindingName = "mybinding",
+            Properties = new AzureNextGen.AppPlatform.Latest.Inputs.BindingResourcePropertiesArgs
+            {
+                BindingParameters = 
+                {
+                    { "apiType", "SQL" },
+                    { "databaseName", "db1" },
+                },
+                Key = "xxxx",
+                ResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.DocumentDB/databaseAccounts/my-cosmosdb-1",
+            },
             ResourceGroupName = "myResourceGroup",
             ServiceName = "myservice",
         });
@@ -47,15 +57,23 @@ class MyStack : Stack
 package main
 
 import (
-	appplatform "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/appplatform/latest"
+	appplatform "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/appplatform/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := appplatform.NewBinding(ctx, "binding", &appplatform.BindingArgs{
-			AppName:           pulumi.String("myapp"),
-			BindingName:       pulumi.String("mybinding"),
+			AppName:     pulumi.String("myapp"),
+			BindingName: pulumi.String("mybinding"),
+			Properties: &appplatform.BindingResourcePropertiesArgs{
+				BindingParameters: pulumi.StringMap{
+					"apiType":      pulumi.String("SQL"),
+					"databaseName": pulumi.String("db1"),
+				},
+				Key:        pulumi.String("xxxx"),
+				ResourceId: pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.DocumentDB/databaseAccounts/my-cosmosdb-1"),
+			},
 			ResourceGroupName: pulumi.String("myResourceGroup"),
 			ServiceName:       pulumi.String("myservice"),
 		})
@@ -79,6 +97,14 @@ import pulumi_azure_nextgen as azure_nextgen
 binding = azure_nextgen.appplatform.latest.Binding("binding",
     app_name="myapp",
     binding_name="mybinding",
+    properties={
+        "bindingParameters": {
+            "apiType": "SQL",
+            "databaseName": "db1",
+        },
+        "key": "xxxx",
+        "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.DocumentDB/databaseAccounts/my-cosmosdb-1",
+    },
     resource_group_name="myResourceGroup",
     service_name="myservice")
 
@@ -95,6 +121,14 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const binding = new azure_nextgen.appplatform.latest.Binding("binding", {
     appName: "myapp",
     bindingName: "mybinding",
+    properties: {
+        bindingParameters: {
+            apiType: "SQL",
+            databaseName: "db1",
+        },
+        key: "xxxx",
+        resourceId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.DocumentDB/databaseAccounts/my-cosmosdb-1",
+    },
     resourceGroupName: "myResourceGroup",
     serviceName: "myservice",
 });
@@ -700,7 +734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bindingparameters_csharp" style="color: inherit; text-decoration: inherit;">Binding<wbr>Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Binding parameters of the Binding resource{{% /md %}}</dd>
 
@@ -737,7 +771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bindingparameters_go" style="color: inherit; text-decoration: inherit;">Binding<wbr>Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]map[string]interface{}</span>
+        <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Binding parameters of the Binding resource{{% /md %}}</dd>
 
@@ -774,7 +808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bindingparameters_nodejs" style="color: inherit; text-decoration: inherit;">binding<wbr>Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: {[key: string]: any}}</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Binding parameters of the Binding resource{{% /md %}}</dd>
 
@@ -811,7 +845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binding_parameters_python" style="color: inherit; text-decoration: inherit;">binding_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any>]</span>
+        <span class="property-type">Dict[str, Any]</span>
     </dt>
     <dd>{{% md %}}Binding parameters of the Binding resource{{% /md %}}</dd>
 
@@ -909,7 +943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bindingparameters_csharp" style="color: inherit; text-decoration: inherit;">Binding<wbr>Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Binding parameters of the Binding resource{{% /md %}}</dd>
 
@@ -996,7 +1030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bindingparameters_go" style="color: inherit; text-decoration: inherit;">Binding<wbr>Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]map[string]interface{}</span>
+        <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Binding parameters of the Binding resource{{% /md %}}</dd>
 
@@ -1083,7 +1117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bindingparameters_nodejs" style="color: inherit; text-decoration: inherit;">binding<wbr>Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: {[key: string]: any}}</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Binding parameters of the Binding resource{{% /md %}}</dd>
 
@@ -1170,7 +1204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binding_parameters_python" style="color: inherit; text-decoration: inherit;">binding_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any>]</span>
+        <span class="property-type">Dict[str, Any]</span>
     </dt>
     <dd>{{% md %}}Binding parameters of the Binding resource{{% /md %}}</dd>
 

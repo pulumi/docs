@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	windowsesu "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/windowsesu/v20190916preview"
+	windowsesu "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/windowsesu/v20190916preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

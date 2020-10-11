@@ -47,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	datalakestore "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datalakestore/latest"
+	datalakestore "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datalakestore/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

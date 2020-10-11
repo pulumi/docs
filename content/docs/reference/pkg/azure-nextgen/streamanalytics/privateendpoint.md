@@ -30,6 +30,20 @@ class MyStack : Stack
         {
             ClusterName = "testcluster",
             PrivateEndpointName = "testpe",
+            Properties = new AzureNextGen.StreamAnalytics.V20200301Preview.Inputs.PrivateEndpointPropertiesArgs
+            {
+                ManualPrivateLinkServiceConnections = 
+                {
+                    new AzureNextGen.StreamAnalytics.V20200301Preview.Inputs.PrivateLinkServiceConnectionArgs
+                    {
+                        GroupIds = 
+                        {
+                            "groupIdFromResource",
+                        },
+                        PrivateLinkServiceId = "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls",
+                    },
+                },
+            },
             ResourceGroupName = "sjrg",
         });
     }
@@ -46,7 +60,7 @@ class MyStack : Stack
 package main
 
 import (
-	streamanalytics "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/streamanalytics/v20200301preview"
+	streamanalytics "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/streamanalytics/v20200301preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -55,7 +69,17 @@ func main() {
 		_, err := streamanalytics.NewPrivateEndpoint(ctx, "privateEndpoint", &streamanalytics.PrivateEndpointArgs{
 			ClusterName:         pulumi.String("testcluster"),
 			PrivateEndpointName: pulumi.String("testpe"),
-			ResourceGroupName:   pulumi.String("sjrg"),
+			Properties: &streamanalytics.PrivateEndpointPropertiesArgs{
+				ManualPrivateLinkServiceConnections: streamanalytics.PrivateLinkServiceConnectionArray{
+					&streamanalytics.PrivateLinkServiceConnectionArgs{
+						GroupIds: pulumi.StringArray{
+							pulumi.String("groupIdFromResource"),
+						},
+						PrivateLinkServiceId: pulumi.String("/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls"),
+					},
+				},
+			},
+			ResourceGroupName: pulumi.String("sjrg"),
 		})
 		if err != nil {
 			return err
@@ -77,6 +101,12 @@ import pulumi_azure_nextgen as azure_nextgen
 private_endpoint = azure_nextgen.streamanalytics.v20200301preview.PrivateEndpoint("privateEndpoint",
     cluster_name="testcluster",
     private_endpoint_name="testpe",
+    properties={
+        "manualPrivateLinkServiceConnections": [{
+            "groupIds": ["groupIdFromResource"],
+            "privateLinkServiceId": "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls",
+        }],
+    },
     resource_group_name="sjrg")
 
 ```
@@ -92,6 +122,12 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const privateEndpoint = new azure_nextgen.streamanalytics.v20200301preview.PrivateEndpoint("privateEndpoint", {
     clusterName: "testcluster",
     privateEndpointName: "testpe",
+    properties: {
+        manualPrivateLinkServiceConnections: [{
+            groupIds: ["groupIdFromResource"],
+            privateLinkServiceId: "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls",
+        }],
+    },
     resourceGroupName: "sjrg",
 });
 

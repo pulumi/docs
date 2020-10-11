@@ -12,6 +12,83 @@ meta_desc: "Explore the ManagementGroupSubscription resource of the management m
 
 The details of subscription under management group.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### AddSubscriptionToManagementGroup
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managementGroupSubscription = new AzureNextGen.Management.Latest.ManagementGroupSubscription("managementGroupSubscription", new AzureNextGen.Management.Latest.ManagementGroupSubscriptionArgs
+        {
+            GroupId = "Group",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	management "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/management/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := management.NewManagementGroupSubscription(ctx, "managementGroupSubscription", &management.ManagementGroupSubscriptionArgs{
+			GroupId: pulumi.String("Group"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+management_group_subscription = azure_nextgen.management.latest.ManagementGroupSubscription("managementGroupSubscription", group_id="Group")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const managementGroupSubscription = new azure_nextgen.management.latest.ManagementGroupSubscription("managementGroupSubscription", {groupId: "Group"});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ManagementGroupSubscription Resource {#create}

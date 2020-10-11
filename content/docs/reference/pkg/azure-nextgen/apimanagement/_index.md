@@ -59,6 +59,7 @@ Explore the resources and functions of the apimanagement module in the Azure Nex
     <li><a href="getapiissueattachment" title="GetApiIssueAttachment"><span class="symbol function"></span>GetApiIssueAttachment</a></li>
     <li><a href="getapiissuecomment" title="GetApiIssueComment"><span class="symbol function"></span>GetApiIssueComment</a></li>
     <li><a href="getapimanagementservice" title="GetApiManagementService"><span class="symbol function"></span>GetApiManagementService</a></li>
+    <li><a href="getapimanagementservicessotoken" title="GetApiManagementServiceSsoToken"><span class="symbol function"></span>GetApiManagementServiceSsoToken</a></li>
     <li><a href="getapioperation" title="GetApiOperation"><span class="symbol function"></span>GetApiOperation</a></li>
     <li><a href="getapioperationpolicy" title="GetApiOperationPolicy"><span class="symbol function"></span>GetApiOperationPolicy</a></li>
     <li><a href="getapipolicy" title="GetApiPolicy"><span class="symbol function"></span>GetApiPolicy</a></li>
@@ -109,7 +110,7 @@ Explore the resources and functions of the apimanagement module in the Azure Nex
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.1</dd>
 </dl>
 
 

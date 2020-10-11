@@ -12,6 +12,123 @@ meta_desc: "Explore the ReplicationProtectionContainerMapping resource of the re
 
 Protection container mapping object.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create protection container mapping.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var replicationProtectionContainerMapping = new AzureNextGen.RecoveryServices.Latest.ReplicationProtectionContainerMapping("replicationProtectionContainerMapping", new AzureNextGen.RecoveryServices.Latest.ReplicationProtectionContainerMappingArgs
+        {
+            FabricName = "cloud1",
+            MappingName = "cloud1protectionprofile1",
+            Properties = new AzureNextGen.RecoveryServices.Latest.Inputs.CreateProtectionContainerMappingInputPropertiesArgs
+            {
+                PolicyId = "/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationPolicies/protectionprofile1",
+                ProviderSpecificInput = ,
+                TargetProtectionContainerId = "Microsoft Azure",
+            },
+            ProtectionContainerName = "cloud_6d224fc6-f326-5d35-96de-fbf51efb3179",
+            ResourceGroupName = "resourceGroupPS1",
+            ResourceName = "vault1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := recoveryservices.NewReplicationProtectionContainerMapping(ctx, "replicationProtectionContainerMapping", &recoveryservices.ReplicationProtectionContainerMappingArgs{
+			FabricName:  pulumi.String("cloud1"),
+			MappingName: pulumi.String("cloud1protectionprofile1"),
+			Properties: &recoveryservices.CreateProtectionContainerMappingInputPropertiesArgs{
+				PolicyId:                    pulumi.String("/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationPolicies/protectionprofile1"),
+				ProviderSpecificInput:       nil,
+				TargetProtectionContainerId: pulumi.String("Microsoft Azure"),
+			},
+			ProtectionContainerName: pulumi.String("cloud_6d224fc6-f326-5d35-96de-fbf51efb3179"),
+			ResourceGroupName:       pulumi.String("resourceGroupPS1"),
+			ResourceName:            pulumi.String("vault1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+replication_protection_container_mapping = azure_nextgen.recoveryservices.latest.ReplicationProtectionContainerMapping("replicationProtectionContainerMapping",
+    fabric_name="cloud1",
+    mapping_name="cloud1protectionprofile1",
+    properties={
+        "policyId": "/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationPolicies/protectionprofile1",
+        "providerSpecificInput": {},
+        "targetProtectionContainerId": "Microsoft Azure",
+    },
+    protection_container_name="cloud_6d224fc6-f326-5d35-96de-fbf51efb3179",
+    resource_group_name="resourceGroupPS1",
+    resource_name="vault1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const replicationProtectionContainerMapping = new azure_nextgen.recoveryservices.latest.ReplicationProtectionContainerMapping("replicationProtectionContainerMapping", {
+    fabricName: "cloud1",
+    mappingName: "cloud1protectionprofile1",
+    properties: {
+        policyId: "/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationPolicies/protectionprofile1",
+        providerSpecificInput: {},
+        targetProtectionContainerId: "Microsoft Azure",
+    },
+    protectionContainerName: "cloud_6d224fc6-f326-5d35-96de-fbf51efb3179",
+    resourceGroupName: "resourceGroupPS1",
+    resourceName: "vault1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ReplicationProtectionContainerMapping Resource {#create}

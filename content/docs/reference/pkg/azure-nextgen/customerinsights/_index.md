@@ -29,9 +29,13 @@ Explore the resources and functions of the customerinsights module in the Azure 
     <li><a href="getconnector" title="GetConnector"><span class="symbol function"></span>GetConnector</a></li>
     <li><a href="getconnectormapping" title="GetConnectorMapping"><span class="symbol function"></span>GetConnectorMapping</a></li>
     <li><a href="gethub" title="GetHub"><span class="symbol function"></span>GetHub</a></li>
+    <li><a href="getimageuploadurlfordata" title="GetImageUploadUrlForData"><span class="symbol function"></span>GetImageUploadUrlForData</a></li>
+    <li><a href="getimageuploadurlforentitytype" title="GetImageUploadUrlForEntityType"><span class="symbol function"></span>GetImageUploadUrlForEntityType</a></li>
     <li><a href="getkpi" title="GetKpi"><span class="symbol function"></span>GetKpi</a></li>
     <li><a href="getlink" title="GetLink"><span class="symbol function"></span>GetLink</a></li>
     <li><a href="getprediction" title="GetPrediction"><span class="symbol function"></span>GetPrediction</a></li>
+    <li><a href="getpredictionmodelstatus" title="GetPredictionModelStatus"><span class="symbol function"></span>GetPredictionModelStatus</a></li>
+    <li><a href="getpredictiontrainingresults" title="GetPredictionTrainingResults"><span class="symbol function"></span>GetPredictionTrainingResults</a></li>
     <li><a href="getprofile" title="GetProfile"><span class="symbol function"></span>GetProfile</a></li>
     <li><a href="getrelationship" title="GetRelationship"><span class="symbol function"></span>GetRelationship</a></li>
     <li><a href="getrelationshiplink" title="GetRelationshipLink"><span class="symbol function"></span>GetRelationshipLink</a></li>
@@ -46,7 +50,7 @@ Explore the resources and functions of the customerinsights module in the Azure 
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.1</dd>
 </dl>
 
 

@@ -75,7 +75,7 @@ class MyStack : Stack
 package main
 
 import (
-	alertsmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/alertsmanagement/v20200804preview"
+	alertsmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/alertsmanagement/v20200804preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

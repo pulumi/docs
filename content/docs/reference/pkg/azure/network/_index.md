@@ -23,6 +23,7 @@ Explore the resources and functions of the network module in the Azure package.
     <li><a href="firewallnatrulecollection" title="FirewallNatRuleCollection"><span class="symbol resource"></span>FirewallNatRuleCollection</a></li>
     <li><a href="firewallnetworkrulecollection" title="FirewallNetworkRuleCollection"><span class="symbol resource"></span>FirewallNetworkRuleCollection</a></li>
     <li><a href="firewallpolicy" title="FirewallPolicy"><span class="symbol resource"></span>FirewallPolicy</a></li>
+    <li><a href="ipgroup" title="IPGroup"><span class="symbol resource"></span>IPGroup</a></li>
     <li><a href="localnetworkgateway" title="LocalNetworkGateway"><span class="symbol resource"></span>LocalNetworkGateway</a></li>
     <li><a href="natgateway" title="NatGateway"><span class="symbol resource"></span>NatGateway</a></li>
     <li><a href="natgatewaypublicipassociation" title="NatGatewayPublicIpAssociation"><span class="symbol resource"></span>NatGatewayPublicIpAssociation</a></li>
@@ -70,6 +71,7 @@ Explore the resources and functions of the network module in the Azure package.
     <li><a href="getfirewall" title="GetFirewall"><span class="symbol function"></span>GetFirewall</a></li>
     <li><a href="getfirewallpolicy" title="GetFirewallPolicy"><span class="symbol function"></span>GetFirewallPolicy</a></li>
     <li><a href="getgatewayconnection" title="GetGatewayConnection"><span class="symbol function"></span>GetGatewayConnection</a></li>
+    <li><a href="getipgroup" title="GetIpGroup"><span class="symbol function"></span>GetIpGroup</a></li>
     <li><a href="getnatgateway" title="GetNatGateway"><span class="symbol function"></span>GetNatGateway</a></li>
     <li><a href="getnetworkddosprotectionplan" title="GetNetworkDdosProtectionPlan"><span class="symbol function"></span>GetNetworkDdosProtectionPlan</a></li>
     <li><a href="getnetworkinterface" title="GetNetworkInterface"><span class="symbol function"></span>GetNetworkInterface</a></li>
@@ -97,7 +99,7 @@ Explore the resources and functions of the network module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.23.0</dd>
+	<dd>3.24.1</dd>
 </dl>
 
 

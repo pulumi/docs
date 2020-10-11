@@ -31,8 +31,10 @@ Explore the resources and functions of the media module in the Azure NextGen pac
 <ul class="api">
     <li><a href="getaccountfilter" title="GetAccountFilter"><span class="symbol function"></span>GetAccountFilter</a></li>
     <li><a href="getasset" title="GetAsset"><span class="symbol function"></span>GetAsset</a></li>
+    <li><a href="getassetencryptionkey" title="GetAssetEncryptionKey"><span class="symbol function"></span>GetAssetEncryptionKey</a></li>
     <li><a href="getassetfilter" title="GetAssetFilter"><span class="symbol function"></span>GetAssetFilter</a></li>
     <li><a href="getcontentkeypolicy" title="GetContentKeyPolicy"><span class="symbol function"></span>GetContentKeyPolicy</a></li>
+    <li><a href="getcontentkeypolicypropertieswithsecrets" title="GetContentKeyPolicyPropertiesWithSecrets"><span class="symbol function"></span>GetContentKeyPolicyPropertiesWithSecrets</a></li>
     <li><a href="getjob" title="GetJob"><span class="symbol function"></span>GetJob</a></li>
     <li><a href="getliveevent" title="GetLiveEvent"><span class="symbol function"></span>GetLiveEvent</a></li>
     <li><a href="getliveoutput" title="GetLiveOutput"><span class="symbol function"></span>GetLiveOutput</a></li>
@@ -58,7 +60,7 @@ Explore the resources and functions of the media module in the Azure NextGen pac
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.1</dd>
 </dl>
 
 

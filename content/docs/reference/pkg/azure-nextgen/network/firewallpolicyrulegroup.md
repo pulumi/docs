@@ -164,9 +164,9 @@ class MyStack : Stack
             {
                 
                 {
-                    { "action", 
+                    { "action", new AzureNextGen.Network.Latest.Inputs.FirewallPolicyFilterRuleActionArgs
                     {
-                        { "type", "Deny" },
+                        Type = "Deny",
                     } },
                     { "name", "Example-Filter-Rule" },
                     { "ruleConditions", 

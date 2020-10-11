@@ -12,6 +12,115 @@ meta_desc: "Explore the PrivateLinkServicePrivateEndpointConnection resource of 
 
 PrivateEndpointConnection resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### approve or reject private end point connection for a private link service
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateLinkServicePrivateEndpointConnection = new AzureNextGen.Network.Latest.PrivateLinkServicePrivateEndpointConnection("privateLinkServicePrivateEndpointConnection", new AzureNextGen.Network.Latest.PrivateLinkServicePrivateEndpointConnectionArgs
+        {
+            Name = "testPlePeConnection",
+            PeConnectionName = "testPlePeConnection",
+            PrivateLinkServiceConnectionState = new AzureNextGen.Network.Latest.Inputs.PrivateLinkServiceConnectionStateArgs
+            {
+                Description = "approved it for some reason.",
+                Status = "Approved",
+            },
+            ResourceGroupName = "rg1",
+            ServiceName = "testPls",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewPrivateLinkServicePrivateEndpointConnection(ctx, "privateLinkServicePrivateEndpointConnection", &network.PrivateLinkServicePrivateEndpointConnectionArgs{
+			Name:             pulumi.String("testPlePeConnection"),
+			PeConnectionName: pulumi.String("testPlePeConnection"),
+			PrivateLinkServiceConnectionState: &network.PrivateLinkServiceConnectionStateArgs{
+				Description: pulumi.String("approved it for some reason."),
+				Status:      pulumi.String("Approved"),
+			},
+			ResourceGroupName: pulumi.String("rg1"),
+			ServiceName:       pulumi.String("testPls"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+private_link_service_private_endpoint_connection = azure_nextgen.network.latest.PrivateLinkServicePrivateEndpointConnection("privateLinkServicePrivateEndpointConnection",
+    name="testPlePeConnection",
+    pe_connection_name="testPlePeConnection",
+    private_link_service_connection_state={
+        "description": "approved it for some reason.",
+        "status": "Approved",
+    },
+    resource_group_name="rg1",
+    service_name="testPls")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const privateLinkServicePrivateEndpointConnection = new azure_nextgen.network.latest.PrivateLinkServicePrivateEndpointConnection("privateLinkServicePrivateEndpointConnection", {
+    name: "testPlePeConnection",
+    peConnectionName: "testPlePeConnection",
+    privateLinkServiceConnectionState: {
+        description: "approved it for some reason.",
+        status: "Approved",
+    },
+    resourceGroupName: "rg1",
+    serviceName: "testPls",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PrivateLinkServicePrivateEndpointConnection Resource {#create}
@@ -13813,7 +13922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -13830,7 +13939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -13847,7 +13956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -13864,7 +13973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

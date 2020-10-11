@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	billing "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/billing/v20191001preview"
+	billing "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/billing/v20191001preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

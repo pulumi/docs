@@ -30,6 +30,10 @@ class MyStack : Stack
         {
             DataSourceName = "AzTestDS774",
             Kind = "AzureActivityLog",
+            Properties = 
+            {
+                { "LinkedResourceId", "/subscriptions/00000000-0000-0000-0000-00000000000/providers/microsoft.insights/eventtypes/management" },
+            },
             ResourceGroupName = "OIAutoRest5123",
             WorkspaceName = "AzTest9724",
         });
@@ -47,15 +51,18 @@ class MyStack : Stack
 package main
 
 import (
-	operationalinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/operationalinsights/latest"
+	operationalinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationalinsights/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := operationalinsights.NewDataSource(ctx, "dataSource", &operationalinsights.DataSourceArgs{
-			DataSourceName:    pulumi.String("AzTestDS774"),
-			Kind:              pulumi.String("AzureActivityLog"),
+			DataSourceName: pulumi.String("AzTestDS774"),
+			Kind:           pulumi.String("AzureActivityLog"),
+			Properties: pulumi.StringMap{
+				"LinkedResourceId": pulumi.String("/subscriptions/00000000-0000-0000-0000-00000000000/providers/microsoft.insights/eventtypes/management"),
+			},
 			ResourceGroupName: pulumi.String("OIAutoRest5123"),
 			WorkspaceName:     pulumi.String("AzTest9724"),
 		})
@@ -79,6 +86,9 @@ import pulumi_azure_nextgen as azure_nextgen
 data_source = azure_nextgen.operationalinsights.latest.DataSource("dataSource",
     data_source_name="AzTestDS774",
     kind="AzureActivityLog",
+    properties={
+        "LinkedResourceId": "/subscriptions/00000000-0000-0000-0000-00000000000/providers/microsoft.insights/eventtypes/management",
+    },
     resource_group_name="OIAutoRest5123",
     workspace_name="AzTest9724")
 
@@ -95,6 +105,9 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const dataSource = new azure_nextgen.operationalinsights.latest.DataSource("dataSource", {
     dataSourceName: "AzTestDS774",
     kind: "AzureActivityLog",
+    properties: {
+        LinkedResourceId: "/subscriptions/00000000-0000-0000-0000-00000000000/providers/microsoft.insights/eventtypes/management",
+    },
     resourceGroupName: "OIAutoRest5123",
     workspaceName: "AzTest9724",
 });
@@ -313,7 +326,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}The data source properties in raw json format, each kind of data source have it's own schema.{{% /md %}}</dd>
 
@@ -390,7 +403,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}The data source properties in raw json format, each kind of data source have it's own schema.{{% /md %}}</dd>
 
@@ -467,7 +480,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}The data source properties in raw json format, each kind of data source have it's own schema.{{% /md %}}</dd>
 
@@ -544,7 +557,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}The data source properties in raw json format, each kind of data source have it's own schema.{{% /md %}}</dd>
 

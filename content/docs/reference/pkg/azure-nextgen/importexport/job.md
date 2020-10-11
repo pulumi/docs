@@ -30,6 +30,38 @@ class MyStack : Stack
         {
             JobName = "myExportJob",
             Location = "West US",
+            Properties = new AzureNextGen.ImportExport.Latest.Inputs.JobDetailsArgs
+            {
+                BackupDriveManifest = true,
+                DiagnosticsPath = "waimportexport",
+                Export = new AzureNextGen.ImportExport.Latest.Inputs.ExportArgs
+                {
+                    BlobPathPrefix = 
+                    {
+                        "/",
+                    },
+                },
+                JobType = "Export",
+                LogLevel = "Verbose",
+                ReturnAddress = new AzureNextGen.ImportExport.Latest.Inputs.ReturnAddressArgs
+                {
+                    City = "Redmond",
+                    CountryOrRegion = "USA",
+                    Email = "Test@contoso.com",
+                    Phone = "4250000000",
+                    PostalCode = "98007",
+                    RecipientName = "Test",
+                    StateOrProvince = "wa",
+                    StreetAddress1 = "Street1",
+                    StreetAddress2 = "street2",
+                },
+                ReturnShipping = new AzureNextGen.ImportExport.Latest.Inputs.ReturnShippingArgs
+                {
+                    CarrierAccountNumber = "989ffff",
+                    CarrierName = "FedEx",
+                },
+                StorageAccountId = "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.ClassicStorage/storageAccounts/test",
+            },
             ResourceGroupName = "myResourceGroup",
         });
     }
@@ -46,15 +78,42 @@ class MyStack : Stack
 package main
 
 import (
-	importexport "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/importexport/latest"
+	importexport "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/importexport/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := importexport.NewJob(ctx, "job", &importexport.JobArgs{
-			JobName:           pulumi.String("myExportJob"),
-			Location:          pulumi.String("West US"),
+			JobName:  pulumi.String("myExportJob"),
+			Location: pulumi.String("West US"),
+			Properties: &importexport.JobDetailsArgs{
+				BackupDriveManifest: pulumi.Bool(true),
+				DiagnosticsPath:     pulumi.String("waimportexport"),
+				Export: &importexport.ExportArgs{
+					BlobPathPrefix: pulumi.StringArray{
+						pulumi.String("/"),
+					},
+				},
+				JobType:  pulumi.String("Export"),
+				LogLevel: pulumi.String("Verbose"),
+				ReturnAddress: &importexport.ReturnAddressArgs{
+					City:            pulumi.String("Redmond"),
+					CountryOrRegion: pulumi.String("USA"),
+					Email:           pulumi.String("Test@contoso.com"),
+					Phone:           pulumi.String("4250000000"),
+					PostalCode:      pulumi.String("98007"),
+					RecipientName:   pulumi.String("Test"),
+					StateOrProvince: pulumi.String("wa"),
+					StreetAddress1:  pulumi.String("Street1"),
+					StreetAddress2:  pulumi.String("street2"),
+				},
+				ReturnShipping: &importexport.ReturnShippingArgs{
+					CarrierAccountNumber: pulumi.String("989ffff"),
+					CarrierName:          pulumi.String("FedEx"),
+				},
+				StorageAccountId: pulumi.String("/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.ClassicStorage/storageAccounts/test"),
+			},
 			ResourceGroupName: pulumi.String("myResourceGroup"),
 		})
 		if err != nil {
@@ -77,6 +136,31 @@ import pulumi_azure_nextgen as azure_nextgen
 job = azure_nextgen.importexport.latest.Job("job",
     job_name="myExportJob",
     location="West US",
+    properties={
+        "backupDriveManifest": True,
+        "diagnosticsPath": "waimportexport",
+        "export": {
+            "blobPathPrefix": ["/"],
+        },
+        "jobType": "Export",
+        "logLevel": "Verbose",
+        "returnAddress": {
+            "city": "Redmond",
+            "countryOrRegion": "USA",
+            "email": "Test@contoso.com",
+            "phone": "4250000000",
+            "postalCode": "98007",
+            "recipientName": "Test",
+            "stateOrProvince": "wa",
+            "streetAddress1": "Street1",
+            "streetAddress2": "street2",
+        },
+        "returnShipping": {
+            "carrierAccountNumber": "989ffff",
+            "carrierName": "FedEx",
+        },
+        "storageAccountId": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.ClassicStorage/storageAccounts/test",
+    },
     resource_group_name="myResourceGroup")
 
 ```
@@ -92,6 +176,31 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const job = new azure_nextgen.importexport.latest.Job("job", {
     jobName: "myExportJob",
     location: "West US",
+    properties: {
+        backupDriveManifest: true,
+        diagnosticsPath: "waimportexport",
+        "export": {
+            blobPathPrefix: ["/"],
+        },
+        jobType: "Export",
+        logLevel: "Verbose",
+        returnAddress: {
+            city: "Redmond",
+            countryOrRegion: "USA",
+            email: "Test@contoso.com",
+            phone: "4250000000",
+            postalCode: "98007",
+            recipientName: "Test",
+            stateOrProvince: "wa",
+            streetAddress1: "Street1",
+            streetAddress2: "street2",
+        },
+        returnShipping: {
+            carrierAccountNumber: "989ffff",
+            carrierName: "FedEx",
+        },
+        storageAccountId: "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.ClassicStorage/storageAccounts/test",
+    },
     resourceGroupName: "myResourceGroup",
 });
 
@@ -113,6 +222,42 @@ class MyStack : Stack
         {
             JobName = "myJob",
             Location = "West US",
+            Properties = new AzureNextGen.ImportExport.Latest.Inputs.JobDetailsArgs
+            {
+                BackupDriveManifest = true,
+                DiagnosticsPath = "waimportexport",
+                DriveList = 
+                {
+                    new AzureNextGen.ImportExport.Latest.Inputs.DriveStatusArgs
+                    {
+                        BitLockerKey = "238810-662376-448998-450120-652806-203390-606320-483076",
+                        DriveHeaderHash = "0:1048576:FB6B6ED500D49DA6E0D723C98D42C657F2881CC13357C28DCECA6A524F1292501571A321238540E621AB5BD9C9A32637615919A75593E6CB5C1515DAE341CABF;135266304:143360:C957A189AFC38C4E80731252301EB91427CE55E61448FA3C73C6FDDE70ABBC197947EC8D0249A2C639BB10B95957D5820A4BE8DFBBF76FFFA688AE5CE0D42EC3",
+                        DriveId = "9CA995BB",
+                        ManifestFile = "\\8a0c23f7-14b7-470a-9633-fcd46590a1bc.manifest",
+                        ManifestHash = "4228EC5D8E048CB9B515338C789314BE8D0B2FDBC7C7A0308E1C826242CDE74E",
+                    },
+                },
+                JobType = "Import",
+                LogLevel = "Verbose",
+                ReturnAddress = new AzureNextGen.ImportExport.Latest.Inputs.ReturnAddressArgs
+                {
+                    City = "Redmond",
+                    CountryOrRegion = "USA",
+                    Email = "Test@contoso.com",
+                    Phone = "4250000000",
+                    PostalCode = "98007",
+                    RecipientName = "Test",
+                    StateOrProvince = "wa",
+                    StreetAddress1 = "Street1",
+                    StreetAddress2 = "street2",
+                },
+                ReturnShipping = new AzureNextGen.ImportExport.Latest.Inputs.ReturnShippingArgs
+                {
+                    CarrierAccountNumber = "989ffff",
+                    CarrierName = "FedEx",
+                },
+                StorageAccountId = "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.ClassicStorage/storageAccounts/test",
+            },
             ResourceGroupName = "myResourceGroup",
         });
     }
@@ -129,15 +274,46 @@ class MyStack : Stack
 package main
 
 import (
-	importexport "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/importexport/latest"
+	importexport "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/importexport/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := importexport.NewJob(ctx, "job", &importexport.JobArgs{
-			JobName:           pulumi.String("myJob"),
-			Location:          pulumi.String("West US"),
+			JobName:  pulumi.String("myJob"),
+			Location: pulumi.String("West US"),
+			Properties: &importexport.JobDetailsArgs{
+				BackupDriveManifest: pulumi.Bool(true),
+				DiagnosticsPath:     pulumi.String("waimportexport"),
+				DriveList: importexport.DriveStatusArray{
+					&importexport.DriveStatusArgs{
+						BitLockerKey:    pulumi.String("238810-662376-448998-450120-652806-203390-606320-483076"),
+						DriveHeaderHash: pulumi.String("0:1048576:FB6B6ED500D49DA6E0D723C98D42C657F2881CC13357C28DCECA6A524F1292501571A321238540E621AB5BD9C9A32637615919A75593E6CB5C1515DAE341CABF;135266304:143360:C957A189AFC38C4E80731252301EB91427CE55E61448FA3C73C6FDDE70ABBC197947EC8D0249A2C639BB10B95957D5820A4BE8DFBBF76FFFA688AE5CE0D42EC3"),
+						DriveId:         pulumi.String("9CA995BB"),
+						ManifestFile:    pulumi.String("\\8a0c23f7-14b7-470a-9633-fcd46590a1bc.manifest"),
+						ManifestHash:    pulumi.String("4228EC5D8E048CB9B515338C789314BE8D0B2FDBC7C7A0308E1C826242CDE74E"),
+					},
+				},
+				JobType:  pulumi.String("Import"),
+				LogLevel: pulumi.String("Verbose"),
+				ReturnAddress: &importexport.ReturnAddressArgs{
+					City:            pulumi.String("Redmond"),
+					CountryOrRegion: pulumi.String("USA"),
+					Email:           pulumi.String("Test@contoso.com"),
+					Phone:           pulumi.String("4250000000"),
+					PostalCode:      pulumi.String("98007"),
+					RecipientName:   pulumi.String("Test"),
+					StateOrProvince: pulumi.String("wa"),
+					StreetAddress1:  pulumi.String("Street1"),
+					StreetAddress2:  pulumi.String("street2"),
+				},
+				ReturnShipping: &importexport.ReturnShippingArgs{
+					CarrierAccountNumber: pulumi.String("989ffff"),
+					CarrierName:          pulumi.String("FedEx"),
+				},
+				StorageAccountId: pulumi.String("/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.ClassicStorage/storageAccounts/test"),
+			},
 			ResourceGroupName: pulumi.String("myResourceGroup"),
 		})
 		if err != nil {
@@ -160,6 +336,35 @@ import pulumi_azure_nextgen as azure_nextgen
 job = azure_nextgen.importexport.latest.Job("job",
     job_name="myJob",
     location="West US",
+    properties={
+        "backupDriveManifest": True,
+        "diagnosticsPath": "waimportexport",
+        "driveList": [{
+            "bitLockerKey": "238810-662376-448998-450120-652806-203390-606320-483076",
+            "driveHeaderHash": "0:1048576:FB6B6ED500D49DA6E0D723C98D42C657F2881CC13357C28DCECA6A524F1292501571A321238540E621AB5BD9C9A32637615919A75593E6CB5C1515DAE341CABF;135266304:143360:C957A189AFC38C4E80731252301EB91427CE55E61448FA3C73C6FDDE70ABBC197947EC8D0249A2C639BB10B95957D5820A4BE8DFBBF76FFFA688AE5CE0D42EC3",
+            "driveId": "9CA995BB",
+            "manifestFile": "\\8a0c23f7-14b7-470a-9633-fcd46590a1bc.manifest",
+            "manifestHash": "4228EC5D8E048CB9B515338C789314BE8D0B2FDBC7C7A0308E1C826242CDE74E",
+        }],
+        "jobType": "Import",
+        "logLevel": "Verbose",
+        "returnAddress": {
+            "city": "Redmond",
+            "countryOrRegion": "USA",
+            "email": "Test@contoso.com",
+            "phone": "4250000000",
+            "postalCode": "98007",
+            "recipientName": "Test",
+            "stateOrProvince": "wa",
+            "streetAddress1": "Street1",
+            "streetAddress2": "street2",
+        },
+        "returnShipping": {
+            "carrierAccountNumber": "989ffff",
+            "carrierName": "FedEx",
+        },
+        "storageAccountId": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.ClassicStorage/storageAccounts/test",
+    },
     resource_group_name="myResourceGroup")
 
 ```
@@ -175,6 +380,35 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const job = new azure_nextgen.importexport.latest.Job("job", {
     jobName: "myJob",
     location: "West US",
+    properties: {
+        backupDriveManifest: true,
+        diagnosticsPath: "waimportexport",
+        driveList: [{
+            bitLockerKey: "238810-662376-448998-450120-652806-203390-606320-483076",
+            driveHeaderHash: "0:1048576:FB6B6ED500D49DA6E0D723C98D42C657F2881CC13357C28DCECA6A524F1292501571A321238540E621AB5BD9C9A32637615919A75593E6CB5C1515DAE341CABF;135266304:143360:C957A189AFC38C4E80731252301EB91427CE55E61448FA3C73C6FDDE70ABBC197947EC8D0249A2C639BB10B95957D5820A4BE8DFBBF76FFFA688AE5CE0D42EC3",
+            driveId: "9CA995BB",
+            manifestFile: "\\8a0c23f7-14b7-470a-9633-fcd46590a1bc.manifest",
+            manifestHash: "4228EC5D8E048CB9B515338C789314BE8D0B2FDBC7C7A0308E1C826242CDE74E",
+        }],
+        jobType: "Import",
+        logLevel: "Verbose",
+        returnAddress: {
+            city: "Redmond",
+            countryOrRegion: "USA",
+            email: "Test@contoso.com",
+            phone: "4250000000",
+            postalCode: "98007",
+            recipientName: "Test",
+            stateOrProvince: "wa",
+            streetAddress1: "Street1",
+            streetAddress2: "street2",
+        },
+        returnShipping: {
+            carrierAccountNumber: "989ffff",
+            carrierName: "FedEx",
+        },
+        storageAccountId: "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.ClassicStorage/storageAccounts/test",
+    },
     resourceGroupName: "myResourceGroup",
 });
 
@@ -412,7 +646,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}Specifies the tags that will be assigned to the job.{{% /md %}}</dd>
 
@@ -469,7 +703,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}Specifies the tags that will be assigned to the job.{{% /md %}}</dd>
 
@@ -526,7 +760,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}Specifies the tags that will be assigned to the job.{{% /md %}}</dd>
 
@@ -583,7 +817,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the tags that will be assigned to the job.{{% /md %}}</dd>
 

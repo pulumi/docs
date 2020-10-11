@@ -32,6 +32,46 @@ class MyStack : Stack
             {
                 new AzureNextGen.Network.Latest.Inputs.BackendPoolArgs
                 {
+                    Backends = 
+                    {
+                        new AzureNextGen.Network.Latest.Inputs.BackendArgs
+                        {
+                            Address = "w3.contoso.com",
+                            HttpPort = 80,
+                            HttpsPort = 443,
+                            Priority = 2,
+                            Weight = 1,
+                        },
+                        new AzureNextGen.Network.Latest.Inputs.BackendArgs
+                        {
+                            Address = "contoso.com.website-us-west-2.othercloud.net",
+                            HttpPort = 80,
+                            HttpsPort = 443,
+                            Priority = 1,
+                            PrivateLinkApprovalMessage = "Please approve the connection request for this Private Link",
+                            PrivateLinkLocation = "eastus",
+                            PrivateLinkResourceId = "/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.Network/privateLinkServices/pls1",
+                            Weight = 2,
+                        },
+                        new AzureNextGen.Network.Latest.Inputs.BackendArgs
+                        {
+                            Address = "10.0.1.5",
+                            HttpPort = 80,
+                            HttpsPort = 443,
+                            Priority = 1,
+                            PrivateLinkAlias = "APPSERVER.d84e61f0-0870-4d24-9746-7438fa0019d1.westus2.azure.privatelinkservice",
+                            PrivateLinkApprovalMessage = "Please approve this request to connect to the Private Link",
+                            Weight = 1,
+                        },
+                    },
+                    HealthProbeSettings = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    {
+                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/healthProbeSettings/healthProbeSettings1",
+                    },
+                    LoadBalancingSettings = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    {
+                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/loadBalancingSettings/loadBalancingSettings1",
+                    },
                     Name = "backendPool1",
                 },
             },
@@ -46,10 +86,18 @@ class MyStack : Stack
             {
                 new AzureNextGen.Network.Latest.Inputs.FrontendEndpointArgs
                 {
+                    HostName = "www.contoso.com",
                     Name = "frontendEndpoint1",
+                    SessionAffinityEnabledState = "Enabled",
+                    SessionAffinityTtlSeconds = 60,
+                    WebApplicationFirewallPolicyLink = new AzureNextGen.Network.Latest.Inputs.FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs
+                    {
+                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies/policy1",
+                    },
                 },
                 new AzureNextGen.Network.Latest.Inputs.FrontendEndpointArgs
                 {
+                    HostName = "frontDoor1.azurefd.net",
                     Name = "default",
                 },
             },
@@ -57,7 +105,12 @@ class MyStack : Stack
             {
                 new AzureNextGen.Network.Latest.Inputs.HealthProbeSettingsModelArgs
                 {
+                    EnabledState = "Enabled",
+                    HealthProbeMethod = "HEAD",
+                    IntervalInSeconds = 120,
                     Name = "healthProbeSettings1",
+                    Path = "/",
+                    Protocol = "Http",
                 },
             },
             LoadBalancingSettings = 
@@ -65,6 +118,8 @@ class MyStack : Stack
                 new AzureNextGen.Network.Latest.Inputs.LoadBalancingSettingsModelArgs
                 {
                     Name = "loadBalancingSettings1",
+                    SampleSize = 4,
+                    SuccessfulSamplesRequired = 2,
                 },
             },
             Location = "westus",
@@ -73,7 +128,43 @@ class MyStack : Stack
             {
                 new AzureNextGen.Network.Latest.Inputs.RoutingRuleArgs
                 {
+                    AcceptedProtocols = 
+                    {
+                        "Http",
+                    },
+                    EnabledState = "Enabled",
+                    FrontendEndpoints = 
+                    {
+                        new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                        {
+                            Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/frontendEndpoints/frontendEndpoint1",
+                        },
+                        new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                        {
+                            Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/frontendEndpoints/default",
+                        },
+                    },
                     Name = "routingRule1",
+                    PatternsToMatch = 
+                    {
+                        "/*",
+                    },
+                    RouteConfiguration = 
+                    {
+                        { "backendPool", new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                        {
+                            Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/backendPools/backendPool1",
+                        } },
+                        { "odataType", "#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration" },
+                    },
+                    RulesEngine = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                    {
+                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/rulesEngines/rulesEngine1",
+                    },
+                    WebApplicationFirewallPolicyLink = new AzureNextGen.Network.Latest.Inputs.RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs
+                    {
+                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies/policy1",
+                    },
                 },
             },
             Tags = 
@@ -91,68 +182,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/network/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewFrontDoor(ctx, "frontDoor", &network.FrontDoorArgs{
-			BackendPools: network.BackendPoolArray{
-				&network.BackendPoolArgs{
-					Name: pulumi.String("backendPool1"),
-				},
-			},
-			BackendPoolsSettings: &network.BackendPoolsSettingsArgs{
-				EnforceCertificateNameCheck: pulumi.String("Enabled"),
-				SendRecvTimeoutSeconds:      pulumi.Int(60),
-			},
-			EnabledState:  pulumi.String("Enabled"),
-			FrontDoorName: pulumi.String("frontDoor1"),
-			FrontendEndpoints: network.FrontendEndpointArray{
-				&network.FrontendEndpointArgs{
-					Name: pulumi.String("frontendEndpoint1"),
-				},
-				&network.FrontendEndpointArgs{
-					Name: pulumi.String("default"),
-				},
-			},
-			HealthProbeSettings: network.HealthProbeSettingsModelArray{
-				&network.HealthProbeSettingsModelArgs{
-					Name: pulumi.String("healthProbeSettings1"),
-				},
-			},
-			LoadBalancingSettings: network.LoadBalancingSettingsModelArray{
-				&network.LoadBalancingSettingsModelArgs{
-					Name: pulumi.String("loadBalancingSettings1"),
-				},
-			},
-			Location:          pulumi.String("westus"),
-			ResourceGroupName: pulumi.String("rg1"),
-			RoutingRules: network.RoutingRuleArray{
-				&network.RoutingRuleArgs{
-					Name: pulumi.String("routingRule1"),
-				},
-			},
-			Tags: pulumi.StringMap{
-				"tag1": pulumi.String("value1"),
-				"tag2": pulumi.String("value2"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -163,6 +193,40 @@ import pulumi_azure_nextgen as azure_nextgen
 
 front_door = azure_nextgen.network.latest.FrontDoor("frontDoor",
     backend_pools=[{
+        "backends": [
+            {
+                "address": "w3.contoso.com",
+                "httpPort": 80,
+                "httpsPort": 443,
+                "priority": 2,
+                "weight": 1,
+            },
+            {
+                "address": "contoso.com.website-us-west-2.othercloud.net",
+                "httpPort": 80,
+                "httpsPort": 443,
+                "priority": 1,
+                "privateLinkApprovalMessage": "Please approve the connection request for this Private Link",
+                "privateLinkLocation": "eastus",
+                "privateLinkResourceId": "/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.Network/privateLinkServices/pls1",
+                "weight": 2,
+            },
+            {
+                "address": "10.0.1.5",
+                "httpPort": 80,
+                "httpsPort": 443,
+                "priority": 1,
+                "privateLinkAlias": "APPSERVER.d84e61f0-0870-4d24-9746-7438fa0019d1.westus2.azure.privatelinkservice",
+                "privateLinkApprovalMessage": "Please approve this request to connect to the Private Link",
+                "weight": 1,
+            },
+        ],
+        "healthProbeSettings": {
+            "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/healthProbeSettings/healthProbeSettings1",
+        },
+        "loadBalancingSettings": {
+            "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/loadBalancingSettings/loadBalancingSettings1",
+        },
         "name": "backendPool1",
     }],
     backend_pools_settings={
@@ -173,22 +237,59 @@ front_door = azure_nextgen.network.latest.FrontDoor("frontDoor",
     front_door_name="frontDoor1",
     frontend_endpoints=[
         {
+            "hostName": "www.contoso.com",
             "name": "frontendEndpoint1",
+            "sessionAffinityEnabledState": "Enabled",
+            "sessionAffinityTtlSeconds": 60,
+            "webApplicationFirewallPolicyLink": {
+                "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies/policy1",
+            },
         },
         {
+            "hostName": "frontDoor1.azurefd.net",
             "name": "default",
         },
     ],
     health_probe_settings=[{
+        "enabledState": "Enabled",
+        "healthProbeMethod": "HEAD",
+        "intervalInSeconds": 120,
         "name": "healthProbeSettings1",
+        "path": "/",
+        "protocol": "Http",
     }],
     load_balancing_settings=[{
         "name": "loadBalancingSettings1",
+        "sampleSize": 4,
+        "successfulSamplesRequired": 2,
     }],
     location="westus",
     resource_group_name="rg1",
     routing_rules=[{
+        "acceptedProtocols": ["Http"],
+        "enabledState": "Enabled",
+        "frontendEndpoints": [
+            {
+                "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/frontendEndpoints/frontendEndpoint1",
+            },
+            {
+                "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/frontendEndpoints/default",
+            },
+        ],
         "name": "routingRule1",
+        "patternsToMatch": ["/*"],
+        "routeConfiguration": {
+            "backendPool": {
+                "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/backendPools/backendPool1",
+            },
+            "odataType": "#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration",
+        },
+        "rulesEngine": {
+            "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/rulesEngines/rulesEngine1",
+        },
+        "webApplicationFirewallPolicyLink": {
+            "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies/policy1",
+        },
     }],
     tags={
         "tag1": "value1",
@@ -207,6 +308,40 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const frontDoor = new azure_nextgen.network.latest.FrontDoor("frontDoor", {
     backendPools: [{
+        backends: [
+            {
+                address: "w3.contoso.com",
+                httpPort: 80,
+                httpsPort: 443,
+                priority: 2,
+                weight: 1,
+            },
+            {
+                address: "contoso.com.website-us-west-2.othercloud.net",
+                httpPort: 80,
+                httpsPort: 443,
+                priority: 1,
+                privateLinkApprovalMessage: "Please approve the connection request for this Private Link",
+                privateLinkLocation: "eastus",
+                privateLinkResourceId: "/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.Network/privateLinkServices/pls1",
+                weight: 2,
+            },
+            {
+                address: "10.0.1.5",
+                httpPort: 80,
+                httpsPort: 443,
+                priority: 1,
+                privateLinkAlias: "APPSERVER.d84e61f0-0870-4d24-9746-7438fa0019d1.westus2.azure.privatelinkservice",
+                privateLinkApprovalMessage: "Please approve this request to connect to the Private Link",
+                weight: 1,
+            },
+        ],
+        healthProbeSettings: {
+            id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/healthProbeSettings/healthProbeSettings1",
+        },
+        loadBalancingSettings: {
+            id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/loadBalancingSettings/loadBalancingSettings1",
+        },
         name: "backendPool1",
     }],
     backendPoolsSettings: {
@@ -217,22 +352,59 @@ const frontDoor = new azure_nextgen.network.latest.FrontDoor("frontDoor", {
     frontDoorName: "frontDoor1",
     frontendEndpoints: [
         {
+            hostName: "www.contoso.com",
             name: "frontendEndpoint1",
+            sessionAffinityEnabledState: "Enabled",
+            sessionAffinityTtlSeconds: 60,
+            webApplicationFirewallPolicyLink: {
+                id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies/policy1",
+            },
         },
         {
+            hostName: "frontDoor1.azurefd.net",
             name: "default",
         },
     ],
     healthProbeSettings: [{
+        enabledState: "Enabled",
+        healthProbeMethod: "HEAD",
+        intervalInSeconds: 120,
         name: "healthProbeSettings1",
+        path: "/",
+        protocol: "Http",
     }],
     loadBalancingSettings: [{
         name: "loadBalancingSettings1",
+        sampleSize: 4,
+        successfulSamplesRequired: 2,
     }],
     location: "westus",
     resourceGroupName: "rg1",
     routingRules: [{
+        acceptedProtocols: ["Http"],
+        enabledState: "Enabled",
+        frontendEndpoints: [
+            {
+                id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/frontendEndpoints/frontendEndpoint1",
+            },
+            {
+                id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/frontendEndpoints/default",
+            },
+        ],
         name: "routingRule1",
+        patternsToMatch: ["/*"],
+        routeConfiguration: {
+            backendPool: {
+                id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/backendPools/backendPool1",
+            },
+            odataType: "#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration",
+        },
+        rulesEngine: {
+            id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/rulesEngines/rulesEngine1",
+        },
+        webApplicationFirewallPolicyLink: {
+            id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies/policy1",
+        },
     }],
     tags: {
         tag1: "value1",
@@ -256,7 +428,7 @@ const frontDoor = new azure_nextgen.network.latest.FrontDoor("frontDoor", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">FrontDoor</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backend_pools</span><span class="p">:</span> <span class="nx">Optional[List[BackendPool]]</span> = None<span class="p">, </span><span class="nx">backend_pools_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[BackendPoolsSettings]]</span> = None<span class="p">, </span><span class="nx">enabled_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">front_door_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">frontend_endpoints</span><span class="p">:</span> <span class="nx">Optional[List[FrontendEndpoint]]</span> = None<span class="p">, </span><span class="nx">health_probe_settings</span><span class="p">:</span> <span class="nx">Optional[List[HealthProbeSettingsModel]]</span> = None<span class="p">, </span><span class="nx">load_balancing_settings</span><span class="p">:</span> <span class="nx">Optional[List[LoadBalancingSettingsModel]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_rules</span><span class="p">:</span> <span class="nx">Optional[List[RoutingRule]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">FrontDoor</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backend_pools</span><span class="p">:</span> <span class="nx">Optional[List[BackendPool]]</span> = None<span class="p">, </span><span class="nx">backend_pools_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[BackendPoolsSettings]]</span> = None<span class="p">, </span><span class="nx">enabled_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">front_door_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">frontend_endpoints</span><span class="p">:</span> <span class="nx">Optional[List[FrontendEndpoint]]</span> = None<span class="p">, </span><span class="nx">health_probe_settings</span><span class="p">:</span> <span class="nx">Optional[List[HealthProbeSettingsModel]]</span> = None<span class="p">, </span><span class="nx">load_balancing_settings</span><span class="p">:</span> <span class="nx">Optional[List[LoadBalancingSettingsModel]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_rules</span><span class="p">:</span> <span class="nx">Optional[List[RoutingRule]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -530,16 +702,6 @@ The FrontDoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resourcestate_csharp">
-<a href="#resourcestate_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status of the Front Door.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="routingrules_csharp">
 <a href="#routingrules_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Rules</a>
 </span> 
@@ -664,16 +826,6 @@ The FrontDoor resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resourcestate_go">
-<a href="#resourcestate_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status of the Front Door.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -804,16 +956,6 @@ The FrontDoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resourcestate_nodejs">
-<a href="#resourcestate_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status of the Front Door.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="routingrules_nodejs">
 <a href="#routingrules_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Rules</a>
 </span> 
@@ -941,16 +1083,6 @@ The FrontDoor resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resource_state_python">
-<a href="#resource_state_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status of the Front Door.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="routing_rules_python">
 <a href="#routing_rules_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>rules</a>
 </span> 
@@ -1039,6 +1171,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="resourcestate_csharp">
+<a href="#resourcestate_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status of the Front Door.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="rulesengines_csharp">
 <a href="#rulesengines_csharp" style="color: inherit; text-decoration: inherit;">Rules<wbr>Engines</a>
 </span> 
@@ -1113,6 +1255,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Provisioning state of the Front Door.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="resourcestate_go">
+<a href="#resourcestate_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status of the Front Door.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1193,6 +1345,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="resourcestate_nodejs">
+<a href="#resourcestate_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status of the Front Door.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="rulesengines_nodejs">
 <a href="#rulesengines_nodejs" style="color: inherit; text-decoration: inherit;">rules<wbr>Engines</a>
 </span> 
@@ -1267,6 +1429,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Provisioning state of the Front Door.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="resource_state_python">
+<a href="#resource_state_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status of the Front Door.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1844,16 +2016,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resourcestate_csharp">
-<a href="#resourcestate_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1910,16 +2072,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resourcestate_go">
-<a href="#resourcestate_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1978,16 +2130,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resourcestate_nodejs">
-<a href="#resourcestate_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -2045,16 +2187,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resource_state_python">
-<a href="#resource_state_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -2072,6 +2204,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcestate_csharp">
+<a href="#resourcestate_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2133,22 +2275,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resourcestate_csharp">
-<a href="#resourcestate_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcestate_go">
+<a href="#resourcestate_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2210,22 +2352,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resourcestate_go">
-<a href="#resourcestate_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcestate_nodejs">
+<a href="#resourcestate_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2287,22 +2429,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resourcestate_nodejs">
-<a href="#resourcestate_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resource_state_python">
+<a href="#resource_state_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2363,16 +2505,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resource_state_python">
-<a href="#resource_state_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4296,16 +4428,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resourcestate_csharp">
-<a href="#resourcestate_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="sessionaffinityenabledstate_csharp">
 <a href="#sessionaffinityenabledstate_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Affinity<wbr>Enabled<wbr>State</a>
 </span> 
@@ -4370,16 +4492,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resourcestate_go">
-<a href="#resourcestate_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4450,16 +4562,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resourcestate_nodejs">
-<a href="#resourcestate_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="sessionaffinityenabledstate_nodejs">
 <a href="#sessionaffinityenabledstate_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Affinity<wbr>Enabled<wbr>State</a>
 </span> 
@@ -4524,16 +4626,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resource_state_python">
-<a href="#resource_state_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4615,6 +4707,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
+        <span id="resourcestate_csharp">
+<a href="#resourcestate_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
@@ -4652,16 +4754,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resourcestate_csharp">
-<a href="#resourcestate_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4732,6 +4824,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
+        <span id="resourcestate_go">
+<a href="#resourcestate_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
@@ -4769,16 +4871,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resourcestate_go">
-<a href="#resourcestate_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4849,6 +4941,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
+        <span id="resourcestate_nodejs">
+<a href="#resourcestate_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
@@ -4886,16 +4988,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resourcestate_nodejs">
-<a href="#resourcestate_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4966,6 +5058,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
+        <span id="resource_state_python">
+<a href="#resource_state_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
@@ -5003,16 +5105,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resource_state_python">
-<a href="#resource_state_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5449,16 +5541,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Protocol scheme to use for this probe{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resourcestate_csharp">
-<a href="#resourcestate_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -5535,16 +5617,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Protocol scheme to use for this probe{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resourcestate_go">
-<a href="#resourcestate_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5623,16 +5695,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Protocol scheme to use for this probe{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resourcestate_nodejs">
-<a href="#resourcestate_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -5710,16 +5772,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Protocol scheme to use for this probe{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resource_state_python">
-<a href="#resource_state_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -5737,6 +5789,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcestate_csharp">
+<a href="#resourcestate_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5818,22 +5880,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Protocol scheme to use for this probe{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resourcestate_csharp">
-<a href="#resourcestate_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcestate_go">
+<a href="#resourcestate_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5915,22 +5977,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Protocol scheme to use for this probe{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resourcestate_go">
-<a href="#resourcestate_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcestate_nodejs">
+<a href="#resourcestate_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -6012,22 +6074,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Protocol scheme to use for this probe{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resourcestate_nodejs">
-<a href="#resourcestate_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resource_state_python">
+<a href="#resource_state_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -6108,16 +6170,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Protocol scheme to use for this probe{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resource_state_python">
-<a href="#resource_state_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6248,16 +6300,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resourcestate_csharp">
-<a href="#resourcestate_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="samplesize_csharp">
 <a href="#samplesize_csharp" style="color: inherit; text-decoration: inherit;">Sample<wbr>Size</a>
 </span> 
@@ -6312,16 +6354,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resourcestate_go">
-<a href="#resourcestate_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6382,16 +6414,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resourcestate_nodejs">
-<a href="#resourcestate_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="samplesize_nodejs">
 <a href="#samplesize_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Size</a>
 </span> 
@@ -6449,16 +6471,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resource_state_python">
-<a href="#resource_state_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="samplesize_python">
 <a href="#samplesize_python" style="color: inherit; text-decoration: inherit;">sample<wbr>Size</a>
 </span> 
@@ -6494,6 +6506,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcestate_csharp">
+<a href="#resourcestate_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -6537,16 +6559,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resourcestate_csharp">
-<a href="#resourcestate_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="samplesize_csharp">
 <a href="#samplesize_csharp" style="color: inherit; text-decoration: inherit;">Sample<wbr>Size</a>
 </span> 
@@ -6571,6 +6583,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcestate_go">
+<a href="#resourcestate_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -6614,16 +6636,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resourcestate_go">
-<a href="#resourcestate_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="samplesize_go">
 <a href="#samplesize_go" style="color: inherit; text-decoration: inherit;">Sample<wbr>Size</a>
 </span> 
@@ -6648,6 +6660,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcestate_nodejs">
+<a href="#resourcestate_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -6691,16 +6713,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resourcestate_nodejs">
-<a href="#resourcestate_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="samplesize_nodejs">
 <a href="#samplesize_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Size</a>
 </span> 
@@ -6725,6 +6737,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resource_state_python">
+<a href="#resource_state_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -6765,16 +6787,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resource_state_python">
-<a href="#resource_state_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7434,16 +7446,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resourcestate_csharp">
-<a href="#resourcestate_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="routeconfiguration_csharp">
 <a href="#routeconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Configuration</a>
 </span> 
@@ -7538,16 +7540,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The route patterns of the rule.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resourcestate_go">
-<a href="#resourcestate_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7648,16 +7640,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resourcestate_nodejs">
-<a href="#resourcestate_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="routeconfiguration_nodejs">
 <a href="#routeconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Configuration</a>
 </span> 
@@ -7755,16 +7737,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resource_state_python">
-<a href="#resource_state_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="routeconfiguration_python">
 <a href="#routeconfiguration_python" style="color: inherit; text-decoration: inherit;">route<wbr>Configuration</a>
 </span> 
@@ -7810,6 +7782,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcestate_csharp">
+<a href="#resourcestate_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -7883,16 +7865,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resourcestate_csharp">
-<a href="#resourcestate_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="routeconfiguration_csharp">
 <a href="#routeconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Configuration</a>
 </span> 
@@ -7927,6 +7899,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcestate_go">
+<a href="#resourcestate_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -8000,16 +7982,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resourcestate_go">
-<a href="#resourcestate_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="routeconfiguration_go">
 <a href="#routeconfiguration_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Configuration</a>
 </span> 
@@ -8044,6 +8016,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcestate_nodejs">
+<a href="#resourcestate_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -8117,16 +8099,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resourcestate_nodejs">
-<a href="#resourcestate_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="routeconfiguration_nodejs">
 <a href="#routeconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Configuration</a>
 </span> 
@@ -8161,6 +8133,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resource_state_python">
+<a href="#resource_state_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -8231,16 +8213,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The route patterns of the rule.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resource_state_python">
-<a href="#resource_state_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Resource status.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8908,16 +8880,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="resourcestate_csharp">
 <a href="#resourcestate_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
 </span> 
@@ -8925,6 +8887,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Resource status.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8965,16 +8937,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="resourcestate_go">
 <a href="#resourcestate_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
 </span> 
@@ -8982,6 +8944,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Resource status.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -9022,16 +8994,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="resourcestate_nodejs">
 <a href="#resourcestate_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>State</a>
 </span> 
@@ -9039,6 +9001,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Resource status.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -9079,16 +9051,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="resource_state_python">
 <a href="#resource_state_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state</a>
 </span> 
@@ -9096,6 +9058,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Resource status.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -9451,7 +9423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -9468,7 +9440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -9485,7 +9457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -9502,7 +9474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

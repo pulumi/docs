@@ -28,6 +28,7 @@ Explore the resources and functions of the management module in the Azure NextGe
     <li><a href="getartifact" title="GetArtifact"><span class="symbol function"></span>GetArtifact</a></li>
     <li><a href="getblueprint" title="GetBlueprint"><span class="symbol function"></span>GetBlueprint</a></li>
     <li><a href="getdeploymentatmanagementgroupscope" title="GetDeploymentAtManagementGroupScope"><span class="symbol function"></span>GetDeploymentAtManagementGroupScope</a></li>
+    <li><a href="getentity" title="GetEntity"><span class="symbol function"></span>GetEntity</a></li>
     <li><a href="gethierarchysetting" title="GetHierarchySetting"><span class="symbol function"></span>GetHierarchySetting</a></li>
     <li><a href="getmanagementgroup" title="GetManagementGroup"><span class="symbol function"></span>GetManagementGroup</a></li>
     <li><a href="getmanagementgroupdiagnosticsetting" title="GetManagementGroupDiagnosticSetting"><span class="symbol function"></span>GetManagementGroupDiagnosticSetting</a></li>
@@ -44,7 +45,7 @@ Explore the resources and functions of the management module in the Azure NextGe
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.1</dd>
 </dl>
 
 

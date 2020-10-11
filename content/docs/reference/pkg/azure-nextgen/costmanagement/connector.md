@@ -51,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	costmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/costmanagement/v20180801preview"
+	costmanagement "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/costmanagement/v20180801preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

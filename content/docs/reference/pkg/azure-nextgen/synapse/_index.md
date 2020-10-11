@@ -27,6 +27,9 @@ Explore the resources and functions of the synapse module in the Azure NextGen p
 <ul class="api">
     <li><a href="getbigdatapool" title="GetBigDataPool"><span class="symbol function"></span>GetBigDataPool</a></li>
     <li><a href="getintegrationruntime" title="GetIntegrationRuntime"><span class="symbol function"></span>GetIntegrationRuntime</a></li>
+    <li><a href="getintegrationruntimeconnectioninfo" title="GetIntegrationRuntimeConnectionInfo"><span class="symbol function"></span>GetIntegrationRuntimeConnectionInfo</a></li>
+    <li><a href="getintegrationruntimeobjectmetadatum" title="GetIntegrationRuntimeObjectMetadatum"><span class="symbol function"></span>GetIntegrationRuntimeObjectMetadatum</a></li>
+    <li><a href="getintegrationruntimestatus" title="GetIntegrationRuntimeStatus"><span class="symbol function"></span>GetIntegrationRuntimeStatus</a></li>
     <li><a href="getipfirewallrule" title="GetIpFirewallRule"><span class="symbol function"></span>GetIpFirewallRule</a></li>
     <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
     <li><a href="getprivatelinkhub" title="GetPrivateLinkHub"><span class="symbol function"></span>GetPrivateLinkHub</a></li>
@@ -45,7 +48,7 @@ Explore the resources and functions of the synapse module in the Azure NextGen p
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.1</dd>
 </dl>
 
 

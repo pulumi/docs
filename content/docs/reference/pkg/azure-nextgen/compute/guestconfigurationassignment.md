@@ -31,6 +31,30 @@ class MyStack : Stack
             GuestConfigurationAssignmentName = "WhitelistedApplication",
             Location = "westcentralus",
             Name = "WhitelistedApplication",
+            Properties = new AzureNextGen.Compute.Latest.Inputs.GuestConfigurationAssignmentPropertiesArgs
+            {
+                Context = "Azure policy",
+                GuestConfiguration = new AzureNextGen.Compute.Latest.Inputs.GuestConfigurationNavigationArgs
+                {
+                    ConfigurationParameter = 
+                    {
+                        new AzureNextGen.Compute.Latest.Inputs.ConfigurationParameterArgs
+                        {
+                            Name = "[InstalledApplication]bwhitelistedapp;Name",
+                            Value = "NotePad,sql",
+                        },
+                    },
+                    ConfigurationSetting = new AzureNextGen.Compute.Latest.Inputs.ConfigurationSettingArgs
+                    {
+                        ActionAfterReboot = "ContinueConfiguration",
+                        ConfigurationMode = "MonitorOnly",
+                        ConfigurationModeFrequencyMins = 15,
+                        RebootIfNeeded = "False",
+                    },
+                    Name = "WhitelistedApplication",
+                    Version = "1.*",
+                },
+            },
             ResourceGroupName = "myResourceGroupName",
             VmName = "myVMName",
         });
@@ -48,7 +72,7 @@ class MyStack : Stack
 package main
 
 import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute/latest"
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -58,8 +82,27 @@ func main() {
 			GuestConfigurationAssignmentName: pulumi.String("WhitelistedApplication"),
 			Location:                         pulumi.String("westcentralus"),
 			Name:                             pulumi.String("WhitelistedApplication"),
-			ResourceGroupName:                pulumi.String("myResourceGroupName"),
-			VmName:                           pulumi.String("myVMName"),
+			Properties: &compute.GuestConfigurationAssignmentPropertiesArgs{
+				Context: pulumi.String("Azure policy"),
+				GuestConfiguration: &compute.GuestConfigurationNavigationArgs{
+					ConfigurationParameter: compute.ConfigurationParameterArray{
+						&compute.ConfigurationParameterArgs{
+							Name:  pulumi.String("[InstalledApplication]bwhitelistedapp;Name"),
+							Value: pulumi.String("NotePad,sql"),
+						},
+					},
+					ConfigurationSetting: &compute.ConfigurationSettingArgs{
+						ActionAfterReboot:              pulumi.String("ContinueConfiguration"),
+						ConfigurationMode:              pulumi.String("MonitorOnly"),
+						ConfigurationModeFrequencyMins: pulumi.Float64(15),
+						RebootIfNeeded:                 pulumi.String("False"),
+					},
+					Name:    pulumi.String("WhitelistedApplication"),
+					Version: pulumi.String("1.*"),
+				},
+			},
+			ResourceGroupName: pulumi.String("myResourceGroupName"),
+			VmName:            pulumi.String("myVMName"),
 		})
 		if err != nil {
 			return err
@@ -82,6 +125,23 @@ guest_configuration_assignment = azure_nextgen.compute.latest.GuestConfiguration
     guest_configuration_assignment_name="WhitelistedApplication",
     location="westcentralus",
     name="WhitelistedApplication",
+    properties={
+        "context": "Azure policy",
+        "guestConfiguration": {
+            "configurationParameter": [{
+                "name": "[InstalledApplication]bwhitelistedapp;Name",
+                "value": "NotePad,sql",
+            }],
+            "configurationSetting": {
+                "actionAfterReboot": "ContinueConfiguration",
+                "configurationMode": "MonitorOnly",
+                "configurationModeFrequencyMins": 15,
+                "rebootIfNeeded": "False",
+            },
+            "name": "WhitelistedApplication",
+            "version": "1.*",
+        },
+    },
     resource_group_name="myResourceGroupName",
     vm_name="myVMName")
 
@@ -99,6 +159,23 @@ const guestConfigurationAssignment = new azure_nextgen.compute.latest.GuestConfi
     guestConfigurationAssignmentName: "WhitelistedApplication",
     location: "westcentralus",
     name: "WhitelistedApplication",
+    properties: {
+        context: "Azure policy",
+        guestConfiguration: {
+            configurationParameter: [{
+                name: "[InstalledApplication]bwhitelistedapp;Name",
+                value: "NotePad,sql",
+            }],
+            configurationSetting: {
+                actionAfterReboot: "ContinueConfiguration",
+                configurationMode: "MonitorOnly",
+                configurationModeFrequencyMins: 15,
+                rebootIfNeeded: "False",
+            },
+            name: "WhitelistedApplication",
+            version: "1.*",
+        },
+    },
     resourceGroupName: "myResourceGroupName",
     vmName: "myVMName",
 });
@@ -952,7 +1029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}Properties of a guest configuration assignment resource.{{% /md %}}</dd>
 
@@ -999,7 +1076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}Properties of a guest configuration assignment resource.{{% /md %}}</dd>
 
@@ -1046,7 +1123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}Properties of a guest configuration assignment resource.{{% /md %}}</dd>
 
@@ -1093,7 +1170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}Properties of a guest configuration assignment resource.{{% /md %}}</dd>
 

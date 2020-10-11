@@ -79,7 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the StreamingEndpoint.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the streaming endpoint, maximum length is 24.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -116,7 +116,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the StreamingEndpoint.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the streaming endpoint, maximum length is 24.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -153,7 +153,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the StreamingEndpoint.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the streaming endpoint, maximum length is 24.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -190,7 +190,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the StreamingEndpoint.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the streaming endpoint, maximum length is 24.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -220,7 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The exact time the StreamingEndpoint was created.{{% /md %}}</dd>
+    <dd>{{% md %}}The exact time the streaming endpoint was created.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -240,7 +240,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The StreamingEndpoint host name.{{% /md %}}</dd>
+    <dd>{{% md %}}The streaming endpoint host name.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -250,7 +250,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The exact time the StreamingEndpoint was last modified.{{% /md %}}</dd>
+    <dd>{{% md %}}The exact time the streaming endpoint was last modified.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -280,7 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the StreamingEndpoint.{{% /md %}}</dd>
+    <dd>{{% md %}}The provisioning state of the streaming endpoint.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -290,7 +290,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource state of the StreamingEndpoint.{{% /md %}}</dd>
+    <dd>{{% md %}}The resource state of the streaming endpoint.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -300,7 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The number of scale units.  Use the Scale operation to adjust this value.{{% /md %}}</dd>
+    <dd>{{% md %}}The number of scale units. Use the Scale operation to adjust this value.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -320,7 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingendpointaccesscontrolresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Outputs.<wbr>Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The access control definition of the StreamingEndpoint.{{% /md %}}</dd>
+    <dd>{{% md %}}The access control definition of the streaming endpoint.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -330,7 +330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the AvailabilitySet used with this StreamingEndpoint for high availability streaming.  This value can only be set at creation time.{{% /md %}}</dd>
+    <dd>{{% md %}}This feature is deprecated, do not set a value for this property.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -370,7 +370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crosssiteaccesspoliciesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Outputs.<wbr>Cross<wbr>Site<wbr>Access<wbr>Policies<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The StreamingEndpoint access policies.{{% /md %}}</dd>
+    <dd>{{% md %}}The streaming endpoint access policies.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -380,7 +380,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The custom host names of the StreamingEndpoint{{% /md %}}</dd>
+    <dd>{{% md %}}The custom host names of the streaming endpoint{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -390,7 +390,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The StreamingEndpoint description.{{% /md %}}</dd>
+    <dd>{{% md %}}The streaming endpoint description.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -427,7 +427,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The exact time the StreamingEndpoint was created.{{% /md %}}</dd>
+    <dd>{{% md %}}The exact time the streaming endpoint was created.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -447,7 +447,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The StreamingEndpoint host name.{{% /md %}}</dd>
+    <dd>{{% md %}}The streaming endpoint host name.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -457,7 +457,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The exact time the StreamingEndpoint was last modified.{{% /md %}}</dd>
+    <dd>{{% md %}}The exact time the streaming endpoint was last modified.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -487,7 +487,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the StreamingEndpoint.{{% /md %}}</dd>
+    <dd>{{% md %}}The provisioning state of the streaming endpoint.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -497,7 +497,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource state of the StreamingEndpoint.{{% /md %}}</dd>
+    <dd>{{% md %}}The resource state of the streaming endpoint.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -507,7 +507,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The number of scale units.  Use the Scale operation to adjust this value.{{% /md %}}</dd>
+    <dd>{{% md %}}The number of scale units. Use the Scale operation to adjust this value.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -527,7 +527,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingendpointaccesscontrolresponse">Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The access control definition of the StreamingEndpoint.{{% /md %}}</dd>
+    <dd>{{% md %}}The access control definition of the streaming endpoint.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -537,7 +537,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the AvailabilitySet used with this StreamingEndpoint for high availability streaming.  This value can only be set at creation time.{{% /md %}}</dd>
+    <dd>{{% md %}}This feature is deprecated, do not set a value for this property.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -577,7 +577,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crosssiteaccesspoliciesresponse">Cross<wbr>Site<wbr>Access<wbr>Policies<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The StreamingEndpoint access policies.{{% /md %}}</dd>
+    <dd>{{% md %}}The streaming endpoint access policies.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -587,7 +587,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The custom host names of the StreamingEndpoint{{% /md %}}</dd>
+    <dd>{{% md %}}The custom host names of the streaming endpoint{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -597,7 +597,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The StreamingEndpoint description.{{% /md %}}</dd>
+    <dd>{{% md %}}The streaming endpoint description.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -634,7 +634,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The exact time the StreamingEndpoint was created.{{% /md %}}</dd>
+    <dd>{{% md %}}The exact time the streaming endpoint was created.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -654,7 +654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The StreamingEndpoint host name.{{% /md %}}</dd>
+    <dd>{{% md %}}The streaming endpoint host name.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -664,7 +664,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The exact time the StreamingEndpoint was last modified.{{% /md %}}</dd>
+    <dd>{{% md %}}The exact time the streaming endpoint was last modified.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -694,7 +694,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the StreamingEndpoint.{{% /md %}}</dd>
+    <dd>{{% md %}}The provisioning state of the streaming endpoint.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -704,7 +704,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource state of the StreamingEndpoint.{{% /md %}}</dd>
+    <dd>{{% md %}}The resource state of the streaming endpoint.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -714,7 +714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The number of scale units.  Use the Scale operation to adjust this value.{{% /md %}}</dd>
+    <dd>{{% md %}}The number of scale units. Use the Scale operation to adjust this value.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -734,7 +734,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingendpointaccesscontrolresponse">Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The access control definition of the StreamingEndpoint.{{% /md %}}</dd>
+    <dd>{{% md %}}The access control definition of the streaming endpoint.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -744,7 +744,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the AvailabilitySet used with this StreamingEndpoint for high availability streaming.  This value can only be set at creation time.{{% /md %}}</dd>
+    <dd>{{% md %}}This feature is deprecated, do not set a value for this property.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -784,7 +784,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crosssiteaccesspoliciesresponse">Cross<wbr>Site<wbr>Access<wbr>Policies<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The StreamingEndpoint access policies.{{% /md %}}</dd>
+    <dd>{{% md %}}The streaming endpoint access policies.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -794,7 +794,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The custom host names of the StreamingEndpoint{{% /md %}}</dd>
+    <dd>{{% md %}}The custom host names of the streaming endpoint{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -804,7 +804,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The StreamingEndpoint description.{{% /md %}}</dd>
+    <dd>{{% md %}}The streaming endpoint description.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -841,7 +841,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The exact time the StreamingEndpoint was created.{{% /md %}}</dd>
+    <dd>{{% md %}}The exact time the streaming endpoint was created.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -861,7 +861,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The StreamingEndpoint host name.{{% /md %}}</dd>
+    <dd>{{% md %}}The streaming endpoint host name.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -871,7 +871,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The exact time the StreamingEndpoint was last modified.{{% /md %}}</dd>
+    <dd>{{% md %}}The exact time the streaming endpoint was last modified.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -901,7 +901,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the StreamingEndpoint.{{% /md %}}</dd>
+    <dd>{{% md %}}The provisioning state of the streaming endpoint.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -911,7 +911,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The resource state of the StreamingEndpoint.{{% /md %}}</dd>
+    <dd>{{% md %}}The resource state of the streaming endpoint.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -921,7 +921,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The number of scale units.  Use the Scale operation to adjust this value.{{% /md %}}</dd>
+    <dd>{{% md %}}The number of scale units. Use the Scale operation to adjust this value.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -941,7 +941,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingendpointaccesscontrolresponse">Dict[Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The access control definition of the StreamingEndpoint.{{% /md %}}</dd>
+    <dd>{{% md %}}The access control definition of the streaming endpoint.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -951,7 +951,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the AvailabilitySet used with this StreamingEndpoint for high availability streaming.  This value can only be set at creation time.{{% /md %}}</dd>
+    <dd>{{% md %}}This feature is deprecated, do not set a value for this property.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -991,7 +991,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crosssiteaccesspoliciesresponse">Dict[Cross<wbr>Site<wbr>Access<wbr>Policies<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The StreamingEndpoint access policies.{{% /md %}}</dd>
+    <dd>{{% md %}}The streaming endpoint access policies.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1001,7 +1001,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}The custom host names of the StreamingEndpoint{{% /md %}}</dd>
+    <dd>{{% md %}}The custom host names of the streaming endpoint{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1011,7 +1011,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The StreamingEndpoint description.{{% /md %}}</dd>
+    <dd>{{% md %}}The streaming endpoint description.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1670,7 +1670,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipaccesscontrolresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>IPAccess<wbr>Control<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The IP access control of the StreamingEndpoint.{{% /md %}}</dd>
+    <dd>{{% md %}}The IP access control of the streaming endpoint.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1697,7 +1697,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipaccesscontrolresponse">IPAccess<wbr>Control<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The IP access control of the StreamingEndpoint.{{% /md %}}</dd>
+    <dd>{{% md %}}The IP access control of the streaming endpoint.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1724,7 +1724,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipaccesscontrolresponse">IPAccess<wbr>Control<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The IP access control of the StreamingEndpoint.{{% /md %}}</dd>
+    <dd>{{% md %}}The IP access control of the streaming endpoint.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1751,7 +1751,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipaccesscontrolresponse">Dict[IPAccess<wbr>Control<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The IP access control of the StreamingEndpoint.{{% /md %}}</dd>
+    <dd>{{% md %}}The IP access control of the streaming endpoint.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

@@ -19,6 +19,7 @@ Explore the resources and functions of the cosmosdb module in the Azure package.
     <li><a href="mongodatabase" title="MongoDatabase"><span class="symbol resource"></span>MongoDatabase</a></li>
     <li><a href="sqlcontainer" title="SqlContainer"><span class="symbol resource"></span>SqlContainer</a></li>
     <li><a href="sqldatabase" title="SqlDatabase"><span class="symbol resource"></span>SqlDatabase</a></li>
+    <li><a href="sqlstoredprocedure" title="SqlStoredProcedure"><span class="symbol resource"></span>SqlStoredProcedure</a></li>
     <li><a href="table" title="Table"><span class="symbol resource"></span>Table</a></li>
 </ul>
 
@@ -36,7 +37,7 @@ Explore the resources and functions of the cosmosdb module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.23.0</dd>
+	<dd>3.24.1</dd>
 </dl>
 
 

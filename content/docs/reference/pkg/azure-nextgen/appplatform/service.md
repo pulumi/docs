@@ -29,6 +29,7 @@ class MyStack : Stack
         var service = new AzureNextGen.AppPlatform.Latest.Service("service", new AzureNextGen.AppPlatform.Latest.ServiceArgs
         {
             Location = "eastus",
+            Properties = ,
             ResourceGroupName = "myResourceGroup",
             ServiceName = "myservice",
             Sku = new AzureNextGen.AppPlatform.Latest.Inputs.SkuArgs
@@ -55,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	appplatform "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/appplatform/latest"
+	appplatform "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/appplatform/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -63,6 +64,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := appplatform.NewService(ctx, "service", &appplatform.ServiceArgs{
 			Location:          pulumi.String("eastus"),
+			Properties:        nil,
 			ResourceGroupName: pulumi.String("myResourceGroup"),
 			ServiceName:       pulumi.String("myservice"),
 			Sku: &appplatform.SkuArgs{
@@ -92,6 +94,7 @@ import pulumi_azure_nextgen as azure_nextgen
 
 service = azure_nextgen.appplatform.latest.Service("service",
     location="eastus",
+    properties={},
     resource_group_name="myResourceGroup",
     service_name="myservice",
     sku={
@@ -114,6 +117,7 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const service = new azure_nextgen.appplatform.latest.Service("service", {
     location: "eastus",
+    properties: {},
     resourceGroupName: "myResourceGroup",
     serviceName: "myservice",
     sku: {
@@ -142,6 +146,17 @@ class MyStack : Stack
         var service = new AzureNextGen.AppPlatform.Latest.Service("service", new AzureNextGen.AppPlatform.Latest.ServiceArgs
         {
             Location = "eastus",
+            Properties = new AzureNextGen.AppPlatform.Latest.Inputs.ClusterResourcePropertiesArgs
+            {
+                NetworkProfile = new AzureNextGen.AppPlatform.Latest.Inputs.NetworkProfileArgs
+                {
+                    AppNetworkResourceGroup = "my-app-network-rg",
+                    AppSubnetId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myVirtualNetwork/subnets/apps",
+                    ServiceCidr = "10.8.0.0/16,10.244.0.0/16,10.245.0.1/16",
+                    ServiceRuntimeNetworkResourceGroup = "my-service-runtime-network-rg",
+                    ServiceRuntimeSubnetId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myVirtualNetwork/subnets/serviceRuntime",
+                },
+            },
             ResourceGroupName = "myResourceGroup",
             ServiceName = "myservice",
             Sku = new AzureNextGen.AppPlatform.Latest.Inputs.SkuArgs
@@ -168,14 +183,23 @@ class MyStack : Stack
 package main
 
 import (
-	appplatform "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/appplatform/latest"
+	appplatform "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/appplatform/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := appplatform.NewService(ctx, "service", &appplatform.ServiceArgs{
-			Location:          pulumi.String("eastus"),
+			Location: pulumi.String("eastus"),
+			Properties: &appplatform.ClusterResourcePropertiesArgs{
+				NetworkProfile: &appplatform.NetworkProfileArgs{
+					AppNetworkResourceGroup:            pulumi.String("my-app-network-rg"),
+					AppSubnetId:                        pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myVirtualNetwork/subnets/apps"),
+					ServiceCidr:                        pulumi.String("10.8.0.0/16,10.244.0.0/16,10.245.0.1/16"),
+					ServiceRuntimeNetworkResourceGroup: pulumi.String("my-service-runtime-network-rg"),
+					ServiceRuntimeSubnetId:             pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myVirtualNetwork/subnets/serviceRuntime"),
+				},
+			},
 			ResourceGroupName: pulumi.String("myResourceGroup"),
 			ServiceName:       pulumi.String("myservice"),
 			Sku: &appplatform.SkuArgs{
@@ -205,6 +229,15 @@ import pulumi_azure_nextgen as azure_nextgen
 
 service = azure_nextgen.appplatform.latest.Service("service",
     location="eastus",
+    properties={
+        "networkProfile": {
+            "appNetworkResourceGroup": "my-app-network-rg",
+            "appSubnetId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myVirtualNetwork/subnets/apps",
+            "serviceCidr": "10.8.0.0/16,10.244.0.0/16,10.245.0.1/16",
+            "serviceRuntimeNetworkResourceGroup": "my-service-runtime-network-rg",
+            "serviceRuntimeSubnetId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myVirtualNetwork/subnets/serviceRuntime",
+        },
+    },
     resource_group_name="myResourceGroup",
     service_name="myservice",
     sku={
@@ -227,6 +260,15 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const service = new azure_nextgen.appplatform.latest.Service("service", {
     location: "eastus",
+    properties: {
+        networkProfile: {
+            appNetworkResourceGroup: "my-app-network-rg",
+            appSubnetId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myVirtualNetwork/subnets/apps",
+            serviceCidr: "10.8.0.0/16,10.244.0.0/16,10.245.0.1/16",
+            serviceRuntimeNetworkResourceGroup: "my-service-runtime-network-rg",
+            serviceRuntimeSubnetId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myVirtualNetwork/subnets/serviceRuntime",
+        },
+    },
     resourceGroupName: "myResourceGroup",
     serviceName: "myservice",
     sku: {

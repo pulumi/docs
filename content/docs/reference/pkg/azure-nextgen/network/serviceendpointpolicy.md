@@ -12,6 +12,224 @@ meta_desc: "Explore the ServiceEndpointPolicy resource of the network module, in
 
 Service End point policy resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create service endpoint policy
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var serviceEndpointPolicy = new AzureNextGen.Network.Latest.ServiceEndpointPolicy("serviceEndpointPolicy", new AzureNextGen.Network.Latest.ServiceEndpointPolicyArgs
+        {
+            Location = "westus",
+            ResourceGroupName = "rg1",
+            ServiceEndpointPolicyName = "testPolicy",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewServiceEndpointPolicy(ctx, "serviceEndpointPolicy", &network.ServiceEndpointPolicyArgs{
+			Location:                  pulumi.String("westus"),
+			ResourceGroupName:         pulumi.String("rg1"),
+			ServiceEndpointPolicyName: pulumi.String("testPolicy"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+service_endpoint_policy = azure_nextgen.network.latest.ServiceEndpointPolicy("serviceEndpointPolicy",
+    location="westus",
+    resource_group_name="rg1",
+    service_endpoint_policy_name="testPolicy")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const serviceEndpointPolicy = new azure_nextgen.network.latest.ServiceEndpointPolicy("serviceEndpointPolicy", {
+    location: "westus",
+    resourceGroupName: "rg1",
+    serviceEndpointPolicyName: "testPolicy",
+});
+
+```
+
+{{% /example %}}
+
+### Create service endpoint policy with definition
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var serviceEndpointPolicy = new AzureNextGen.Network.Latest.ServiceEndpointPolicy("serviceEndpointPolicy", new AzureNextGen.Network.Latest.ServiceEndpointPolicyArgs
+        {
+            Location = "westus",
+            ResourceGroupName = "rg1",
+            ServiceEndpointPolicyDefinitions = 
+            {
+                new AzureNextGen.Network.Latest.Inputs.ServiceEndpointPolicyDefinitionArgs
+                {
+                    Description = "Storage Service EndpointPolicy Definition",
+                    Name = "StorageServiceEndpointPolicyDefinition",
+                    Service = "Microsoft.Storage",
+                    ServiceResources = 
+                    {
+                        "/subscriptions/subid1",
+                        "/subscriptions/subid1/resourceGroups/storageRg",
+                        "/subscriptions/subid1/resourceGroups/storageRg/providers/Microsoft.Storage/storageAccounts/stAccount",
+                    },
+                },
+            },
+            ServiceEndpointPolicyName = "testPolicy",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewServiceEndpointPolicy(ctx, "serviceEndpointPolicy", &network.ServiceEndpointPolicyArgs{
+			Location:          pulumi.String("westus"),
+			ResourceGroupName: pulumi.String("rg1"),
+			ServiceEndpointPolicyDefinitions: network.ServiceEndpointPolicyDefinitionArray{
+				&network.ServiceEndpointPolicyDefinitionArgs{
+					Description: pulumi.String("Storage Service EndpointPolicy Definition"),
+					Name:        pulumi.String("StorageServiceEndpointPolicyDefinition"),
+					Service:     pulumi.String("Microsoft.Storage"),
+					ServiceResources: pulumi.StringArray{
+						pulumi.String("/subscriptions/subid1"),
+						pulumi.String("/subscriptions/subid1/resourceGroups/storageRg"),
+						pulumi.String("/subscriptions/subid1/resourceGroups/storageRg/providers/Microsoft.Storage/storageAccounts/stAccount"),
+					},
+				},
+			},
+			ServiceEndpointPolicyName: pulumi.String("testPolicy"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+service_endpoint_policy = azure_nextgen.network.latest.ServiceEndpointPolicy("serviceEndpointPolicy",
+    location="westus",
+    resource_group_name="rg1",
+    service_endpoint_policy_definitions=[{
+        "description": "Storage Service EndpointPolicy Definition",
+        "name": "StorageServiceEndpointPolicyDefinition",
+        "service": "Microsoft.Storage",
+        "serviceResources": [
+            "/subscriptions/subid1",
+            "/subscriptions/subid1/resourceGroups/storageRg",
+            "/subscriptions/subid1/resourceGroups/storageRg/providers/Microsoft.Storage/storageAccounts/stAccount",
+        ],
+    }],
+    service_endpoint_policy_name="testPolicy")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const serviceEndpointPolicy = new azure_nextgen.network.latest.ServiceEndpointPolicy("serviceEndpointPolicy", {
+    location: "westus",
+    resourceGroupName: "rg1",
+    serviceEndpointPolicyDefinitions: [{
+        description: "Storage Service EndpointPolicy Definition",
+        name: "StorageServiceEndpointPolicyDefinition",
+        service: "Microsoft.Storage",
+        serviceResources: [
+            "/subscriptions/subid1",
+            "/subscriptions/subid1/resourceGroups/storageRg",
+            "/subscriptions/subid1/resourceGroups/storageRg/providers/Microsoft.Storage/storageAccounts/stAccount",
+        ],
+    }],
+    serviceEndpointPolicyName: "testPolicy",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ServiceEndpointPolicy Resource {#create}
@@ -13933,7 +14151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -13950,7 +14168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -13967,7 +14185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -13984,7 +14202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

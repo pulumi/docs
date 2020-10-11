@@ -324,125 +324,6 @@ The following output properties are available:
 ## Supporting Types
 
 
-<h4 id="authenticationcertificatedetails">Authentication<wbr>Certificate<wbr>Details</h4>
-
-
-
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="certificatedata_csharp">
-<a href="#certificatedata_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Data</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Base64 encoded client certificate data.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="keydata_csharp">
-<a href="#keydata_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Data</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Base64 encoded key data.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="certificatedata_go">
-<a href="#certificatedata_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Data</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Base64 encoded client certificate data.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="keydata_go">
-<a href="#keydata_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Data</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Base64 encoded key data.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="certificatedata_nodejs">
-<a href="#certificatedata_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Data</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Base64 encoded client certificate data.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="keydata_nodejs">
-<a href="#keydata_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Data</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Base64 encoded key data.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="certificatedata_python">
-<a href="#certificatedata_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Data</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Base64 encoded client certificate data.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="keydata_python">
-<a href="#keydata_python" style="color: inherit; text-decoration: inherit;">key<wbr>Data</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Base64 encoded key data.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
 <h4 id="authenticationdetailsvalue">Authentication<wbr>Details<wbr>Value</h4>
 
 
@@ -453,16 +334,6 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="clientcertificate_csharp">
-<a href="#clientcertificate_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authenticationcertificatedetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Kubernetes.<wbr>Inputs.<wbr>Authentication<wbr>Certificate<wbr>Details<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -483,16 +354,6 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientcertificate_go">
-<a href="#clientcertificate_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authenticationcertificatedetails">Authentication<wbr>Certificate<wbr>Details</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="token_go">
 <a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
 </span> 
@@ -510,16 +371,6 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientcertificate_nodejs">
-<a href="#clientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authenticationcertificatedetails">Authentication<wbr>Certificate<wbr>Details</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="token_nodejs">
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
 </span> 
@@ -534,16 +385,6 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="clientcertificate_python">
-<a href="#clientcertificate_python" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authenticationcertificatedetails">Dict[Authentication<wbr>Certificate<wbr>Details]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

@@ -24,8 +24,13 @@ Explore the resources and functions of the labservices module in the Azure NextG
     <li><a href="getenvironment" title="GetEnvironment"><span class="symbol function"></span>GetEnvironment</a></li>
     <li><a href="getenvironmentsetting" title="GetEnvironmentSetting"><span class="symbol function"></span>GetEnvironmentSetting</a></li>
     <li><a href="getgalleryimage" title="GetGalleryImage"><span class="symbol function"></span>GetGalleryImage</a></li>
+    <li><a href="getglobaluserenvironment" title="GetGlobalUserEnvironment"><span class="symbol function"></span>GetGlobalUserEnvironment</a></li>
+    <li><a href="getglobaluseroperationbatchstatus" title="GetGlobalUserOperationBatchStatus"><span class="symbol function"></span>GetGlobalUserOperationBatchStatus</a></li>
+    <li><a href="getglobaluseroperationstatus" title="GetGlobalUserOperationStatus"><span class="symbol function"></span>GetGlobalUserOperationStatus</a></li>
+    <li><a href="getglobaluserpersonalpreferences" title="GetGlobalUserPersonalPreferences"><span class="symbol function"></span>GetGlobalUserPersonalPreferences</a></li>
     <li><a href="getlab" title="GetLab"><span class="symbol function"></span>GetLab</a></li>
     <li><a href="getlabaccount" title="GetLabAccount"><span class="symbol function"></span>GetLabAccount</a></li>
+    <li><a href="getlabaccountregionalavailability" title="GetLabAccountRegionalAvailability"><span class="symbol function"></span>GetLabAccountRegionalAvailability</a></li>
     <li><a href="getuser" title="GetUser"><span class="symbol function"></span>GetUser</a></li>
     <li><a href="listglobaluserenvironments" title="ListGlobalUserEnvironments"><span class="symbol function"></span>ListGlobalUserEnvironments</a></li>
     <li><a href="listglobaluserlabs" title="ListGlobalUserLabs"><span class="symbol function"></span>ListGlobalUserLabs</a></li>
@@ -38,7 +43,7 @@ Explore the resources and functions of the labservices module in the Azure NextG
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.1</dd>
 </dl>
 
 

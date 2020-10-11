@@ -30,9 +30,7 @@ class MyStack : Stack
     {
         var example = new Okta.Factor.Factor("example", new Okta.Factor.FactorArgs
         {
-        }, new CustomResourceOptions
-        {
-            Provider = "google_otp",
+            ProviderId = "google_otp",
         });
     }
 
@@ -52,7 +50,9 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := factor.NewFactor(ctx, "example", nil, pulumi.Provider("google_otp"))
+		_, err := factor.NewFactor(ctx, "example", &factor.FactorArgs{
+			ProviderId: pulumi.String("google_otp"),
+		})
 		if err != nil {
 			return err
 		}
@@ -68,7 +68,7 @@ func main() {
 import pulumi
 import pulumi_okta as okta
 
-example = okta.factor.Factor("example", opts=ResourceOptions(provider="google_otp"))
+example = okta.factor.Factor("example", provider_id="google_otp")
 ```
 
 {{% /example %}}
@@ -79,8 +79,8 @@ example = okta.factor.Factor("example", opts=ResourceOptions(provider="google_ot
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
 
-const example = new okta.factor.Factor("example", {}, {
-    provider: "google_otp",
+const example = new okta.factor.Factor("example", {
+    providerId: "google_otp",
 });
 ```
 
@@ -278,7 +278,8 @@ The Factor resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Factor provider ID
+    <dd>{{% md %}}The MFA provider name.
+Allowed values are `"duo"`, `"fido_u2f"`, `"fido_webauthn"`, `"google_otp"`, `"okta_call"`, `"okta_otp"`, `"okta_push"`, `"okta_question"`, `"okta_sms"`, `"rsa_token"`, `"symantec_vip"` or `"yubikey_token"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -307,7 +308,8 @@ The Factor resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Factor provider ID
+    <dd>{{% md %}}The MFA provider name.
+Allowed values are `"duo"`, `"fido_u2f"`, `"fido_webauthn"`, `"google_otp"`, `"okta_call"`, `"okta_otp"`, `"okta_push"`, `"okta_question"`, `"okta_sms"`, `"rsa_token"`, `"symantec_vip"` or `"yubikey_token"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -336,7 +338,8 @@ The Factor resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Factor provider ID
+    <dd>{{% md %}}The MFA provider name.
+Allowed values are `"duo"`, `"fido_u2f"`, `"fido_webauthn"`, `"google_otp"`, `"okta_call"`, `"okta_otp"`, `"okta_push"`, `"okta_question"`, `"okta_sms"`, `"rsa_token"`, `"symantec_vip"` or `"yubikey_token"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -365,7 +368,8 @@ The Factor resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Factor provider ID
+    <dd>{{% md %}}The MFA provider name.
+Allowed values are `"duo"`, `"fido_u2f"`, `"fido_webauthn"`, `"google_otp"`, `"okta_call"`, `"okta_otp"`, `"okta_push"`, `"okta_question"`, `"okta_sms"`, `"rsa_token"`, `"symantec_vip"` or `"yubikey_token"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -611,7 +615,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Factor provider ID
+    <dd>{{% md %}}The MFA provider name.
+Allowed values are `"duo"`, `"fido_u2f"`, `"fido_webauthn"`, `"google_otp"`, `"okta_call"`, `"okta_otp"`, `"okta_push"`, `"okta_question"`, `"okta_sms"`, `"rsa_token"`, `"symantec_vip"` or `"yubikey_token"`.
 {{% /md %}}</dd>
 
 </dl>
@@ -640,7 +645,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Factor provider ID
+    <dd>{{% md %}}The MFA provider name.
+Allowed values are `"duo"`, `"fido_u2f"`, `"fido_webauthn"`, `"google_otp"`, `"okta_call"`, `"okta_otp"`, `"okta_push"`, `"okta_question"`, `"okta_sms"`, `"rsa_token"`, `"symantec_vip"` or `"yubikey_token"`.
 {{% /md %}}</dd>
 
 </dl>
@@ -669,7 +675,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Factor provider ID
+    <dd>{{% md %}}The MFA provider name.
+Allowed values are `"duo"`, `"fido_u2f"`, `"fido_webauthn"`, `"google_otp"`, `"okta_call"`, `"okta_otp"`, `"okta_push"`, `"okta_question"`, `"okta_sms"`, `"rsa_token"`, `"symantec_vip"` or `"yubikey_token"`.
 {{% /md %}}</dd>
 
 </dl>
@@ -698,7 +705,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Factor provider ID
+    <dd>{{% md %}}The MFA provider name.
+Allowed values are `"duo"`, `"fido_u2f"`, `"fido_webauthn"`, `"google_otp"`, `"okta_call"`, `"okta_otp"`, `"okta_push"`, `"okta_question"`, `"okta_sms"`, `"rsa_token"`, `"symantec_vip"` or `"yubikey_token"`.
 {{% /md %}}</dd>
 
 </dl>
@@ -721,6 +729,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/articulate/terraform-provider-okta).</dd>
+	<dd>This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/oktadeveloper/terraform-provider-okta).</dd>
 </dl>
 

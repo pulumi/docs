@@ -27,6 +27,7 @@ A Next Generation Pulumi package for creating and managing Azure resources.
     <li><a href="authorization/" title="authorization"><span class="symbol module"></span>authorization</a></li>
     <li><a href="automanage/" title="automanage"><span class="symbol module"></span>automanage</a></li>
     <li><a href="automation/" title="automation"><span class="symbol module"></span>automation</a></li>
+    <li><a href="autonomousdevelopmentplatform/" title="autonomousdevelopmentplatform"><span class="symbol module"></span>autonomousdevelopmentplatform</a></li>
     <li><a href="avs/" title="avs"><span class="symbol module"></span>avs</a></li>
     <li><a href="azureactivedirectory/" title="azureactivedirectory"><span class="symbol module"></span>azureactivedirectory</a></li>
     <li><a href="azuredata/" title="azuredata"><span class="symbol module"></span>azuredata</a></li>
@@ -43,6 +44,7 @@ A Next Generation Pulumi package for creating and managing Azure resources.
     <li><a href="certificateregistration/" title="certificateregistration"><span class="symbol module"></span>certificateregistration</a></li>
     <li><a href="changeanalysis/" title="changeanalysis"><span class="symbol module"></span>changeanalysis</a></li>
     <li><a href="cognitiveservices/" title="cognitiveservices"><span class="symbol module"></span>cognitiveservices</a></li>
+    <li><a href="communication/" title="communication"><span class="symbol module"></span>communication</a></li>
     <li><a href="compute/" title="compute"><span class="symbol module"></span>compute</a></li>
     <li><a href="consumption/" title="consumption"><span class="symbol module"></span>consumption</a></li>
     <li><a href="containerinstance/" title="containerinstance"><span class="symbol module"></span>containerinstance</a></li>
@@ -167,7 +169,7 @@ A Next Generation Pulumi package for creating and managing Azure resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.1</dd>
 </dl>
 
 

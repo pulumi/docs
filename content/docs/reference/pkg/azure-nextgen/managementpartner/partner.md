@@ -44,7 +44,7 @@ class MyStack : Stack
 package main
 
 import (
-	managementpartner "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/managementpartner/latest"
+	managementpartner "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/managementpartner/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

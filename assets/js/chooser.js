@@ -111,11 +111,6 @@ function selectK8sLang(syntax) {
     selectChoice("k8s-language", syntax);
 }
 
-// selectInputKind chooses an input kind.
-function selectInputKind(kind) {
-    selectChoice("input-kind", kind);
-}
-
 // Hides and shows choices based on previous preferences.
 function hideShowChoices(kind, selector, defaultChoice) {
     var tabsOnPage = {};
@@ -189,5 +184,4 @@ $(document).on("rendered", function() {
     hideShowChoices("os", selectOs, defaultOsChoice);
     hideShowChoices("cloud", selectCloud, "aws");
     hideShowChoices("k8s-language", selectK8sLang, "typescript");
-    hideShowChoices("input-kind", selectInputKind, "url");
 });

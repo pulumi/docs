@@ -1,17 +1,11 @@
-{{ $text := "Come join Pulumi for the industry's first Cloud Engineering Summit! October 7&ndash;8." }}
-{{ $url := relref . "/azure" }}
-{{ $color := "blue"}}
-
-{{ if .IsHome }}
-    {{ $text = "Join us for the industry's first-ever Cloud Engineering Summit! October 7&ndash;8." }}
-    {{ $url = "https://cloudengineeringsummit.com/?utm_campaign=summit&utm_source=pulumi.com&utm_medium=top-banner" }}
-    {{ $color = "orange"}}
-{{ end }}
+{{ $text := "The Cloud Engineering Summit talks are live! Watch the keynote." }}
+{{ $url := "https://cloudengineering.heysummit.com/talks/welcome-keynote/?utm_campaign=summit&utm_source=pulumi.com&utm_medium=keynote-alert" }}
+{{ $color := "orange"}}
 
 <div class="mx-auto mb-12">
     <div class="inline-block">
-        <a href="{{ $url }}" class="block p-2 bg-purple-400 hover:bg-purple-300 transition-all items-center text-purple-100 leading-none rounded-full flex md:inline-flex shadow-xl">
-            <span class="alert-chicklet flex rounded-full bg-{{ $color }}-700 border-4 border-{{ $color }}-600 uppercase text-white px-2 py-1 text-xs font-bold mr-2">New!</span>
+        <a href="{{ $url }}" target="_blank" rel="noopener noreferrer" class="block p-2 bg-purple-400 hover:bg-purple-300 transition-all items-center text-purple-100 leading-none rounded-full flex md:inline-flex shadow-xl">
+            <span class="alert-chicklet flex rounded-full bg-{{ $color }}-700 border-4 border-{{ $color }}-600 uppercase text-white px-2 py-1 text-xs font-bold mr-2">Now!</span>
             <span class="alert-content text-left flex-auto text-white text-sm md:text-base leading-normal">
                 {{ $text | safeHTML }}
             </span>

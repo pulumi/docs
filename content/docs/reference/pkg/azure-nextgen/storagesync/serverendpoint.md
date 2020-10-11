@@ -56,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	storagesync "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/storagesync/latest"
+	storagesync "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagesync/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

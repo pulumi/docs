@@ -18,7 +18,6 @@
         "assets/js/webinar.js",
         "assets/js/copybutton.js",
         "assets/js/code-tabbed.js",
-        "assets/js/2pulumi.js",
         "node_modules/clipboard-polyfill/build/clipboard-polyfill.promise.js",
     ],
     "exclude": [

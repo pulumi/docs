@@ -54,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	appconfiguration "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/appconfiguration/latest"
+	appconfiguration "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/appconfiguration/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -167,7 +167,7 @@ class MyStack : Stack
 package main
 
 import (
-	appconfiguration "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/appconfiguration/latest"
+	appconfiguration "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/appconfiguration/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

@@ -64,7 +64,7 @@ class MyStack : Stack
 package main
 
 import (
-	storsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/storsimple/latest"
+	storsimple "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storsimple/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

@@ -30,6 +30,35 @@ class MyStack : Stack
         {
             IntegrationServiceEnvironmentName = "testIntegrationServiceEnvironment",
             Location = "brazilsouth",
+            Properties = new AzureNextGen.Logic.Latest.Inputs.IntegrationServiceEnvironmentPropertiesArgs
+            {
+                NetworkConfiguration = new AzureNextGen.Logic.Latest.Inputs.NetworkConfigurationArgs
+                {
+                    AccessEndpoint = new AzureNextGen.Logic.Latest.Inputs.IntegrationServiceEnvironmentAccessEndpointArgs
+                    {
+                        Type = "Internal",
+                    },
+                    Subnets = 
+                    {
+                        new AzureNextGen.Logic.Latest.Inputs.ResourceReferenceArgs
+                        {
+                            Id = "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s1",
+                        },
+                        new AzureNextGen.Logic.Latest.Inputs.ResourceReferenceArgs
+                        {
+                            Id = "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s2",
+                        },
+                        new AzureNextGen.Logic.Latest.Inputs.ResourceReferenceArgs
+                        {
+                            Id = "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s3",
+                        },
+                        new AzureNextGen.Logic.Latest.Inputs.ResourceReferenceArgs
+                        {
+                            Id = "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s4",
+                        },
+                    },
+                },
+            },
             ResourceGroup = "testResourceGroup",
             Sku = new AzureNextGen.Logic.Latest.Inputs.IntegrationServiceEnvironmentSkuArgs
             {
@@ -51,7 +80,7 @@ class MyStack : Stack
 package main
 
 import (
-	logic "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/logic/latest"
+	logic "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/logic/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -60,7 +89,28 @@ func main() {
 		_, err := logic.NewIntegrationServiceEnvironment(ctx, "integrationServiceEnvironment", &logic.IntegrationServiceEnvironmentArgs{
 			IntegrationServiceEnvironmentName: pulumi.String("testIntegrationServiceEnvironment"),
 			Location:                          pulumi.String("brazilsouth"),
-			ResourceGroup:                     pulumi.String("testResourceGroup"),
+			Properties: &logic.IntegrationServiceEnvironmentPropertiesArgs{
+				NetworkConfiguration: &logic.NetworkConfigurationArgs{
+					AccessEndpoint: &logic.IntegrationServiceEnvironmentAccessEndpointArgs{
+						Type: pulumi.String("Internal"),
+					},
+					Subnets: logic.ResourceReferenceArray{
+						&logic.ResourceReferenceArgs{
+							Id: pulumi.String("/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s1"),
+						},
+						&logic.ResourceReferenceArgs{
+							Id: pulumi.String("/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s2"),
+						},
+						&logic.ResourceReferenceArgs{
+							Id: pulumi.String("/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s3"),
+						},
+						&logic.ResourceReferenceArgs{
+							Id: pulumi.String("/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s4"),
+						},
+					},
+				},
+			},
+			ResourceGroup: pulumi.String("testResourceGroup"),
 			Sku: &logic.IntegrationServiceEnvironmentSkuArgs{
 				Capacity: pulumi.Int(2),
 				Name:     pulumi.String("Premium"),
@@ -86,6 +136,27 @@ import pulumi_azure_nextgen as azure_nextgen
 integration_service_environment = azure_nextgen.logic.latest.IntegrationServiceEnvironment("integrationServiceEnvironment",
     integration_service_environment_name="testIntegrationServiceEnvironment",
     location="brazilsouth",
+    properties={
+        "networkConfiguration": {
+            "accessEndpoint": {
+                "type": "Internal",
+            },
+            "subnets": [
+                {
+                    "id": "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s1",
+                },
+                {
+                    "id": "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s2",
+                },
+                {
+                    "id": "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s3",
+                },
+                {
+                    "id": "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s4",
+                },
+            ],
+        },
+    },
     resource_group="testResourceGroup",
     sku={
         "capacity": 2,
@@ -105,6 +176,27 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const integrationServiceEnvironment = new azure_nextgen.logic.latest.IntegrationServiceEnvironment("integrationServiceEnvironment", {
     integrationServiceEnvironmentName: "testIntegrationServiceEnvironment",
     location: "brazilsouth",
+    properties: {
+        networkConfiguration: {
+            accessEndpoint: {
+                type: "Internal",
+            },
+            subnets: [
+                {
+                    id: "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s1",
+                },
+                {
+                    id: "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s2",
+                },
+                {
+                    id: "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s3",
+                },
+                {
+                    id: "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s4",
+                },
+            ],
+        },
+    },
     resourceGroup: "testResourceGroup",
     sku: {
         capacity: 2,

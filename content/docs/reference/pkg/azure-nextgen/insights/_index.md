@@ -65,6 +65,7 @@ Explore the resources and functions of the insights module in the Azure NextGen 
     <li><a href="getquerypack" title="GetQueryPack"><span class="symbol function"></span>GetQueryPack</a></li>
     <li><a href="getscheduledqueryrule" title="GetScheduledQueryRule"><span class="symbol function"></span>GetScheduledQueryRule</a></li>
     <li><a href="getsubscriptiondiagnosticsetting" title="GetSubscriptionDiagnosticSetting"><span class="symbol function"></span>GetSubscriptionDiagnosticSetting</a></li>
+    <li><a href="gettestresultfile" title="GetTestResultFile"><span class="symbol function"></span>GetTestResultFile</a></li>
     <li><a href="getwebtest" title="GetWebTest"><span class="symbol function"></span>GetWebTest</a></li>
     <li><a href="getworkbook" title="GetWorkbook"><span class="symbol function"></span>GetWorkbook</a></li>
     <li><a href="getworkbooktemplate" title="GetWorkbookTemplate"><span class="symbol function"></span>GetWorkbookTemplate</a></li>
@@ -79,7 +80,7 @@ Explore the resources and functions of the insights module in the Azure NextGen 
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.1</dd>
 </dl>
 
 

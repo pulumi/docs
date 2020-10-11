@@ -29,6 +29,49 @@ class MyStack : Stack
         var costAllocationRule = new AzureNextGen.Billing.V20200301Preview.CostAllocationRule("costAllocationRule", new AzureNextGen.Billing.V20200301Preview.CostAllocationRuleArgs
         {
             BillingAccountId = "100",
+            Properties = new AzureNextGen.Billing.V20200301Preview.Inputs.CostAllocationRulePropertiesArgs
+            {
+                Description = "This is a testRule",
+                Details = new AzureNextGen.Billing.V20200301Preview.Inputs.CostAllocationRuleDetailsArgs
+                {
+                    SourceResources = 
+                    {
+                        new AzureNextGen.Billing.V20200301Preview.Inputs.SourceCostAllocationResourceArgs
+                        {
+                            Name = "ResourceGroupName",
+                            ResourceType = "Dimension",
+                            Values = 
+                            {
+                                "sampleRG",
+                                "secondRG",
+                            },
+                        },
+                    },
+                    TargetResources = 
+                    {
+                        new AzureNextGen.Billing.V20200301Preview.Inputs.TargetCostAllocationResourceArgs
+                        {
+                            Name = "ResourceGroupName",
+                            PolicyType = "FixedProportion",
+                            ResourceType = "Dimension",
+                            Values = 
+                            {
+                                new AzureNextGen.Billing.V20200301Preview.Inputs.CostAllocationProportionArgs
+                                {
+                                    Name = "destinationRG",
+                                    Percentage = 45,
+                                },
+                                new AzureNextGen.Billing.V20200301Preview.Inputs.CostAllocationProportionArgs
+                                {
+                                    Name = "destinationRG2",
+                                    Percentage = 54,
+                                },
+                            },
+                        },
+                    },
+                },
+                Status = "Active",
+            },
             RuleName = "testRule",
         });
     }
@@ -45,7 +88,7 @@ class MyStack : Stack
 package main
 
 import (
-	billing "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/billing/v20200301preview"
+	billing "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/billing/v20200301preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -53,7 +96,40 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := billing.NewCostAllocationRule(ctx, "costAllocationRule", &billing.CostAllocationRuleArgs{
 			BillingAccountId: pulumi.String("100"),
-			RuleName:         pulumi.String("testRule"),
+			Properties: &billing.CostAllocationRulePropertiesArgs{
+				Description: pulumi.String("This is a testRule"),
+				Details: &billing.CostAllocationRuleDetailsArgs{
+					SourceResources: billing.SourceCostAllocationResourceArray{
+						&billing.SourceCostAllocationResourceArgs{
+							Name:         pulumi.String("ResourceGroupName"),
+							ResourceType: pulumi.String("Dimension"),
+							Values: pulumi.StringArray{
+								pulumi.String("sampleRG"),
+								pulumi.String("secondRG"),
+							},
+						},
+					},
+					TargetResources: billing.TargetCostAllocationResourceArray{
+						&billing.TargetCostAllocationResourceArgs{
+							Name:         pulumi.String("ResourceGroupName"),
+							PolicyType:   pulumi.String("FixedProportion"),
+							ResourceType: pulumi.String("Dimension"),
+							Values: billing.CostAllocationProportionArray{
+								&billing.CostAllocationProportionArgs{
+									Name:       pulumi.String("destinationRG"),
+									Percentage: pulumi.Float64(45),
+								},
+								&billing.CostAllocationProportionArgs{
+									Name:       pulumi.String("destinationRG2"),
+									Percentage: pulumi.Float64(54),
+								},
+							},
+						},
+					},
+				},
+				Status: pulumi.String("Active"),
+			},
+			RuleName: pulumi.String("testRule"),
 		})
 		if err != nil {
 			return err
@@ -74,6 +150,35 @@ import pulumi_azure_nextgen as azure_nextgen
 
 cost_allocation_rule = azure_nextgen.billing.v20200301preview.CostAllocationRule("costAllocationRule",
     billing_account_id="100",
+    properties={
+        "description": "This is a testRule",
+        "details": {
+            "sourceResources": [{
+                "name": "ResourceGroupName",
+                "resourceType": "Dimension",
+                "values": [
+                    "sampleRG",
+                    "secondRG",
+                ],
+            }],
+            "targetResources": [{
+                "name": "ResourceGroupName",
+                "policyType": "FixedProportion",
+                "resourceType": "Dimension",
+                "values": [
+                    {
+                        "name": "destinationRG",
+                        "percentage": 45,
+                    },
+                    {
+                        "name": "destinationRG2",
+                        "percentage": 54,
+                    },
+                ],
+            }],
+        },
+        "status": "Active",
+    },
     rule_name="testRule")
 
 ```
@@ -88,6 +193,35 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const costAllocationRule = new azure_nextgen.billing.v20200301preview.CostAllocationRule("costAllocationRule", {
     billingAccountId: "100",
+    properties: {
+        description: "This is a testRule",
+        details: {
+            sourceResources: [{
+                name: "ResourceGroupName",
+                resourceType: "Dimension",
+                values: [
+                    "sampleRG",
+                    "secondRG",
+                ],
+            }],
+            targetResources: [{
+                name: "ResourceGroupName",
+                policyType: "FixedProportion",
+                resourceType: "Dimension",
+                values: [
+                    {
+                        name: "destinationRG",
+                        percentage: 45,
+                    },
+                    {
+                        name: "destinationRG2",
+                        percentage: 54,
+                    },
+                ],
+            }],
+        },
+        status: "Active",
+    },
     ruleName: "testRule",
 });
 
@@ -108,6 +242,53 @@ class MyStack : Stack
         var costAllocationRule = new AzureNextGen.Billing.V20200301Preview.CostAllocationRule("costAllocationRule", new AzureNextGen.Billing.V20200301Preview.CostAllocationRuleArgs
         {
             BillingAccountId = "100",
+            Properties = new AzureNextGen.Billing.V20200301Preview.Inputs.CostAllocationRulePropertiesArgs
+            {
+                Description = "This is a testRule",
+                Details = new AzureNextGen.Billing.V20200301Preview.Inputs.CostAllocationRuleDetailsArgs
+                {
+                    SourceResources = 
+                    {
+                        new AzureNextGen.Billing.V20200301Preview.Inputs.SourceCostAllocationResourceArgs
+                        {
+                            Name = "category",
+                            ResourceType = "Tag",
+                            Values = 
+                            {
+                                "devops",
+                            },
+                        },
+                    },
+                    TargetResources = 
+                    {
+                        new AzureNextGen.Billing.V20200301Preview.Inputs.TargetCostAllocationResourceArgs
+                        {
+                            Name = "ResourceGroupName",
+                            PolicyType = "FixedProportion",
+                            ResourceType = "Dimension",
+                            Values = 
+                            {
+                                new AzureNextGen.Billing.V20200301Preview.Inputs.CostAllocationProportionArgs
+                                {
+                                    Name = "destinationRG",
+                                    Percentage = 33.33,
+                                },
+                                new AzureNextGen.Billing.V20200301Preview.Inputs.CostAllocationProportionArgs
+                                {
+                                    Name = "destinationRG2",
+                                    Percentage = 33.33,
+                                },
+                                new AzureNextGen.Billing.V20200301Preview.Inputs.CostAllocationProportionArgs
+                                {
+                                    Name = "destinationRG3",
+                                    Percentage = 33.34,
+                                },
+                            },
+                        },
+                    },
+                },
+                Status = "Active",
+            },
             RuleName = "testRule",
         });
     }
@@ -124,7 +305,7 @@ class MyStack : Stack
 package main
 
 import (
-	billing "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/billing/v20200301preview"
+	billing "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/billing/v20200301preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -132,7 +313,43 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := billing.NewCostAllocationRule(ctx, "costAllocationRule", &billing.CostAllocationRuleArgs{
 			BillingAccountId: pulumi.String("100"),
-			RuleName:         pulumi.String("testRule"),
+			Properties: &billing.CostAllocationRulePropertiesArgs{
+				Description: pulumi.String("This is a testRule"),
+				Details: &billing.CostAllocationRuleDetailsArgs{
+					SourceResources: billing.SourceCostAllocationResourceArray{
+						&billing.SourceCostAllocationResourceArgs{
+							Name:         pulumi.String("category"),
+							ResourceType: pulumi.String("Tag"),
+							Values: pulumi.StringArray{
+								pulumi.String("devops"),
+							},
+						},
+					},
+					TargetResources: billing.TargetCostAllocationResourceArray{
+						&billing.TargetCostAllocationResourceArgs{
+							Name:         pulumi.String("ResourceGroupName"),
+							PolicyType:   pulumi.String("FixedProportion"),
+							ResourceType: pulumi.String("Dimension"),
+							Values: billing.CostAllocationProportionArray{
+								&billing.CostAllocationProportionArgs{
+									Name:       pulumi.String("destinationRG"),
+									Percentage: pulumi.Float64(33.33),
+								},
+								&billing.CostAllocationProportionArgs{
+									Name:       pulumi.String("destinationRG2"),
+									Percentage: pulumi.Float64(33.33),
+								},
+								&billing.CostAllocationProportionArgs{
+									Name:       pulumi.String("destinationRG3"),
+									Percentage: pulumi.Float64(33.34),
+								},
+							},
+						},
+					},
+				},
+				Status: pulumi.String("Active"),
+			},
+			RuleName: pulumi.String("testRule"),
 		})
 		if err != nil {
 			return err
@@ -153,6 +370,36 @@ import pulumi_azure_nextgen as azure_nextgen
 
 cost_allocation_rule = azure_nextgen.billing.v20200301preview.CostAllocationRule("costAllocationRule",
     billing_account_id="100",
+    properties={
+        "description": "This is a testRule",
+        "details": {
+            "sourceResources": [{
+                "name": "category",
+                "resourceType": "Tag",
+                "values": ["devops"],
+            }],
+            "targetResources": [{
+                "name": "ResourceGroupName",
+                "policyType": "FixedProportion",
+                "resourceType": "Dimension",
+                "values": [
+                    {
+                        "name": "destinationRG",
+                        "percentage": 33.33,
+                    },
+                    {
+                        "name": "destinationRG2",
+                        "percentage": 33.33,
+                    },
+                    {
+                        "name": "destinationRG3",
+                        "percentage": 33.34,
+                    },
+                ],
+            }],
+        },
+        "status": "Active",
+    },
     rule_name="testRule")
 
 ```
@@ -167,6 +414,36 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const costAllocationRule = new azure_nextgen.billing.v20200301preview.CostAllocationRule("costAllocationRule", {
     billingAccountId: "100",
+    properties: {
+        description: "This is a testRule",
+        details: {
+            sourceResources: [{
+                name: "category",
+                resourceType: "Tag",
+                values: ["devops"],
+            }],
+            targetResources: [{
+                name: "ResourceGroupName",
+                policyType: "FixedProportion",
+                resourceType: "Dimension",
+                values: [
+                    {
+                        name: "destinationRG",
+                        percentage: 33.33,
+                    },
+                    {
+                        name: "destinationRG2",
+                        percentage: 33.33,
+                    },
+                    {
+                        name: "destinationRG3",
+                        percentage: 33.34,
+                    },
+                ],
+            }],
+        },
+        status: "Active",
+    },
     ruleName: "testRule",
 });
 

@@ -47,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	advisor "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/advisor/latest"
+	advisor "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/advisor/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
