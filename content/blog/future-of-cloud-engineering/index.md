@@ -1,7 +1,7 @@
 ---
 title: "The Past, Present, and Future of Cloud Engineering"
 date: 2020-10-08
-meta_desc: "Learn about the past, present, and future of Cloud Engineering, with the Cloud Engineering Summit keynote."
+meta_desc: "Cloud Engineering Summit Keynote: The Future of Cloud Engineering"
 meta_image: cloud_engineering.png
 authors:
     - joe-duffy
@@ -96,3 +96,46 @@ Despite the clear gaps, it is clear we've taken some major steps in the directio
 As we've seen, the future of cloud engineering is already here in a very real way. The cloud is being infused into application development, we are increasingly treating cloud infrastructure as software, and teams are embracing new ways of working together.
 
 We hope you enjoyed learning more about cloud engineering architectures, workflows, and teams. [Watch the Cloud Engineering Summit Keynote here](https://cloudengineeringsummit.com/talks/welcome-keynote/) or check out [one of the many amazing Cloud Engineering talks now](https://cloudengineeringsummit.com/schedule/)!
+
+This event would not have been possible without the participation and support of our top sponsors:
+
+<div style="clear:both;padding-top:20px;padding-left:100px;">
+    <div>
+        <div style="display:inline-block;vertical-align:top;">
+            <div style="float:left;">
+                <a href="https://about.gitlab.com/">
+                    <img src="gitlab.png" alt="img" style="float:left;width:175px;height:65px;"/>
+                </a>
+            </div>
+            <div style="padding-top:105px">
+                <a href="https://www.jetstack.io/">
+                    <img src="jetstack.png" alt="img" style="width:150px;height:50px;"/>
+                </a>
+            </div>
+        </div>
+        <div style="display:inline-block;vertical-align:top;padding-left:25px;">
+            <div  style="float:left;">
+                <a href="https://aws.amazon.com/">
+                    <img src="aws.png" alt="img" style="width:84px;height:50px;"/>
+                </a>
+            </div>
+            <div style="padding-top:105px">
+                <a href="https://jfrog.com/">
+                    <img src="jfrog.png" alt="img" style="width:100px;height:97px;"/>
+                </a>
+            </div>
+        </div>
+        <div style="display:inline-block;vertical-align:top;padding-left:25px;">
+            <div style="float:left;">
+                <a href="https://chef.io">
+                    <img src="chef.png" alt="img" style="float:left;width:220px;height:90px;"/>
+                </a>
+            </div>
+            <div style="padding-top:105px;">
+                <a href="https://ns1.com/">
+                    <img src="ns1.png" alt="img" style="width:122px;height:60px;"/>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
