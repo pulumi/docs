@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting Pulumi in CI
-meta_desc: This page walks-through the common failures encountered while running Pulumi in CI, as well as tips on how to fix them.
+meta_desc: This page walks through the common failures encountered while running Pulumi in CI, as well as tips on how to fix them.
 menu:
     userguides:
         parent: cont_delivery
@@ -13,9 +13,9 @@ The type of failure you experience is likely related to one of these steps.
 
 ## Overall Requirements
 
-In order to run a Pulumi command, the following are the requirements for any configuration involving Pulumi:
+In order to run a Pulumi command, the following are required:
 
-* A Pulumi Access Token for the account you wish to use.
+* A [Pulumi access token] https://www.pulumi.com/docs/intro/console/accounts-and-organizations/accounts/#access-tokens) for the account you wish to use.
 Create one [here](https://app.pulumi.com/account/tokens) by logging in with the appropriate account.
 * A stack that you would like to update the automated pipeline.
 * Build tools (more on this below) based on the runtime of your Pulumi app.
@@ -45,7 +45,7 @@ beforehand using the `pulumi stack init` command and in the **appropriate organi
 
 ### Tips
 
-* Ensure that the account represented by the token you are using, has access to the stack.
+* Ensure that the account represented by the token you are using has access to the stack.
   * This can lead to 404s being returned from the Pulumi Service because the token is invalid for any number of reasons.
 * Ensure that you use the fully-qualified stack name when passing the stack name to `pulumi` commands.
   * A fully-qualified stack name is of the format `<org_name>/<project_name>/<stack_name>`.
@@ -96,9 +96,9 @@ a [plugin]({{< relref "/docs/intro/concepts/how-pulumi-works#resource-providers"
 
 ## Cloud Provider Credentials
 
-Another common point of failure is the cloud provider credentials. The class of errors related to the credentials can be, but not limited to:
+Cloud provider credentials are another common point of failure. The class of errors related to cloud provider credentials can include:
 
-* Incorrect credentials (wrong account, mismatched keys etc.)
+* Incorrect credentials (wrong account, mismatched keys, etc.)
 * Keys with a strict access scope that don't have access to creating specific resources
 
 ### Tips
