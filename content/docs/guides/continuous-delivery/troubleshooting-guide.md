@@ -146,6 +146,6 @@ steps. This is a way to reduce repeating the installation step every time you wo
 
 #### Still need help?
 
-If the above tips don't help you solve your particular issue, then there is always the power of the strong,
+If the above tips don't help solve your particular issue, then there is always the power of the strong,
 knowledgeable [Pulumi Slack Community](https://slack.pulumi.com). Signup is free and quick. In addition to other
 community members, various members of the Pulumi team themselves hang out in the Slack channels and would be happy to help you.
