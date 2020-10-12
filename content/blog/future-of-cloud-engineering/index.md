@@ -96,3 +96,14 @@ Despite the clear gaps, it is clear we've taken some major steps in the directio
 As we've seen, the future of cloud engineering is already here in a very real way. The cloud is being infused into application development, we are increasingly treating cloud infrastructure as software, and teams are embracing new ways of working together.
 
 We hope you enjoyed learning more about cloud engineering architectures, workflows, and teams. [Watch the Cloud Engineering Summit Keynote here](https://cloudengineeringsummit.com/talks/welcome-keynote/) or check out [one of the many amazing Cloud Engineering talks now](https://cloudengineeringsummit.com/schedule/)!
+
+This event would not have been possible without the participation and support of our top sponsors:
+
+<div class="flex flex-col md:flex-row md:flex-wrap items-center justify-center">
+    <a href="https://about.gitlab.com/"><img src="gitlab.png" alt="GitLab logo" class="h-16 md:mx-4 my-4"></a>
+    <a href="https://www.jetstack.io/"><img src="jetstack.png" alt="Jetstack logo" class="h-16 md:mx-4 my-4"></a>
+    <a href="https://aws.amazon.com/"><img src="aws.png" alt="AWS logo" class="h-16 md:mx-4 my-4"></a>
+    <a href="https://jfrog.com/"><img src="jfrog.png" alt="JFrog logo" class="h-16 md:mx-4 my-4"></a>
+    <a href="https://chef.io"><img src="chef.png" alt="Chef logo" class="h-16 md:mx-4 my-4"></a>
+    <a href="https://ns1.com/"><img src="ns1.png" alt="NS1 logo" class="h-16 md:mx-4 my-4"></a>
+</div>
