@@ -988,7 +988,7 @@ The following output properties are available:
 <a href="#followers_python" style="color: inherit; text-decoration: inherit;">followers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}the number of followers.
 {{% /md %}}</dd>
@@ -999,7 +999,7 @@ The following output properties are available:
 <a href="#following_python" style="color: inherit; text-decoration: inherit;">following</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}the number of following users.
 {{% /md %}}</dd>
@@ -1010,7 +1010,7 @@ The following output properties are available:
 <a href="#gpg_keys_python" style="color: inherit; text-decoration: inherit;">gpg_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}list of user's GPG keys.
 {{% /md %}}</dd>
@@ -1086,7 +1086,7 @@ The following output properties are available:
 <a href="#public_gists_python" style="color: inherit; text-decoration: inherit;">public_<wbr>gists</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}the number of public gists.
 {{% /md %}}</dd>
@@ -1097,7 +1097,7 @@ The following output properties are available:
 <a href="#public_repos_python" style="color: inherit; text-decoration: inherit;">public_<wbr>repos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}the number of public repositories.
 {{% /md %}}</dd>
@@ -1119,7 +1119,7 @@ The following output properties are available:
 <a href="#ssh_keys_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}list of user's SSH keys.
 {{% /md %}}</dd>

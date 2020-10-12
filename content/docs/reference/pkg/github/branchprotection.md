@@ -25,7 +25,7 @@ This resource allows you to configure branch protection for repositories in your
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_github/#pulumi_github.BranchProtection">BranchProtection</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">branch</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enforce_admins</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">repository</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">require_signed_commits</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">required_pull_request_reviews</span><span class="p">:</span> <span class="nx">Optional[BranchProtectionRequiredPullRequestReviewsArgs]</span> = None<span class="p">, </span><span class="nx">required_status_checks</span><span class="p">:</span> <span class="nx">Optional[BranchProtectionRequiredStatusChecksArgs]</span> = None<span class="p">, </span><span class="nx">restrictions</span><span class="p">:</span> <span class="nx">Optional[BranchProtectionRestrictionsArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_github/#pulumi_github.BranchProtection">BranchProtection</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enforce_admins</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">pattern</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">push_restrictions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">repository_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">require_signed_commits</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">required_pull_request_reviews</span><span class="p">:</span> <span class="nx">Optional[Sequence[BranchProtectionRequiredPullRequestReviewArgs]]</span> = None<span class="p">, </span><span class="nx">required_status_checks</span><span class="p">:</span> <span class="nx">Optional[Sequence[BranchProtectionRequiredStatusCheckArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -199,24 +199,24 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span id="branch_csharp">
-<a href="#branch_csharp" style="color: inherit; text-decoration: inherit;">Branch</a>
+        <span id="pattern_csharp">
+<a href="#pattern_csharp" style="color: inherit; text-decoration: inherit;">Pattern</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Git branch to protect.
+    <dd>{{% md %}}Identifies the protection rule pattern.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="repository_csharp">
-<a href="#repository_csharp" style="color: inherit; text-decoration: inherit;">Repository</a>
+        <span id="repositoryid_csharp">
+<a href="#repositoryid_csharp" style="color: inherit; text-decoration: inherit;">Repository<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The GitHub repository name.
+    <dd>{{% md %}}The repository associated with this branch protection rule.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -228,6 +228,17 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean, setting this to `true` enforces status checks for repository administrators.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pushrestrictions_csharp">
+<a href="#pushrestrictions_csharp" style="color: inherit; text-decoration: inherit;">Push<wbr>Restrictions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of actor IDs that may push to the branch.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -247,7 +258,7 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 <a href="#requiredpullrequestreviews_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>Pull<wbr>Request<wbr>Reviews</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchprotectionrequiredpullrequestreviews">Branch<wbr>Protection<wbr>Required<wbr>Pull<wbr>Request<wbr>Reviews<wbr>Args</a></span>
+        <span class="property-type"><a href="#branchprotectionrequiredpullrequestreview">List&lt;Branch<wbr>Protection<wbr>Required<wbr>Pull<wbr>Request<wbr>Review<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for pull request reviews. See Required Pull Request Reviews below for details.
 {{% /md %}}</dd>
@@ -258,20 +269,9 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 <a href="#requiredstatuschecks_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>Status<wbr>Checks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchprotectionrequiredstatuschecks">Branch<wbr>Protection<wbr>Required<wbr>Status<wbr>Checks<wbr>Args</a></span>
+        <span class="property-type"><a href="#branchprotectionrequiredstatuscheck">List&lt;Branch<wbr>Protection<wbr>Required<wbr>Status<wbr>Check<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for required status checks. See Required Status Checks below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="restrictions_csharp">
-<a href="#restrictions_csharp" style="color: inherit; text-decoration: inherit;">Restrictions</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchprotectionrestrictions">Branch<wbr>Protection<wbr>Restrictions<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Enforce restrictions for the users and teams that may push to the branch. See Restrictions below for details.
 {{% /md %}}</dd>
 
 </dl>
@@ -283,24 +283,24 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span id="branch_go">
-<a href="#branch_go" style="color: inherit; text-decoration: inherit;">Branch</a>
+        <span id="pattern_go">
+<a href="#pattern_go" style="color: inherit; text-decoration: inherit;">Pattern</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Git branch to protect.
+    <dd>{{% md %}}Identifies the protection rule pattern.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="repository_go">
-<a href="#repository_go" style="color: inherit; text-decoration: inherit;">Repository</a>
+        <span id="repositoryid_go">
+<a href="#repositoryid_go" style="color: inherit; text-decoration: inherit;">Repository<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The GitHub repository name.
+    <dd>{{% md %}}The repository associated with this branch protection rule.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -312,6 +312,17 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean, setting this to `true` enforces status checks for repository administrators.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pushrestrictions_go">
+<a href="#pushrestrictions_go" style="color: inherit; text-decoration: inherit;">Push<wbr>Restrictions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The list of actor IDs that may push to the branch.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -331,7 +342,7 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 <a href="#requiredpullrequestreviews_go" style="color: inherit; text-decoration: inherit;">Required<wbr>Pull<wbr>Request<wbr>Reviews</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchprotectionrequiredpullrequestreviews">Branch<wbr>Protection<wbr>Required<wbr>Pull<wbr>Request<wbr>Reviews</a></span>
+        <span class="property-type"><a href="#branchprotectionrequiredpullrequestreview">[]Branch<wbr>Protection<wbr>Required<wbr>Pull<wbr>Request<wbr>Review</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for pull request reviews. See Required Pull Request Reviews below for details.
 {{% /md %}}</dd>
@@ -342,20 +353,9 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 <a href="#requiredstatuschecks_go" style="color: inherit; text-decoration: inherit;">Required<wbr>Status<wbr>Checks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchprotectionrequiredstatuschecks">Branch<wbr>Protection<wbr>Required<wbr>Status<wbr>Checks</a></span>
+        <span class="property-type"><a href="#branchprotectionrequiredstatuscheck">[]Branch<wbr>Protection<wbr>Required<wbr>Status<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for required status checks. See Required Status Checks below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="restrictions_go">
-<a href="#restrictions_go" style="color: inherit; text-decoration: inherit;">Restrictions</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchprotectionrestrictions">Branch<wbr>Protection<wbr>Restrictions</a></span>
-    </dt>
-    <dd>{{% md %}}Enforce restrictions for the users and teams that may push to the branch. See Restrictions below for details.
 {{% /md %}}</dd>
 
 </dl>
@@ -367,24 +367,24 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span id="branch_nodejs">
-<a href="#branch_nodejs" style="color: inherit; text-decoration: inherit;">branch</a>
+        <span id="pattern_nodejs">
+<a href="#pattern_nodejs" style="color: inherit; text-decoration: inherit;">pattern</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Git branch to protect.
+    <dd>{{% md %}}Identifies the protection rule pattern.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="repository_nodejs">
-<a href="#repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
+        <span id="repositoryid_nodejs">
+<a href="#repositoryid_nodejs" style="color: inherit; text-decoration: inherit;">repository<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The GitHub repository name.
+    <dd>{{% md %}}The repository associated with this branch protection rule.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -396,6 +396,17 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Boolean, setting this to `true` enforces status checks for repository administrators.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pushrestrictions_nodejs">
+<a href="#pushrestrictions_nodejs" style="color: inherit; text-decoration: inherit;">push<wbr>Restrictions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of actor IDs that may push to the branch.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -415,7 +426,7 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 <a href="#requiredpullrequestreviews_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Pull<wbr>Request<wbr>Reviews</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchprotectionrequiredpullrequestreviews">Branch<wbr>Protection<wbr>Required<wbr>Pull<wbr>Request<wbr>Reviews</a></span>
+        <span class="property-type"><a href="#branchprotectionrequiredpullrequestreview">Branch<wbr>Protection<wbr>Required<wbr>Pull<wbr>Request<wbr>Review[]</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for pull request reviews. See Required Pull Request Reviews below for details.
 {{% /md %}}</dd>
@@ -426,20 +437,9 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 <a href="#requiredstatuschecks_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Status<wbr>Checks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchprotectionrequiredstatuschecks">Branch<wbr>Protection<wbr>Required<wbr>Status<wbr>Checks</a></span>
+        <span class="property-type"><a href="#branchprotectionrequiredstatuscheck">Branch<wbr>Protection<wbr>Required<wbr>Status<wbr>Check[]</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for required status checks. See Required Status Checks below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="restrictions_nodejs">
-<a href="#restrictions_nodejs" style="color: inherit; text-decoration: inherit;">restrictions</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchprotectionrestrictions">Branch<wbr>Protection<wbr>Restrictions</a></span>
-    </dt>
-    <dd>{{% md %}}Enforce restrictions for the users and teams that may push to the branch. See Restrictions below for details.
 {{% /md %}}</dd>
 
 </dl>
@@ -451,24 +451,24 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span id="branch_python">
-<a href="#branch_python" style="color: inherit; text-decoration: inherit;">branch</a>
+        <span id="pattern_python">
+<a href="#pattern_python" style="color: inherit; text-decoration: inherit;">pattern</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Git branch to protect.
+    <dd>{{% md %}}Identifies the protection rule pattern.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="repository_python">
-<a href="#repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
+        <span id="repository_id_python">
+<a href="#repository_id_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The GitHub repository name.
+    <dd>{{% md %}}The repository associated with this branch protection rule.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -480,6 +480,17 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean, setting this to `true` enforces status checks for repository administrators.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="push_restrictions_python">
+<a href="#push_restrictions_python" style="color: inherit; text-decoration: inherit;">push_<wbr>restrictions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of actor IDs that may push to the branch.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -499,7 +510,7 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 <a href="#required_pull_request_reviews_python" style="color: inherit; text-decoration: inherit;">required_<wbr>pull_<wbr>request_<wbr>reviews</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchprotectionrequiredpullrequestreviews">Branch<wbr>Protection<wbr>Required<wbr>Pull<wbr>Request<wbr>Reviews<wbr>Args</a></span>
+        <span class="property-type"><a href="#branchprotectionrequiredpullrequestreview">Sequence[Branch<wbr>Protection<wbr>Required<wbr>Pull<wbr>Request<wbr>Review<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for pull request reviews. See Required Pull Request Reviews below for details.
 {{% /md %}}</dd>
@@ -510,20 +521,9 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 <a href="#required_status_checks_python" style="color: inherit; text-decoration: inherit;">required_<wbr>status_<wbr>checks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchprotectionrequiredstatuschecks">Branch<wbr>Protection<wbr>Required<wbr>Status<wbr>Checks<wbr>Args</a></span>
+        <span class="property-type"><a href="#branchprotectionrequiredstatuscheck">Sequence[Branch<wbr>Protection<wbr>Required<wbr>Status<wbr>Check<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for required status checks. See Required Status Checks below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="restrictions_python">
-<a href="#restrictions_python" style="color: inherit; text-decoration: inherit;">restrictions</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchprotectionrestrictions">Branch<wbr>Protection<wbr>Restrictions<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Enforce restrictions for the users and teams that may push to the branch. See Restrictions below for details.
 {{% /md %}}</dd>
 
 </dl>
@@ -546,16 +546,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="etag_csharp">
-<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span> 
@@ -570,16 +560,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span id="etag_go">
-<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -600,16 +580,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="etag_nodejs">
-<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
@@ -624,16 +594,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span id="etag_python">
-<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -665,7 +625,7 @@ Get an existing BranchProtection resource's state with the given name, ID, and o
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">branch</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enforce_admins</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">repository</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">require_signed_commits</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">required_pull_request_reviews</span><span class="p">:</span> <span class="nx">Optional[BranchProtectionRequiredPullRequestReviewsArgs]</span> = None<span class="p">, </span><span class="nx">required_status_checks</span><span class="p">:</span> <span class="nx">Optional[BranchProtectionRequiredStatusChecksArgs]</span> = None<span class="p">, </span><span class="nx">restrictions</span><span class="p">:</span> <span class="nx">Optional[BranchProtectionRestrictionsArgs]</span> = None<span class="p">) -&gt;</span> BranchProtection</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enforce_admins</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">pattern</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">push_restrictions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">repository_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">require_signed_commits</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">required_pull_request_reviews</span><span class="p">:</span> <span class="nx">Optional[Sequence[BranchProtectionRequiredPullRequestReviewArgs]]</span> = None<span class="p">, </span><span class="nx">required_status_checks</span><span class="p">:</span> <span class="nx">Optional[Sequence[BranchProtectionRequiredStatusCheckArgs]]</span> = None<span class="p">) -&gt;</span> BranchProtection</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -781,17 +741,6 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_branch_csharp">
-<a href="#state_branch_csharp" style="color: inherit; text-decoration: inherit;">Branch</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The Git branch to protect.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_enforceadmins_csharp">
 <a href="#state_enforceadmins_csharp" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Admins</a>
 </span> 
@@ -803,23 +752,35 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_etag_csharp">
-<a href="#state_etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+        <span id="state_pattern_csharp">
+<a href="#state_pattern_csharp" style="color: inherit; text-decoration: inherit;">Pattern</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Identifies the protection rule pattern.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_repository_csharp">
-<a href="#state_repository_csharp" style="color: inherit; text-decoration: inherit;">Repository</a>
+        <span id="state_pushrestrictions_csharp">
+<a href="#state_pushrestrictions_csharp" style="color: inherit; text-decoration: inherit;">Push<wbr>Restrictions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of actor IDs that may push to the branch.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_repositoryid_csharp">
+<a href="#state_repositoryid_csharp" style="color: inherit; text-decoration: inherit;">Repository<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The GitHub repository name.
+    <dd>{{% md %}}The repository associated with this branch protection rule.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -839,7 +800,7 @@ The following state arguments are supported:
 <a href="#state_requiredpullrequestreviews_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>Pull<wbr>Request<wbr>Reviews</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchprotectionrequiredpullrequestreviews">Branch<wbr>Protection<wbr>Required<wbr>Pull<wbr>Request<wbr>Reviews<wbr>Args</a></span>
+        <span class="property-type"><a href="#branchprotectionrequiredpullrequestreview">List&lt;Branch<wbr>Protection<wbr>Required<wbr>Pull<wbr>Request<wbr>Review<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for pull request reviews. See Required Pull Request Reviews below for details.
 {{% /md %}}</dd>
@@ -850,20 +811,9 @@ The following state arguments are supported:
 <a href="#state_requiredstatuschecks_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>Status<wbr>Checks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchprotectionrequiredstatuschecks">Branch<wbr>Protection<wbr>Required<wbr>Status<wbr>Checks<wbr>Args</a></span>
+        <span class="property-type"><a href="#branchprotectionrequiredstatuscheck">List&lt;Branch<wbr>Protection<wbr>Required<wbr>Status<wbr>Check<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for required status checks. See Required Status Checks below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_restrictions_csharp">
-<a href="#state_restrictions_csharp" style="color: inherit; text-decoration: inherit;">Restrictions</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchprotectionrestrictions">Branch<wbr>Protection<wbr>Restrictions<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Enforce restrictions for the users and teams that may push to the branch. See Restrictions below for details.
 {{% /md %}}</dd>
 
 </dl>
@@ -872,17 +822,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_branch_go">
-<a href="#state_branch_go" style="color: inherit; text-decoration: inherit;">Branch</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The Git branch to protect.
-{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -897,23 +836,35 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_etag_go">
-<a href="#state_etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+        <span id="state_pattern_go">
+<a href="#state_pattern_go" style="color: inherit; text-decoration: inherit;">Pattern</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Identifies the protection rule pattern.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_repository_go">
-<a href="#state_repository_go" style="color: inherit; text-decoration: inherit;">Repository</a>
+        <span id="state_pushrestrictions_go">
+<a href="#state_pushrestrictions_go" style="color: inherit; text-decoration: inherit;">Push<wbr>Restrictions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The list of actor IDs that may push to the branch.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_repositoryid_go">
+<a href="#state_repositoryid_go" style="color: inherit; text-decoration: inherit;">Repository<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The GitHub repository name.
+    <dd>{{% md %}}The repository associated with this branch protection rule.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -933,7 +884,7 @@ The following state arguments are supported:
 <a href="#state_requiredpullrequestreviews_go" style="color: inherit; text-decoration: inherit;">Required<wbr>Pull<wbr>Request<wbr>Reviews</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchprotectionrequiredpullrequestreviews">Branch<wbr>Protection<wbr>Required<wbr>Pull<wbr>Request<wbr>Reviews</a></span>
+        <span class="property-type"><a href="#branchprotectionrequiredpullrequestreview">[]Branch<wbr>Protection<wbr>Required<wbr>Pull<wbr>Request<wbr>Review</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for pull request reviews. See Required Pull Request Reviews below for details.
 {{% /md %}}</dd>
@@ -944,20 +895,9 @@ The following state arguments are supported:
 <a href="#state_requiredstatuschecks_go" style="color: inherit; text-decoration: inherit;">Required<wbr>Status<wbr>Checks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchprotectionrequiredstatuschecks">Branch<wbr>Protection<wbr>Required<wbr>Status<wbr>Checks</a></span>
+        <span class="property-type"><a href="#branchprotectionrequiredstatuscheck">[]Branch<wbr>Protection<wbr>Required<wbr>Status<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for required status checks. See Required Status Checks below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_restrictions_go">
-<a href="#state_restrictions_go" style="color: inherit; text-decoration: inherit;">Restrictions</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchprotectionrestrictions">Branch<wbr>Protection<wbr>Restrictions</a></span>
-    </dt>
-    <dd>{{% md %}}Enforce restrictions for the users and teams that may push to the branch. See Restrictions below for details.
 {{% /md %}}</dd>
 
 </dl>
@@ -966,17 +906,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_branch_nodejs">
-<a href="#state_branch_nodejs" style="color: inherit; text-decoration: inherit;">branch</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The Git branch to protect.
-{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -991,23 +920,35 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_etag_nodejs">
-<a href="#state_etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+        <span id="state_pattern_nodejs">
+<a href="#state_pattern_nodejs" style="color: inherit; text-decoration: inherit;">pattern</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Identifies the protection rule pattern.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_repository_nodejs">
-<a href="#state_repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
+        <span id="state_pushrestrictions_nodejs">
+<a href="#state_pushrestrictions_nodejs" style="color: inherit; text-decoration: inherit;">push<wbr>Restrictions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of actor IDs that may push to the branch.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_repositoryid_nodejs">
+<a href="#state_repositoryid_nodejs" style="color: inherit; text-decoration: inherit;">repository<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The GitHub repository name.
+    <dd>{{% md %}}The repository associated with this branch protection rule.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1027,7 +968,7 @@ The following state arguments are supported:
 <a href="#state_requiredpullrequestreviews_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Pull<wbr>Request<wbr>Reviews</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchprotectionrequiredpullrequestreviews">Branch<wbr>Protection<wbr>Required<wbr>Pull<wbr>Request<wbr>Reviews</a></span>
+        <span class="property-type"><a href="#branchprotectionrequiredpullrequestreview">Branch<wbr>Protection<wbr>Required<wbr>Pull<wbr>Request<wbr>Review[]</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for pull request reviews. See Required Pull Request Reviews below for details.
 {{% /md %}}</dd>
@@ -1038,20 +979,9 @@ The following state arguments are supported:
 <a href="#state_requiredstatuschecks_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Status<wbr>Checks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchprotectionrequiredstatuschecks">Branch<wbr>Protection<wbr>Required<wbr>Status<wbr>Checks</a></span>
+        <span class="property-type"><a href="#branchprotectionrequiredstatuscheck">Branch<wbr>Protection<wbr>Required<wbr>Status<wbr>Check[]</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for required status checks. See Required Status Checks below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_restrictions_nodejs">
-<a href="#state_restrictions_nodejs" style="color: inherit; text-decoration: inherit;">restrictions</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchprotectionrestrictions">Branch<wbr>Protection<wbr>Restrictions</a></span>
-    </dt>
-    <dd>{{% md %}}Enforce restrictions for the users and teams that may push to the branch. See Restrictions below for details.
 {{% /md %}}</dd>
 
 </dl>
@@ -1060,17 +990,6 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_branch_python">
-<a href="#state_branch_python" style="color: inherit; text-decoration: inherit;">branch</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The Git branch to protect.
-{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1085,23 +1004,35 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_etag_python">
-<a href="#state_etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+        <span id="state_pattern_python">
+<a href="#state_pattern_python" style="color: inherit; text-decoration: inherit;">pattern</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Identifies the protection rule pattern.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_repository_python">
-<a href="#state_repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
+        <span id="state_push_restrictions_python">
+<a href="#state_push_restrictions_python" style="color: inherit; text-decoration: inherit;">push_<wbr>restrictions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of actor IDs that may push to the branch.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_repository_id_python">
+<a href="#state_repository_id_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The GitHub repository name.
+    <dd>{{% md %}}The repository associated with this branch protection rule.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1121,7 +1052,7 @@ The following state arguments are supported:
 <a href="#state_required_pull_request_reviews_python" style="color: inherit; text-decoration: inherit;">required_<wbr>pull_<wbr>request_<wbr>reviews</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchprotectionrequiredpullrequestreviews">Branch<wbr>Protection<wbr>Required<wbr>Pull<wbr>Request<wbr>Reviews<wbr>Args</a></span>
+        <span class="property-type"><a href="#branchprotectionrequiredpullrequestreview">Sequence[Branch<wbr>Protection<wbr>Required<wbr>Pull<wbr>Request<wbr>Review<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for pull request reviews. See Required Pull Request Reviews below for details.
 {{% /md %}}</dd>
@@ -1132,20 +1063,9 @@ The following state arguments are supported:
 <a href="#state_required_status_checks_python" style="color: inherit; text-decoration: inherit;">required_<wbr>status_<wbr>checks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchprotectionrequiredstatuschecks">Branch<wbr>Protection<wbr>Required<wbr>Status<wbr>Checks<wbr>Args</a></span>
+        <span class="property-type"><a href="#branchprotectionrequiredstatuscheck">Sequence[Branch<wbr>Protection<wbr>Required<wbr>Status<wbr>Check<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for required status checks. See Required Status Checks below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_restrictions_python">
-<a href="#state_restrictions_python" style="color: inherit; text-decoration: inherit;">restrictions</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchprotectionrestrictions">Branch<wbr>Protection<wbr>Restrictions<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Enforce restrictions for the users and teams that may push to the branch. See Restrictions below for details.
 {{% /md %}}</dd>
 
 </dl>
@@ -1163,16 +1083,16 @@ The following state arguments are supported:
 ## Supporting Types
 
 
-<h4 id="branchprotectionrequiredpullrequestreviews">Branch<wbr>Protection<wbr>Required<wbr>Pull<wbr>Request<wbr>Reviews</h4>
+<h4 id="branchprotectionrequiredpullrequestreview">Branch<wbr>Protection<wbr>Required<wbr>Pull<wbr>Request<wbr>Review</h4>
 {{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/github/types/input/#BranchProtectionRequiredPullRequestReviews">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/github/types/output/#BranchProtectionRequiredPullRequestReviews">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/github/types/input/#BranchProtectionRequiredPullRequestReview">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/github/types/output/#BranchProtectionRequiredPullRequestReview">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/v2/go/github/?tab=doc#BranchProtectionRequiredPullRequestReviewsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/v2/go/github/?tab=doc#BranchProtectionRequiredPullRequestReviewsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/v2/go/github/?tab=doc#BranchProtectionRequiredPullRequestReviewArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/v2/go/github/?tab=doc#BranchProtectionRequiredPullRequestReviewOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Github/Pulumi.Github.Inputs.BranchProtectionRequiredPullRequestReviewsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Github/Pulumi.Github.Outputs.BranchProtectionRequiredPullRequestReviews.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Github/Pulumi.Github.Inputs.BranchProtectionRequiredPullRequestReviewArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Github/Pulumi.Github.Outputs.BranchProtectionRequiredPullRequestReview.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1193,33 +1113,13 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dismissalteams_csharp">
-<a href="#dismissalteams_csharp" style="color: inherit; text-decoration: inherit;">Dismissal<wbr>Teams</a>
+        <span id="dismissalrestrictions_csharp">
+<a href="#dismissalrestrictions_csharp" style="color: inherit; text-decoration: inherit;">Dismissal<wbr>Restrictions</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="dismissalusers_csharp">
-<a href="#dismissalusers_csharp" style="color: inherit; text-decoration: inherit;">Dismissal<wbr>Users</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="includeadmins_csharp">
-<a href="#includeadmins_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Admins</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use enforce_admins instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1260,33 +1160,13 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dismissalteams_go">
-<a href="#dismissalteams_go" style="color: inherit; text-decoration: inherit;">Dismissal<wbr>Teams</a>
+        <span id="dismissalrestrictions_go">
+<a href="#dismissalrestrictions_go" style="color: inherit; text-decoration: inherit;">Dismissal<wbr>Restrictions</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="dismissalusers_go">
-<a href="#dismissalusers_go" style="color: inherit; text-decoration: inherit;">Dismissal<wbr>Users</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="includeadmins_go">
-<a href="#includeadmins_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Admins</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use enforce_admins instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1327,33 +1207,13 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dismissalteams_nodejs">
-<a href="#dismissalteams_nodejs" style="color: inherit; text-decoration: inherit;">dismissal<wbr>Teams</a>
+        <span id="dismissalrestrictions_nodejs">
+<a href="#dismissalrestrictions_nodejs" style="color: inherit; text-decoration: inherit;">dismissal<wbr>Restrictions</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="dismissalusers_nodejs">
-<a href="#dismissalusers_nodejs" style="color: inherit; text-decoration: inherit;">dismissal<wbr>Users</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="includeadmins_nodejs">
-<a href="#includeadmins_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Admins</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use enforce_admins instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1394,33 +1254,13 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dismissal_teams_python">
-<a href="#dismissal_teams_python" style="color: inherit; text-decoration: inherit;">dismissal_<wbr>teams</a>
+        <span id="dismissal_restrictions_python">
+<a href="#dismissal_restrictions_python" style="color: inherit; text-decoration: inherit;">dismissal_<wbr>restrictions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="dismissal_users_python">
-<a href="#dismissal_users_python" style="color: inherit; text-decoration: inherit;">dismissal_<wbr>users</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="include_admins_python">
-<a href="#include_admins_python" style="color: inherit; text-decoration: inherit;">include_<wbr>admins</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use enforce_admins instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1438,7 +1278,7 @@ The following state arguments are supported:
 <a href="#required_approving_review_count_python" style="color: inherit; text-decoration: inherit;">required_<wbr>approving_<wbr>review_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1449,16 +1289,16 @@ The following state arguments are supported:
 
 
 
-<h4 id="branchprotectionrequiredstatuschecks">Branch<wbr>Protection<wbr>Required<wbr>Status<wbr>Checks</h4>
+<h4 id="branchprotectionrequiredstatuscheck">Branch<wbr>Protection<wbr>Required<wbr>Status<wbr>Check</h4>
 {{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/github/types/input/#BranchProtectionRequiredStatusChecks">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/github/types/output/#BranchProtectionRequiredStatusChecks">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/github/types/input/#BranchProtectionRequiredStatusCheck">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/github/types/output/#BranchProtectionRequiredStatusCheck">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/v2/go/github/?tab=doc#BranchProtectionRequiredStatusChecksArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/v2/go/github/?tab=doc#BranchProtectionRequiredStatusChecksOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/v2/go/github/?tab=doc#BranchProtectionRequiredStatusCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/v2/go/github/?tab=doc#BranchProtectionRequiredStatusCheckOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Github/Pulumi.Github.Inputs.BranchProtectionRequiredStatusChecksArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Github/Pulumi.Github.Outputs.BranchProtectionRequiredStatusChecks.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Github/Pulumi.Github.Inputs.BranchProtectionRequiredStatusCheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Github/Pulumi.Github.Outputs.BranchProtectionRequiredStatusCheck.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1476,16 +1316,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="includeadmins_csharp">
-<a href="#includeadmins_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Admins</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use enforce_admins instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1514,16 +1344,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="includeadmins_go">
-<a href="#includeadmins_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Admins</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use enforce_admins instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="strict_go">
@@ -1551,16 +1371,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="includeadmins_nodejs">
-<a href="#includeadmins_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Admins</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use enforce_admins instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="strict_nodejs">
@@ -1584,19 +1394,9 @@ The following state arguments are supported:
 <a href="#contexts_python" style="color: inherit; text-decoration: inherit;">contexts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="include_admins_python">
-<a href="#include_admins_python" style="color: inherit; text-decoration: inherit;">include_<wbr>admins</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use enforce_admins instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1605,172 +1405,6 @@ The following state arguments are supported:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-<h4 id="branchprotectionrestrictions">Branch<wbr>Protection<wbr>Restrictions</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/github/types/input/#BranchProtectionRestrictions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/github/types/output/#BranchProtectionRestrictions">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/v2/go/github/?tab=doc#BranchProtectionRestrictionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/v2/go/github/?tab=doc#BranchProtectionRestrictionsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Github/Pulumi.Github.Inputs.BranchProtectionRestrictionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Github/Pulumi.Github.Outputs.BranchProtectionRestrictions.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="apps_csharp">
-<a href="#apps_csharp" style="color: inherit; text-decoration: inherit;">Apps</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="teams_csharp">
-<a href="#teams_csharp" style="color: inherit; text-decoration: inherit;">Teams</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="users_csharp">
-<a href="#users_csharp" style="color: inherit; text-decoration: inherit;">Users</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="apps_go">
-<a href="#apps_go" style="color: inherit; text-decoration: inherit;">Apps</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="teams_go">
-<a href="#teams_go" style="color: inherit; text-decoration: inherit;">Teams</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="users_go">
-<a href="#users_go" style="color: inherit; text-decoration: inherit;">Users</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="apps_nodejs">
-<a href="#apps_nodejs" style="color: inherit; text-decoration: inherit;">apps</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="teams_nodejs">
-<a href="#teams_nodejs" style="color: inherit; text-decoration: inherit;">teams</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="users_nodejs">
-<a href="#users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="apps_python">
-<a href="#apps_python" style="color: inherit; text-decoration: inherit;">apps</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="teams_python">
-<a href="#teams_python" style="color: inherit; text-decoration: inherit;">teams</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="users_python">
-<a href="#users_python" style="color: inherit; text-decoration: inherit;">users</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

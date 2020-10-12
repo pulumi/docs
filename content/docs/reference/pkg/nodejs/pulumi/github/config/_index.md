@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/github | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/github package."
-git_sha: "fc398a6cc25469b02eb33215a870f31118096cde"
+git_sha: "a732b7a53920a44c909cc478804dc4d86040656f"
 block_external_search_index: true
 ---
 
@@ -31,7 +31,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="baseUrl" data-link-title="baseUrl">
-    <a href="https://github.com/pulumi/pulumi-github/blob/fc398a6cc25469b02eb33215a870f31118096cde/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-github/blob/a732b7a53920a44c909cc478804dc4d86040656f/sdk/nodejs/config/vars.ts#L12">
         let <strong>baseUrl</strong>
     </a>
 </h3>
@@ -41,7 +41,7 @@ block_external_search_index: true
 The GitHub Base API URL
 
 <h3 class="pdoc-module-header" id="insecure" data-link-title="insecure">
-    <a href="https://github.com/pulumi/pulumi-github/blob/fc398a6cc25469b02eb33215a870f31118096cde/sdk/nodejs/config/vars.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-github/blob/a732b7a53920a44c909cc478804dc4d86040656f/sdk/nodejs/config/vars.ts#L16">
         let <strong>insecure</strong>
     </a>
 </h3>
@@ -51,7 +51,7 @@ The GitHub Base API URL
 Enable `insecure` mode for testing purposes
 
 <h3 class="pdoc-module-header" id="organization" data-link-title="organization">
-    <a href="https://github.com/pulumi/pulumi-github/blob/fc398a6cc25469b02eb33215a870f31118096cde/sdk/nodejs/config/vars.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-github/blob/a732b7a53920a44c909cc478804dc4d86040656f/sdk/nodejs/config/vars.ts#L20">
         let <strong>organization</strong>
     </a>
 </h3>
@@ -61,7 +61,7 @@ Enable `insecure` mode for testing purposes
 The GitHub organization name to manage. Use this field instead of `owner` when managing organization accounts.
 
 <h3 class="pdoc-module-header" id="owner" data-link-title="owner">
-    <a href="https://github.com/pulumi/pulumi-github/blob/fc398a6cc25469b02eb33215a870f31118096cde/sdk/nodejs/config/vars.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-github/blob/a732b7a53920a44c909cc478804dc4d86040656f/sdk/nodejs/config/vars.ts#L24">
         let <strong>owner</strong>
     </a>
 </h3>
@@ -71,7 +71,7 @@ The GitHub organization name to manage. Use this field instead of `owner` when m
 The GitHub owner name to manage. Use this field instead of `organization` when managing individual accounts.
 
 <h3 class="pdoc-module-header" id="token" data-link-title="token">
-    <a href="https://github.com/pulumi/pulumi-github/blob/fc398a6cc25469b02eb33215a870f31118096cde/sdk/nodejs/config/vars.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-github/blob/a732b7a53920a44c909cc478804dc4d86040656f/sdk/nodejs/config/vars.ts#L28">
         let <strong>token</strong>
     </a>
 </h3>
