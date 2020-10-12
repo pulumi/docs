@@ -13,6 +13,7 @@ Explore the resources and functions of the fc module in the AliCloud package.
 <ul class="api">
     <li><a href="customdomain" title="CustomDomain"><span class="symbol resource"></span>CustomDomain</a></li>
     <li><a href="function" title="Function"><span class="symbol resource"></span>Function</a></li>
+    <li><a href="functionasyncinvokeconfig" title="FunctionAsyncInvokeConfig"><span class="symbol resource"></span>FunctionAsyncInvokeConfig</a></li>
     <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
     <li><a href="trigger" title="Trigger"><span class="symbol resource"></span>Trigger</a></li>
 </ul>
@@ -35,7 +36,7 @@ Explore the resources and functions of the fc module in the AliCloud package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.20.0</dd>
+	<dd>2.21.0</dd>
 </dl>
 
 

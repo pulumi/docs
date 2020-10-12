@@ -3,7 +3,7 @@ title: "Module cfg"
 title_tag: "Module cfg | Package @pulumi/alicloud | Node.js SDK"
 linktitle: "cfg"
 meta_desc: "Explore members of the cfg module in the @pulumi/alicloud package."
-git_sha: "53a14196404e14d4db003ca4874e5c6735471578"
+git_sha: "1e99e347a9a110e183f8ab5e2230e5ca3afe964d"
 block_external_search_index: true
 ---
 
@@ -48,7 +48,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="ConfigurationRecorder" data-link-title="ConfigurationRecorder">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/configurationRecorder.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/configurationRecorder.ts#L27">
         Resource <strong>ConfigurationRecorder</strong>
     </a>
 </h3>
@@ -75,7 +75,7 @@ const example = new alicloud.cfg.ConfigurationRecorder("example", {
 ```
 
 <h4 class="pdoc-member-header" id="ConfigurationRecorder-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/configurationRecorder.ts#L74"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/configurationRecorder.ts#L74"> <b>constructor</b></a>
 </h4>
 
 
@@ -89,7 +89,7 @@ Create a ConfigurationRecorder resource with the given unique name, arguments, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ConfigurationRecorder-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/configurationRecorder.ts#L37">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/configurationRecorder.ts#L37">method <b>get</b></a>
 </h4>
 
 
@@ -100,14 +100,14 @@ Get an existing ConfigurationRecorder resource's state with the given name, ID, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ConfigurationRecorder-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/configurationRecorder.ts#L27">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/configurationRecorder.ts#L27">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ConfigurationRecorder-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/configurationRecorder.ts#L48">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/configurationRecorder.ts#L48">method <b>isInstance</b></a>
 </h4>
 
 
@@ -118,7 +118,7 @@ Returns true if the given object is an instance of ConfigurationRecorder.  This 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ConfigurationRecorder-enterpriseEdition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/configurationRecorder.ts#L58">property <b>enterpriseEdition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/configurationRecorder.ts#L58">property <b>enterpriseEdition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enterpriseEdition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -126,7 +126,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 - Whether to use the enterprise version configuration audit. Valid values: `true` and `fales`. Default value `false`.
 
 <h4 class="pdoc-member-header" id="ConfigurationRecorder-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/configurationRecorder.ts#L27">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/configurationRecorder.ts#L27">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -135,7 +135,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ConfigurationRecorder-organizationEnableStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/configurationRecorder.ts#L62">property <b>organizationEnableStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/configurationRecorder.ts#L62">property <b>organizationEnableStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>organizationEnableStatus: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -143,7 +143,7 @@ deployments and may be missing (undefined) during planning phases.
 Status of resource monitoring. Values: `REGISTRABLE`: Not enabled, `BUILDING`: Building and `REGISTERED`: Enabled.
 
 <h4 class="pdoc-member-header" id="ConfigurationRecorder-organizationMasterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/configurationRecorder.ts#L66">property <b>organizationMasterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/configurationRecorder.ts#L66">property <b>organizationMasterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>organizationMasterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -151,7 +151,7 @@ Status of resource monitoring. Values: `REGISTRABLE`: Not enabled, `BUILDING`: B
 The ID of the Enterprise management account.
 
 <h4 class="pdoc-member-header" id="ConfigurationRecorder-resourceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/configurationRecorder.ts#L70">property <b>resourceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/configurationRecorder.ts#L70">property <b>resourceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -159,7 +159,7 @@ The ID of the Enterprise management account.
 A list of resource types to be monitored. [Resource types that support Cloud Config.](https://www.alibabacloud.com/help/en/doc-detail/127411.htm)
 
 <h4 class="pdoc-member-header" id="ConfigurationRecorder-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/configurationRecorder.ts#L74">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/configurationRecorder.ts#L74">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -167,7 +167,7 @@ A list of resource types to be monitored. [Resource types that support Cloud Con
 Enterprise version configuration audit enabled status. Values: `REGISTRABLE`: Not registered, `BUILDING`: Under construction, `REGISTERED`: Registered and `REBUILDING`: Rebuilding.
 
 <h4 class="pdoc-member-header" id="ConfigurationRecorder-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/configurationRecorder.ts#L27">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/configurationRecorder.ts#L27">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -176,14 +176,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="DeliveryChannel" data-link-title="DeliveryChannel">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/deliveryChannel.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/deliveryChannel.ts#L7">
         Resource <strong>DeliveryChannel</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>DeliveryChannel</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="DeliveryChannel-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/deliveryChannel.ts#L65"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/deliveryChannel.ts#L65"> <b>constructor</b></a>
 </h4>
 
 
@@ -197,7 +197,7 @@ Create a DeliveryChannel resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DeliveryChannel-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/deliveryChannel.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/deliveryChannel.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -208,14 +208,14 @@ Get an existing DeliveryChannel resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DeliveryChannel-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/deliveryChannel.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/deliveryChannel.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DeliveryChannel-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/deliveryChannel.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/deliveryChannel.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -226,7 +226,7 @@ Returns true if the given object is an instance of DeliveryChannel.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DeliveryChannel-deliveryChannelAssumeRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/deliveryChannel.ts#L38">property <b>deliveryChannelAssumeRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/deliveryChannel.ts#L38">property <b>deliveryChannelAssumeRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deliveryChannelAssumeRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -234,7 +234,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Alibaba Cloud Resource Name (ARN) of the role to be assumed by the delivery method.
 
 <h4 class="pdoc-member-header" id="DeliveryChannel-deliveryChannelCondition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/deliveryChannel.ts#L42">property <b>deliveryChannelCondition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/deliveryChannel.ts#L42">property <b>deliveryChannelCondition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deliveryChannelCondition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -242,7 +242,7 @@ The Alibaba Cloud Resource Name (ARN) of the role to be assumed by the delivery 
 The rule attached to the delivery method. This parameter is applicable only to delivery methods of the MNS type. Please refer to api [PutDeliveryChannel](https://www.alibabacloud.com/help/en/doc-detail/174253.htm) for example format.
 
 <h4 class="pdoc-member-header" id="DeliveryChannel-deliveryChannelName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/deliveryChannel.ts#L46">property <b>deliveryChannelName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/deliveryChannel.ts#L46">property <b>deliveryChannelName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deliveryChannelName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -250,7 +250,7 @@ The rule attached to the delivery method. This parameter is applicable only to d
 The name of the delivery channel.
 
 <h4 class="pdoc-member-header" id="DeliveryChannel-deliveryChannelTargetArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/deliveryChannel.ts#L53">property <b>deliveryChannelTargetArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/deliveryChannel.ts#L53">property <b>deliveryChannelTargetArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deliveryChannelTargetArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -261,7 +261,7 @@ The name of the delivery channel.
 - `acs:log:{RegionId}:{Aliuid}:project/{projectName}/logstore/{logstoreName}`: if your delivery destination is a Log Service Logstore.
 
 <h4 class="pdoc-member-header" id="DeliveryChannel-deliveryChannelType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/deliveryChannel.ts#L57">property <b>deliveryChannelType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/deliveryChannel.ts#L57">property <b>deliveryChannelType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deliveryChannelType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -269,7 +269,7 @@ The name of the delivery channel.
 - The type of the delivery method. This parameter is required when you create a delivery method. Valid values: `OSS`: Object Storage, `MNS`: Message Service, `SLS`: Log Service.
 
 <h4 class="pdoc-member-header" id="DeliveryChannel-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/deliveryChannel.ts#L61">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/deliveryChannel.ts#L61">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -277,7 +277,7 @@ The name of the delivery channel.
 The description of the delivery method.
 
 <h4 class="pdoc-member-header" id="DeliveryChannel-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/deliveryChannel.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/deliveryChannel.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -286,7 +286,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DeliveryChannel-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/deliveryChannel.ts#L65">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/deliveryChannel.ts#L65">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -294,7 +294,7 @@ deployments and may be missing (undefined) during planning phases.
 The status of the delivery method. Valid values: `0`: The delivery method is disabled., `1`: The delivery destination is enabled. This is the default value.
 
 <h4 class="pdoc-member-header" id="DeliveryChannel-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/deliveryChannel.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/deliveryChannel.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -303,7 +303,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Rule" data-link-title="Rule">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L38">
         Resource <strong>Rule</strong>
     </a>
 </h3>
@@ -341,7 +341,7 @@ const example = new alicloud.cfg.Rule("example", {
 ```
 
 <h4 class="pdoc-member-header" id="Rule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L113"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L113"> <b>constructor</b></a>
 </h4>
 
 
@@ -355,7 +355,7 @@ Create a Rule resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Rule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L48">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L48">method <b>get</b></a>
 </h4>
 
 
@@ -366,14 +366,14 @@ Get an existing Rule resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Rule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L38">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L38">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Rule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L59">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L59">method <b>isInstance</b></a>
 </h4>
 
 
@@ -384,7 +384,7 @@ Returns true if the given object is an instance of Rule.  This is designed to wo
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Rule-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L69">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L69">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -392,7 +392,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The description of the Config Rule.
 
 <h4 class="pdoc-member-header" id="Rule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L38">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L38">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -401,7 +401,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Rule-inputParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L73">property <b>inputParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L73">property <b>inputParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>inputParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -409,7 +409,7 @@ deployments and may be missing (undefined) during planning phases.
 Threshold value for managed rule triggering.
 
 <h4 class="pdoc-member-header" id="Rule-memberId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L77">property <b>memberId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L77">property <b>memberId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>memberId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -417,7 +417,7 @@ Threshold value for managed rule triggering.
 The ID of the member account to which the rule to be created or modified belongs. The default is empty. When `multiAccount` is set to true, this parameter is valid.
 
 <h4 class="pdoc-member-header" id="Rule-multiAccount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L81">property <b>multiAccount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L81">property <b>multiAccount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>multiAccount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -425,7 +425,7 @@ The ID of the member account to which the rule to be created or modified belongs
 Whether the enterprise management account is a member account to create or modify rules. Valid values: `true`: Enterprise management accounts create or modify rules for all member accounts in the resource directory. `false`:The enterprise management account creates or modifies rules for this account. Default value is `false`.
 
 <h4 class="pdoc-member-header" id="Rule-riskLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L85">property <b>riskLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L85">property <b>riskLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>riskLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -433,7 +433,7 @@ Whether the enterprise management account is a member account to create or modif
 The risk level of the Config Rule. Valid values: `1`: Critical ,`2`: Warning , `3`: Info.
 
 <h4 class="pdoc-member-header" id="Rule-ruleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L89">property <b>ruleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L89">property <b>ruleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ruleName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -441,7 +441,7 @@ The risk level of the Config Rule. Valid values: `1`: Critical ,`2`: Warning , `
 The name of the Config Rule.
 
 <h4 class="pdoc-member-header" id="Rule-scopeComplianceResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L93">property <b>scopeComplianceResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L93">property <b>scopeComplianceResourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scopeComplianceResourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -449,7 +449,7 @@ The name of the Config Rule.
 The ID of the resource to be evaluated. If not set, all resources are evaluated.
 
 <h4 class="pdoc-member-header" id="Rule-scopeComplianceResourceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L97">property <b>scopeComplianceResourceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L97">property <b>scopeComplianceResourceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scopeComplianceResourceTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -457,7 +457,7 @@ The ID of the resource to be evaluated. If not set, all resources are evaluated.
 Resource types to be evaluated. [Alibaba Cloud services that support Cloud Config.](https://www.alibabacloud.com/help/en/doc-detail/127411.htm)
 
 <h4 class="pdoc-member-header" id="Rule-sourceDetailMessageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L101">property <b>sourceDetailMessageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L101">property <b>sourceDetailMessageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceDetailMessageType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -465,7 +465,7 @@ Resource types to be evaluated. [Alibaba Cloud services that support Cloud Confi
 Trigger mechanism of rules. Valid values: `ConfigurationItemChangeNotification`,`OversizedConfigurationItemChangeNotification` and `ScheduledNotification`.
 
 <h4 class="pdoc-member-header" id="Rule-sourceIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L105">property <b>sourceIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L105">property <b>sourceIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -473,7 +473,7 @@ Trigger mechanism of rules. Valid values: `ConfigurationItemChangeNotification`,
 The name of the custom rule or managed rules. Using managed rules, refer to [List of Managed rules.](https://www.alibabacloud.com/help/en/doc-detail/127404.htm)
 
 <h4 class="pdoc-member-header" id="Rule-sourceMaximumExecutionFrequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L109">property <b>sourceMaximumExecutionFrequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L109">property <b>sourceMaximumExecutionFrequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceMaximumExecutionFrequency: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -481,7 +481,7 @@ The name of the custom rule or managed rules. Using managed rules, refer to [Lis
 Rule execution cycle. Valid values: `One_Hour`, `Three_Hours`, `Six_Hours`, `Twelve_Hours` and `TwentyFour_Hours`.
 
 <h4 class="pdoc-member-header" id="Rule-sourceOwner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L113">property <b>sourceOwner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L113">property <b>sourceOwner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceOwner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -489,7 +489,7 @@ Rule execution cycle. Valid values: `One_Hour`, `Three_Hours`, `Six_Hours`, `Twe
 The source owner of the Config Rule. Values: `CUSTOM_FC`: Custom rules, `ALIYUN`: Trusteeship rules.
 
 <h4 class="pdoc-member-header" id="Rule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L38">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L38">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -500,7 +500,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getConfigurationRecorders" data-link-title="getConfigurationRecorders">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/getConfigurationRecorders.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/getConfigurationRecorders.ts#L24">
         Function <strong>getConfigurationRecorders</strong>
     </a>
 </h3>
@@ -524,7 +524,7 @@ export const listOfResourceTypes = data.alicloud_config_configuration_recorders[
 ```
 
 <h3 class="pdoc-module-header" id="getDeliveryChannels" data-link-title="getDeliveryChannels">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/getDeliveryChannels.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/getDeliveryChannels.ts#L27">
         Function <strong>getDeliveryChannels</strong>
     </a>
 </h3>
@@ -551,7 +551,7 @@ export const firstConfigDeliveryChannelId = example.then(example => example.chan
 ```
 
 <h3 class="pdoc-module-header" id="getRules" data-link-title="getRules">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/getRules.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/getRules.ts#L27">
         Function <strong>getRules</strong>
     </a>
 </h3>
@@ -580,7 +580,7 @@ export const firstConfigRuleId = example.then(example => example.rules[0].id);
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ConfigurationRecorderArgs" data-link-title="ConfigurationRecorderArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/configurationRecorder.ts#L141">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/configurationRecorder.ts#L141">
         interface <strong>ConfigurationRecorderArgs</strong>
     </a>
 </h3>
@@ -590,7 +590,7 @@ export const firstConfigRuleId = example.then(example => example.rules[0].id);
 The set of arguments for constructing a ConfigurationRecorder resource.
 
 <h4 class="pdoc-member-header" id="ConfigurationRecorderArgs-enterpriseEdition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/configurationRecorder.ts#L145">property <b>enterpriseEdition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/configurationRecorder.ts#L145">property <b>enterpriseEdition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enterpriseEdition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -598,7 +598,7 @@ The set of arguments for constructing a ConfigurationRecorder resource.
 - Whether to use the enterprise version configuration audit. Valid values: `true` and `fales`. Default value `false`.
 
 <h4 class="pdoc-member-header" id="ConfigurationRecorderArgs-resourceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/configurationRecorder.ts#L149">property <b>resourceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/configurationRecorder.ts#L149">property <b>resourceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -606,7 +606,7 @@ The set of arguments for constructing a ConfigurationRecorder resource.
 A list of resource types to be monitored. [Resource types that support Cloud Config.](https://www.alibabacloud.com/help/en/doc-detail/127411.htm)
 
 <h3 class="pdoc-module-header" id="ConfigurationRecorderState" data-link-title="ConfigurationRecorderState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/configurationRecorder.ts#L115">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/configurationRecorder.ts#L115">
         interface <strong>ConfigurationRecorderState</strong>
     </a>
 </h3>
@@ -616,7 +616,7 @@ A list of resource types to be monitored. [Resource types that support Cloud Con
 Input properties used for looking up and filtering ConfigurationRecorder resources.
 
 <h4 class="pdoc-member-header" id="ConfigurationRecorderState-enterpriseEdition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/configurationRecorder.ts#L119">property <b>enterpriseEdition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/configurationRecorder.ts#L119">property <b>enterpriseEdition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enterpriseEdition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -624,7 +624,7 @@ Input properties used for looking up and filtering ConfigurationRecorder resourc
 - Whether to use the enterprise version configuration audit. Valid values: `true` and `fales`. Default value `false`.
 
 <h4 class="pdoc-member-header" id="ConfigurationRecorderState-organizationEnableStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/configurationRecorder.ts#L123">property <b>organizationEnableStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/configurationRecorder.ts#L123">property <b>organizationEnableStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>organizationEnableStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -632,7 +632,7 @@ Input properties used for looking up and filtering ConfigurationRecorder resourc
 Status of resource monitoring. Values: `REGISTRABLE`: Not enabled, `BUILDING`: Building and `REGISTERED`: Enabled.
 
 <h4 class="pdoc-member-header" id="ConfigurationRecorderState-organizationMasterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/configurationRecorder.ts#L127">property <b>organizationMasterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/configurationRecorder.ts#L127">property <b>organizationMasterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>organizationMasterId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -640,7 +640,7 @@ Status of resource monitoring. Values: `REGISTRABLE`: Not enabled, `BUILDING`: B
 The ID of the Enterprise management account.
 
 <h4 class="pdoc-member-header" id="ConfigurationRecorderState-resourceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/configurationRecorder.ts#L131">property <b>resourceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/configurationRecorder.ts#L131">property <b>resourceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -648,7 +648,7 @@ The ID of the Enterprise management account.
 A list of resource types to be monitored. [Resource types that support Cloud Config.](https://www.alibabacloud.com/help/en/doc-detail/127411.htm)
 
 <h4 class="pdoc-member-header" id="ConfigurationRecorderState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/configurationRecorder.ts#L135">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/configurationRecorder.ts#L135">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -656,7 +656,7 @@ A list of resource types to be monitored. [Resource types that support Cloud Con
 Enterprise version configuration audit enabled status. Values: `REGISTRABLE`: Not registered, `BUILDING`: Under construction, `REGISTERED`: Registered and `REBUILDING`: Rebuilding.
 
 <h3 class="pdoc-module-header" id="DeliveryChannelArgs" data-link-title="DeliveryChannelArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/deliveryChannel.ts#L156">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/deliveryChannel.ts#L156">
         interface <strong>DeliveryChannelArgs</strong>
     </a>
 </h3>
@@ -666,7 +666,7 @@ Enterprise version configuration audit enabled status. Values: `REGISTRABLE`: No
 The set of arguments for constructing a DeliveryChannel resource.
 
 <h4 class="pdoc-member-header" id="DeliveryChannelArgs-deliveryChannelAssumeRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/deliveryChannel.ts#L160">property <b>deliveryChannelAssumeRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/deliveryChannel.ts#L160">property <b>deliveryChannelAssumeRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deliveryChannelAssumeRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -674,7 +674,7 @@ The set of arguments for constructing a DeliveryChannel resource.
 The Alibaba Cloud Resource Name (ARN) of the role to be assumed by the delivery method.
 
 <h4 class="pdoc-member-header" id="DeliveryChannelArgs-deliveryChannelCondition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/deliveryChannel.ts#L164">property <b>deliveryChannelCondition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/deliveryChannel.ts#L164">property <b>deliveryChannelCondition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deliveryChannelCondition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -682,7 +682,7 @@ The Alibaba Cloud Resource Name (ARN) of the role to be assumed by the delivery 
 The rule attached to the delivery method. This parameter is applicable only to delivery methods of the MNS type. Please refer to api [PutDeliveryChannel](https://www.alibabacloud.com/help/en/doc-detail/174253.htm) for example format.
 
 <h4 class="pdoc-member-header" id="DeliveryChannelArgs-deliveryChannelName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/deliveryChannel.ts#L168">property <b>deliveryChannelName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/deliveryChannel.ts#L168">property <b>deliveryChannelName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deliveryChannelName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -690,7 +690,7 @@ The rule attached to the delivery method. This parameter is applicable only to d
 The name of the delivery channel.
 
 <h4 class="pdoc-member-header" id="DeliveryChannelArgs-deliveryChannelTargetArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/deliveryChannel.ts#L175">property <b>deliveryChannelTargetArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/deliveryChannel.ts#L175">property <b>deliveryChannelTargetArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deliveryChannelTargetArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -701,7 +701,7 @@ The name of the delivery channel.
 - `acs:log:{RegionId}:{Aliuid}:project/{projectName}/logstore/{logstoreName}`: if your delivery destination is a Log Service Logstore.
 
 <h4 class="pdoc-member-header" id="DeliveryChannelArgs-deliveryChannelType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/deliveryChannel.ts#L179">property <b>deliveryChannelType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/deliveryChannel.ts#L179">property <b>deliveryChannelType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deliveryChannelType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -709,7 +709,7 @@ The name of the delivery channel.
 - The type of the delivery method. This parameter is required when you create a delivery method. Valid values: `OSS`: Object Storage, `MNS`: Message Service, `SLS`: Log Service.
 
 <h4 class="pdoc-member-header" id="DeliveryChannelArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/deliveryChannel.ts#L183">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/deliveryChannel.ts#L183">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -717,7 +717,7 @@ The name of the delivery channel.
 The description of the delivery method.
 
 <h4 class="pdoc-member-header" id="DeliveryChannelArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/deliveryChannel.ts#L187">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/deliveryChannel.ts#L187">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -725,7 +725,7 @@ The description of the delivery method.
 The status of the delivery method. Valid values: `0`: The delivery method is disabled., `1`: The delivery destination is enabled. This is the default value.
 
 <h3 class="pdoc-module-header" id="DeliveryChannelState" data-link-title="DeliveryChannelState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/deliveryChannel.ts#L119">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/deliveryChannel.ts#L119">
         interface <strong>DeliveryChannelState</strong>
     </a>
 </h3>
@@ -735,7 +735,7 @@ The status of the delivery method. Valid values: `0`: The delivery method is dis
 Input properties used for looking up and filtering DeliveryChannel resources.
 
 <h4 class="pdoc-member-header" id="DeliveryChannelState-deliveryChannelAssumeRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/deliveryChannel.ts#L123">property <b>deliveryChannelAssumeRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/deliveryChannel.ts#L123">property <b>deliveryChannelAssumeRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deliveryChannelAssumeRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -743,7 +743,7 @@ Input properties used for looking up and filtering DeliveryChannel resources.
 The Alibaba Cloud Resource Name (ARN) of the role to be assumed by the delivery method.
 
 <h4 class="pdoc-member-header" id="DeliveryChannelState-deliveryChannelCondition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/deliveryChannel.ts#L127">property <b>deliveryChannelCondition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/deliveryChannel.ts#L127">property <b>deliveryChannelCondition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deliveryChannelCondition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -751,7 +751,7 @@ The Alibaba Cloud Resource Name (ARN) of the role to be assumed by the delivery 
 The rule attached to the delivery method. This parameter is applicable only to delivery methods of the MNS type. Please refer to api [PutDeliveryChannel](https://www.alibabacloud.com/help/en/doc-detail/174253.htm) for example format.
 
 <h4 class="pdoc-member-header" id="DeliveryChannelState-deliveryChannelName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/deliveryChannel.ts#L131">property <b>deliveryChannelName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/deliveryChannel.ts#L131">property <b>deliveryChannelName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deliveryChannelName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -759,7 +759,7 @@ The rule attached to the delivery method. This parameter is applicable only to d
 The name of the delivery channel.
 
 <h4 class="pdoc-member-header" id="DeliveryChannelState-deliveryChannelTargetArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/deliveryChannel.ts#L138">property <b>deliveryChannelTargetArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/deliveryChannel.ts#L138">property <b>deliveryChannelTargetArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deliveryChannelTargetArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -770,7 +770,7 @@ The name of the delivery channel.
 - `acs:log:{RegionId}:{Aliuid}:project/{projectName}/logstore/{logstoreName}`: if your delivery destination is a Log Service Logstore.
 
 <h4 class="pdoc-member-header" id="DeliveryChannelState-deliveryChannelType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/deliveryChannel.ts#L142">property <b>deliveryChannelType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/deliveryChannel.ts#L142">property <b>deliveryChannelType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deliveryChannelType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -778,7 +778,7 @@ The name of the delivery channel.
 - The type of the delivery method. This parameter is required when you create a delivery method. Valid values: `OSS`: Object Storage, `MNS`: Message Service, `SLS`: Log Service.
 
 <h4 class="pdoc-member-header" id="DeliveryChannelState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/deliveryChannel.ts#L146">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/deliveryChannel.ts#L146">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -786,7 +786,7 @@ The name of the delivery channel.
 The description of the delivery method.
 
 <h4 class="pdoc-member-header" id="DeliveryChannelState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/deliveryChannel.ts#L150">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/deliveryChannel.ts#L150">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -794,7 +794,7 @@ The description of the delivery method.
 The status of the delivery method. Valid values: `0`: The delivery method is disabled., `1`: The delivery destination is enabled. This is the default value.
 
 <h3 class="pdoc-module-header" id="GetConfigurationRecordersArgs" data-link-title="GetConfigurationRecordersArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/getConfigurationRecorders.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/getConfigurationRecorders.ts#L41">
         interface <strong>GetConfigurationRecordersArgs</strong>
     </a>
 </h3>
@@ -804,12 +804,12 @@ The status of the delivery method. Valid values: `0`: The delivery method is dis
 A collection of arguments for invoking getConfigurationRecorders.
 
 <h4 class="pdoc-member-header" id="GetConfigurationRecordersArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/getConfigurationRecorders.ts#L42">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/getConfigurationRecorders.ts#L42">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetConfigurationRecordersResult" data-link-title="GetConfigurationRecordersResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/getConfigurationRecorders.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/getConfigurationRecorders.ts#L48">
         interface <strong>GetConfigurationRecordersResult</strong>
     </a>
 </h3>
@@ -819,7 +819,7 @@ A collection of arguments for invoking getConfigurationRecorders.
 A collection of values returned by getConfigurationRecorders.
 
 <h4 class="pdoc-member-header" id="GetConfigurationRecordersResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/getConfigurationRecorders.ts#L52">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/getConfigurationRecorders.ts#L52">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -827,12 +827,12 @@ A collection of values returned by getConfigurationRecorders.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetConfigurationRecordersResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/getConfigurationRecorders.ts#L53">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/getConfigurationRecorders.ts#L53">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetConfigurationRecordersResult-recorders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/getConfigurationRecorders.ts#L57">property <b>recorders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/getConfigurationRecorders.ts#L57">property <b>recorders</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recorders: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetConfigurationRecordersRecorder'>GetConfigurationRecordersRecorder</a>[];</code></pre>
@@ -840,7 +840,7 @@ The provider-assigned unique ID for this managed resource.
 A list of Config Configuration Recorders. Each element contains the following attributes:
 
 <h3 class="pdoc-module-header" id="GetDeliveryChannelsArgs" data-link-title="GetDeliveryChannelsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/getDeliveryChannels.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/getDeliveryChannels.ts#L47">
         interface <strong>GetDeliveryChannelsArgs</strong>
     </a>
 </h3>
@@ -850,7 +850,7 @@ A list of Config Configuration Recorders. Each element contains the following at
 A collection of arguments for invoking getDeliveryChannels.
 
 <h4 class="pdoc-member-header" id="GetDeliveryChannelsArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/getDeliveryChannels.ts#L51">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/getDeliveryChannels.ts#L51">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -858,7 +858,7 @@ A collection of arguments for invoking getDeliveryChannels.
 A list of Config Delivery Channel IDs.
 
 <h4 class="pdoc-member-header" id="GetDeliveryChannelsArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/getDeliveryChannels.ts#L55">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/getDeliveryChannels.ts#L55">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -866,12 +866,12 @@ A list of Config Delivery Channel IDs.
 A regex string to filter results by delivery channel name.
 
 <h4 class="pdoc-member-header" id="GetDeliveryChannelsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/getDeliveryChannels.ts#L56">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/getDeliveryChannels.ts#L56">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDeliveryChannelsArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/getDeliveryChannels.ts#L60">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/getDeliveryChannels.ts#L60">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -879,7 +879,7 @@ A regex string to filter results by delivery channel name.
 The status of the config delivery channel. Valid values `0`: Disable delivery channel, `1`: Enable delivery channel.
 
 <h3 class="pdoc-module-header" id="GetDeliveryChannelsResult" data-link-title="GetDeliveryChannelsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/getDeliveryChannels.ts#L66">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/getDeliveryChannels.ts#L66">
         interface <strong>GetDeliveryChannelsResult</strong>
     </a>
 </h3>
@@ -889,7 +889,7 @@ The status of the config delivery channel. Valid values `0`: Disable delivery ch
 A collection of values returned by getDeliveryChannels.
 
 <h4 class="pdoc-member-header" id="GetDeliveryChannelsResult-channels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/getDeliveryChannels.ts#L70">property <b>channels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/getDeliveryChannels.ts#L70">property <b>channels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>channels: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetDeliveryChannelsChannel'>GetDeliveryChannelsChannel</a>[];</code></pre>
@@ -897,7 +897,7 @@ A collection of values returned by getDeliveryChannels.
 A list of Config Delivery Channels. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetDeliveryChannelsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/getDeliveryChannels.ts#L74">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/getDeliveryChannels.ts#L74">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -905,7 +905,7 @@ A list of Config Delivery Channels. Each element contains the following attribut
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDeliveryChannelsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/getDeliveryChannels.ts#L78">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/getDeliveryChannels.ts#L78">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -913,12 +913,12 @@ The provider-assigned unique ID for this managed resource.
 A list of Config Delivery Channel IDs.
 
 <h4 class="pdoc-member-header" id="GetDeliveryChannelsResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/getDeliveryChannels.ts#L79">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/getDeliveryChannels.ts#L79">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDeliveryChannelsResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/getDeliveryChannels.ts#L83">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/getDeliveryChannels.ts#L83">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -926,12 +926,12 @@ A list of Config Delivery Channel IDs.
 A list of Config Delivery Channel names.
 
 <h4 class="pdoc-member-header" id="GetDeliveryChannelsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/getDeliveryChannels.ts#L84">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/getDeliveryChannels.ts#L84">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDeliveryChannelsResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/getDeliveryChannels.ts#L88">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/getDeliveryChannels.ts#L88">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -939,7 +939,7 @@ A list of Config Delivery Channel names.
 The status of the delivery method.
 
 <h3 class="pdoc-module-header" id="GetRulesArgs" data-link-title="GetRulesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/getRules.ts#L51">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/getRules.ts#L51">
         interface <strong>GetRulesArgs</strong>
     </a>
 </h3>
@@ -949,7 +949,7 @@ The status of the delivery method.
 A collection of arguments for invoking getRules.
 
 <h4 class="pdoc-member-header" id="GetRulesArgs-configRuleState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/getRules.ts#L55">property <b>configRuleState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/getRules.ts#L55">property <b>configRuleState</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>configRuleState?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -957,7 +957,7 @@ A collection of arguments for invoking getRules.
 The state of the config rule, valid values: `ACTIVE`, `DELETING`, `DELETING_RESULTS`, `EVALUATING` and `INACTIVE`.
 
 <h4 class="pdoc-member-header" id="GetRulesArgs-enableDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/getRules.ts#L59">property <b>enableDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/getRules.ts#L59">property <b>enableDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -965,7 +965,7 @@ The state of the config rule, valid values: `ACTIVE`, `DELETING`, `DELETING_RESU
 Default to `false`. Set it to `true` can output more details about resource attributes.
 
 <h4 class="pdoc-member-header" id="GetRulesArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/getRules.ts#L63">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/getRules.ts#L63">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -973,7 +973,7 @@ Default to `false`. Set it to `true` can output more details about resource attr
 A list of Config Rule IDs.
 
 <h4 class="pdoc-member-header" id="GetRulesArgs-memberId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/getRules.ts#L67">property <b>memberId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/getRules.ts#L67">property <b>memberId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memberId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -981,7 +981,7 @@ A list of Config Rule IDs.
 The ID of the member account to which the rule to be queried belongs. The default is empty. When `multiAccount` is set to true, this parameter is valid.
 
 <h4 class="pdoc-member-header" id="GetRulesArgs-multiAccount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/getRules.ts#L71">property <b>multiAccount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/getRules.ts#L71">property <b>multiAccount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>multiAccount?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -989,7 +989,7 @@ The ID of the member account to which the rule to be queried belongs. The defaul
 Whether the enterprise management account queries the rule details of member accounts.
 
 <h4 class="pdoc-member-header" id="GetRulesArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/getRules.ts#L75">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/getRules.ts#L75">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -997,12 +997,12 @@ Whether the enterprise management account queries the rule details of member acc
 A regex string to filter results by rule name.
 
 <h4 class="pdoc-member-header" id="GetRulesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/getRules.ts#L76">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/getRules.ts#L76">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRulesArgs-riskLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/getRules.ts#L80">property <b>riskLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/getRules.ts#L80">property <b>riskLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>riskLevel?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1010,7 +1010,7 @@ A regex string to filter results by rule name.
 The risk level of Config Rule. Valid values: `1`: Critical ,`2`: Warning , `3`: Info.
 
 <h3 class="pdoc-module-header" id="GetRulesResult" data-link-title="GetRulesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/getRules.ts#L86">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/getRules.ts#L86">
         interface <strong>GetRulesResult</strong>
     </a>
 </h3>
@@ -1020,17 +1020,17 @@ The risk level of Config Rule. Valid values: `1`: Critical ,`2`: Warning , `3`: 
 A collection of values returned by getRules.
 
 <h4 class="pdoc-member-header" id="GetRulesResult-configRuleState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/getRules.ts#L87">property <b>configRuleState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/getRules.ts#L87">property <b>configRuleState</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>configRuleState?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRulesResult-enableDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/getRules.ts#L88">property <b>enableDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/getRules.ts#L88">property <b>enableDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRulesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/getRules.ts#L92">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/getRules.ts#L92">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1038,7 +1038,7 @@ A collection of values returned by getRules.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetRulesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/getRules.ts#L96">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/getRules.ts#L96">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1046,22 +1046,22 @@ The provider-assigned unique ID for this managed resource.
 A list of Config Rule IDs.
 
 <h4 class="pdoc-member-header" id="GetRulesResult-memberId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/getRules.ts#L97">property <b>memberId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/getRules.ts#L97">property <b>memberId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memberId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRulesResult-multiAccount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/getRules.ts#L98">property <b>multiAccount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/getRules.ts#L98">property <b>multiAccount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>multiAccount?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRulesResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/getRules.ts#L99">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/getRules.ts#L99">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRulesResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/getRules.ts#L103">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/getRules.ts#L103">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1069,17 +1069,17 @@ A list of Config Rule IDs.
 A list of Config Rule names.
 
 <h4 class="pdoc-member-header" id="GetRulesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/getRules.ts#L104">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/getRules.ts#L104">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRulesResult-riskLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/getRules.ts#L105">property <b>riskLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/getRules.ts#L105">property <b>riskLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>riskLevel?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRulesResult-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/getRules.ts#L109">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/getRules.ts#L109">property <b>rules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetRulesRule'>GetRulesRule</a>[];</code></pre>
@@ -1087,7 +1087,7 @@ A list of Config Rule names.
 A list of Config Rules. Each element contains the following attributes:
 
 <h3 class="pdoc-module-header" id="RuleArgs" data-link-title="RuleArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L240">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L240">
         interface <strong>RuleArgs</strong>
     </a>
 </h3>
@@ -1097,7 +1097,7 @@ A list of Config Rules. Each element contains the following attributes:
 The set of arguments for constructing a Rule resource.
 
 <h4 class="pdoc-member-header" id="RuleArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L244">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L244">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1105,7 +1105,7 @@ The set of arguments for constructing a Rule resource.
 The description of the Config Rule.
 
 <h4 class="pdoc-member-header" id="RuleArgs-inputParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L248">property <b>inputParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L248">property <b>inputParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1113,7 +1113,7 @@ The description of the Config Rule.
 Threshold value for managed rule triggering.
 
 <h4 class="pdoc-member-header" id="RuleArgs-memberId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L252">property <b>memberId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L252">property <b>memberId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memberId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1121,7 +1121,7 @@ Threshold value for managed rule triggering.
 The ID of the member account to which the rule to be created or modified belongs. The default is empty. When `multiAccount` is set to true, this parameter is valid.
 
 <h4 class="pdoc-member-header" id="RuleArgs-multiAccount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L256">property <b>multiAccount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L256">property <b>multiAccount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>multiAccount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1129,7 +1129,7 @@ The ID of the member account to which the rule to be created or modified belongs
 Whether the enterprise management account is a member account to create or modify rules. Valid values: `true`: Enterprise management accounts create or modify rules for all member accounts in the resource directory. `false`:The enterprise management account creates or modifies rules for this account. Default value is `false`.
 
 <h4 class="pdoc-member-header" id="RuleArgs-riskLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L260">property <b>riskLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L260">property <b>riskLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>riskLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1137,7 +1137,7 @@ Whether the enterprise management account is a member account to create or modif
 The risk level of the Config Rule. Valid values: `1`: Critical ,`2`: Warning , `3`: Info.
 
 <h4 class="pdoc-member-header" id="RuleArgs-ruleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L264">property <b>ruleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L264">property <b>ruleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ruleName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1145,7 +1145,7 @@ The risk level of the Config Rule. Valid values: `1`: Critical ,`2`: Warning , `
 The name of the Config Rule.
 
 <h4 class="pdoc-member-header" id="RuleArgs-scopeComplianceResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L268">property <b>scopeComplianceResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L268">property <b>scopeComplianceResourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopeComplianceResourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1153,7 +1153,7 @@ The name of the Config Rule.
 The ID of the resource to be evaluated. If not set, all resources are evaluated.
 
 <h4 class="pdoc-member-header" id="RuleArgs-scopeComplianceResourceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L272">property <b>scopeComplianceResourceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L272">property <b>scopeComplianceResourceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopeComplianceResourceTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1161,7 +1161,7 @@ The ID of the resource to be evaluated. If not set, all resources are evaluated.
 Resource types to be evaluated. [Alibaba Cloud services that support Cloud Config.](https://www.alibabacloud.com/help/en/doc-detail/127411.htm)
 
 <h4 class="pdoc-member-header" id="RuleArgs-sourceDetailMessageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L276">property <b>sourceDetailMessageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L276">property <b>sourceDetailMessageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceDetailMessageType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1169,7 +1169,7 @@ Resource types to be evaluated. [Alibaba Cloud services that support Cloud Confi
 Trigger mechanism of rules. Valid values: `ConfigurationItemChangeNotification`,`OversizedConfigurationItemChangeNotification` and `ScheduledNotification`.
 
 <h4 class="pdoc-member-header" id="RuleArgs-sourceIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L280">property <b>sourceIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L280">property <b>sourceIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1177,7 +1177,7 @@ Trigger mechanism of rules. Valid values: `ConfigurationItemChangeNotification`,
 The name of the custom rule or managed rules. Using managed rules, refer to [List of Managed rules.](https://www.alibabacloud.com/help/en/doc-detail/127404.htm)
 
 <h4 class="pdoc-member-header" id="RuleArgs-sourceMaximumExecutionFrequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L284">property <b>sourceMaximumExecutionFrequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L284">property <b>sourceMaximumExecutionFrequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceMaximumExecutionFrequency?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1185,7 +1185,7 @@ The name of the custom rule or managed rules. Using managed rules, refer to [Lis
 Rule execution cycle. Valid values: `One_Hour`, `Three_Hours`, `Six_Hours`, `Twelve_Hours` and `TwentyFour_Hours`.
 
 <h4 class="pdoc-member-header" id="RuleArgs-sourceOwner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L288">property <b>sourceOwner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L288">property <b>sourceOwner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceOwner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1193,7 +1193,7 @@ Rule execution cycle. Valid values: `One_Hour`, `Three_Hours`, `Six_Hours`, `Twe
 The source owner of the Config Rule. Values: `CUSTOM_FC`: Custom rules, `ALIYUN`: Trusteeship rules.
 
 <h3 class="pdoc-module-header" id="RuleState" data-link-title="RuleState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L186">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L186">
         interface <strong>RuleState</strong>
     </a>
 </h3>
@@ -1203,7 +1203,7 @@ The source owner of the Config Rule. Values: `CUSTOM_FC`: Custom rules, `ALIYUN`
 Input properties used for looking up and filtering Rule resources.
 
 <h4 class="pdoc-member-header" id="RuleState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L190">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L190">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1211,7 +1211,7 @@ Input properties used for looking up and filtering Rule resources.
 The description of the Config Rule.
 
 <h4 class="pdoc-member-header" id="RuleState-inputParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L194">property <b>inputParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L194">property <b>inputParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1219,7 +1219,7 @@ The description of the Config Rule.
 Threshold value for managed rule triggering.
 
 <h4 class="pdoc-member-header" id="RuleState-memberId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L198">property <b>memberId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L198">property <b>memberId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memberId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1227,7 +1227,7 @@ Threshold value for managed rule triggering.
 The ID of the member account to which the rule to be created or modified belongs. The default is empty. When `multiAccount` is set to true, this parameter is valid.
 
 <h4 class="pdoc-member-header" id="RuleState-multiAccount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L202">property <b>multiAccount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L202">property <b>multiAccount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>multiAccount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1235,7 +1235,7 @@ The ID of the member account to which the rule to be created or modified belongs
 Whether the enterprise management account is a member account to create or modify rules. Valid values: `true`: Enterprise management accounts create or modify rules for all member accounts in the resource directory. `false`:The enterprise management account creates or modifies rules for this account. Default value is `false`.
 
 <h4 class="pdoc-member-header" id="RuleState-riskLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L206">property <b>riskLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L206">property <b>riskLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>riskLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1243,7 +1243,7 @@ Whether the enterprise management account is a member account to create or modif
 The risk level of the Config Rule. Valid values: `1`: Critical ,`2`: Warning , `3`: Info.
 
 <h4 class="pdoc-member-header" id="RuleState-ruleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L210">property <b>ruleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L210">property <b>ruleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ruleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1251,7 +1251,7 @@ The risk level of the Config Rule. Valid values: `1`: Critical ,`2`: Warning , `
 The name of the Config Rule.
 
 <h4 class="pdoc-member-header" id="RuleState-scopeComplianceResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L214">property <b>scopeComplianceResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L214">property <b>scopeComplianceResourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopeComplianceResourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1259,7 +1259,7 @@ The name of the Config Rule.
 The ID of the resource to be evaluated. If not set, all resources are evaluated.
 
 <h4 class="pdoc-member-header" id="RuleState-scopeComplianceResourceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L218">property <b>scopeComplianceResourceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L218">property <b>scopeComplianceResourceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopeComplianceResourceTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1267,7 +1267,7 @@ The ID of the resource to be evaluated. If not set, all resources are evaluated.
 Resource types to be evaluated. [Alibaba Cloud services that support Cloud Config.](https://www.alibabacloud.com/help/en/doc-detail/127411.htm)
 
 <h4 class="pdoc-member-header" id="RuleState-sourceDetailMessageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L222">property <b>sourceDetailMessageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L222">property <b>sourceDetailMessageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceDetailMessageType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1275,7 +1275,7 @@ Resource types to be evaluated. [Alibaba Cloud services that support Cloud Confi
 Trigger mechanism of rules. Valid values: `ConfigurationItemChangeNotification`,`OversizedConfigurationItemChangeNotification` and `ScheduledNotification`.
 
 <h4 class="pdoc-member-header" id="RuleState-sourceIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L226">property <b>sourceIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L226">property <b>sourceIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1283,7 +1283,7 @@ Trigger mechanism of rules. Valid values: `ConfigurationItemChangeNotification`,
 The name of the custom rule or managed rules. Using managed rules, refer to [List of Managed rules.](https://www.alibabacloud.com/help/en/doc-detail/127404.htm)
 
 <h4 class="pdoc-member-header" id="RuleState-sourceMaximumExecutionFrequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L230">property <b>sourceMaximumExecutionFrequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L230">property <b>sourceMaximumExecutionFrequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceMaximumExecutionFrequency?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1291,7 +1291,7 @@ The name of the custom rule or managed rules. Using managed rules, refer to [Lis
 Rule execution cycle. Valid values: `One_Hour`, `Three_Hours`, `Six_Hours`, `Twelve_Hours` and `TwentyFour_Hours`.
 
 <h4 class="pdoc-member-header" id="RuleState-sourceOwner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/cfg/rule.ts#L234">property <b>sourceOwner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cfg/rule.ts#L234">property <b>sourceOwner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceOwner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

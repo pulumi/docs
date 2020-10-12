@@ -31,12 +31,12 @@ class MyStack : Stack
         var example = new AliCloud.Dms.EnterpriseUser("example", new AliCloud.Dms.EnterpriseUserArgs
         {
             Mobile = "1591066xxxx",
-            NickName = "tf-test",
             RoleNames = 
             {
                 "DBA",
             },
             Uid = "uid",
+            UserName = "tf-test",
         });
     }
 
@@ -57,12 +57,12 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := dms.NewEnterpriseUser(ctx, "example", &dms.EnterpriseUserArgs{
-			Mobile:   pulumi.String("1591066xxxx"),
-			NickName: pulumi.String("tf-test"),
+			Mobile: pulumi.String("1591066xxxx"),
 			RoleNames: pulumi.StringArray{
 				pulumi.String("DBA"),
 			},
-			Uid: pulumi.String("uid"),
+			Uid:      pulumi.String("uid"),
+			UserName: pulumi.String("tf-test"),
 		})
 		if err != nil {
 			return err
@@ -81,9 +81,9 @@ import pulumi_alicloud as alicloud
 
 example = alicloud.dms.EnterpriseUser("example",
     mobile="1591066xxxx",
-    nick_name="tf-test",
     role_names=["DBA"],
-    uid="uid")
+    uid="uid",
+    user_name="tf-test")
 ```
 
 {{% /example %}}
@@ -96,9 +96,9 @@ import * as alicloud from "@pulumi/alicloud";
 
 const example = new alicloud.dms.EnterpriseUser("example", {
     mobile: "1591066xxxx",
-    nickName: "tf-test",
     roleNames: ["DBA"],
     uid: "uid",
+    userName: "tf-test",
 });
 ```
 
@@ -116,7 +116,7 @@ const example = new alicloud.dms.EnterpriseUser("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/dms/#pulumi_alicloud.dms.EnterpriseUser">EnterpriseUser</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">max_execute_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_result_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">mobile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nick_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tid</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">uid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/dms/#pulumi_alicloud.dms.EnterpriseUser">EnterpriseUser</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">max_execute_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_result_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">mobile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nick_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tid</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">uid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -332,16 +332,16 @@ The EnterpriseUser resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}The DingTalk number or mobile number of the user.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="nickname_csharp">
 <a href="#nickname_csharp" style="color: inherit; text-decoration: inherit;">Nick<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The nickname of the user.
-{{% /md %}}</dd>
+    <dd>{{% md %}}It has been deprecated from 1.100.0 and use `user_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;nick_name&#39; has been deprecated from version 1.100.0. Use &#39;user_name&#39; instead.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -374,6 +374,17 @@ The EnterpriseUser resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The tenant ID.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The nickname of the user.
 {{% /md %}}</dd>
 
 </dl>
@@ -427,16 +438,16 @@ The EnterpriseUser resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}The DingTalk number or mobile number of the user.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="nickname_go">
 <a href="#nickname_go" style="color: inherit; text-decoration: inherit;">Nick<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The nickname of the user.
-{{% /md %}}</dd>
+    <dd>{{% md %}}It has been deprecated from 1.100.0 and use `user_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;nick_name&#39; has been deprecated from version 1.100.0. Use &#39;user_name&#39; instead.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -469,6 +480,17 @@ The EnterpriseUser resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The tenant ID.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The nickname of the user.
 {{% /md %}}</dd>
 
 </dl>
@@ -522,16 +544,16 @@ The EnterpriseUser resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}The DingTalk number or mobile number of the user.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="nickname_nodejs">
 <a href="#nickname_nodejs" style="color: inherit; text-decoration: inherit;">nick<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The nickname of the user.
-{{% /md %}}</dd>
+    <dd>{{% md %}}It has been deprecated from 1.100.0 and use `user_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;nick_name&#39; has been deprecated from version 1.100.0. Use &#39;user_name&#39; instead.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -564,6 +586,17 @@ The EnterpriseUser resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The tenant ID.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The nickname of the user.
 {{% /md %}}</dd>
 
 </dl>
@@ -617,16 +650,16 @@ The EnterpriseUser resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}The DingTalk number or mobile number of the user.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="nick_name_python">
 <a href="#nick_name_python" style="color: inherit; text-decoration: inherit;">nick_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The nickname of the user.
-{{% /md %}}</dd>
+    <dd>{{% md %}}It has been deprecated from 1.100.0 and use `user_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;nick_name&#39; has been deprecated from version 1.100.0. Use &#39;user_name&#39; instead.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -659,6 +692,17 @@ The EnterpriseUser resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The tenant ID.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="user_name_python">
+<a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The nickname of the user.
 {{% /md %}}</dd>
 
 </dl>
@@ -760,7 +804,7 @@ Get an existing EnterpriseUser resource's state with the given name, ID, and opt
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">max_execute_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_result_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">mobile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nick_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tid</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">uid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> EnterpriseUser</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">max_execute_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_result_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">mobile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nick_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tid</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">uid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> EnterpriseUser</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -907,16 +951,16 @@ The following state arguments are supported:
     <dd>{{% md %}}The DingTalk number or mobile number of the user.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_nickname_csharp">
 <a href="#state_nickname_csharp" style="color: inherit; text-decoration: inherit;">Nick<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The nickname of the user.
-{{% /md %}}</dd>
+    <dd>{{% md %}}It has been deprecated from 1.100.0 and use `user_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;nick_name&#39; has been deprecated from version 1.100.0. Use &#39;user_name&#39; instead.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -962,6 +1006,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The Alibaba Cloud unique ID (UID) of the user to add.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_username_csharp">
+<a href="#state_username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The nickname of the user.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1002,16 +1057,16 @@ The following state arguments are supported:
     <dd>{{% md %}}The DingTalk number or mobile number of the user.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_nickname_go">
 <a href="#state_nickname_go" style="color: inherit; text-decoration: inherit;">Nick<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The nickname of the user.
-{{% /md %}}</dd>
+    <dd>{{% md %}}It has been deprecated from 1.100.0 and use `user_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;nick_name&#39; has been deprecated from version 1.100.0. Use &#39;user_name&#39; instead.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1057,6 +1112,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The Alibaba Cloud unique ID (UID) of the user to add.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_username_go">
+<a href="#state_username_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The nickname of the user.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1097,16 +1163,16 @@ The following state arguments are supported:
     <dd>{{% md %}}The DingTalk number or mobile number of the user.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_nickname_nodejs">
 <a href="#state_nickname_nodejs" style="color: inherit; text-decoration: inherit;">nick<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The nickname of the user.
-{{% /md %}}</dd>
+    <dd>{{% md %}}It has been deprecated from 1.100.0 and use `user_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;nick_name&#39; has been deprecated from version 1.100.0. Use &#39;user_name&#39; instead.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1152,6 +1218,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The Alibaba Cloud unique ID (UID) of the user to add.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_username_nodejs">
+<a href="#state_username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The nickname of the user.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1192,16 +1269,16 @@ The following state arguments are supported:
     <dd>{{% md %}}The DingTalk number or mobile number of the user.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_nick_name_python">
 <a href="#state_nick_name_python" style="color: inherit; text-decoration: inherit;">nick_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The nickname of the user.
-{{% /md %}}</dd>
+    <dd>{{% md %}}It has been deprecated from 1.100.0 and use `user_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;nick_name&#39; has been deprecated from version 1.100.0. Use &#39;user_name&#39; instead.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1245,6 +1322,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Alibaba Cloud unique ID (UID) of the user to add.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_user_name_python">
+<a href="#state_user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The nickname of the user.
 {{% /md %}}</dd>
 
 </dl>
