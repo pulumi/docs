@@ -411,7 +411,7 @@ The name specified during resource creation is used in two key ways:
 
 ##### Physical Names and Auto-Naming {#autonaming}
 
-A resource's logical and physical names may not match. In fact, most physical resource names in Pulumi are "auto-named." As a result, even if you give your IAM role has a logical name of `my-role`, as shown above, the physical name will typically look something like `my-role-d7c2fa0`.
+A resource's logical and physical names may not match. In fact, most physical resource names in Pulumi are "auto-named." As a result, even if your IAM role has a logical name of `my-role`, as shown above, the physical name will typically look something like `my-role-d7c2fa0`.
 
 This random suffix is added for two reasons:
 
