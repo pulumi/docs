@@ -99,43 +99,11 @@ We hope you enjoyed learning more about cloud engineering architectures, workflo
 
 This event would not have been possible without the participation and support of our top sponsors:
 
-<div style="clear:both;padding-top:20px;padding-left:100px;">
-    <div>
-        <div style="display:inline-block;vertical-align:top;">
-            <div style="float:left;">
-                <a href="https://about.gitlab.com/">
-                    <img src="gitlab.png" alt="img" style="float:left;width:175px;height:65px;"/>
-                </a>
-            </div>
-            <div style="padding-top:105px">
-                <a href="https://www.jetstack.io/">
-                    <img src="jetstack.png" alt="img" style="width:150px;height:50px;"/>
-                </a>
-            </div>
-        </div>
-        <div style="display:inline-block;vertical-align:top;padding-left:25px;">
-            <div  style="float:left;">
-                <a href="https://aws.amazon.com/">
-                    <img src="aws.png" alt="img" style="width:84px;height:50px;"/>
-                </a>
-            </div>
-            <div style="padding-top:105px">
-                <a href="https://jfrog.com/">
-                    <img src="jfrog.png" alt="img" style="width:100px;height:97px;"/>
-                </a>
-            </div>
-        </div>
-        <div style="display:inline-block;vertical-align:top;padding-left:25px;">
-            <div style="float:left;">
-                <a href="https://chef.io">
-                    <img src="chef.png" alt="img" style="float:left;width:220px;height:90px;"/>
-                </a>
-            </div>
-            <div style="padding-top:105px;">
-                <a href="https://ns1.com/">
-                    <img src="ns1.png" alt="img" style="width:122px;height:60px;"/>
-                </a>
-            </div>
-        </div>
-    </div>
+<div class="flex flex-col md:flex-row md:flex-wrap items-center justify-center">
+    <a href="https://about.gitlab.com/"><img src="gitlab.png" alt="GitLab logo" class="h-16 md:mx-4 my-4"></a>
+    <a href="https://www.jetstack.io/"><img src="jetstack.png" alt="Jetstack logo" class="h-16 md:mx-4 my-4"></a>
+    <a href="https://aws.amazon.com/"><img src="aws.png" alt="AWS logo" class="h-16 md:mx-4 my-4"></a>
+    <a href="https://jfrog.com/"><img src="jfrog.png" alt="JFrog logo" class="h-16 md:mx-4 my-4"></a>
+    <a href="https://chef.io"><img src="chef.png" alt="Chef logo" class="h-16 md:mx-4 my-4"></a>
+    <a href="https://ns1.com/"><img src="ns1.png" alt="NS1 logo" class="h-16 md:mx-4 my-4"></a>
 </div>
