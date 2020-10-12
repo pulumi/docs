@@ -88,10 +88,6 @@ for example, `uses: "docker://pulumi/actions:v1.0.0"`.
 
 Also note that we've set several environment variables, some of which are referenced as [GitHub Actions secrets](https://help.github.com/en/articles/virtual-environments-for-github-actions#creating-and-using-secrets-encrypted-variables) (which we'll provide values for later), to expose to the workflow job at runtime.
 
-Lastly, we've also included a preliminary `Build` step, in order to to demonstrate
-running a setup script in advance of Pulumi. Feel free to remove this step if it doesn't
-suit your particular situation.
-
 #### The push Workflow File
 
 Next, add a second workflow file at `.github/workflows/push.yml` containing the following
