@@ -15,6 +15,7 @@ Explore the resources and functions of the auth module in the Okta package.
     <li><a href="serverclaim" title="ServerClaim"><span class="symbol resource"></span>ServerClaim</a></li>
     <li><a href="serverpolicy" title="ServerPolicy"><span class="symbol resource"></span>ServerPolicy</a></li>
     <li><a href="serverpolicyclaim" title="ServerPolicyClaim"><span class="symbol resource"></span>ServerPolicyClaim</a></li>
+    <li><a href="serverpolicyrule" title="ServerPolicyRule"><span class="symbol resource"></span>ServerPolicyRule</a></li>
     <li><a href="serverscope" title="ServerScope"><span class="symbol resource"></span>ServerScope</a></li>
 </ul>
 
@@ -32,7 +33,7 @@ Explore the resources and functions of the auth module in the Okta package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/oktadeveloper/terraform-provider-okta).</dd>
 	<dt>Version</dt>
-	<dd>2.4.0</dd>
+	<dd>2.4.1</dd>
 </dl>
 
 
