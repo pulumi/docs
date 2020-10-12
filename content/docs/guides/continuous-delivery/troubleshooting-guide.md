@@ -164,8 +164,6 @@ In almost all cases, specifying the credentials through environment variables wi
 > Refer to the [Cloud Providers]({{< relref "/docs/intro/cloud-providers" >}}) docs and the respective setup pages for each to find the correct
 environment variables to use.
 
-### Other Errors
-
 #### Still need help?
 
 If the above tips don't help solve your particular issue, then there is always the power of the strong,
