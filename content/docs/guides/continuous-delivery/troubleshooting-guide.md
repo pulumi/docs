@@ -18,6 +18,7 @@ In order to run a Pulumi command, the following are required:
 * A [Pulumi access token]({{< relref "/docs/intro/console/accounts-and-organizations/accounts#access-tokens" >}}) for the account you wish to use.
 Create one [here](https://app.pulumi.com/account/tokens) by logging in with the appropriate account.
 * A stack that you would like to update the automated pipeline.
+* Pulumi CLI available in the system `PATH`.
 * Build tools (more on this below) based on the runtime of your Pulumi app.
 * Dependencies for your Pulumi app.
 * The right cloud provider credentials.
@@ -64,6 +65,34 @@ beforehand using the `pulumi stack init` command and in the **appropriate organi
   For example, for a stack named `production`, the `Pulumi.production.yaml` file must exist alongside the `Pulumi.yaml`.
   If your Pulumi app is in a different folder, you can use the `--cwd` flag with almost every `pulumi` command.
   Learn more about the global flags [here]({{< relref "/docs/reference/cli#options" >}}).
+
+### Installing the Pulumi CLI
+
+Depending on the CI service, there may be a few ways to install the Pulumi CLI. The following CI systems have native extensions that provide
+an easy-to-use mechanism for installing and running the various `pulumi` commands.
+
+* [Azure Pipelines Task Extension](https://marketplace.visualstudio.com/items?itemName=pulumi.build-and-release-task) - [Guide]({{< relref "azure-devops" >}})
+* GitHub Actions - [JavaScript Action](https://github.com/pulumi/action-install-pulumi-cli), [Docker Action](https://github.com/pulumi/actions) - [Guide]({{< relref "github-actions" >}})
+
+> Pulumi CLI is now pre-installed on GitHub Actions runners. However, if you need to install a specific version, you can always use one of the aforementioned actions.
+
+* [CircleCI Orb](https://circleci.com/developer/orbs/orb/compute/pulumi) - [Guide]({{< relref "circleci" >}})
+* [Octopus Deploy](https://library.octopus.com/step-templates/76296cd1-7d8c-47e8-b33f-027ecd3ff6b5/actiontemplate-run-pulumi-(linux)) - [Guide]({{< relref "octopus-deploy" >}})
+* [Spinnaker](https://github.com/pulumi/spinnaker-preconfigured-job-plugin) - [Guide]({{< relref "spinnaker" >}})
+
+If you are using a CI system that does not have a native extension for installing the CLI, you can always run an inline script step
+to [install the CLI manually]({{< relref "/docs/get-started/install" >}}).
+
+#### Tips
+
+* Ensure that the `pulumi` CLI is available in the environment across multiple steps.
+
+  In most cases, the official Pulumi installation script will try to add `pulumi` to the system `PATH` automatically.
+
+  This problem is especially prevalent for users using a Docker container-based pipeline. With most Docker container pipelines, the state of the container
+  does not persist across steps, so you cannot split-out the installation step of the Pulumi CLI into another step and expect to use the modified environment
+  in the following step. There are exceptions to this. Some CI services allow you to create a reusable template step that you can inject as a pre-cursor to other
+  steps. This is a way to reduce repeating the installation step every time you would like to run `pulumi` command.
 
 ### Build Tools
 
@@ -136,13 +165,6 @@ In almost all cases, specifying the credentials through environment variables wi
 environment variables to use.
 
 ### Other Errors
-
-#### Pulumi not found in the PATH
-
-This problem is especially prevalent for users using a Docker container-based pipeline. With most Docker container pipelines, the state of the container
-does not persist across steps, so you cannot split-out the installation step of the Pulumi CLI into another step and expect to use the modified environment
-in the following step. There are exceptions to this. Some CI services allow you to create a reusable template step that you can inject as a pre-cursor to other
-steps. This is a way to reduce repeating the installation step every time you would like to run `pulumi` command.  
 
 #### Still need help?
 
