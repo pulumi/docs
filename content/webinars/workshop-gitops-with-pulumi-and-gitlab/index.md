@@ -15,7 +15,7 @@ hero:
   title: "Workshop: GitOps with Pulumi and GitLab"
   image: /images/webinar/gitlab-demo.png
 main:
-  sortable_date: 2020-11-16T13:00:00.000-05:00
+  sortable_date: 2020-11-16T14:00:00.000-05:00
   datetime: Mon Nov 16, 2020 AT 11:00AM PT
   presenters:
     - name: Praneet Loke
@@ -39,5 +39,5 @@ main:
     using your favorite languages."
 form:
   gotowebinar_key: "6999643165114589707"
-  hubspot_form_id: "018aec45-eca9-4699-bfbb-698377c67457"
+  hubspot_form_id: 018aec45-eca9-4699-bfbb-698377c67457
 ---
