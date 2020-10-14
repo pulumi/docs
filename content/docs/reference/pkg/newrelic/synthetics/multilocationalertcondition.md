@@ -12,6 +12,8 @@ meta_desc: "Explore the MultiLocationAlertCondition resource of the synthetics m
 
 Use this resource to create, update, and delete a New Relic Synthetics Location Alerts.
 
+> **NOTE:** The newrelic.NrqlAlertCondition resource is preferred for configuring alerts conditions. In most cases feature parity can be achieved with a NRQL query. Other condition types may be deprecated in the future and receive fewer product updates.
+
 
 
 ## Create a MultiLocationAlertCondition Resource {#create}
