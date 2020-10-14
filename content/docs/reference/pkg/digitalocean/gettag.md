@@ -534,7 +534,7 @@ The following output properties are available:
 <a href="#databases_count_python" style="color: inherit; text-decoration: inherit;">databases_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A count of the database clusters that the tag is applied to.
 {{% /md %}}</dd>
@@ -545,7 +545,7 @@ The following output properties are available:
 <a href="#droplets_count_python" style="color: inherit; text-decoration: inherit;">droplets_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A count of the Droplets the tag is applied to.
 {{% /md %}}</dd>
@@ -567,7 +567,7 @@ The following output properties are available:
 <a href="#images_count_python" style="color: inherit; text-decoration: inherit;">images_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A count of the images that the tag is applied to.
 {{% /md %}}</dd>
@@ -588,7 +588,7 @@ The following output properties are available:
 <a href="#total_resource_count_python" style="color: inherit; text-decoration: inherit;">total_<wbr>resource_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A count of the total number of resources that the tag is applied to.
 {{% /md %}}</dd>
@@ -599,7 +599,7 @@ The following output properties are available:
 <a href="#volume_snapshots_count_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>snapshots_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A count of the volume snapshots that the tag is applied to.
 {{% /md %}}</dd>
@@ -610,7 +610,7 @@ The following output properties are available:
 <a href="#volumes_count_python" style="color: inherit; text-decoration: inherit;">volumes_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A count of the volumes that the tag is applied to.
 {{% /md %}}</dd>

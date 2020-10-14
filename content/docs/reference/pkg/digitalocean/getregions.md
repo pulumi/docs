@@ -125,7 +125,7 @@ const available = pulumi.output(digitalocean.getRegions({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_regions(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetRegionsFilterArgs]]</span> = None<span class="p">, </span><span class="nx">sorts</span><span class="p">:</span> <span class="nx">Optional[List[GetRegionsSortArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRegionsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_regions(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetRegionsFilterArgs]]</span> = None<span class="p">, </span><span class="nx">sorts</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetRegionsSortArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRegionsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -249,7 +249,7 @@ The `sort` block is documented below.
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getregionsfilter">List[Get<wbr>Regions<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getregionsfilter">Sequence[Get<wbr>Regions<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Filter the results.
 The `filter` block is documented below.
@@ -261,7 +261,7 @@ The `filter` block is documented below.
 <a href="#sorts_python" style="color: inherit; text-decoration: inherit;">sorts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getregionssort">List[Get<wbr>Regions<wbr>Sort<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getregionssort">Sequence[Get<wbr>Regions<wbr>Sort<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Sort the results.
 The `sort` block is documented below.
@@ -451,7 +451,7 @@ The following output properties are available:
 <a href="#regions_python" style="color: inherit; text-decoration: inherit;">regions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getregionsregion">List[Get<wbr>Regions<wbr>Region]</a></span>
+        <span class="property-type"><a href="#getregionsregion">Sequence[Get<wbr>Regions<wbr>Region]</a></span>
     </dt>
     <dd>{{% md %}}A set of regions satisfying any `filter` and `sort` criteria. Each region has the following attributes:
 {{% /md %}}</dd>
@@ -462,7 +462,7 @@ The following output properties are available:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getregionsfilter">List[Get<wbr>Regions<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getregionsfilter">Sequence[Get<wbr>Regions<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -472,7 +472,7 @@ The following output properties are available:
 <a href="#sorts_python" style="color: inherit; text-decoration: inherit;">sorts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getregionssort">List[Get<wbr>Regions<wbr>Sort]</a></span>
+        <span class="property-type"><a href="#getregionssort">Sequence[Get<wbr>Regions<wbr>Sort]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -531,6 +531,32 @@ The following output properties are available:
 where the `key` field takes on one or more of the values provided here.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="all_csharp">
+<a href="#all_csharp" style="color: inherit; text-decoration: inherit;">All</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to require that a field match all of the `values` instead of just one or more of
+them. This is useful when matching against multi-valued fields such as lists or sets where you want to ensure
+that all of the `values` are present in the list or set.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchby_csharp">
+<a href="#matchby_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>By</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}One of `exact` (default), `re`, or `substring`. For string-typed fields, specify `re` to
+match by using the `values` as regular expressions, or specify `substring` to match by treating the `values` as
+substrings to find within the string field.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -560,6 +586,32 @@ where the `key` field takes on one or more of the values provided here.
     </dt>
     <dd>{{% md %}}A list of values to match against the `key` field. Only retrieves regions
 where the `key` field takes on one or more of the values provided here.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="all_go">
+<a href="#all_go" style="color: inherit; text-decoration: inherit;">All</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to require that a field match all of the `values` instead of just one or more of
+them. This is useful when matching against multi-valued fields such as lists or sets where you want to ensure
+that all of the `values` are present in the list or set.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchby_go">
+<a href="#matchby_go" style="color: inherit; text-decoration: inherit;">Match<wbr>By</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}One of `exact` (default), `re`, or `substring`. For string-typed fields, specify `re` to
+match by using the `values` as regular expressions, or specify `substring` to match by treating the `values` as
+substrings to find within the string field.
 {{% /md %}}</dd>
 
 </dl>
@@ -593,6 +645,32 @@ where the `key` field takes on one or more of the values provided here.
 where the `key` field takes on one or more of the values provided here.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="all_nodejs">
+<a href="#all_nodejs" style="color: inherit; text-decoration: inherit;">all</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to require that a field match all of the `values` instead of just one or more of
+them. This is useful when matching against multi-valued fields such as lists or sets where you want to ensure
+that all of the `values` are present in the list or set.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchby_nodejs">
+<a href="#matchby_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>By</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}One of `exact` (default), `re`, or `substring`. For string-typed fields, specify `re` to
+match by using the `values` as regular expressions, or specify `substring` to match by treating the `values` as
+substrings to find within the string field.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -618,10 +696,36 @@ where the `key` field takes on one or more of the values provided here.
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of values to match against the `key` field. Only retrieves regions
 where the `key` field takes on one or more of the values provided here.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="all_python">
+<a href="#all_python" style="color: inherit; text-decoration: inherit;">all</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to require that a field match all of the `values` instead of just one or more of
+them. This is useful when matching against multi-valued fields such as lists or sets where you want to ensure
+that all of the `values` are present in the list or set.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="match_by_python">
+<a href="#match_by_python" style="color: inherit; text-decoration: inherit;">match_<wbr>by</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}One of `exact` (default), `re`, or `substring`. For string-typed fields, specify `re` to
+match by using the `values` as regular expressions, or specify `substring` to match by treating the `values` as
+substrings to find within the string field.
 {{% /md %}}</dd>
 
 </dl>
@@ -852,7 +956,7 @@ where the `key` field takes on one or more of the values provided here.
 <a href="#features_python" style="color: inherit; text-decoration: inherit;">features</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A set of features available in this region.
 {{% /md %}}</dd>
@@ -874,7 +978,7 @@ where the `key` field takes on one or more of the values provided here.
 <a href="#sizes_python" style="color: inherit; text-decoration: inherit;">sizes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A set of identifying slugs for the Droplet sizes available in this region.
 {{% /md %}}</dd>

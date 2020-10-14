@@ -595,7 +595,7 @@ The following output properties are available:
 <a href="#valid_versions_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>versions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of available versions.
 {{% /md %}}</dd>

@@ -14,6 +14,7 @@ A Pulumi package for creating and managing Digital Ocean cloud resources.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="app" title="App"><span class="symbol resource"></span>App</a></li>
     <li><a href="cdn" title="Cdn"><span class="symbol resource"></span>Cdn</a></li>
     <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
     <li><a href="containerregistry" title="ContainerRegistry"><span class="symbol resource"></span>ContainerRegistry</a></li>
@@ -50,10 +51,12 @@ A Pulumi package for creating and managing Digital Ocean cloud resources.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getaccount" title="GetAccount"><span class="symbol function"></span>GetAccount</a></li>
+    <li><a href="getapp" title="GetApp"><span class="symbol function"></span>GetApp</a></li>
     <li><a href="getcertificate" title="GetCertificate"><span class="symbol function"></span>GetCertificate</a></li>
     <li><a href="getcontainerregistry" title="GetContainerRegistry"><span class="symbol function"></span>GetContainerRegistry</a></li>
     <li><a href="getdatabasecluster" title="GetDatabaseCluster"><span class="symbol function"></span>GetDatabaseCluster</a></li>
     <li><a href="getdomain" title="GetDomain"><span class="symbol function"></span>GetDomain</a></li>
+    <li><a href="getdomains" title="GetDomains"><span class="symbol function"></span>GetDomains</a></li>
     <li><a href="getdroplet" title="GetDroplet"><span class="symbol function"></span>GetDroplet</a></li>
     <li><a href="getdropletsnapshot" title="GetDropletSnapshot"><span class="symbol function"></span>GetDropletSnapshot</a></li>
     <li><a href="getdroplets" title="GetDroplets"><span class="symbol function"></span>GetDroplets</a></li>
@@ -90,7 +93,7 @@ A Pulumi package for creating and managing Digital Ocean cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/digitalocean/terraform-provider-digitalocean).</dd>
 	<dt>Version</dt>
-	<dd>2.8.0</dd>
+	<dd>2.9.0</dd>
 </dl>
 
 
