@@ -74,7 +74,7 @@ To mitigate this, many cloud providers offer a solution to push roles all the wa
 
 ### AWS EKS
 
-EKS is the youngest of the managed Kubernetes offerings and was the last of the three to provider the native capability to push IAM roles down to pods. Previously, operators could install third-party solutions like [KIAM](https://github.com/uswitch/kiam) and [Kube2IAM](https://github.com/jtblin/kube2iam) in their clusters, and both of these solutions are widely used and well tested.
+EKS initially required the install of third-party solutions like [KIAM](https://github.com/uswitch/kiam) and [Kube2IAM](https://github.com/jtblin/kube2iam) in the cluster -- both of which are solutions that are widely used and well tested.
 
 EKS now offers a native solution, which involves creating a cluster with an OpenID connect issuer attached to it. You can read more about this [here](https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.html).
 
