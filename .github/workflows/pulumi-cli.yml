@@ -48,7 +48,7 @@ jobs:
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@b811287a6e06bb7e5d8b91132b839c67e3f9c6ed
         with:
-          pulumi-version: 
+          pulumi-version: ${{ env.PULUMI_VERSION }}
       - name: setup go
         uses: actions/setup-go@v2
       - name: setup node
