@@ -345,24 +345,13 @@ The CertificateIssuer resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span id="orgid_csharp">
-<a href="#orgid_csharp" style="color: inherit; text-decoration: inherit;">Org<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the organization as provided to the issuer.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="providername_csharp">
 <a href="#providername_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the third-party Certificate Issuer. Possible values are: `DigiCert`, `GlobalSign`.
+    <dd>{{% md %}}The name of the third-party Certificate Issuer. Possible values are: `DigiCert`, `GlobalSign`, `OneCertV2-PrivateCA`, `OneCertV2-PublicCA` and `SslAdminV2`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -400,6 +389,17 @@ The CertificateIssuer resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
+        <span id="orgid_csharp">
+<a href="#orgid_csharp" style="color: inherit; text-decoration: inherit;">Org<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the organization as provided to the issuer.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
@@ -429,24 +429,13 @@ The CertificateIssuer resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span id="orgid_go">
-<a href="#orgid_go" style="color: inherit; text-decoration: inherit;">Org<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the organization as provided to the issuer.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="providername_go">
 <a href="#providername_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the third-party Certificate Issuer. Possible values are: `DigiCert`, `GlobalSign`.
+    <dd>{{% md %}}The name of the third-party Certificate Issuer. Possible values are: `DigiCert`, `GlobalSign`, `OneCertV2-PrivateCA`, `OneCertV2-PublicCA` and `SslAdminV2`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -484,6 +473,17 @@ The CertificateIssuer resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
+        <span id="orgid_go">
+<a href="#orgid_go" style="color: inherit; text-decoration: inherit;">Org<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the organization as provided to the issuer.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
@@ -513,24 +513,13 @@ The CertificateIssuer resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span id="orgid_nodejs">
-<a href="#orgid_nodejs" style="color: inherit; text-decoration: inherit;">org<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the organization as provided to the issuer.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="providername_nodejs">
 <a href="#providername_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the third-party Certificate Issuer. Possible values are: `DigiCert`, `GlobalSign`.
+    <dd>{{% md %}}The name of the third-party Certificate Issuer. Possible values are: `DigiCert`, `GlobalSign`, `OneCertV2-PrivateCA`, `OneCertV2-PublicCA` and `SslAdminV2`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -568,6 +557,17 @@ The CertificateIssuer resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
+        <span id="orgid_nodejs">
+<a href="#orgid_nodejs" style="color: inherit; text-decoration: inherit;">org<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the organization as provided to the issuer.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
@@ -597,24 +597,13 @@ The CertificateIssuer resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span id="org_id_python">
-<a href="#org_id_python" style="color: inherit; text-decoration: inherit;">org_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the organization as provided to the issuer.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="provider_name_python">
 <a href="#provider_name_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the third-party Certificate Issuer. Possible values are: `DigiCert`, `GlobalSign`.
+    <dd>{{% md %}}The name of the third-party Certificate Issuer. Possible values are: `DigiCert`, `GlobalSign`, `OneCertV2-PrivateCA`, `OneCertV2-PublicCA` and `SslAdminV2`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -648,6 +637,17 @@ The CertificateIssuer resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Key Vault Certificate Issuer. Changing this forces a new Key Vault Certificate Issuer to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="org_id_python">
+<a href="#org_id_python" style="color: inherit; text-decoration: inherit;">org_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the organization as provided to the issuer.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -948,7 +948,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the third-party Certificate Issuer. Possible values are: `DigiCert`, `GlobalSign`.
+    <dd>{{% md %}}The name of the third-party Certificate Issuer. Possible values are: `DigiCert`, `GlobalSign`, `OneCertV2-PrivateCA`, `OneCertV2-PublicCA` and `SslAdminV2`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1032,7 +1032,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the third-party Certificate Issuer. Possible values are: `DigiCert`, `GlobalSign`.
+    <dd>{{% md %}}The name of the third-party Certificate Issuer. Possible values are: `DigiCert`, `GlobalSign`, `OneCertV2-PrivateCA`, `OneCertV2-PublicCA` and `SslAdminV2`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1116,7 +1116,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the third-party Certificate Issuer. Possible values are: `DigiCert`, `GlobalSign`.
+    <dd>{{% md %}}The name of the third-party Certificate Issuer. Possible values are: `DigiCert`, `GlobalSign`, `OneCertV2-PrivateCA`, `OneCertV2-PublicCA` and `SslAdminV2`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1200,7 +1200,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the third-party Certificate Issuer. Possible values are: `DigiCert`, `GlobalSign`.
+    <dd>{{% md %}}The name of the third-party Certificate Issuer. Possible values are: `DigiCert`, `GlobalSign`, `OneCertV2-PrivateCA`, `OneCertV2-PublicCA` and `SslAdminV2`.
 {{% /md %}}</dd>
 
 </dl>

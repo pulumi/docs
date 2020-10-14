@@ -431,7 +431,7 @@ The LinkedServiceAzureFileStorage resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of parameters to associate with the Data Factory Linfked Service.
+    <dd>{{% md %}}A map of parameters to associate with the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -567,7 +567,7 @@ The LinkedServiceAzureFileStorage resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of parameters to associate with the Data Factory Linfked Service.
+    <dd>{{% md %}}A map of parameters to associate with the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -703,7 +703,7 @@ The LinkedServiceAzureFileStorage resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of parameters to associate with the Data Factory Linfked Service.
+    <dd>{{% md %}}A map of parameters to associate with the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -839,7 +839,7 @@ The LinkedServiceAzureFileStorage resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of parameters to associate with the Data Factory Linfked Service.
+    <dd>{{% md %}}A map of parameters to associate with the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1170,7 +1170,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of parameters to associate with the Data Factory Linfked Service.
+    <dd>{{% md %}}A map of parameters to associate with the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1306,7 +1306,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of parameters to associate with the Data Factory Linfked Service.
+    <dd>{{% md %}}A map of parameters to associate with the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1442,7 +1442,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of parameters to associate with the Data Factory Linfked Service.
+    <dd>{{% md %}}A map of parameters to associate with the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1578,7 +1578,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of parameters to associate with the Data Factory Linfked Service.
+    <dd>{{% md %}}A map of parameters to associate with the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

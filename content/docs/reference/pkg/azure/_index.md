@@ -41,6 +41,7 @@ A Pulumi package for creating and managing Microsoft Azure cloud resources.
     <li><a href="datafactory/" title="datafactory"><span class="symbol module"></span>datafactory</a></li>
     <li><a href="datalake/" title="datalake"><span class="symbol module"></span>datalake</a></li>
     <li><a href="datashare/" title="datashare"><span class="symbol module"></span>datashare</a></li>
+    <li><a href="desktopvirtualization/" title="desktopvirtualization"><span class="symbol module"></span>desktopvirtualization</a></li>
     <li><a href="devspace/" title="devspace"><span class="symbol module"></span>devspace</a></li>
     <li><a href="devtest/" title="devtest"><span class="symbol module"></span>devtest</a></li>
     <li><a href="dns/" title="dns"><span class="symbol module"></span>dns</a></li>
@@ -117,7 +118,7 @@ A Pulumi package for creating and managing Microsoft Azure cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.24.1</dd>
+	<dd>3.25.0</dd>
 </dl>
 
 

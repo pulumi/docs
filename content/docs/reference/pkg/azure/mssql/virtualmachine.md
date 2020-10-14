@@ -161,7 +161,7 @@ const exampleMssql_virtualMachineVirtualMachine = new azure.mssql.VirtualMachine
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/mssql/#pulumi_azure.mssql.VirtualMachine">VirtualMachine</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_patching</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineAutoPatchingArgs]</span> = None<span class="p">, </span><span class="nx">key_vault_credential</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineKeyVaultCredentialArgs]</span> = None<span class="p">, </span><span class="nx">r_services_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_update_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_update_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_machine_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/mssql/#pulumi_azure.mssql.VirtualMachine">VirtualMachine</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_patching</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineAutoPatchingArgs]</span> = None<span class="p">, </span><span class="nx">key_vault_credential</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineKeyVaultCredentialArgs]</span> = None<span class="p">, </span><span class="nx">r_services_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_update_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_update_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_configuration</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineStorageConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_machine_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -434,6 +434,17 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
+        <span id="storageconfiguration_csharp">
+<a href="#storageconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinestorageconfiguration">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `storage_configuration` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
@@ -547,6 +558,17 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The SQL Server sysadmin login to create.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageconfiguration_go">
+<a href="#storageconfiguration_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinestorageconfiguration">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}An `storage_configuration` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -668,6 +690,17 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
+        <span id="storageconfiguration_nodejs">
+<a href="#storageconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinestorageconfiguration">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}An `storage_configuration` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
@@ -785,6 +818,17 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
+        <span id="storage_configuration_python">
+<a href="#storage_configuration_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinestorageconfiguration">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `storage_configuration` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
@@ -893,7 +937,7 @@ Get an existing VirtualMachine resource's state with the given name, ID, and opt
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_patching</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineAutoPatchingArgs]</span> = None<span class="p">, </span><span class="nx">key_vault_credential</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineKeyVaultCredentialArgs]</span> = None<span class="p">, </span><span class="nx">r_services_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_update_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_update_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_machine_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> VirtualMachine</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_patching</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineAutoPatchingArgs]</span> = None<span class="p">, </span><span class="nx">key_vault_credential</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineKeyVaultCredentialArgs]</span> = None<span class="p">, </span><span class="nx">r_services_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_update_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_update_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_configuration</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineStorageConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_machine_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> VirtualMachine</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1097,6 +1141,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_storageconfiguration_csharp">
+<a href="#state_storageconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinestorageconfiguration">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `storage_configuration` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
@@ -1210,6 +1265,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The SQL Server license type. Possible values are `AHUB` (Azure Hybrid Benefit) and `PAYG` (Pay-As-You-Go). Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_storageconfiguration_go">
+<a href="#state_storageconfiguration_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinestorageconfiguration">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}An `storage_configuration` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1331,6 +1397,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_storageconfiguration_nodejs">
+<a href="#state_storageconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinestorageconfiguration">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}An `storage_configuration` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
@@ -1444,6 +1521,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The SQL Server license type. Possible values are `AHUB` (Azure Hybrid Benefit) and `PAYG` (Pay-As-You-Go). Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_storage_configuration_python">
+<a href="#state_storage_configuration_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinestorageconfiguration">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `storage_configuration` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1874,6 +1962,674 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The service principal name secret to access key vault. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualmachinestorageconfiguration">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineStorageConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineStorageConfiguration">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql?tab=doc#VirtualMachineStorageConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql?tab=doc#VirtualMachineStorageConfigurationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.MSSql.Inputs.VirtualMachineStorageConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.MSSql.Outputs.VirtualMachineStorageConfiguration.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="disktype_csharp">
+<a href="#disktype_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of disk configuration to apply to the SQL Server. Valid values include `NEW`, `EXTEND`, or `ADD`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="storageworkloadtype_csharp">
+<a href="#storageworkloadtype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Workload<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of storage workload. Valid values include `GENERAL`, `OLTP`, or `DW`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datasettings_csharp">
+<a href="#datasettings_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinestorageconfigurationdatasettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Data<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `storage_settings` as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logsettings_csharp">
+<a href="#logsettings_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinestorageconfigurationlogsettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Log<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `storage_settings` as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tempdbsettings_csharp">
+<a href="#tempdbsettings_csharp" style="color: inherit; text-decoration: inherit;">Temp<wbr>Db<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinestorageconfigurationtempdbsettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Temp<wbr>Db<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `storage_settings` as defined below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="disktype_go">
+<a href="#disktype_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of disk configuration to apply to the SQL Server. Valid values include `NEW`, `EXTEND`, or `ADD`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="storageworkloadtype_go">
+<a href="#storageworkloadtype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Workload<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of storage workload. Valid values include `GENERAL`, `OLTP`, or `DW`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datasettings_go">
+<a href="#datasettings_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinestorageconfigurationdatasettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Data<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}An `storage_settings` as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logsettings_go">
+<a href="#logsettings_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinestorageconfigurationlogsettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Log<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}An `storage_settings` as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tempdbsettings_go">
+<a href="#tempdbsettings_go" style="color: inherit; text-decoration: inherit;">Temp<wbr>Db<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinestorageconfigurationtempdbsettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Temp<wbr>Db<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}An `storage_settings` as defined below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="disktype_nodejs">
+<a href="#disktype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of disk configuration to apply to the SQL Server. Valid values include `NEW`, `EXTEND`, or `ADD`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="storageworkloadtype_nodejs">
+<a href="#storageworkloadtype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Workload<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of storage workload. Valid values include `GENERAL`, `OLTP`, or `DW`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datasettings_nodejs">
+<a href="#datasettings_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinestorageconfigurationdatasettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Data<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}An `storage_settings` as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logsettings_nodejs">
+<a href="#logsettings_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinestorageconfigurationlogsettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Log<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}An `storage_settings` as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tempdbsettings_nodejs">
+<a href="#tempdbsettings_nodejs" style="color: inherit; text-decoration: inherit;">temp<wbr>Db<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinestorageconfigurationtempdbsettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Temp<wbr>Db<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}An `storage_settings` as defined below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="disk_type_python">
+<a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of disk configuration to apply to the SQL Server. Valid values include `NEW`, `EXTEND`, or `ADD`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="storage_workload_type_python">
+<a href="#storage_workload_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>workload_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of storage workload. Valid values include `GENERAL`, `OLTP`, or `DW`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="data_settings_python">
+<a href="#data_settings_python" style="color: inherit; text-decoration: inherit;">data_<wbr>settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinestorageconfigurationdatasettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Data<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `storage_settings` as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="log_settings_python">
+<a href="#log_settings_python" style="color: inherit; text-decoration: inherit;">log_<wbr>settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinestorageconfigurationlogsettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Log<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `storage_settings` as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="temp_db_settings_python">
+<a href="#temp_db_settings_python" style="color: inherit; text-decoration: inherit;">temp_<wbr>db_<wbr>settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinestorageconfigurationtempdbsettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Temp<wbr>Db<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `storage_settings` as defined below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualmachinestorageconfigurationdatasettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Data<wbr>Settings</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineStorageConfigurationDataSettings">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineStorageConfigurationDataSettings">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql?tab=doc#VirtualMachineStorageConfigurationDataSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql?tab=doc#VirtualMachineStorageConfigurationDataSettingsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.MSSql.Inputs.VirtualMachineStorageConfigurationDataSettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.MSSql.Outputs.VirtualMachineStorageConfigurationDataSettings.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="defaultfilepath_csharp">
+<a href="#defaultfilepath_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>File<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The SQL Server default path
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="luns_csharp">
+<a href="#luns_csharp" style="color: inherit; text-decoration: inherit;">Luns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of Logical Unit Numbers for the disks.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="defaultfilepath_go">
+<a href="#defaultfilepath_go" style="color: inherit; text-decoration: inherit;">Default<wbr>File<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The SQL Server default path
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="luns_go">
+<a href="#luns_go" style="color: inherit; text-decoration: inherit;">Luns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
+    </dt>
+    <dd>{{% md %}}A list of Logical Unit Numbers for the disks.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="defaultfilepath_nodejs">
+<a href="#defaultfilepath_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>File<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The SQL Server default path
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="luns_nodejs">
+<a href="#luns_nodejs" style="color: inherit; text-decoration: inherit;">luns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of Logical Unit Numbers for the disks.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="default_file_path_python">
+<a href="#default_file_path_python" style="color: inherit; text-decoration: inherit;">default_<wbr>file_<wbr>path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The SQL Server default path
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="luns_python">
+<a href="#luns_python" style="color: inherit; text-decoration: inherit;">luns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of Logical Unit Numbers for the disks.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualmachinestorageconfigurationlogsettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Log<wbr>Settings</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineStorageConfigurationLogSettings">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineStorageConfigurationLogSettings">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql?tab=doc#VirtualMachineStorageConfigurationLogSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql?tab=doc#VirtualMachineStorageConfigurationLogSettingsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.MSSql.Inputs.VirtualMachineStorageConfigurationLogSettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.MSSql.Outputs.VirtualMachineStorageConfigurationLogSettings.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="defaultfilepath_csharp">
+<a href="#defaultfilepath_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>File<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The SQL Server default path
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="luns_csharp">
+<a href="#luns_csharp" style="color: inherit; text-decoration: inherit;">Luns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of Logical Unit Numbers for the disks.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="defaultfilepath_go">
+<a href="#defaultfilepath_go" style="color: inherit; text-decoration: inherit;">Default<wbr>File<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The SQL Server default path
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="luns_go">
+<a href="#luns_go" style="color: inherit; text-decoration: inherit;">Luns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
+    </dt>
+    <dd>{{% md %}}A list of Logical Unit Numbers for the disks.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="defaultfilepath_nodejs">
+<a href="#defaultfilepath_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>File<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The SQL Server default path
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="luns_nodejs">
+<a href="#luns_nodejs" style="color: inherit; text-decoration: inherit;">luns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of Logical Unit Numbers for the disks.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="default_file_path_python">
+<a href="#default_file_path_python" style="color: inherit; text-decoration: inherit;">default_<wbr>file_<wbr>path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The SQL Server default path
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="luns_python">
+<a href="#luns_python" style="color: inherit; text-decoration: inherit;">luns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of Logical Unit Numbers for the disks.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualmachinestorageconfigurationtempdbsettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Temp<wbr>Db<wbr>Settings</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineStorageConfigurationTempDbSettings">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineStorageConfigurationTempDbSettings">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql?tab=doc#VirtualMachineStorageConfigurationTempDbSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql?tab=doc#VirtualMachineStorageConfigurationTempDbSettingsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.MSSql.Inputs.VirtualMachineStorageConfigurationTempDbSettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.MSSql.Outputs.VirtualMachineStorageConfigurationTempDbSettings.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="defaultfilepath_csharp">
+<a href="#defaultfilepath_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>File<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The SQL Server default path
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="luns_csharp">
+<a href="#luns_csharp" style="color: inherit; text-decoration: inherit;">Luns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of Logical Unit Numbers for the disks.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="defaultfilepath_go">
+<a href="#defaultfilepath_go" style="color: inherit; text-decoration: inherit;">Default<wbr>File<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The SQL Server default path
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="luns_go">
+<a href="#luns_go" style="color: inherit; text-decoration: inherit;">Luns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
+    </dt>
+    <dd>{{% md %}}A list of Logical Unit Numbers for the disks.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="defaultfilepath_nodejs">
+<a href="#defaultfilepath_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>File<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The SQL Server default path
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="luns_nodejs">
+<a href="#luns_nodejs" style="color: inherit; text-decoration: inherit;">luns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of Logical Unit Numbers for the disks.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="default_file_path_python">
+<a href="#default_file_path_python" style="color: inherit; text-decoration: inherit;">default_<wbr>file_<wbr>path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The SQL Server default path
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="luns_python">
+<a href="#luns_python" style="color: inherit; text-decoration: inherit;">luns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of Logical Unit Numbers for the disks.
 {{% /md %}}</dd>
 
 </dl>

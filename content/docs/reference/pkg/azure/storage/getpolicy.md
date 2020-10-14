@@ -949,7 +949,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The age in days after create to delete the snaphot.
+    <dd>{{% md %}}The age in days after create to delete the snapshot.
 {{% /md %}}</dd>
 
 </dl>
@@ -967,7 +967,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The age in days after create to delete the snaphot.
+    <dd>{{% md %}}The age in days after create to delete the snapshot.
 {{% /md %}}</dd>
 
 </dl>
@@ -985,7 +985,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The age in days after create to delete the snaphot.
+    <dd>{{% md %}}The age in days after create to delete the snapshot.
 {{% /md %}}</dd>
 
 </dl>
@@ -1003,7 +1003,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The age in days after create to delete the snaphot.
+    <dd>{{% md %}}The age in days after create to delete the snapshot.
 {{% /md %}}</dd>
 
 </dl>

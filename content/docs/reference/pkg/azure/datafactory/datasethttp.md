@@ -18,15 +18,121 @@ Manages an Azure HTTP Dataset inside an Azure Data Factory.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "northeurope",
+        });
+        var exampleFactory = new Azure.DataFactory.Factory("exampleFactory", new Azure.DataFactory.FactoryArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+        });
+        var exampleLinkedServiceWeb = new Azure.DataFactory.LinkedServiceWeb("exampleLinkedServiceWeb", new Azure.DataFactory.LinkedServiceWebArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            DataFactoryName = exampleFactory.Name,
+            AuthenticationType = "Anonymous",
+            Url = "https://www.bing.com",
+        });
+        var exampleDatasetHttp = new Azure.DataFactory.DatasetHttp("exampleDatasetHttp", new Azure.DataFactory.DatasetHttpArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            DataFactoryName = exampleFactory.Name,
+            LinkedServiceName = exampleLinkedServiceWeb.Name,
+            RelativeUrl = "http://www.bing.com",
+            RequestBody = "foo=bar",
+            RequestMethod = "POST",
+        });
+    }
+
+}
+```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/datafactory"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("northeurope"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleFactory, err := datafactory.NewFactory(ctx, "exampleFactory", &datafactory.FactoryArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		exampleLinkedServiceWeb, err := datafactory.NewLinkedServiceWeb(ctx, "exampleLinkedServiceWeb", &datafactory.LinkedServiceWebArgs{
+			ResourceGroupName:  exampleResourceGroup.Name,
+			DataFactoryName:    exampleFactory.Name,
+			AuthenticationType: pulumi.String("Anonymous"),
+			Url:                pulumi.String("https://www.bing.com"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = datafactory.NewDatasetHttp(ctx, "exampleDatasetHttp", &datafactory.DatasetHttpArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			DataFactoryName:   exampleFactory.Name,
+			LinkedServiceName: exampleLinkedServiceWeb.Name,
+			RelativeUrl:       pulumi.String("http://www.bing.com"),
+			RequestBody:       pulumi.String("foo=bar"),
+			RequestMethod:     pulumi.String("POST"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="northeurope")
+example_factory = azure.datafactory.Factory("exampleFactory",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_linked_service_web = azure.datafactory.LinkedServiceWeb("exampleLinkedServiceWeb",
+    resource_group_name=example_resource_group.name,
+    data_factory_name=example_factory.name,
+    authentication_type="Anonymous",
+    url="https://www.bing.com")
+example_dataset_http = azure.datafactory.DatasetHttp("exampleDatasetHttp",
+    resource_group_name=example_resource_group.name,
+    data_factory_name=example_factory.name,
+    linked_service_name=example_linked_service_web.name,
+    relative_url="http://www.bing.com",
+    request_body="foo=bar",
+    request_method="POST")
+```
+
 {{% /example %}}
 
 {{% example typescript %}}
@@ -46,11 +152,11 @@ const exampleLinkedServiceWeb = new azure.datafactory.LinkedServiceWeb("exampleL
     authenticationType: "Anonymous",
     url: "https://www.bing.com",
 });
-const exampleDatasetDelimitedText = new azure.datafactory.DatasetDelimitedText("exampleDatasetDelimitedText", {
+const exampleDatasetHttp = new azure.datafactory.DatasetHttp("exampleDatasetHttp", {
     resourceGroupName: exampleResourceGroup.name,
     dataFactoryName: exampleFactory.name,
     linkedServiceName: exampleLinkedServiceWeb.name,
-    url: "http://www.bing.com",
+    relativeUrl: "http://www.bing.com",
     requestBody: "foo=bar",
     requestMethod: "POST",
 });

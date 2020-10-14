@@ -3,7 +3,7 @@ title: "Module containerservice"
 title_tag: "Module containerservice | Package @pulumi/azure | Node.js SDK"
 linktitle: "containerservice"
 meta_desc: "Explore members of the containerservice module in the @pulumi/azure package."
-git_sha: "4458e2dce0815e5cc0e8221a9ab77d2466eb9bba"
+git_sha: "b0ec8640c580f1cb329731746f254b47a6e7a245"
 block_external_search_index: true
 ---
 
@@ -60,7 +60,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Group" data-link-title="Group">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L51">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L51">
         Resource <strong>Group</strong>
     </a>
 </h3>
@@ -109,7 +109,7 @@ const exampleGroup = new azure.containerservice.Group("exampleGroup", {
 ```
 
 <h4 class="pdoc-member-header" id="Group-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L142"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L142"> <b>constructor</b></a>
 </h4>
 
 
@@ -123,7 +123,7 @@ Create a Group resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Group-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L61">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L61">method <b>get</b></a>
 </h4>
 
 
@@ -134,14 +134,14 @@ Get an existing Group resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Group-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L51">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L51">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Group-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L72">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L72">method <b>isInstance</b></a>
 </h4>
 
 
@@ -152,7 +152,7 @@ Returns true if the given object is an instance of Group.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Group-containers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L82">property <b>containers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L82">property <b>containers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>containers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GroupContainer'>GroupContainer</a>[]&gt;;</code></pre>
@@ -160,7 +160,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The definition of a container that is part of the group as documented in the `container` block below. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Group-diagnostics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L86">property <b>diagnostics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L86">property <b>diagnostics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>diagnostics: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GroupDiagnostics'>GroupDiagnostics</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -168,7 +168,7 @@ The definition of a container that is part of the group as documented in the `co
 A `diagnostics` block as documented below.
 
 <h4 class="pdoc-member-header" id="Group-dnsConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L90">property <b>dnsConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L90">property <b>dnsConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dnsConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GroupDnsConfig'>GroupDnsConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -176,7 +176,7 @@ A `diagnostics` block as documented below.
 A `dnsConfig` block as documented below.
 
 <h4 class="pdoc-member-header" id="Group-dnsNameLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L94">property <b>dnsNameLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L94">property <b>dnsNameLabel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dnsNameLabel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -184,7 +184,7 @@ A `dnsConfig` block as documented below.
 The DNS label/name for the container groups IP. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Group-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L98">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L98">property <b>fqdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fqdn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -192,7 +192,7 @@ The DNS label/name for the container groups IP. Changing this forces a new resou
 The FQDN of the container group derived from `dnsNameLabel`.
 
 <h4 class="pdoc-member-header" id="Group-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L51">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L51">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -201,7 +201,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Group-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L102">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L102">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GroupIdentity'>GroupIdentity</a>&gt;;</code></pre>
@@ -209,7 +209,7 @@ deployments and may be missing (undefined) during planning phases.
 An `identity` block as defined below.
 
 <h4 class="pdoc-member-header" id="Group-imageRegistryCredentials">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L106">property <b>imageRegistryCredentials</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L106">property <b>imageRegistryCredentials</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>imageRegistryCredentials: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GroupImageRegistryCredential'>GroupImageRegistryCredential</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -217,7 +217,7 @@ An `identity` block as defined below.
 A `imageRegistryCredential` block as documented below. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Group-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L110">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L110">property <b>ipAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -225,7 +225,7 @@ A `imageRegistryCredential` block as documented below. Changing this forces a ne
 The IP address allocated to the container group.
 
 <h4 class="pdoc-member-header" id="Group-ipAddressType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L114">property <b>ipAddressType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L114">property <b>ipAddressType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipAddressType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -233,7 +233,7 @@ The IP address allocated to the container group.
 Specifies the ip address type of the container. `Public` or `Private`. Changing this forces a new resource to be created. If set to `Private`, `networkProfileId` also needs to be set.
 
 <h4 class="pdoc-member-header" id="Group-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L118">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L118">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -241,7 +241,7 @@ Specifies the ip address type of the container. `Public` or `Private`. Changing 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Group-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L122">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L122">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -249,7 +249,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the Container Group. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Group-networkProfileId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L126">property <b>networkProfileId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L126">property <b>networkProfileId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>networkProfileId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -257,7 +257,7 @@ Specifies the name of the Container Group. Changing this forces a new resource t
 Network profile ID for deploying to virtual network.
 
 <h4 class="pdoc-member-header" id="Group-osType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L130">property <b>osType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L130">property <b>osType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>osType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -265,7 +265,7 @@ Network profile ID for deploying to virtual network.
 The OS for the container group. Allowed values are `Linux` and `Windows`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Group-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L134">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L134">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -273,7 +273,7 @@ The OS for the container group. Allowed values are `Linux` and `Windows`. Changi
 The name of the resource group in which to create the Container Group. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Group-restartPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L138">property <b>restartPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L138">property <b>restartPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>restartPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -281,7 +281,7 @@ The name of the resource group in which to create the Container Group. Changing 
 Restart policy for the container group. Allowed values are `Always`, `Never`, `OnFailure`. Defaults to `Always`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Group-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L142">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L142">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -289,7 +289,7 @@ Restart policy for the container group. Allowed values are `Always`, `Never`, `O
 A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Group-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L51">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L51">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -298,7 +298,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="KubernetesCluster" data-link-title="KubernetesCluster">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L41">
         Resource <strong>KubernetesCluster</strong>
     </a>
 </h3>
@@ -337,7 +337,7 @@ export const kubeConfig = exampleKubernetesCluster.kubeConfigRaw;
 ```
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L184"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L184"> <b>constructor</b></a>
 </h4>
 
 
@@ -351,7 +351,7 @@ Create a KubernetesCluster resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L51">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L51">method <b>get</b></a>
 </h4>
 
 
@@ -362,14 +362,14 @@ Get an existing KubernetesCluster resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L41">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L41">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L62">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L62">method <b>isInstance</b></a>
 </h4>
 
 
@@ -380,7 +380,7 @@ Returns true if the given object is an instance of KubernetesCluster.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-addonProfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L72">property <b>addonProfile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L72">property <b>addonProfile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>addonProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterAddonProfile'>KubernetesClusterAddonProfile</a>&gt;;</code></pre>
@@ -388,7 +388,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A `addonProfile` block as defined below.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-apiServerAuthorizedIpRanges">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L76">property <b>apiServerAuthorizedIpRanges</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L76">property <b>apiServerAuthorizedIpRanges</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiServerAuthorizedIpRanges: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -396,7 +396,7 @@ A `addonProfile` block as defined below.
 The IP ranges to whitelist for incoming traffic to the masters.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-autoScalerProfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L80">property <b>autoScalerProfile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L80">property <b>autoScalerProfile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoScalerProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterAutoScalerProfile'>KubernetesClusterAutoScalerProfile</a>&gt;;</code></pre>
@@ -404,7 +404,7 @@ The IP ranges to whitelist for incoming traffic to the masters.
 A `autoScalerProfile` block as defined below.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-defaultNodePool">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L84">property <b>defaultNodePool</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L84">property <b>defaultNodePool</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultNodePool: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterDefaultNodePool'>KubernetesClusterDefaultNodePool</a>&gt;;</code></pre>
@@ -412,7 +412,7 @@ A `autoScalerProfile` block as defined below.
 A `defaultNodePool` block as defined below.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-diskEncryptionSetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L88">property <b>diskEncryptionSetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L88">property <b>diskEncryptionSetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>diskEncryptionSetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -420,7 +420,7 @@ A `defaultNodePool` block as defined below.
 The ID of the Disk Encryption Set which should be used for the Nodes and Volumes. More information [can be found in the documentation](https://docs.microsoft.com/en-us/azure/aks/azure-disk-customer-managed-keys).
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-dnsPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L92">property <b>dnsPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L92">property <b>dnsPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dnsPrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -428,7 +428,7 @@ The ID of the Disk Encryption Set which should be used for the Nodes and Volumes
 DNS prefix specified when creating the managed cluster. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-enablePodSecurityPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L96">property <b>enablePodSecurityPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L96">property <b>enablePodSecurityPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enablePodSecurityPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -436,7 +436,7 @@ DNS prefix specified when creating the managed cluster. Changing this forces a n
 Whether Pod Security Policies are enabled. Note that this also requires role based access control to be enabled.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L100">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L100">property <b>fqdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fqdn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -444,7 +444,7 @@ Whether Pod Security Policies are enabled. Note that this also requires role bas
 The FQDN of the Azure Kubernetes Managed Cluster.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L41">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L41">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -453,7 +453,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L104">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L104">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterIdentity'>KubernetesClusterIdentity</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -461,7 +461,7 @@ deployments and may be missing (undefined) during planning phases.
 A `identity` block as defined below. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-kubeAdminConfigRaw">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L108">property <b>kubeAdminConfigRaw</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L108">property <b>kubeAdminConfigRaw</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kubeAdminConfigRaw: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -469,7 +469,7 @@ A `identity` block as defined below. Changing this forces a new resource to be c
 Raw Kubernetes config for the admin account to be used by [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) and other compatible tools. This is only available when Role Based Access Control with Azure Active Directory is enabled.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-kubeAdminConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L112">property <b>kubeAdminConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L112">property <b>kubeAdminConfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kubeAdminConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterKubeAdminConfig'>KubernetesClusterKubeAdminConfig</a>[]&gt;;</code></pre>
@@ -477,7 +477,7 @@ Raw Kubernetes config for the admin account to be used by [kubectl](https://kube
 A `kubeAdminConfig` block as defined below. This is only available when Role Based Access Control with Azure Active Directory is enabled.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-kubeConfigRaw">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L116">property <b>kubeConfigRaw</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L116">property <b>kubeConfigRaw</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kubeConfigRaw: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -485,7 +485,7 @@ A `kubeAdminConfig` block as defined below. This is only available when Role Bas
 Raw Kubernetes config to be used by [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) and other compatible tools
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-kubeConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L120">property <b>kubeConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L120">property <b>kubeConfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kubeConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterKubeConfig'>KubernetesClusterKubeConfig</a>[]&gt;;</code></pre>
@@ -493,7 +493,7 @@ Raw Kubernetes config to be used by [kubectl](https://kubernetes.io/docs/referen
 A `kubeConfig` block as defined below.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-kubeletIdentities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L124">property <b>kubeletIdentities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L124">property <b>kubeletIdentities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kubeletIdentities: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterKubeletIdentity'>KubernetesClusterKubeletIdentity</a>[]&gt;;</code></pre>
@@ -501,7 +501,7 @@ A `kubeConfig` block as defined below.
 A `kubeletIdentity` block as defined below.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-kubernetesVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L128">property <b>kubernetesVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L128">property <b>kubernetesVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kubernetesVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -509,7 +509,7 @@ A `kubeletIdentity` block as defined below.
 Version of Kubernetes specified when creating the AKS managed cluster. If not specified, the latest recommended version will be used at provisioning time (but won't auto-upgrade).
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-linuxProfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L132">property <b>linuxProfile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L132">property <b>linuxProfile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>linuxProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterLinuxProfile'>KubernetesClusterLinuxProfile</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -517,7 +517,7 @@ Version of Kubernetes specified when creating the AKS managed cluster. If not sp
 A `linuxProfile` block as defined below.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L136">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L136">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -525,7 +525,7 @@ A `linuxProfile` block as defined below.
 The location where the Managed Kubernetes Cluster should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L140">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L140">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -533,7 +533,7 @@ The location where the Managed Kubernetes Cluster should be created. Changing th
 The name of the Managed Kubernetes Cluster to create. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-networkProfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L144">property <b>networkProfile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L144">property <b>networkProfile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>networkProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterNetworkProfile'>KubernetesClusterNetworkProfile</a>&gt;;</code></pre>
@@ -541,7 +541,7 @@ The name of the Managed Kubernetes Cluster to create. Changing this forces a new
 A `networkProfile` block as defined below.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-nodeResourceGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L148">property <b>nodeResourceGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L148">property <b>nodeResourceGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodeResourceGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -549,7 +549,7 @@ A `networkProfile` block as defined below.
 The name of the Resource Group where the Kubernetes Nodes should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-privateClusterEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L152">property <b>privateClusterEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L152">property <b>privateClusterEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateClusterEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -557,7 +557,7 @@ The name of the Resource Group where the Kubernetes Nodes should exist. Changing
 Should this Kubernetes Cluster have its API server only exposed on internal IP addresses? This provides a Private IP Address for the Kubernetes API on the Virtual Network where the Kubernetes Cluster is located. Defaults to `false`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-privateFqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L156">property <b>privateFqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L156">property <b>privateFqdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateFqdn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -565,7 +565,7 @@ Should this Kubernetes Cluster have its API server only exposed on internal IP a
 The FQDN for the Kubernetes Cluster when private link has been enabled, which is only resolvable inside the Virtual Network used by the Kubernetes Cluster.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-privateLinkEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L160">property <b>privateLinkEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L160">property <b>privateLinkEnabled</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -574,7 +574,7 @@ Deprecated in favor of `private_cluster_enabled`
 </div>
 <pre class="highlight"><code><span class='kd'>public </span>privateLinkEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesCluster-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L164">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L164">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -582,7 +582,7 @@ Deprecated in favor of `private_cluster_enabled`
 Specifies the Resource Group where the Managed Kubernetes Cluster should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-roleBasedAccessControl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L168">property <b>roleBasedAccessControl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L168">property <b>roleBasedAccessControl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>roleBasedAccessControl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterRoleBasedAccessControl'>KubernetesClusterRoleBasedAccessControl</a>&gt;;</code></pre>
@@ -590,7 +590,7 @@ Specifies the Resource Group where the Managed Kubernetes Cluster should exist. 
 A `roleBasedAccessControl` block. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-servicePrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L172">property <b>servicePrincipal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L172">property <b>servicePrincipal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>servicePrincipal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterServicePrincipal'>KubernetesClusterServicePrincipal</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -598,7 +598,7 @@ A `roleBasedAccessControl` block. Changing this forces a new resource to be crea
 A `servicePrincipal` block as documented below.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-skuTier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L176">property <b>skuTier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L176">property <b>skuTier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>skuTier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -606,7 +606,7 @@ A `servicePrincipal` block as documented below.
 The SKU Tier that should be used for this Kubernetes Cluster. Possible values are `Free` and `Paid` (which includes the Uptime SLA). Defaults to `Free`.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L180">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L180">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -614,7 +614,7 @@ The SKU Tier that should be used for this Kubernetes Cluster. Possible values ar
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L41">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L41">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -623,7 +623,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-windowsProfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L184">property <b>windowsProfile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L184">property <b>windowsProfile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>windowsProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterWindowsProfile'>KubernetesClusterWindowsProfile</a>&gt;;</code></pre>
@@ -631,7 +631,7 @@ deployments.
 A `windowsProfile` block as defined below.
 
 <h3 class="pdoc-module-header" id="KubernetesClusterNodePool" data-link-title="KubernetesClusterNodePool">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L45">
         Resource <strong>KubernetesClusterNodePool</strong>
     </a>
 </h3>
@@ -676,7 +676,7 @@ const exampleKubernetesClusterNodePool = new azure.containerservice.KubernetesCl
 ```
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePool-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L156"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L156"> <b>constructor</b></a>
 </h4>
 
 
@@ -690,7 +690,7 @@ Create a KubernetesClusterNodePool resource with the given unique name, argument
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePool-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L55">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L55">method <b>get</b></a>
 </h4>
 
 
@@ -701,14 +701,14 @@ Get an existing KubernetesClusterNodePool resource's state with the given name, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePool-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L45">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L45">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePool-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L66">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L66">method <b>isInstance</b></a>
 </h4>
 
 
@@ -719,7 +719,7 @@ Returns true if the given object is an instance of KubernetesClusterNodePool.  T
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePool-availabilityZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L76">property <b>availabilityZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L76">property <b>availabilityZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>availabilityZones: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -727,7 +727,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A list of Availability Zones where the Nodes in this Node Pool should be created in.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePool-enableAutoScaling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L80">property <b>enableAutoScaling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L80">property <b>enableAutoScaling</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enableAutoScaling: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -735,7 +735,7 @@ A list of Availability Zones where the Nodes in this Node Pool should be created
 Whether to enable [auto-scaler](https://docs.microsoft.com/en-us/azure/aks/cluster-autoscaler). Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePool-enableNodePublicIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L84">property <b>enableNodePublicIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L84">property <b>enableNodePublicIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enableNodePublicIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -743,7 +743,7 @@ Whether to enable [auto-scaler](https://docs.microsoft.com/en-us/azure/aks/clust
 Should each node have a Public IP Address? Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePool-evictionPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L88">property <b>evictionPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L88">property <b>evictionPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>evictionPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -751,7 +751,7 @@ Should each node have a Public IP Address? Defaults to `false`.
 The Eviction Policy which should be used for Virtual Machines within the Virtual Machine Scale Set powering this Node Pool. Possible values are `Deallocate` and `Delete`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePool-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L45">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L45">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -760,7 +760,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePool-kubernetesClusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L92">property <b>kubernetesClusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L92">property <b>kubernetesClusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kubernetesClusterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -768,15 +768,15 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the Kubernetes Cluster where this Node Pool should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePool-maxCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L96">property <b>maxCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L96">property <b>maxCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-The maximum number of nodes which should exist within this Node Pool. Valid values are between `1` and `100` and must be greater than or equal to `minCount`.
+The maximum number of nodes which should exist within this Node Pool. Valid values are between `0` and `100` and must be greater than or equal to `minCount`.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePool-maxPods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L100">property <b>maxPods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L100">property <b>maxPods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxPods: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -784,15 +784,15 @@ The maximum number of nodes which should exist within this Node Pool. Valid valu
 The maximum number of pods that can run on each agent. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePool-minCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L104">property <b>minCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L104">property <b>minCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>minCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-The minimum number of nodes which should exist within this Node Pool. Valid values are between `1` and `100` and must be less than or equal to `maxCount`.
+The minimum number of nodes which should exist within this Node Pool. Valid values are between `0` and `100` and must be less than or equal to `maxCount`.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePool-mode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L108">property <b>mode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L108">property <b>mode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -800,7 +800,7 @@ The minimum number of nodes which should exist within this Node Pool. Valid valu
 Should this Node Pool be used for System or User resources? Possible values are `System` and `User`. Defaults to `User`.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePool-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L112">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L112">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -808,15 +808,15 @@ Should this Node Pool be used for System or User resources? Possible values are 
 The name of the Node Pool which should be created within the Kubernetes Cluster. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePool-nodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L116">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L116">property <b>nodeCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodeCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 
-The initial number of nodes which should exist within this Node Pool. Valid values are between `1` and `100` and must be a value in the range `minCount` - `maxCount`.
+The initial number of nodes which should exist within this Node Pool. Valid values are between `0` and `100` and must be a value in the range `minCount` - `maxCount`.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePool-nodeLabels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L120">property <b>nodeLabels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L120">property <b>nodeLabels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodeLabels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -824,7 +824,7 @@ The initial number of nodes which should exist within this Node Pool. Valid valu
 A map of Kubernetes labels which should be applied to nodes in this Node Pool. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePool-nodeTaints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L124">property <b>nodeTaints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L124">property <b>nodeTaints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodeTaints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -832,7 +832,7 @@ A map of Kubernetes labels which should be applied to nodes in this Node Pool. C
 A list of Kubernetes taints which should be applied to nodes in the agent pool (e.g `key=value:NoSchedule`). Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePool-orchestratorVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L128">property <b>orchestratorVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L128">property <b>orchestratorVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>orchestratorVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -840,7 +840,7 @@ A list of Kubernetes taints which should be applied to nodes in the agent pool (
 Version of Kubernetes used for the Agents. If not specified, the latest recommended version will be used at provisioning time (but won't auto-upgrade)
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePool-osDiskSizeGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L132">property <b>osDiskSizeGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L132">property <b>osDiskSizeGb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>osDiskSizeGb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -848,7 +848,7 @@ Version of Kubernetes used for the Agents. If not specified, the latest recommen
 The Agent Operating System disk size in GB. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePool-osType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L136">property <b>osType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L136">property <b>osType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>osType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -856,7 +856,7 @@ The Agent Operating System disk size in GB. Changing this forces a new resource 
 The Operating System which should be used for this Node Pool. Changing this forces a new resource to be created. Possible values are `Linux` and `Windows`. Defaults to `Linux`.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePool-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L140">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L140">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -864,7 +864,7 @@ The Operating System which should be used for this Node Pool. Changing this forc
 The Priority for Virtual Machines within the Virtual Machine Scale Set that powers this Node Pool. Possible values are `Regular` and `Spot`. Defaults to `Regular`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePool-spotMaxPrice">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L144">property <b>spotMaxPrice</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L144">property <b>spotMaxPrice</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>spotMaxPrice: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -872,7 +872,7 @@ The Priority for Virtual Machines within the Virtual Machine Scale Set that powe
 The maximum price you're willing to pay in USD per Virtual Machine. Valid values are `-1` (the current on-demand price for a Virtual Machine) or a positive value with up to five decimal places. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePool-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L148">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L148">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -880,7 +880,7 @@ The maximum price you're willing to pay in USD per Virtual Machine. Valid values
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePool-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L45">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L45">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -889,7 +889,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePool-vmSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L152">property <b>vmSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L152">property <b>vmSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vmSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -897,7 +897,7 @@ deployments.
 The SKU which should be used for the Virtual Machines used in this Node Pool. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePool-vnetSubnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L156">property <b>vnetSubnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L156">property <b>vnetSubnetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vnetSubnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -905,7 +905,7 @@ The SKU which should be used for the Virtual Machines used in this Node Pool. Ch
 The ID of the Subnet where this Node Pool should exist.
 
 <h3 class="pdoc-module-header" id="Registry" data-link-title="Registry">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registry.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registry.ts#L31">
         Resource <strong>Registry</strong>
     </a>
 </h3>
@@ -934,7 +934,7 @@ const acr = new azure.containerservice.Registry("acr", {
 ```
 
 <h4 class="pdoc-member-header" id="Registry-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registry.ts#L106"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registry.ts#L106"> <b>constructor</b></a>
 </h4>
 
 
@@ -948,7 +948,7 @@ Create a Registry resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Registry-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registry.ts#L41">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registry.ts#L41">method <b>get</b></a>
 </h4>
 
 
@@ -959,14 +959,14 @@ Get an existing Registry resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Registry-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registry.ts#L31">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registry.ts#L31">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Registry-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registry.ts#L52">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registry.ts#L52">method <b>isInstance</b></a>
 </h4>
 
 
@@ -977,7 +977,7 @@ Returns true if the given object is an instance of Registry.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Registry-adminEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registry.ts#L62">property <b>adminEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registry.ts#L62">property <b>adminEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>adminEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -985,7 +985,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Specifies whether the admin user is enabled. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="Registry-adminPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registry.ts#L66">property <b>adminPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registry.ts#L66">property <b>adminPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>adminPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -993,7 +993,7 @@ Specifies whether the admin user is enabled. Defaults to `false`.
 The Password associated with the Container Registry Admin account - if the admin account is enabled.
 
 <h4 class="pdoc-member-header" id="Registry-adminUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registry.ts#L70">property <b>adminUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registry.ts#L70">property <b>adminUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>adminUsername: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1001,7 +1001,7 @@ The Password associated with the Container Registry Admin account - if the admin
 The Username associated with the Container Registry Admin account - if the admin account is enabled.
 
 <h4 class="pdoc-member-header" id="Registry-georeplicationLocations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registry.ts#L74">property <b>georeplicationLocations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registry.ts#L74">property <b>georeplicationLocations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>georeplicationLocations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1009,7 +1009,7 @@ The Username associated with the Container Registry Admin account - if the admin
 A list of Azure locations where the container registry should be geo-replicated.
 
 <h4 class="pdoc-member-header" id="Registry-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registry.ts#L31">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registry.ts#L31">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1018,7 +1018,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Registry-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registry.ts#L78">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registry.ts#L78">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1026,7 +1026,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Registry-loginServer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registry.ts#L82">property <b>loginServer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registry.ts#L82">property <b>loginServer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loginServer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1034,7 +1034,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 The URL that can be used to log into the container registry.
 
 <h4 class="pdoc-member-header" id="Registry-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registry.ts#L86">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registry.ts#L86">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1042,7 +1042,7 @@ The URL that can be used to log into the container registry.
 Specifies the name of the Container Registry. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Registry-networkRuleSet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registry.ts#L90">property <b>networkRuleSet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registry.ts#L90">property <b>networkRuleSet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>networkRuleSet: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#RegistryNetworkRuleSet'>RegistryNetworkRuleSet</a>&gt;;</code></pre>
@@ -1050,7 +1050,7 @@ Specifies the name of the Container Registry. Changing this forces a new resourc
 A `networkRuleSet` block as documented below.
 
 <h4 class="pdoc-member-header" id="Registry-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registry.ts#L94">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registry.ts#L94">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1058,7 +1058,7 @@ A `networkRuleSet` block as documented below.
 The name of the resource group in which to create the Container Registry. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Registry-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registry.ts#L98">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registry.ts#L98">property <b>sku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1066,7 +1066,7 @@ The name of the resource group in which to create the Container Registry. Changi
 The SKU name of the container registry. Possible values are  `Basic`, `Standard` and `Premium`. `Classic` (which was previously `Basic`) is supported only for existing resources.
 
 <h4 class="pdoc-member-header" id="Registry-storageAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registry.ts#L102">property <b>storageAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registry.ts#L102">property <b>storageAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1074,7 +1074,7 @@ The SKU name of the container registry. Possible values are  `Basic`, `Standard`
 The ID of a Storage Account which must be located in the same Azure Region as the Container Registry.  Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Registry-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registry.ts#L106">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registry.ts#L106">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1082,7 +1082,7 @@ The ID of a Storage Account which must be located in the same Azure Region as th
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Registry-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registry.ts#L31">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registry.ts#L31">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1091,7 +1091,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="RegistryWebhook" data-link-title="RegistryWebhook">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebhook.ts#L37">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebhook.ts#L37">
         Resource <strong>RegistryWebhook</strong>
     </a>
 </h3>
@@ -1128,7 +1128,7 @@ const webhook = new azure.containerservice.RegistryWebhook("webhook", {
 ```
 
 <h4 class="pdoc-member-header" id="RegistryWebhook-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebhook.ts#L101"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebhook.ts#L101"> <b>constructor</b></a>
 </h4>
 
 
@@ -1142,7 +1142,7 @@ Create a RegistryWebhook resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="RegistryWebhook-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebhook.ts#L47">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebhook.ts#L47">method <b>get</b></a>
 </h4>
 
 
@@ -1153,14 +1153,14 @@ Get an existing RegistryWebhook resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="RegistryWebhook-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebhook.ts#L37">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebhook.ts#L37">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="RegistryWebhook-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebhook.ts#L58">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebhook.ts#L58">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1171,7 +1171,7 @@ Returns true if the given object is an instance of RegistryWebhook.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="RegistryWebhook-actions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebhook.ts#L68">property <b>actions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebhook.ts#L68">property <b>actions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>actions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1179,7 +1179,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A list of actions that trigger the Webhook to post notifications. At least one action needs to be specified. Valid values are: `push`, `delete`, `quarantine`, `chartPush`, `chartDelete`
 
 <h4 class="pdoc-member-header" id="RegistryWebhook-customHeaders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebhook.ts#L72">property <b>customHeaders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebhook.ts#L72">property <b>customHeaders</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>customHeaders: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1187,7 +1187,7 @@ A list of actions that trigger the Webhook to post notifications. At least one a
 Custom headers that will be added to the webhook notifications request.
 
 <h4 class="pdoc-member-header" id="RegistryWebhook-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebhook.ts#L37">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebhook.ts#L37">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1196,7 +1196,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="RegistryWebhook-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebhook.ts#L76">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebhook.ts#L76">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1204,7 +1204,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RegistryWebhook-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebhook.ts#L80">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebhook.ts#L80">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1212,7 +1212,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the Container Registry Webhook. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RegistryWebhook-registryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebhook.ts#L84">property <b>registryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebhook.ts#L84">property <b>registryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>registryName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1220,7 +1220,7 @@ Specifies the name of the Container Registry Webhook. Changing this forces a new
 The Name of Container registry this Webhook belongs to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RegistryWebhook-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebhook.ts#L88">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebhook.ts#L88">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1228,7 +1228,7 @@ The Name of Container registry this Webhook belongs to. Changing this forces a n
 The name of the resource group in which to create the Container Registry Webhook. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RegistryWebhook-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebhook.ts#L92">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebhook.ts#L92">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1236,7 +1236,7 @@ The name of the resource group in which to create the Container Registry Webhook
 Specifies the scope of repositories that can trigger an event. For example, `foo:*` means events for all tags under repository `foo`. `foo:bar` means events for 'foo:bar' only. `foo` is equivalent to `foo:latest`. Empty means all events.
 
 <h4 class="pdoc-member-header" id="RegistryWebhook-serviceUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebhook.ts#L96">property <b>serviceUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebhook.ts#L96">property <b>serviceUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceUri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1244,7 +1244,7 @@ Specifies the scope of repositories that can trigger an event. For example, `foo
 Specifies the service URI for the Webhook to post notifications.
 
 <h4 class="pdoc-member-header" id="RegistryWebhook-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebhook.ts#L100">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebhook.ts#L100">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1252,12 +1252,12 @@ Specifies the service URI for the Webhook to post notifications.
 Specifies if this Webhook triggers notifications or not. Valid values: `enabled` and `disabled`. Default is `enabled`.
 
 <h4 class="pdoc-member-header" id="RegistryWebhook-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebhook.ts#L101">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebhook.ts#L101">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RegistryWebhook-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebhook.ts#L37">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebhook.ts#L37">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1266,7 +1266,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="RegistryWebook" data-link-title="RegistryWebook">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebook.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebook.ts#L39">
         Resource <strong>RegistryWebook</strong>
     </a>
 </h3>
@@ -1307,7 +1307,7 @@ const webhook = new azure.containerservice.RegistryWebhook("webhook", {
 ```
 
 <h4 class="pdoc-member-header" id="RegistryWebook-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebook.ts#L104"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebook.ts#L104"> <b>constructor</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1322,7 +1322,7 @@ azure.containerservice.RegistryWebook has been deprecated in favor of azure.cont
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> RegistryWebook(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#RegistryWebookArgs'>RegistryWebookArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="RegistryWebook-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebook.ts#L49">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebook.ts#L49">method <b>get</b></a>
 </h4>
 
 
@@ -1333,14 +1333,14 @@ Get an existing RegistryWebook resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="RegistryWebook-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebook.ts#L39">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebook.ts#L39">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="RegistryWebook-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebook.ts#L61">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebook.ts#L61">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1351,7 +1351,7 @@ Returns true if the given object is an instance of RegistryWebook.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="RegistryWebook-actions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebook.ts#L71">property <b>actions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebook.ts#L71">property <b>actions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>actions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1359,7 +1359,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A list of actions that trigger the Webhook to post notifications. At least one action needs to be specified. Valid values are: `push`, `delete`, `quarantine`, `chartPush`, `chartDelete`
 
 <h4 class="pdoc-member-header" id="RegistryWebook-customHeaders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebook.ts#L75">property <b>customHeaders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebook.ts#L75">property <b>customHeaders</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>customHeaders: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1367,7 +1367,7 @@ A list of actions that trigger the Webhook to post notifications. At least one a
 Custom headers that will be added to the webhook notifications request.
 
 <h4 class="pdoc-member-header" id="RegistryWebook-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebook.ts#L39">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebook.ts#L39">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1376,7 +1376,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="RegistryWebook-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebook.ts#L79">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebook.ts#L79">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1384,7 +1384,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RegistryWebook-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebook.ts#L83">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebook.ts#L83">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1392,7 +1392,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the Container Registry Webhook. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RegistryWebook-registryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebook.ts#L87">property <b>registryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebook.ts#L87">property <b>registryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>registryName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1400,7 +1400,7 @@ Specifies the name of the Container Registry Webhook. Changing this forces a new
 The Name of Container registry this Webhook belongs to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RegistryWebook-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebook.ts#L91">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebook.ts#L91">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1408,7 +1408,7 @@ The Name of Container registry this Webhook belongs to. Changing this forces a n
 The name of the resource group in which to create the Container Registry Webhook. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RegistryWebook-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebook.ts#L95">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebook.ts#L95">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1416,7 +1416,7 @@ The name of the resource group in which to create the Container Registry Webhook
 Specifies the scope of repositories that can trigger an event. For example, `foo:*` means events for all tags under repository `foo`. `foo:bar` means events for 'foo:bar' only. `foo` is equivalent to `foo:latest`. Empty means all events.
 
 <h4 class="pdoc-member-header" id="RegistryWebook-serviceUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebook.ts#L99">property <b>serviceUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebook.ts#L99">property <b>serviceUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceUri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1424,7 +1424,7 @@ Specifies the scope of repositories that can trigger an event. For example, `foo
 Specifies the service URI for the Webhook to post notifications.
 
 <h4 class="pdoc-member-header" id="RegistryWebook-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebook.ts#L103">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebook.ts#L103">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1432,12 +1432,12 @@ Specifies the service URI for the Webhook to post notifications.
 Specifies if this Webhook triggers notifications or not. Valid values: `enabled` and `disabled`. Default is `enabled`.
 
 <h4 class="pdoc-member-header" id="RegistryWebook-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebook.ts#L104">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebook.ts#L104">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RegistryWebook-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebook.ts#L39">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebook.ts#L39">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1448,7 +1448,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getClusterNodePool" data-link-title="getClusterNodePool">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getClusterNodePool.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getClusterNodePool.ts#L26">
         Function <strong>getClusterNodePool</strong>
     </a>
 </h3>
@@ -1474,7 +1474,7 @@ export const id = example.then(example => example.id);
 ```
 
 <h3 class="pdoc-module-header" id="getKubernetesCluster" data-link-title="getKubernetesCluster">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesCluster.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesCluster.ts#L24">
         Function <strong>getKubernetesCluster</strong>
     </a>
 </h3>
@@ -1498,7 +1498,7 @@ const example = pulumi.output(azure.containerservice.getKubernetesCluster({
 ```
 
 <h3 class="pdoc-module-header" id="getKubernetesServiceVersions" data-link-title="getKubernetesServiceVersions">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesServiceVersions.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesServiceVersions.ts#L25">
         Function <strong>getKubernetesServiceVersions</strong>
     </a>
 </h3>
@@ -1523,7 +1523,7 @@ export const latestVersion = current.then(current => current.latestVersion);
 ```
 
 <h3 class="pdoc-module-header" id="getRegistry" data-link-title="getRegistry">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getRegistry.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getRegistry.ts#L25">
         Function <strong>getRegistry</strong>
     </a>
 </h3>
@@ -1550,7 +1550,7 @@ export const loginServer = example.then(example => example.loginServer);
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetClusterNodePoolArgs" data-link-title="GetClusterNodePoolArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getClusterNodePool.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getClusterNodePool.ts#L44">
         interface <strong>GetClusterNodePoolArgs</strong>
     </a>
 </h3>
@@ -1560,7 +1560,7 @@ export const loginServer = example.then(example => example.loginServer);
 A collection of arguments for invoking getClusterNodePool.
 
 <h4 class="pdoc-member-header" id="GetClusterNodePoolArgs-kubernetesClusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getClusterNodePool.ts#L48">property <b>kubernetesClusterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getClusterNodePool.ts#L48">property <b>kubernetesClusterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kubernetesClusterName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1568,7 +1568,7 @@ A collection of arguments for invoking getClusterNodePool.
 The Name of the Kubernetes Cluster where this Node Pool is located.
 
 <h4 class="pdoc-member-header" id="GetClusterNodePoolArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getClusterNodePool.ts#L52">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getClusterNodePool.ts#L52">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1576,7 +1576,7 @@ The Name of the Kubernetes Cluster where this Node Pool is located.
 The name of this Kubernetes Cluster Node Pool.
 
 <h4 class="pdoc-member-header" id="GetClusterNodePoolArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getClusterNodePool.ts#L56">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getClusterNodePool.ts#L56">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1584,7 +1584,7 @@ The name of this Kubernetes Cluster Node Pool.
 The name of the Resource Group where the Kubernetes Cluster exists.
 
 <h3 class="pdoc-module-header" id="GetClusterNodePoolResult" data-link-title="GetClusterNodePoolResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getClusterNodePool.ts#L62">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getClusterNodePool.ts#L62">
         interface <strong>GetClusterNodePoolResult</strong>
     </a>
 </h3>
@@ -1594,7 +1594,7 @@ The name of the Resource Group where the Kubernetes Cluster exists.
 A collection of values returned by getClusterNodePool.
 
 <h4 class="pdoc-member-header" id="GetClusterNodePoolResult-availabilityZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getClusterNodePool.ts#L66">property <b>availabilityZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getClusterNodePool.ts#L66">property <b>availabilityZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZones: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1602,7 +1602,7 @@ A collection of values returned by getClusterNodePool.
 A list of Availability Zones in which the Nodes in this Node Pool exists.
 
 <h4 class="pdoc-member-header" id="GetClusterNodePoolResult-enableAutoScaling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getClusterNodePool.ts#L70">property <b>enableAutoScaling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getClusterNodePool.ts#L70">property <b>enableAutoScaling</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableAutoScaling: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1610,7 +1610,7 @@ A list of Availability Zones in which the Nodes in this Node Pool exists.
 Does this Node Pool have Auto-Scaling enabled?
 
 <h4 class="pdoc-member-header" id="GetClusterNodePoolResult-enableNodePublicIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getClusterNodePool.ts#L74">property <b>enableNodePublicIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getClusterNodePool.ts#L74">property <b>enableNodePublicIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableNodePublicIp: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1618,7 +1618,7 @@ Does this Node Pool have Auto-Scaling enabled?
 Do nodes in this Node Pool have a Public IP Address?
 
 <h4 class="pdoc-member-header" id="GetClusterNodePoolResult-evictionPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getClusterNodePool.ts#L78">property <b>evictionPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getClusterNodePool.ts#L78">property <b>evictionPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>evictionPolicy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1626,7 +1626,7 @@ Do nodes in this Node Pool have a Public IP Address?
 The eviction policy used for Virtual Machines in the Virtual Machine Scale Set, when `priority` is set to `Spot`.
 
 <h4 class="pdoc-member-header" id="GetClusterNodePoolResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getClusterNodePool.ts#L82">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getClusterNodePool.ts#L82">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1634,12 +1634,12 @@ The eviction policy used for Virtual Machines in the Virtual Machine Scale Set, 
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetClusterNodePoolResult-kubernetesClusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getClusterNodePool.ts#L83">property <b>kubernetesClusterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getClusterNodePool.ts#L83">property <b>kubernetesClusterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kubernetesClusterName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterNodePoolResult-maxCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getClusterNodePool.ts#L87">property <b>maxCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getClusterNodePool.ts#L87">property <b>maxCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxCount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1647,7 +1647,7 @@ The provider-assigned unique ID for this managed resource.
 The maximum number of Nodes allowed when auto-scaling is enabled.
 
 <h4 class="pdoc-member-header" id="GetClusterNodePoolResult-maxPods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getClusterNodePool.ts#L91">property <b>maxPods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getClusterNodePool.ts#L91">property <b>maxPods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxPods: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1655,7 +1655,7 @@ The maximum number of Nodes allowed when auto-scaling is enabled.
 The maximum number of Pods allowed on each Node in this Node Pool.
 
 <h4 class="pdoc-member-header" id="GetClusterNodePoolResult-minCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getClusterNodePool.ts#L95">property <b>minCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getClusterNodePool.ts#L95">property <b>minCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minCount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1663,7 +1663,7 @@ The maximum number of Pods allowed on each Node in this Node Pool.
 The minimum number of Nodes allowed when auto-scaling is enabled.
 
 <h4 class="pdoc-member-header" id="GetClusterNodePoolResult-mode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getClusterNodePool.ts#L99">property <b>mode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getClusterNodePool.ts#L99">property <b>mode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1671,12 +1671,12 @@ The minimum number of Nodes allowed when auto-scaling is enabled.
 The Mode for this Node Pool, specifying how these Nodes should be used (for either System or User resources).
 
 <h4 class="pdoc-member-header" id="GetClusterNodePoolResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getClusterNodePool.ts#L100">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getClusterNodePool.ts#L100">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterNodePoolResult-nodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getClusterNodePool.ts#L104">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getClusterNodePool.ts#L104">property <b>nodeCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeCount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1684,7 +1684,7 @@ The Mode for this Node Pool, specifying how these Nodes should be used (for eith
 The current number of Nodes in the Node Pool.
 
 <h4 class="pdoc-member-header" id="GetClusterNodePoolResult-nodeLabels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getClusterNodePool.ts#L108">property <b>nodeLabels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getClusterNodePool.ts#L108">property <b>nodeLabels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeLabels: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1692,7 +1692,7 @@ The current number of Nodes in the Node Pool.
 A map of Kubernetes Labels applied to each Node in this Node Pool.
 
 <h4 class="pdoc-member-header" id="GetClusterNodePoolResult-nodeTaints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getClusterNodePool.ts#L112">property <b>nodeTaints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getClusterNodePool.ts#L112">property <b>nodeTaints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeTaints: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1700,7 +1700,7 @@ A map of Kubernetes Labels applied to each Node in this Node Pool.
 A map of Kubernetes Taints applied to each Node in this Node Pool.
 
 <h4 class="pdoc-member-header" id="GetClusterNodePoolResult-orchestratorVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getClusterNodePool.ts#L116">property <b>orchestratorVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getClusterNodePool.ts#L116">property <b>orchestratorVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>orchestratorVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1708,7 +1708,7 @@ A map of Kubernetes Taints applied to each Node in this Node Pool.
 The version of Kubernetes configured on each Node in this Node Pool.
 
 <h4 class="pdoc-member-header" id="GetClusterNodePoolResult-osDiskSizeGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getClusterNodePool.ts#L120">property <b>osDiskSizeGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getClusterNodePool.ts#L120">property <b>osDiskSizeGb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>osDiskSizeGb: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1716,7 +1716,7 @@ The version of Kubernetes configured on each Node in this Node Pool.
 The size of the OS Disk on each Node in this Node Pool.
 
 <h4 class="pdoc-member-header" id="GetClusterNodePoolResult-osType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getClusterNodePool.ts#L124">property <b>osType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getClusterNodePool.ts#L124">property <b>osType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>osType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1724,7 +1724,7 @@ The size of the OS Disk on each Node in this Node Pool.
 The operating system used on each Node in this Node Pool.
 
 <h4 class="pdoc-member-header" id="GetClusterNodePoolResult-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getClusterNodePool.ts#L128">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getClusterNodePool.ts#L128">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1732,12 +1732,12 @@ The operating system used on each Node in this Node Pool.
 The priority of the Virtual Machines in the Virtual Machine Scale Set backing this Node Pool.
 
 <h4 class="pdoc-member-header" id="GetClusterNodePoolResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getClusterNodePool.ts#L129">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getClusterNodePool.ts#L129">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterNodePoolResult-spotMaxPrice">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getClusterNodePool.ts#L133">property <b>spotMaxPrice</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getClusterNodePool.ts#L133">property <b>spotMaxPrice</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spotMaxPrice: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1745,7 +1745,7 @@ The priority of the Virtual Machines in the Virtual Machine Scale Set backing th
 The maximum price being paid for Virtual Machines in this Scale Set. `-1` means the current on-demand price for a Virtual Machine.
 
 <h4 class="pdoc-member-header" id="GetClusterNodePoolResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getClusterNodePool.ts#L137">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getClusterNodePool.ts#L137">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1753,7 +1753,7 @@ The maximum price being paid for Virtual Machines in this Scale Set. `-1` means 
 A mapping of tags assigned to the Kubernetes Cluster Node Pool.
 
 <h4 class="pdoc-member-header" id="GetClusterNodePoolResult-vmSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getClusterNodePool.ts#L141">property <b>vmSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getClusterNodePool.ts#L141">property <b>vmSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vmSize: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1761,7 +1761,7 @@ A mapping of tags assigned to the Kubernetes Cluster Node Pool.
 The size of the Virtual Machines used in the Virtual Machine Scale Set backing this Node Pool.
 
 <h4 class="pdoc-member-header" id="GetClusterNodePoolResult-vnetSubnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getClusterNodePool.ts#L145">property <b>vnetSubnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getClusterNodePool.ts#L145">property <b>vnetSubnetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vnetSubnetId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1769,7 +1769,7 @@ The size of the Virtual Machines used in the Virtual Machine Scale Set backing t
 The ID of the Subnet in which this Node Pool exists.
 
 <h3 class="pdoc-module-header" id="GetKubernetesClusterArgs" data-link-title="GetKubernetesClusterArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesCluster.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesCluster.ts#L41">
         interface <strong>GetKubernetesClusterArgs</strong>
     </a>
 </h3>
@@ -1779,7 +1779,7 @@ The ID of the Subnet in which this Node Pool exists.
 A collection of arguments for invoking getKubernetesCluster.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesCluster.ts#L45">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesCluster.ts#L45">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1787,7 +1787,7 @@ A collection of arguments for invoking getKubernetesCluster.
 The name of the managed Kubernetes Cluster.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesCluster.ts#L49">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesCluster.ts#L49">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1795,7 +1795,7 @@ The name of the managed Kubernetes Cluster.
 The name of the Resource Group in which the managed Kubernetes Cluster exists.
 
 <h3 class="pdoc-module-header" id="GetKubernetesClusterResult" data-link-title="GetKubernetesClusterResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesCluster.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesCluster.ts#L55">
         interface <strong>GetKubernetesClusterResult</strong>
     </a>
 </h3>
@@ -1805,7 +1805,7 @@ The name of the Resource Group in which the managed Kubernetes Cluster exists.
 A collection of values returned by getKubernetesCluster.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-addonProfiles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesCluster.ts#L59">property <b>addonProfiles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesCluster.ts#L59">property <b>addonProfiles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addonProfiles: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterAddonProfile'>GetKubernetesClusterAddonProfile</a>[];</code></pre>
@@ -1813,7 +1813,7 @@ A collection of values returned by getKubernetesCluster.
 A `addonProfile` block as documented below.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-agentPoolProfiles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesCluster.ts#L63">property <b>agentPoolProfiles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesCluster.ts#L63">property <b>agentPoolProfiles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>agentPoolProfiles: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterAgentPoolProfile'>GetKubernetesClusterAgentPoolProfile</a>[];</code></pre>
@@ -1821,7 +1821,7 @@ A `addonProfile` block as documented below.
 An `agentPoolProfile` block as documented below.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-apiServerAuthorizedIpRanges">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesCluster.ts#L67">property <b>apiServerAuthorizedIpRanges</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesCluster.ts#L67">property <b>apiServerAuthorizedIpRanges</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiServerAuthorizedIpRanges: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1829,7 +1829,7 @@ An `agentPoolProfile` block as documented below.
 The IP ranges to whitelist for incoming traffic to the primaries.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-diskEncryptionSetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesCluster.ts#L71">property <b>diskEncryptionSetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesCluster.ts#L71">property <b>diskEncryptionSetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskEncryptionSetId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1837,7 +1837,7 @@ The IP ranges to whitelist for incoming traffic to the primaries.
 The ID of the Disk Encryption Set used for the Nodes and Volumes.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-dnsPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesCluster.ts#L75">property <b>dnsPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesCluster.ts#L75">property <b>dnsPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsPrefix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1845,7 +1845,7 @@ The ID of the Disk Encryption Set used for the Nodes and Volumes.
 The DNS Prefix of the managed Kubernetes cluster.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesCluster.ts#L79">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesCluster.ts#L79">property <b>fqdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fqdn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1853,7 +1853,7 @@ The DNS Prefix of the managed Kubernetes cluster.
 The FQDN of the Azure Kubernetes Managed Cluster.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesCluster.ts#L83">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesCluster.ts#L83">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1861,7 +1861,7 @@ The FQDN of the Azure Kubernetes Managed Cluster.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-identities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesCluster.ts#L87">property <b>identities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesCluster.ts#L87">property <b>identities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identities: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterIdentity'>GetKubernetesClusterIdentity</a>[];</code></pre>
@@ -1869,7 +1869,7 @@ The provider-assigned unique ID for this managed resource.
 A `identity` block as documented below.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-kubeAdminConfigRaw">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesCluster.ts#L91">property <b>kubeAdminConfigRaw</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesCluster.ts#L91">property <b>kubeAdminConfigRaw</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kubeAdminConfigRaw: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1877,7 +1877,7 @@ A `identity` block as documented below.
 Raw Kubernetes config for the admin account to be used by [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) and other compatible tools. This is only available when Role Based Access Control with Azure Active Directory is enabled.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-kubeAdminConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesCluster.ts#L95">property <b>kubeAdminConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesCluster.ts#L95">property <b>kubeAdminConfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kubeAdminConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterKubeAdminConfig'>GetKubernetesClusterKubeAdminConfig</a>[];</code></pre>
@@ -1885,7 +1885,7 @@ Raw Kubernetes config for the admin account to be used by [kubectl](https://kube
 A `kubeAdminConfig` block as defined below. This is only available when Role Based Access Control with Azure Active Directory is enabled.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-kubeConfigRaw">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesCluster.ts#L99">property <b>kubeConfigRaw</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesCluster.ts#L99">property <b>kubeConfigRaw</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kubeConfigRaw: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1893,7 +1893,7 @@ A `kubeAdminConfig` block as defined below. This is only available when Role Bas
 Base64 encoded Kubernetes configuration.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-kubeConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesCluster.ts#L103">property <b>kubeConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesCluster.ts#L103">property <b>kubeConfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kubeConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterKubeConfig'>GetKubernetesClusterKubeConfig</a>[];</code></pre>
@@ -1901,7 +1901,7 @@ Base64 encoded Kubernetes configuration.
 A `kubeConfig` block as defined below.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-kubeletIdentities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesCluster.ts#L107">property <b>kubeletIdentities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesCluster.ts#L107">property <b>kubeletIdentities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kubeletIdentities: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterKubeletIdentity'>GetKubernetesClusterKubeletIdentity</a>[];</code></pre>
@@ -1909,7 +1909,7 @@ A `kubeConfig` block as defined below.
 A `kubeletIdentity` block as documented below.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-kubernetesVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesCluster.ts#L111">property <b>kubernetesVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesCluster.ts#L111">property <b>kubernetesVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kubernetesVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1917,7 +1917,7 @@ A `kubeletIdentity` block as documented below.
 The version of Kubernetes used on the managed Kubernetes Cluster.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-linuxProfiles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesCluster.ts#L115">property <b>linuxProfiles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesCluster.ts#L115">property <b>linuxProfiles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>linuxProfiles: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterLinuxProfile'>GetKubernetesClusterLinuxProfile</a>[];</code></pre>
@@ -1925,7 +1925,7 @@ The version of Kubernetes used on the managed Kubernetes Cluster.
 A `linuxProfile` block as documented below.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesCluster.ts#L119">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesCluster.ts#L119">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1933,7 +1933,7 @@ A `linuxProfile` block as documented below.
 The Azure Region in which the managed Kubernetes Cluster exists.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesCluster.ts#L123">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesCluster.ts#L123">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1941,7 +1941,7 @@ The Azure Region in which the managed Kubernetes Cluster exists.
 The name assigned to this pool of agents.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-networkProfiles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesCluster.ts#L127">property <b>networkProfiles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesCluster.ts#L127">property <b>networkProfiles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkProfiles: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterNetworkProfile'>GetKubernetesClusterNetworkProfile</a>[];</code></pre>
@@ -1949,7 +1949,7 @@ The name assigned to this pool of agents.
 A `networkProfile` block as documented below.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-nodeResourceGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesCluster.ts#L131">property <b>nodeResourceGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesCluster.ts#L131">property <b>nodeResourceGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeResourceGroup: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1957,7 +1957,7 @@ A `networkProfile` block as documented below.
 Auto-generated Resource Group containing AKS Cluster resources.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-privateClusterEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesCluster.ts#L135">property <b>privateClusterEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesCluster.ts#L135">property <b>privateClusterEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateClusterEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1965,7 +1965,7 @@ Auto-generated Resource Group containing AKS Cluster resources.
 If the cluster has the Kubernetes API only exposed on internal IP addresses.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-privateFqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesCluster.ts#L139">property <b>privateFqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesCluster.ts#L139">property <b>privateFqdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateFqdn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1973,7 +1973,7 @@ If the cluster has the Kubernetes API only exposed on internal IP addresses.
 The FQDN of this Kubernetes Cluster when private link has been enabled. This name is only resolvable inside the Virtual Network where the Azure Kubernetes Service is located
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-privateLinkEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesCluster.ts#L143">property <b>privateLinkEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesCluster.ts#L143">property <b>privateLinkEnabled</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1982,12 +1982,12 @@ Deprecated in favor of `private_cluster_enabled`
 </div>
 <pre class="highlight"><code><span class='kd'></span>privateLinkEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesCluster.ts#L144">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesCluster.ts#L144">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-roleBasedAccessControls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesCluster.ts#L148">property <b>roleBasedAccessControls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesCluster.ts#L148">property <b>roleBasedAccessControls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleBasedAccessControls: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterRoleBasedAccessControl'>GetKubernetesClusterRoleBasedAccessControl</a>[];</code></pre>
@@ -1995,7 +1995,7 @@ Deprecated in favor of `private_cluster_enabled`
 A `roleBasedAccessControl` block as documented below.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-servicePrincipals">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesCluster.ts#L152">property <b>servicePrincipals</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesCluster.ts#L152">property <b>servicePrincipals</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>servicePrincipals: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterServicePrincipal'>GetKubernetesClusterServicePrincipal</a>[];</code></pre>
@@ -2003,7 +2003,7 @@ A `roleBasedAccessControl` block as documented below.
 A `servicePrincipal` block as documented below.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesCluster.ts#L156">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesCluster.ts#L156">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -2011,7 +2011,7 @@ A `servicePrincipal` block as documented below.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-windowsProfiles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesCluster.ts#L160">property <b>windowsProfiles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesCluster.ts#L160">property <b>windowsProfiles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>windowsProfiles: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterWindowsProfile'>GetKubernetesClusterWindowsProfile</a>[];</code></pre>
@@ -2019,7 +2019,7 @@ A mapping of tags to assign to the resource.
 A `windowsProfile` block as documented below.
 
 <h3 class="pdoc-module-header" id="GetKubernetesServiceVersionsArgs" data-link-title="GetKubernetesServiceVersionsArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesServiceVersions.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesServiceVersions.ts#L43">
         interface <strong>GetKubernetesServiceVersionsArgs</strong>
     </a>
 </h3>
@@ -2029,7 +2029,7 @@ A `windowsProfile` block as documented below.
 A collection of arguments for invoking getKubernetesServiceVersions.
 
 <h4 class="pdoc-member-header" id="GetKubernetesServiceVersionsArgs-includePreview">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesServiceVersions.ts#L47">property <b>includePreview</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesServiceVersions.ts#L47">property <b>includePreview</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includePreview?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -2037,7 +2037,7 @@ A collection of arguments for invoking getKubernetesServiceVersions.
 Should Preview versions of Kubernetes in AKS be included? Defaults to `true`
 
 <h4 class="pdoc-member-header" id="GetKubernetesServiceVersionsArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesServiceVersions.ts#L51">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesServiceVersions.ts#L51">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2045,7 +2045,7 @@ Should Preview versions of Kubernetes in AKS be included? Defaults to `true`
 Specifies the location in which to query for versions.
 
 <h4 class="pdoc-member-header" id="GetKubernetesServiceVersionsArgs-versionPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesServiceVersions.ts#L55">property <b>versionPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesServiceVersions.ts#L55">property <b>versionPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versionPrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2053,7 +2053,7 @@ Specifies the location in which to query for versions.
 A prefix filter for the versions of Kubernetes which should be returned; for example `1.` will return `1.9` to `1.14`, whereas `1.12` will return `1.12.2`.
 
 <h3 class="pdoc-module-header" id="GetKubernetesServiceVersionsResult" data-link-title="GetKubernetesServiceVersionsResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesServiceVersions.ts#L61">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesServiceVersions.ts#L61">
         interface <strong>GetKubernetesServiceVersionsResult</strong>
     </a>
 </h3>
@@ -2063,7 +2063,7 @@ A prefix filter for the versions of Kubernetes which should be returned; for exa
 A collection of values returned by getKubernetesServiceVersions.
 
 <h4 class="pdoc-member-header" id="GetKubernetesServiceVersionsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesServiceVersions.ts#L65">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesServiceVersions.ts#L65">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2071,12 +2071,12 @@ A collection of values returned by getKubernetesServiceVersions.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetKubernetesServiceVersionsResult-includePreview">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesServiceVersions.ts#L66">property <b>includePreview</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesServiceVersions.ts#L66">property <b>includePreview</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includePreview?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetKubernetesServiceVersionsResult-latestVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesServiceVersions.ts#L70">property <b>latestVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesServiceVersions.ts#L70">property <b>latestVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>latestVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2084,17 +2084,17 @@ The provider-assigned unique ID for this managed resource.
 The most recent version available. If `includePreview == false`, this is the most recent non-preview version available.
 
 <h4 class="pdoc-member-header" id="GetKubernetesServiceVersionsResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesServiceVersions.ts#L71">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesServiceVersions.ts#L71">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetKubernetesServiceVersionsResult-versionPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesServiceVersions.ts#L72">property <b>versionPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesServiceVersions.ts#L72">property <b>versionPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versionPrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetKubernetesServiceVersionsResult-versions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getKubernetesServiceVersions.ts#L76">property <b>versions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getKubernetesServiceVersions.ts#L76">property <b>versions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2102,7 +2102,7 @@ The most recent version available. If `includePreview == false`, this is the mos
 The list of all supported versions.
 
 <h3 class="pdoc-module-header" id="GetRegistryArgs" data-link-title="GetRegistryArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getRegistry.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getRegistry.ts#L42">
         interface <strong>GetRegistryArgs</strong>
     </a>
 </h3>
@@ -2112,7 +2112,7 @@ The list of all supported versions.
 A collection of arguments for invoking getRegistry.
 
 <h4 class="pdoc-member-header" id="GetRegistryArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getRegistry.ts#L46">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getRegistry.ts#L46">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2120,7 +2120,7 @@ A collection of arguments for invoking getRegistry.
 The name of the Container Registry.
 
 <h4 class="pdoc-member-header" id="GetRegistryArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getRegistry.ts#L50">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getRegistry.ts#L50">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2128,7 +2128,7 @@ The name of the Container Registry.
 The Name of the Resource Group where this Container Registry exists.
 
 <h3 class="pdoc-module-header" id="GetRegistryResult" data-link-title="GetRegistryResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getRegistry.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getRegistry.ts#L56">
         interface <strong>GetRegistryResult</strong>
     </a>
 </h3>
@@ -2138,7 +2138,7 @@ The Name of the Resource Group where this Container Registry exists.
 A collection of values returned by getRegistry.
 
 <h4 class="pdoc-member-header" id="GetRegistryResult-adminEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getRegistry.ts#L60">property <b>adminEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getRegistry.ts#L60">property <b>adminEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adminEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -2146,7 +2146,7 @@ A collection of values returned by getRegistry.
 Is the Administrator account enabled for this Container Registry.
 
 <h4 class="pdoc-member-header" id="GetRegistryResult-adminPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getRegistry.ts#L64">property <b>adminPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getRegistry.ts#L64">property <b>adminPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adminPassword: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2154,7 +2154,7 @@ Is the Administrator account enabled for this Container Registry.
 The Password associated with the Container Registry Admin account - if the admin account is enabled.
 
 <h4 class="pdoc-member-header" id="GetRegistryResult-adminUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getRegistry.ts#L68">property <b>adminUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getRegistry.ts#L68">property <b>adminUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adminUsername: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2162,7 +2162,7 @@ The Password associated with the Container Registry Admin account - if the admin
 The Username associated with the Container Registry Admin account - if the admin account is enabled.
 
 <h4 class="pdoc-member-header" id="GetRegistryResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getRegistry.ts#L72">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getRegistry.ts#L72">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2170,7 +2170,7 @@ The Username associated with the Container Registry Admin account - if the admin
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetRegistryResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getRegistry.ts#L76">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getRegistry.ts#L76">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2178,7 +2178,7 @@ The provider-assigned unique ID for this managed resource.
 The Azure Region in which this Container Registry exists.
 
 <h4 class="pdoc-member-header" id="GetRegistryResult-loginServer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getRegistry.ts#L80">property <b>loginServer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getRegistry.ts#L80">property <b>loginServer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loginServer: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2186,17 +2186,17 @@ The Azure Region in which this Container Registry exists.
 The URL that can be used to log into the container registry.
 
 <h4 class="pdoc-member-header" id="GetRegistryResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getRegistry.ts#L81">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getRegistry.ts#L81">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRegistryResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getRegistry.ts#L82">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getRegistry.ts#L82">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRegistryResult-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getRegistry.ts#L86">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getRegistry.ts#L86">property <b>sku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sku: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2204,7 +2204,7 @@ The URL that can be used to log into the container registry.
 The SKU of this Container Registry, such as `Basic`.
 
 <h4 class="pdoc-member-header" id="GetRegistryResult-storageAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getRegistry.ts#L90">property <b>storageAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getRegistry.ts#L90">property <b>storageAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageAccountId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2212,7 +2212,7 @@ The SKU of this Container Registry, such as `Basic`.
 The ID of the Storage Account used for this Container Registry. This is only returned for `Classic` SKU's.
 
 <h4 class="pdoc-member-header" id="GetRegistryResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/getRegistry.ts#L94">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/getRegistry.ts#L94">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -2220,7 +2220,7 @@ The ID of the Storage Account used for this Container Registry. This is only ret
 A map of tags assigned to the Container Registry.
 
 <h3 class="pdoc-module-header" id="GroupArgs" data-link-title="GroupArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L284">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L284">
         interface <strong>GroupArgs</strong>
     </a>
 </h3>
@@ -2230,7 +2230,7 @@ A map of tags assigned to the Container Registry.
 The set of arguments for constructing a Group resource.
 
 <h4 class="pdoc-member-header" id="GroupArgs-containers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L288">property <b>containers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L288">property <b>containers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupContainer'>GroupContainer</a>&gt;[]&gt;;</code></pre>
@@ -2238,7 +2238,7 @@ The set of arguments for constructing a Group resource.
 The definition of a container that is part of the group as documented in the `container` block below. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="GroupArgs-diagnostics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L292">property <b>diagnostics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L292">property <b>diagnostics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diagnostics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupDiagnostics'>GroupDiagnostics</a>&gt;;</code></pre>
@@ -2246,7 +2246,7 @@ The definition of a container that is part of the group as documented in the `co
 A `diagnostics` block as documented below.
 
 <h4 class="pdoc-member-header" id="GroupArgs-dnsConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L296">property <b>dnsConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L296">property <b>dnsConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupDnsConfig'>GroupDnsConfig</a>&gt;;</code></pre>
@@ -2254,7 +2254,7 @@ A `diagnostics` block as documented below.
 A `dnsConfig` block as documented below.
 
 <h4 class="pdoc-member-header" id="GroupArgs-dnsNameLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L300">property <b>dnsNameLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L300">property <b>dnsNameLabel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsNameLabel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2262,7 +2262,7 @@ A `dnsConfig` block as documented below.
 The DNS label/name for the container groups IP. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="GroupArgs-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L304">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L304">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupIdentity'>GroupIdentity</a>&gt;;</code></pre>
@@ -2270,7 +2270,7 @@ The DNS label/name for the container groups IP. Changing this forces a new resou
 An `identity` block as defined below.
 
 <h4 class="pdoc-member-header" id="GroupArgs-imageRegistryCredentials">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L308">property <b>imageRegistryCredentials</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L308">property <b>imageRegistryCredentials</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageRegistryCredentials?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupImageRegistryCredential'>GroupImageRegistryCredential</a>&gt;[]&gt;;</code></pre>
@@ -2278,7 +2278,7 @@ An `identity` block as defined below.
 A `imageRegistryCredential` block as documented below. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="GroupArgs-ipAddressType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L312">property <b>ipAddressType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L312">property <b>ipAddressType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipAddressType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2286,7 +2286,7 @@ A `imageRegistryCredential` block as documented below. Changing this forces a ne
 Specifies the ip address type of the container. `Public` or `Private`. Changing this forces a new resource to be created. If set to `Private`, `networkProfileId` also needs to be set.
 
 <h4 class="pdoc-member-header" id="GroupArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L316">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L316">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2294,7 +2294,7 @@ Specifies the ip address type of the container. `Public` or `Private`. Changing 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="GroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L320">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L320">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2302,7 +2302,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the Container Group. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="GroupArgs-networkProfileId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L324">property <b>networkProfileId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L324">property <b>networkProfileId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkProfileId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2310,7 +2310,7 @@ Specifies the name of the Container Group. Changing this forces a new resource t
 Network profile ID for deploying to virtual network.
 
 <h4 class="pdoc-member-header" id="GroupArgs-osType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L328">property <b>osType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L328">property <b>osType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>osType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2318,7 +2318,7 @@ Network profile ID for deploying to virtual network.
 The OS for the container group. Allowed values are `Linux` and `Windows`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="GroupArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L332">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L332">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2326,7 +2326,7 @@ The OS for the container group. Allowed values are `Linux` and `Windows`. Changi
 The name of the resource group in which to create the Container Group. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="GroupArgs-restartPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L336">property <b>restartPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L336">property <b>restartPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>restartPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2334,7 +2334,7 @@ The name of the resource group in which to create the Container Group. Changing 
 Restart policy for the container group. Allowed values are `Always`, `Never`, `OnFailure`. Defaults to `Always`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="GroupArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L340">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L340">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2342,7 +2342,7 @@ Restart policy for the container group. Allowed values are `Always`, `Never`, `O
 A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="GroupState" data-link-title="GroupState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L214">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L214">
         interface <strong>GroupState</strong>
     </a>
 </h3>
@@ -2352,7 +2352,7 @@ A mapping of tags to assign to the resource. Changing this forces a new resource
 Input properties used for looking up and filtering Group resources.
 
 <h4 class="pdoc-member-header" id="GroupState-containers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L218">property <b>containers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L218">property <b>containers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupContainer'>GroupContainer</a>&gt;[]&gt;;</code></pre>
@@ -2360,7 +2360,7 @@ Input properties used for looking up and filtering Group resources.
 The definition of a container that is part of the group as documented in the `container` block below. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="GroupState-diagnostics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L222">property <b>diagnostics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L222">property <b>diagnostics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diagnostics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupDiagnostics'>GroupDiagnostics</a>&gt;;</code></pre>
@@ -2368,7 +2368,7 @@ The definition of a container that is part of the group as documented in the `co
 A `diagnostics` block as documented below.
 
 <h4 class="pdoc-member-header" id="GroupState-dnsConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L226">property <b>dnsConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L226">property <b>dnsConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupDnsConfig'>GroupDnsConfig</a>&gt;;</code></pre>
@@ -2376,7 +2376,7 @@ A `diagnostics` block as documented below.
 A `dnsConfig` block as documented below.
 
 <h4 class="pdoc-member-header" id="GroupState-dnsNameLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L230">property <b>dnsNameLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L230">property <b>dnsNameLabel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsNameLabel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2384,7 +2384,7 @@ A `dnsConfig` block as documented below.
 The DNS label/name for the container groups IP. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="GroupState-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L234">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L234">property <b>fqdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fqdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2392,7 +2392,7 @@ The DNS label/name for the container groups IP. Changing this forces a new resou
 The FQDN of the container group derived from `dnsNameLabel`.
 
 <h4 class="pdoc-member-header" id="GroupState-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L238">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L238">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupIdentity'>GroupIdentity</a>&gt;;</code></pre>
@@ -2400,7 +2400,7 @@ The FQDN of the container group derived from `dnsNameLabel`.
 An `identity` block as defined below.
 
 <h4 class="pdoc-member-header" id="GroupState-imageRegistryCredentials">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L242">property <b>imageRegistryCredentials</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L242">property <b>imageRegistryCredentials</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageRegistryCredentials?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupImageRegistryCredential'>GroupImageRegistryCredential</a>&gt;[]&gt;;</code></pre>
@@ -2408,7 +2408,7 @@ An `identity` block as defined below.
 A `imageRegistryCredential` block as documented below. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="GroupState-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L246">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L246">property <b>ipAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2416,7 +2416,7 @@ A `imageRegistryCredential` block as documented below. Changing this forces a ne
 The IP address allocated to the container group.
 
 <h4 class="pdoc-member-header" id="GroupState-ipAddressType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L250">property <b>ipAddressType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L250">property <b>ipAddressType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipAddressType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2424,7 +2424,7 @@ The IP address allocated to the container group.
 Specifies the ip address type of the container. `Public` or `Private`. Changing this forces a new resource to be created. If set to `Private`, `networkProfileId` also needs to be set.
 
 <h4 class="pdoc-member-header" id="GroupState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L254">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L254">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2432,7 +2432,7 @@ Specifies the ip address type of the container. `Public` or `Private`. Changing 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="GroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L258">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L258">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2440,7 +2440,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the Container Group. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="GroupState-networkProfileId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L262">property <b>networkProfileId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L262">property <b>networkProfileId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkProfileId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2448,7 +2448,7 @@ Specifies the name of the Container Group. Changing this forces a new resource t
 Network profile ID for deploying to virtual network.
 
 <h4 class="pdoc-member-header" id="GroupState-osType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L266">property <b>osType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L266">property <b>osType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>osType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2456,7 +2456,7 @@ Network profile ID for deploying to virtual network.
 The OS for the container group. Allowed values are `Linux` and `Windows`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="GroupState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L270">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L270">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2464,7 +2464,7 @@ The OS for the container group. Allowed values are `Linux` and `Windows`. Changi
 The name of the resource group in which to create the Container Group. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="GroupState-restartPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L274">property <b>restartPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L274">property <b>restartPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>restartPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2472,7 +2472,7 @@ The name of the resource group in which to create the Container Group. Changing 
 Restart policy for the container group. Allowed values are `Always`, `Never`, `OnFailure`. Defaults to `Always`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="GroupState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/group.ts#L278">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/group.ts#L278">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2480,7 +2480,7 @@ Restart policy for the container group. Allowed values are `Always`, `Never`, `O
 A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="KubernetesClusterArgs" data-link-title="KubernetesClusterArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L404">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L404">
         interface <strong>KubernetesClusterArgs</strong>
     </a>
 </h3>
@@ -2490,7 +2490,7 @@ A mapping of tags to assign to the resource. Changing this forces a new resource
 The set of arguments for constructing a KubernetesCluster resource.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterArgs-addonProfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L408">property <b>addonProfile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L408">property <b>addonProfile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addonProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterAddonProfile'>KubernetesClusterAddonProfile</a>&gt;;</code></pre>
@@ -2498,7 +2498,7 @@ The set of arguments for constructing a KubernetesCluster resource.
 A `addonProfile` block as defined below.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterArgs-apiServerAuthorizedIpRanges">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L412">property <b>apiServerAuthorizedIpRanges</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L412">property <b>apiServerAuthorizedIpRanges</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiServerAuthorizedIpRanges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2506,7 +2506,7 @@ A `addonProfile` block as defined below.
 The IP ranges to whitelist for incoming traffic to the masters.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterArgs-autoScalerProfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L416">property <b>autoScalerProfile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L416">property <b>autoScalerProfile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoScalerProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterAutoScalerProfile'>KubernetesClusterAutoScalerProfile</a>&gt;;</code></pre>
@@ -2514,7 +2514,7 @@ The IP ranges to whitelist for incoming traffic to the masters.
 A `autoScalerProfile` block as defined below.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterArgs-defaultNodePool">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L420">property <b>defaultNodePool</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L420">property <b>defaultNodePool</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultNodePool: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterDefaultNodePool'>KubernetesClusterDefaultNodePool</a>&gt;;</code></pre>
@@ -2522,7 +2522,7 @@ A `autoScalerProfile` block as defined below.
 A `defaultNodePool` block as defined below.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterArgs-diskEncryptionSetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L424">property <b>diskEncryptionSetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L424">property <b>diskEncryptionSetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskEncryptionSetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2530,7 +2530,7 @@ A `defaultNodePool` block as defined below.
 The ID of the Disk Encryption Set which should be used for the Nodes and Volumes. More information [can be found in the documentation](https://docs.microsoft.com/en-us/azure/aks/azure-disk-customer-managed-keys).
 
 <h4 class="pdoc-member-header" id="KubernetesClusterArgs-dnsPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L428">property <b>dnsPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L428">property <b>dnsPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsPrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2538,7 +2538,7 @@ The ID of the Disk Encryption Set which should be used for the Nodes and Volumes
 DNS prefix specified when creating the managed cluster. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterArgs-enablePodSecurityPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L432">property <b>enablePodSecurityPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L432">property <b>enablePodSecurityPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enablePodSecurityPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2546,7 +2546,7 @@ DNS prefix specified when creating the managed cluster. Changing this forces a n
 Whether Pod Security Policies are enabled. Note that this also requires role based access control to be enabled.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterArgs-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L436">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L436">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterIdentity'>KubernetesClusterIdentity</a>&gt;;</code></pre>
@@ -2554,7 +2554,7 @@ Whether Pod Security Policies are enabled. Note that this also requires role bas
 A `identity` block as defined below. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterArgs-kubernetesVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L440">property <b>kubernetesVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L440">property <b>kubernetesVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kubernetesVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2562,7 +2562,7 @@ A `identity` block as defined below. Changing this forces a new resource to be c
 Version of Kubernetes specified when creating the AKS managed cluster. If not specified, the latest recommended version will be used at provisioning time (but won't auto-upgrade).
 
 <h4 class="pdoc-member-header" id="KubernetesClusterArgs-linuxProfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L444">property <b>linuxProfile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L444">property <b>linuxProfile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>linuxProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterLinuxProfile'>KubernetesClusterLinuxProfile</a>&gt;;</code></pre>
@@ -2570,7 +2570,7 @@ Version of Kubernetes specified when creating the AKS managed cluster. If not sp
 A `linuxProfile` block as defined below.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L448">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L448">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2578,7 +2578,7 @@ A `linuxProfile` block as defined below.
 The location where the Managed Kubernetes Cluster should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L452">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L452">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2586,7 +2586,7 @@ The location where the Managed Kubernetes Cluster should be created. Changing th
 The name of the Managed Kubernetes Cluster to create. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterArgs-networkProfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L456">property <b>networkProfile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L456">property <b>networkProfile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterNetworkProfile'>KubernetesClusterNetworkProfile</a>&gt;;</code></pre>
@@ -2594,7 +2594,7 @@ The name of the Managed Kubernetes Cluster to create. Changing this forces a new
 A `networkProfile` block as defined below.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterArgs-nodeResourceGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L460">property <b>nodeResourceGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L460">property <b>nodeResourceGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeResourceGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2602,7 +2602,7 @@ A `networkProfile` block as defined below.
 The name of the Resource Group where the Kubernetes Nodes should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterArgs-privateClusterEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L464">property <b>privateClusterEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L464">property <b>privateClusterEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateClusterEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2610,7 +2610,7 @@ The name of the Resource Group where the Kubernetes Nodes should exist. Changing
 Should this Kubernetes Cluster have its API server only exposed on internal IP addresses? This provides a Private IP Address for the Kubernetes API on the Virtual Network where the Kubernetes Cluster is located. Defaults to `false`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterArgs-privateLinkEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L468">property <b>privateLinkEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L468">property <b>privateLinkEnabled</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -2619,7 +2619,7 @@ Deprecated in favor of `private_cluster_enabled`
 </div>
 <pre class="highlight"><code><span class='kd'></span>privateLinkEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesClusterArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L472">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L472">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2627,7 +2627,7 @@ Deprecated in favor of `private_cluster_enabled`
 Specifies the Resource Group where the Managed Kubernetes Cluster should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterArgs-roleBasedAccessControl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L476">property <b>roleBasedAccessControl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L476">property <b>roleBasedAccessControl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleBasedAccessControl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterRoleBasedAccessControl'>KubernetesClusterRoleBasedAccessControl</a>&gt;;</code></pre>
@@ -2635,7 +2635,7 @@ Specifies the Resource Group where the Managed Kubernetes Cluster should exist. 
 A `roleBasedAccessControl` block. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterArgs-servicePrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L480">property <b>servicePrincipal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L480">property <b>servicePrincipal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>servicePrincipal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterServicePrincipal'>KubernetesClusterServicePrincipal</a>&gt;;</code></pre>
@@ -2643,7 +2643,7 @@ A `roleBasedAccessControl` block. Changing this forces a new resource to be crea
 A `servicePrincipal` block as documented below.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterArgs-skuTier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L484">property <b>skuTier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L484">property <b>skuTier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skuTier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2651,7 +2651,7 @@ A `servicePrincipal` block as documented below.
 The SKU Tier that should be used for this Kubernetes Cluster. Possible values are `Free` and `Paid` (which includes the Uptime SLA). Defaults to `Free`.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L488">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L488">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2659,7 +2659,7 @@ The SKU Tier that should be used for this Kubernetes Cluster. Possible values ar
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterArgs-windowsProfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L492">property <b>windowsProfile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L492">property <b>windowsProfile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>windowsProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterWindowsProfile'>KubernetesClusterWindowsProfile</a>&gt;;</code></pre>
@@ -2667,7 +2667,7 @@ A mapping of tags to assign to the resource.
 A `windowsProfile` block as defined below.
 
 <h3 class="pdoc-module-header" id="KubernetesClusterNodePoolArgs" data-link-title="KubernetesClusterNodePoolArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L325">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L325">
         interface <strong>KubernetesClusterNodePoolArgs</strong>
     </a>
 </h3>
@@ -2677,7 +2677,7 @@ A `windowsProfile` block as defined below.
 The set of arguments for constructing a KubernetesClusterNodePool resource.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolArgs-availabilityZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L329">property <b>availabilityZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L329">property <b>availabilityZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZones?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2685,7 +2685,7 @@ The set of arguments for constructing a KubernetesClusterNodePool resource.
 A list of Availability Zones where the Nodes in this Node Pool should be created in.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolArgs-enableAutoScaling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L333">property <b>enableAutoScaling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L333">property <b>enableAutoScaling</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableAutoScaling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2693,7 +2693,7 @@ A list of Availability Zones where the Nodes in this Node Pool should be created
 Whether to enable [auto-scaler](https://docs.microsoft.com/en-us/azure/aks/cluster-autoscaler). Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolArgs-enableNodePublicIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L337">property <b>enableNodePublicIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L337">property <b>enableNodePublicIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableNodePublicIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2701,7 +2701,7 @@ Whether to enable [auto-scaler](https://docs.microsoft.com/en-us/azure/aks/clust
 Should each node have a Public IP Address? Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolArgs-evictionPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L341">property <b>evictionPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L341">property <b>evictionPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>evictionPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2709,7 +2709,7 @@ Should each node have a Public IP Address? Defaults to `false`.
 The Eviction Policy which should be used for Virtual Machines within the Virtual Machine Scale Set powering this Node Pool. Possible values are `Deallocate` and `Delete`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolArgs-kubernetesClusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L345">property <b>kubernetesClusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L345">property <b>kubernetesClusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kubernetesClusterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2717,15 +2717,15 @@ The Eviction Policy which should be used for Virtual Machines within the Virtual
 The ID of the Kubernetes Cluster where this Node Pool should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolArgs-maxCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L349">property <b>maxCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L349">property <b>maxCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 
-The maximum number of nodes which should exist within this Node Pool. Valid values are between `1` and `100` and must be greater than or equal to `minCount`.
+The maximum number of nodes which should exist within this Node Pool. Valid values are between `0` and `100` and must be greater than or equal to `minCount`.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolArgs-maxPods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L353">property <b>maxPods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L353">property <b>maxPods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxPods?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2733,15 +2733,15 @@ The maximum number of nodes which should exist within this Node Pool. Valid valu
 The maximum number of pods that can run on each agent. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolArgs-minCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L357">property <b>minCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L357">property <b>minCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 
-The minimum number of nodes which should exist within this Node Pool. Valid values are between `1` and `100` and must be less than or equal to `maxCount`.
+The minimum number of nodes which should exist within this Node Pool. Valid values are between `0` and `100` and must be less than or equal to `maxCount`.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolArgs-mode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L361">property <b>mode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L361">property <b>mode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2749,7 +2749,7 @@ The minimum number of nodes which should exist within this Node Pool. Valid valu
 Should this Node Pool be used for System or User resources? Possible values are `System` and `User`. Defaults to `User`.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L365">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L365">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2757,15 +2757,15 @@ Should this Node Pool be used for System or User resources? Possible values are 
 The name of the Node Pool which should be created within the Kubernetes Cluster. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolArgs-nodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L369">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L369">property <b>nodeCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 
-The initial number of nodes which should exist within this Node Pool. Valid values are between `1` and `100` and must be a value in the range `minCount` - `maxCount`.
+The initial number of nodes which should exist within this Node Pool. Valid values are between `0` and `100` and must be a value in the range `minCount` - `maxCount`.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolArgs-nodeLabels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L373">property <b>nodeLabels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L373">property <b>nodeLabels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeLabels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2773,7 +2773,7 @@ The initial number of nodes which should exist within this Node Pool. Valid valu
 A map of Kubernetes labels which should be applied to nodes in this Node Pool. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolArgs-nodeTaints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L377">property <b>nodeTaints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L377">property <b>nodeTaints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeTaints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2781,7 +2781,7 @@ A map of Kubernetes labels which should be applied to nodes in this Node Pool. C
 A list of Kubernetes taints which should be applied to nodes in the agent pool (e.g `key=value:NoSchedule`). Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolArgs-orchestratorVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L381">property <b>orchestratorVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L381">property <b>orchestratorVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>orchestratorVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2789,7 +2789,7 @@ A list of Kubernetes taints which should be applied to nodes in the agent pool (
 Version of Kubernetes used for the Agents. If not specified, the latest recommended version will be used at provisioning time (but won't auto-upgrade)
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolArgs-osDiskSizeGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L385">property <b>osDiskSizeGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L385">property <b>osDiskSizeGb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>osDiskSizeGb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2797,7 +2797,7 @@ Version of Kubernetes used for the Agents. If not specified, the latest recommen
 The Agent Operating System disk size in GB. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolArgs-osType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L389">property <b>osType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L389">property <b>osType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>osType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2805,7 +2805,7 @@ The Agent Operating System disk size in GB. Changing this forces a new resource 
 The Operating System which should be used for this Node Pool. Changing this forces a new resource to be created. Possible values are `Linux` and `Windows`. Defaults to `Linux`.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolArgs-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L393">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L393">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2813,7 +2813,7 @@ The Operating System which should be used for this Node Pool. Changing this forc
 The Priority for Virtual Machines within the Virtual Machine Scale Set that powers this Node Pool. Possible values are `Regular` and `Spot`. Defaults to `Regular`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolArgs-spotMaxPrice">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L397">property <b>spotMaxPrice</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L397">property <b>spotMaxPrice</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spotMaxPrice?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2821,7 +2821,7 @@ The Priority for Virtual Machines within the Virtual Machine Scale Set that powe
 The maximum price you're willing to pay in USD per Virtual Machine. Valid values are `-1` (the current on-demand price for a Virtual Machine) or a positive value with up to five decimal places. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L401">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L401">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2829,7 +2829,7 @@ The maximum price you're willing to pay in USD per Virtual Machine. Valid values
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolArgs-vmSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L405">property <b>vmSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L405">property <b>vmSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vmSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2837,7 +2837,7 @@ A mapping of tags to assign to the resource.
 The SKU which should be used for the Virtual Machines used in this Node Pool. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolArgs-vnetSubnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L409">property <b>vnetSubnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L409">property <b>vnetSubnetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vnetSubnetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2845,7 +2845,7 @@ The SKU which should be used for the Virtual Machines used in this Node Pool. Ch
 The ID of the Subnet where this Node Pool should exist.
 
 <h3 class="pdoc-module-header" id="KubernetesClusterNodePoolState" data-link-title="KubernetesClusterNodePoolState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L235">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L235">
         interface <strong>KubernetesClusterNodePoolState</strong>
     </a>
 </h3>
@@ -2855,7 +2855,7 @@ The ID of the Subnet where this Node Pool should exist.
 Input properties used for looking up and filtering KubernetesClusterNodePool resources.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolState-availabilityZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L239">property <b>availabilityZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L239">property <b>availabilityZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZones?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2863,7 +2863,7 @@ Input properties used for looking up and filtering KubernetesClusterNodePool res
 A list of Availability Zones where the Nodes in this Node Pool should be created in.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolState-enableAutoScaling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L243">property <b>enableAutoScaling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L243">property <b>enableAutoScaling</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableAutoScaling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2871,7 +2871,7 @@ A list of Availability Zones where the Nodes in this Node Pool should be created
 Whether to enable [auto-scaler](https://docs.microsoft.com/en-us/azure/aks/cluster-autoscaler). Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolState-enableNodePublicIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L247">property <b>enableNodePublicIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L247">property <b>enableNodePublicIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableNodePublicIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2879,7 +2879,7 @@ Whether to enable [auto-scaler](https://docs.microsoft.com/en-us/azure/aks/clust
 Should each node have a Public IP Address? Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolState-evictionPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L251">property <b>evictionPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L251">property <b>evictionPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>evictionPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2887,7 +2887,7 @@ Should each node have a Public IP Address? Defaults to `false`.
 The Eviction Policy which should be used for Virtual Machines within the Virtual Machine Scale Set powering this Node Pool. Possible values are `Deallocate` and `Delete`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolState-kubernetesClusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L255">property <b>kubernetesClusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L255">property <b>kubernetesClusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kubernetesClusterId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2895,15 +2895,15 @@ The Eviction Policy which should be used for Virtual Machines within the Virtual
 The ID of the Kubernetes Cluster where this Node Pool should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolState-maxCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L259">property <b>maxCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L259">property <b>maxCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 
-The maximum number of nodes which should exist within this Node Pool. Valid values are between `1` and `100` and must be greater than or equal to `minCount`.
+The maximum number of nodes which should exist within this Node Pool. Valid values are between `0` and `100` and must be greater than or equal to `minCount`.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolState-maxPods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L263">property <b>maxPods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L263">property <b>maxPods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxPods?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2911,15 +2911,15 @@ The maximum number of nodes which should exist within this Node Pool. Valid valu
 The maximum number of pods that can run on each agent. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolState-minCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L267">property <b>minCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L267">property <b>minCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 
-The minimum number of nodes which should exist within this Node Pool. Valid values are between `1` and `100` and must be less than or equal to `maxCount`.
+The minimum number of nodes which should exist within this Node Pool. Valid values are between `0` and `100` and must be less than or equal to `maxCount`.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolState-mode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L271">property <b>mode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L271">property <b>mode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2927,7 +2927,7 @@ The minimum number of nodes which should exist within this Node Pool. Valid valu
 Should this Node Pool be used for System or User resources? Possible values are `System` and `User`. Defaults to `User`.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L275">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L275">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2935,15 +2935,15 @@ Should this Node Pool be used for System or User resources? Possible values are 
 The name of the Node Pool which should be created within the Kubernetes Cluster. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolState-nodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L279">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L279">property <b>nodeCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 
-The initial number of nodes which should exist within this Node Pool. Valid values are between `1` and `100` and must be a value in the range `minCount` - `maxCount`.
+The initial number of nodes which should exist within this Node Pool. Valid values are between `0` and `100` and must be a value in the range `minCount` - `maxCount`.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolState-nodeLabels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L283">property <b>nodeLabels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L283">property <b>nodeLabels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeLabels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2951,7 +2951,7 @@ The initial number of nodes which should exist within this Node Pool. Valid valu
 A map of Kubernetes labels which should be applied to nodes in this Node Pool. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolState-nodeTaints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L287">property <b>nodeTaints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L287">property <b>nodeTaints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeTaints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2959,7 +2959,7 @@ A map of Kubernetes labels which should be applied to nodes in this Node Pool. C
 A list of Kubernetes taints which should be applied to nodes in the agent pool (e.g `key=value:NoSchedule`). Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolState-orchestratorVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L291">property <b>orchestratorVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L291">property <b>orchestratorVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>orchestratorVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2967,7 +2967,7 @@ A list of Kubernetes taints which should be applied to nodes in the agent pool (
 Version of Kubernetes used for the Agents. If not specified, the latest recommended version will be used at provisioning time (but won't auto-upgrade)
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolState-osDiskSizeGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L295">property <b>osDiskSizeGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L295">property <b>osDiskSizeGb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>osDiskSizeGb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2975,7 +2975,7 @@ Version of Kubernetes used for the Agents. If not specified, the latest recommen
 The Agent Operating System disk size in GB. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolState-osType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L299">property <b>osType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L299">property <b>osType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>osType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2983,7 +2983,7 @@ The Agent Operating System disk size in GB. Changing this forces a new resource 
 The Operating System which should be used for this Node Pool. Changing this forces a new resource to be created. Possible values are `Linux` and `Windows`. Defaults to `Linux`.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolState-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L303">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L303">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2991,7 +2991,7 @@ The Operating System which should be used for this Node Pool. Changing this forc
 The Priority for Virtual Machines within the Virtual Machine Scale Set that powers this Node Pool. Possible values are `Regular` and `Spot`. Defaults to `Regular`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolState-spotMaxPrice">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L307">property <b>spotMaxPrice</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L307">property <b>spotMaxPrice</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spotMaxPrice?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2999,7 +2999,7 @@ The Priority for Virtual Machines within the Virtual Machine Scale Set that powe
 The maximum price you're willing to pay in USD per Virtual Machine. Valid values are `-1` (the current on-demand price for a Virtual Machine) or a positive value with up to five decimal places. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L311">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L311">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3007,7 +3007,7 @@ The maximum price you're willing to pay in USD per Virtual Machine. Valid values
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolState-vmSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L315">property <b>vmSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L315">property <b>vmSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vmSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3015,7 +3015,7 @@ A mapping of tags to assign to the resource.
 The SKU which should be used for the Virtual Machines used in this Node Pool. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolState-vnetSubnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L319">property <b>vnetSubnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesClusterNodePool.ts#L319">property <b>vnetSubnetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vnetSubnetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3023,7 +3023,7 @@ The SKU which should be used for the Virtual Machines used in this Node Pool. Ch
 The ID of the Subnet where this Node Pool should exist.
 
 <h3 class="pdoc-module-header" id="KubernetesClusterState" data-link-title="KubernetesClusterState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L282">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L282">
         interface <strong>KubernetesClusterState</strong>
     </a>
 </h3>
@@ -3033,7 +3033,7 @@ The ID of the Subnet where this Node Pool should exist.
 Input properties used for looking up and filtering KubernetesCluster resources.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-addonProfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L286">property <b>addonProfile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L286">property <b>addonProfile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addonProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterAddonProfile'>KubernetesClusterAddonProfile</a>&gt;;</code></pre>
@@ -3041,7 +3041,7 @@ Input properties used for looking up and filtering KubernetesCluster resources.
 A `addonProfile` block as defined below.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-apiServerAuthorizedIpRanges">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L290">property <b>apiServerAuthorizedIpRanges</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L290">property <b>apiServerAuthorizedIpRanges</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiServerAuthorizedIpRanges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3049,7 +3049,7 @@ A `addonProfile` block as defined below.
 The IP ranges to whitelist for incoming traffic to the masters.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-autoScalerProfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L294">property <b>autoScalerProfile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L294">property <b>autoScalerProfile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoScalerProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterAutoScalerProfile'>KubernetesClusterAutoScalerProfile</a>&gt;;</code></pre>
@@ -3057,7 +3057,7 @@ The IP ranges to whitelist for incoming traffic to the masters.
 A `autoScalerProfile` block as defined below.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-defaultNodePool">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L298">property <b>defaultNodePool</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L298">property <b>defaultNodePool</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultNodePool?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterDefaultNodePool'>KubernetesClusterDefaultNodePool</a>&gt;;</code></pre>
@@ -3065,7 +3065,7 @@ A `autoScalerProfile` block as defined below.
 A `defaultNodePool` block as defined below.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-diskEncryptionSetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L302">property <b>diskEncryptionSetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L302">property <b>diskEncryptionSetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskEncryptionSetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3073,7 +3073,7 @@ A `defaultNodePool` block as defined below.
 The ID of the Disk Encryption Set which should be used for the Nodes and Volumes. More information [can be found in the documentation](https://docs.microsoft.com/en-us/azure/aks/azure-disk-customer-managed-keys).
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-dnsPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L306">property <b>dnsPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L306">property <b>dnsPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsPrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3081,7 +3081,7 @@ The ID of the Disk Encryption Set which should be used for the Nodes and Volumes
 DNS prefix specified when creating the managed cluster. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-enablePodSecurityPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L310">property <b>enablePodSecurityPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L310">property <b>enablePodSecurityPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enablePodSecurityPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3089,7 +3089,7 @@ DNS prefix specified when creating the managed cluster. Changing this forces a n
 Whether Pod Security Policies are enabled. Note that this also requires role based access control to be enabled.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L314">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L314">property <b>fqdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fqdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3097,7 +3097,7 @@ Whether Pod Security Policies are enabled. Note that this also requires role bas
 The FQDN of the Azure Kubernetes Managed Cluster.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L318">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L318">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterIdentity'>KubernetesClusterIdentity</a>&gt;;</code></pre>
@@ -3105,7 +3105,7 @@ The FQDN of the Azure Kubernetes Managed Cluster.
 A `identity` block as defined below. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-kubeAdminConfigRaw">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L322">property <b>kubeAdminConfigRaw</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L322">property <b>kubeAdminConfigRaw</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kubeAdminConfigRaw?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3113,7 +3113,7 @@ A `identity` block as defined below. Changing this forces a new resource to be c
 Raw Kubernetes config for the admin account to be used by [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) and other compatible tools. This is only available when Role Based Access Control with Azure Active Directory is enabled.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-kubeAdminConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L326">property <b>kubeAdminConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L326">property <b>kubeAdminConfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kubeAdminConfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterKubeAdminConfig'>KubernetesClusterKubeAdminConfig</a>&gt;[]&gt;;</code></pre>
@@ -3121,7 +3121,7 @@ Raw Kubernetes config for the admin account to be used by [kubectl](https://kube
 A `kubeAdminConfig` block as defined below. This is only available when Role Based Access Control with Azure Active Directory is enabled.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-kubeConfigRaw">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L330">property <b>kubeConfigRaw</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L330">property <b>kubeConfigRaw</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kubeConfigRaw?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3129,7 +3129,7 @@ A `kubeAdminConfig` block as defined below. This is only available when Role Bas
 Raw Kubernetes config to be used by [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) and other compatible tools
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-kubeConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L334">property <b>kubeConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L334">property <b>kubeConfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kubeConfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterKubeConfig'>KubernetesClusterKubeConfig</a>&gt;[]&gt;;</code></pre>
@@ -3137,7 +3137,7 @@ Raw Kubernetes config to be used by [kubectl](https://kubernetes.io/docs/referen
 A `kubeConfig` block as defined below.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-kubeletIdentities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L338">property <b>kubeletIdentities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L338">property <b>kubeletIdentities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kubeletIdentities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterKubeletIdentity'>KubernetesClusterKubeletIdentity</a>&gt;[]&gt;;</code></pre>
@@ -3145,7 +3145,7 @@ A `kubeConfig` block as defined below.
 A `kubeletIdentity` block as defined below.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-kubernetesVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L342">property <b>kubernetesVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L342">property <b>kubernetesVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kubernetesVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3153,7 +3153,7 @@ A `kubeletIdentity` block as defined below.
 Version of Kubernetes specified when creating the AKS managed cluster. If not specified, the latest recommended version will be used at provisioning time (but won't auto-upgrade).
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-linuxProfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L346">property <b>linuxProfile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L346">property <b>linuxProfile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>linuxProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterLinuxProfile'>KubernetesClusterLinuxProfile</a>&gt;;</code></pre>
@@ -3161,7 +3161,7 @@ Version of Kubernetes specified when creating the AKS managed cluster. If not sp
 A `linuxProfile` block as defined below.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L350">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L350">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3169,7 +3169,7 @@ A `linuxProfile` block as defined below.
 The location where the Managed Kubernetes Cluster should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L354">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L354">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3177,7 +3177,7 @@ The location where the Managed Kubernetes Cluster should be created. Changing th
 The name of the Managed Kubernetes Cluster to create. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-networkProfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L358">property <b>networkProfile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L358">property <b>networkProfile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterNetworkProfile'>KubernetesClusterNetworkProfile</a>&gt;;</code></pre>
@@ -3185,7 +3185,7 @@ The name of the Managed Kubernetes Cluster to create. Changing this forces a new
 A `networkProfile` block as defined below.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-nodeResourceGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L362">property <b>nodeResourceGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L362">property <b>nodeResourceGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeResourceGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3193,7 +3193,7 @@ A `networkProfile` block as defined below.
 The name of the Resource Group where the Kubernetes Nodes should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-privateClusterEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L366">property <b>privateClusterEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L366">property <b>privateClusterEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateClusterEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3201,7 +3201,7 @@ The name of the Resource Group where the Kubernetes Nodes should exist. Changing
 Should this Kubernetes Cluster have its API server only exposed on internal IP addresses? This provides a Private IP Address for the Kubernetes API on the Virtual Network where the Kubernetes Cluster is located. Defaults to `false`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-privateFqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L370">property <b>privateFqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L370">property <b>privateFqdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateFqdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3209,7 +3209,7 @@ Should this Kubernetes Cluster have its API server only exposed on internal IP a
 The FQDN for the Kubernetes Cluster when private link has been enabled, which is only resolvable inside the Virtual Network used by the Kubernetes Cluster.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-privateLinkEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L374">property <b>privateLinkEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L374">property <b>privateLinkEnabled</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -3218,7 +3218,7 @@ Deprecated in favor of `private_cluster_enabled`
 </div>
 <pre class="highlight"><code><span class='kd'></span>privateLinkEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesClusterState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L378">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L378">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3226,7 +3226,7 @@ Deprecated in favor of `private_cluster_enabled`
 Specifies the Resource Group where the Managed Kubernetes Cluster should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-roleBasedAccessControl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L382">property <b>roleBasedAccessControl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L382">property <b>roleBasedAccessControl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleBasedAccessControl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterRoleBasedAccessControl'>KubernetesClusterRoleBasedAccessControl</a>&gt;;</code></pre>
@@ -3234,7 +3234,7 @@ Specifies the Resource Group where the Managed Kubernetes Cluster should exist. 
 A `roleBasedAccessControl` block. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-servicePrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L386">property <b>servicePrincipal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L386">property <b>servicePrincipal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>servicePrincipal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterServicePrincipal'>KubernetesClusterServicePrincipal</a>&gt;;</code></pre>
@@ -3242,7 +3242,7 @@ A `roleBasedAccessControl` block. Changing this forces a new resource to be crea
 A `servicePrincipal` block as documented below.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-skuTier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L390">property <b>skuTier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L390">property <b>skuTier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skuTier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3250,7 +3250,7 @@ A `servicePrincipal` block as documented below.
 The SKU Tier that should be used for this Kubernetes Cluster. Possible values are `Free` and `Paid` (which includes the Uptime SLA). Defaults to `Free`.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L394">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L394">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3258,7 +3258,7 @@ The SKU Tier that should be used for this Kubernetes Cluster. Possible values ar
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-windowsProfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/kubernetesCluster.ts#L398">property <b>windowsProfile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/kubernetesCluster.ts#L398">property <b>windowsProfile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>windowsProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterWindowsProfile'>KubernetesClusterWindowsProfile</a>&gt;;</code></pre>
@@ -3266,7 +3266,7 @@ A mapping of tags to assign to the resource.
 A `windowsProfile` block as defined below.
 
 <h3 class="pdoc-module-header" id="RegistryArgs" data-link-title="RegistryArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registry.ts#L218">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registry.ts#L218">
         interface <strong>RegistryArgs</strong>
     </a>
 </h3>
@@ -3276,7 +3276,7 @@ A `windowsProfile` block as defined below.
 The set of arguments for constructing a Registry resource.
 
 <h4 class="pdoc-member-header" id="RegistryArgs-adminEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registry.ts#L222">property <b>adminEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registry.ts#L222">property <b>adminEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adminEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3284,7 +3284,7 @@ The set of arguments for constructing a Registry resource.
 Specifies whether the admin user is enabled. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="RegistryArgs-georeplicationLocations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registry.ts#L226">property <b>georeplicationLocations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registry.ts#L226">property <b>georeplicationLocations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>georeplicationLocations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3292,7 +3292,7 @@ Specifies whether the admin user is enabled. Defaults to `false`.
 A list of Azure locations where the container registry should be geo-replicated.
 
 <h4 class="pdoc-member-header" id="RegistryArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registry.ts#L230">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registry.ts#L230">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3300,7 +3300,7 @@ A list of Azure locations where the container registry should be geo-replicated.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RegistryArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registry.ts#L234">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registry.ts#L234">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3308,7 +3308,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the Container Registry. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RegistryArgs-networkRuleSet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registry.ts#L238">property <b>networkRuleSet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registry.ts#L238">property <b>networkRuleSet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkRuleSet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#RegistryNetworkRuleSet'>RegistryNetworkRuleSet</a>&gt;;</code></pre>
@@ -3316,7 +3316,7 @@ Specifies the name of the Container Registry. Changing this forces a new resourc
 A `networkRuleSet` block as documented below.
 
 <h4 class="pdoc-member-header" id="RegistryArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registry.ts#L242">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registry.ts#L242">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3324,7 +3324,7 @@ A `networkRuleSet` block as documented below.
 The name of the resource group in which to create the Container Registry. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RegistryArgs-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registry.ts#L246">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registry.ts#L246">property <b>sku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3332,7 +3332,7 @@ The name of the resource group in which to create the Container Registry. Changi
 The SKU name of the container registry. Possible values are  `Basic`, `Standard` and `Premium`. `Classic` (which was previously `Basic`) is supported only for existing resources.
 
 <h4 class="pdoc-member-header" id="RegistryArgs-storageAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registry.ts#L250">property <b>storageAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registry.ts#L250">property <b>storageAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3340,7 +3340,7 @@ The SKU name of the container registry. Possible values are  `Basic`, `Standard`
 The ID of a Storage Account which must be located in the same Azure Region as the Container Registry.  Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RegistryArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registry.ts#L254">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registry.ts#L254">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3348,7 +3348,7 @@ The ID of a Storage Account which must be located in the same Azure Region as th
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="RegistryState" data-link-title="RegistryState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registry.ts#L164">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registry.ts#L164">
         interface <strong>RegistryState</strong>
     </a>
 </h3>
@@ -3358,7 +3358,7 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering Registry resources.
 
 <h4 class="pdoc-member-header" id="RegistryState-adminEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registry.ts#L168">property <b>adminEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registry.ts#L168">property <b>adminEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adminEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3366,7 +3366,7 @@ Input properties used for looking up and filtering Registry resources.
 Specifies whether the admin user is enabled. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="RegistryState-adminPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registry.ts#L172">property <b>adminPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registry.ts#L172">property <b>adminPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adminPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3374,7 +3374,7 @@ Specifies whether the admin user is enabled. Defaults to `false`.
 The Password associated with the Container Registry Admin account - if the admin account is enabled.
 
 <h4 class="pdoc-member-header" id="RegistryState-adminUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registry.ts#L176">property <b>adminUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registry.ts#L176">property <b>adminUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adminUsername?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3382,7 +3382,7 @@ The Password associated with the Container Registry Admin account - if the admin
 The Username associated with the Container Registry Admin account - if the admin account is enabled.
 
 <h4 class="pdoc-member-header" id="RegistryState-georeplicationLocations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registry.ts#L180">property <b>georeplicationLocations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registry.ts#L180">property <b>georeplicationLocations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>georeplicationLocations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3390,7 +3390,7 @@ The Username associated with the Container Registry Admin account - if the admin
 A list of Azure locations where the container registry should be geo-replicated.
 
 <h4 class="pdoc-member-header" id="RegistryState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registry.ts#L184">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registry.ts#L184">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3398,7 +3398,7 @@ A list of Azure locations where the container registry should be geo-replicated.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RegistryState-loginServer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registry.ts#L188">property <b>loginServer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registry.ts#L188">property <b>loginServer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loginServer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3406,7 +3406,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 The URL that can be used to log into the container registry.
 
 <h4 class="pdoc-member-header" id="RegistryState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registry.ts#L192">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registry.ts#L192">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3414,7 +3414,7 @@ The URL that can be used to log into the container registry.
 Specifies the name of the Container Registry. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RegistryState-networkRuleSet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registry.ts#L196">property <b>networkRuleSet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registry.ts#L196">property <b>networkRuleSet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkRuleSet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#RegistryNetworkRuleSet'>RegistryNetworkRuleSet</a>&gt;;</code></pre>
@@ -3422,7 +3422,7 @@ Specifies the name of the Container Registry. Changing this forces a new resourc
 A `networkRuleSet` block as documented below.
 
 <h4 class="pdoc-member-header" id="RegistryState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registry.ts#L200">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registry.ts#L200">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3430,7 +3430,7 @@ A `networkRuleSet` block as documented below.
 The name of the resource group in which to create the Container Registry. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RegistryState-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registry.ts#L204">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registry.ts#L204">property <b>sku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3438,7 +3438,7 @@ The name of the resource group in which to create the Container Registry. Changi
 The SKU name of the container registry. Possible values are  `Basic`, `Standard` and `Premium`. `Classic` (which was previously `Basic`) is supported only for existing resources.
 
 <h4 class="pdoc-member-header" id="RegistryState-storageAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registry.ts#L208">property <b>storageAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registry.ts#L208">property <b>storageAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3446,7 +3446,7 @@ The SKU name of the container registry. Possible values are  `Basic`, `Standard`
 The ID of a Storage Account which must be located in the same Azure Region as the Container Registry.  Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RegistryState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registry.ts#L212">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registry.ts#L212">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3454,7 +3454,7 @@ The ID of a Storage Account which must be located in the same Azure Region as th
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="RegistryWebhookArgs" data-link-title="RegistryWebhookArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebhook.ts#L209">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebhook.ts#L209">
         interface <strong>RegistryWebhookArgs</strong>
     </a>
 </h3>
@@ -3464,7 +3464,7 @@ A mapping of tags to assign to the resource.
 The set of arguments for constructing a RegistryWebhook resource.
 
 <h4 class="pdoc-member-header" id="RegistryWebhookArgs-actions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebhook.ts#L213">property <b>actions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebhook.ts#L213">property <b>actions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>actions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3472,7 +3472,7 @@ The set of arguments for constructing a RegistryWebhook resource.
 A list of actions that trigger the Webhook to post notifications. At least one action needs to be specified. Valid values are: `push`, `delete`, `quarantine`, `chartPush`, `chartDelete`
 
 <h4 class="pdoc-member-header" id="RegistryWebhookArgs-customHeaders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebhook.ts#L217">property <b>customHeaders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebhook.ts#L217">property <b>customHeaders</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customHeaders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3480,7 +3480,7 @@ A list of actions that trigger the Webhook to post notifications. At least one a
 Custom headers that will be added to the webhook notifications request.
 
 <h4 class="pdoc-member-header" id="RegistryWebhookArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebhook.ts#L221">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebhook.ts#L221">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3488,7 +3488,7 @@ Custom headers that will be added to the webhook notifications request.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RegistryWebhookArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebhook.ts#L225">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebhook.ts#L225">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3496,7 +3496,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the Container Registry Webhook. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RegistryWebhookArgs-registryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebhook.ts#L229">property <b>registryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebhook.ts#L229">property <b>registryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>registryName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3504,7 +3504,7 @@ Specifies the name of the Container Registry Webhook. Changing this forces a new
 The Name of Container registry this Webhook belongs to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RegistryWebhookArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebhook.ts#L233">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebhook.ts#L233">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3512,7 +3512,7 @@ The Name of Container registry this Webhook belongs to. Changing this forces a n
 The name of the resource group in which to create the Container Registry Webhook. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RegistryWebhookArgs-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebhook.ts#L237">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebhook.ts#L237">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3520,7 +3520,7 @@ The name of the resource group in which to create the Container Registry Webhook
 Specifies the scope of repositories that can trigger an event. For example, `foo:*` means events for all tags under repository `foo`. `foo:bar` means events for 'foo:bar' only. `foo` is equivalent to `foo:latest`. Empty means all events.
 
 <h4 class="pdoc-member-header" id="RegistryWebhookArgs-serviceUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebhook.ts#L241">property <b>serviceUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebhook.ts#L241">property <b>serviceUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceUri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3528,7 +3528,7 @@ Specifies the scope of repositories that can trigger an event. For example, `foo
 Specifies the service URI for the Webhook to post notifications.
 
 <h4 class="pdoc-member-header" id="RegistryWebhookArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebhook.ts#L245">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebhook.ts#L245">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3536,12 +3536,12 @@ Specifies the service URI for the Webhook to post notifications.
 Specifies if this Webhook triggers notifications or not. Valid values: `enabled` and `disabled`. Default is `enabled`.
 
 <h4 class="pdoc-member-header" id="RegistryWebhookArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebhook.ts#L246">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebhook.ts#L246">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="RegistryWebhookState" data-link-title="RegistryWebhookState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebhook.ts#L166">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebhook.ts#L166">
         interface <strong>RegistryWebhookState</strong>
     </a>
 </h3>
@@ -3551,7 +3551,7 @@ Specifies if this Webhook triggers notifications or not. Valid values: `enabled`
 Input properties used for looking up and filtering RegistryWebhook resources.
 
 <h4 class="pdoc-member-header" id="RegistryWebhookState-actions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebhook.ts#L170">property <b>actions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebhook.ts#L170">property <b>actions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3559,7 +3559,7 @@ Input properties used for looking up and filtering RegistryWebhook resources.
 A list of actions that trigger the Webhook to post notifications. At least one action needs to be specified. Valid values are: `push`, `delete`, `quarantine`, `chartPush`, `chartDelete`
 
 <h4 class="pdoc-member-header" id="RegistryWebhookState-customHeaders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebhook.ts#L174">property <b>customHeaders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebhook.ts#L174">property <b>customHeaders</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customHeaders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3567,7 +3567,7 @@ A list of actions that trigger the Webhook to post notifications. At least one a
 Custom headers that will be added to the webhook notifications request.
 
 <h4 class="pdoc-member-header" id="RegistryWebhookState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebhook.ts#L178">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebhook.ts#L178">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3575,7 +3575,7 @@ Custom headers that will be added to the webhook notifications request.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RegistryWebhookState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebhook.ts#L182">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebhook.ts#L182">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3583,7 +3583,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the Container Registry Webhook. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RegistryWebhookState-registryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebhook.ts#L186">property <b>registryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebhook.ts#L186">property <b>registryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>registryName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3591,7 +3591,7 @@ Specifies the name of the Container Registry Webhook. Changing this forces a new
 The Name of Container registry this Webhook belongs to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RegistryWebhookState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebhook.ts#L190">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebhook.ts#L190">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3599,7 +3599,7 @@ The Name of Container registry this Webhook belongs to. Changing this forces a n
 The name of the resource group in which to create the Container Registry Webhook. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RegistryWebhookState-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebhook.ts#L194">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebhook.ts#L194">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3607,7 +3607,7 @@ The name of the resource group in which to create the Container Registry Webhook
 Specifies the scope of repositories that can trigger an event. For example, `foo:*` means events for all tags under repository `foo`. `foo:bar` means events for 'foo:bar' only. `foo` is equivalent to `foo:latest`. Empty means all events.
 
 <h4 class="pdoc-member-header" id="RegistryWebhookState-serviceUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebhook.ts#L198">property <b>serviceUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebhook.ts#L198">property <b>serviceUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3615,7 +3615,7 @@ Specifies the scope of repositories that can trigger an event. For example, `foo
 Specifies the service URI for the Webhook to post notifications.
 
 <h4 class="pdoc-member-header" id="RegistryWebhookState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebhook.ts#L202">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebhook.ts#L202">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3623,12 +3623,12 @@ Specifies the service URI for the Webhook to post notifications.
 Specifies if this Webhook triggers notifications or not. Valid values: `enabled` and `disabled`. Default is `enabled`.
 
 <h4 class="pdoc-member-header" id="RegistryWebhookState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebhook.ts#L203">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebhook.ts#L203">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="RegistryWebookArgs" data-link-title="RegistryWebookArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebook.ts#L213">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebook.ts#L213">
         interface <strong>RegistryWebookArgs</strong>
     </a>
 </h3>
@@ -3638,7 +3638,7 @@ Specifies if this Webhook triggers notifications or not. Valid values: `enabled`
 The set of arguments for constructing a RegistryWebook resource.
 
 <h4 class="pdoc-member-header" id="RegistryWebookArgs-actions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebook.ts#L217">property <b>actions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebook.ts#L217">property <b>actions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>actions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3646,7 +3646,7 @@ The set of arguments for constructing a RegistryWebook resource.
 A list of actions that trigger the Webhook to post notifications. At least one action needs to be specified. Valid values are: `push`, `delete`, `quarantine`, `chartPush`, `chartDelete`
 
 <h4 class="pdoc-member-header" id="RegistryWebookArgs-customHeaders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebook.ts#L221">property <b>customHeaders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebook.ts#L221">property <b>customHeaders</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customHeaders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3654,7 +3654,7 @@ A list of actions that trigger the Webhook to post notifications. At least one a
 Custom headers that will be added to the webhook notifications request.
 
 <h4 class="pdoc-member-header" id="RegistryWebookArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebook.ts#L225">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebook.ts#L225">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3662,7 +3662,7 @@ Custom headers that will be added to the webhook notifications request.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RegistryWebookArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebook.ts#L229">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebook.ts#L229">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3670,7 +3670,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the Container Registry Webhook. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RegistryWebookArgs-registryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebook.ts#L233">property <b>registryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebook.ts#L233">property <b>registryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>registryName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3678,7 +3678,7 @@ Specifies the name of the Container Registry Webhook. Changing this forces a new
 The Name of Container registry this Webhook belongs to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RegistryWebookArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebook.ts#L237">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebook.ts#L237">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3686,7 +3686,7 @@ The Name of Container registry this Webhook belongs to. Changing this forces a n
 The name of the resource group in which to create the Container Registry Webhook. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RegistryWebookArgs-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebook.ts#L241">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebook.ts#L241">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3694,7 +3694,7 @@ The name of the resource group in which to create the Container Registry Webhook
 Specifies the scope of repositories that can trigger an event. For example, `foo:*` means events for all tags under repository `foo`. `foo:bar` means events for 'foo:bar' only. `foo` is equivalent to `foo:latest`. Empty means all events.
 
 <h4 class="pdoc-member-header" id="RegistryWebookArgs-serviceUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebook.ts#L245">property <b>serviceUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebook.ts#L245">property <b>serviceUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceUri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3702,7 +3702,7 @@ Specifies the scope of repositories that can trigger an event. For example, `foo
 Specifies the service URI for the Webhook to post notifications.
 
 <h4 class="pdoc-member-header" id="RegistryWebookArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebook.ts#L249">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebook.ts#L249">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3710,12 +3710,12 @@ Specifies the service URI for the Webhook to post notifications.
 Specifies if this Webhook triggers notifications or not. Valid values: `enabled` and `disabled`. Default is `enabled`.
 
 <h4 class="pdoc-member-header" id="RegistryWebookArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebook.ts#L250">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebook.ts#L250">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="RegistryWebookState" data-link-title="RegistryWebookState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebook.ts#L170">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebook.ts#L170">
         interface <strong>RegistryWebookState</strong>
     </a>
 </h3>
@@ -3725,7 +3725,7 @@ Specifies if this Webhook triggers notifications or not. Valid values: `enabled`
 Input properties used for looking up and filtering RegistryWebook resources.
 
 <h4 class="pdoc-member-header" id="RegistryWebookState-actions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebook.ts#L174">property <b>actions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebook.ts#L174">property <b>actions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3733,7 +3733,7 @@ Input properties used for looking up and filtering RegistryWebook resources.
 A list of actions that trigger the Webhook to post notifications. At least one action needs to be specified. Valid values are: `push`, `delete`, `quarantine`, `chartPush`, `chartDelete`
 
 <h4 class="pdoc-member-header" id="RegistryWebookState-customHeaders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebook.ts#L178">property <b>customHeaders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebook.ts#L178">property <b>customHeaders</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customHeaders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3741,7 +3741,7 @@ A list of actions that trigger the Webhook to post notifications. At least one a
 Custom headers that will be added to the webhook notifications request.
 
 <h4 class="pdoc-member-header" id="RegistryWebookState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebook.ts#L182">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebook.ts#L182">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3749,7 +3749,7 @@ Custom headers that will be added to the webhook notifications request.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RegistryWebookState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebook.ts#L186">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebook.ts#L186">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3757,7 +3757,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the Container Registry Webhook. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RegistryWebookState-registryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebook.ts#L190">property <b>registryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebook.ts#L190">property <b>registryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>registryName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3765,7 +3765,7 @@ Specifies the name of the Container Registry Webhook. Changing this forces a new
 The Name of Container registry this Webhook belongs to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RegistryWebookState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebook.ts#L194">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebook.ts#L194">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3773,7 +3773,7 @@ The Name of Container registry this Webhook belongs to. Changing this forces a n
 The name of the resource group in which to create the Container Registry Webhook. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RegistryWebookState-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebook.ts#L198">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebook.ts#L198">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3781,7 +3781,7 @@ The name of the resource group in which to create the Container Registry Webhook
 Specifies the scope of repositories that can trigger an event. For example, `foo:*` means events for all tags under repository `foo`. `foo:bar` means events for 'foo:bar' only. `foo` is equivalent to `foo:latest`. Empty means all events.
 
 <h4 class="pdoc-member-header" id="RegistryWebookState-serviceUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebook.ts#L202">property <b>serviceUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebook.ts#L202">property <b>serviceUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3789,7 +3789,7 @@ Specifies the scope of repositories that can trigger an event. For example, `foo
 Specifies the service URI for the Webhook to post notifications.
 
 <h4 class="pdoc-member-header" id="RegistryWebookState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebook.ts#L206">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebook.ts#L206">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3797,7 +3797,7 @@ Specifies the service URI for the Webhook to post notifications.
 Specifies if this Webhook triggers notifications or not. Valid values: `enabled` and `disabled`. Default is `enabled`.
 
 <h4 class="pdoc-member-header" id="RegistryWebookState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/containerservice/registryWebook.ts#L207">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/containerservice/registryWebook.ts#L207">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>

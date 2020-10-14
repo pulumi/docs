@@ -43,7 +43,10 @@ class MyStack : Stack
         {
             ResourceGroupName = exampleResourceGroup.Name,
             VirtualNetworkName = exampleVirtualNetwork.Name,
-            AddressPrefix = "10.0.1.0/24",
+            AddressPrefixes = 
+            {
+                "10.0.1.0/24",
+            },
         });
         var onpremiseLocalNetworkGateway = new Azure.Network.LocalNetworkGateway("onpremiseLocalNetworkGateway", new Azure.Network.LocalNetworkGatewayArgs
         {
@@ -127,7 +130,9 @@ func main() {
 		exampleSubnet, err := network.NewSubnet(ctx, "exampleSubnet", &network.SubnetArgs{
 			ResourceGroupName:  exampleResourceGroup.Name,
 			VirtualNetworkName: exampleVirtualNetwork.Name,
-			AddressPrefix:      pulumi.String("10.0.1.0/24"),
+			AddressPrefixes: pulumi.StringArray{
+				pulumi.String("10.0.1.0/24"),
+			},
 		})
 		if err != nil {
 			return err
@@ -201,7 +206,7 @@ example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
 example_subnet = azure.network.Subnet("exampleSubnet",
     resource_group_name=example_resource_group.name,
     virtual_network_name=example_virtual_network.name,
-    address_prefix="10.0.1.0/24")
+    address_prefixes=["10.0.1.0/24"])
 onpremise_local_network_gateway = azure.network.LocalNetworkGateway("onpremiseLocalNetworkGateway",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
@@ -250,7 +255,7 @@ const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNe
 const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
     resourceGroupName: exampleResourceGroup.name,
     virtualNetworkName: exampleVirtualNetwork.name,
-    addressPrefix: "10.0.1.0/24",
+    addressPrefixes: ["10.0.1.0/24"],
 });
 const onpremiseLocalNetworkGateway = new azure.network.LocalNetworkGateway("onpremiseLocalNetworkGateway", {
     location: exampleResourceGroup.location,
@@ -316,7 +321,10 @@ class MyStack : Stack
         {
             ResourceGroupName = usResourceGroup.Name,
             VirtualNetworkName = usVirtualNetwork.Name,
-            AddressPrefix = "10.0.1.0/24",
+            AddressPrefixes = 
+            {
+                "10.0.1.0/24",
+            },
         });
         var usPublicIp = new Azure.Network.PublicIp("usPublicIp", new Azure.Network.PublicIpArgs
         {
@@ -358,7 +366,10 @@ class MyStack : Stack
         {
             ResourceGroupName = europeResourceGroup.Name,
             VirtualNetworkName = europeVirtualNetwork.Name,
-            AddressPrefix = "10.1.1.0/24",
+            AddressPrefixes = 
+            {
+                "10.1.1.0/24",
+            },
         });
         var europePublicIp = new Azure.Network.PublicIp("europePublicIp", new Azure.Network.PublicIpArgs
         {
@@ -439,7 +450,9 @@ func main() {
 		usGateway, err := network.NewSubnet(ctx, "usGateway", &network.SubnetArgs{
 			ResourceGroupName:  usResourceGroup.Name,
 			VirtualNetworkName: usVirtualNetwork.Name,
-			AddressPrefix:      pulumi.String("10.0.1.0/24"),
+			AddressPrefixes: pulumi.StringArray{
+				pulumi.String("10.0.1.0/24"),
+			},
 		})
 		if err != nil {
 			return err
@@ -488,7 +501,9 @@ func main() {
 		europeGateway, err := network.NewSubnet(ctx, "europeGateway", &network.SubnetArgs{
 			ResourceGroupName:  europeResourceGroup.Name,
 			VirtualNetworkName: europeVirtualNetwork.Name,
-			AddressPrefix:      pulumi.String("10.1.1.0/24"),
+			AddressPrefixes: pulumi.StringArray{
+				pulumi.String("10.1.1.0/24"),
+			},
 		})
 		if err != nil {
 			return err
@@ -560,7 +575,7 @@ us_virtual_network = azure.network.VirtualNetwork("usVirtualNetwork",
 us_gateway = azure.network.Subnet("usGateway",
     resource_group_name=us_resource_group.name,
     virtual_network_name=us_virtual_network.name,
-    address_prefix="10.0.1.0/24")
+    address_prefixes=["10.0.1.0/24"])
 us_public_ip = azure.network.PublicIp("usPublicIp",
     location=us_resource_group.location,
     resource_group_name=us_resource_group.name,
@@ -584,7 +599,7 @@ europe_virtual_network = azure.network.VirtualNetwork("europeVirtualNetwork",
 europe_gateway = azure.network.Subnet("europeGateway",
     resource_group_name=europe_resource_group.name,
     virtual_network_name=europe_virtual_network.name,
-    address_prefix="10.1.1.0/24")
+    address_prefixes=["10.1.1.0/24"])
 europe_public_ip = azure.network.PublicIp("europePublicIp",
     location=europe_resource_group.location,
     resource_group_name=europe_resource_group.name,
@@ -633,7 +648,7 @@ const usVirtualNetwork = new azure.network.VirtualNetwork("usVirtualNetwork", {
 const usGateway = new azure.network.Subnet("usGateway", {
     resourceGroupName: usResourceGroup.name,
     virtualNetworkName: usVirtualNetwork.name,
-    addressPrefix: "10.0.1.0/24",
+    addressPrefixes: ["10.0.1.0/24"],
 });
 const usPublicIp = new azure.network.PublicIp("usPublicIp", {
     location: usResourceGroup.location,
@@ -661,7 +676,7 @@ const europeVirtualNetwork = new azure.network.VirtualNetwork("europeVirtualNetw
 const europeGateway = new azure.network.Subnet("europeGateway", {
     resourceGroupName: europeResourceGroup.name,
     virtualNetworkName: europeVirtualNetwork.name,
-    addressPrefix: "10.1.1.0/24",
+    addressPrefixes: ["10.1.1.0/24"],
 });
 const europePublicIp = new azure.network.PublicIp("europePublicIp", {
     location: europeResourceGroup.location,

@@ -3,7 +3,7 @@ title: "Module frontdoor"
 title_tag: "Module frontdoor | Package @pulumi/azure | Node.js SDK"
 linktitle: "frontdoor"
 meta_desc: "Explore members of the frontdoor module in the @pulumi/azure package."
-git_sha: "4458e2dce0815e5cc0e8221a9ab77d2466eb9bba"
+git_sha: "b0ec8640c580f1cb329731746f254b47a6e7a245"
 block_external_search_index: true
 ---
 
@@ -36,7 +36,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="CustomHttpsConfiguration" data-link-title="CustomHttpsConfiguration">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/customHttpsConfiguration.ts#L85">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/customHttpsConfiguration.ts#L85">
         Resource <strong>CustomHttpsConfiguration</strong>
     </a>
 </h3>
@@ -119,7 +119,7 @@ const exampleCustomHttps1 = new azure.frontdoor.CustomHttpsConfiguration("exampl
 ```
 
 <h4 class="pdoc-member-header" id="CustomHttpsConfiguration-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/customHttpsConfiguration.ts#L128"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/customHttpsConfiguration.ts#L128"> <b>constructor</b></a>
 </h4>
 
 
@@ -133,7 +133,7 @@ Create a CustomHttpsConfiguration resource with the given unique name, arguments
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="CustomHttpsConfiguration-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/customHttpsConfiguration.ts#L95">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/customHttpsConfiguration.ts#L95">method <b>get</b></a>
 </h4>
 
 
@@ -144,14 +144,14 @@ Get an existing CustomHttpsConfiguration resource's state with the given name, I
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="CustomHttpsConfiguration-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/customHttpsConfiguration.ts#L85">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/customHttpsConfiguration.ts#L85">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="CustomHttpsConfiguration-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/customHttpsConfiguration.ts#L106">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/customHttpsConfiguration.ts#L106">method <b>isInstance</b></a>
 </h4>
 
 
@@ -162,7 +162,7 @@ Returns true if the given object is an instance of CustomHttpsConfiguration.  Th
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="CustomHttpsConfiguration-customHttpsConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/customHttpsConfiguration.ts#L116">property <b>customHttpsConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/customHttpsConfiguration.ts#L116">property <b>customHttpsConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>customHttpsConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CustomHttpsConfigurationCustomHttpsConfiguration'>CustomHttpsConfigurationCustomHttpsConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -170,7 +170,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A `customHttpsConfiguration` block as defined below.
 
 <h4 class="pdoc-member-header" id="CustomHttpsConfiguration-customHttpsProvisioningEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/customHttpsConfiguration.ts#L120">property <b>customHttpsProvisioningEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/customHttpsConfiguration.ts#L120">property <b>customHttpsProvisioningEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>customHttpsProvisioningEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -178,7 +178,7 @@ A `customHttpsConfiguration` block as defined below.
 Should the HTTPS protocol be enabled for this custom domain associated with the Front Door?
 
 <h4 class="pdoc-member-header" id="CustomHttpsConfiguration-frontendEndpointId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/customHttpsConfiguration.ts#L124">property <b>frontendEndpointId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/customHttpsConfiguration.ts#L124">property <b>frontendEndpointId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>frontendEndpointId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -186,7 +186,7 @@ Should the HTTPS protocol be enabled for this custom domain associated with the 
 The ID of the FrontDoor Frontend Endpoint which this configuration refers to.
 
 <h4 class="pdoc-member-header" id="CustomHttpsConfiguration-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/customHttpsConfiguration.ts#L85">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/customHttpsConfiguration.ts#L85">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -195,7 +195,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="CustomHttpsConfiguration-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/customHttpsConfiguration.ts#L128">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/customHttpsConfiguration.ts#L128">property <b>resourceGroupName</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -204,7 +204,7 @@ This field is no longer used and will be removed in the next major version of th
 </div>
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CustomHttpsConfiguration-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/customHttpsConfiguration.ts#L85">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/customHttpsConfiguration.ts#L85">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -213,7 +213,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="FirewallPolicy" data-link-title="FirewallPolicy">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/firewallPolicy.ts#L119">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/firewallPolicy.ts#L119">
         Resource <strong>FirewallPolicy</strong>
     </a>
 </h3>
@@ -330,7 +330,7 @@ const exampleFirewallPolicy = new azure.frontdoor.FirewallPolicy("exampleFirewal
 ```
 
 <h4 class="pdoc-member-header" id="FirewallPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/firewallPolicy.ts#L194"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/firewallPolicy.ts#L194"> <b>constructor</b></a>
 </h4>
 
 
@@ -344,7 +344,7 @@ Create a FirewallPolicy resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="FirewallPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/firewallPolicy.ts#L129">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/firewallPolicy.ts#L129">method <b>get</b></a>
 </h4>
 
 
@@ -355,14 +355,14 @@ Get an existing FirewallPolicy resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="FirewallPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/firewallPolicy.ts#L119">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/firewallPolicy.ts#L119">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="FirewallPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/firewallPolicy.ts#L140">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/firewallPolicy.ts#L140">method <b>isInstance</b></a>
 </h4>
 
 
@@ -373,7 +373,7 @@ Returns true if the given object is an instance of FirewallPolicy.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="FirewallPolicy-customBlockResponseBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/firewallPolicy.ts#L150">property <b>customBlockResponseBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/firewallPolicy.ts#L150">property <b>customBlockResponseBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>customBlockResponseBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -381,7 +381,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 If a `customRule` block's action type is `block`, this is the response body. The body must be specified in base64 encoding.
 
 <h4 class="pdoc-member-header" id="FirewallPolicy-customBlockResponseStatusCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/firewallPolicy.ts#L154">property <b>customBlockResponseStatusCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/firewallPolicy.ts#L154">property <b>customBlockResponseStatusCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>customBlockResponseStatusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -389,7 +389,7 @@ If a `customRule` block's action type is `block`, this is the response body. The
 If a `customRule` block's action type is `block`, this is the response status code. Possible values are `200`, `403`, `405`, `406`, or `429`.
 
 <h4 class="pdoc-member-header" id="FirewallPolicy-customRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/firewallPolicy.ts#L158">property <b>customRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/firewallPolicy.ts#L158">property <b>customRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>customRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FirewallPolicyCustomRule'>FirewallPolicyCustomRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -397,7 +397,7 @@ If a `customRule` block's action type is `block`, this is the response status co
 One or more `customRule` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="FirewallPolicy-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/firewallPolicy.ts#L162">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/firewallPolicy.ts#L162">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -405,7 +405,7 @@ One or more `customRule` blocks as defined below.
 Is the policy a enabled state or disabled state. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="FirewallPolicy-frontendEndpointIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/firewallPolicy.ts#L166">property <b>frontendEndpointIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/firewallPolicy.ts#L166">property <b>frontendEndpointIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>frontendEndpointIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -413,7 +413,7 @@ Is the policy a enabled state or disabled state. Defaults to `true`.
 The Frontend Endpoints associated with this Front Door Web Application Firewall policy.
 
 <h4 class="pdoc-member-header" id="FirewallPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/firewallPolicy.ts#L119">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/firewallPolicy.ts#L119">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -422,7 +422,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="FirewallPolicy-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/firewallPolicy.ts#L170">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/firewallPolicy.ts#L170">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -430,7 +430,7 @@ deployments and may be missing (undefined) during planning phases.
 The Azure Region where this FrontDoor Firewall Policy exists.
 
 <h4 class="pdoc-member-header" id="FirewallPolicy-managedRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/firewallPolicy.ts#L174">property <b>managedRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/firewallPolicy.ts#L174">property <b>managedRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>managedRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FirewallPolicyManagedRule'>FirewallPolicyManagedRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -438,7 +438,7 @@ The Azure Region where this FrontDoor Firewall Policy exists.
 One or more `managedRule` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="FirewallPolicy-mode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/firewallPolicy.ts#L178">property <b>mode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/firewallPolicy.ts#L178">property <b>mode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -446,7 +446,7 @@ One or more `managedRule` blocks as defined below.
 The firewall policy mode. Possible values are `Detection`, `Prevention` and defaults to `Prevention`.
 
 <h4 class="pdoc-member-header" id="FirewallPolicy-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/firewallPolicy.ts#L182">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/firewallPolicy.ts#L182">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -454,7 +454,7 @@ The firewall policy mode. Possible values are `Detection`, `Prevention` and defa
 The name of the policy. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FirewallPolicy-redirectUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/firewallPolicy.ts#L186">property <b>redirectUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/firewallPolicy.ts#L186">property <b>redirectUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>redirectUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -462,7 +462,7 @@ The name of the policy. Changing this forces a new resource to be created.
 If action type is redirect, this field represents redirect URL for the client.
 
 <h4 class="pdoc-member-header" id="FirewallPolicy-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/firewallPolicy.ts#L190">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/firewallPolicy.ts#L190">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -470,7 +470,7 @@ If action type is redirect, this field represents redirect URL for the client.
 The name of the resource group. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FirewallPolicy-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/firewallPolicy.ts#L194">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/firewallPolicy.ts#L194">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -478,7 +478,7 @@ The name of the resource group. Changing this forces a new resource to be create
 A mapping of tags to assign to the Web Application Firewall Policy.
 
 <h4 class="pdoc-member-header" id="FirewallPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/firewallPolicy.ts#L119">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/firewallPolicy.ts#L119">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -487,7 +487,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Frontdoor" data-link-title="Frontdoor">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L68">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L68">
         Resource <strong>Frontdoor</strong>
     </a>
 </h3>
@@ -553,7 +553,7 @@ const exampleFrontdoor = new azure.frontdoor.Frontdoor("exampleFrontdoor", {
 ```
 
 <h4 class="pdoc-member-header" id="Frontdoor-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L157"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L157"> <b>constructor</b></a>
 </h4>
 
 
@@ -567,7 +567,7 @@ Create a Frontdoor resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Frontdoor-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L78">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L78">method <b>get</b></a>
 </h4>
 
 
@@ -578,14 +578,14 @@ Get an existing Frontdoor resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Frontdoor-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L68">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L68">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Frontdoor-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L89">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L89">method <b>isInstance</b></a>
 </h4>
 
 
@@ -596,7 +596,7 @@ Returns true if the given object is an instance of Frontdoor.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Frontdoor-backendPoolHealthProbes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L99">property <b>backendPoolHealthProbes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L99">property <b>backendPoolHealthProbes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backendPoolHealthProbes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FrontdoorBackendPoolHealthProbe'>FrontdoorBackendPoolHealthProbe</a>[]&gt;;</code></pre>
@@ -604,7 +604,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A `backendPoolHealthProbe` block as defined below.
 
 <h4 class="pdoc-member-header" id="Frontdoor-backendPoolLoadBalancings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L103">property <b>backendPoolLoadBalancings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L103">property <b>backendPoolLoadBalancings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backendPoolLoadBalancings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FrontdoorBackendPoolLoadBalancing'>FrontdoorBackendPoolLoadBalancing</a>[]&gt;;</code></pre>
@@ -612,7 +612,7 @@ A `backendPoolHealthProbe` block as defined below.
 A `backendPoolLoadBalancing` block as defined below.
 
 <h4 class="pdoc-member-header" id="Frontdoor-backendPools">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L107">property <b>backendPools</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L107">property <b>backendPools</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backendPools: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FrontdoorBackendPool'>FrontdoorBackendPool</a>[]&gt;;</code></pre>
@@ -620,7 +620,7 @@ A `backendPoolLoadBalancing` block as defined below.
 A `backendPool` block as defined below.
 
 <h4 class="pdoc-member-header" id="Frontdoor-backendPoolsSendReceiveTimeoutSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L111">property <b>backendPoolsSendReceiveTimeoutSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L111">property <b>backendPoolsSendReceiveTimeoutSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backendPoolsSendReceiveTimeoutSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -628,7 +628,7 @@ A `backendPool` block as defined below.
 Specifies the send and receive timeout on forwarding request to the backend. When the timeout is reached, the request fails and returns. Possible values are between `0` - `240`. Defaults to `60`.
 
 <h4 class="pdoc-member-header" id="Frontdoor-cname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L115">property <b>cname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L115">property <b>cname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -636,7 +636,7 @@ Specifies the send and receive timeout on forwarding request to the backend. Whe
 The host that each frontendEndpoint must CNAME to.
 
 <h4 class="pdoc-member-header" id="Frontdoor-enforceBackendPoolsCertificateNameCheck">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L119">property <b>enforceBackendPoolsCertificateNameCheck</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L119">property <b>enforceBackendPoolsCertificateNameCheck</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enforceBackendPoolsCertificateNameCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -644,7 +644,7 @@ The host that each frontendEndpoint must CNAME to.
 Enforce certificate name check on `HTTPS` requests to all backend pools, this setting will have no effect on `HTTP` requests. Permitted values are `true` or `false`.
 
 <h4 class="pdoc-member-header" id="Frontdoor-friendlyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L123">property <b>friendlyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L123">property <b>friendlyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>friendlyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -652,7 +652,7 @@ Enforce certificate name check on `HTTPS` requests to all backend pools, this se
 A friendly name for the Front Door service.
 
 <h4 class="pdoc-member-header" id="Frontdoor-frontendEndpoints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L127">property <b>frontendEndpoints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L127">property <b>frontendEndpoints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>frontendEndpoints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FrontdoorFrontendEndpoint'>FrontdoorFrontendEndpoint</a>[]&gt;;</code></pre>
@@ -660,7 +660,7 @@ A friendly name for the Front Door service.
 A `frontendEndpoint` block as defined below.
 
 <h4 class="pdoc-member-header" id="Frontdoor-headerFrontdoorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L131">property <b>headerFrontdoorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L131">property <b>headerFrontdoorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>headerFrontdoorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -668,7 +668,7 @@ A `frontendEndpoint` block as defined below.
 The unique ID of the Front Door which is embedded into the incoming headers `X-Azure-FDID` attribute and maybe used to filter traffic sent by the Front Door to your backend.
 
 <h4 class="pdoc-member-header" id="Frontdoor-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L68">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L68">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -677,7 +677,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Frontdoor-loadBalancerEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L135">property <b>loadBalancerEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L135">property <b>loadBalancerEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loadBalancerEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -685,7 +685,7 @@ deployments and may be missing (undefined) during planning phases.
 Should the Front Door Load Balancer be Enabled? Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="Frontdoor-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L141">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L141">property <b>location</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -697,7 +697,7 @@ Due to the service&#39;s API changing &#39;location&#39; must now always be set 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created
 
 <h4 class="pdoc-member-header" id="Frontdoor-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L145">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L145">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -705,7 +705,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the Front Door service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Frontdoor-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L149">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L149">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -713,7 +713,7 @@ Specifies the name of the Front Door service. Changing this forces a new resourc
 Specifies the name of the Resource Group in which the Front Door service should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Frontdoor-routingRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L153">property <b>routingRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L153">property <b>routingRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>routingRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FrontdoorRoutingRule'>FrontdoorRoutingRule</a>[]&gt;;</code></pre>
@@ -721,7 +721,7 @@ Specifies the name of the Resource Group in which the Front Door service should 
 A `routingRule` block as defined below.
 
 <h4 class="pdoc-member-header" id="Frontdoor-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L157">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L157">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -729,7 +729,7 @@ A `routingRule` block as defined below.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Frontdoor-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L68">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L68">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -741,7 +741,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="CustomHttpsConfigurationArgs" data-link-title="CustomHttpsConfigurationArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/customHttpsConfiguration.ts#L195">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/customHttpsConfiguration.ts#L195">
         interface <strong>CustomHttpsConfigurationArgs</strong>
     </a>
 </h3>
@@ -751,7 +751,7 @@ deployments.
 The set of arguments for constructing a CustomHttpsConfiguration resource.
 
 <h4 class="pdoc-member-header" id="CustomHttpsConfigurationArgs-customHttpsConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/customHttpsConfiguration.ts#L199">property <b>customHttpsConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/customHttpsConfiguration.ts#L199">property <b>customHttpsConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customHttpsConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CustomHttpsConfigurationCustomHttpsConfiguration'>CustomHttpsConfigurationCustomHttpsConfiguration</a>&gt;;</code></pre>
@@ -759,7 +759,7 @@ The set of arguments for constructing a CustomHttpsConfiguration resource.
 A `customHttpsConfiguration` block as defined below.
 
 <h4 class="pdoc-member-header" id="CustomHttpsConfigurationArgs-customHttpsProvisioningEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/customHttpsConfiguration.ts#L203">property <b>customHttpsProvisioningEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/customHttpsConfiguration.ts#L203">property <b>customHttpsProvisioningEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customHttpsProvisioningEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -767,7 +767,7 @@ A `customHttpsConfiguration` block as defined below.
 Should the HTTPS protocol be enabled for this custom domain associated with the Front Door?
 
 <h4 class="pdoc-member-header" id="CustomHttpsConfigurationArgs-frontendEndpointId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/customHttpsConfiguration.ts#L207">property <b>frontendEndpointId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/customHttpsConfiguration.ts#L207">property <b>frontendEndpointId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>frontendEndpointId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -775,7 +775,7 @@ Should the HTTPS protocol be enabled for this custom domain associated with the 
 The ID of the FrontDoor Frontend Endpoint which this configuration refers to.
 
 <h4 class="pdoc-member-header" id="CustomHttpsConfigurationArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/customHttpsConfiguration.ts#L211">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/customHttpsConfiguration.ts#L211">property <b>resourceGroupName</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -784,7 +784,7 @@ This field is no longer used and will be removed in the next major version of th
 </div>
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="CustomHttpsConfigurationState" data-link-title="CustomHttpsConfigurationState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/customHttpsConfiguration.ts#L173">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/customHttpsConfiguration.ts#L173">
         interface <strong>CustomHttpsConfigurationState</strong>
     </a>
 </h3>
@@ -794,7 +794,7 @@ This field is no longer used and will be removed in the next major version of th
 Input properties used for looking up and filtering CustomHttpsConfiguration resources.
 
 <h4 class="pdoc-member-header" id="CustomHttpsConfigurationState-customHttpsConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/customHttpsConfiguration.ts#L177">property <b>customHttpsConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/customHttpsConfiguration.ts#L177">property <b>customHttpsConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customHttpsConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CustomHttpsConfigurationCustomHttpsConfiguration'>CustomHttpsConfigurationCustomHttpsConfiguration</a>&gt;;</code></pre>
@@ -802,7 +802,7 @@ Input properties used for looking up and filtering CustomHttpsConfiguration reso
 A `customHttpsConfiguration` block as defined below.
 
 <h4 class="pdoc-member-header" id="CustomHttpsConfigurationState-customHttpsProvisioningEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/customHttpsConfiguration.ts#L181">property <b>customHttpsProvisioningEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/customHttpsConfiguration.ts#L181">property <b>customHttpsProvisioningEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customHttpsProvisioningEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -810,7 +810,7 @@ A `customHttpsConfiguration` block as defined below.
 Should the HTTPS protocol be enabled for this custom domain associated with the Front Door?
 
 <h4 class="pdoc-member-header" id="CustomHttpsConfigurationState-frontendEndpointId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/customHttpsConfiguration.ts#L185">property <b>frontendEndpointId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/customHttpsConfiguration.ts#L185">property <b>frontendEndpointId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>frontendEndpointId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -818,7 +818,7 @@ Should the HTTPS protocol be enabled for this custom domain associated with the 
 The ID of the FrontDoor Frontend Endpoint which this configuration refers to.
 
 <h4 class="pdoc-member-header" id="CustomHttpsConfigurationState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/customHttpsConfiguration.ts#L189">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/customHttpsConfiguration.ts#L189">property <b>resourceGroupName</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -827,7 +827,7 @@ This field is no longer used and will be removed in the next major version of th
 </div>
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="FirewallPolicyArgs" data-link-title="FirewallPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/firewallPolicy.ts#L306">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/firewallPolicy.ts#L306">
         interface <strong>FirewallPolicyArgs</strong>
     </a>
 </h3>
@@ -837,7 +837,7 @@ This field is no longer used and will be removed in the next major version of th
 The set of arguments for constructing a FirewallPolicy resource.
 
 <h4 class="pdoc-member-header" id="FirewallPolicyArgs-customBlockResponseBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/firewallPolicy.ts#L310">property <b>customBlockResponseBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/firewallPolicy.ts#L310">property <b>customBlockResponseBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customBlockResponseBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -845,7 +845,7 @@ The set of arguments for constructing a FirewallPolicy resource.
 If a `customRule` block's action type is `block`, this is the response body. The body must be specified in base64 encoding.
 
 <h4 class="pdoc-member-header" id="FirewallPolicyArgs-customBlockResponseStatusCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/firewallPolicy.ts#L314">property <b>customBlockResponseStatusCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/firewallPolicy.ts#L314">property <b>customBlockResponseStatusCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customBlockResponseStatusCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -853,7 +853,7 @@ If a `customRule` block's action type is `block`, this is the response body. The
 If a `customRule` block's action type is `block`, this is the response status code. Possible values are `200`, `403`, `405`, `406`, or `429`.
 
 <h4 class="pdoc-member-header" id="FirewallPolicyArgs-customRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/firewallPolicy.ts#L318">property <b>customRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/firewallPolicy.ts#L318">property <b>customRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FirewallPolicyCustomRule'>FirewallPolicyCustomRule</a>&gt;[]&gt;;</code></pre>
@@ -861,7 +861,7 @@ If a `customRule` block's action type is `block`, this is the response status co
 One or more `customRule` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="FirewallPolicyArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/firewallPolicy.ts#L322">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/firewallPolicy.ts#L322">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -869,7 +869,7 @@ One or more `customRule` blocks as defined below.
 Is the policy a enabled state or disabled state. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="FirewallPolicyArgs-managedRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/firewallPolicy.ts#L326">property <b>managedRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/firewallPolicy.ts#L326">property <b>managedRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>managedRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FirewallPolicyManagedRule'>FirewallPolicyManagedRule</a>&gt;[]&gt;;</code></pre>
@@ -877,7 +877,7 @@ Is the policy a enabled state or disabled state. Defaults to `true`.
 One or more `managedRule` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="FirewallPolicyArgs-mode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/firewallPolicy.ts#L330">property <b>mode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/firewallPolicy.ts#L330">property <b>mode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -885,7 +885,7 @@ One or more `managedRule` blocks as defined below.
 The firewall policy mode. Possible values are `Detection`, `Prevention` and defaults to `Prevention`.
 
 <h4 class="pdoc-member-header" id="FirewallPolicyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/firewallPolicy.ts#L334">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/firewallPolicy.ts#L334">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -893,7 +893,7 @@ The firewall policy mode. Possible values are `Detection`, `Prevention` and defa
 The name of the policy. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FirewallPolicyArgs-redirectUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/firewallPolicy.ts#L338">property <b>redirectUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/firewallPolicy.ts#L338">property <b>redirectUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>redirectUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -901,7 +901,7 @@ The name of the policy. Changing this forces a new resource to be created.
 If action type is redirect, this field represents redirect URL for the client.
 
 <h4 class="pdoc-member-header" id="FirewallPolicyArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/firewallPolicy.ts#L342">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/firewallPolicy.ts#L342">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -909,7 +909,7 @@ If action type is redirect, this field represents redirect URL for the client.
 The name of the resource group. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FirewallPolicyArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/firewallPolicy.ts#L346">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/firewallPolicy.ts#L346">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -917,7 +917,7 @@ The name of the resource group. Changing this forces a new resource to be create
 A mapping of tags to assign to the Web Application Firewall Policy.
 
 <h3 class="pdoc-module-header" id="FirewallPolicyState" data-link-title="FirewallPolicyState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/firewallPolicy.ts#L252">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/firewallPolicy.ts#L252">
         interface <strong>FirewallPolicyState</strong>
     </a>
 </h3>
@@ -927,7 +927,7 @@ A mapping of tags to assign to the Web Application Firewall Policy.
 Input properties used for looking up and filtering FirewallPolicy resources.
 
 <h4 class="pdoc-member-header" id="FirewallPolicyState-customBlockResponseBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/firewallPolicy.ts#L256">property <b>customBlockResponseBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/firewallPolicy.ts#L256">property <b>customBlockResponseBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customBlockResponseBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -935,7 +935,7 @@ Input properties used for looking up and filtering FirewallPolicy resources.
 If a `customRule` block's action type is `block`, this is the response body. The body must be specified in base64 encoding.
 
 <h4 class="pdoc-member-header" id="FirewallPolicyState-customBlockResponseStatusCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/firewallPolicy.ts#L260">property <b>customBlockResponseStatusCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/firewallPolicy.ts#L260">property <b>customBlockResponseStatusCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customBlockResponseStatusCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -943,7 +943,7 @@ If a `customRule` block's action type is `block`, this is the response body. The
 If a `customRule` block's action type is `block`, this is the response status code. Possible values are `200`, `403`, `405`, `406`, or `429`.
 
 <h4 class="pdoc-member-header" id="FirewallPolicyState-customRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/firewallPolicy.ts#L264">property <b>customRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/firewallPolicy.ts#L264">property <b>customRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FirewallPolicyCustomRule'>FirewallPolicyCustomRule</a>&gt;[]&gt;;</code></pre>
@@ -951,7 +951,7 @@ If a `customRule` block's action type is `block`, this is the response status co
 One or more `customRule` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="FirewallPolicyState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/firewallPolicy.ts#L268">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/firewallPolicy.ts#L268">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -959,7 +959,7 @@ One or more `customRule` blocks as defined below.
 Is the policy a enabled state or disabled state. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="FirewallPolicyState-frontendEndpointIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/firewallPolicy.ts#L272">property <b>frontendEndpointIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/firewallPolicy.ts#L272">property <b>frontendEndpointIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>frontendEndpointIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -967,7 +967,7 @@ Is the policy a enabled state or disabled state. Defaults to `true`.
 The Frontend Endpoints associated with this Front Door Web Application Firewall policy.
 
 <h4 class="pdoc-member-header" id="FirewallPolicyState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/firewallPolicy.ts#L276">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/firewallPolicy.ts#L276">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -975,7 +975,7 @@ The Frontend Endpoints associated with this Front Door Web Application Firewall 
 The Azure Region where this FrontDoor Firewall Policy exists.
 
 <h4 class="pdoc-member-header" id="FirewallPolicyState-managedRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/firewallPolicy.ts#L280">property <b>managedRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/firewallPolicy.ts#L280">property <b>managedRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>managedRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FirewallPolicyManagedRule'>FirewallPolicyManagedRule</a>&gt;[]&gt;;</code></pre>
@@ -983,7 +983,7 @@ The Azure Region where this FrontDoor Firewall Policy exists.
 One or more `managedRule` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="FirewallPolicyState-mode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/firewallPolicy.ts#L284">property <b>mode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/firewallPolicy.ts#L284">property <b>mode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -991,7 +991,7 @@ One or more `managedRule` blocks as defined below.
 The firewall policy mode. Possible values are `Detection`, `Prevention` and defaults to `Prevention`.
 
 <h4 class="pdoc-member-header" id="FirewallPolicyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/firewallPolicy.ts#L288">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/firewallPolicy.ts#L288">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -999,7 +999,7 @@ The firewall policy mode. Possible values are `Detection`, `Prevention` and defa
 The name of the policy. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FirewallPolicyState-redirectUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/firewallPolicy.ts#L292">property <b>redirectUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/firewallPolicy.ts#L292">property <b>redirectUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>redirectUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1007,7 +1007,7 @@ The name of the policy. Changing this forces a new resource to be created.
 If action type is redirect, this field represents redirect URL for the client.
 
 <h4 class="pdoc-member-header" id="FirewallPolicyState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/firewallPolicy.ts#L296">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/firewallPolicy.ts#L296">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1015,7 +1015,7 @@ If action type is redirect, this field represents redirect URL for the client.
 The name of the resource group. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FirewallPolicyState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/firewallPolicy.ts#L300">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/firewallPolicy.ts#L300">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1023,7 +1023,7 @@ The name of the resource group. Changing this forces a new resource to be create
 A mapping of tags to assign to the Web Application Firewall Policy.
 
 <h3 class="pdoc-module-header" id="FrontdoorArgs" data-link-title="FrontdoorArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L307">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L307">
         interface <strong>FrontdoorArgs</strong>
     </a>
 </h3>
@@ -1033,7 +1033,7 @@ A mapping of tags to assign to the Web Application Firewall Policy.
 The set of arguments for constructing a Frontdoor resource.
 
 <h4 class="pdoc-member-header" id="FrontdoorArgs-backendPoolHealthProbes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L311">property <b>backendPoolHealthProbes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L311">property <b>backendPoolHealthProbes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backendPoolHealthProbes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorBackendPoolHealthProbe'>FrontdoorBackendPoolHealthProbe</a>&gt;[]&gt;;</code></pre>
@@ -1041,7 +1041,7 @@ The set of arguments for constructing a Frontdoor resource.
 A `backendPoolHealthProbe` block as defined below.
 
 <h4 class="pdoc-member-header" id="FrontdoorArgs-backendPoolLoadBalancings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L315">property <b>backendPoolLoadBalancings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L315">property <b>backendPoolLoadBalancings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backendPoolLoadBalancings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorBackendPoolLoadBalancing'>FrontdoorBackendPoolLoadBalancing</a>&gt;[]&gt;;</code></pre>
@@ -1049,7 +1049,7 @@ A `backendPoolHealthProbe` block as defined below.
 A `backendPoolLoadBalancing` block as defined below.
 
 <h4 class="pdoc-member-header" id="FrontdoorArgs-backendPools">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L319">property <b>backendPools</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L319">property <b>backendPools</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backendPools: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorBackendPool'>FrontdoorBackendPool</a>&gt;[]&gt;;</code></pre>
@@ -1057,7 +1057,7 @@ A `backendPoolLoadBalancing` block as defined below.
 A `backendPool` block as defined below.
 
 <h4 class="pdoc-member-header" id="FrontdoorArgs-backendPoolsSendReceiveTimeoutSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L323">property <b>backendPoolsSendReceiveTimeoutSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L323">property <b>backendPoolsSendReceiveTimeoutSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backendPoolsSendReceiveTimeoutSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1065,7 +1065,7 @@ A `backendPool` block as defined below.
 Specifies the send and receive timeout on forwarding request to the backend. When the timeout is reached, the request fails and returns. Possible values are between `0` - `240`. Defaults to `60`.
 
 <h4 class="pdoc-member-header" id="FrontdoorArgs-enforceBackendPoolsCertificateNameCheck">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L327">property <b>enforceBackendPoolsCertificateNameCheck</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L327">property <b>enforceBackendPoolsCertificateNameCheck</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enforceBackendPoolsCertificateNameCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1073,7 +1073,7 @@ Specifies the send and receive timeout on forwarding request to the backend. Whe
 Enforce certificate name check on `HTTPS` requests to all backend pools, this setting will have no effect on `HTTP` requests. Permitted values are `true` or `false`.
 
 <h4 class="pdoc-member-header" id="FrontdoorArgs-friendlyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L331">property <b>friendlyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L331">property <b>friendlyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>friendlyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1081,7 +1081,7 @@ Enforce certificate name check on `HTTPS` requests to all backend pools, this se
 A friendly name for the Front Door service.
 
 <h4 class="pdoc-member-header" id="FrontdoorArgs-frontendEndpoints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L335">property <b>frontendEndpoints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L335">property <b>frontendEndpoints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>frontendEndpoints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorFrontendEndpoint'>FrontdoorFrontendEndpoint</a>&gt;[]&gt;;</code></pre>
@@ -1089,7 +1089,7 @@ A friendly name for the Front Door service.
 A `frontendEndpoint` block as defined below.
 
 <h4 class="pdoc-member-header" id="FrontdoorArgs-loadBalancerEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L339">property <b>loadBalancerEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L339">property <b>loadBalancerEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loadBalancerEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1097,7 +1097,7 @@ A `frontendEndpoint` block as defined below.
 Should the Front Door Load Balancer be Enabled? Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="FrontdoorArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L345">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L345">property <b>location</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1109,7 +1109,7 @@ Due to the service&#39;s API changing &#39;location&#39; must now always be set 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created
 
 <h4 class="pdoc-member-header" id="FrontdoorArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L349">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L349">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1117,7 +1117,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the Front Door service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FrontdoorArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L353">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L353">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1125,7 +1125,7 @@ Specifies the name of the Front Door service. Changing this forces a new resourc
 Specifies the name of the Resource Group in which the Front Door service should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FrontdoorArgs-routingRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L357">property <b>routingRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L357">property <b>routingRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>routingRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorRoutingRule'>FrontdoorRoutingRule</a>&gt;[]&gt;;</code></pre>
@@ -1133,7 +1133,7 @@ Specifies the name of the Resource Group in which the Front Door service should 
 A `routingRule` block as defined below.
 
 <h4 class="pdoc-member-header" id="FrontdoorArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L361">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L361">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1141,7 +1141,7 @@ A `routingRule` block as defined below.
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="FrontdoorState" data-link-title="FrontdoorState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L239">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L239">
         interface <strong>FrontdoorState</strong>
     </a>
 </h3>
@@ -1151,7 +1151,7 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering Frontdoor resources.
 
 <h4 class="pdoc-member-header" id="FrontdoorState-backendPoolHealthProbes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L243">property <b>backendPoolHealthProbes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L243">property <b>backendPoolHealthProbes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backendPoolHealthProbes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorBackendPoolHealthProbe'>FrontdoorBackendPoolHealthProbe</a>&gt;[]&gt;;</code></pre>
@@ -1159,7 +1159,7 @@ Input properties used for looking up and filtering Frontdoor resources.
 A `backendPoolHealthProbe` block as defined below.
 
 <h4 class="pdoc-member-header" id="FrontdoorState-backendPoolLoadBalancings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L247">property <b>backendPoolLoadBalancings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L247">property <b>backendPoolLoadBalancings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backendPoolLoadBalancings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorBackendPoolLoadBalancing'>FrontdoorBackendPoolLoadBalancing</a>&gt;[]&gt;;</code></pre>
@@ -1167,7 +1167,7 @@ A `backendPoolHealthProbe` block as defined below.
 A `backendPoolLoadBalancing` block as defined below.
 
 <h4 class="pdoc-member-header" id="FrontdoorState-backendPools">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L251">property <b>backendPools</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L251">property <b>backendPools</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backendPools?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorBackendPool'>FrontdoorBackendPool</a>&gt;[]&gt;;</code></pre>
@@ -1175,7 +1175,7 @@ A `backendPoolLoadBalancing` block as defined below.
 A `backendPool` block as defined below.
 
 <h4 class="pdoc-member-header" id="FrontdoorState-backendPoolsSendReceiveTimeoutSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L255">property <b>backendPoolsSendReceiveTimeoutSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L255">property <b>backendPoolsSendReceiveTimeoutSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backendPoolsSendReceiveTimeoutSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1183,7 +1183,7 @@ A `backendPool` block as defined below.
 Specifies the send and receive timeout on forwarding request to the backend. When the timeout is reached, the request fails and returns. Possible values are between `0` - `240`. Defaults to `60`.
 
 <h4 class="pdoc-member-header" id="FrontdoorState-cname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L259">property <b>cname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L259">property <b>cname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1191,7 +1191,7 @@ Specifies the send and receive timeout on forwarding request to the backend. Whe
 The host that each frontendEndpoint must CNAME to.
 
 <h4 class="pdoc-member-header" id="FrontdoorState-enforceBackendPoolsCertificateNameCheck">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L263">property <b>enforceBackendPoolsCertificateNameCheck</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L263">property <b>enforceBackendPoolsCertificateNameCheck</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enforceBackendPoolsCertificateNameCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1199,7 +1199,7 @@ The host that each frontendEndpoint must CNAME to.
 Enforce certificate name check on `HTTPS` requests to all backend pools, this setting will have no effect on `HTTP` requests. Permitted values are `true` or `false`.
 
 <h4 class="pdoc-member-header" id="FrontdoorState-friendlyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L267">property <b>friendlyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L267">property <b>friendlyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>friendlyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1207,7 +1207,7 @@ Enforce certificate name check on `HTTPS` requests to all backend pools, this se
 A friendly name for the Front Door service.
 
 <h4 class="pdoc-member-header" id="FrontdoorState-frontendEndpoints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L271">property <b>frontendEndpoints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L271">property <b>frontendEndpoints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>frontendEndpoints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorFrontendEndpoint'>FrontdoorFrontendEndpoint</a>&gt;[]&gt;;</code></pre>
@@ -1215,7 +1215,7 @@ A friendly name for the Front Door service.
 A `frontendEndpoint` block as defined below.
 
 <h4 class="pdoc-member-header" id="FrontdoorState-headerFrontdoorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L275">property <b>headerFrontdoorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L275">property <b>headerFrontdoorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>headerFrontdoorId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1223,7 +1223,7 @@ A `frontendEndpoint` block as defined below.
 The unique ID of the Front Door which is embedded into the incoming headers `X-Azure-FDID` attribute and maybe used to filter traffic sent by the Front Door to your backend.
 
 <h4 class="pdoc-member-header" id="FrontdoorState-loadBalancerEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L279">property <b>loadBalancerEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L279">property <b>loadBalancerEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loadBalancerEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1231,7 +1231,7 @@ The unique ID of the Front Door which is embedded into the incoming headers `X-A
 Should the Front Door Load Balancer be Enabled? Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="FrontdoorState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L285">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L285">property <b>location</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1243,7 +1243,7 @@ Due to the service&#39;s API changing &#39;location&#39; must now always be set 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created
 
 <h4 class="pdoc-member-header" id="FrontdoorState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L289">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L289">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1251,7 +1251,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the Front Door service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FrontdoorState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L293">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L293">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1259,7 +1259,7 @@ Specifies the name of the Front Door service. Changing this forces a new resourc
 Specifies the name of the Resource Group in which the Front Door service should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FrontdoorState-routingRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L297">property <b>routingRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L297">property <b>routingRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>routingRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorRoutingRule'>FrontdoorRoutingRule</a>&gt;[]&gt;;</code></pre>
@@ -1267,7 +1267,7 @@ Specifies the name of the Resource Group in which the Front Door service should 
 A `routingRule` block as defined below.
 
 <h4 class="pdoc-member-header" id="FrontdoorState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/4458e2dce0815e5cc0e8221a9ab77d2466eb9bba/sdk/nodejs/frontdoor/frontdoor.ts#L301">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/frontdoor/frontdoor.ts#L301">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>

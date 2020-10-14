@@ -45,7 +45,10 @@ class MyStack : Stack
         {
             ResourceGroupName = exampleResourceGroup.Name,
             VirtualNetworkName = exampleVirtualNetwork.Name,
-            AddressPrefix = "10.5.1.0/24",
+            AddressPrefixes = 
+            {
+                "10.5.1.0/24",
+            },
             EnforcePrivateLinkServiceNetworkPolicies = true,
         });
         var examplePublicIp = new Azure.Network.PublicIp("examplePublicIp", new Azure.Network.PublicIpArgs
@@ -143,9 +146,11 @@ func main() {
 			return err
 		}
 		exampleSubnet, err := network.NewSubnet(ctx, "exampleSubnet", &network.SubnetArgs{
-			ResourceGroupName:                        exampleResourceGroup.Name,
-			VirtualNetworkName:                       exampleVirtualNetwork.Name,
-			AddressPrefix:                            pulumi.String("10.5.1.0/24"),
+			ResourceGroupName:  exampleResourceGroup.Name,
+			VirtualNetworkName: exampleVirtualNetwork.Name,
+			AddressPrefixes: pulumi.StringArray{
+				pulumi.String("10.5.1.0/24"),
+			},
 			EnforcePrivateLinkServiceNetworkPolicies: pulumi.Bool(true),
 		})
 		if err != nil {
@@ -228,7 +233,7 @@ example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
 example_subnet = azure.network.Subnet("exampleSubnet",
     resource_group_name=example_resource_group.name,
     virtual_network_name=example_virtual_network.name,
-    address_prefix="10.5.1.0/24",
+    address_prefixes=["10.5.1.0/24"],
     enforce_private_link_service_network_policies=True)
 example_public_ip = azure.network.PublicIp("examplePublicIp",
     sku="Standard",
@@ -284,7 +289,7 @@ const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNe
 const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
     resourceGroupName: exampleResourceGroup.name,
     virtualNetworkName: exampleVirtualNetwork.name,
-    addressPrefix: "10.5.1.0/24",
+    addressPrefixes: ["10.5.1.0/24"],
     enforcePrivateLinkServiceNetworkPolicies: true,
 });
 const examplePublicIp = new azure.network.PublicIp("examplePublicIp", {

@@ -43,7 +43,10 @@ class MyStack : Stack
         {
             ResourceGroupName = example.Name,
             VirtualNetworkName = vnet.Name,
-            AddressPrefix = "10.7.29.0/29",
+            AddressPrefixes = 
+            {
+                "10.7.29.0/29",
+            },
             ServiceEndpoints = 
             {
                 "Microsoft.Sql",
@@ -102,7 +105,9 @@ func main() {
 		subnet, err := network.NewSubnet(ctx, "subnet", &network.SubnetArgs{
 			ResourceGroupName:  example.Name,
 			VirtualNetworkName: vnet.Name,
-			AddressPrefix:      pulumi.String("10.7.29.0/29"),
+			AddressPrefixes: pulumi.StringArray{
+				pulumi.String("10.7.29.0/29"),
+			},
 			ServiceEndpoints: pulumi.StringArray{
 				pulumi.String("Microsoft.Sql"),
 			},
@@ -148,7 +153,7 @@ vnet = azure.network.VirtualNetwork("vnet",
 subnet = azure.network.Subnet("subnet",
     resource_group_name=example.name,
     virtual_network_name=vnet.name,
-    address_prefix="10.7.29.0/29",
+    address_prefixes=["10.7.29.0/29"],
     service_endpoints=["Microsoft.Sql"])
 sqlserver = azure.sql.SqlServer("sqlserver",
     resource_group_name=example.name,
@@ -179,7 +184,7 @@ const vnet = new azure.network.VirtualNetwork("vnet", {
 const subnet = new azure.network.Subnet("subnet", {
     resourceGroupName: example.name,
     virtualNetworkName: vnet.name,
-    addressPrefix: "10.7.29.0/29",
+    addressPrefixes: ["10.7.29.0/29"],
     serviceEndpoints: ["Microsoft.Sql"],
 });
 const sqlserver = new azure.sql.SqlServer("sqlserver", {

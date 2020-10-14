@@ -50,7 +50,10 @@ class MyStack : Stack
         {
             ResourceGroupName = mainResourceGroup.Name,
             VirtualNetworkName = mainVirtualNetwork.Name,
-            AddressPrefix = "10.0.2.0/24",
+            AddressPrefixes = 
+            {
+                "10.0.2.0/24",
+            },
         });
         var mainNetworkInterface = new Azure.Network.NetworkInterface("mainNetworkInterface", new Azure.Network.NetworkInterfaceArgs
         {
@@ -133,10 +136,16 @@ import (
 	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
 	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		cfg := config.New(ctx, "")
+		prefix := "example"
+		if param := cfg.Get("prefix"); param != "" {
+			prefix = param
+		}
 		vmName := fmt.Sprintf("%v%v", prefix, "-vm")
 		mainResourceGroup, err := core.NewResourceGroup(ctx, "mainResourceGroup", &core.ResourceGroupArgs{
 			Location: pulumi.String("West Europe"),
@@ -157,7 +166,9 @@ func main() {
 		internal, err := network.NewSubnet(ctx, "internal", &network.SubnetArgs{
 			ResourceGroupName:  mainResourceGroup.Name,
 			VirtualNetworkName: mainVirtualNetwork.Name,
-			AddressPrefix:      pulumi.String("10.0.2.0/24"),
+			AddressPrefixes: pulumi.StringArray{
+				pulumi.String("10.0.2.0/24"),
+			},
 		})
 		if err != nil {
 			return err
@@ -251,7 +262,7 @@ main_virtual_network = azure.network.VirtualNetwork("mainVirtualNetwork",
 internal = azure.network.Subnet("internal",
     resource_group_name=main_resource_group.name,
     virtual_network_name=main_virtual_network.name,
-    address_prefix="10.0.2.0/24")
+    address_prefixes=["10.0.2.0/24"])
 main_network_interface = azure.network.NetworkInterface("mainNetworkInterface",
     location=main_resource_group.location,
     resource_group_name=main_resource_group.name,
@@ -318,7 +329,7 @@ const mainVirtualNetwork = new azure.network.VirtualNetwork("mainVirtualNetwork"
 const internal = new azure.network.Subnet("internal", {
     resourceGroupName: mainResourceGroup.name,
     virtualNetworkName: mainVirtualNetwork.name,
-    addressPrefix: "10.0.2.0/24",
+    addressPrefixes: ["10.0.2.0/24"],
 });
 const mainNetworkInterface = new azure.network.NetworkInterface("mainNetworkInterface", {
     location: mainResourceGroup.location,

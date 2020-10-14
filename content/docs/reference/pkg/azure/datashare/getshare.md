@@ -31,11 +31,11 @@ class MyStack : Stack
             Name = "example-account",
             ResourceGroupName = "example-resource-group",
         }));
-        var exampleShare = Output.Create(Azure.DataShare.GetShare.InvokeAsync(new Azure.DataShare.GetShareArgs
+        var exampleShare = exampleAccount.Apply(exampleAccount => Output.Create(Azure.DataShare.GetShare.InvokeAsync(new Azure.DataShare.GetShareArgs
         {
             Name = "existing",
-            AccountId = data.Azurerm_data_share_account.Exmaple.Id,
-        }));
+            AccountId = exampleAccount.Id,
+        })));
         this.Id = exampleShare.Apply(exampleShare => exampleShare.Id);
     }
 
@@ -57,7 +57,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datashare.LookupAccount(ctx, &datashare.LookupAccountArgs{
+		exampleAccount, err := datashare.LookupAccount(ctx, &datashare.LookupAccountArgs{
 			Name:              "example-account",
 			ResourceGroupName: "example-resource-group",
 		}, nil)
@@ -66,7 +66,7 @@ func main() {
 		}
 		exampleShare, err := datashare.LookupShare(ctx, &datashare.LookupShareArgs{
 			Name:      "existing",
-			AccountId: data.Azurerm_data_share_account.Exmaple.Id,
+			AccountId: exampleAccount.Id,
 		}, nil)
 		if err != nil {
 			return err
@@ -87,7 +87,7 @@ import pulumi_azure as azure
 example_account = azure.datashare.get_account(name="example-account",
     resource_group_name="example-resource-group")
 example_share = azure.datashare.get_share(name="existing",
-    account_id=data["azurerm_data_share_account"]["exmaple"]["id"])
+    account_id=example_account.id)
 pulumi.export("id", example_share.id)
 ```
 
@@ -103,10 +103,10 @@ const exampleAccount = azure.datashare.getAccount({
     name: "example-account",
     resourceGroupName: "example-resource-group",
 });
-const exampleShare = azure.datashare.getShare({
+const exampleShare = exampleAccount.then(exampleAccount => azure.datashare.getShare({
     name: "existing",
-    accountId: data.azurerm_data_share_account.exmaple.id,
-});
+    accountId: exampleAccount.id,
+}));
 export const id = exampleShare.then(exampleShare => exampleShare.id);
 ```
 
