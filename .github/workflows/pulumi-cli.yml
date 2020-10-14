@@ -17,9 +17,9 @@ jobs:
       - name: pull-request
         uses: repo-sync/pull-request@v2
         with:
-          source_branch: "${{ github.event.client_payload.project-shortname }}/${{ github.run_id }}-${{ github.run_number }}"
+          source_branch: "pulumi/${{ github.run_id }}-${{ github.run_number }}"
           destination_branch: "master"
-          pr_title: "Regen docs ${{ github.event.client_payload.project-shortname }}@${{ github.event.client_payload.ref }}"
+          pr_title: "Regen docs pulumi@${{ github.event.client_payload.ref }}"
           pr_body: ""
           pr_label: "automation/pulumi-cli-docs"
           github_token: ${{ secrets.PULUMI_BOT_TOKEN }}
@@ -70,12 +70,12 @@ jobs:
         working-directory: docs
       - name: run yarn install in nodejs sdk
         run: yarn install && yarn run tsc
-        working-directory: ${{ github.event.client_payload.project }}/sdk/nodejs
+        working-directory: pulumi/sdk/nodejs
       - name: run typedoc
-        run: PKGS=${{ github.event.client_payload.project-shortname }} NOBUILD=true ./scripts/run_typedoc.sh
+        run: PKGS=pulumi NOBUILD=true ./scripts/run_typedoc.sh
         working-directory: docs
       - name: generate resource docs
-        run: ./scripts/gen_resource_docs.sh "${{ github.event.client_payload.project-shortname }}" true "${{ github.event.client_payload.ref }}"
+        run: ./scripts/gen_resource_docs.sh "pulumi" true "${{ github.event.client_payload.ref }}"
         working-directory: docs
       - name: generate markdown
         run: |
@@ -96,7 +96,7 @@ jobs:
       - name: commit changes
         uses: EndBug/add-and-commit@v4
         with:
-          ref: "${{ github.event.client_payload.project-shortname }}/${{ github.run_id }}-${{ github.run_number }}"
+          ref: "pulumi/${{ github.run_id }}-${{ github.run_number }}"
           author_name: pulumi-bot
           author_email: "bot@pulumi.com"
           cwd: docs
