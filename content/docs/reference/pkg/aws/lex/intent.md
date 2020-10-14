@@ -622,7 +622,7 @@ The Intent resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}Describes how the intent is fulfilled. For example, after a
 user provides all of the information for a pizza order, `fulfillment_activity` defines how the bot
-places an order with a local pizza store.
+places an order with a local pizza store. Attributes are documented under fulfillment_activity.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -634,7 +634,10 @@ places an order with a local pizza store.
         <span class="property-type"><a href="#intentconclusionstatement">Intent<wbr>Conclusion<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The statement that you want Amazon Lex to convey to the user
-after the intent is successfully fulfilled by the Lambda function.
+after the intent is successfully fulfilled by the Lambda function. This element is relevant only if
+you provide a Lambda function in the `fulfillment_activity`. If you return the intent to the client
+application, you can't specify this element. The `follow_up_prompt` and `conclusion_statement` are
+mutually exclusive. You can specify only one. Attributes are documented under statement.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -659,7 +662,7 @@ or neither. Attributes are documented under prompt.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines if a new slot type version is created when the initial
-resource is created and on each update. Defaults to true.
+resource is created and on each update. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -695,7 +698,8 @@ invoke this Lambda function to personalize user interaction. Attributes are docu
     </dt>
     <dd>{{% md %}}Amazon Lex uses this prompt to solicit additional activity after
 fulfilling an intent. For example, after the OrderPizza intent is fulfilled, you might prompt the
-user to order a drink.
+user to order a drink. The `follow_up_prompt` field and the `conclusion_statement` field are mutually
+exclusive. You can specify only one. Attributes are documented under follow_up_prompt.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -731,9 +735,9 @@ in the Alexa Skills Kit.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentrejectionstatement">Intent<wbr>Rejection<wbr>Statement<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}When the user answers "no" to the question defined in
-`confirmation_prompt`, Amazon Lex responds with this statement to acknowledge that the intent was
-canceled.
+    <dd>{{% md %}}If the user answers "no" to the question defined in the prompt field,
+Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
+documented below under statement.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -778,7 +782,7 @@ from the user using prompts defined in the slots. Attributes are documented unde
     </dt>
     <dd>{{% md %}}Describes how the intent is fulfilled. For example, after a
 user provides all of the information for a pizza order, `fulfillment_activity` defines how the bot
-places an order with a local pizza store.
+places an order with a local pizza store. Attributes are documented under fulfillment_activity.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -790,7 +794,10 @@ places an order with a local pizza store.
         <span class="property-type"><a href="#intentconclusionstatement">Intent<wbr>Conclusion<wbr>Statement</a></span>
     </dt>
     <dd>{{% md %}}The statement that you want Amazon Lex to convey to the user
-after the intent is successfully fulfilled by the Lambda function.
+after the intent is successfully fulfilled by the Lambda function. This element is relevant only if
+you provide a Lambda function in the `fulfillment_activity`. If you return the intent to the client
+application, you can't specify this element. The `follow_up_prompt` and `conclusion_statement` are
+mutually exclusive. You can specify only one. Attributes are documented under statement.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -815,7 +822,7 @@ or neither. Attributes are documented under prompt.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines if a new slot type version is created when the initial
-resource is created and on each update. Defaults to true.
+resource is created and on each update. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -851,7 +858,8 @@ invoke this Lambda function to personalize user interaction. Attributes are docu
     </dt>
     <dd>{{% md %}}Amazon Lex uses this prompt to solicit additional activity after
 fulfilling an intent. For example, after the OrderPizza intent is fulfilled, you might prompt the
-user to order a drink.
+user to order a drink. The `follow_up_prompt` field and the `conclusion_statement` field are mutually
+exclusive. You can specify only one. Attributes are documented under follow_up_prompt.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -887,9 +895,9 @@ in the Alexa Skills Kit.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentrejectionstatement">Intent<wbr>Rejection<wbr>Statement</a></span>
     </dt>
-    <dd>{{% md %}}When the user answers "no" to the question defined in
-`confirmation_prompt`, Amazon Lex responds with this statement to acknowledge that the intent was
-canceled.
+    <dd>{{% md %}}If the user answers "no" to the question defined in the prompt field,
+Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
+documented below under statement.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -934,7 +942,7 @@ from the user using prompts defined in the slots. Attributes are documented unde
     </dt>
     <dd>{{% md %}}Describes how the intent is fulfilled. For example, after a
 user provides all of the information for a pizza order, `fulfillment_activity` defines how the bot
-places an order with a local pizza store.
+places an order with a local pizza store. Attributes are documented under fulfillment_activity.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -946,7 +954,10 @@ places an order with a local pizza store.
         <span class="property-type"><a href="#intentconclusionstatement">Intent<wbr>Conclusion<wbr>Statement</a></span>
     </dt>
     <dd>{{% md %}}The statement that you want Amazon Lex to convey to the user
-after the intent is successfully fulfilled by the Lambda function.
+after the intent is successfully fulfilled by the Lambda function. This element is relevant only if
+you provide a Lambda function in the `fulfillment_activity`. If you return the intent to the client
+application, you can't specify this element. The `follow_up_prompt` and `conclusion_statement` are
+mutually exclusive. You can specify only one. Attributes are documented under statement.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -971,7 +982,7 @@ or neither. Attributes are documented under prompt.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Determines if a new slot type version is created when the initial
-resource is created and on each update. Defaults to true.
+resource is created and on each update. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1007,7 +1018,8 @@ invoke this Lambda function to personalize user interaction. Attributes are docu
     </dt>
     <dd>{{% md %}}Amazon Lex uses this prompt to solicit additional activity after
 fulfilling an intent. For example, after the OrderPizza intent is fulfilled, you might prompt the
-user to order a drink.
+user to order a drink. The `follow_up_prompt` field and the `conclusion_statement` field are mutually
+exclusive. You can specify only one. Attributes are documented under follow_up_prompt.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1043,9 +1055,9 @@ in the Alexa Skills Kit.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentrejectionstatement">Intent<wbr>Rejection<wbr>Statement</a></span>
     </dt>
-    <dd>{{% md %}}When the user answers "no" to the question defined in
-`confirmation_prompt`, Amazon Lex responds with this statement to acknowledge that the intent was
-canceled.
+    <dd>{{% md %}}If the user answers "no" to the question defined in the prompt field,
+Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
+documented below under statement.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1090,7 +1102,7 @@ from the user using prompts defined in the slots. Attributes are documented unde
     </dt>
     <dd>{{% md %}}Describes how the intent is fulfilled. For example, after a
 user provides all of the information for a pizza order, `fulfillment_activity` defines how the bot
-places an order with a local pizza store.
+places an order with a local pizza store. Attributes are documented under fulfillment_activity.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1102,7 +1114,10 @@ places an order with a local pizza store.
         <span class="property-type"><a href="#intentconclusionstatement">Intent<wbr>Conclusion<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The statement that you want Amazon Lex to convey to the user
-after the intent is successfully fulfilled by the Lambda function.
+after the intent is successfully fulfilled by the Lambda function. This element is relevant only if
+you provide a Lambda function in the `fulfillment_activity`. If you return the intent to the client
+application, you can't specify this element. The `follow_up_prompt` and `conclusion_statement` are
+mutually exclusive. You can specify only one. Attributes are documented under statement.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1127,7 +1142,7 @@ or neither. Attributes are documented under prompt.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines if a new slot type version is created when the initial
-resource is created and on each update. Defaults to true.
+resource is created and on each update. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1163,7 +1178,8 @@ invoke this Lambda function to personalize user interaction. Attributes are docu
     </dt>
     <dd>{{% md %}}Amazon Lex uses this prompt to solicit additional activity after
 fulfilling an intent. For example, after the OrderPizza intent is fulfilled, you might prompt the
-user to order a drink.
+user to order a drink. The `follow_up_prompt` field and the `conclusion_statement` field are mutually
+exclusive. You can specify only one. Attributes are documented under follow_up_prompt.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1199,9 +1215,9 @@ in the Alexa Skills Kit.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentrejectionstatement">Intent<wbr>Rejection<wbr>Statement<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}When the user answers "no" to the question defined in
-`confirmation_prompt`, Amazon Lex responds with this statement to acknowledge that the intent was
-canceled.
+    <dd>{{% md %}}If the user answers "no" to the question defined in the prompt field,
+Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
+documented below under statement.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1698,7 +1714,10 @@ included as an argument because the resource will add it automatically when upda
         <span class="property-type"><a href="#intentconclusionstatement">Intent<wbr>Conclusion<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The statement that you want Amazon Lex to convey to the user
-after the intent is successfully fulfilled by the Lambda function.
+after the intent is successfully fulfilled by the Lambda function. This element is relevant only if
+you provide a Lambda function in the `fulfillment_activity`. If you return the intent to the client
+application, you can't specify this element. The `follow_up_prompt` and `conclusion_statement` are
+mutually exclusive. You can specify only one. Attributes are documented under statement.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1723,7 +1742,7 @@ or neither. Attributes are documented under prompt.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines if a new slot type version is created when the initial
-resource is created and on each update. Defaults to true.
+resource is created and on each update. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1770,7 +1789,8 @@ invoke this Lambda function to personalize user interaction. Attributes are docu
     </dt>
     <dd>{{% md %}}Amazon Lex uses this prompt to solicit additional activity after
 fulfilling an intent. For example, after the OrderPizza intent is fulfilled, you might prompt the
-user to order a drink.
+user to order a drink. The `follow_up_prompt` field and the `conclusion_statement` field are mutually
+exclusive. You can specify only one. Attributes are documented under follow_up_prompt.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1783,7 +1803,7 @@ user to order a drink.
     </dt>
     <dd>{{% md %}}Describes how the intent is fulfilled. For example, after a
 user provides all of the information for a pizza order, `fulfillment_activity` defines how the bot
-places an order with a local pizza store.
+places an order with a local pizza store. Attributes are documented under fulfillment_activity.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1830,9 +1850,9 @@ in the Alexa Skills Kit.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentrejectionstatement">Intent<wbr>Rejection<wbr>Statement<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}When the user answers "no" to the question defined in
-`confirmation_prompt`, Amazon Lex responds with this statement to acknowledge that the intent was
-canceled.
+    <dd>{{% md %}}If the user answers "no" to the question defined in the prompt field,
+Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
+documented below under statement.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1910,7 +1930,10 @@ included as an argument because the resource will add it automatically when upda
         <span class="property-type"><a href="#intentconclusionstatement">Intent<wbr>Conclusion<wbr>Statement</a></span>
     </dt>
     <dd>{{% md %}}The statement that you want Amazon Lex to convey to the user
-after the intent is successfully fulfilled by the Lambda function.
+after the intent is successfully fulfilled by the Lambda function. This element is relevant only if
+you provide a Lambda function in the `fulfillment_activity`. If you return the intent to the client
+application, you can't specify this element. The `follow_up_prompt` and `conclusion_statement` are
+mutually exclusive. You can specify only one. Attributes are documented under statement.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1935,7 +1958,7 @@ or neither. Attributes are documented under prompt.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines if a new slot type version is created when the initial
-resource is created and on each update. Defaults to true.
+resource is created and on each update. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1982,7 +2005,8 @@ invoke this Lambda function to personalize user interaction. Attributes are docu
     </dt>
     <dd>{{% md %}}Amazon Lex uses this prompt to solicit additional activity after
 fulfilling an intent. For example, after the OrderPizza intent is fulfilled, you might prompt the
-user to order a drink.
+user to order a drink. The `follow_up_prompt` field and the `conclusion_statement` field are mutually
+exclusive. You can specify only one. Attributes are documented under follow_up_prompt.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1995,7 +2019,7 @@ user to order a drink.
     </dt>
     <dd>{{% md %}}Describes how the intent is fulfilled. For example, after a
 user provides all of the information for a pizza order, `fulfillment_activity` defines how the bot
-places an order with a local pizza store.
+places an order with a local pizza store. Attributes are documented under fulfillment_activity.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2042,9 +2066,9 @@ in the Alexa Skills Kit.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentrejectionstatement">Intent<wbr>Rejection<wbr>Statement</a></span>
     </dt>
-    <dd>{{% md %}}When the user answers "no" to the question defined in
-`confirmation_prompt`, Amazon Lex responds with this statement to acknowledge that the intent was
-canceled.
+    <dd>{{% md %}}If the user answers "no" to the question defined in the prompt field,
+Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
+documented below under statement.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2122,7 +2146,10 @@ included as an argument because the resource will add it automatically when upda
         <span class="property-type"><a href="#intentconclusionstatement">Intent<wbr>Conclusion<wbr>Statement</a></span>
     </dt>
     <dd>{{% md %}}The statement that you want Amazon Lex to convey to the user
-after the intent is successfully fulfilled by the Lambda function.
+after the intent is successfully fulfilled by the Lambda function. This element is relevant only if
+you provide a Lambda function in the `fulfillment_activity`. If you return the intent to the client
+application, you can't specify this element. The `follow_up_prompt` and `conclusion_statement` are
+mutually exclusive. You can specify only one. Attributes are documented under statement.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2147,7 +2174,7 @@ or neither. Attributes are documented under prompt.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Determines if a new slot type version is created when the initial
-resource is created and on each update. Defaults to true.
+resource is created and on each update. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2194,7 +2221,8 @@ invoke this Lambda function to personalize user interaction. Attributes are docu
     </dt>
     <dd>{{% md %}}Amazon Lex uses this prompt to solicit additional activity after
 fulfilling an intent. For example, after the OrderPizza intent is fulfilled, you might prompt the
-user to order a drink.
+user to order a drink. The `follow_up_prompt` field and the `conclusion_statement` field are mutually
+exclusive. You can specify only one. Attributes are documented under follow_up_prompt.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2207,7 +2235,7 @@ user to order a drink.
     </dt>
     <dd>{{% md %}}Describes how the intent is fulfilled. For example, after a
 user provides all of the information for a pizza order, `fulfillment_activity` defines how the bot
-places an order with a local pizza store.
+places an order with a local pizza store. Attributes are documented under fulfillment_activity.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2254,9 +2282,9 @@ in the Alexa Skills Kit.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentrejectionstatement">Intent<wbr>Rejection<wbr>Statement</a></span>
     </dt>
-    <dd>{{% md %}}When the user answers "no" to the question defined in
-`confirmation_prompt`, Amazon Lex responds with this statement to acknowledge that the intent was
-canceled.
+    <dd>{{% md %}}If the user answers "no" to the question defined in the prompt field,
+Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
+documented below under statement.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2334,7 +2362,10 @@ included as an argument because the resource will add it automatically when upda
         <span class="property-type"><a href="#intentconclusionstatement">Intent<wbr>Conclusion<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The statement that you want Amazon Lex to convey to the user
-after the intent is successfully fulfilled by the Lambda function.
+after the intent is successfully fulfilled by the Lambda function. This element is relevant only if
+you provide a Lambda function in the `fulfillment_activity`. If you return the intent to the client
+application, you can't specify this element. The `follow_up_prompt` and `conclusion_statement` are
+mutually exclusive. You can specify only one. Attributes are documented under statement.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2359,7 +2390,7 @@ or neither. Attributes are documented under prompt.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines if a new slot type version is created when the initial
-resource is created and on each update. Defaults to true.
+resource is created and on each update. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2406,7 +2437,8 @@ invoke this Lambda function to personalize user interaction. Attributes are docu
     </dt>
     <dd>{{% md %}}Amazon Lex uses this prompt to solicit additional activity after
 fulfilling an intent. For example, after the OrderPizza intent is fulfilled, you might prompt the
-user to order a drink.
+user to order a drink. The `follow_up_prompt` field and the `conclusion_statement` field are mutually
+exclusive. You can specify only one. Attributes are documented under follow_up_prompt.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2419,7 +2451,7 @@ user to order a drink.
     </dt>
     <dd>{{% md %}}Describes how the intent is fulfilled. For example, after a
 user provides all of the information for a pizza order, `fulfillment_activity` defines how the bot
-places an order with a local pizza store.
+places an order with a local pizza store. Attributes are documented under fulfillment_activity.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2466,9 +2498,9 @@ in the Alexa Skills Kit.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentrejectionstatement">Intent<wbr>Rejection<wbr>Statement<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}When the user answers "no" to the question defined in
-`confirmation_prompt`, Amazon Lex responds with this statement to acknowledge that the intent was
-canceled.
+    <dd>{{% md %}}If the user answers "no" to the question defined in the prompt field,
+Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
+documented below under statement.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3409,9 +3441,9 @@ to invoke your Lambda function. For more information, see
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfollowuppromptrejectionstatement">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Rejection<wbr>Statement<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}When the user answers "no" to the question defined in
-`confirmation_prompt`, Amazon Lex responds with this statement to acknowledge that the intent was
-canceled.
+    <dd>{{% md %}}If the user answers "no" to the question defined in the prompt field,
+Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
+documented below under statement.
 {{% /md %}}</dd>
 
 </dl>
@@ -3440,9 +3472,9 @@ canceled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfollowuppromptrejectionstatement">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Rejection<wbr>Statement</a></span>
     </dt>
-    <dd>{{% md %}}When the user answers "no" to the question defined in
-`confirmation_prompt`, Amazon Lex responds with this statement to acknowledge that the intent was
-canceled.
+    <dd>{{% md %}}If the user answers "no" to the question defined in the prompt field,
+Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
+documented below under statement.
 {{% /md %}}</dd>
 
 </dl>
@@ -3471,9 +3503,9 @@ canceled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfollowuppromptrejectionstatement">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Rejection<wbr>Statement</a></span>
     </dt>
-    <dd>{{% md %}}When the user answers "no" to the question defined in
-`confirmation_prompt`, Amazon Lex responds with this statement to acknowledge that the intent was
-canceled.
+    <dd>{{% md %}}If the user answers "no" to the question defined in the prompt field,
+Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
+documented below under statement.
 {{% /md %}}</dd>
 
 </dl>
@@ -3502,9 +3534,9 @@ canceled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfollowuppromptrejectionstatement">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Rejection<wbr>Statement<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}When the user answers "no" to the question defined in
-`confirmation_prompt`, Amazon Lex responds with this statement to acknowledge that the intent was
-canceled.
+    <dd>{{% md %}}If the user answers "no" to the question defined in the prompt field,
+Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
+documented below under statement.
 {{% /md %}}</dd>
 
 </dl>
@@ -4911,7 +4943,8 @@ the built-in slot types.
     </dt>
     <dd>{{% md %}}Directs Lex the order in which to elicit this slot value from the user.
 For example, if the intent has two slots with priorities 1 and 2, AWS Lex first elicits a value for
-the slot with priority 1.
+the slot with priority 1. If multiple slots share the same priority, the order in which Lex elicits
+values is arbitrary.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5025,7 +5058,8 @@ the built-in slot types.
     </dt>
     <dd>{{% md %}}Directs Lex the order in which to elicit this slot value from the user.
 For example, if the intent has two slots with priorities 1 and 2, AWS Lex first elicits a value for
-the slot with priority 1.
+the slot with priority 1. If multiple slots share the same priority, the order in which Lex elicits
+values is arbitrary.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5139,7 +5173,8 @@ the built-in slot types.
     </dt>
     <dd>{{% md %}}Directs Lex the order in which to elicit this slot value from the user.
 For example, if the intent has two slots with priorities 1 and 2, AWS Lex first elicits a value for
-the slot with priority 1.
+the slot with priority 1. If multiple slots share the same priority, the order in which Lex elicits
+values is arbitrary.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5253,7 +5288,8 @@ the built-in slot types.
     </dt>
     <dd>{{% md %}}Directs Lex the order in which to elicit this slot value from the user.
 For example, if the intent has two slots with priorities 1 and 2, AWS Lex first elicits a value for
-the slot with priority 1.
+the slot with priority 1. If multiple slots share the same priority, the order in which Lex elicits
+values is arbitrary.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

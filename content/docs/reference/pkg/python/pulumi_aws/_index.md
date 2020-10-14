@@ -632,9 +632,21 @@ It often includes an indicator of the type of resource—for example, an IAM use
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.</code><code class="sig-name descname">GetPartitionResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dns_suffix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">partition</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.GetPartitionResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getPartition.</p>
 <dl class="py method">
+<dt id="pulumi_aws.GetPartitionResult.dns_suffix">
+<em class="property">property </em><code class="sig-name descname">dns_suffix</code><a class="headerlink" href="#pulumi_aws.GetPartitionResult.dns_suffix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base DNS domain name for the current partition (e.g. <code class="docutils literal notranslate"><span class="pre">amazonaws.com</span></code> in AWS Commercial, <code class="docutils literal notranslate"><span class="pre">amazonaws.com.cn</span></code> in AWS China).</p>
+</dd></dl>
+
+<dl class="py method">
 <dt id="pulumi_aws.GetPartitionResult.id">
 <em class="property">property </em><code class="sig-name descname">id</code><a class="headerlink" href="#pulumi_aws.GetPartitionResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aws.GetPartitionResult.partition">
+<em class="property">property </em><code class="sig-name descname">partition</code><a class="headerlink" href="#pulumi_aws.GetPartitionResult.partition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Identifier of the current partition (e.g. <code class="docutils literal notranslate"><span class="pre">aws</span></code> in AWS Commercial, <code class="docutils literal notranslate"><span class="pre">aws-cn</span></code> in AWS China).</p>
 </dd></dl>
 
 </dd></dl>
@@ -1133,7 +1145,7 @@ for the effective account in which this provider is working.</p>
 <dl class="py function">
 <dt id="pulumi_aws.get_ip_ranges">
 <code class="sig-prename descclassname">pulumi_aws.</code><code class="sig-name descname">get_ip_ranges</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">regions</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Sequence<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">services</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Sequence<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">url</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.invoke.InvokeOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_aws.get_ip_ranges.AwaitableGetIpRangesResult<a class="headerlink" href="#pulumi_aws.get_ip_ranges" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to get the IP ranges of various AWS products and services. For more information about the contents of this data source and required JSON syntax if referencing a custom URL, see the <a class="reference external" href="https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html">AWS IP Address Ranges documention</a>.</p>
+<dd><p>Use this data source to get the IP ranges of various AWS products and services. For more information about the contents of this data source and required JSON syntax if referencing a custom URL, see the <a class="reference external" href="https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html">AWS IP Address Ranges documentation</a>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
 
@@ -1167,7 +1179,7 @@ omitted). Valid items are <code class="docutils literal notranslate"><span class
 <code class="docutils literal notranslate"><span class="pre">codebuild</span></code>, <code class="docutils literal notranslate"><span class="pre">dynamodb</span></code>, <code class="docutils literal notranslate"><span class="pre">ec2</span></code>, <code class="docutils literal notranslate"><span class="pre">ec2_instance_connect</span></code>, <code class="docutils literal notranslate"><span class="pre">globalaccelerator</span></code>,
 <code class="docutils literal notranslate"><span class="pre">route53</span></code>, <code class="docutils literal notranslate"><span class="pre">route53_healthchecks</span></code>, <code class="docutils literal notranslate"><span class="pre">s3</span></code> and <code class="docutils literal notranslate"><span class="pre">workspaces_gateways</span></code>. See the
 [<code class="docutils literal notranslate"><span class="pre">service</span></code> attribute][2] documentation for other possible values.</p></li>
-<li><p><strong>url</strong> (<em>str</em>) – <p>Custom URL for source JSON file. Syntax must match <a class="reference external" href="https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html">AWS IP Address Ranges documention</a>. Defaults to <code class="docutils literal notranslate"><span class="pre">https://ip-ranges.amazonaws.com/ip-ranges.json</span></code>.</p>
+<li><p><strong>url</strong> (<em>str</em>) – <p>Custom URL for source JSON file. Syntax must match <a class="reference external" href="https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html">AWS IP Address Ranges documentation</a>. Defaults to <code class="docutils literal notranslate"><span class="pre">https://ip-ranges.amazonaws.com/ip-ranges.json</span></code>.</p>
 </p></li>
 </ul>
 </dd>

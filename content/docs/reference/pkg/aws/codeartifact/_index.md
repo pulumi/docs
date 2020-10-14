@@ -14,6 +14,12 @@ Explore the resources and functions of the codeartifact module in the AWS packag
     <li><a href="domain" title="Domain"><span class="symbol resource"></span>Domain</a></li>
     <li><a href="domainpermissions" title="DomainPermissions"><span class="symbol resource"></span>DomainPermissions</a></li>
     <li><a href="repository" title="Repository"><span class="symbol resource"></span>Repository</a></li>
+    <li><a href="repositorypermissionspolicy" title="RepositoryPermissionsPolicy"><span class="symbol resource"></span>RepositoryPermissionsPolicy</a></li>
+</ul>
+
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getauthorizationtoken" title="GetAuthorizationToken"><span class="symbol function"></span>GetAuthorizationToken</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -25,7 +31,7 @@ Explore the resources and functions of the codeartifact module in the AWS packag
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.6.1</dd>
+	<dd>3.7.0</dd>
 </dl>
 
 

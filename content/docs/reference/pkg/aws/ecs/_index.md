@@ -34,7 +34,7 @@ Explore the resources and functions of the ecs module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.6.1</dd>
+	<dd>3.7.0</dd>
 </dl>
 
 

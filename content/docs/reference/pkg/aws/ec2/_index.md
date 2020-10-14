@@ -88,6 +88,7 @@ Explore the resources and functions of the ec2 module in the AWS package.
     <li><a href="getcoippools" title="GetCoipPools"><span class="symbol function"></span>GetCoipPools</a></li>
     <li><a href="getcustomergateway" title="GetCustomerGateway"><span class="symbol function"></span>GetCustomerGateway</a></li>
     <li><a href="getinstance" title="GetInstance"><span class="symbol function"></span>GetInstance</a></li>
+    <li><a href="getinstancetype" title="GetInstanceType"><span class="symbol function"></span>GetInstanceType</a></li>
     <li><a href="getinstancetypeoffering" title="GetInstanceTypeOffering"><span class="symbol function"></span>GetInstanceTypeOffering</a></li>
     <li><a href="getinstancetypeofferings" title="GetInstanceTypeOfferings"><span class="symbol function"></span>GetInstanceTypeOfferings</a></li>
     <li><a href="getinstances" title="GetInstances"><span class="symbol function"></span>GetInstances</a></li>
@@ -132,7 +133,7 @@ Explore the resources and functions of the ec2 module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.6.1</dd>
+	<dd>3.7.0</dd>
 </dl>
 
 

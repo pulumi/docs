@@ -3,7 +3,7 @@ title: "Module codeartifact"
 title_tag: "Module codeartifact | Package @pulumi/aws | Node.js SDK"
 linktitle: "codeartifact"
 meta_desc: "Explore members of the codeartifact module in the @pulumi/aws package."
-git_sha: "356019d7fa51942d84b18c9fa5df67dfe857ffe3"
+git_sha: "6dda53b70848a0c4579e285220ce00c4601e5e7e"
 block_external_search_index: true
 ---
 
@@ -20,8 +20,13 @@ block_external_search_index: true
     <li><a href="#Domain"><span class="symbol resource"></span>Domain</a></li>
     <li><a href="#DomainPermissions"><span class="symbol resource"></span>DomainPermissions</a></li>
     <li><a href="#Repository"><span class="symbol resource"></span>Repository</a></li>
+    <li><a href="#RepositoryPermissionsPolicy"><span class="symbol resource"></span>RepositoryPermissionsPolicy</a></li>
 </ul>
 
+<h3>Functions</h3>
+<ul class="api">
+    <li><a href="#getAuthorizationToken"><span class="symbol function"></span>getAuthorizationToken</a></li>
+</ul>
 
 <h3>Others</h3>
 <ul class="api">
@@ -29,14 +34,18 @@ block_external_search_index: true
     <li><a href="#DomainPermissionsArgs"><span class="symbol api"></span>DomainPermissionsArgs</a></li>
     <li><a href="#DomainPermissionsState"><span class="symbol api"></span>DomainPermissionsState</a></li>
     <li><a href="#DomainState"><span class="symbol api"></span>DomainState</a></li>
+    <li><a href="#GetAuthorizationTokenArgs"><span class="symbol api"></span>GetAuthorizationTokenArgs</a></li>
+    <li><a href="#GetAuthorizationTokenResult"><span class="symbol api"></span>GetAuthorizationTokenResult</a></li>
     <li><a href="#RepositoryArgs"><span class="symbol api"></span>RepositoryArgs</a></li>
+    <li><a href="#RepositoryPermissionsPolicyArgs"><span class="symbol api"></span>RepositoryPermissionsPolicyArgs</a></li>
+    <li><a href="#RepositoryPermissionsPolicyState"><span class="symbol api"></span>RepositoryPermissionsPolicyState</a></li>
     <li><a href="#RepositoryState"><span class="symbol api"></span>RepositoryState</a></li>
 </ul>
 
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Domain" data-link-title="Domain">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domain.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domain.ts#L23">
         Resource <strong>Domain</strong>
     </a>
 </h3>
@@ -59,7 +68,7 @@ const exampleDomain = new aws.codeartifact.Domain("exampleDomain", {
 ```
 
 <h4 class="pdoc-member-header" id="Domain-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domain.ts#L78"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domain.ts#L78"> <b>constructor</b></a>
 </h4>
 
 
@@ -73,7 +82,7 @@ Create a Domain resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Domain-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domain.ts#L33">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domain.ts#L33">method <b>get</b></a>
 </h4>
 
 
@@ -84,14 +93,14 @@ Get an existing Domain resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Domain-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domain.ts#L23">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domain.ts#L23">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Domain-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domain.ts#L44">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domain.ts#L44">method <b>isInstance</b></a>
 </h4>
 
 
@@ -102,7 +111,7 @@ Returns true if the given object is an instance of Domain.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Domain-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domain.ts#L54">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domain.ts#L54">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -110,7 +119,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ARN of Domain.
 
 <h4 class="pdoc-member-header" id="Domain-assetSizeBytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domain.ts#L58">property <b>assetSizeBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domain.ts#L58">property <b>assetSizeBytes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>assetSizeBytes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -118,7 +127,7 @@ The ARN of Domain.
 The total size of all assets in the domain.
 
 <h4 class="pdoc-member-header" id="Domain-createdTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domain.ts#L62">property <b>createdTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domain.ts#L62">property <b>createdTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createdTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -126,7 +135,7 @@ The total size of all assets in the domain.
 A timestamp that represents the date and time the domain was created in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
 
 <h4 class="pdoc-member-header" id="Domain-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domain.ts#L66">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domain.ts#L66">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -134,7 +143,7 @@ A timestamp that represents the date and time the domain was created in [RFC3339
 The name of the domain to create. All domain names in an AWS Region that are in the same AWS account must be unique. The domain name is used as the prefix in DNS hostnames. Do not use sensitive information in a domain name because it is publicly discoverable.
 
 <h4 class="pdoc-member-header" id="Domain-encryptionKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domain.ts#L70">property <b>encryptionKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domain.ts#L70">property <b>encryptionKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>encryptionKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -142,7 +151,7 @@ The name of the domain to create. All domain names in an AWS Region that are in 
 The encryption key for the domain. This is used to encrypt content stored in a domain. The KMS Key Amazon Resource Name (ARN).
 
 <h4 class="pdoc-member-header" id="Domain-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domain.ts#L23">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domain.ts#L23">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -151,7 +160,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Domain-owner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domain.ts#L74">property <b>owner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domain.ts#L74">property <b>owner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>owner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -159,7 +168,7 @@ deployments and may be missing (undefined) during planning phases.
 The AWS account ID that owns the domain.
 
 <h4 class="pdoc-member-header" id="Domain-repositoryCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domain.ts#L78">property <b>repositoryCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domain.ts#L78">property <b>repositoryCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>repositoryCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -167,7 +176,7 @@ The AWS account ID that owns the domain.
 The number of repositories in the domain.
 
 <h4 class="pdoc-member-header" id="Domain-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domain.ts#L23">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domain.ts#L23">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -176,7 +185,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="DomainPermissions" data-link-title="DomainPermissions">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domainPermissions.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domainPermissions.ts#L38">
         Resource <strong>DomainPermissions</strong>
     </a>
 </h3>
@@ -214,7 +223,7 @@ const test = new aws.codeartifact.DomainPermissions("test", {
 ```
 
 <h4 class="pdoc-member-header" id="DomainPermissions-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domainPermissions.ts#L85"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domainPermissions.ts#L85"> <b>constructor</b></a>
 </h4>
 
 
@@ -228,7 +237,7 @@ Create a DomainPermissions resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DomainPermissions-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domainPermissions.ts#L48">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domainPermissions.ts#L48">method <b>get</b></a>
 </h4>
 
 
@@ -239,14 +248,14 @@ Get an existing DomainPermissions resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DomainPermissions-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domainPermissions.ts#L38">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domainPermissions.ts#L38">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DomainPermissions-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domainPermissions.ts#L59">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domainPermissions.ts#L59">method <b>isInstance</b></a>
 </h4>
 
 
@@ -257,7 +266,7 @@ Returns true if the given object is an instance of DomainPermissions.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DomainPermissions-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domainPermissions.ts#L69">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domainPermissions.ts#L69">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -265,7 +274,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the domain on which to set the resource policy.
 
 <h4 class="pdoc-member-header" id="DomainPermissions-domainOwner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domainPermissions.ts#L73">property <b>domainOwner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domainPermissions.ts#L73">property <b>domainOwner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domainOwner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -273,7 +282,7 @@ The name of the domain on which to set the resource policy.
 The account number of the AWS account that owns the domain.
 
 <h4 class="pdoc-member-header" id="DomainPermissions-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domainPermissions.ts#L38">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domainPermissions.ts#L38">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -282,7 +291,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DomainPermissions-policyDocument">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domainPermissions.ts#L77">property <b>policyDocument</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domainPermissions.ts#L77">property <b>policyDocument</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyDocument: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -290,7 +299,7 @@ deployments and may be missing (undefined) during planning phases.
 A JSON policy string to be set as the access control resource policy on the provided domain.
 
 <h4 class="pdoc-member-header" id="DomainPermissions-policyRevision">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domainPermissions.ts#L81">property <b>policyRevision</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domainPermissions.ts#L81">property <b>policyRevision</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyRevision: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -298,7 +307,7 @@ A JSON policy string to be set as the access control resource policy on the prov
 The current revision of the resource policy to be set. This revision is used for optimistic locking, which prevents others from overwriting your changes to the domain's resource policy.
 
 <h4 class="pdoc-member-header" id="DomainPermissions-resourceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domainPermissions.ts#L85">property <b>resourceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domainPermissions.ts#L85">property <b>resourceArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -306,7 +315,7 @@ The current revision of the resource policy to be set. This revision is used for
 The ARN of the resource associated with the resource policy.
 
 <h4 class="pdoc-member-header" id="DomainPermissions-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domainPermissions.ts#L38">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domainPermissions.ts#L38">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -315,7 +324,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Repository" data-link-title="Repository">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/repository.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repository.ts#L48">
         Resource <strong>Repository</strong>
     </a>
 </h3>
@@ -360,7 +369,7 @@ const test = new aws.codeartifact.Repository("test", {
 ```
 
 <h4 class="pdoc-member-header" id="Repository-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/repository.ts#L106"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repository.ts#L107"> <b>constructor</b></a>
 </h4>
 
 
@@ -374,7 +383,7 @@ Create a Repository resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Repository-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/repository.ts#L57">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repository.ts#L58">method <b>get</b></a>
 </h4>
 
 
@@ -385,14 +394,14 @@ Get an existing Repository resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Repository-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/repository.ts#L47">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repository.ts#L48">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Repository-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/repository.ts#L68">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repository.ts#L69">method <b>isInstance</b></a>
 </h4>
 
 
@@ -403,7 +412,7 @@ Returns true if the given object is an instance of Repository.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Repository-administratorAccount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/repository.ts#L78">property <b>administratorAccount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repository.ts#L79">property <b>administratorAccount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>administratorAccount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -411,7 +420,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The account number of the AWS account that manages the repository.
 
 <h4 class="pdoc-member-header" id="Repository-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/repository.ts#L82">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repository.ts#L83">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -419,7 +428,7 @@ The account number of the AWS account that manages the repository.
 The ARN of the repository.
 
 <h4 class="pdoc-member-header" id="Repository-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/repository.ts#L86">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repository.ts#L87">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -427,7 +436,7 @@ The ARN of the repository.
 The description of the repository.
 
 <h4 class="pdoc-member-header" id="Repository-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/repository.ts#L90">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repository.ts#L91">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -435,7 +444,7 @@ The description of the repository.
 The domain that contains the created repository.
 
 <h4 class="pdoc-member-header" id="Repository-domainOwner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/repository.ts#L94">property <b>domainOwner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repository.ts#L95">property <b>domainOwner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domainOwner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -443,7 +452,7 @@ The domain that contains the created repository.
 The account number of the AWS account that owns the domain.
 
 <h4 class="pdoc-member-header" id="Repository-externalConnections">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/repository.ts#L98">property <b>externalConnections</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repository.ts#L99">property <b>externalConnections</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>externalConnections: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RepositoryExternalConnection'>RepositoryExternalConnection</a>[]&gt;;</code></pre>
@@ -451,7 +460,7 @@ The account number of the AWS account that owns the domain.
 An array of external connections associated with the repository. see External Connections
 
 <h4 class="pdoc-member-header" id="Repository-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/repository.ts#L47">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repository.ts#L48">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -460,7 +469,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Repository-repository">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/repository.ts#L102">property <b>repository</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repository.ts#L103">property <b>repository</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>repository: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -468,7 +477,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the repository to create.
 
 <h4 class="pdoc-member-header" id="Repository-upstreams">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/repository.ts#L106">property <b>upstreams</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repository.ts#L107">property <b>upstreams</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>upstreams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RepositoryUpstream'>RepositoryUpstream</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -476,7 +485,126 @@ The name of the repository to create.
 A list of upstream repositories to associate with the repository. The order of the upstream repositories in the list determines their priority order when AWS CodeArtifact looks for a requested package version. see Upstream
 
 <h4 class="pdoc-member-header" id="Repository-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/repository.ts#L47">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repository.ts#L48">property <b>urn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h3 class="pdoc-module-header" id="RepositoryPermissionsPolicy" data-link-title="RepositoryPermissionsPolicy">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repositoryPermissionsPolicy.ts#L10">
+        Resource <strong>RepositoryPermissionsPolicy</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>RepositoryPermissionsPolicy</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+
+Provides a CodeArtifact Repostory Permissions Policy Resource.
+
+<h4 class="pdoc-member-header" id="RepositoryPermissionsPolicy-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repositoryPermissionsPolicy.ts#L61"> <b>constructor</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> RepositoryPermissionsPolicy(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#RepositoryPermissionsPolicyArgs'>RepositoryPermissionsPolicyArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
+
+
+Create a RepositoryPermissionsPolicy resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h4 class="pdoc-member-header" id="RepositoryPermissionsPolicy-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repositoryPermissionsPolicy.ts#L20">method <b>get</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#RepositoryPermissionsPolicyState'>RepositoryPermissionsPolicyState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#RepositoryPermissionsPolicy'>RepositoryPermissionsPolicy</a></code></pre>
+
+
+Get an existing RepositoryPermissionsPolicy resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h4 class="pdoc-member-header" id="RepositoryPermissionsPolicy-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repositoryPermissionsPolicy.ts#L10">method <b>getProvider</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
+
+<h4 class="pdoc-member-header" id="RepositoryPermissionsPolicy-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repositoryPermissionsPolicy.ts#L31">method <b>isInstance</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is RepositoryPermissionsPolicy</code></pre>
+
+
+Returns true if the given object is an instance of RepositoryPermissionsPolicy.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h4 class="pdoc-member-header" id="RepositoryPermissionsPolicy-domain">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repositoryPermissionsPolicy.ts#L41">property <b>domain</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the domain on which to set the resource policy.
+
+<h4 class="pdoc-member-header" id="RepositoryPermissionsPolicy-domainOwner">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repositoryPermissionsPolicy.ts#L45">property <b>domainOwner</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>domainOwner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The account number of the AWS account that owns the domain.
+
+<h4 class="pdoc-member-header" id="RepositoryPermissionsPolicy-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repositoryPermissionsPolicy.ts#L10">property <b>id</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h4 class="pdoc-member-header" id="RepositoryPermissionsPolicy-policyDocument">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repositoryPermissionsPolicy.ts#L49">property <b>policyDocument</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>policyDocument: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+A JSON policy string to be set as the access control resource policy on the provided domain.
+
+<h4 class="pdoc-member-header" id="RepositoryPermissionsPolicy-policyRevision">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repositoryPermissionsPolicy.ts#L53">property <b>policyRevision</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>policyRevision: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The current revision of the resource policy to be set. This revision is used for optimistic locking, which prevents others from overwriting your changes to the domain's resource policy.
+
+<h4 class="pdoc-member-header" id="RepositoryPermissionsPolicy-repository">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repositoryPermissionsPolicy.ts#L57">property <b>repository</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>repository: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the repository to set the resource policy on.
+
+<h4 class="pdoc-member-header" id="RepositoryPermissionsPolicy-resourceArn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repositoryPermissionsPolicy.ts#L61">property <b>resourceArn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>resourceArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ARN of the resource associated with the resource policy.
+
+<h4 class="pdoc-member-header" id="RepositoryPermissionsPolicy-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repositoryPermissionsPolicy.ts#L10">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -485,10 +613,34 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 
+<h2 id="functions">Functions</h2>
+<h3 class="pdoc-module-header" id="getAuthorizationToken" data-link-title="getAuthorizationToken">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/getAuthorizationToken.ts#L24">
+        Function <strong>getAuthorizationToken</strong>
+    </a>
+</h3>
+
+
+<pre class="highlight"><code><span class='kd'></span>getAuthorizationToken(args: <a href='#GetAuthorizationTokenArgs'>GetAuthorizationTokenArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetAuthorizationTokenResult'>GetAuthorizationTokenResult</a>&gt;</code></pre>
+
+
+The CodeArtifact Authorization Token data source generates a temporary authentication token for accessing repositories in a CodeArtifact domain.
+
+#### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const test = aws.codeartifact.getAuthorizationToken({
+    domain: aws_codeartifact_domain.test.domain,
+});
+```
+
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="DomainArgs" data-link-title="DomainArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domain.ts#L163">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domain.ts#L163">
         interface <strong>DomainArgs</strong>
     </a>
 </h3>
@@ -498,7 +650,7 @@ deployments.
 The set of arguments for constructing a Domain resource.
 
 <h4 class="pdoc-member-header" id="DomainArgs-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domain.ts#L167">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domain.ts#L167">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -506,7 +658,7 @@ The set of arguments for constructing a Domain resource.
 The name of the domain to create. All domain names in an AWS Region that are in the same AWS account must be unique. The domain name is used as the prefix in DNS hostnames. Do not use sensitive information in a domain name because it is publicly discoverable.
 
 <h4 class="pdoc-member-header" id="DomainArgs-encryptionKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domain.ts#L171">property <b>encryptionKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domain.ts#L171">property <b>encryptionKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encryptionKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -514,7 +666,7 @@ The name of the domain to create. All domain names in an AWS Region that are in 
 The encryption key for the domain. This is used to encrypt content stored in a domain. The KMS Key Amazon Resource Name (ARN).
 
 <h3 class="pdoc-module-header" id="DomainPermissionsArgs" data-link-title="DomainPermissionsArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domainPermissions.ts#L158">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domainPermissions.ts#L158">
         interface <strong>DomainPermissionsArgs</strong>
     </a>
 </h3>
@@ -524,7 +676,7 @@ The encryption key for the domain. This is used to encrypt content stored in a d
 The set of arguments for constructing a DomainPermissions resource.
 
 <h4 class="pdoc-member-header" id="DomainPermissionsArgs-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domainPermissions.ts#L162">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domainPermissions.ts#L162">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -532,7 +684,7 @@ The set of arguments for constructing a DomainPermissions resource.
 The name of the domain on which to set the resource policy.
 
 <h4 class="pdoc-member-header" id="DomainPermissionsArgs-domainOwner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domainPermissions.ts#L166">property <b>domainOwner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domainPermissions.ts#L166">property <b>domainOwner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainOwner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -540,7 +692,7 @@ The name of the domain on which to set the resource policy.
 The account number of the AWS account that owns the domain.
 
 <h4 class="pdoc-member-header" id="DomainPermissionsArgs-policyDocument">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domainPermissions.ts#L170">property <b>policyDocument</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domainPermissions.ts#L170">property <b>policyDocument</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyDocument: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -548,7 +700,7 @@ The account number of the AWS account that owns the domain.
 A JSON policy string to be set as the access control resource policy on the provided domain.
 
 <h4 class="pdoc-member-header" id="DomainPermissionsArgs-policyRevision">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domainPermissions.ts#L174">property <b>policyRevision</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domainPermissions.ts#L174">property <b>policyRevision</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyRevision?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -556,7 +708,7 @@ A JSON policy string to be set as the access control resource policy on the prov
 The current revision of the resource policy to be set. This revision is used for optimistic locking, which prevents others from overwriting your changes to the domain's resource policy.
 
 <h3 class="pdoc-module-header" id="DomainPermissionsState" data-link-title="DomainPermissionsState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domainPermissions.ts#L132">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domainPermissions.ts#L132">
         interface <strong>DomainPermissionsState</strong>
     </a>
 </h3>
@@ -566,7 +718,7 @@ The current revision of the resource policy to be set. This revision is used for
 Input properties used for looking up and filtering DomainPermissions resources.
 
 <h4 class="pdoc-member-header" id="DomainPermissionsState-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domainPermissions.ts#L136">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domainPermissions.ts#L136">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -574,7 +726,7 @@ Input properties used for looking up and filtering DomainPermissions resources.
 The name of the domain on which to set the resource policy.
 
 <h4 class="pdoc-member-header" id="DomainPermissionsState-domainOwner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domainPermissions.ts#L140">property <b>domainOwner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domainPermissions.ts#L140">property <b>domainOwner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainOwner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -582,7 +734,7 @@ The name of the domain on which to set the resource policy.
 The account number of the AWS account that owns the domain.
 
 <h4 class="pdoc-member-header" id="DomainPermissionsState-policyDocument">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domainPermissions.ts#L144">property <b>policyDocument</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domainPermissions.ts#L144">property <b>policyDocument</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyDocument?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -590,7 +742,7 @@ The account number of the AWS account that owns the domain.
 A JSON policy string to be set as the access control resource policy on the provided domain.
 
 <h4 class="pdoc-member-header" id="DomainPermissionsState-policyRevision">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domainPermissions.ts#L148">property <b>policyRevision</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domainPermissions.ts#L148">property <b>policyRevision</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyRevision?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -598,7 +750,7 @@ A JSON policy string to be set as the access control resource policy on the prov
 The current revision of the resource policy to be set. This revision is used for optimistic locking, which prevents others from overwriting your changes to the domain's resource policy.
 
 <h4 class="pdoc-member-header" id="DomainPermissionsState-resourceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domainPermissions.ts#L152">property <b>resourceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domainPermissions.ts#L152">property <b>resourceArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -606,7 +758,7 @@ The current revision of the resource policy to be set. This revision is used for
 The ARN of the resource associated with the resource policy.
 
 <h3 class="pdoc-module-header" id="DomainState" data-link-title="DomainState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domain.ts#L129">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domain.ts#L129">
         interface <strong>DomainState</strong>
     </a>
 </h3>
@@ -616,7 +768,7 @@ The ARN of the resource associated with the resource policy.
 Input properties used for looking up and filtering Domain resources.
 
 <h4 class="pdoc-member-header" id="DomainState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domain.ts#L133">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domain.ts#L133">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -624,7 +776,7 @@ Input properties used for looking up and filtering Domain resources.
 The ARN of Domain.
 
 <h4 class="pdoc-member-header" id="DomainState-assetSizeBytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domain.ts#L137">property <b>assetSizeBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domain.ts#L137">property <b>assetSizeBytes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>assetSizeBytes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -632,7 +784,7 @@ The ARN of Domain.
 The total size of all assets in the domain.
 
 <h4 class="pdoc-member-header" id="DomainState-createdTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domain.ts#L141">property <b>createdTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domain.ts#L141">property <b>createdTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -640,7 +792,7 @@ The total size of all assets in the domain.
 A timestamp that represents the date and time the domain was created in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
 
 <h4 class="pdoc-member-header" id="DomainState-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domain.ts#L145">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domain.ts#L145">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -648,7 +800,7 @@ A timestamp that represents the date and time the domain was created in [RFC3339
 The name of the domain to create. All domain names in an AWS Region that are in the same AWS account must be unique. The domain name is used as the prefix in DNS hostnames. Do not use sensitive information in a domain name because it is publicly discoverable.
 
 <h4 class="pdoc-member-header" id="DomainState-encryptionKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domain.ts#L149">property <b>encryptionKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domain.ts#L149">property <b>encryptionKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encryptionKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -656,7 +808,7 @@ The name of the domain to create. All domain names in an AWS Region that are in 
 The encryption key for the domain. This is used to encrypt content stored in a domain. The KMS Key Amazon Resource Name (ARN).
 
 <h4 class="pdoc-member-header" id="DomainState-owner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domain.ts#L153">property <b>owner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domain.ts#L153">property <b>owner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>owner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -664,15 +816,98 @@ The encryption key for the domain. This is used to encrypt content stored in a d
 The AWS account ID that owns the domain.
 
 <h4 class="pdoc-member-header" id="DomainState-repositoryCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/domain.ts#L157">property <b>repositoryCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/domain.ts#L157">property <b>repositoryCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repositoryCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 
 The number of repositories in the domain.
 
+<h3 class="pdoc-module-header" id="GetAuthorizationTokenArgs" data-link-title="GetAuthorizationTokenArgs">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/getAuthorizationToken.ts#L42">
+        interface <strong>GetAuthorizationTokenArgs</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetAuthorizationTokenArgs</span></code></pre>
+
+A collection of arguments for invoking getAuthorizationToken.
+
+<h4 class="pdoc-member-header" id="GetAuthorizationTokenArgs-domain">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/getAuthorizationToken.ts#L46">property <b>domain</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>domain: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The name of the domain that is in scope for the generated authorization token.
+
+<h4 class="pdoc-member-header" id="GetAuthorizationTokenArgs-domainOwner">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/getAuthorizationToken.ts#L50">property <b>domainOwner</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>domainOwner?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The account number of the AWS account that owns the domain.
+
+<h4 class="pdoc-member-header" id="GetAuthorizationTokenArgs-durationSeconds">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/getAuthorizationToken.ts#L54">property <b>durationSeconds</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>durationSeconds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
+
+The time, in seconds, that the generated authorization token is valid. Valid values are `0` and between `900` and `43200`.
+
+<h3 class="pdoc-module-header" id="GetAuthorizationTokenResult" data-link-title="GetAuthorizationTokenResult">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/getAuthorizationToken.ts#L60">
+        interface <strong>GetAuthorizationTokenResult</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetAuthorizationTokenResult</span></code></pre>
+
+A collection of values returned by getAuthorizationToken.
+
+<h4 class="pdoc-member-header" id="GetAuthorizationTokenResult-authorizationToken">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/getAuthorizationToken.ts#L64">property <b>authorizationToken</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>authorizationToken: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+Temporary authorization token.
+
+<h4 class="pdoc-member-header" id="GetAuthorizationTokenResult-domain">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/getAuthorizationToken.ts#L65">property <b>domain</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>domain: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetAuthorizationTokenResult-domainOwner">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/getAuthorizationToken.ts#L66">property <b>domainOwner</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>domainOwner: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetAuthorizationTokenResult-durationSeconds">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/getAuthorizationToken.ts#L67">property <b>durationSeconds</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>durationSeconds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetAuthorizationTokenResult-expiration">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/getAuthorizationToken.ts#L71">property <b>expiration</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>expiration: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The time in UTC RFC3339 format when the authorization token expires.
+
+<h4 class="pdoc-member-header" id="GetAuthorizationTokenResult-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/getAuthorizationToken.ts#L75">property <b>id</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The provider-assigned unique ID for this managed resource.
+
 <h3 class="pdoc-module-header" id="RepositoryArgs" data-link-title="RepositoryArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/repository.ts#L197">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repository.ts#L198">
         interface <strong>RepositoryArgs</strong>
     </a>
 </h3>
@@ -682,7 +917,7 @@ The number of repositories in the domain.
 The set of arguments for constructing a Repository resource.
 
 <h4 class="pdoc-member-header" id="RepositoryArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/repository.ts#L201">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repository.ts#L202">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -690,7 +925,7 @@ The set of arguments for constructing a Repository resource.
 The description of the repository.
 
 <h4 class="pdoc-member-header" id="RepositoryArgs-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/repository.ts#L205">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repository.ts#L206">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -698,7 +933,7 @@ The description of the repository.
 The domain that contains the created repository.
 
 <h4 class="pdoc-member-header" id="RepositoryArgs-domainOwner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/repository.ts#L209">property <b>domainOwner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repository.ts#L210">property <b>domainOwner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainOwner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -706,7 +941,7 @@ The domain that contains the created repository.
 The account number of the AWS account that owns the domain.
 
 <h4 class="pdoc-member-header" id="RepositoryArgs-repository">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/repository.ts#L213">property <b>repository</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repository.ts#L214">property <b>repository</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repository: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -714,15 +949,123 @@ The account number of the AWS account that owns the domain.
 The name of the repository to create.
 
 <h4 class="pdoc-member-header" id="RepositoryArgs-upstreams">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/repository.ts#L217">property <b>upstreams</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repository.ts#L218">property <b>upstreams</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>upstreams?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RepositoryUpstream'>RepositoryUpstream</a>&gt;[]&gt;;</code></pre>
 
 A list of upstream repositories to associate with the repository. The order of the upstream repositories in the list determines their priority order when AWS CodeArtifact looks for a requested package version. see Upstream
 
+<h3 class="pdoc-module-header" id="RepositoryPermissionsPolicyArgs" data-link-title="RepositoryPermissionsPolicyArgs">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repositoryPermissionsPolicy.ts#L143">
+        interface <strong>RepositoryPermissionsPolicyArgs</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>RepositoryPermissionsPolicyArgs</span></code></pre>
+
+The set of arguments for constructing a RepositoryPermissionsPolicy resource.
+
+<h4 class="pdoc-member-header" id="RepositoryPermissionsPolicyArgs-domain">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repositoryPermissionsPolicy.ts#L147">property <b>domain</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the domain on which to set the resource policy.
+
+<h4 class="pdoc-member-header" id="RepositoryPermissionsPolicyArgs-domainOwner">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repositoryPermissionsPolicy.ts#L151">property <b>domainOwner</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>domainOwner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The account number of the AWS account that owns the domain.
+
+<h4 class="pdoc-member-header" id="RepositoryPermissionsPolicyArgs-policyDocument">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repositoryPermissionsPolicy.ts#L155">property <b>policyDocument</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>policyDocument: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+A JSON policy string to be set as the access control resource policy on the provided domain.
+
+<h4 class="pdoc-member-header" id="RepositoryPermissionsPolicyArgs-policyRevision">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repositoryPermissionsPolicy.ts#L159">property <b>policyRevision</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>policyRevision?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The current revision of the resource policy to be set. This revision is used for optimistic locking, which prevents others from overwriting your changes to the domain's resource policy.
+
+<h4 class="pdoc-member-header" id="RepositoryPermissionsPolicyArgs-repository">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repositoryPermissionsPolicy.ts#L163">property <b>repository</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>repository: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the repository to set the resource policy on.
+
+<h3 class="pdoc-module-header" id="RepositoryPermissionsPolicyState" data-link-title="RepositoryPermissionsPolicyState">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repositoryPermissionsPolicy.ts#L113">
+        interface <strong>RepositoryPermissionsPolicyState</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>RepositoryPermissionsPolicyState</span></code></pre>
+
+Input properties used for looking up and filtering RepositoryPermissionsPolicy resources.
+
+<h4 class="pdoc-member-header" id="RepositoryPermissionsPolicyState-domain">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repositoryPermissionsPolicy.ts#L117">property <b>domain</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>domain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the domain on which to set the resource policy.
+
+<h4 class="pdoc-member-header" id="RepositoryPermissionsPolicyState-domainOwner">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repositoryPermissionsPolicy.ts#L121">property <b>domainOwner</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>domainOwner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The account number of the AWS account that owns the domain.
+
+<h4 class="pdoc-member-header" id="RepositoryPermissionsPolicyState-policyDocument">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repositoryPermissionsPolicy.ts#L125">property <b>policyDocument</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>policyDocument?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+A JSON policy string to be set as the access control resource policy on the provided domain.
+
+<h4 class="pdoc-member-header" id="RepositoryPermissionsPolicyState-policyRevision">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repositoryPermissionsPolicy.ts#L129">property <b>policyRevision</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>policyRevision?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The current revision of the resource policy to be set. This revision is used for optimistic locking, which prevents others from overwriting your changes to the domain's resource policy.
+
+<h4 class="pdoc-member-header" id="RepositoryPermissionsPolicyState-repository">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repositoryPermissionsPolicy.ts#L133">property <b>repository</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>repository?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the repository to set the resource policy on.
+
+<h4 class="pdoc-member-header" id="RepositoryPermissionsPolicyState-resourceArn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repositoryPermissionsPolicy.ts#L137">property <b>resourceArn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>resourceArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ARN of the resource associated with the resource policy.
+
 <h3 class="pdoc-module-header" id="RepositoryState" data-link-title="RepositoryState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/repository.ts#L159">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repository.ts#L160">
         interface <strong>RepositoryState</strong>
     </a>
 </h3>
@@ -732,7 +1075,7 @@ A list of upstream repositories to associate with the repository. The order of t
 Input properties used for looking up and filtering Repository resources.
 
 <h4 class="pdoc-member-header" id="RepositoryState-administratorAccount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/repository.ts#L163">property <b>administratorAccount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repository.ts#L164">property <b>administratorAccount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>administratorAccount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -740,7 +1083,7 @@ Input properties used for looking up and filtering Repository resources.
 The account number of the AWS account that manages the repository.
 
 <h4 class="pdoc-member-header" id="RepositoryState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/repository.ts#L167">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repository.ts#L168">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -748,7 +1091,7 @@ The account number of the AWS account that manages the repository.
 The ARN of the repository.
 
 <h4 class="pdoc-member-header" id="RepositoryState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/repository.ts#L171">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repository.ts#L172">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -756,7 +1099,7 @@ The ARN of the repository.
 The description of the repository.
 
 <h4 class="pdoc-member-header" id="RepositoryState-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/repository.ts#L175">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repository.ts#L176">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -764,7 +1107,7 @@ The description of the repository.
 The domain that contains the created repository.
 
 <h4 class="pdoc-member-header" id="RepositoryState-domainOwner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/repository.ts#L179">property <b>domainOwner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repository.ts#L180">property <b>domainOwner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainOwner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -772,7 +1115,7 @@ The domain that contains the created repository.
 The account number of the AWS account that owns the domain.
 
 <h4 class="pdoc-member-header" id="RepositoryState-externalConnections">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/repository.ts#L183">property <b>externalConnections</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repository.ts#L184">property <b>externalConnections</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>externalConnections?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RepositoryExternalConnection'>RepositoryExternalConnection</a>&gt;[]&gt;;</code></pre>
@@ -780,7 +1123,7 @@ The account number of the AWS account that owns the domain.
 An array of external connections associated with the repository. see External Connections
 
 <h4 class="pdoc-member-header" id="RepositoryState-repository">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/repository.ts#L187">property <b>repository</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repository.ts#L188">property <b>repository</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repository?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -788,7 +1131,7 @@ An array of external connections associated with the repository. see External Co
 The name of the repository to create.
 
 <h4 class="pdoc-member-header" id="RepositoryState-upstreams">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/356019d7fa51942d84b18c9fa5df67dfe857ffe3/sdk/nodejs/codeartifact/repository.ts#L191">property <b>upstreams</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/codeartifact/repository.ts#L192">property <b>upstreams</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>upstreams?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RepositoryUpstream'>RepositoryUpstream</a>&gt;[]&gt;;</code></pre>

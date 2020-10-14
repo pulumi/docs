@@ -2802,7 +2802,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrustacm">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The TLS validation context trust for an AWS Certicate Manager (ACM) certificate.
+    <dd>{{% md %}}The TLS validation context trust for an AWS Certificate Manager (ACM) certificate.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2831,7 +2831,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrustacm">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm</a></span>
     </dt>
-    <dd>{{% md %}}The TLS validation context trust for an AWS Certicate Manager (ACM) certificate.
+    <dd>{{% md %}}The TLS validation context trust for an AWS Certificate Manager (ACM) certificate.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2860,7 +2860,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrustacm">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm</a></span>
     </dt>
-    <dd>{{% md %}}The TLS validation context trust for an AWS Certicate Manager (ACM) certificate.
+    <dd>{{% md %}}The TLS validation context trust for an AWS Certificate Manager (ACM) certificate.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2889,7 +2889,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrustacm">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The TLS validation context trust for an AWS Certicate Manager (ACM) certificate.
+    <dd>{{% md %}}The TLS validation context trust for an AWS Certificate Manager (ACM) certificate.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3604,7 +3604,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrustacm">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The TLS validation context trust for an AWS Certicate Manager (ACM) certificate.
+    <dd>{{% md %}}The TLS validation context trust for an AWS Certificate Manager (ACM) certificate.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3633,7 +3633,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrustacm">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm</a></span>
     </dt>
-    <dd>{{% md %}}The TLS validation context trust for an AWS Certicate Manager (ACM) certificate.
+    <dd>{{% md %}}The TLS validation context trust for an AWS Certificate Manager (ACM) certificate.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3662,7 +3662,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrustacm">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm</a></span>
     </dt>
-    <dd>{{% md %}}The TLS validation context trust for an AWS Certicate Manager (ACM) certificate.
+    <dd>{{% md %}}The TLS validation context trust for an AWS Certificate Manager (ACM) certificate.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3691,7 +3691,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrustacm">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The TLS validation context trust for an AWS Certicate Manager (ACM) certificate.
+    <dd>{{% md %}}The TLS validation context trust for an AWS Certificate Manager (ACM) certificate.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3934,6 +3934,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="timeout_csharp">
+<a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeout">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Timeouts for different protocols.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tls_csharp">
 <a href="#tls_csharp" style="color: inherit; text-decoration: inherit;">Tls</a>
 </span> 
@@ -3970,6 +3981,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualnodespeclistenerhealthcheck">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}The health check information for the listener.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_go">
+<a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeout">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}Timeouts for different protocols.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4014,6 +4036,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="timeout_nodejs">
+<a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeout">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}Timeouts for different protocols.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tls_nodejs">
 <a href="#tls_nodejs" style="color: inherit; text-decoration: inherit;">tls</a>
 </span> 
@@ -4050,6 +4083,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualnodespeclistenerhealthcheck">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The health check information for the listener.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_python">
+<a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeout">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Timeouts for different protocols.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4558,6 +4602,1658 @@ The following state arguments are supported:
 
 
 
+<h4 id="virtualnodespeclistenertimeout">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerTimeout">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerTimeout">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerTimeoutArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerTimeout.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="grpc_csharp">
+<a href="#grpc_csharp" style="color: inherit; text-decoration: inherit;">Grpc</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeoutgrpc">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Grpc<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Timeouts for gRPC listeners.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="http_csharp">
+<a href="#http_csharp" style="color: inherit; text-decoration: inherit;">Http</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttp">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Timeouts for HTTP listeners.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="http2_csharp">
+<a href="#http2_csharp" style="color: inherit; text-decoration: inherit;">Http2</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttp2">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http2Args</a></span>
+    </dt>
+    <dd>{{% md %}}Timeouts for HTTP2 listeners.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tcp_csharp">
+<a href="#tcp_csharp" style="color: inherit; text-decoration: inherit;">Tcp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouttcp">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Tcp<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Timeouts for TCP listeners.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="grpc_go">
+<a href="#grpc_go" style="color: inherit; text-decoration: inherit;">Grpc</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeoutgrpc">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Grpc</a></span>
+    </dt>
+    <dd>{{% md %}}Timeouts for gRPC listeners.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="http_go">
+<a href="#http_go" style="color: inherit; text-decoration: inherit;">Http</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttp">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http</a></span>
+    </dt>
+    <dd>{{% md %}}Timeouts for HTTP listeners.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="http2_go">
+<a href="#http2_go" style="color: inherit; text-decoration: inherit;">Http2</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttp2">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http2</a></span>
+    </dt>
+    <dd>{{% md %}}Timeouts for HTTP2 listeners.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tcp_go">
+<a href="#tcp_go" style="color: inherit; text-decoration: inherit;">Tcp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouttcp">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Tcp</a></span>
+    </dt>
+    <dd>{{% md %}}Timeouts for TCP listeners.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="grpc_nodejs">
+<a href="#grpc_nodejs" style="color: inherit; text-decoration: inherit;">grpc</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeoutgrpc">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Grpc</a></span>
+    </dt>
+    <dd>{{% md %}}Timeouts for gRPC listeners.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="http_nodejs">
+<a href="#http_nodejs" style="color: inherit; text-decoration: inherit;">http</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttp">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http</a></span>
+    </dt>
+    <dd>{{% md %}}Timeouts for HTTP listeners.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="http2_nodejs">
+<a href="#http2_nodejs" style="color: inherit; text-decoration: inherit;">http2</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttp2">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http2</a></span>
+    </dt>
+    <dd>{{% md %}}Timeouts for HTTP2 listeners.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tcp_nodejs">
+<a href="#tcp_nodejs" style="color: inherit; text-decoration: inherit;">tcp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouttcp">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Tcp</a></span>
+    </dt>
+    <dd>{{% md %}}Timeouts for TCP listeners.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="grpc_python">
+<a href="#grpc_python" style="color: inherit; text-decoration: inherit;">grpc</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeoutgrpc">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Grpc<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Timeouts for gRPC listeners.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="http_python">
+<a href="#http_python" style="color: inherit; text-decoration: inherit;">http</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttp">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Timeouts for HTTP listeners.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="http2_python">
+<a href="#http2_python" style="color: inherit; text-decoration: inherit;">http2</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttp2">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http2Args</a></span>
+    </dt>
+    <dd>{{% md %}}Timeouts for HTTP2 listeners.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tcp_python">
+<a href="#tcp_python" style="color: inherit; text-decoration: inherit;">tcp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouttcp">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Tcp<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Timeouts for TCP listeners.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualnodespeclistenertimeoutgrpc">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Grpc</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerTimeoutGrpc">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerTimeoutGrpc">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutGrpcArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutGrpcOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerTimeoutGrpcArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerTimeoutGrpc.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_csharp">
+<a href="#idle_csharp" style="color: inherit; text-decoration: inherit;">Idle</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeoutgrpcidle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Grpc<wbr>Idle<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perrequest_csharp">
+<a href="#perrequest_csharp" style="color: inherit; text-decoration: inherit;">Per<wbr>Request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeoutgrpcperrequest">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Grpc<wbr>Per<wbr>Request<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The per request timeout.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_go">
+<a href="#idle_go" style="color: inherit; text-decoration: inherit;">Idle</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeoutgrpcidle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Grpc<wbr>Idle</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perrequest_go">
+<a href="#perrequest_go" style="color: inherit; text-decoration: inherit;">Per<wbr>Request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeoutgrpcperrequest">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Grpc<wbr>Per<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}The per request timeout.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_nodejs">
+<a href="#idle_nodejs" style="color: inherit; text-decoration: inherit;">idle</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeoutgrpcidle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Grpc<wbr>Idle</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perrequest_nodejs">
+<a href="#perrequest_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeoutgrpcperrequest">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Grpc<wbr>Per<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}The per request timeout.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_python">
+<a href="#idle_python" style="color: inherit; text-decoration: inherit;">idle</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeoutgrpcidle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Grpc<wbr>Idle<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="per_request_python">
+<a href="#per_request_python" style="color: inherit; text-decoration: inherit;">per_<wbr>request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeoutgrpcperrequest">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Grpc<wbr>Per<wbr>Request<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The per request timeout.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualnodespeclistenertimeoutgrpcidle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Grpc<wbr>Idle</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerTimeoutGrpcIdle">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerTimeoutGrpcIdle">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutGrpcIdleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutGrpcIdleOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerTimeoutGrpcIdleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerTimeoutGrpcIdle.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_csharp">
+<a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_go">
+<a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_nodejs">
+<a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_python">
+<a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualnodespeclistenertimeoutgrpcperrequest">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Grpc<wbr>Per<wbr>Request</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerTimeoutGrpcPerRequest">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerTimeoutGrpcPerRequest">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutGrpcPerRequestArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutGrpcPerRequestOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerTimeoutGrpcPerRequestArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerTimeoutGrpcPerRequest.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_csharp">
+<a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_go">
+<a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_nodejs">
+<a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_python">
+<a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualnodespeclistenertimeouthttp">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerTimeoutHttp">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerTimeoutHttp">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutHttpArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutHttpOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerTimeoutHttpArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerTimeoutHttp.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_csharp">
+<a href="#idle_csharp" style="color: inherit; text-decoration: inherit;">Idle</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttpidle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http<wbr>Idle<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perrequest_csharp">
+<a href="#perrequest_csharp" style="color: inherit; text-decoration: inherit;">Per<wbr>Request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttpperrequest">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http<wbr>Per<wbr>Request<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The per request timeout.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_go">
+<a href="#idle_go" style="color: inherit; text-decoration: inherit;">Idle</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttpidle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http<wbr>Idle</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perrequest_go">
+<a href="#perrequest_go" style="color: inherit; text-decoration: inherit;">Per<wbr>Request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttpperrequest">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http<wbr>Per<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}The per request timeout.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_nodejs">
+<a href="#idle_nodejs" style="color: inherit; text-decoration: inherit;">idle</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttpidle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http<wbr>Idle</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perrequest_nodejs">
+<a href="#perrequest_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttpperrequest">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http<wbr>Per<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}The per request timeout.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_python">
+<a href="#idle_python" style="color: inherit; text-decoration: inherit;">idle</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttpidle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http<wbr>Idle<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="per_request_python">
+<a href="#per_request_python" style="color: inherit; text-decoration: inherit;">per_<wbr>request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttpperrequest">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http<wbr>Per<wbr>Request<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The per request timeout.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualnodespeclistenertimeouthttp2">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http2</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerTimeoutHttp2">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerTimeoutHttp2">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutHttp2Args">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutHttp2Output">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerTimeoutHttp2Args.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerTimeoutHttp2.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_csharp">
+<a href="#idle_csharp" style="color: inherit; text-decoration: inherit;">Idle</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttp2idle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http2Idle<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perrequest_csharp">
+<a href="#perrequest_csharp" style="color: inherit; text-decoration: inherit;">Per<wbr>Request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttp2perrequest">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http2Per<wbr>Request<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The per request timeout.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_go">
+<a href="#idle_go" style="color: inherit; text-decoration: inherit;">Idle</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttp2idle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http2Idle</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perrequest_go">
+<a href="#perrequest_go" style="color: inherit; text-decoration: inherit;">Per<wbr>Request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttp2perrequest">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http2Per<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}The per request timeout.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_nodejs">
+<a href="#idle_nodejs" style="color: inherit; text-decoration: inherit;">idle</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttp2idle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http2Idle</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perrequest_nodejs">
+<a href="#perrequest_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttp2perrequest">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http2Per<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}The per request timeout.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_python">
+<a href="#idle_python" style="color: inherit; text-decoration: inherit;">idle</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttp2idle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http2Idle<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="per_request_python">
+<a href="#per_request_python" style="color: inherit; text-decoration: inherit;">per_<wbr>request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttp2perrequest">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http2Per<wbr>Request<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The per request timeout.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualnodespeclistenertimeouthttp2idle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http2Idle</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerTimeoutHttp2Idle">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerTimeoutHttp2Idle">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutHttp2IdleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutHttp2IdleOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerTimeoutHttp2IdleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerTimeoutHttp2Idle.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_csharp">
+<a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_go">
+<a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_nodejs">
+<a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_python">
+<a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualnodespeclistenertimeouthttp2perrequest">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http2Per<wbr>Request</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerTimeoutHttp2PerRequest">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerTimeoutHttp2PerRequest">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutHttp2PerRequestArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutHttp2PerRequestOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerTimeoutHttp2PerRequestArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerTimeoutHttp2PerRequest.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_csharp">
+<a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_go">
+<a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_nodejs">
+<a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_python">
+<a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualnodespeclistenertimeouthttpidle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http<wbr>Idle</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerTimeoutHttpIdle">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerTimeoutHttpIdle">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutHttpIdleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutHttpIdleOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerTimeoutHttpIdleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerTimeoutHttpIdle.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_csharp">
+<a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_go">
+<a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_nodejs">
+<a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_python">
+<a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualnodespeclistenertimeouthttpperrequest">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http<wbr>Per<wbr>Request</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerTimeoutHttpPerRequest">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerTimeoutHttpPerRequest">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutHttpPerRequestArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutHttpPerRequestOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerTimeoutHttpPerRequestArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerTimeoutHttpPerRequest.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_csharp">
+<a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_go">
+<a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_nodejs">
+<a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_python">
+<a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualnodespeclistenertimeouttcp">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Tcp</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerTimeoutTcp">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerTimeoutTcp">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutTcpArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutTcpOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerTimeoutTcpArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerTimeoutTcp.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_csharp">
+<a href="#idle_csharp" style="color: inherit; text-decoration: inherit;">Idle</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouttcpidle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Tcp<wbr>Idle<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_go">
+<a href="#idle_go" style="color: inherit; text-decoration: inherit;">Idle</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouttcpidle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Tcp<wbr>Idle</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_nodejs">
+<a href="#idle_nodejs" style="color: inherit; text-decoration: inherit;">idle</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouttcpidle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Tcp<wbr>Idle</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_python">
+<a href="#idle_python" style="color: inherit; text-decoration: inherit;">idle</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouttcpidle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Tcp<wbr>Idle<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualnodespeclistenertimeouttcpidle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Tcp<wbr>Idle</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerTimeoutTcpIdle">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerTimeoutTcpIdle">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutTcpIdleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutTcpIdleOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerTimeoutTcpIdleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerTimeoutTcpIdle.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_csharp">
+<a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_go">
+<a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_nodejs">
+<a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_python">
+<a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="virtualnodespeclistenertls">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerTls">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerTls">output</a> API doc for this type.
@@ -4718,7 +6414,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnodespeclistenertlscertificateacm">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Acm<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}An AWS Certicate Manager (ACM) certificate.
+    <dd>{{% md %}}An AWS Certificate Manager (ACM) certificate.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4747,7 +6443,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnodespeclistenertlscertificateacm">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Acm</a></span>
     </dt>
-    <dd>{{% md %}}An AWS Certicate Manager (ACM) certificate.
+    <dd>{{% md %}}An AWS Certificate Manager (ACM) certificate.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4776,7 +6472,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnodespeclistenertlscertificateacm">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Acm</a></span>
     </dt>
-    <dd>{{% md %}}An AWS Certicate Manager (ACM) certificate.
+    <dd>{{% md %}}An AWS Certificate Manager (ACM) certificate.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4805,7 +6501,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnodespeclistenertlscertificateacm">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Acm<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}An AWS Certicate Manager (ACM) certificate.
+    <dd>{{% md %}}An AWS Certificate Manager (ACM) certificate.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

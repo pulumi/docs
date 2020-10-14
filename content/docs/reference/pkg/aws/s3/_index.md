@@ -18,6 +18,7 @@ Explore the resources and functions of the s3 module in the AWS package.
     <li><a href="bucketmetric" title="BucketMetric"><span class="symbol resource"></span>BucketMetric</a></li>
     <li><a href="bucketnotification" title="BucketNotification"><span class="symbol resource"></span>BucketNotification</a></li>
     <li><a href="bucketobject" title="BucketObject"><span class="symbol resource"></span>BucketObject</a></li>
+    <li><a href="bucketownershipcontrols" title="BucketOwnershipControls"><span class="symbol resource"></span>BucketOwnershipControls</a></li>
     <li><a href="bucketpolicy" title="BucketPolicy"><span class="symbol resource"></span>BucketPolicy</a></li>
     <li><a href="bucketpublicaccessblock" title="BucketPublicAccessBlock"><span class="symbol resource"></span>BucketPublicAccessBlock</a></li>
     <li><a href="inventory" title="Inventory"><span class="symbol resource"></span>Inventory</a></li>
@@ -39,7 +40,7 @@ Explore the resources and functions of the s3 module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.6.1</dd>
+	<dd>3.7.0</dd>
 </dl>
 
 

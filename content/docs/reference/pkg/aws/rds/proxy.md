@@ -350,7 +350,6 @@ The Proxy resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more VPC subnet IDs to associate with the new proxy.
-describe-db-parameters.html) after initial creation of the group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -468,7 +467,6 @@ describe-db-parameters.html) after initial creation of the group.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}One or more VPC subnet IDs to associate with the new proxy.
-describe-db-parameters.html) after initial creation of the group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -586,7 +584,6 @@ describe-db-parameters.html) after initial creation of the group.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}One or more VPC subnet IDs to associate with the new proxy.
-describe-db-parameters.html) after initial creation of the group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -704,7 +701,6 @@ describe-db-parameters.html) after initial creation of the group.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}One or more VPC subnet IDs to associate with the new proxy.
-describe-db-parameters.html) after initial creation of the group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1204,7 +1200,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more VPC subnet IDs to associate with the new proxy.
-describe-db-parameters.html) after initial creation of the group.
 {{% /md %}}</dd>
 
 </dl>
@@ -1344,7 +1339,6 @@ describe-db-parameters.html) after initial creation of the group.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}One or more VPC subnet IDs to associate with the new proxy.
-describe-db-parameters.html) after initial creation of the group.
 {{% /md %}}</dd>
 
 </dl>
@@ -1484,7 +1478,6 @@ describe-db-parameters.html) after initial creation of the group.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}One or more VPC subnet IDs to associate with the new proxy.
-describe-db-parameters.html) after initial creation of the group.
 {{% /md %}}</dd>
 
 </dl>
@@ -1624,7 +1617,6 @@ describe-db-parameters.html) after initial creation of the group.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}One or more VPC subnet IDs to associate with the new proxy.
-describe-db-parameters.html) after initial creation of the group.
 {{% /md %}}</dd>
 
 </dl>
