@@ -312,7 +312,7 @@ The following output properties are available:
 <a href="#gits_python" style="color: inherit; text-decoration: inherit;">gits</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An Array of IP addresses in CIDR format specifying the Git servers.
 {{% /md %}}</dd>
@@ -323,7 +323,7 @@ The following output properties are available:
 <a href="#hooks_python" style="color: inherit; text-decoration: inherit;">hooks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An Array of IP addresses in CIDR format specifying the addresses that incoming service hooks will originate from.
 {{% /md %}}</dd>
@@ -345,7 +345,7 @@ The following output properties are available:
 <a href="#importers_python" style="color: inherit; text-decoration: inherit;">importers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An Array of IP addresses in CIDR format specifying the A records for GitHub Importer.
 {{% /md %}}</dd>
@@ -356,7 +356,7 @@ The following output properties are available:
 <a href="#pages_python" style="color: inherit; text-decoration: inherit;">pages</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An Array of IP addresses in CIDR format specifying the A records for GitHub Pages.
 {{% /md %}}</dd>

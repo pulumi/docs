@@ -483,7 +483,7 @@ The following output properties are available:
 <a href="#collaborators_python" style="color: inherit; text-decoration: inherit;">collaborators</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcollaboratorscollaborator">List[Get<wbr>Collaborators<wbr>Collaborator]</a></span>
+        <span class="property-type"><a href="#getcollaboratorscollaborator">Sequence[Get<wbr>Collaborators<wbr>Collaborator]</a></span>
     </dt>
     <dd>{{% md %}}An Array of GitHub collaborators.  Each `collaborator` block consists of the fields documented below.
 {{% /md %}}</dd>
@@ -1170,7 +1170,7 @@ The following output properties are available:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The ID of the collaborator.
 {{% /md %}}</dd>

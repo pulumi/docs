@@ -27,11 +27,20 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var gitignore = new Github.RepositoryFile("gitignore", new Github.RepositoryFileArgs
+        var fooRepository = new Github.Repository("fooRepository", new Github.RepositoryArgs
         {
-            Content = "**/*.tfstate",
+            AutoInit = true,
+        });
+        var fooRepositoryFile = new Github.RepositoryFile("fooRepositoryFile", new Github.RepositoryFileArgs
+        {
+            Repository = fooRepository.Name,
+            Branch = "main",
             File = ".gitignore",
-            Repository = "example",
+            Content = "**/*.tfstate",
+            CommitMessage = "Managed by Terraform",
+            CommitAuthor = "Terraform User",
+            CommitEmail = "terraform@example.com",
+            OverwriteOnCreate = true,
         });
     }
 
@@ -51,10 +60,21 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := github.NewRepositoryFile(ctx, "gitignore", &github.RepositoryFileArgs{
-			Content:    pulumi.String("**/*.tfstate"),
-			File:       pulumi.String(".gitignore"),
-			Repository: pulumi.String("example"),
+		fooRepository, err := github.NewRepository(ctx, "fooRepository", &github.RepositoryArgs{
+			AutoInit: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = github.NewRepositoryFile(ctx, "fooRepositoryFile", &github.RepositoryFileArgs{
+			Repository:        fooRepository.Name,
+			Branch:            pulumi.String("main"),
+			File:              pulumi.String(".gitignore"),
+			Content:           pulumi.String("**/*.tfstate"),
+			CommitMessage:     pulumi.String("Managed by Terraform"),
+			CommitAuthor:      pulumi.String("Terraform User"),
+			CommitEmail:       pulumi.String("terraform@example.com"),
+			OverwriteOnCreate: pulumi.Bool(true),
 		})
 		if err != nil {
 			return err
@@ -71,10 +91,16 @@ func main() {
 import pulumi
 import pulumi_github as github
 
-gitignore = github.RepositoryFile("gitignore",
-    content="**/*.tfstate",
+foo_repository = github.Repository("fooRepository", auto_init=True)
+foo_repository_file = github.RepositoryFile("fooRepositoryFile",
+    repository=foo_repository.name,
+    branch="main",
     file=".gitignore",
-    repository="example")
+    content="**/*.tfstate",
+    commit_message="Managed by Terraform",
+    commit_author="Terraform User",
+    commit_email="terraform@example.com",
+    overwrite_on_create=True)
 ```
 
 {{% /example %}}
@@ -85,10 +111,16 @@ gitignore = github.RepositoryFile("gitignore",
 import * as pulumi from "@pulumi/pulumi";
 import * as github from "@pulumi/github";
 
-const gitignore = new github.RepositoryFile("gitignore", {
-    content: "**/*.tfstate",
+const fooRepository = new github.Repository("fooRepository", {autoInit: true});
+const fooRepositoryFile = new github.RepositoryFile("fooRepositoryFile", {
+    repository: fooRepository.name,
+    branch: "main",
     file: ".gitignore",
-    repository: "example",
+    content: "**/*.tfstate",
+    commitMessage: "Managed by Terraform",
+    commitAuthor: "Terraform User",
+    commitEmail: "terraform@example.com",
+    overwriteOnCreate: true,
 });
 ```
 
@@ -106,7 +138,7 @@ const gitignore = new github.RepositoryFile("gitignore", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_github/#pulumi_github.RepositoryFile">RepositoryFile</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">branch</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">commit_author</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">commit_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">commit_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">repository</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_github/#pulumi_github.RepositoryFile">RepositoryFile</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">branch</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">commit_author</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">commit_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">commit_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">overwrite_on_create</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">repository</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -356,6 +388,17 @@ The branch must already exist, it will not be created if it does not already exi
     <dd>{{% md %}}Commit message when adding or updating the managed file.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="overwriteoncreate_csharp">
+<a href="#overwriteoncreate_csharp" style="color: inherit; text-decoration: inherit;">Overwrite<wbr>On<wbr>Create</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable overwriting existing files
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -439,6 +482,17 @@ The branch must already exist, it will not be created if it does not already exi
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Commit message when adding or updating the managed file.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="overwriteoncreate_go">
+<a href="#overwriteoncreate_go" style="color: inherit; text-decoration: inherit;">Overwrite<wbr>On<wbr>Create</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable overwriting existing files
 {{% /md %}}</dd>
 
 </dl>
@@ -526,6 +580,17 @@ The branch must already exist, it will not be created if it does not already exi
     <dd>{{% md %}}Commit message when adding or updating the managed file.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="overwriteoncreate_nodejs">
+<a href="#overwriteoncreate_nodejs" style="color: inherit; text-decoration: inherit;">overwrite<wbr>On<wbr>Create</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Enable overwriting existing files
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -609,6 +674,17 @@ The branch must already exist, it will not be created if it does not already exi
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Commit message when adding or updating the managed file.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="overwrite_on_create_python">
+<a href="#overwrite_on_create_python" style="color: inherit; text-decoration: inherit;">overwrite_<wbr>on_<wbr>create</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable overwriting existing files
 {{% /md %}}</dd>
 
 </dl>
@@ -754,7 +830,7 @@ Get an existing RepositoryFile resource's state with the given name, ID, and opt
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">branch</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">commit_author</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">commit_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">commit_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">repository</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sha</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> RepositoryFile</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">branch</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">commit_author</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">commit_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">commit_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">overwrite_on_create</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">repository</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sha</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> RepositoryFile</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -937,6 +1013,17 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_overwriteoncreate_csharp">
+<a href="#state_overwriteoncreate_csharp" style="color: inherit; text-decoration: inherit;">Overwrite<wbr>On<wbr>Create</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable overwriting existing files
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_repository_csharp">
 <a href="#state_repository_csharp" style="color: inherit; text-decoration: inherit;">Repository</a>
 </span> 
@@ -1029,6 +1116,17 @@ The branch must already exist, it will not be created if it does not already exi
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The path of the file to manage.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_overwriteoncreate_go">
+<a href="#state_overwriteoncreate_go" style="color: inherit; text-decoration: inherit;">Overwrite<wbr>On<wbr>Create</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable overwriting existing files
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1129,6 +1227,17 @@ The branch must already exist, it will not be created if it does not already exi
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_overwriteoncreate_nodejs">
+<a href="#state_overwriteoncreate_nodejs" style="color: inherit; text-decoration: inherit;">overwrite<wbr>On<wbr>Create</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Enable overwriting existing files
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_repository_nodejs">
 <a href="#state_repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
 </span> 
@@ -1221,6 +1330,17 @@ The branch must already exist, it will not be created if it does not already exi
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The path of the file to manage.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_overwrite_on_create_python">
+<a href="#state_overwrite_on_create_python" style="color: inherit; text-decoration: inherit;">overwrite_<wbr>on_<wbr>create</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable overwriting existing files
 {{% /md %}}</dd>
 
     <dt class="property-optional"

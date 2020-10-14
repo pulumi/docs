@@ -213,7 +213,7 @@ The following output properties are available:
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getorganizationteamsyncgroupsgroup">List[Get<wbr>Organization<wbr>Team<wbr>Sync<wbr>Groups<wbr>Group]</a></span>
+        <span class="property-type"><a href="#getorganizationteamsyncgroupsgroup">Sequence[Get<wbr>Organization<wbr>Team<wbr>Sync<wbr>Groups<wbr>Group]</a></span>
     </dt>
     <dd>{{% md %}}An Array of GitHub Identity Provider Groups.  Each `group` block consists of the fields documented below.
 {{% /md %}}</dd>

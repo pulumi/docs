@@ -16,6 +16,46 @@ You must have team synchronization enabled for organizations owned by enterprise
 To learn more about team synchronization between IdPs and Github, please refer to:
 https://help.github.com/en/github/setting-up-and-managing-organizations-and-teams/synchronizing-teams-between-your-identity-provider-and-github
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as github from "@pulumi/github";
+
+const exampleGroups = github.getOrganizationTeamSyncGroups({});
+const exampleGroupMapping = new github.TeamSyncGroupMapping("exampleGroupMapping", {
+    teamSlug: "example",
+    dynamic: [{
+        forEach: exampleGroups.then(exampleGroups => exampleGroups.groups.filter(g => g.groupName == "some_team_group").map(g => g)),
+        content: [{
+            groupId: group.value.group_id,
+            groupName: group.value.group_name,
+            groupDescription: group.value.group_description,
+        }],
+    }],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a TeamSyncGroupMapping Resource {#create}
@@ -27,7 +67,7 @@ https://help.github.com/en/github/setting-up-and-managing-organizations-and-team
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_github/#pulumi_github.TeamSyncGroupMapping">TeamSyncGroupMapping</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">groups</span><span class="p">:</span> <span class="nx">Optional[List[TeamSyncGroupMappingGroupArgs]]</span> = None<span class="p">, </span><span class="nx">team_slug</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_github/#pulumi_github.TeamSyncGroupMapping">TeamSyncGroupMapping</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[TeamSyncGroupMappingGroupArgs]]</span> = None<span class="p">, </span><span class="nx">team_slug</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -306,7 +346,7 @@ ___
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#teamsyncgroupmappinggroup">List[Team<wbr>Sync<wbr>Group<wbr>Mapping<wbr>Group<wbr>Args]</a></span>
+        <span class="property-type"><a href="#teamsyncgroupmappinggroup">Sequence[Team<wbr>Sync<wbr>Group<wbr>Mapping<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An Array of GitHub Identity Provider Groups (or empty []).  Each `group` block consists of the fields documented below.
 ___
@@ -451,7 +491,7 @@ Get an existing TeamSyncGroupMapping resource's state with the given name, ID, a
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">groups</span><span class="p">:</span> <span class="nx">Optional[List[TeamSyncGroupMappingGroupArgs]]</span> = None<span class="p">, </span><span class="nx">team_slug</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> TeamSyncGroupMapping</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[TeamSyncGroupMappingGroupArgs]]</span> = None<span class="p">, </span><span class="nx">team_slug</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> TeamSyncGroupMapping</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -701,7 +741,7 @@ ___
 <a href="#state_groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#teamsyncgroupmappinggroup">List[Team<wbr>Sync<wbr>Group<wbr>Mapping<wbr>Group<wbr>Args]</a></span>
+        <span class="property-type"><a href="#teamsyncgroupmappinggroup">Sequence[Team<wbr>Sync<wbr>Group<wbr>Mapping<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An Array of GitHub Identity Provider Groups (or empty []).  Each `group` block consists of the fields documented below.
 ___

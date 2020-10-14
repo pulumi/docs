@@ -3,7 +3,7 @@ title: "Module types/input"
 title_tag: "Module types/input | Package @pulumi/github | Node.js SDK"
 linktitle: "input"
 meta_desc: "Explore members of the input module in the @pulumi/github package."
-git_sha: "fc398a6cc25469b02eb33215a870f31118096cde"
+git_sha: "a732b7a53920a44c909cc478804dc4d86040656f"
 block_external_search_index: true
 ---
 
@@ -19,9 +19,8 @@ block_external_search_index: true
 
 <h3>APIs</h3>
 <ul class="api">
-    <li><a href="#BranchProtectionRequiredPullRequestReviews"><span class="symbol api"></span>BranchProtectionRequiredPullRequestReviews</a></li>
-    <li><a href="#BranchProtectionRequiredStatusChecks"><span class="symbol api"></span>BranchProtectionRequiredStatusChecks</a></li>
-    <li><a href="#BranchProtectionRestrictions"><span class="symbol api"></span>BranchProtectionRestrictions</a></li>
+    <li><a href="#BranchProtectionRequiredPullRequestReview"><span class="symbol api"></span>BranchProtectionRequiredPullRequestReview</a></li>
+    <li><a href="#BranchProtectionRequiredStatusCheck"><span class="symbol api"></span>BranchProtectionRequiredStatusCheck</a></li>
     <li><a href="#OrganizationWebhookConfiguration"><span class="symbol api"></span>OrganizationWebhookConfiguration</a></li>
     <li><a href="#RepositoryTemplate"><span class="symbol api"></span>RepositoryTemplate</a></li>
     <li><a href="#RepositoryWebhookConfiguration"><span class="symbol api"></span>RepositoryWebhookConfiguration</a></li>
@@ -32,119 +31,74 @@ block_external_search_index: true
 
 
 <h2 id="apis">APIs</h2>
-<h3 class="pdoc-module-header" id="BranchProtectionRequiredPullRequestReviews" data-link-title="BranchProtectionRequiredPullRequestReviews">
-    <a href="https://github.com/pulumi/pulumi-github/blob/fc398a6cc25469b02eb33215a870f31118096cde/sdk/nodejs/types/input.ts#L8">
-        interface <strong>BranchProtectionRequiredPullRequestReviews</strong>
+<h3 class="pdoc-module-header" id="BranchProtectionRequiredPullRequestReview" data-link-title="BranchProtectionRequiredPullRequestReview">
+    <a href="https://github.com/pulumi/pulumi-github/blob/a732b7a53920a44c909cc478804dc4d86040656f/sdk/nodejs/types/input.ts#L8">
+        interface <strong>BranchProtectionRequiredPullRequestReview</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BranchProtectionRequiredPullRequestReviews</span></code></pre>
-<h4 class="pdoc-member-header" id="BranchProtectionRequiredPullRequestReviews-dismissStaleReviews">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/fc398a6cc25469b02eb33215a870f31118096cde/sdk/nodejs/types/input.ts#L9">property <b>dismissStaleReviews</b></a>
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BranchProtectionRequiredPullRequestReview</span></code></pre>
+<h4 class="pdoc-member-header" id="BranchProtectionRequiredPullRequestReview-dismissStaleReviews">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/a732b7a53920a44c909cc478804dc4d86040656f/sdk/nodejs/types/input.ts#L9">property <b>dismissStaleReviews</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dismissStaleReviews?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="BranchProtectionRequiredPullRequestReviews-dismissalTeams">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/fc398a6cc25469b02eb33215a870f31118096cde/sdk/nodejs/types/input.ts#L10">property <b>dismissalTeams</b></a>
+<h4 class="pdoc-member-header" id="BranchProtectionRequiredPullRequestReview-dismissalRestrictions">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/a732b7a53920a44c909cc478804dc4d86040656f/sdk/nodejs/types/input.ts#L10">property <b>dismissalRestrictions</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>dismissalTeams?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="BranchProtectionRequiredPullRequestReviews-dismissalUsers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/fc398a6cc25469b02eb33215a870f31118096cde/sdk/nodejs/types/input.ts#L11">property <b>dismissalUsers</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>dismissalUsers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="BranchProtectionRequiredPullRequestReviews-includeAdmins">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/fc398a6cc25469b02eb33215a870f31118096cde/sdk/nodejs/types/input.ts#L15">property <b>includeAdmins</b></a>
-</h4>
-
-<div class="note note-deprecated">
-<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
-Use enforce_admins instead
-</div>
-<pre class="highlight"><code><span class='kd'></span>includeAdmins?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="BranchProtectionRequiredPullRequestReviews-requireCodeOwnerReviews">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/fc398a6cc25469b02eb33215a870f31118096cde/sdk/nodejs/types/input.ts#L16">property <b>requireCodeOwnerReviews</b></a>
+<pre class="highlight"><code><span class='kd'></span>dismissalRestrictions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="BranchProtectionRequiredPullRequestReview-requireCodeOwnerReviews">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/a732b7a53920a44c909cc478804dc4d86040656f/sdk/nodejs/types/input.ts#L11">property <b>requireCodeOwnerReviews</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requireCodeOwnerReviews?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="BranchProtectionRequiredPullRequestReviews-requiredApprovingReviewCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/fc398a6cc25469b02eb33215a870f31118096cde/sdk/nodejs/types/input.ts#L17">property <b>requiredApprovingReviewCount</b></a>
+<h4 class="pdoc-member-header" id="BranchProtectionRequiredPullRequestReview-requiredApprovingReviewCount">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/a732b7a53920a44c909cc478804dc4d86040656f/sdk/nodejs/types/input.ts#L12">property <b>requiredApprovingReviewCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requiredApprovingReviewCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
-<h3 class="pdoc-module-header" id="BranchProtectionRequiredStatusChecks" data-link-title="BranchProtectionRequiredStatusChecks">
-    <a href="https://github.com/pulumi/pulumi-github/blob/fc398a6cc25469b02eb33215a870f31118096cde/sdk/nodejs/types/input.ts#L20">
-        interface <strong>BranchProtectionRequiredStatusChecks</strong>
+<h3 class="pdoc-module-header" id="BranchProtectionRequiredStatusCheck" data-link-title="BranchProtectionRequiredStatusCheck">
+    <a href="https://github.com/pulumi/pulumi-github/blob/a732b7a53920a44c909cc478804dc4d86040656f/sdk/nodejs/types/input.ts#L15">
+        interface <strong>BranchProtectionRequiredStatusCheck</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BranchProtectionRequiredStatusChecks</span></code></pre>
-<h4 class="pdoc-member-header" id="BranchProtectionRequiredStatusChecks-contexts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/fc398a6cc25469b02eb33215a870f31118096cde/sdk/nodejs/types/input.ts#L21">property <b>contexts</b></a>
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BranchProtectionRequiredStatusCheck</span></code></pre>
+<h4 class="pdoc-member-header" id="BranchProtectionRequiredStatusCheck-contexts">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/a732b7a53920a44c909cc478804dc4d86040656f/sdk/nodejs/types/input.ts#L16">property <b>contexts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contexts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="BranchProtectionRequiredStatusChecks-includeAdmins">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/fc398a6cc25469b02eb33215a870f31118096cde/sdk/nodejs/types/input.ts#L25">property <b>includeAdmins</b></a>
-</h4>
-
-<div class="note note-deprecated">
-<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
-Use enforce_admins instead
-</div>
-<pre class="highlight"><code><span class='kd'></span>includeAdmins?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="BranchProtectionRequiredStatusChecks-strict">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/fc398a6cc25469b02eb33215a870f31118096cde/sdk/nodejs/types/input.ts#L26">property <b>strict</b></a>
+<h4 class="pdoc-member-header" id="BranchProtectionRequiredStatusCheck-strict">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/a732b7a53920a44c909cc478804dc4d86040656f/sdk/nodejs/types/input.ts#L17">property <b>strict</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>strict?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
-<h3 class="pdoc-module-header" id="BranchProtectionRestrictions" data-link-title="BranchProtectionRestrictions">
-    <a href="https://github.com/pulumi/pulumi-github/blob/fc398a6cc25469b02eb33215a870f31118096cde/sdk/nodejs/types/input.ts#L29">
-        interface <strong>BranchProtectionRestrictions</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BranchProtectionRestrictions</span></code></pre>
-<h4 class="pdoc-member-header" id="BranchProtectionRestrictions-apps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/fc398a6cc25469b02eb33215a870f31118096cde/sdk/nodejs/types/input.ts#L30">property <b>apps</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>apps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="BranchProtectionRestrictions-teams">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/fc398a6cc25469b02eb33215a870f31118096cde/sdk/nodejs/types/input.ts#L31">property <b>teams</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>teams?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="BranchProtectionRestrictions-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/fc398a6cc25469b02eb33215a870f31118096cde/sdk/nodejs/types/input.ts#L32">property <b>users</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>users?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="OrganizationWebhookConfiguration" data-link-title="OrganizationWebhookConfiguration">
-    <a href="https://github.com/pulumi/pulumi-github/blob/fc398a6cc25469b02eb33215a870f31118096cde/sdk/nodejs/types/input.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-github/blob/a732b7a53920a44c909cc478804dc4d86040656f/sdk/nodejs/types/input.ts#L20">
         interface <strong>OrganizationWebhookConfiguration</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OrganizationWebhookConfiguration</span></code></pre>
 <h4 class="pdoc-member-header" id="OrganizationWebhookConfiguration-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/fc398a6cc25469b02eb33215a870f31118096cde/sdk/nodejs/types/input.ts#L36">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/a732b7a53920a44c909cc478804dc4d86040656f/sdk/nodejs/types/input.ts#L21">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OrganizationWebhookConfiguration-insecureSsl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/fc398a6cc25469b02eb33215a870f31118096cde/sdk/nodejs/types/input.ts#L37">property <b>insecureSsl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/a732b7a53920a44c909cc478804dc4d86040656f/sdk/nodejs/types/input.ts#L22">property <b>insecureSsl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>insecureSsl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OrganizationWebhookConfiguration-secret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/fc398a6cc25469b02eb33215a870f31118096cde/sdk/nodejs/types/input.ts#L38">property <b>secret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/a732b7a53920a44c909cc478804dc4d86040656f/sdk/nodejs/types/input.ts#L23">property <b>secret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OrganizationWebhookConfiguration-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/fc398a6cc25469b02eb33215a870f31118096cde/sdk/nodejs/types/input.ts#L42">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/a732b7a53920a44c909cc478804dc4d86040656f/sdk/nodejs/types/input.ts#L27">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -152,46 +106,46 @@ Use enforce_admins instead
 URL of the webhook
 
 <h3 class="pdoc-module-header" id="RepositoryTemplate" data-link-title="RepositoryTemplate">
-    <a href="https://github.com/pulumi/pulumi-github/blob/fc398a6cc25469b02eb33215a870f31118096cde/sdk/nodejs/types/input.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-github/blob/a732b7a53920a44c909cc478804dc4d86040656f/sdk/nodejs/types/input.ts#L30">
         interface <strong>RepositoryTemplate</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>RepositoryTemplate</span></code></pre>
 <h4 class="pdoc-member-header" id="RepositoryTemplate-owner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/fc398a6cc25469b02eb33215a870f31118096cde/sdk/nodejs/types/input.ts#L46">property <b>owner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/a732b7a53920a44c909cc478804dc4d86040656f/sdk/nodejs/types/input.ts#L31">property <b>owner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>owner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RepositoryTemplate-repository">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/fc398a6cc25469b02eb33215a870f31118096cde/sdk/nodejs/types/input.ts#L47">property <b>repository</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/a732b7a53920a44c909cc478804dc4d86040656f/sdk/nodejs/types/input.ts#L32">property <b>repository</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repository: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="RepositoryWebhookConfiguration" data-link-title="RepositoryWebhookConfiguration">
-    <a href="https://github.com/pulumi/pulumi-github/blob/fc398a6cc25469b02eb33215a870f31118096cde/sdk/nodejs/types/input.ts#L50">
+    <a href="https://github.com/pulumi/pulumi-github/blob/a732b7a53920a44c909cc478804dc4d86040656f/sdk/nodejs/types/input.ts#L35">
         interface <strong>RepositoryWebhookConfiguration</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>RepositoryWebhookConfiguration</span></code></pre>
 <h4 class="pdoc-member-header" id="RepositoryWebhookConfiguration-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/fc398a6cc25469b02eb33215a870f31118096cde/sdk/nodejs/types/input.ts#L51">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/a732b7a53920a44c909cc478804dc4d86040656f/sdk/nodejs/types/input.ts#L36">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RepositoryWebhookConfiguration-insecureSsl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/fc398a6cc25469b02eb33215a870f31118096cde/sdk/nodejs/types/input.ts#L52">property <b>insecureSsl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/a732b7a53920a44c909cc478804dc4d86040656f/sdk/nodejs/types/input.ts#L37">property <b>insecureSsl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>insecureSsl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RepositoryWebhookConfiguration-secret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/fc398a6cc25469b02eb33215a870f31118096cde/sdk/nodejs/types/input.ts#L53">property <b>secret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/a732b7a53920a44c909cc478804dc4d86040656f/sdk/nodejs/types/input.ts#L38">property <b>secret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RepositoryWebhookConfiguration-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/fc398a6cc25469b02eb33215a870f31118096cde/sdk/nodejs/types/input.ts#L57">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/a732b7a53920a44c909cc478804dc4d86040656f/sdk/nodejs/types/input.ts#L42">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -199,14 +153,14 @@ URL of the webhook
 URL of the webhook
 
 <h3 class="pdoc-module-header" id="TeamSyncGroupMappingGroup" data-link-title="TeamSyncGroupMappingGroup">
-    <a href="https://github.com/pulumi/pulumi-github/blob/fc398a6cc25469b02eb33215a870f31118096cde/sdk/nodejs/types/input.ts#L60">
+    <a href="https://github.com/pulumi/pulumi-github/blob/a732b7a53920a44c909cc478804dc4d86040656f/sdk/nodejs/types/input.ts#L45">
         interface <strong>TeamSyncGroupMappingGroup</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>TeamSyncGroupMappingGroup</span></code></pre>
 <h4 class="pdoc-member-header" id="TeamSyncGroupMappingGroup-groupDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/fc398a6cc25469b02eb33215a870f31118096cde/sdk/nodejs/types/input.ts#L64">property <b>groupDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/a732b7a53920a44c909cc478804dc4d86040656f/sdk/nodejs/types/input.ts#L49">property <b>groupDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupDescription: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -214,7 +168,7 @@ URL of the webhook
 The description of the IdP group.
 
 <h4 class="pdoc-member-header" id="TeamSyncGroupMappingGroup-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/fc398a6cc25469b02eb33215a870f31118096cde/sdk/nodejs/types/input.ts#L68">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/a732b7a53920a44c909cc478804dc4d86040656f/sdk/nodejs/types/input.ts#L53">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -222,7 +176,7 @@ The description of the IdP group.
 The ID of the IdP group.
 
 <h4 class="pdoc-member-header" id="TeamSyncGroupMappingGroup-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/fc398a6cc25469b02eb33215a870f31118096cde/sdk/nodejs/types/input.ts#L72">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-github/blob/a732b7a53920a44c909cc478804dc4d86040656f/sdk/nodejs/types/input.ts#L57">property <b>groupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
