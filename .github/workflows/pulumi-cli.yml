@@ -74,8 +74,8 @@ jobs:
       - name: run typedoc
         run: PKGS=pulumi NOBUILD=true ./scripts/run_typedoc.sh
         working-directory: docs
-      - name: generate resource docs
-        run: ./scripts/gen_resource_docs.sh "pulumi" true "${{ github.event.client_payload.ref }}"
+      - name: generate python docs
+        run: ./scripts/generate_python_docs.sh "pulumi"
         working-directory: docs
       - name: generate markdown
         run: |
