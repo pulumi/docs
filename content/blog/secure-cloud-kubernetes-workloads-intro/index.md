@@ -59,7 +59,7 @@ It's rare for a malicious user to immediately find the keys to the kingdom when 
 A well-secured environment attempts to limit the capability for an attacker to [pivot](https://en.wikipedia.org/wiki/Exploit_(computer_security)#Pivoting) by adding more layers for them to get through and restricting the amount of time they have to get through those layers.
 
 If you decide to use static credentials, the most important thing to consider is that they can be easily stolen and copied by an attacker. Credentials often live indefinitely and will continue to work until manually revoked.
-In addition, hard coding credentials into a Kubernetes secret  presents multiple layers that an attacker could steal them from:
+In addition, hard coding credentials into a Kubernetes secret presents multiple layers that an attacker could steal them from:
 
 - the Kubernetes API (by retrieving the secret)
 - inside the running pod (by grabbing the environment variables, where they're in plaintext).
