@@ -11,6 +11,8 @@ meta_desc: "Explore the InfraAlertCondition resource of the New Relic package, i
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Use this resource to create and manage Infrastructure alert conditions in New Relic.
+
+> **NOTE:** The newrelic.NrqlAlertCondition resource is preferred for configuring alerts conditions. In most cases feature parity can be achieved with a NRQL query. Other condition types may be deprecated in the future and receive fewer product updates.
 ## Thresholds
 
 The `critical` and `warning` threshold mapping supports the following arguments:
@@ -43,7 +45,7 @@ class MyStack : Stack
             Event = "StorageSample",
             Select = "diskUsedPercent",
             Comparison = "above",
-            Where = "(`hostname` LIKE '%frontend%')",
+            Where = "(hostname LIKE '%frontend%')",
             Critical = new NewRelic.Inputs.InfraAlertConditionCriticalArgs
             {
                 Duration = 25,
@@ -64,7 +66,7 @@ class MyStack : Stack
             Event = "DatastoreSample",
             Select = "provider.databaseConnections.Average",
             Comparison = "above",
-            Where = "(`hostname` LIKE '%db%')",
+            Where = "(hostname LIKE '%db%')",
             IntegrationProvider = "RdsDbInstance",
             Critical = new NewRelic.Inputs.InfraAlertConditionCriticalArgs
             {
@@ -78,7 +80,8 @@ class MyStack : Stack
             PolicyId = foo.Id,
             Type = "infra_process_running",
             Comparison = "equal",
-            ProcessWhere = "`commandName` = '/usr/bin/ruby'",
+            Where = "hostname = 'web01'",
+            ProcessWhere = "commandName = '/usr/bin/ruby'",
             Critical = new NewRelic.Inputs.InfraAlertConditionCriticalArgs
             {
                 Duration = 5,
@@ -89,7 +92,7 @@ class MyStack : Stack
         {
             PolicyId = foo.Id,
             Type = "infra_host_not_reporting",
-            Where = "(`hostname` LIKE '%frontend%')",
+            Where = "(hostname LIKE '%frontend%')",
             Critical = new NewRelic.Inputs.InfraAlertConditionCriticalArgs
             {
                 Duration = 5,
@@ -125,7 +128,7 @@ func main() {
 			Event:      pulumi.String("StorageSample"),
 			Select:     pulumi.String("diskUsedPercent"),
 			Comparison: pulumi.String("above"),
-			Where:      pulumi.String(fmt.Sprintf("%v%v%v%v%v", "(`hostname` LIKE '", "%", "frontend", "%", "')")),
+			Where:      pulumi.String(fmt.Sprintf("%v%v%v%v%v", "(hostname LIKE '", "%", "frontend", "%", "')")),
 			Critical: &newrelic.InfraAlertConditionCriticalArgs{
 				Duration:     pulumi.Int(25),
 				Value:        pulumi.Float64(90),
@@ -146,7 +149,7 @@ func main() {
 			Event:               pulumi.String("DatastoreSample"),
 			Select:              pulumi.String("provider.databaseConnections.Average"),
 			Comparison:          pulumi.String("above"),
-			Where:               pulumi.String(fmt.Sprintf("%v%v%v%v%v", "(`hostname` LIKE '", "%", "db", "%", "')")),
+			Where:               pulumi.String(fmt.Sprintf("%v%v%v%v%v", "(hostname LIKE '", "%", "db", "%", "')")),
 			IntegrationProvider: pulumi.String("RdsDbInstance"),
 			Critical: &newrelic.InfraAlertConditionCriticalArgs{
 				Duration:     pulumi.Int(25),
@@ -161,7 +164,8 @@ func main() {
 			PolicyId:     foo.ID(),
 			Type:         pulumi.String("infra_process_running"),
 			Comparison:   pulumi.String("equal"),
-			ProcessWhere: pulumi.String("`commandName` = '/usr/bin/ruby'"),
+			Where:        pulumi.String("hostname = 'web01'"),
+			ProcessWhere: pulumi.String("commandName = '/usr/bin/ruby'"),
 			Critical: &newrelic.InfraAlertConditionCriticalArgs{
 				Duration: pulumi.Int(5),
 				Value:    pulumi.Float64(0),
@@ -173,7 +177,7 @@ func main() {
 		_, err = newrelic.NewInfraAlertCondition(ctx, "hostNotReporting", &newrelic.InfraAlertConditionArgs{
 			PolicyId: foo.ID(),
 			Type:     pulumi.String("infra_host_not_reporting"),
-			Where:    pulumi.String(fmt.Sprintf("%v%v%v%v%v", "(`hostname` LIKE '", "%", "frontend", "%", "')")),
+			Where:    pulumi.String(fmt.Sprintf("%v%v%v%v%v", "(hostname LIKE '", "%", "frontend", "%", "')")),
 			Critical: &newrelic.InfraAlertConditionCriticalArgs{
 				Duration: pulumi.Int(5),
 			},
@@ -200,7 +204,7 @@ high_disk_usage = newrelic.InfraAlertCondition("highDiskUsage",
     event="StorageSample",
     select="diskUsedPercent",
     comparison="above",
-    where="(`hostname` LIKE '%frontend%')",
+    where="(hostname LIKE '%frontend%')",
     critical=newrelic.InfraAlertConditionCriticalArgs(
         duration=25,
         value=90,
@@ -217,7 +221,7 @@ high_db_conn_count = newrelic.InfraAlertCondition("highDbConnCount",
     event="DatastoreSample",
     select="provider.databaseConnections.Average",
     comparison="above",
-    where="(`hostname` LIKE '%db%')",
+    where="(hostname LIKE '%db%')",
     integration_provider="RdsDbInstance",
     critical=newrelic.InfraAlertConditionCriticalArgs(
         duration=25,
@@ -228,7 +232,8 @@ process_not_running = newrelic.InfraAlertCondition("processNotRunning",
     policy_id=foo.id,
     type="infra_process_running",
     comparison="equal",
-    process_where="`commandName` = '/usr/bin/ruby'",
+    where="hostname = 'web01'",
+    process_where="commandName = '/usr/bin/ruby'",
     critical=newrelic.InfraAlertConditionCriticalArgs(
         duration=5,
         value=0,
@@ -236,7 +241,7 @@ process_not_running = newrelic.InfraAlertCondition("processNotRunning",
 host_not_reporting = newrelic.InfraAlertCondition("hostNotReporting",
     policy_id=foo.id,
     type="infra_host_not_reporting",
-    where="(`hostname` LIKE '%frontend%')",
+    where="(hostname LIKE '%frontend%')",
     critical=newrelic.InfraAlertConditionCriticalArgs(
         duration=5,
     ))
@@ -257,7 +262,7 @@ const highDiskUsage = new newrelic.InfraAlertCondition("highDiskUsage", {
     event: "StorageSample",
     select: "diskUsedPercent",
     comparison: "above",
-    where: `(`hostname` LIKE '%frontend%')`,
+    where: `(hostname LIKE '%frontend%')`,
     critical: {
         duration: 25,
         value: 90,
@@ -275,7 +280,7 @@ const highDbConnCount = new newrelic.InfraAlertCondition("highDbConnCount", {
     event: "DatastoreSample",
     select: "provider.databaseConnections.Average",
     comparison: "above",
-    where: `(`hostname` LIKE '%db%')`,
+    where: `(hostname LIKE '%db%')`,
     integrationProvider: "RdsDbInstance",
     critical: {
         duration: 25,
@@ -287,7 +292,8 @@ const processNotRunning = new newrelic.InfraAlertCondition("processNotRunning", 
     policyId: foo.id,
     type: "infra_process_running",
     comparison: "equal",
-    processWhere: "`commandName` = '/usr/bin/ruby'",
+    where: "hostname = 'web01'",
+    processWhere: "commandName = '/usr/bin/ruby'",
     critical: {
         duration: 5,
         value: 0,
@@ -296,7 +302,7 @@ const processNotRunning = new newrelic.InfraAlertCondition("processNotRunning", 
 const hostNotReporting = new newrelic.InfraAlertCondition("hostNotReporting", {
     policyId: foo.id,
     type: "infra_host_not_reporting",
-    where: `(`hostname` LIKE '%frontend%')`,
+    where: `(hostname LIKE '%frontend%')`,
     critical: {
         duration: 5,
     },
@@ -596,7 +602,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Any filters applied to processes; for example: `commandName = 'java'`.  Supported by the `infra_process_running` condition type.
+    <dd>{{% md %}}Any filters applied to processes; for example: `commandName = 'java'`.  Required by the `infra_process_running` condition type.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -768,7 +774,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Any filters applied to processes; for example: `commandName = 'java'`.  Supported by the `infra_process_running` condition type.
+    <dd>{{% md %}}Any filters applied to processes; for example: `commandName = 'java'`.  Required by the `infra_process_running` condition type.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -940,7 +946,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Any filters applied to processes; for example: `commandName = 'java'`.  Supported by the `infra_process_running` condition type.
+    <dd>{{% md %}}Any filters applied to processes; for example: `commandName = 'java'`.  Required by the `infra_process_running` condition type.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1112,7 +1118,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Any filters applied to processes; for example: `commandName = 'java'`.  Supported by the `infra_process_running` condition type.
+    <dd>{{% md %}}Any filters applied to processes; for example: `commandName = 'java'`.  Required by the `infra_process_running` condition type.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1578,7 +1584,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Any filters applied to processes; for example: `commandName = 'java'`.  Supported by the `infra_process_running` condition type.
+    <dd>{{% md %}}Any filters applied to processes; for example: `commandName = 'java'`.  Required by the `infra_process_running` condition type.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1772,7 +1778,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Any filters applied to processes; for example: `commandName = 'java'`.  Supported by the `infra_process_running` condition type.
+    <dd>{{% md %}}Any filters applied to processes; for example: `commandName = 'java'`.  Required by the `infra_process_running` condition type.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1966,7 +1972,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Any filters applied to processes; for example: `commandName = 'java'`.  Supported by the `infra_process_running` condition type.
+    <dd>{{% md %}}Any filters applied to processes; for example: `commandName = 'java'`.  Required by the `infra_process_running` condition type.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2160,7 +2166,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Any filters applied to processes; for example: `commandName = 'java'`.  Supported by the `infra_process_running` condition type.
+    <dd>{{% md %}}Any filters applied to processes; for example: `commandName = 'java'`.  Required by the `infra_process_running` condition type.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

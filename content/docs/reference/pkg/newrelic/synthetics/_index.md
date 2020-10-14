@@ -12,7 +12,6 @@ Explore the resources and functions of the synthetics module in the New Relic pa
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="alertcondition" title="AlertCondition"><span class="symbol resource"></span>AlertCondition</a></li>
-    <li><a href="label" title="Label"><span class="symbol resource"></span>Label</a></li>
     <li><a href="monitor" title="Monitor"><span class="symbol resource"></span>Monitor</a></li>
     <li><a href="monitorscript" title="MonitorScript"><span class="symbol resource"></span>MonitorScript</a></li>
     <li><a href="multilocationalertcondition" title="MultiLocationAlertCondition"><span class="symbol resource"></span>MultiLocationAlertCondition</a></li>
@@ -35,7 +34,7 @@ Explore the resources and functions of the synthetics module in the New Relic pa
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`newrelic` Terraform Provider](https://github.com/newrelic/terraform-provider-newrelic).</dd>
 	<dt>Version</dt>
-	<dd>3.5.0</dd>
+	<dd>3.6.0</dd>
 </dl>
 
 
