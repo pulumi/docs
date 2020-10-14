@@ -48,6 +48,7 @@ class MyStack : Stack
         });
         var exampleConfiguration = new Azure.MariaDB.Configuration("exampleConfiguration", new Azure.MariaDB.ConfigurationArgs
         {
+            Name = "interactive_timeout",
             ResourceGroupName = exampleResourceGroup.Name,
             ServerName = exampleServer.Name,
             Value = "600",
@@ -95,6 +96,7 @@ func main() {
 			return err
 		}
 		_, err = mariadb.NewConfiguration(ctx, "exampleConfiguration", &mariadb.ConfigurationArgs{
+			Name:              pulumi.String("interactive_timeout"),
 			ResourceGroupName: exampleResourceGroup.Name,
 			ServerName:        exampleServer.Name,
 			Value:             pulumi.String("600"),
@@ -129,6 +131,7 @@ example_server = azure.mariadb.Server("exampleServer",
     version="10.2",
     ssl_enforcement="Enabled")
 example_configuration = azure.mariadb.Configuration("exampleConfiguration",
+    name="interactive_timeout",
     resource_group_name=example_resource_group.name,
     server_name=example_server.name,
     value="600")
@@ -158,6 +161,7 @@ const exampleServer = new azure.mariadb.Server("exampleServer", {
     sslEnforcement: "Enabled",
 });
 const exampleConfiguration = new azure.mariadb.Configuration("exampleConfiguration", {
+    name: "interactive_timeout",
     resourceGroupName: exampleResourceGroup.name,
     serverName: exampleServer.name,
     value: "600",
@@ -352,6 +356,17 @@ The Configuration resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the MariaDB Configuration, which needs [to be a valid MariaDB configuration name](https://mariadb.com/kb/en/library/server-system-variables/). Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span> 
@@ -383,23 +398,23 @@ The Configuration resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}Specifies the value of the MariaDB Configuration. See the MariaDB documentation for valid values.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the MariaDB Configuration, which needs [to be a valid MariaDB configuration name](https://mariadb.com/kb/en/library/server-system-variables/). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the MariaDB Configuration, which needs [to be a valid MariaDB configuration name](https://mariadb.com/kb/en/library/server-system-variables/). Changing this forces a new resource to be created.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -434,23 +449,23 @@ The Configuration resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}Specifies the value of the MariaDB Configuration. See the MariaDB documentation for valid values.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the MariaDB Configuration, which needs [to be a valid MariaDB configuration name](https://mariadb.com/kb/en/library/server-system-variables/). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the MariaDB Configuration, which needs [to be a valid MariaDB configuration name](https://mariadb.com/kb/en/library/server-system-variables/). Changing this forces a new resource to be created.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -485,23 +500,23 @@ The Configuration resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}Specifies the value of the MariaDB Configuration. See the MariaDB documentation for valid values.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the MariaDB Configuration, which needs [to be a valid MariaDB configuration name](https://mariadb.com/kb/en/library/server-system-variables/). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the MariaDB Configuration, which needs [to be a valid MariaDB configuration name](https://mariadb.com/kb/en/library/server-system-variables/). Changing this forces a new resource to be created.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -534,17 +549,6 @@ The Configuration resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the value of the MariaDB Configuration. See the MariaDB documentation for valid values.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the MariaDB Configuration, which needs [to be a valid MariaDB configuration name](https://mariadb.com/kb/en/library/server-system-variables/). Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
 </dl>

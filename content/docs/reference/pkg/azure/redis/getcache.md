@@ -12,26 +12,12 @@ meta_desc: "Explore the GetCache function of the redis module, including example
 
 Use this data source to access information about an existing Redis Cache
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
+{{% examples %}}
+## Example Usage
 
-const example = azure.redis.getCache({
-    name: "myrediscache",
-    resourceGroupName: "redis-cache",
-});
-export const primaryAccessKey = example.then(example => example.primaryAccessKey);
-export const hostname = example.then(example => example.hostname);
-```
-```python
-import pulumi
-import pulumi_azure as azure
+{{< chooser language "typescript,python,go,csharp" / >}}
 
-example = azure.redis.get_cache(name="myrediscache",
-    resource_group_name="redis-cache")
-pulumi.export("primaryAccessKey", example.primary_access_key)
-pulumi.export("hostname", example.hostname)
-```
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -55,6 +41,10 @@ class MyStack : Stack
     public Output<string> Hostname { get; set; }
 }
 ```
+
+{{% /example %}}
+
+{{% example go %}}
 ```go
 package main
 
@@ -79,6 +69,38 @@ func main() {
 }
 ```
 
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.redis.get_cache(name="myrediscache",
+    resource_group_name="redis-cache")
+pulumi.export("primaryAccessKey", example.primary_access_key)
+pulumi.export("hostname", example.hostname)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.redis.getCache({
+    name: "myrediscache",
+    resourceGroupName: "redis-cache",
+});
+export const primaryAccessKey = example.then(example => example.primaryAccessKey);
+export const hostname = example.then(example => example.hostname);
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetCache {#using}

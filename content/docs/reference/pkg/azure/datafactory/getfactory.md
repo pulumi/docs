@@ -28,14 +28,14 @@ class MyStack : Stack
     {
         var example = Output.Create(Azure.DataFactory.GetFactory.InvokeAsync(new Azure.DataFactory.GetFactoryArgs
         {
-            Name = azurerm_data_factory.Example.Name,
-            ResourceGroupName = azurerm_data_factory.Example.Resource_group_name,
+            Name = "existing-adf",
+            ResourceGroupName = "existing-rg",
         }));
-        this.DataFactoryId = azurerm_data_factory.Example.Id;
+        this.Id = example.Apply(example => example.Id);
     }
 
-    [Output("dataFactoryId")]
-    public Output<string> DataFactoryId { get; set; }
+    [Output("id")]
+    public Output<string> Id { get; set; }
 }
 ```
 
@@ -52,14 +52,14 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datafactory.LookupFactory(ctx, &datafactory.LookupFactoryArgs{
-			Name:              azurerm_data_factory.Example.Name,
-			ResourceGroupName: azurerm_data_factory.Example.Resource_group_name,
+		example, err := datafactory.LookupFactory(ctx, &datafactory.LookupFactoryArgs{
+			Name:              "existing-adf",
+			ResourceGroupName: "existing-rg",
 		}, nil)
 		if err != nil {
 			return err
 		}
-		ctx.Export("dataFactoryId", azurerm_data_factory.Example.Id)
+		ctx.Export("id", example.Id)
 		return nil
 	})
 }
@@ -72,9 +72,9 @@ func main() {
 import pulumi
 import pulumi_azure as azure
 
-example = azure.datafactory.get_factory(name=azurerm_data_factory["example"]["name"],
-    resource_group_name=azurerm_data_factory["example"]["resource_group_name"])
-pulumi.export("dataFactoryId", azurerm_data_factory["example"]["id"])
+example = azure.datafactory.get_factory(name="existing-adf",
+    resource_group_name="existing-rg")
+pulumi.export("id", example.id)
 ```
 
 {{% /example %}}
@@ -86,10 +86,10 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
 const example = azure.datafactory.getFactory({
-    name: azurerm_data_factory.example.name,
-    resourceGroupName: azurerm_data_factory.example.resource_group_name,
+    name: "existing-adf",
+    resourceGroupName: "existing-rg",
 });
-export const dataFactoryId = azurerm_data_factory.example.id;
+export const id = example.then(example => example.id);
 ```
 
 {{% /example %}}
@@ -143,7 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Data Factory to retrieve information about.
+    <dd>{{% md %}}The name of this Azure Data Factory.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -154,7 +154,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group where the Data Factory exists.
+    <dd>{{% md %}}The name of the Resource Group where the Azure Data Factory exists.
 {{% /md %}}</dd>
 
 </dl>
@@ -172,7 +172,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Data Factory to retrieve information about.
+    <dd>{{% md %}}The name of this Azure Data Factory.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -183,7 +183,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group where the Data Factory exists.
+    <dd>{{% md %}}The name of the Resource Group where the Azure Data Factory exists.
 {{% /md %}}</dd>
 
 </dl>
@@ -201,7 +201,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Data Factory to retrieve information about.
+    <dd>{{% md %}}The name of this Azure Data Factory.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -212,7 +212,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group where the Data Factory exists.
+    <dd>{{% md %}}The name of the Resource Group where the Azure Data Factory exists.
 {{% /md %}}</dd>
 
 </dl>
@@ -230,7 +230,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Data Factory to retrieve information about.
+    <dd>{{% md %}}The name of this Azure Data Factory.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -241,7 +241,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group where the Data Factory exists.
+    <dd>{{% md %}}The name of the Resource Group where the Azure Data Factory exists.
 {{% /md %}}</dd>
 
 </dl>
@@ -305,7 +305,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Azure location where the resource exists.
+    <dd>{{% md %}}The Azure Region where the Azure Data Factory exists.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -336,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags assigned to the resource.
----
+    <dd>{{% md %}}A mapping of tags assigned to the Azure Data Factory.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -399,7 +398,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Azure location where the resource exists.
+    <dd>{{% md %}}The Azure Region where the Azure Data Factory exists.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -430,8 +429,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags assigned to the resource.
----
+    <dd>{{% md %}}A mapping of tags assigned to the Azure Data Factory.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -493,7 +491,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Azure location where the resource exists.
+    <dd>{{% md %}}The Azure Region where the Azure Data Factory exists.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -524,8 +522,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags assigned to the resource.
----
+    <dd>{{% md %}}A mapping of tags assigned to the Azure Data Factory.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -587,7 +584,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Azure location where the resource exists.
+    <dd>{{% md %}}The Azure Region where the Azure Data Factory exists.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -618,8 +615,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags assigned to the resource.
----
+    <dd>{{% md %}}A mapping of tags assigned to the Azure Data Factory.
 {{% /md %}}</dd>
 
     <dt class="property-"

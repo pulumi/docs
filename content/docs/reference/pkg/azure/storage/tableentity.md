@@ -50,7 +50,7 @@ const exampleTableEntity = new azure.storage.TableEntity("exampleTableEntity", {
     storageAccountName: exampleAccount.name,
     tableName: exampleTable.name,
     partitionKey: "examplepartition",
-    rowKey: "exmamplerow",
+    rowKey: "examplerow",
     entity: {
         example: "example",
     },

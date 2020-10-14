@@ -43,7 +43,10 @@ class MyStack : Stack
         {
             ResourceGroupName = exampleResourceGroup.Name,
             VirtualNetworkName = exampleVirtualNetwork.Name,
-            AddressPrefix = "10.1.0.0/24",
+            AddressPrefixes = 
+            {
+                "10.1.0.0/24",
+            },
             Delegations = 
             {
                 new Azure.Network.Inputs.SubnetDelegationArgs
@@ -115,7 +118,9 @@ func main() {
 		exampleSubnet, err := network.NewSubnet(ctx, "exampleSubnet", &network.SubnetArgs{
 			ResourceGroupName:  exampleResourceGroup.Name,
 			VirtualNetworkName: exampleVirtualNetwork.Name,
-			AddressPrefix:      pulumi.String("10.1.0.0/24"),
+			AddressPrefixes: pulumi.StringArray{
+				pulumi.String("10.1.0.0/24"),
+			},
 			Delegations: network.SubnetDelegationArray{
 				&network.SubnetDelegationArgs{
 					Name: pulumi.String("delegation"),
@@ -167,7 +172,7 @@ example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
 example_subnet = azure.network.Subnet("exampleSubnet",
     resource_group_name=example_resource_group.name,
     virtual_network_name=example_virtual_network.name,
-    address_prefix="10.1.0.0/24",
+    address_prefixes=["10.1.0.0/24"],
     delegations=[azure.network.SubnetDelegationArgs(
         name="delegation",
         service_delegation=azure.network.SubnetDelegationServiceDelegationArgs(
@@ -204,7 +209,7 @@ const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNe
 const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
     resourceGroupName: exampleResourceGroup.name,
     virtualNetworkName: exampleVirtualNetwork.name,
-    addressPrefix: "10.1.0.0/24",
+    addressPrefixes: ["10.1.0.0/24"],
     delegations: [{
         name: "delegation",
         serviceDelegation: {

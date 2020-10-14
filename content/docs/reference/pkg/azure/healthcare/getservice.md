@@ -818,7 +818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Is the 'SMART on FHIR' option for mobile and web implementations enbled?
+    <dd>{{% md %}}Is the 'SMART on FHIR' option for mobile and web implementations enabled?
 {{% /md %}}</dd>
 
 </dl>
@@ -858,7 +858,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Is the 'SMART on FHIR' option for mobile and web implementations enbled?
+    <dd>{{% md %}}Is the 'SMART on FHIR' option for mobile and web implementations enabled?
 {{% /md %}}</dd>
 
 </dl>
@@ -898,7 +898,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Is the 'SMART on FHIR' option for mobile and web implementations enbled?
+    <dd>{{% md %}}Is the 'SMART on FHIR' option for mobile and web implementations enabled?
 {{% /md %}}</dd>
 
 </dl>
@@ -938,7 +938,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Is the 'SMART on FHIR' option for mobile and web implementations enbled?
+    <dd>{{% md %}}Is the 'SMART on FHIR' option for mobile and web implementations enabled?
 {{% /md %}}</dd>
 
 </dl>

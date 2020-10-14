@@ -26,7 +26,7 @@ Explore the resources and functions of the loganalytics module in the Azure pack
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.24.1</dd>
+	<dd>3.25.0</dd>
 </dl>
 
 

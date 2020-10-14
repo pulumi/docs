@@ -45,7 +45,10 @@ class MyStack : Stack
         {
             ResourceGroupName = exampleResourceGroup.Name,
             VirtualNetworkName = exampleVirtualNetwork.Name,
-            AddressPrefix = "10.7.29.0/29",
+            AddressPrefixes = 
+            {
+                "10.7.29.0/29",
+            },
             ServiceEndpoints = 
             {
                 "Microsoft.Sql",
@@ -112,7 +115,9 @@ func main() {
 		internal, err := network.NewSubnet(ctx, "internal", &network.SubnetArgs{
 			ResourceGroupName:  exampleResourceGroup.Name,
 			VirtualNetworkName: exampleVirtualNetwork.Name,
-			AddressPrefix:      pulumi.String("10.7.29.0/29"),
+			AddressPrefixes: pulumi.StringArray{
+				pulumi.String("10.7.29.0/29"),
+			},
 			ServiceEndpoints: pulumi.StringArray{
 				pulumi.String("Microsoft.Sql"),
 			},
@@ -165,7 +170,7 @@ example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
 internal = azure.network.Subnet("internal",
     resource_group_name=example_resource_group.name,
     virtual_network_name=example_virtual_network.name,
-    address_prefix="10.7.29.0/29",
+    address_prefixes=["10.7.29.0/29"],
     service_endpoints=["Microsoft.Sql"])
 example_server = azure.mariadb.Server("exampleServer",
     location=example_resource_group.location,
@@ -203,7 +208,7 @@ const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNe
 const internal = new azure.network.Subnet("internal", {
     resourceGroupName: exampleResourceGroup.name,
     virtualNetworkName: exampleVirtualNetwork.name,
-    addressPrefix: "10.7.29.0/29",
+    addressPrefixes: ["10.7.29.0/29"],
     serviceEndpoints: ["Microsoft.Sql"],
 });
 const exampleServer = new azure.mariadb.Server("exampleServer", {

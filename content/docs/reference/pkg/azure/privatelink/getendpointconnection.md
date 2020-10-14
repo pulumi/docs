@@ -12,8 +12,6 @@ meta_desc: "Explore the GetEndpointConnection function of the privatelink module
 
 Use this data source to access the connection status information about an existing Private Endpoint Connection.
 
-> **NOTE** Private Endpoint is currently in Public Preview.
-
 {{% examples %}}
 ## Example Usage
 

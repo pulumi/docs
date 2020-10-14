@@ -49,7 +49,10 @@ class MyStack : Stack
         {
             ResourceGroupName = exampleResourceGroup.Name,
             VirtualNetworkName = exampleVirtualNetwork.Name,
-            AddressPrefix = "10.0.2.0/24",
+            AddressPrefixes = 
+            {
+                "10.0.2.0/24",
+            },
             ServiceEndpoints = 
             {
                 "Microsoft.Storage",
@@ -108,7 +111,7 @@ example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
 example_subnet = azure.network.Subnet("exampleSubnet",
     resource_group_name=example_resource_group.name,
     virtual_network_name=example_virtual_network.name,
-    address_prefix="10.0.2.0/24",
+    address_prefixes=["10.0.2.0/24"],
     service_endpoints=["Microsoft.Storage"])
 example_account = azure.storage.Account("exampleAccount",
     resource_group_name=example_resource_group.name,
@@ -144,7 +147,7 @@ const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNe
 const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
     resourceGroupName: exampleResourceGroup.name,
     virtualNetworkName: exampleVirtualNetwork.name,
-    addressPrefix: "10.0.2.0/24",
+    addressPrefixes: ["10.0.2.0/24"],
     serviceEndpoints: ["Microsoft.Storage"],
 });
 const exampleAccount = new azure.storage.Account("exampleAccount", {

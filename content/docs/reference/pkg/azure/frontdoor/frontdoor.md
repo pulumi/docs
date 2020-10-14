@@ -2112,7 +2112,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the `backend_pool_health_probe` block whithin this resource to use for this `Backend Pool`.
+    <dd>{{% md %}}Specifies the name of the `backend_pool_health_probe` block within this resource to use for this `Backend Pool`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2174,7 +2174,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the `backend_pool_health_probe` block whithin this resource to use for this `Backend Pool`.
+    <dd>{{% md %}}Specifies the name of the `backend_pool_health_probe` block within this resource to use for this `Backend Pool`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2236,7 +2236,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the `backend_pool_health_probe` block whithin this resource to use for this `Backend Pool`.
+    <dd>{{% md %}}Specifies the name of the `backend_pool_health_probe` block within this resource to use for this `Backend Pool`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2298,7 +2298,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the `backend_pool_health_probe` block whithin this resource to use for this `Backend Pool`.
+    <dd>{{% md %}}Specifies the name of the `backend_pool_health_probe` block within this resource to use for this `Backend Pool`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4104,7 +4104,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The names of the `frontend_endpoint` blocks whithin this resource to associate with this `routing_rule`.
+    <dd>{{% md %}}The names of the `frontend_endpoint` blocks within this resource to associate with this `routing_rule`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4199,7 +4199,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The names of the `frontend_endpoint` blocks whithin this resource to associate with this `routing_rule`.
+    <dd>{{% md %}}The names of the `frontend_endpoint` blocks within this resource to associate with this `routing_rule`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4294,7 +4294,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The names of the `frontend_endpoint` blocks whithin this resource to associate with this `routing_rule`.
+    <dd>{{% md %}}The names of the `frontend_endpoint` blocks within this resource to associate with this `routing_rule`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4389,7 +4389,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}The names of the `frontend_endpoint` blocks whithin this resource to associate with this `routing_rule`.
+    <dd>{{% md %}}The names of the `frontend_endpoint` blocks within this resource to associate with this `routing_rule`.
 {{% /md %}}</dd>
 
     <dt class="property-required"

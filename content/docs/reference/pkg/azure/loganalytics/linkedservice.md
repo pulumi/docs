@@ -18,15 +18,127 @@ Links a Log Analytics (formally Operational Insights) Workspace to another resou
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleAccount = new Azure.Automation.Account("exampleAccount", new Azure.Automation.AccountArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            SkuName = "Basic",
+            Tags = 
+            {
+                { "environment", "development" },
+            },
+        });
+        var exampleAnalyticsWorkspace = new Azure.OperationalInsights.AnalyticsWorkspace("exampleAnalyticsWorkspace", new Azure.OperationalInsights.AnalyticsWorkspaceArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Sku = "PerGB2018",
+            RetentionInDays = 30,
+        });
+        var exampleLinkedService = new Azure.LogAnalytics.LinkedService("exampleLinkedService", new Azure.LogAnalytics.LinkedServiceArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            WorkspaceName = exampleAnalyticsWorkspace.Name,
+            ResourceId = exampleAccount.Id,
+        });
+    }
+
+}
+```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/automation"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/loganalytics"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/operationalinsights"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleAccount, err := automation.NewAccount(ctx, "exampleAccount", &automation.AccountArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			SkuName:           pulumi.String("Basic"),
+			Tags: pulumi.StringMap{
+				"environment": pulumi.String("development"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleAnalyticsWorkspace, err := operationalinsights.NewAnalyticsWorkspace(ctx, "exampleAnalyticsWorkspace", &operationalinsights.AnalyticsWorkspaceArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Sku:               pulumi.String("PerGB2018"),
+			RetentionInDays:   pulumi.Int(30),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = loganalytics.NewLinkedService(ctx, "exampleLinkedService", &loganalytics.LinkedServiceArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			WorkspaceName:     exampleAnalyticsWorkspace.Name,
+			ResourceId:        exampleAccount.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_account = azure.automation.Account("exampleAccount",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku_name="Basic",
+    tags={
+        "environment": "development",
+    })
+example_analytics_workspace = azure.operationalinsights.AnalyticsWorkspace("exampleAnalyticsWorkspace",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku="PerGB2018",
+    retention_in_days=30)
+example_linked_service = azure.loganalytics.LinkedService("exampleLinkedService",
+    resource_group_name=example_resource_group.name,
+    workspace_name=example_analytics_workspace.name,
+    resource_id=example_account.id)
+```
+
 {{% /example %}}
 
 {{% example typescript %}}
@@ -39,9 +151,7 @@ const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup"
 const exampleAccount = new azure.automation.Account("exampleAccount", {
     location: exampleResourceGroup.location,
     resourceGroupName: exampleResourceGroup.name,
-    sku: [{
-        name: "Basic",
-    }],
+    skuName: "Basic",
     tags: {
         environment: "development",
     },

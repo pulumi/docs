@@ -43,13 +43,19 @@ class MyStack : Stack
         {
             ResourceGroupName = exampleResourceGroup.Name,
             VirtualNetworkName = exampleVirtualNetwork.Name,
-            AddressPrefix = "10.0.1.0/24",
+            AddressPrefixes = 
+            {
+                "10.0.1.0/24",
+            },
         });
         var gateway = new Azure.Network.Subnet("gateway", new Azure.Network.SubnetArgs
         {
             ResourceGroupName = exampleResourceGroup.Name,
             VirtualNetworkName = exampleVirtualNetwork.Name,
-            AddressPrefix = "10.0.2.0/24",
+            AddressPrefixes = 
+            {
+                "10.0.2.0/24",
+            },
         });
         var exampleEnvironment = new Azure.AppService.Environment("exampleEnvironment", new Azure.AppService.EnvironmentArgs
         {
@@ -102,7 +108,9 @@ func main() {
 		ase, err := network.NewSubnet(ctx, "ase", &network.SubnetArgs{
 			ResourceGroupName:  exampleResourceGroup.Name,
 			VirtualNetworkName: exampleVirtualNetwork.Name,
-			AddressPrefix:      pulumi.String("10.0.1.0/24"),
+			AddressPrefixes: pulumi.StringArray{
+				pulumi.String("10.0.1.0/24"),
+			},
 		})
 		if err != nil {
 			return err
@@ -110,7 +118,9 @@ func main() {
 		_, err = network.NewSubnet(ctx, "gateway", &network.SubnetArgs{
 			ResourceGroupName:  exampleResourceGroup.Name,
 			VirtualNetworkName: exampleVirtualNetwork.Name,
-			AddressPrefix:      pulumi.String("10.0.2.0/24"),
+			AddressPrefixes: pulumi.StringArray{
+				pulumi.String("10.0.2.0/24"),
+			},
 		})
 		if err != nil {
 			return err
@@ -148,11 +158,11 @@ example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
 ase = azure.network.Subnet("ase",
     resource_group_name=example_resource_group.name,
     virtual_network_name=example_virtual_network.name,
-    address_prefix="10.0.1.0/24")
+    address_prefixes=["10.0.1.0/24"])
 gateway = azure.network.Subnet("gateway",
     resource_group_name=example_resource_group.name,
     virtual_network_name=example_virtual_network.name,
-    address_prefix="10.0.2.0/24")
+    address_prefixes=["10.0.2.0/24"])
 example_environment = azure.appservice.Environment("exampleEnvironment",
     subnet_id=ase.id,
     pricing_tier="I2",
@@ -181,12 +191,12 @@ const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNe
 const ase = new azure.network.Subnet("ase", {
     resourceGroupName: exampleResourceGroup.name,
     virtualNetworkName: exampleVirtualNetwork.name,
-    addressPrefix: "10.0.1.0/24",
+    addressPrefixes: ["10.0.1.0/24"],
 });
 const gateway = new azure.network.Subnet("gateway", {
     resourceGroupName: exampleResourceGroup.name,
     virtualNetworkName: exampleVirtualNetwork.name,
-    addressPrefix: "10.0.2.0/24",
+    addressPrefixes: ["10.0.2.0/24"],
 });
 const exampleEnvironment = new azure.appservice.Environment("exampleEnvironment", {
     subnetId: ase.id,

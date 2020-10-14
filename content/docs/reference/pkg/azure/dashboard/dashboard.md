@@ -169,10 +169,20 @@ import (
 	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
 	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/dashboard"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		cfg := config.New(ctx, "")
+		mdContent := "# Hello all :)"
+		if param := cfg.Get("mdContent"); param != "" {
+			mdContent = param
+		}
+		videoLink := "https://www.youtube.com/watch?v=......"
+		if param := cfg.Get("videoLink"); param != "" {
+			videoLink = param
+		}
 		current, err := core.GetSubscription(ctx, nil, nil)
 		if err != nil {
 			return err

@@ -55,7 +55,10 @@ class MyStack : Stack
         {
             ResourceGroupName = exampleResourceGroup.Name,
             VirtualNetworkName = exampleVirtualNetwork.Name,
-            AddressPrefix = "172.17.0.0/24",
+            AddressPrefixes = 
+            {
+                "172.17.0.0/24",
+            },
             ServiceEndpoints = 
             {
                 "Microsoft.ServiceBus",
@@ -131,7 +134,9 @@ func main() {
 		exampleSubnet, err := network.NewSubnet(ctx, "exampleSubnet", &network.SubnetArgs{
 			ResourceGroupName:  exampleResourceGroup.Name,
 			VirtualNetworkName: exampleVirtualNetwork.Name,
-			AddressPrefix:      pulumi.String("172.17.0.0/24"),
+			AddressPrefixes: pulumi.StringArray{
+				pulumi.String("172.17.0.0/24"),
+			},
 			ServiceEndpoints: pulumi.StringArray{
 				pulumi.String("Microsoft.ServiceBus"),
 			},
@@ -185,7 +190,7 @@ example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
 example_subnet = azure.network.Subnet("exampleSubnet",
     resource_group_name=example_resource_group.name,
     virtual_network_name=example_virtual_network.name,
-    address_prefix="172.17.0.0/24",
+    address_prefixes=["172.17.0.0/24"],
     service_endpoints=["Microsoft.ServiceBus"])
 example_namespace_network_rule_set = azure.servicebus.NamespaceNetworkRuleSet("exampleNamespaceNetworkRuleSet",
     namespace_name=example_namespace.name,
@@ -225,7 +230,7 @@ const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNe
 const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
     resourceGroupName: exampleResourceGroup.name,
     virtualNetworkName: exampleVirtualNetwork.name,
-    addressPrefix: "172.17.0.0/24",
+    addressPrefixes: ["172.17.0.0/24"],
     serviceEndpoints: ["Microsoft.ServiceBus"],
 });
 const exampleNamespaceNetworkRuleSet = new azure.servicebus.NamespaceNetworkRuleSet("exampleNamespaceNetworkRuleSet", {

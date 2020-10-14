@@ -3,7 +3,7 @@ title: "Module types"
 title_tag: "Module types | Package @pulumi/azure | Node.js SDK"
 linktitle: "types"
 meta_desc: "Explore members of the types module in the @pulumi/azure package."
-git_sha: "4458e2dce0815e5cc0e8221a9ab77d2466eb9bba"
+git_sha: "b0ec8640c580f1cb329731746f254b47a6e7a245"
 block_external_search_index: true
 ---
 
