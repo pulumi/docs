@@ -3,7 +3,7 @@ title: "Module cdn"
 title_tag: "Module cdn | Package @pulumi/alicloud | Node.js SDK"
 linktitle: "cdn"
 meta_desc: "Explore members of the cdn module in the @pulumi/alicloud package."
-git_sha: "1e99e347a9a110e183f8ab5e2230e5ca3afe964d"
+git_sha: "41aff0da5bb5a1dc4cd69834a220b8e8984f953d"
 block_external_search_index: true
 ---
 
@@ -42,14 +42,14 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Domain" data-link-title="Domain">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L9">
         Resource <strong>Domain</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Domain</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="Domain-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L134"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L134"> <b>constructor</b></a>
 </h4>
 
 
@@ -63,7 +63,7 @@ Create a Domain resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Domain-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L19">method <b>get</b></a>
 </h4>
 
 
@@ -74,14 +74,14 @@ Get an existing Domain resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Domain-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L9">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L9">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Domain-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L30">method <b>isInstance</b></a>
 </h4>
 
 
@@ -92,7 +92,7 @@ Returns true if the given object is an instance of Domain.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Domain-authConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L42">property <b>authConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L42">property <b>authConfig</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -104,7 +104,7 @@ Use `alicloud_cdn_domain_config` configuration `function_name` and `function_arg
 The auth config of the accelerated domain.
 
 <h4 class="pdoc-member-header" id="Domain-blockIps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L46">property <b>blockIps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L46">property <b>blockIps</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -113,7 +113,7 @@ Use `alicloud_cdn_domain_config` configuration `function_name` and `function_arg
 </div>
 <pre class="highlight"><code><span class='kd'>public </span>blockIps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Domain-cacheConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L52">property <b>cacheConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L52">property <b>cacheConfigs</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -125,7 +125,7 @@ Use `alicloud_cdn_domain_config` configuration `function_name` and `function_arg
 The cache configs of the accelerated domain.
 
 <h4 class="pdoc-member-header" id="Domain-cdnType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L56">property <b>cdnType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L56">property <b>cdnType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cdnType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -133,7 +133,7 @@ The cache configs of the accelerated domain.
 Cdn type of the accelerated domain. Valid values are `web`, `download`, `video`, `liveStream`.
 
 <h4 class="pdoc-member-header" id="Domain-certificateConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L60">property <b>certificateConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L60">property <b>certificateConfig</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -142,7 +142,7 @@ Use `alicloud_cdn_domain_config` configuration `function_name` and `function_arg
 </div>
 <pre class="highlight"><code><span class='kd'>public </span>certificateConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#DomainCertificateConfig'>DomainCertificateConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Domain-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L64">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L64">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -150,7 +150,7 @@ Use `alicloud_cdn_domain_config` configuration `function_name` and `function_arg
 Name of the accelerated domain. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or "-", and must not begin or end with "-", and "-" must not in the 3th and 4th character positions at the same time. Suffix `.sh` and `.tel` are not supported.
 
 <h4 class="pdoc-member-header" id="Domain-httpHeaderConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L70">property <b>httpHeaderConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L70">property <b>httpHeaderConfigs</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -162,7 +162,7 @@ Use `alicloud_cdn_domain_config` configuration `function_name` and `function_arg
 The http header configs of the accelerated domain.
 
 <h4 class="pdoc-member-header" id="Domain-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L9">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L9">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -171,7 +171,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Domain-optimizeEnable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L76">property <b>optimizeEnable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L76">property <b>optimizeEnable</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -183,7 +183,7 @@ Use `alicloud_cdn_domain_config` configuration `function_name` and `function_arg
 Page Optimize config of the accelerated domain. Valid values are `on` and `off`. Default value is `off`. It can effectively remove the page redundant content, reduce the file size and improve the speed of distribution when this parameter value is `on`.
 
 <h4 class="pdoc-member-header" id="Domain-page404Config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L82">property <b>page404Config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L82">property <b>page404Config</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -195,7 +195,7 @@ Use `alicloud_cdn_domain_config` configuration `function_name` and `function_arg
 The error page config of the accelerated domain.
 
 <h4 class="pdoc-member-header" id="Domain-pageCompressEnable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L88">property <b>pageCompressEnable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L88">property <b>pageCompressEnable</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -207,7 +207,7 @@ Use `alicloud_cdn_domain_config` configuration `function_name` and `function_arg
 Page Compress config of the accelerated domain. Valid values are `on` and `off`. Default value is `off`.
 
 <h4 class="pdoc-member-header" id="Domain-parameterFilterConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L94">property <b>parameterFilterConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L94">property <b>parameterFilterConfig</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -219,7 +219,7 @@ Use `alicloud_cdn_domain_config` configuration `function_name` and `function_arg
 The parameter filter config of the accelerated domain.
 
 <h4 class="pdoc-member-header" id="Domain-rangeEnable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L100">property <b>rangeEnable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L100">property <b>rangeEnable</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -231,7 +231,7 @@ Use `alicloud_cdn_domain_config` configuration `function_name` and `function_arg
 Range Source config of the accelerated domain. Valid values are `on` and `off`. Default value is `off`.
 
 <h4 class="pdoc-member-header" id="Domain-referConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L106">property <b>referConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L106">property <b>referConfig</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -243,7 +243,7 @@ Use `alicloud_cdn_domain_config` configuration `function_name` and `function_arg
 The refer config of the accelerated domain.
 
 <h4 class="pdoc-member-header" id="Domain-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L110">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L110">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -251,7 +251,7 @@ The refer config of the accelerated domain.
 Scope of the accelerated domain. Valid values are `domestic`, `overseas`, `global`. Default value is `domestic`. This parameter's setting is valid Only for the international users and domestic L3 and above users .
 
 <h4 class="pdoc-member-header" id="Domain-sourcePort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L116">property <b>sourcePort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L116">property <b>sourcePort</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -263,7 +263,7 @@ Use `alicloud_cdn_domain_new` configuration `sources` block `port` argument inst
 Source port of the accelerated domain. Valid values are `80` and `443`. Default value is `80`. You must use `80` when the `sourceType` is `oss`.
 
 <h4 class="pdoc-member-header" id="Domain-sourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L122">property <b>sourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L122">property <b>sourceType</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -275,7 +275,7 @@ Use `alicloud_cdn_domain_new` configuration `sources` block `type` argument inst
 Source type of the accelerated domain. Valid values are `ipaddr`, `domain`, `oss`. You must set this parameter when `cdnType` value is not `liveStream`.
 
 <h4 class="pdoc-member-header" id="Domain-sources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L128">property <b>sources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L128">property <b>sources</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -287,7 +287,7 @@ Use `alicloud_cdn_domain_new` configuration `sources` argument instead.
 Sources of the accelerated domain. It's a list of domain names or IP address and consists of at most 20 items. You must set this parameter when `cdnType` value is not `liveStream`.
 
 <h4 class="pdoc-member-header" id="Domain-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L9">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L9">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -296,7 +296,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Domain-videoSeekEnable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L134">property <b>videoSeekEnable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L134">property <b>videoSeekEnable</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -308,7 +308,7 @@ Use `alicloud_cdn_domain_config` configuration `function_name` and `function_arg
 Video Seek config of the accelerated domain. Valid values are `on` and `off`. Default value is `off`.
 
 <h3 class="pdoc-module-header" id="DomainConfig" data-link-title="DomainConfig">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainConfig.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainConfig.ts#L47">
         Resource <strong>DomainConfig</strong>
     </a>
 </h3>
@@ -353,7 +353,7 @@ const config = new alicloud.cdn.DomainConfig("config", {
 ```
 
 <h4 class="pdoc-member-header" id="DomainConfig-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainConfig.ts#L86"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainConfig.ts#L86"> <b>constructor</b></a>
 </h4>
 
 
@@ -367,7 +367,7 @@ Create a DomainConfig resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DomainConfig-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainConfig.ts#L57">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainConfig.ts#L57">method <b>get</b></a>
 </h4>
 
 
@@ -378,14 +378,14 @@ Get an existing DomainConfig resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DomainConfig-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainConfig.ts#L47">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainConfig.ts#L47">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DomainConfig-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainConfig.ts#L68">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainConfig.ts#L68">method <b>isInstance</b></a>
 </h4>
 
 
@@ -396,7 +396,7 @@ Returns true if the given object is an instance of DomainConfig.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DomainConfig-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainConfig.ts#L78">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainConfig.ts#L78">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -404,7 +404,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Name of the accelerated domain. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or "-", and must not begin or end with "-", and "-" must not in the 3th and 4th character positions at the same time. Suffix `.sh` and `.tel` are not supported.
 
 <h4 class="pdoc-member-header" id="DomainConfig-functionArgs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainConfig.ts#L82">property <b>functionArgs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainConfig.ts#L82">property <b>functionArgs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>functionArgs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#DomainConfigFunctionArg'>DomainConfigFunctionArg</a>[]&gt;;</code></pre>
@@ -412,7 +412,7 @@ Name of the accelerated domain. This name without suffix can have a string of 1 
 The args of the domain config.
 
 <h4 class="pdoc-member-header" id="DomainConfig-functionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainConfig.ts#L86">property <b>functionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainConfig.ts#L86">property <b>functionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>functionName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -420,7 +420,7 @@ The args of the domain config.
 The name of the domain config.
 
 <h4 class="pdoc-member-header" id="DomainConfig-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainConfig.ts#L47">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainConfig.ts#L47">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -429,7 +429,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DomainConfig-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainConfig.ts#L47">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainConfig.ts#L47">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -438,7 +438,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="DomainNew" data-link-title="DomainNew">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainNew.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainNew.ts#L39">
         Resource <strong>DomainNew</strong>
     </a>
 </h3>
@@ -475,7 +475,7 @@ const domain = new alicloud.cdn.DomainNew("domain", {
 ```
 
 <h4 class="pdoc-member-header" id="DomainNew-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainNew.ts#L98"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainNew.ts#L98"> <b>constructor</b></a>
 </h4>
 
 
@@ -489,7 +489,7 @@ Create a DomainNew resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DomainNew-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainNew.ts#L49">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainNew.ts#L49">method <b>get</b></a>
 </h4>
 
 
@@ -500,14 +500,14 @@ Get an existing DomainNew resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DomainNew-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainNew.ts#L39">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainNew.ts#L39">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DomainNew-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainNew.ts#L60">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainNew.ts#L60">method <b>isInstance</b></a>
 </h4>
 
 
@@ -518,7 +518,7 @@ Returns true if the given object is an instance of DomainNew.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DomainNew-cdnType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainNew.ts#L70">property <b>cdnType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainNew.ts#L70">property <b>cdnType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cdnType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -526,7 +526,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Cdn type of the accelerated domain. Valid values are `web`, `download`, `video`.
 
 <h4 class="pdoc-member-header" id="DomainNew-certificateConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainNew.ts#L74">property <b>certificateConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainNew.ts#L74">property <b>certificateConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificateConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#DomainNewCertificateConfig'>DomainNewCertificateConfig</a>&gt;;</code></pre>
@@ -534,7 +534,7 @@ Cdn type of the accelerated domain. Valid values are `web`, `download`, `video`.
 Certificate config of the accelerated domain. It's a list and consist of at most 1 item.
 
 <h4 class="pdoc-member-header" id="DomainNew-cname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainNew.ts#L78">property <b>cname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainNew.ts#L78">property <b>cname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -542,7 +542,7 @@ Certificate config of the accelerated domain. It's a list and consist of at most
 (Available in v1.90.0+) The CNAME of the CDN domain.
 
 <h4 class="pdoc-member-header" id="DomainNew-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainNew.ts#L82">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainNew.ts#L82">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -550,7 +550,7 @@ Certificate config of the accelerated domain. It's a list and consist of at most
 Name of the accelerated domain. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or "-", and must not begin or end with "-", and "-" must not in the 3th and 4th character positions at the same time. Suffix `.sh` and `.tel` are not supported.
 
 <h4 class="pdoc-member-header" id="DomainNew-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainNew.ts#L39">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainNew.ts#L39">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -559,7 +559,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DomainNew-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainNew.ts#L86">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainNew.ts#L86">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -567,7 +567,7 @@ deployments and may be missing (undefined) during planning phases.
 Resource group ID.
 
 <h4 class="pdoc-member-header" id="DomainNew-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainNew.ts#L90">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainNew.ts#L90">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -575,7 +575,7 @@ Resource group ID.
 Scope of the accelerated domain. Valid values are `domestic`, `overseas`, `global`. Default value is `domestic`. This parameter's setting is valid Only for the international users and domestic L3 and above users .
 
 <h4 class="pdoc-member-header" id="DomainNew-sources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainNew.ts#L94">property <b>sources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainNew.ts#L94">property <b>sources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sources: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#DomainNewSources'>DomainNewSources</a>&gt;;</code></pre>
@@ -583,7 +583,7 @@ Scope of the accelerated domain. Valid values are `domestic`, `overseas`, `globa
 The source address list of the accelerated domain. Defaults to null. See Block Sources.
 
 <h4 class="pdoc-member-header" id="DomainNew-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainNew.ts#L98">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainNew.ts#L98">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -591,7 +591,7 @@ The source address list of the accelerated domain. Defaults to null. See Block S
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="DomainNew-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainNew.ts#L39">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainNew.ts#L39">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -602,7 +602,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getService" data-link-title="getService">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/getService.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/getService.ts#L28">
         Function <strong>getService</strong>
     </a>
 </h3>
@@ -632,7 +632,7 @@ const open = pulumi.output(alicloud.cdn.getService({
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="DomainArgs" data-link-title="DomainArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L311">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L311">
         interface <strong>DomainArgs</strong>
     </a>
 </h3>
@@ -642,7 +642,7 @@ const open = pulumi.output(alicloud.cdn.getService({
 The set of arguments for constructing a Domain resource.
 
 <h4 class="pdoc-member-header" id="DomainArgs-authConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L317">property <b>authConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L317">property <b>authConfig</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -654,7 +654,7 @@ Use `alicloud_cdn_domain_config` configuration `function_name` and `function_arg
 The auth config of the accelerated domain.
 
 <h4 class="pdoc-member-header" id="DomainArgs-blockIps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L321">property <b>blockIps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L321">property <b>blockIps</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -663,7 +663,7 @@ Use `alicloud_cdn_domain_config` configuration `function_name` and `function_arg
 </div>
 <pre class="highlight"><code><span class='kd'></span>blockIps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DomainArgs-cacheConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L327">property <b>cacheConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L327">property <b>cacheConfigs</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -675,7 +675,7 @@ Use `alicloud_cdn_domain_config` configuration `function_name` and `function_arg
 The cache configs of the accelerated domain.
 
 <h4 class="pdoc-member-header" id="DomainArgs-cdnType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L331">property <b>cdnType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L331">property <b>cdnType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cdnType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -683,7 +683,7 @@ The cache configs of the accelerated domain.
 Cdn type of the accelerated domain. Valid values are `web`, `download`, `video`, `liveStream`.
 
 <h4 class="pdoc-member-header" id="DomainArgs-certificateConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L335">property <b>certificateConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L335">property <b>certificateConfig</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -692,7 +692,7 @@ Use `alicloud_cdn_domain_config` configuration `function_name` and `function_arg
 </div>
 <pre class="highlight"><code><span class='kd'></span>certificateConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#DomainCertificateConfig'>DomainCertificateConfig</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DomainArgs-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L339">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L339">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -700,7 +700,7 @@ Use `alicloud_cdn_domain_config` configuration `function_name` and `function_arg
 Name of the accelerated domain. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or "-", and must not begin or end with "-", and "-" must not in the 3th and 4th character positions at the same time. Suffix `.sh` and `.tel` are not supported.
 
 <h4 class="pdoc-member-header" id="DomainArgs-httpHeaderConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L345">property <b>httpHeaderConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L345">property <b>httpHeaderConfigs</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -712,7 +712,7 @@ Use `alicloud_cdn_domain_config` configuration `function_name` and `function_arg
 The http header configs of the accelerated domain.
 
 <h4 class="pdoc-member-header" id="DomainArgs-optimizeEnable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L351">property <b>optimizeEnable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L351">property <b>optimizeEnable</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -724,7 +724,7 @@ Use `alicloud_cdn_domain_config` configuration `function_name` and `function_arg
 Page Optimize config of the accelerated domain. Valid values are `on` and `off`. Default value is `off`. It can effectively remove the page redundant content, reduce the file size and improve the speed of distribution when this parameter value is `on`.
 
 <h4 class="pdoc-member-header" id="DomainArgs-page404Config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L357">property <b>page404Config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L357">property <b>page404Config</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -736,7 +736,7 @@ Use `alicloud_cdn_domain_config` configuration `function_name` and `function_arg
 The error page config of the accelerated domain.
 
 <h4 class="pdoc-member-header" id="DomainArgs-pageCompressEnable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L363">property <b>pageCompressEnable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L363">property <b>pageCompressEnable</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -748,7 +748,7 @@ Use `alicloud_cdn_domain_config` configuration `function_name` and `function_arg
 Page Compress config of the accelerated domain. Valid values are `on` and `off`. Default value is `off`.
 
 <h4 class="pdoc-member-header" id="DomainArgs-parameterFilterConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L369">property <b>parameterFilterConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L369">property <b>parameterFilterConfig</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -760,7 +760,7 @@ Use `alicloud_cdn_domain_config` configuration `function_name` and `function_arg
 The parameter filter config of the accelerated domain.
 
 <h4 class="pdoc-member-header" id="DomainArgs-rangeEnable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L375">property <b>rangeEnable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L375">property <b>rangeEnable</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -772,7 +772,7 @@ Use `alicloud_cdn_domain_config` configuration `function_name` and `function_arg
 Range Source config of the accelerated domain. Valid values are `on` and `off`. Default value is `off`.
 
 <h4 class="pdoc-member-header" id="DomainArgs-referConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L381">property <b>referConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L381">property <b>referConfig</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -784,7 +784,7 @@ Use `alicloud_cdn_domain_config` configuration `function_name` and `function_arg
 The refer config of the accelerated domain.
 
 <h4 class="pdoc-member-header" id="DomainArgs-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L385">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L385">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -792,7 +792,7 @@ The refer config of the accelerated domain.
 Scope of the accelerated domain. Valid values are `domestic`, `overseas`, `global`. Default value is `domestic`. This parameter's setting is valid Only for the international users and domestic L3 and above users .
 
 <h4 class="pdoc-member-header" id="DomainArgs-sourcePort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L391">property <b>sourcePort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L391">property <b>sourcePort</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -804,7 +804,7 @@ Use `alicloud_cdn_domain_new` configuration `sources` block `port` argument inst
 Source port of the accelerated domain. Valid values are `80` and `443`. Default value is `80`. You must use `80` when the `sourceType` is `oss`.
 
 <h4 class="pdoc-member-header" id="DomainArgs-sourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L397">property <b>sourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L397">property <b>sourceType</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -816,7 +816,7 @@ Use `alicloud_cdn_domain_new` configuration `sources` block `type` argument inst
 Source type of the accelerated domain. Valid values are `ipaddr`, `domain`, `oss`. You must set this parameter when `cdnType` value is not `liveStream`.
 
 <h4 class="pdoc-member-header" id="DomainArgs-sources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L403">property <b>sources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L403">property <b>sources</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -828,7 +828,7 @@ Use `alicloud_cdn_domain_new` configuration `sources` argument instead.
 Sources of the accelerated domain. It's a list of domain names or IP address and consists of at most 20 items. You must set this parameter when `cdnType` value is not `liveStream`.
 
 <h4 class="pdoc-member-header" id="DomainArgs-videoSeekEnable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L409">property <b>videoSeekEnable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L409">property <b>videoSeekEnable</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -840,7 +840,7 @@ Use `alicloud_cdn_domain_config` configuration `function_name` and `function_arg
 Video Seek config of the accelerated domain. Valid values are `on` and `off`. Default value is `off`.
 
 <h3 class="pdoc-module-header" id="DomainConfigArgs" data-link-title="DomainConfigArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainConfig.ts#L150">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainConfig.ts#L150">
         interface <strong>DomainConfigArgs</strong>
     </a>
 </h3>
@@ -850,7 +850,7 @@ Video Seek config of the accelerated domain. Valid values are `on` and `off`. De
 The set of arguments for constructing a DomainConfig resource.
 
 <h4 class="pdoc-member-header" id="DomainConfigArgs-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainConfig.ts#L154">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainConfig.ts#L154">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -858,7 +858,7 @@ The set of arguments for constructing a DomainConfig resource.
 Name of the accelerated domain. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or "-", and must not begin or end with "-", and "-" must not in the 3th and 4th character positions at the same time. Suffix `.sh` and `.tel` are not supported.
 
 <h4 class="pdoc-member-header" id="DomainConfigArgs-functionArgs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainConfig.ts#L158">property <b>functionArgs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainConfig.ts#L158">property <b>functionArgs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>functionArgs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#DomainConfigFunctionArg'>DomainConfigFunctionArg</a>&gt;[]&gt;;</code></pre>
@@ -866,7 +866,7 @@ Name of the accelerated domain. This name without suffix can have a string of 1 
 The args of the domain config.
 
 <h4 class="pdoc-member-header" id="DomainConfigArgs-functionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainConfig.ts#L162">property <b>functionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainConfig.ts#L162">property <b>functionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>functionName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -874,7 +874,7 @@ The args of the domain config.
 The name of the domain config.
 
 <h3 class="pdoc-module-header" id="DomainConfigState" data-link-title="DomainConfigState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainConfig.ts#L132">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainConfig.ts#L132">
         interface <strong>DomainConfigState</strong>
     </a>
 </h3>
@@ -884,7 +884,7 @@ The name of the domain config.
 Input properties used for looking up and filtering DomainConfig resources.
 
 <h4 class="pdoc-member-header" id="DomainConfigState-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainConfig.ts#L136">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainConfig.ts#L136">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -892,7 +892,7 @@ Input properties used for looking up and filtering DomainConfig resources.
 Name of the accelerated domain. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or "-", and must not begin or end with "-", and "-" must not in the 3th and 4th character positions at the same time. Suffix `.sh` and `.tel` are not supported.
 
 <h4 class="pdoc-member-header" id="DomainConfigState-functionArgs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainConfig.ts#L140">property <b>functionArgs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainConfig.ts#L140">property <b>functionArgs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>functionArgs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#DomainConfigFunctionArg'>DomainConfigFunctionArg</a>&gt;[]&gt;;</code></pre>
@@ -900,7 +900,7 @@ Name of the accelerated domain. This name without suffix can have a string of 1 
 The args of the domain config.
 
 <h4 class="pdoc-member-header" id="DomainConfigState-functionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainConfig.ts#L144">property <b>functionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainConfig.ts#L144">property <b>functionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>functionName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -908,7 +908,7 @@ The args of the domain config.
 The name of the domain config.
 
 <h3 class="pdoc-module-header" id="DomainNewArgs" data-link-title="DomainNewArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainNew.ts#L192">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainNew.ts#L192">
         interface <strong>DomainNewArgs</strong>
     </a>
 </h3>
@@ -918,7 +918,7 @@ The name of the domain config.
 The set of arguments for constructing a DomainNew resource.
 
 <h4 class="pdoc-member-header" id="DomainNewArgs-cdnType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainNew.ts#L196">property <b>cdnType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainNew.ts#L196">property <b>cdnType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cdnType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -926,7 +926,7 @@ The set of arguments for constructing a DomainNew resource.
 Cdn type of the accelerated domain. Valid values are `web`, `download`, `video`.
 
 <h4 class="pdoc-member-header" id="DomainNewArgs-certificateConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainNew.ts#L200">property <b>certificateConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainNew.ts#L200">property <b>certificateConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#DomainNewCertificateConfig'>DomainNewCertificateConfig</a>&gt;;</code></pre>
@@ -934,7 +934,7 @@ Cdn type of the accelerated domain. Valid values are `web`, `download`, `video`.
 Certificate config of the accelerated domain. It's a list and consist of at most 1 item.
 
 <h4 class="pdoc-member-header" id="DomainNewArgs-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainNew.ts#L204">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainNew.ts#L204">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -942,7 +942,7 @@ Certificate config of the accelerated domain. It's a list and consist of at most
 Name of the accelerated domain. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or "-", and must not begin or end with "-", and "-" must not in the 3th and 4th character positions at the same time. Suffix `.sh` and `.tel` are not supported.
 
 <h4 class="pdoc-member-header" id="DomainNewArgs-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainNew.ts#L208">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainNew.ts#L208">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -950,7 +950,7 @@ Name of the accelerated domain. This name without suffix can have a string of 1 
 Resource group ID.
 
 <h4 class="pdoc-member-header" id="DomainNewArgs-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainNew.ts#L212">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainNew.ts#L212">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -958,7 +958,7 @@ Resource group ID.
 Scope of the accelerated domain. Valid values are `domestic`, `overseas`, `global`. Default value is `domestic`. This parameter's setting is valid Only for the international users and domestic L3 and above users .
 
 <h4 class="pdoc-member-header" id="DomainNewArgs-sources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainNew.ts#L216">property <b>sources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainNew.ts#L216">property <b>sources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sources: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#DomainNewSources'>DomainNewSources</a>&gt;;</code></pre>
@@ -966,7 +966,7 @@ Scope of the accelerated domain. Valid values are `domestic`, `overseas`, `globa
 The source address list of the accelerated domain. Defaults to null. See Block Sources.
 
 <h4 class="pdoc-member-header" id="DomainNewArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainNew.ts#L220">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainNew.ts#L220">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -974,7 +974,7 @@ The source address list of the accelerated domain. Defaults to null. See Block S
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="DomainNewState" data-link-title="DomainNewState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainNew.ts#L154">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainNew.ts#L154">
         interface <strong>DomainNewState</strong>
     </a>
 </h3>
@@ -984,7 +984,7 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering DomainNew resources.
 
 <h4 class="pdoc-member-header" id="DomainNewState-cdnType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainNew.ts#L158">property <b>cdnType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainNew.ts#L158">property <b>cdnType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cdnType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -992,7 +992,7 @@ Input properties used for looking up and filtering DomainNew resources.
 Cdn type of the accelerated domain. Valid values are `web`, `download`, `video`.
 
 <h4 class="pdoc-member-header" id="DomainNewState-certificateConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainNew.ts#L162">property <b>certificateConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainNew.ts#L162">property <b>certificateConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#DomainNewCertificateConfig'>DomainNewCertificateConfig</a>&gt;;</code></pre>
@@ -1000,7 +1000,7 @@ Cdn type of the accelerated domain. Valid values are `web`, `download`, `video`.
 Certificate config of the accelerated domain. It's a list and consist of at most 1 item.
 
 <h4 class="pdoc-member-header" id="DomainNewState-cname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainNew.ts#L166">property <b>cname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainNew.ts#L166">property <b>cname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1008,7 +1008,7 @@ Certificate config of the accelerated domain. It's a list and consist of at most
 (Available in v1.90.0+) The CNAME of the CDN domain.
 
 <h4 class="pdoc-member-header" id="DomainNewState-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainNew.ts#L170">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainNew.ts#L170">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1016,7 +1016,7 @@ Certificate config of the accelerated domain. It's a list and consist of at most
 Name of the accelerated domain. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or "-", and must not begin or end with "-", and "-" must not in the 3th and 4th character positions at the same time. Suffix `.sh` and `.tel` are not supported.
 
 <h4 class="pdoc-member-header" id="DomainNewState-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainNew.ts#L174">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainNew.ts#L174">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1024,7 +1024,7 @@ Name of the accelerated domain. This name without suffix can have a string of 1 
 Resource group ID.
 
 <h4 class="pdoc-member-header" id="DomainNewState-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainNew.ts#L178">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainNew.ts#L178">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1032,7 +1032,7 @@ Resource group ID.
 Scope of the accelerated domain. Valid values are `domestic`, `overseas`, `global`. Default value is `domestic`. This parameter's setting is valid Only for the international users and domestic L3 and above users .
 
 <h4 class="pdoc-member-header" id="DomainNewState-sources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainNew.ts#L182">property <b>sources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainNew.ts#L182">property <b>sources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#DomainNewSources'>DomainNewSources</a>&gt;;</code></pre>
@@ -1040,7 +1040,7 @@ Scope of the accelerated domain. Valid values are `domestic`, `overseas`, `globa
 The source address list of the accelerated domain. Defaults to null. See Block Sources.
 
 <h4 class="pdoc-member-header" id="DomainNewState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domainNew.ts#L186">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domainNew.ts#L186">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1048,7 +1048,7 @@ The source address list of the accelerated domain. Defaults to null. See Block S
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="DomainState" data-link-title="DomainState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L207">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L207">
         interface <strong>DomainState</strong>
     </a>
 </h3>
@@ -1058,7 +1058,7 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering Domain resources.
 
 <h4 class="pdoc-member-header" id="DomainState-authConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L213">property <b>authConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L213">property <b>authConfig</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1070,7 +1070,7 @@ Use `alicloud_cdn_domain_config` configuration `function_name` and `function_arg
 The auth config of the accelerated domain.
 
 <h4 class="pdoc-member-header" id="DomainState-blockIps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L217">property <b>blockIps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L217">property <b>blockIps</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1079,7 +1079,7 @@ Use `alicloud_cdn_domain_config` configuration `function_name` and `function_arg
 </div>
 <pre class="highlight"><code><span class='kd'></span>blockIps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DomainState-cacheConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L223">property <b>cacheConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L223">property <b>cacheConfigs</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1091,7 +1091,7 @@ Use `alicloud_cdn_domain_config` configuration `function_name` and `function_arg
 The cache configs of the accelerated domain.
 
 <h4 class="pdoc-member-header" id="DomainState-cdnType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L227">property <b>cdnType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L227">property <b>cdnType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cdnType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1099,7 +1099,7 @@ The cache configs of the accelerated domain.
 Cdn type of the accelerated domain. Valid values are `web`, `download`, `video`, `liveStream`.
 
 <h4 class="pdoc-member-header" id="DomainState-certificateConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L231">property <b>certificateConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L231">property <b>certificateConfig</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1108,7 +1108,7 @@ Use `alicloud_cdn_domain_config` configuration `function_name` and `function_arg
 </div>
 <pre class="highlight"><code><span class='kd'></span>certificateConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#DomainCertificateConfig'>DomainCertificateConfig</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DomainState-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L235">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L235">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1116,7 +1116,7 @@ Use `alicloud_cdn_domain_config` configuration `function_name` and `function_arg
 Name of the accelerated domain. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or "-", and must not begin or end with "-", and "-" must not in the 3th and 4th character positions at the same time. Suffix `.sh` and `.tel` are not supported.
 
 <h4 class="pdoc-member-header" id="DomainState-httpHeaderConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L241">property <b>httpHeaderConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L241">property <b>httpHeaderConfigs</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1128,7 +1128,7 @@ Use `alicloud_cdn_domain_config` configuration `function_name` and `function_arg
 The http header configs of the accelerated domain.
 
 <h4 class="pdoc-member-header" id="DomainState-optimizeEnable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L247">property <b>optimizeEnable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L247">property <b>optimizeEnable</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1140,7 +1140,7 @@ Use `alicloud_cdn_domain_config` configuration `function_name` and `function_arg
 Page Optimize config of the accelerated domain. Valid values are `on` and `off`. Default value is `off`. It can effectively remove the page redundant content, reduce the file size and improve the speed of distribution when this parameter value is `on`.
 
 <h4 class="pdoc-member-header" id="DomainState-page404Config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L253">property <b>page404Config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L253">property <b>page404Config</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1152,7 +1152,7 @@ Use `alicloud_cdn_domain_config` configuration `function_name` and `function_arg
 The error page config of the accelerated domain.
 
 <h4 class="pdoc-member-header" id="DomainState-pageCompressEnable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L259">property <b>pageCompressEnable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L259">property <b>pageCompressEnable</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1164,7 +1164,7 @@ Use `alicloud_cdn_domain_config` configuration `function_name` and `function_arg
 Page Compress config of the accelerated domain. Valid values are `on` and `off`. Default value is `off`.
 
 <h4 class="pdoc-member-header" id="DomainState-parameterFilterConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L265">property <b>parameterFilterConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L265">property <b>parameterFilterConfig</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1176,7 +1176,7 @@ Use `alicloud_cdn_domain_config` configuration `function_name` and `function_arg
 The parameter filter config of the accelerated domain.
 
 <h4 class="pdoc-member-header" id="DomainState-rangeEnable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L271">property <b>rangeEnable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L271">property <b>rangeEnable</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1188,7 +1188,7 @@ Use `alicloud_cdn_domain_config` configuration `function_name` and `function_arg
 Range Source config of the accelerated domain. Valid values are `on` and `off`. Default value is `off`.
 
 <h4 class="pdoc-member-header" id="DomainState-referConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L277">property <b>referConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L277">property <b>referConfig</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1200,7 +1200,7 @@ Use `alicloud_cdn_domain_config` configuration `function_name` and `function_arg
 The refer config of the accelerated domain.
 
 <h4 class="pdoc-member-header" id="DomainState-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L281">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L281">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1208,7 +1208,7 @@ The refer config of the accelerated domain.
 Scope of the accelerated domain. Valid values are `domestic`, `overseas`, `global`. Default value is `domestic`. This parameter's setting is valid Only for the international users and domestic L3 and above users .
 
 <h4 class="pdoc-member-header" id="DomainState-sourcePort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L287">property <b>sourcePort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L287">property <b>sourcePort</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1220,7 +1220,7 @@ Use `alicloud_cdn_domain_new` configuration `sources` block `port` argument inst
 Source port of the accelerated domain. Valid values are `80` and `443`. Default value is `80`. You must use `80` when the `sourceType` is `oss`.
 
 <h4 class="pdoc-member-header" id="DomainState-sourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L293">property <b>sourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L293">property <b>sourceType</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1232,7 +1232,7 @@ Use `alicloud_cdn_domain_new` configuration `sources` block `type` argument inst
 Source type of the accelerated domain. Valid values are `ipaddr`, `domain`, `oss`. You must set this parameter when `cdnType` value is not `liveStream`.
 
 <h4 class="pdoc-member-header" id="DomainState-sources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L299">property <b>sources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L299">property <b>sources</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1244,7 +1244,7 @@ Use `alicloud_cdn_domain_new` configuration `sources` argument instead.
 Sources of the accelerated domain. It's a list of domain names or IP address and consists of at most 20 items. You must set this parameter when `cdnType` value is not `liveStream`.
 
 <h4 class="pdoc-member-header" id="DomainState-videoSeekEnable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/domain.ts#L305">property <b>videoSeekEnable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/domain.ts#L305">property <b>videoSeekEnable</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1256,7 +1256,7 @@ Use `alicloud_cdn_domain_config` configuration `function_name` and `function_arg
 Video Seek config of the accelerated domain. Valid values are `on` and `off`. Default value is `off`.
 
 <h3 class="pdoc-module-header" id="GetServiceArgs" data-link-title="GetServiceArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/getService.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/getService.ts#L46">
         interface <strong>GetServiceArgs</strong>
     </a>
 </h3>
@@ -1266,7 +1266,7 @@ Video Seek config of the accelerated domain. Valid values are `on` and `off`. De
 A collection of arguments for invoking getService.
 
 <h4 class="pdoc-member-header" id="GetServiceArgs-enable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/getService.ts#L50">property <b>enable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/getService.ts#L50">property <b>enable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enable?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1274,7 +1274,7 @@ A collection of arguments for invoking getService.
 Setting the value to `On` to enable the service. If has been enabled, return the result. Valid values: "On" or "Off".
 
 <h4 class="pdoc-member-header" id="GetServiceArgs-internetChargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/getService.ts#L56">property <b>internetChargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/getService.ts#L56">property <b>internetChargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>internetChargeType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1284,7 +1284,7 @@ It is required when `enable = on`. If the CDN service has been opened and you ca
 As a note, the updated internet charge type will be effective in the next day zero time.
 
 <h3 class="pdoc-module-header" id="GetServiceResult" data-link-title="GetServiceResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/getService.ts#L62">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/getService.ts#L62">
         interface <strong>GetServiceResult</strong>
     </a>
 </h3>
@@ -1294,7 +1294,7 @@ As a note, the updated internet charge type will be effective in the next day ze
 A collection of values returned by getService.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-changingAffectTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/getService.ts#L66">property <b>changingAffectTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/getService.ts#L66">property <b>changingAffectTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>changingAffectTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1302,7 +1302,7 @@ A collection of values returned by getService.
 The time when the change of the billing method starts to take effect. The time is displayed in GMT.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-changingChargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/getService.ts#L70">property <b>changingChargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/getService.ts#L70">property <b>changingChargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>changingChargeType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1310,12 +1310,12 @@ The time when the change of the billing method starts to take effect. The time i
 The billing method to be effective.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-enable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/getService.ts#L71">property <b>enable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/getService.ts#L71">property <b>enable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enable?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/getService.ts#L75">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/getService.ts#L75">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1323,12 +1323,12 @@ The billing method to be effective.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-internetChargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/getService.ts#L76">property <b>internetChargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/getService.ts#L76">property <b>internetChargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>internetChargeType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceResult-openingTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/getService.ts#L80">property <b>openingTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/getService.ts#L80">property <b>openingTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>openingTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1336,7 +1336,7 @@ The provider-assigned unique ID for this managed resource.
 The time when the CDN service was activated. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cdn/getService.ts#L84">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cdn/getService.ts#L84">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>

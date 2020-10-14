@@ -3,7 +3,7 @@ title: "Module cassandra"
 title_tag: "Module cassandra | Package @pulumi/alicloud | Node.js SDK"
 linktitle: "cassandra"
 meta_desc: "Explore members of the cassandra module in the @pulumi/alicloud package."
-git_sha: "1e99e347a9a110e183f8ab5e2230e5ca3afe964d"
+git_sha: "41aff0da5bb5a1dc4cd69834a220b8e8984f953d"
 block_external_search_index: true
 ---
 
@@ -45,7 +45,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Cluster" data-link-title="Cluster">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L45">
         Resource <strong>Cluster</strong>
     </a>
 </h3>
@@ -90,7 +90,7 @@ const defaultCluster = new alicloud.cassandra.Cluster("default", {
 This is a example for class netType cluster. You can find more detail with the examples/cassandra_cluster dir.
 
 <h4 class="pdoc-member-header" id="Cluster-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L148"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L148"> <b>constructor</b></a>
 </h4>
 
 
@@ -104,7 +104,7 @@ Create a Cluster resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Cluster-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L55">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L55">method <b>get</b></a>
 </h4>
 
 
@@ -115,14 +115,14 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Cluster-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L45">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L45">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Cluster-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L66">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L66">method <b>isInstance</b></a>
 </h4>
 
 
@@ -133,7 +133,7 @@ Returns true if the given object is an instance of Cluster.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Cluster-autoRenew">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L76">property <b>autoRenew</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L76">property <b>autoRenew</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoRenew: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -141,7 +141,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Auto renew of dataCenter-1,`true` or `false`. System default to `false`, valid when payType = PrePaid.
 
 <h4 class="pdoc-member-header" id="Cluster-autoRenewPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L80">property <b>autoRenewPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L80">property <b>autoRenewPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoRenewPeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -149,7 +149,7 @@ Auto renew of dataCenter-1,`true` or `false`. System default to `false`, valid w
 Period of dataCenter-1 auto renew, if auto renew is `true`, one of `1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 60`, valid when payType = Subscription. Unit: month.
 
 <h4 class="pdoc-member-header" id="Cluster-clusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L84">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L84">property <b>clusterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -157,7 +157,7 @@ Period of dataCenter-1 auto renew, if auto renew is `true`, one of `1, 2, 3, 4, 
 Cassandra cluster name. Length must be 2~128 characters long. Only Chinese characters, English letters, numbers, period `.`, underline `_`, or dash `-` are permitted.
 
 <h4 class="pdoc-member-header" id="Cluster-dataCenterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L88">property <b>dataCenterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L88">property <b>dataCenterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dataCenterName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -165,7 +165,7 @@ Cassandra cluster name. Length must be 2~128 characters long. Only Chinese chara
 Cassandra dataCenter-1 name. Length must be 2~128 characters long. Only Chinese characters, English letters, numbers, period `.`, underline `_`, or dash `-` are permitted.
 
 <h4 class="pdoc-member-header" id="Cluster-diskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L94">property <b>diskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L94">property <b>diskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>diskSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -175,7 +175,7 @@ User-defined Cassandra dataCenter-1 one node's storage space.Unit: GB. Value ran
 - 80-GB increments.
 
 <h4 class="pdoc-member-header" id="Cluster-diskType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L98">property <b>diskType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L98">property <b>diskType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>diskType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -183,12 +183,12 @@ User-defined Cassandra dataCenter-1 one node's storage space.Unit: GB. Value ran
 The disk type of Cassandra dataCenter-1. Valid values are `cloudSsd`, `cloudEfficiency`, `localHddPro`, `localSsdPro`, localDisk size is fixed.
 
 <h4 class="pdoc-member-header" id="Cluster-enablePublic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L99">property <b>enablePublic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L99">property <b>enablePublic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enablePublic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L45">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L45">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -197,7 +197,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Cluster-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L103">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L103">property <b>instanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -205,7 +205,7 @@ deployments and may be missing (undefined) during planning phases.
 Instance specification. See [Instance specifications](https://help.aliyun.com/document_detail/157445.html). Or you can call describeInstanceType api.
 
 <h4 class="pdoc-member-header" id="Cluster-ipWhite">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L107">property <b>ipWhite</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L107">property <b>ipWhite</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipWhite: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -213,7 +213,7 @@ Instance specification. See [Instance specifications](https://help.aliyun.com/do
 Set the instance's IP whitelist in VPC network.
 
 <h4 class="pdoc-member-header" id="Cluster-maintainEndTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L111">property <b>maintainEndTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L111">property <b>maintainEndTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maintainEndTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -221,7 +221,7 @@ Set the instance's IP whitelist in VPC network.
 The end time of the operation and maintenance time period of the cluster, in the format of HH:mmZ (UTC time).
 
 <h4 class="pdoc-member-header" id="Cluster-maintainStartTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L115">property <b>maintainStartTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L115">property <b>maintainStartTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maintainStartTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -229,7 +229,7 @@ The end time of the operation and maintenance time period of the cluster, in the
 The start time of the operation and maintenance time period of the cluster, in the format of HH:mmZ (UTC time).
 
 <h4 class="pdoc-member-header" id="Cluster-majorVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L119">property <b>majorVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L119">property <b>majorVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>majorVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -237,7 +237,7 @@ The start time of the operation and maintenance time period of the cluster, in t
 Cassandra major version. Now only support version `3.11`.
 
 <h4 class="pdoc-member-header" id="Cluster-nodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L123">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L123">property <b>nodeCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodeCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -245,12 +245,12 @@ Cassandra major version. Now only support version `3.11`.
 The node count of Cassandra dataCenter-1 default to 2.
 
 <h4 class="pdoc-member-header" id="Cluster-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L124">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L124">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-payType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L128">property <b>payType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L128">property <b>payType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>payType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -258,22 +258,22 @@ The node count of Cassandra dataCenter-1 default to 2.
 The pay type of Cassandra dataCenter-1. Valid values are `Subscription`, `PayAsYouGo`,System default to `PayAsYouGo`.
 
 <h4 class="pdoc-member-header" id="Cluster-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L129">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L129">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>period: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-periodUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L130">property <b>periodUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L130">property <b>periodUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>periodUnit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-publicPoints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L131">property <b>publicPoints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L131">property <b>publicPoints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>publicPoints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-securityGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L135">property <b>securityGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L135">property <b>securityGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>securityGroups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -281,12 +281,12 @@ The pay type of Cassandra dataCenter-1. Valid values are `Subscription`, `PayAsY
 A list of security group ids to associate with.
 
 <h4 class="pdoc-member-header" id="Cluster-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L136">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L136">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L140">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L140">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -294,7 +294,7 @@ A list of security group ids to associate with.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Cluster-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L45">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L45">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -303,7 +303,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Cluster-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L144">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L144">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vswitchId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -311,7 +311,7 @@ deployments.
 The vswitchId of dataCenter-1, can not empty.
 
 <h4 class="pdoc-member-header" id="Cluster-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L148">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L148">property <b>zoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>zoneId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -319,7 +319,7 @@ The vswitchId of dataCenter-1, can not empty.
 The Zone to launch the Cassandra cluster. If vswitchId is not empty, this zoneId can be "" or consistent.
 
 <h3 class="pdoc-module-header" id="DataCenter" data-link-title="DataCenter">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L58">
         Resource <strong>DataCenter</strong>
     </a>
 </h3>
@@ -377,7 +377,7 @@ const defaultDataCenter = new alicloud.cassandra.DataCenter("defaultDataCenter",
 This is a example for class netType dataCenter. You can find more detail with the examples/cassandra_data_center dir.
 
 <h4 class="pdoc-member-header" id="DataCenter-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L137"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L137"> <b>constructor</b></a>
 </h4>
 
 
@@ -391,7 +391,7 @@ Create a DataCenter resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DataCenter-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L68">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L68">method <b>get</b></a>
 </h4>
 
 
@@ -402,14 +402,14 @@ Get an existing DataCenter resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DataCenter-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L58">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L58">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DataCenter-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L79">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L79">method <b>isInstance</b></a>
 </h4>
 
 
@@ -420,7 +420,7 @@ Returns true if the given object is an instance of DataCenter.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DataCenter-autoRenew">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L89">property <b>autoRenew</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L89">property <b>autoRenew</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoRenew: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -428,7 +428,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Auto renew of dataCenter-2,`true` or `false`. System default to `false`, valid when payType = Subscription.
 
 <h4 class="pdoc-member-header" id="DataCenter-autoRenewPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L93">property <b>autoRenewPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L93">property <b>autoRenewPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoRenewPeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -436,7 +436,7 @@ Auto renew of dataCenter-2,`true` or `false`. System default to `false`, valid w
 Period of dataCenter-2 auto renew, if auto renew is `true`, one of `1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 60`, valid when payType = Subscription. Unit: month.
 
 <h4 class="pdoc-member-header" id="DataCenter-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L97">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L97">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -444,12 +444,12 @@ Period of dataCenter-2 auto renew, if auto renew is `true`, one of `1, 2, 3, 4, 
 Cassandra cluster id of dataCenter-2 belongs to.
 
 <h4 class="pdoc-member-header" id="DataCenter-dataCenterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L98">property <b>dataCenterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L98">property <b>dataCenterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dataCenterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DataCenter-dataCenterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L102">property <b>dataCenterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L102">property <b>dataCenterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dataCenterName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -457,7 +457,7 @@ Cassandra cluster id of dataCenter-2 belongs to.
 Cassandra dataCenter-2 name. Length must be 2~128 characters long. Only Chinese characters, English letters, numbers, period `.`, underline `_`, or dash `-` are permitted.
 
 <h4 class="pdoc-member-header" id="DataCenter-diskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L108">property <b>diskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L108">property <b>diskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>diskSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -467,7 +467,7 @@ User-defined Cassandra dataCenter one core node's storage space.Unit: GB. Value 
 - 80-GB increments.
 
 <h4 class="pdoc-member-header" id="DataCenter-diskType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L112">property <b>diskType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L112">property <b>diskType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>diskType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -475,12 +475,12 @@ User-defined Cassandra dataCenter one core node's storage space.Unit: GB. Value 
 The disk type of Cassandra dataCenter-2. Valid values are `cloudSsd`, `cloudEfficiency`, `localHddPro`, `localSsdPro`, localDisk size is fixed.
 
 <h4 class="pdoc-member-header" id="DataCenter-enablePublic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L113">property <b>enablePublic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L113">property <b>enablePublic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enablePublic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DataCenter-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L58">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L58">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -489,7 +489,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DataCenter-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L117">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L117">property <b>instanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -497,7 +497,7 @@ deployments and may be missing (undefined) during planning phases.
 Instance specification. See [Instance specifications](https://help.aliyun.com/document_detail/157445.html). Or you can call describeInstanceType api.
 
 <h4 class="pdoc-member-header" id="DataCenter-nodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L121">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L121">property <b>nodeCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodeCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -505,7 +505,7 @@ Instance specification. See [Instance specifications](https://help.aliyun.com/do
 The node count of Cassandra dataCenter-2, default to 2.
 
 <h4 class="pdoc-member-header" id="DataCenter-payType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L125">property <b>payType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L125">property <b>payType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>payType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -513,27 +513,27 @@ The node count of Cassandra dataCenter-2, default to 2.
 The pay type of Cassandra dataCenter-2. Valid values are `Subscription`, `PayAsYouGo`. System default to `PayAsYouGo`.
 
 <h4 class="pdoc-member-header" id="DataCenter-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L126">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L126">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>period: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DataCenter-periodUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L127">property <b>periodUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L127">property <b>periodUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>periodUnit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DataCenter-publicPoints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L128">property <b>publicPoints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L128">property <b>publicPoints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>publicPoints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DataCenter-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L129">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L129">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DataCenter-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L58">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L58">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -542,7 +542,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="DataCenter-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L133">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L133">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vswitchId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -550,7 +550,7 @@ deployments.
 The vswitchId of dataCenter-2, mast different of vswitch_id(dc-1), can not empty.
 
 <h4 class="pdoc-member-header" id="DataCenter-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L137">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L137">property <b>zoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>zoneId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -560,7 +560,7 @@ The Zone to launch the Cassandra dataCenter-2. If vswitchId is not empty, this z
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getClusters" data-link-title="getClusters">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/getClusters.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/getClusters.ts#L26">
         Function <strong>getClusters</strong>
     </a>
 </h3>
@@ -586,7 +586,7 @@ const cassandra = pulumi.output(alicloud.cassandra.getClusters({
 ```
 
 <h3 class="pdoc-module-header" id="getDataCenters" data-link-title="getDataCenters">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/getDataCenters.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/getDataCenters.ts#L27">
         Function <strong>getDataCenters</strong>
     </a>
 </h3>
@@ -613,7 +613,7 @@ const cassandra = pulumi.output(alicloud.cassandra.getDataCenters({
 ```
 
 <h3 class="pdoc-module-header" id="getZones" data-link-title="getZones">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/getZones.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/getZones.ts#L26">
         Function <strong>getZones</strong>
     </a>
 </h3>
@@ -641,7 +641,7 @@ const cassandra = new alicloud.cassandra.Cluster("cassandra", {zoneId: zonesIds.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ClusterArgs" data-link-title="ClusterArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L322">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L322">
         interface <strong>ClusterArgs</strong>
     </a>
 </h3>
@@ -651,7 +651,7 @@ const cassandra = new alicloud.cassandra.Cluster("cassandra", {zoneId: zonesIds.
 The set of arguments for constructing a Cluster resource.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-autoRenew">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L326">property <b>autoRenew</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L326">property <b>autoRenew</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoRenew?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -659,7 +659,7 @@ The set of arguments for constructing a Cluster resource.
 Auto renew of dataCenter-1,`true` or `false`. System default to `false`, valid when payType = PrePaid.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-autoRenewPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L330">property <b>autoRenewPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L330">property <b>autoRenewPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoRenewPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -667,7 +667,7 @@ Auto renew of dataCenter-1,`true` or `false`. System default to `false`, valid w
 Period of dataCenter-1 auto renew, if auto renew is `true`, one of `1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 60`, valid when payType = Subscription. Unit: month.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-clusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L334">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L334">property <b>clusterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -675,7 +675,7 @@ Period of dataCenter-1 auto renew, if auto renew is `true`, one of `1, 2, 3, 4, 
 Cassandra cluster name. Length must be 2~128 characters long. Only Chinese characters, English letters, numbers, period `.`, underline `_`, or dash `-` are permitted.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-dataCenterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L338">property <b>dataCenterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L338">property <b>dataCenterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataCenterName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -683,7 +683,7 @@ Cassandra cluster name. Length must be 2~128 characters long. Only Chinese chara
 Cassandra dataCenter-1 name. Length must be 2~128 characters long. Only Chinese characters, English letters, numbers, period `.`, underline `_`, or dash `-` are permitted.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-diskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L344">property <b>diskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L344">property <b>diskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -693,7 +693,7 @@ User-defined Cassandra dataCenter-1 one node's storage space.Unit: GB. Value ran
 - 80-GB increments.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-diskType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L348">property <b>diskType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L348">property <b>diskType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -701,12 +701,12 @@ User-defined Cassandra dataCenter-1 one node's storage space.Unit: GB. Value ran
 The disk type of Cassandra dataCenter-1. Valid values are `cloudSsd`, `cloudEfficiency`, `localHddPro`, `localSsdPro`, localDisk size is fixed.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-enablePublic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L349">property <b>enablePublic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L349">property <b>enablePublic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enablePublic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterArgs-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L353">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L353">property <b>instanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -714,7 +714,7 @@ The disk type of Cassandra dataCenter-1. Valid values are `cloudSsd`, `cloudEffi
 Instance specification. See [Instance specifications](https://help.aliyun.com/document_detail/157445.html). Or you can call describeInstanceType api.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-ipWhite">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L357">property <b>ipWhite</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L357">property <b>ipWhite</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipWhite?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -722,7 +722,7 @@ Instance specification. See [Instance specifications](https://help.aliyun.com/do
 Set the instance's IP whitelist in VPC network.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-maintainEndTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L361">property <b>maintainEndTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L361">property <b>maintainEndTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maintainEndTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -730,7 +730,7 @@ Set the instance's IP whitelist in VPC network.
 The end time of the operation and maintenance time period of the cluster, in the format of HH:mmZ (UTC time).
 
 <h4 class="pdoc-member-header" id="ClusterArgs-maintainStartTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L365">property <b>maintainStartTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L365">property <b>maintainStartTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maintainStartTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -738,7 +738,7 @@ The end time of the operation and maintenance time period of the cluster, in the
 The start time of the operation and maintenance time period of the cluster, in the format of HH:mmZ (UTC time).
 
 <h4 class="pdoc-member-header" id="ClusterArgs-majorVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L369">property <b>majorVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L369">property <b>majorVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>majorVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -746,7 +746,7 @@ The start time of the operation and maintenance time period of the cluster, in t
 Cassandra major version. Now only support version `3.11`.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-nodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L373">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L373">property <b>nodeCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -754,12 +754,12 @@ Cassandra major version. Now only support version `3.11`.
 The node count of Cassandra dataCenter-1 default to 2.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L374">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L374">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterArgs-payType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L378">property <b>payType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L378">property <b>payType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>payType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -767,17 +767,17 @@ The node count of Cassandra dataCenter-1 default to 2.
 The pay type of Cassandra dataCenter-1. Valid values are `Subscription`, `PayAsYouGo`,System default to `PayAsYouGo`.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L379">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L379">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterArgs-periodUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L380">property <b>periodUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L380">property <b>periodUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>periodUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterArgs-securityGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L384">property <b>securityGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L384">property <b>securityGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -785,7 +785,7 @@ The pay type of Cassandra dataCenter-1. Valid values are `Subscription`, `PayAsY
 A list of security group ids to associate with.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L388">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L388">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -793,7 +793,7 @@ A list of security group ids to associate with.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L392">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L392">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vswitchId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -801,7 +801,7 @@ A mapping of tags to assign to the resource.
 The vswitchId of dataCenter-1, can not empty.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L396">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L396">property <b>zoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -809,7 +809,7 @@ The vswitchId of dataCenter-1, can not empty.
 The Zone to launch the Cassandra cluster. If vswitchId is not empty, this zoneId can be "" or consistent.
 
 <h3 class="pdoc-module-header" id="ClusterState" data-link-title="ClusterState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L240">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L240">
         interface <strong>ClusterState</strong>
     </a>
 </h3>
@@ -819,7 +819,7 @@ The Zone to launch the Cassandra cluster. If vswitchId is not empty, this zoneId
 Input properties used for looking up and filtering Cluster resources.
 
 <h4 class="pdoc-member-header" id="ClusterState-autoRenew">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L244">property <b>autoRenew</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L244">property <b>autoRenew</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoRenew?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -827,7 +827,7 @@ Input properties used for looking up and filtering Cluster resources.
 Auto renew of dataCenter-1,`true` or `false`. System default to `false`, valid when payType = PrePaid.
 
 <h4 class="pdoc-member-header" id="ClusterState-autoRenewPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L248">property <b>autoRenewPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L248">property <b>autoRenewPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoRenewPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -835,7 +835,7 @@ Auto renew of dataCenter-1,`true` or `false`. System default to `false`, valid w
 Period of dataCenter-1 auto renew, if auto renew is `true`, one of `1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 60`, valid when payType = Subscription. Unit: month.
 
 <h4 class="pdoc-member-header" id="ClusterState-clusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L252">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L252">property <b>clusterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -843,7 +843,7 @@ Period of dataCenter-1 auto renew, if auto renew is `true`, one of `1, 2, 3, 4, 
 Cassandra cluster name. Length must be 2~128 characters long. Only Chinese characters, English letters, numbers, period `.`, underline `_`, or dash `-` are permitted.
 
 <h4 class="pdoc-member-header" id="ClusterState-dataCenterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L256">property <b>dataCenterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L256">property <b>dataCenterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataCenterName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -851,7 +851,7 @@ Cassandra cluster name. Length must be 2~128 characters long. Only Chinese chara
 Cassandra dataCenter-1 name. Length must be 2~128 characters long. Only Chinese characters, English letters, numbers, period `.`, underline `_`, or dash `-` are permitted.
 
 <h4 class="pdoc-member-header" id="ClusterState-diskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L262">property <b>diskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L262">property <b>diskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -861,7 +861,7 @@ User-defined Cassandra dataCenter-1 one node's storage space.Unit: GB. Value ran
 - 80-GB increments.
 
 <h4 class="pdoc-member-header" id="ClusterState-diskType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L266">property <b>diskType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L266">property <b>diskType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -869,12 +869,12 @@ User-defined Cassandra dataCenter-1 one node's storage space.Unit: GB. Value ran
 The disk type of Cassandra dataCenter-1. Valid values are `cloudSsd`, `cloudEfficiency`, `localHddPro`, `localSsdPro`, localDisk size is fixed.
 
 <h4 class="pdoc-member-header" id="ClusterState-enablePublic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L267">property <b>enablePublic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L267">property <b>enablePublic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enablePublic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L271">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L271">property <b>instanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -882,7 +882,7 @@ The disk type of Cassandra dataCenter-1. Valid values are `cloudSsd`, `cloudEffi
 Instance specification. See [Instance specifications](https://help.aliyun.com/document_detail/157445.html). Or you can call describeInstanceType api.
 
 <h4 class="pdoc-member-header" id="ClusterState-ipWhite">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L275">property <b>ipWhite</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L275">property <b>ipWhite</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipWhite?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -890,7 +890,7 @@ Instance specification. See [Instance specifications](https://help.aliyun.com/do
 Set the instance's IP whitelist in VPC network.
 
 <h4 class="pdoc-member-header" id="ClusterState-maintainEndTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L279">property <b>maintainEndTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L279">property <b>maintainEndTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maintainEndTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -898,7 +898,7 @@ Set the instance's IP whitelist in VPC network.
 The end time of the operation and maintenance time period of the cluster, in the format of HH:mmZ (UTC time).
 
 <h4 class="pdoc-member-header" id="ClusterState-maintainStartTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L283">property <b>maintainStartTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L283">property <b>maintainStartTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maintainStartTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -906,7 +906,7 @@ The end time of the operation and maintenance time period of the cluster, in the
 The start time of the operation and maintenance time period of the cluster, in the format of HH:mmZ (UTC time).
 
 <h4 class="pdoc-member-header" id="ClusterState-majorVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L287">property <b>majorVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L287">property <b>majorVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>majorVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -914,7 +914,7 @@ The start time of the operation and maintenance time period of the cluster, in t
 Cassandra major version. Now only support version `3.11`.
 
 <h4 class="pdoc-member-header" id="ClusterState-nodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L291">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L291">property <b>nodeCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -922,12 +922,12 @@ Cassandra major version. Now only support version `3.11`.
 The node count of Cassandra dataCenter-1 default to 2.
 
 <h4 class="pdoc-member-header" id="ClusterState-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L292">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L292">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-payType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L296">property <b>payType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L296">property <b>payType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>payType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -935,22 +935,22 @@ The node count of Cassandra dataCenter-1 default to 2.
 The pay type of Cassandra dataCenter-1. Valid values are `Subscription`, `PayAsYouGo`,System default to `PayAsYouGo`.
 
 <h4 class="pdoc-member-header" id="ClusterState-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L297">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L297">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-periodUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L298">property <b>periodUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L298">property <b>periodUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>periodUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-publicPoints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L299">property <b>publicPoints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L299">property <b>publicPoints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicPoints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-securityGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L303">property <b>securityGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L303">property <b>securityGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -958,12 +958,12 @@ The pay type of Cassandra dataCenter-1. Valid values are `Subscription`, `PayAsY
 A list of security group ids to associate with.
 
 <h4 class="pdoc-member-header" id="ClusterState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L304">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L304">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L308">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L308">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -971,7 +971,7 @@ A list of security group ids to associate with.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ClusterState-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L312">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L312">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vswitchId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -979,7 +979,7 @@ A mapping of tags to assign to the resource.
 The vswitchId of dataCenter-1, can not empty.
 
 <h4 class="pdoc-member-header" id="ClusterState-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/cluster.ts#L316">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/cluster.ts#L316">property <b>zoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -987,7 +987,7 @@ The vswitchId of dataCenter-1, can not empty.
 The Zone to launch the Cassandra cluster. If vswitchId is not empty, this zoneId can be "" or consistent.
 
 <h3 class="pdoc-module-header" id="DataCenterArgs" data-link-title="DataCenterArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L275">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L275">
         interface <strong>DataCenterArgs</strong>
     </a>
 </h3>
@@ -997,7 +997,7 @@ The Zone to launch the Cassandra cluster. If vswitchId is not empty, this zoneId
 The set of arguments for constructing a DataCenter resource.
 
 <h4 class="pdoc-member-header" id="DataCenterArgs-autoRenew">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L279">property <b>autoRenew</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L279">property <b>autoRenew</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoRenew?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1005,7 +1005,7 @@ The set of arguments for constructing a DataCenter resource.
 Auto renew of dataCenter-2,`true` or `false`. System default to `false`, valid when payType = Subscription.
 
 <h4 class="pdoc-member-header" id="DataCenterArgs-autoRenewPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L283">property <b>autoRenewPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L283">property <b>autoRenewPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoRenewPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1013,7 +1013,7 @@ Auto renew of dataCenter-2,`true` or `false`. System default to `false`, valid w
 Period of dataCenter-2 auto renew, if auto renew is `true`, one of `1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 60`, valid when payType = Subscription. Unit: month.
 
 <h4 class="pdoc-member-header" id="DataCenterArgs-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L287">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L287">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1021,7 +1021,7 @@ Period of dataCenter-2 auto renew, if auto renew is `true`, one of `1, 2, 3, 4, 
 Cassandra cluster id of dataCenter-2 belongs to.
 
 <h4 class="pdoc-member-header" id="DataCenterArgs-dataCenterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L291">property <b>dataCenterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L291">property <b>dataCenterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataCenterName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1029,7 +1029,7 @@ Cassandra cluster id of dataCenter-2 belongs to.
 Cassandra dataCenter-2 name. Length must be 2~128 characters long. Only Chinese characters, English letters, numbers, period `.`, underline `_`, or dash `-` are permitted.
 
 <h4 class="pdoc-member-header" id="DataCenterArgs-diskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L297">property <b>diskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L297">property <b>diskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1039,7 +1039,7 @@ User-defined Cassandra dataCenter one core node's storage space.Unit: GB. Value 
 - 80-GB increments.
 
 <h4 class="pdoc-member-header" id="DataCenterArgs-diskType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L301">property <b>diskType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L301">property <b>diskType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1047,12 +1047,12 @@ User-defined Cassandra dataCenter one core node's storage space.Unit: GB. Value 
 The disk type of Cassandra dataCenter-2. Valid values are `cloudSsd`, `cloudEfficiency`, `localHddPro`, `localSsdPro`, localDisk size is fixed.
 
 <h4 class="pdoc-member-header" id="DataCenterArgs-enablePublic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L302">property <b>enablePublic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L302">property <b>enablePublic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enablePublic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DataCenterArgs-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L306">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L306">property <b>instanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1060,7 +1060,7 @@ The disk type of Cassandra dataCenter-2. Valid values are `cloudSsd`, `cloudEffi
 Instance specification. See [Instance specifications](https://help.aliyun.com/document_detail/157445.html). Or you can call describeInstanceType api.
 
 <h4 class="pdoc-member-header" id="DataCenterArgs-nodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L310">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L310">property <b>nodeCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1068,7 +1068,7 @@ Instance specification. See [Instance specifications](https://help.aliyun.com/do
 The node count of Cassandra dataCenter-2, default to 2.
 
 <h4 class="pdoc-member-header" id="DataCenterArgs-payType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L314">property <b>payType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L314">property <b>payType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>payType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1076,17 +1076,17 @@ The node count of Cassandra dataCenter-2, default to 2.
 The pay type of Cassandra dataCenter-2. Valid values are `Subscription`, `PayAsYouGo`. System default to `PayAsYouGo`.
 
 <h4 class="pdoc-member-header" id="DataCenterArgs-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L315">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L315">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DataCenterArgs-periodUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L316">property <b>periodUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L316">property <b>periodUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>periodUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DataCenterArgs-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L320">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L320">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vswitchId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1094,7 +1094,7 @@ The pay type of Cassandra dataCenter-2. Valid values are `Subscription`, `PayAsY
 The vswitchId of dataCenter-2, mast different of vswitch_id(dc-1), can not empty.
 
 <h4 class="pdoc-member-header" id="DataCenterArgs-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L324">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L324">property <b>zoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1102,7 +1102,7 @@ The vswitchId of dataCenter-2, mast different of vswitch_id(dc-1), can not empty
 The Zone to launch the Cassandra dataCenter-2. If vswitchId is not empty, this zoneId can be "" or consistent.
 
 <h3 class="pdoc-module-header" id="DataCenterState" data-link-title="DataCenterState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L217">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L217">
         interface <strong>DataCenterState</strong>
     </a>
 </h3>
@@ -1112,7 +1112,7 @@ The Zone to launch the Cassandra dataCenter-2. If vswitchId is not empty, this z
 Input properties used for looking up and filtering DataCenter resources.
 
 <h4 class="pdoc-member-header" id="DataCenterState-autoRenew">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L221">property <b>autoRenew</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L221">property <b>autoRenew</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoRenew?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1120,7 +1120,7 @@ Input properties used for looking up and filtering DataCenter resources.
 Auto renew of dataCenter-2,`true` or `false`. System default to `false`, valid when payType = Subscription.
 
 <h4 class="pdoc-member-header" id="DataCenterState-autoRenewPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L225">property <b>autoRenewPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L225">property <b>autoRenewPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoRenewPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1128,7 +1128,7 @@ Auto renew of dataCenter-2,`true` or `false`. System default to `false`, valid w
 Period of dataCenter-2 auto renew, if auto renew is `true`, one of `1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 60`, valid when payType = Subscription. Unit: month.
 
 <h4 class="pdoc-member-header" id="DataCenterState-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L229">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L229">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1136,12 +1136,12 @@ Period of dataCenter-2 auto renew, if auto renew is `true`, one of `1, 2, 3, 4, 
 Cassandra cluster id of dataCenter-2 belongs to.
 
 <h4 class="pdoc-member-header" id="DataCenterState-dataCenterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L230">property <b>dataCenterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L230">property <b>dataCenterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataCenterId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DataCenterState-dataCenterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L234">property <b>dataCenterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L234">property <b>dataCenterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataCenterName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1149,7 +1149,7 @@ Cassandra cluster id of dataCenter-2 belongs to.
 Cassandra dataCenter-2 name. Length must be 2~128 characters long. Only Chinese characters, English letters, numbers, period `.`, underline `_`, or dash `-` are permitted.
 
 <h4 class="pdoc-member-header" id="DataCenterState-diskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L240">property <b>diskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L240">property <b>diskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1159,7 +1159,7 @@ User-defined Cassandra dataCenter one core node's storage space.Unit: GB. Value 
 - 80-GB increments.
 
 <h4 class="pdoc-member-header" id="DataCenterState-diskType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L244">property <b>diskType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L244">property <b>diskType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1167,12 +1167,12 @@ User-defined Cassandra dataCenter one core node's storage space.Unit: GB. Value 
 The disk type of Cassandra dataCenter-2. Valid values are `cloudSsd`, `cloudEfficiency`, `localHddPro`, `localSsdPro`, localDisk size is fixed.
 
 <h4 class="pdoc-member-header" id="DataCenterState-enablePublic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L245">property <b>enablePublic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L245">property <b>enablePublic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enablePublic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DataCenterState-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L249">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L249">property <b>instanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1180,7 +1180,7 @@ The disk type of Cassandra dataCenter-2. Valid values are `cloudSsd`, `cloudEffi
 Instance specification. See [Instance specifications](https://help.aliyun.com/document_detail/157445.html). Or you can call describeInstanceType api.
 
 <h4 class="pdoc-member-header" id="DataCenterState-nodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L253">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L253">property <b>nodeCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1188,7 +1188,7 @@ Instance specification. See [Instance specifications](https://help.aliyun.com/do
 The node count of Cassandra dataCenter-2, default to 2.
 
 <h4 class="pdoc-member-header" id="DataCenterState-payType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L257">property <b>payType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L257">property <b>payType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>payType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1196,27 +1196,27 @@ The node count of Cassandra dataCenter-2, default to 2.
 The pay type of Cassandra dataCenter-2. Valid values are `Subscription`, `PayAsYouGo`. System default to `PayAsYouGo`.
 
 <h4 class="pdoc-member-header" id="DataCenterState-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L258">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L258">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DataCenterState-periodUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L259">property <b>periodUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L259">property <b>periodUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>periodUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DataCenterState-publicPoints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L260">property <b>publicPoints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L260">property <b>publicPoints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicPoints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DataCenterState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L261">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L261">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DataCenterState-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L265">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L265">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vswitchId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1224,7 +1224,7 @@ The pay type of Cassandra dataCenter-2. Valid values are `Subscription`, `PayAsY
 The vswitchId of dataCenter-2, mast different of vswitch_id(dc-1), can not empty.
 
 <h4 class="pdoc-member-header" id="DataCenterState-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/dataCenter.ts#L269">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/dataCenter.ts#L269">property <b>zoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1232,7 +1232,7 @@ The vswitchId of dataCenter-2, mast different of vswitch_id(dc-1), can not empty
 The Zone to launch the Cassandra dataCenter-2. If vswitchId is not empty, this zoneId can be "" or consistent.
 
 <h3 class="pdoc-module-header" id="GetClustersArgs" data-link-title="GetClustersArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/getClusters.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/getClusters.ts#L46">
         interface <strong>GetClustersArgs</strong>
     </a>
 </h3>
@@ -1242,7 +1242,7 @@ The Zone to launch the Cassandra dataCenter-2. If vswitchId is not empty, this z
 A collection of arguments for invoking getClusters.
 
 <h4 class="pdoc-member-header" id="GetClustersArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/getClusters.ts#L50">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/getClusters.ts#L50">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1250,7 +1250,7 @@ A collection of arguments for invoking getClusters.
 The list of Cassandra cluster ids.
 
 <h4 class="pdoc-member-header" id="GetClustersArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/getClusters.ts#L54">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/getClusters.ts#L54">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1258,12 +1258,12 @@ The list of Cassandra cluster ids.
 A regex string to apply to the cluster name.
 
 <h4 class="pdoc-member-header" id="GetClustersArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/getClusters.ts#L55">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/getClusters.ts#L55">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClustersArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/getClusters.ts#L59">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/getClusters.ts#L59">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -1271,7 +1271,7 @@ A regex string to apply to the cluster name.
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="GetClustersResult" data-link-title="GetClustersResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/getClusters.ts#L65">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/getClusters.ts#L65">
         interface <strong>GetClustersResult</strong>
     </a>
 </h3>
@@ -1281,7 +1281,7 @@ A mapping of tags to assign to the resource.
 A collection of values returned by getClusters.
 
 <h4 class="pdoc-member-header" id="GetClustersResult-clusters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/getClusters.ts#L69">property <b>clusters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/getClusters.ts#L69">property <b>clusters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusters: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetClustersCluster'>GetClustersCluster</a>[];</code></pre>
@@ -1289,7 +1289,7 @@ A collection of values returned by getClusters.
 A list of Cassandra clusters. Its every element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetClustersResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/getClusters.ts#L73">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/getClusters.ts#L73">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1297,7 +1297,7 @@ A list of Cassandra clusters. Its every element contains the following attribute
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetClustersResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/getClusters.ts#L77">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/getClusters.ts#L77">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1305,12 +1305,12 @@ The provider-assigned unique ID for this managed resource.
 The list of Cassandra cluster ids.
 
 <h4 class="pdoc-member-header" id="GetClustersResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/getClusters.ts#L78">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/getClusters.ts#L78">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClustersResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/getClusters.ts#L82">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/getClusters.ts#L82">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1318,12 +1318,12 @@ The list of Cassandra cluster ids.
 The name list of Cassandra clusters.
 
 <h4 class="pdoc-member-header" id="GetClustersResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/getClusters.ts#L83">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/getClusters.ts#L83">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClustersResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/getClusters.ts#L87">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/getClusters.ts#L87">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -1331,7 +1331,7 @@ The name list of Cassandra clusters.
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="GetDataCentersArgs" data-link-title="GetDataCentersArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/getDataCenters.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/getDataCenters.ts#L46">
         interface <strong>GetDataCentersArgs</strong>
     </a>
 </h3>
@@ -1341,7 +1341,7 @@ A mapping of tags to assign to the resource.
 A collection of arguments for invoking getDataCenters.
 
 <h4 class="pdoc-member-header" id="GetDataCentersArgs-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/getDataCenters.ts#L50">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/getDataCenters.ts#L50">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1349,7 +1349,7 @@ A collection of arguments for invoking getDataCenters.
 The cluster id of dataCenters belongs to.
 
 <h4 class="pdoc-member-header" id="GetDataCentersArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/getDataCenters.ts#L54">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/getDataCenters.ts#L54">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1357,7 +1357,7 @@ The cluster id of dataCenters belongs to.
 The list of Cassandra data center ids.
 
 <h4 class="pdoc-member-header" id="GetDataCentersArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/getDataCenters.ts#L58">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/getDataCenters.ts#L58">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1365,12 +1365,12 @@ The list of Cassandra data center ids.
 A regex string to apply to the cluster name.
 
 <h4 class="pdoc-member-header" id="GetDataCentersArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/getDataCenters.ts#L59">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/getDataCenters.ts#L59">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetDataCentersResult" data-link-title="GetDataCentersResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/getDataCenters.ts#L65">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/getDataCenters.ts#L65">
         interface <strong>GetDataCentersResult</strong>
     </a>
 </h3>
@@ -1380,7 +1380,7 @@ A regex string to apply to the cluster name.
 A collection of values returned by getDataCenters.
 
 <h4 class="pdoc-member-header" id="GetDataCentersResult-centers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/getDataCenters.ts#L69">property <b>centers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/getDataCenters.ts#L69">property <b>centers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>centers: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetDataCentersCenter'>GetDataCentersCenter</a>[];</code></pre>
@@ -1388,7 +1388,7 @@ A collection of values returned by getDataCenters.
 A list of Cassandra data centers. Its every element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetDataCentersResult-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/getDataCenters.ts#L73">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/getDataCenters.ts#L73">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1396,7 +1396,7 @@ A list of Cassandra data centers. Its every element contains the following attri
 The ID of the Cassandra cluster.
 
 <h4 class="pdoc-member-header" id="GetDataCentersResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/getDataCenters.ts#L77">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/getDataCenters.ts#L77">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1404,7 +1404,7 @@ The ID of the Cassandra cluster.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDataCentersResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/getDataCenters.ts#L81">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/getDataCenters.ts#L81">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1412,12 +1412,12 @@ The provider-assigned unique ID for this managed resource.
 The list of Cassandra data center ids.
 
 <h4 class="pdoc-member-header" id="GetDataCentersResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/getDataCenters.ts#L82">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/getDataCenters.ts#L82">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDataCentersResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/getDataCenters.ts#L86">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/getDataCenters.ts#L86">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1425,12 +1425,12 @@ The list of Cassandra data center ids.
 The name list of Cassandra data centers.
 
 <h4 class="pdoc-member-header" id="GetDataCentersResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/getDataCenters.ts#L87">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/getDataCenters.ts#L87">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetZonesArgs" data-link-title="GetZonesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/getZones.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/getZones.ts#L44">
         interface <strong>GetZonesArgs</strong>
     </a>
 </h3>
@@ -1440,7 +1440,7 @@ The name list of Cassandra data centers.
 A collection of arguments for invoking getZones.
 
 <h4 class="pdoc-member-header" id="GetZonesArgs-multi">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/getZones.ts#L48">property <b>multi</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/getZones.ts#L48">property <b>multi</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>multi?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -1448,12 +1448,12 @@ A collection of arguments for invoking getZones.
 Indicate whether the zones can be used in a multi AZ configuration. Default to `false`. Multi AZ is usually used to launch Cassandra clusters.
 
 <h4 class="pdoc-member-header" id="GetZonesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/getZones.ts#L49">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/getZones.ts#L49">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetZonesResult" data-link-title="GetZonesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/getZones.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/getZones.ts#L55">
         interface <strong>GetZonesResult</strong>
     </a>
 </h3>
@@ -1463,7 +1463,7 @@ Indicate whether the zones can be used in a multi AZ configuration. Default to `
 A collection of values returned by getZones.
 
 <h4 class="pdoc-member-header" id="GetZonesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/getZones.ts#L59">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/getZones.ts#L59">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1471,7 +1471,7 @@ A collection of values returned by getZones.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetZonesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/getZones.ts#L63">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/getZones.ts#L63">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1479,17 +1479,17 @@ The provider-assigned unique ID for this managed resource.
 A list of zone IDs.
 
 <h4 class="pdoc-member-header" id="GetZonesResult-multi">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/getZones.ts#L64">property <b>multi</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/getZones.ts#L64">property <b>multi</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>multi?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetZonesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/getZones.ts#L65">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/getZones.ts#L65">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetZonesResult-zones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/cassandra/getZones.ts#L69">property <b>zones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/cassandra/getZones.ts#L69">property <b>zones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zones: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetZonesZone'>GetZonesZone</a>[];</code></pre>
