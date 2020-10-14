@@ -31,7 +31,7 @@ jobs:
     steps:
       - name: set the pulumi version
         run: |
-          echo "${{ github.event.client_payload.ref }}" >> $GITHUB_ENV
+          echo "PULUMI_VERSION=${{ github.event.client_payload.ref }}" >> $GITHUB_ENV
       - name: checkout docs repo
         uses: actions/checkout@v2
         with:
