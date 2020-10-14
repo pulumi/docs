@@ -1,0 +1,102 @@
+env:
+  GITHUB_TOKEN: ${{ secrets.PULUMI_BOT_TOKEN }}
+
+name: cli docs build
+on:
+  pull_request:
+  repository_dispatch:
+    types:
+      - pulumi-cli
+jobs:
+  pull-request:
+    runs-on: ubuntu-latest
+    needs: build-pulumi-cli-docs
+    steps:
+      - name: checkout docs repo
+        uses: actions/checkout@v2
+      - name: pull-request
+        uses: repo-sync/pull-request@v2
+        with:
+          source_branch: "pulumi/${{ github.run_id }}-${{ github.run_number }}"
+          destination_branch: "master"
+          pr_title: "Regen docs pulumi@${{ github.event.client_payload.ref }}"
+          pr_body: ""
+          pr_label: "automation/pulumi-cli-docs"
+          github_token: ${{ secrets.PULUMI_BOT_TOKEN }}
+
+  build-pulumi-cli-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: set the pulumi version
+        run: |
+          echo "PULUMI_VERSION=2.12.0" >> $GITHUB_ENV
+          #echo "{PULUMI_VERSION}={${{ github.event.client_payload.ref }}}" >> $GITHUB_ENV
+      - name: checkout docs repo
+        uses: actions/checkout@v2
+        with:
+          path: docs
+      - name: checkout pulumi repo
+        uses: actions/checkout@v2
+        with:
+          repository: pulumi/pulumi
+          path: pulumi
+          ref: ${{ github.event.client_payload.ref }}
+      - name: Install pulumictl
+        uses: jaxxstorm/action-install-gh-release@d62853bc9e466834c74cefb34fad78535582e21a
+        with:
+          repo: pulumi/pulumictl
+      - name: Install Pulumi CLI
+        uses: pulumi/action-install-pulumi-cli@b811287a6e06bb7e5d8b91132b839c67e3f9c6ed
+        with:
+          pulumi-version: ${{ env.PULUMI_VERSION }}
+      - name: setup go
+        uses: actions/setup-go@v2
+      - name: setup node
+        uses: actions/setup-node@v2-beta
+      - name: setup python
+        uses: actions/setup-python@v2
+      - name: setup pipenv
+        uses: dschep/install-pipenv-action@v1
+      - name: setup dotnet
+        uses: actions/setup-dotnet@v1
+      - run: make ensure ensure_tools
+        working-directory: docs
+      - name: Go based tool installs
+        run: |
+          go get -u github.com/cbroglie/mustache
+          go get -u github.com/gobuffalo/packr
+          go get -u github.com/pkg/errors
+          go get -u gopkg.in/russross/blackfriday.v2
+        working-directory: docs
+      - name: run yarn install in nodejs sdk
+        run: yarn install && yarn run tsc
+        working-directory: pulumi/sdk/nodejs
+      - name: run typedoc
+        run: PKGS=pulumi NOBUILD=true ./scripts/run_typedoc.sh
+        working-directory: docs
+      - name: generate python docs
+        run: ./scripts/generate_python_docs.sh "pulumi"
+        working-directory: docs
+      - name: generate markdown
+        run: |
+          pulumi gen-markdown ./content/docs/reference/cli
+        working-directory: docs
+      - name: Update latest version
+        run: |
+          echo -n "${{ env.PULUMI_VERSION }}" > ./static/latest-version
+        working-directory: docs
+      - name: Update version lists
+        run: |
+          NL=$'\n'
+          sed -e "s/<tbody>/<tbody>\\${NL}        {{< changelog-table-row version=\"${{ env.PULUMI_VERSION}}\" date=\"$(date +%Y-%m-%d)\" >}}/" -i ./content/docs/get-started/install/versions.md
+        working-directory: docs
+      - name: git status
+        run: git status && git diff
+        working-directory: docs
+      - name: commit changes
+        uses: EndBug/add-and-commit@v4
+        with:
+          ref: "pulumi/${{ github.run_id }}-${{ github.run_number }}"
+          author_name: pulumi-bot
+          author_email: "bot@pulumi.com"
+          cwd: docs
