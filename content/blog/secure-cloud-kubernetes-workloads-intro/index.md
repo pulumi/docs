@@ -94,4 +94,4 @@ Google's GKE has native support for what it calls ["Workload Identity"](https://
 
 ## Wrap up
 
-Hopefully, I've made a compelling case for why you should reconsider using static credentials for your application, now introduced the idea for how to avoid using them in your cloud-native applications. In my next post, I'll introduce the application we're going to deploy to all of these different cloud providers, and show you how to deploy it securely on AWS EKS. Stay tuned!
+We've detailed compelling case for why you should reconsider using static credentials for your application, and introduced the idea for how to avoid using them in your cloud-native applications. In our next post, I'll introduce the application we're going to deploy to all of these different cloud providers, and show you how to deploy it securely on AWS EKS. Stay tuned!
