@@ -128,7 +128,7 @@ const small = pulumi.output(digitalocean.getDroplets({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_droplets(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetDropletsFilterArgs]]</span> = None<span class="p">, </span><span class="nx">sorts</span><span class="p">:</span> <span class="nx">Optional[List[GetDropletsSortArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDropletsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_droplets(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetDropletsFilterArgs]]</span> = None<span class="p">, </span><span class="nx">sorts</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetDropletsSortArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDropletsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -252,7 +252,7 @@ The `sort` block is documented below.
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdropletsfilter">List[Get<wbr>Droplets<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getdropletsfilter">Sequence[Get<wbr>Droplets<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Filter the results.
 The `filter` block is documented below.
@@ -264,7 +264,7 @@ The `filter` block is documented below.
 <a href="#sorts_python" style="color: inherit; text-decoration: inherit;">sorts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdropletssort">List[Get<wbr>Droplets<wbr>Sort<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getdropletssort">Sequence[Get<wbr>Droplets<wbr>Sort<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Sort the results.
 The `sort` block is documented below.
@@ -443,7 +443,7 @@ The following output properties are available:
 <a href="#droplets_python" style="color: inherit; text-decoration: inherit;">droplets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdropletsdroplet">List[Get<wbr>Droplets<wbr>Droplet]</a></span>
+        <span class="property-type"><a href="#getdropletsdroplet">Sequence[Get<wbr>Droplets<wbr>Droplet]</a></span>
     </dt>
     <dd>{{% md %}}A list of Droplets satisfying any `filter` and `sort` criteria. Each Droplet has the following attributes:
 {{% /md %}}</dd>
@@ -465,7 +465,7 @@ The following output properties are available:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdropletsfilter">List[Get<wbr>Droplets<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getdropletsfilter">Sequence[Get<wbr>Droplets<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -475,7 +475,7 @@ The following output properties are available:
 <a href="#sorts_python" style="color: inherit; text-decoration: inherit;">sorts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdropletssort">List[Get<wbr>Droplets<wbr>Sort]</a></span>
+        <span class="property-type"><a href="#getdropletssort">Sequence[Get<wbr>Droplets<wbr>Sort]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1377,7 +1377,7 @@ The following output properties are available:
 <a href="#disk_python" style="color: inherit; text-decoration: inherit;">disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the Droplet's disk in GB.
 {{% /md %}}</dd>
@@ -1388,7 +1388,7 @@ The following output properties are available:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Droplet.
 {{% /md %}}</dd>
@@ -1476,7 +1476,7 @@ The following output properties are available:
 <a href="#memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of the Droplet's memory in MB.
 {{% /md %}}</dd>
@@ -1574,7 +1574,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of the tags associated to the Droplet.
 {{% /md %}}</dd>
@@ -1596,7 +1596,7 @@ The following output properties are available:
 <a href="#vcpus_python" style="color: inherit; text-decoration: inherit;">vcpus</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of the Droplet's virtual CPUs.
 {{% /md %}}</dd>
@@ -1607,7 +1607,7 @@ The following output properties are available:
 <a href="#volume_ids_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of the IDs of each volumes attached to the Droplet.
 {{% /md %}}</dd>
@@ -1656,10 +1656,10 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Filter the Droplets by this key. This may be one of '`backups`, `created_at`, `disk`, `id`,
+    <dd>{{% md %}}Filter the Droplets by this key. This may be one of `backups`, `created_at`, `disk`, `id`,
 `image`, `ipv4_address`, `ipv4_address_private`, `ipv6`, `ipv6_address`, `ipv6_address_private`, `locked`,
 `memory`, `monitoring`, `name`, `price_hourly`, `price_monthly`, `private_networking`, `region`, `size`,
-`status`, `tags`, `urn`, `vcpus`, `volume_ids`, or `vpc_uuid`'.
+`status`, `tags`, `urn`, `vcpus`, `volume_ids`, or `vpc_uuid`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1672,6 +1672,32 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A list of values to match against the `key` field. Only retrieves Droplets
 where the `key` field takes on one or more of the values provided here.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="all_csharp">
+<a href="#all_csharp" style="color: inherit; text-decoration: inherit;">All</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to require that a field match all of the `values` instead of just one or more of
+them. This is useful when matching against multi-valued fields such as lists or sets where you want to ensure
+that all of the `values` are present in the list or set.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchby_csharp">
+<a href="#matchby_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>By</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}One of `exact` (default), `re`, or `substring`. For string-typed fields, specify `re` to
+match by using the `values` as regular expressions, or specify `substring` to match by treating the `values` as
+substrings to find within the string field.
 {{% /md %}}</dd>
 
 </dl>
@@ -1689,10 +1715,10 @@ where the `key` field takes on one or more of the values provided here.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Filter the Droplets by this key. This may be one of '`backups`, `created_at`, `disk`, `id`,
+    <dd>{{% md %}}Filter the Droplets by this key. This may be one of `backups`, `created_at`, `disk`, `id`,
 `image`, `ipv4_address`, `ipv4_address_private`, `ipv6`, `ipv6_address`, `ipv6_address_private`, `locked`,
 `memory`, `monitoring`, `name`, `price_hourly`, `price_monthly`, `private_networking`, `region`, `size`,
-`status`, `tags`, `urn`, `vcpus`, `volume_ids`, or `vpc_uuid`'.
+`status`, `tags`, `urn`, `vcpus`, `volume_ids`, or `vpc_uuid`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1705,6 +1731,32 @@ where the `key` field takes on one or more of the values provided here.
     </dt>
     <dd>{{% md %}}A list of values to match against the `key` field. Only retrieves Droplets
 where the `key` field takes on one or more of the values provided here.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="all_go">
+<a href="#all_go" style="color: inherit; text-decoration: inherit;">All</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to require that a field match all of the `values` instead of just one or more of
+them. This is useful when matching against multi-valued fields such as lists or sets where you want to ensure
+that all of the `values` are present in the list or set.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchby_go">
+<a href="#matchby_go" style="color: inherit; text-decoration: inherit;">Match<wbr>By</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}One of `exact` (default), `re`, or `substring`. For string-typed fields, specify `re` to
+match by using the `values` as regular expressions, or specify `substring` to match by treating the `values` as
+substrings to find within the string field.
 {{% /md %}}</dd>
 
 </dl>
@@ -1722,10 +1774,10 @@ where the `key` field takes on one or more of the values provided here.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Filter the Droplets by this key. This may be one of '`backups`, `created_at`, `disk`, `id`,
+    <dd>{{% md %}}Filter the Droplets by this key. This may be one of `backups`, `created_at`, `disk`, `id`,
 `image`, `ipv4_address`, `ipv4_address_private`, `ipv6`, `ipv6_address`, `ipv6_address_private`, `locked`,
 `memory`, `monitoring`, `name`, `price_hourly`, `price_monthly`, `private_networking`, `region`, `size`,
-`status`, `tags`, `urn`, `vcpus`, `volume_ids`, or `vpc_uuid`'.
+`status`, `tags`, `urn`, `vcpus`, `volume_ids`, or `vpc_uuid`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1738,6 +1790,32 @@ where the `key` field takes on one or more of the values provided here.
     </dt>
     <dd>{{% md %}}A list of values to match against the `key` field. Only retrieves Droplets
 where the `key` field takes on one or more of the values provided here.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="all_nodejs">
+<a href="#all_nodejs" style="color: inherit; text-decoration: inherit;">all</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to require that a field match all of the `values` instead of just one or more of
+them. This is useful when matching against multi-valued fields such as lists or sets where you want to ensure
+that all of the `values` are present in the list or set.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchby_nodejs">
+<a href="#matchby_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>By</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}One of `exact` (default), `re`, or `substring`. For string-typed fields, specify `re` to
+match by using the `values` as regular expressions, or specify `substring` to match by treating the `values` as
+substrings to find within the string field.
 {{% /md %}}</dd>
 
 </dl>
@@ -1755,10 +1833,10 @@ where the `key` field takes on one or more of the values provided here.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Filter the Droplets by this key. This may be one of '`backups`, `created_at`, `disk`, `id`,
+    <dd>{{% md %}}Filter the Droplets by this key. This may be one of `backups`, `created_at`, `disk`, `id`,
 `image`, `ipv4_address`, `ipv4_address_private`, `ipv6`, `ipv6_address`, `ipv6_address_private`, `locked`,
 `memory`, `monitoring`, `name`, `price_hourly`, `price_monthly`, `private_networking`, `region`, `size`,
-`status`, `tags`, `urn`, `vcpus`, `volume_ids`, or `vpc_uuid`'.
+`status`, `tags`, `urn`, `vcpus`, `volume_ids`, or `vpc_uuid`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1767,10 +1845,36 @@ where the `key` field takes on one or more of the values provided here.
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of values to match against the `key` field. Only retrieves Droplets
 where the `key` field takes on one or more of the values provided here.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="all_python">
+<a href="#all_python" style="color: inherit; text-decoration: inherit;">all</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to require that a field match all of the `values` instead of just one or more of
+them. This is useful when matching against multi-valued fields such as lists or sets where you want to ensure
+that all of the `values` are present in the list or set.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="match_by_python">
+<a href="#match_by_python" style="color: inherit; text-decoration: inherit;">match_<wbr>by</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}One of `exact` (default), `re`, or `substring`. For string-typed fields, specify `re` to
+match by using the `values` as regular expressions, or specify `substring` to match by treating the `values` as
+substrings to find within the string field.
 {{% /md %}}</dd>
 
 </dl>

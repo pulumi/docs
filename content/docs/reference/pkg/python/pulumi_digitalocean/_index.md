@@ -17,8 +17,199 @@ block_external_search_index: true
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/issues">terraform-providers/terraform-provider-digitalocean repo</a>.</p>
 </div></blockquote>
 <span class="target" id="module-pulumi_digitalocean"></span><dl class="py class">
+<dt id="pulumi_digitalocean.App">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">App</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">spec</span><span class="p">:</span> <span class="n">Union[AppSpecArgs, Mapping[str, Any], Awaitable[Union[AppSpecArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.App" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a DigitalOcean App resource.</p>
+<p>To create an app, provide a <a class="reference external" href="https://www.digitalocean.com/docs/app-platform/resources/app-specification-reference/">DigitalOcean app spec</a> specifying the app’s components.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">golang_sample</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">App</span><span class="p">(</span><span class="s2">&quot;golang-sample&quot;</span><span class="p">,</span> <span class="n">spec</span><span class="o">=</span><span class="n">digitalocean</span><span class="o">.</span><span class="n">AppSpecArgs</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;golang-sample&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;ams&quot;</span><span class="p">,</span>
+    <span class="n">services</span><span class="o">=</span><span class="p">[</span><span class="n">digitalocean</span><span class="o">.</span><span class="n">AppSpecServiceArgs</span><span class="p">(</span>
+        <span class="n">environment_slug</span><span class="o">=</span><span class="s2">&quot;go&quot;</span><span class="p">,</span>
+        <span class="n">git</span><span class="o">=</span><span class="n">digitalocean</span><span class="o">.</span><span class="n">AppSpecServiceGitArgs</span><span class="p">(</span>
+            <span class="n">branch</span><span class="o">=</span><span class="s2">&quot;main&quot;</span><span class="p">,</span>
+            <span class="n">repo_clone_url</span><span class="o">=</span><span class="s2">&quot;https://github.com/digitalocean/sample-golang.git&quot;</span><span class="p">,</span>
+        <span class="p">),</span>
+        <span class="n">instance_count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">instance_size_slug</span><span class="o">=</span><span class="s2">&quot;professional-xs&quot;</span><span class="p">,</span>
+        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;go-service&quot;</span><span class="p">,</span>
+    <span class="p">)],</span>
+<span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">static_ste_example</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">App</span><span class="p">(</span><span class="s2">&quot;static-ste-example&quot;</span><span class="p">,</span> <span class="n">spec</span><span class="o">=</span><span class="n">digitalocean</span><span class="o">.</span><span class="n">AppSpecArgs</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;static-ste-example&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;ams&quot;</span><span class="p">,</span>
+    <span class="n">static_sites</span><span class="o">=</span><span class="p">[</span><span class="n">digitalocean</span><span class="o">.</span><span class="n">AppSpecStaticSiteArgs</span><span class="p">(</span>
+        <span class="n">build_command</span><span class="o">=</span><span class="s2">&quot;bundle exec jekyll build -d ./public&quot;</span><span class="p">,</span>
+        <span class="n">git</span><span class="o">=</span><span class="n">digitalocean</span><span class="o">.</span><span class="n">AppSpecStaticSiteGitArgs</span><span class="p">(</span>
+            <span class="n">branch</span><span class="o">=</span><span class="s2">&quot;main&quot;</span><span class="p">,</span>
+            <span class="n">repo_clone_url</span><span class="o">=</span><span class="s2">&quot;https://github.com/digitalocean/sample-jekyll.git&quot;</span><span class="p">,</span>
+        <span class="p">),</span>
+        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;sample-jekyll&quot;</span><span class="p">,</span>
+        <span class="n">output_dir</span><span class="o">=</span><span class="s2">&quot;/public&quot;</span><span class="p">,</span>
+    <span class="p">)],</span>
+<span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">mono_repo_example</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">App</span><span class="p">(</span><span class="s2">&quot;mono-repo-example&quot;</span><span class="p">,</span> <span class="n">spec</span><span class="o">=</span><span class="n">digitalocean</span><span class="o">.</span><span class="n">AppSpecArgs</span><span class="p">(</span>
+    <span class="n">domains</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;foo.example.com&quot;</span><span class="p">],</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;mono-repo-example&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;ams&quot;</span><span class="p">,</span>
+    <span class="n">services</span><span class="o">=</span><span class="p">[</span><span class="n">digitalocean</span><span class="o">.</span><span class="n">AppSpecServiceArgs</span><span class="p">(</span>
+        <span class="n">environment_slug</span><span class="o">=</span><span class="s2">&quot;go&quot;</span><span class="p">,</span>
+        <span class="n">github</span><span class="o">=</span><span class="n">digitalocean</span><span class="o">.</span><span class="n">AppSpecServiceGithubArgs</span><span class="p">(</span>
+            <span class="n">branch</span><span class="o">=</span><span class="s2">&quot;main&quot;</span><span class="p">,</span>
+            <span class="n">deploy_on_push</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">repo</span><span class="o">=</span><span class="s2">&quot;username/repo&quot;</span><span class="p">,</span>
+        <span class="p">),</span>
+        <span class="n">http_port</span><span class="o">=</span><span class="mi">3000</span><span class="p">,</span>
+        <span class="n">instance_count</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+        <span class="n">instance_size_slug</span><span class="o">=</span><span class="s2">&quot;professional-xs&quot;</span><span class="p">,</span>
+        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;api&quot;</span><span class="p">,</span>
+        <span class="n">routes</span><span class="o">=</span><span class="n">digitalocean</span><span class="o">.</span><span class="n">AppSpecServiceRoutesArgs</span><span class="p">(</span>
+            <span class="n">path</span><span class="o">=</span><span class="s2">&quot;/api&quot;</span><span class="p">,</span>
+        <span class="p">),</span>
+        <span class="n">run_command</span><span class="o">=</span><span class="s2">&quot;bin/api&quot;</span><span class="p">,</span>
+        <span class="n">source_dir</span><span class="o">=</span><span class="s2">&quot;api/&quot;</span><span class="p">,</span>
+    <span class="p">)],</span>
+    <span class="n">static_sites</span><span class="o">=</span><span class="p">[</span><span class="n">digitalocean</span><span class="o">.</span><span class="n">AppSpecStaticSiteArgs</span><span class="p">(</span>
+        <span class="n">build_command</span><span class="o">=</span><span class="s2">&quot;npm run build&quot;</span><span class="p">,</span>
+        <span class="n">github</span><span class="o">=</span><span class="n">digitalocean</span><span class="o">.</span><span class="n">AppSpecStaticSiteGithubArgs</span><span class="p">(</span>
+            <span class="n">branch</span><span class="o">=</span><span class="s2">&quot;main&quot;</span><span class="p">,</span>
+            <span class="n">deploy_on_push</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">repo</span><span class="o">=</span><span class="s2">&quot;username/repo&quot;</span><span class="p">,</span>
+        <span class="p">),</span>
+        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;web&quot;</span><span class="p">,</span>
+        <span class="n">routes</span><span class="o">=</span><span class="n">digitalocean</span><span class="o">.</span><span class="n">AppSpecStaticSiteRoutesArgs</span><span class="p">(</span>
+            <span class="n">path</span><span class="o">=</span><span class="s2">&quot;/&quot;</span><span class="p">,</span>
+        <span class="p">),</span>
+    <span class="p">)],</span>
+<span class="p">))</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>spec</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'AppSpecArgs'</em><em>]</em><em>]</em>) – A DigitalOcean App spec describing the app.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="pulumi_digitalocean.App.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">active_deployment_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">created_at</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_ingress</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">live_url</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">spec</span><span class="p">:</span> <span class="n">Union[AppSpecArgs, Mapping[str, Any], Awaitable[Union[AppSpecArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">updated_at</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_digitalocean.app.App<a class="headerlink" href="#pulumi_digitalocean.App.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing App resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>active_deployment_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID the app’s currently active deployment.</p></li>
+<li><p><strong>created_at</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date and time of when the app was created.</p></li>
+<li><p><strong>default_ingress</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default URL to access the app.</p></li>
+<li><p><strong>live_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The live URL of the app.</p></li>
+<li><p><strong>spec</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'AppSpecArgs'</em><em>]</em><em>]</em>) – A DigitalOcean App spec describing the app.</p></li>
+<li><p><strong>updated_at</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date and time of when the app was last updated.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_digitalocean.App.active_deployment_id">
+<em class="property">property </em><code class="sig-name descname">active_deployment_id</code><a class="headerlink" href="#pulumi_digitalocean.App.active_deployment_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID the app’s currently active deployment.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_digitalocean.App.created_at">
+<em class="property">property </em><code class="sig-name descname">created_at</code><a class="headerlink" href="#pulumi_digitalocean.App.created_at" title="Permalink to this definition">¶</a></dt>
+<dd><p>The date and time of when the app was created.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_digitalocean.App.default_ingress">
+<em class="property">property </em><code class="sig-name descname">default_ingress</code><a class="headerlink" href="#pulumi_digitalocean.App.default_ingress" title="Permalink to this definition">¶</a></dt>
+<dd><p>The default URL to access the app.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_digitalocean.App.live_url">
+<em class="property">property </em><code class="sig-name descname">live_url</code><a class="headerlink" href="#pulumi_digitalocean.App.live_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>The live URL of the app.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_digitalocean.App.spec">
+<em class="property">property </em><code class="sig-name descname">spec</code><a class="headerlink" href="#pulumi_digitalocean.App.spec" title="Permalink to this definition">¶</a></dt>
+<dd><p>A DigitalOcean App spec describing the app.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_digitalocean.App.updated_at">
+<em class="property">property </em><code class="sig-name descname">updated_at</code><a class="headerlink" href="#pulumi_digitalocean.App.updated_at" title="Permalink to this definition">¶</a></dt>
+<dd><p>The date and time of when the app was last updated.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_digitalocean.App.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.App.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_digitalocean.App.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.App.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_digitalocean.AwaitableGetAccountResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">AwaitableGetAccountResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">droplet_limit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email_verified</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">floating_ip_limit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status_message</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">uuid</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetAccountResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_digitalocean.AwaitableGetAppResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">AwaitableGetAppResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">active_deployment_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">app_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">created_at</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_ingress</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">live_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">spec</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">updated_at</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetAppResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
@@ -39,6 +230,11 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="py class">
 <dt id="pulumi_digitalocean.AwaitableGetDomainResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">AwaitableGetDomainResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">domain_urn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_file</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetDomainResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_digitalocean.AwaitableGetDomainsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">AwaitableGetDomainsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">domains</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sorts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetDomainsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
@@ -2765,6 +2961,54 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_digitalocean.GetAppResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">GetAppResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">active_deployment_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">app_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">created_at</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_ingress</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">live_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">spec</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">updated_at</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.GetAppResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getApp.</p>
+<dl class="py method">
+<dt id="pulumi_digitalocean.GetAppResult.active_deployment_id">
+<em class="property">property </em><code class="sig-name descname">active_deployment_id</code><a class="headerlink" href="#pulumi_digitalocean.GetAppResult.active_deployment_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID the app’s currently active deployment.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_digitalocean.GetAppResult.created_at">
+<em class="property">property </em><code class="sig-name descname">created_at</code><a class="headerlink" href="#pulumi_digitalocean.GetAppResult.created_at" title="Permalink to this definition">¶</a></dt>
+<dd><p>The date and time of when the app was created.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_digitalocean.GetAppResult.default_ingress">
+<em class="property">property </em><code class="sig-name descname">default_ingress</code><a class="headerlink" href="#pulumi_digitalocean.GetAppResult.default_ingress" title="Permalink to this definition">¶</a></dt>
+<dd><p>The default URL to access the app.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_digitalocean.GetAppResult.id">
+<em class="property">property </em><code class="sig-name descname">id</code><a class="headerlink" href="#pulumi_digitalocean.GetAppResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_digitalocean.GetAppResult.live_url">
+<em class="property">property </em><code class="sig-name descname">live_url</code><a class="headerlink" href="#pulumi_digitalocean.GetAppResult.live_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>The live URL of the app.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_digitalocean.GetAppResult.spec">
+<em class="property">property </em><code class="sig-name descname">spec</code><a class="headerlink" href="#pulumi_digitalocean.GetAppResult.spec" title="Permalink to this definition">¶</a></dt>
+<dd><p>A DigitalOcean App spec describing the app.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_digitalocean.GetAppResult.updated_at">
+<em class="property">property </em><code class="sig-name descname">updated_at</code><a class="headerlink" href="#pulumi_digitalocean.GetAppResult.updated_at" title="Permalink to this definition">¶</a></dt>
+<dd><p>The date and time of when the app was last updated.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_digitalocean.GetCertificateResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">GetCertificateResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">domains</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">not_after</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sha1_fingerprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.GetCertificateResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCertificate.</p>
@@ -2922,6 +3166,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py method">
 <dt id="pulumi_digitalocean.GetDomainResult.id">
 <em class="property">property </em><code class="sig-name descname">id</code><a class="headerlink" href="#pulumi_digitalocean.GetDomainResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_digitalocean.GetDomainsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">GetDomainsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">domains</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sorts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.GetDomainsResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getDomains.</p>
+<dl class="py method">
+<dt id="pulumi_digitalocean.GetDomainsResult.domains">
+<em class="property">property </em><code class="sig-name descname">domains</code><a class="headerlink" href="#pulumi_digitalocean.GetDomainsResult.domains" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of domains satisfying any <code class="docutils literal notranslate"><span class="pre">filter</span></code> and <code class="docutils literal notranslate"><span class="pre">sort</span></code> criteria. Each domain has the following attributes:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_digitalocean.GetDomainsResult.id">
+<em class="property">property </em><code class="sig-name descname">id</code><a class="headerlink" href="#pulumi_digitalocean.GetDomainsResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
@@ -6083,6 +6345,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py function">
+<dt id="pulumi_digitalocean.get_app">
+<code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_app</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">app_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.invoke.InvokeOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_digitalocean.get_app.AwaitableGetAppResult<a class="headerlink" href="#pulumi_digitalocean.get_app" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get information on a DigitalOcean App.</p>
+<p>Get the account:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">get_app</span><span class="p">(</span><span class="n">app_id</span><span class="o">=</span><span class="s2">&quot;e665d18d-7b56-44a9-92ce-31979174d544&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;defaultIngress&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">default_ingress</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>app_id</strong> (<em>str</em>) – The ID of the app to retrieve information about.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt id="pulumi_digitalocean.get_certificate">
 <code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_certificate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.invoke.InvokeOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_digitalocean.get_certificate.AwaitableGetCertificateResult<a class="headerlink" href="#pulumi_digitalocean.get_certificate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get information on a certificate. This data source provides the name, type, state,
@@ -6164,6 +6445,22 @@ DigitalOcean account.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the domain.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_digitalocean.get_domains">
+<code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_domains</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>Union<span class="p">[</span>GetDomainsFilterArgs<span class="p">, </span>Mapping<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span><span class="p">]</span><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sorts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>Union<span class="p">[</span>GetDomainsSortArgs<span class="p">, </span>Mapping<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span><span class="p">]</span><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.invoke.InvokeOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_digitalocean.get_domains.AwaitableGetDomainsResult<a class="headerlink" href="#pulumi_digitalocean.get_domains" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filters</strong> (<em>List</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'GetDomainsFilterArgs'</em><em>]</em><em>]</em>) – Filter the results.
+The <code class="docutils literal notranslate"><span class="pre">filter</span></code> block is documented below.</p></li>
+<li><p><strong>sorts</strong> (<em>List</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'GetDomainsSortArgs'</em><em>]</em><em>]</em>) – Sort the results.
+The <code class="docutils literal notranslate"><span class="pre">sort</span></code> block is documented below.</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>

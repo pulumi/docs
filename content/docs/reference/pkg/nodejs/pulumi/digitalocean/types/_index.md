@@ -3,7 +3,7 @@ title: "Module types"
 title_tag: "Module types | Package @pulumi/digitalocean | Node.js SDK"
 linktitle: "types"
 meta_desc: "Explore members of the types module in the @pulumi/digitalocean package."
-git_sha: "0712924797104d4a5b0265ed28f943f299bd982a"
+git_sha: "32e5da218a1bc86632f876b79e2afe4f4c71cde3"
 block_external_search_index: true
 ---
 

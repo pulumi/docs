@@ -129,7 +129,7 @@ const ubuntu = pulumi.output(digitalocean.getImages({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_images(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetImagesFilterArgs]]</span> = None<span class="p">, </span><span class="nx">sorts</span><span class="p">:</span> <span class="nx">Optional[List[GetImagesSortArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetImagesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_images(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetImagesFilterArgs]]</span> = None<span class="p">, </span><span class="nx">sorts</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetImagesSortArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetImagesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -253,7 +253,7 @@ The `sort` block is documented below.
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getimagesfilter">List[Get<wbr>Images<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getimagesfilter">Sequence[Get<wbr>Images<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Filter the results.
 The `filter` block is documented below.
@@ -265,7 +265,7 @@ The `filter` block is documented below.
 <a href="#sorts_python" style="color: inherit; text-decoration: inherit;">sorts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getimagessort">List[Get<wbr>Images<wbr>Sort<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getimagessort">Sequence[Get<wbr>Images<wbr>Sort<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Sort the results.
 The `sort` block is documented below.
@@ -467,7 +467,7 @@ The following output properties are available:
 <a href="#images_python" style="color: inherit; text-decoration: inherit;">images</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getimagesimage">List[Get<wbr>Images<wbr>Image]</a></span>
+        <span class="property-type"><a href="#getimagesimage">Sequence[Get<wbr>Images<wbr>Image]</a></span>
     </dt>
     <dd>{{% md %}}A set of images satisfying any `filter` and `sort` criteria. Each image has the following attributes:  
 - `slug`: Unique text identifier of the image.
@@ -482,7 +482,7 @@ The following output properties are available:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getimagesfilter">List[Get<wbr>Images<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getimagesfilter">Sequence[Get<wbr>Images<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -492,7 +492,7 @@ The following output properties are available:
 <a href="#sorts_python" style="color: inherit; text-decoration: inherit;">sorts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getimagessort">List[Get<wbr>Images<wbr>Sort]</a></span>
+        <span class="property-type"><a href="#getimagessort">Sequence[Get<wbr>Images<wbr>Sort]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -552,6 +552,32 @@ The following output properties are available:
 where the `key` field takes on one or more of the values provided here.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="all_csharp">
+<a href="#all_csharp" style="color: inherit; text-decoration: inherit;">All</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to require that a field match all of the `values` instead of just one or more of
+them. This is useful when matching against multi-valued fields such as lists or sets where you want to ensure
+that all of the `values` are present in the list or set.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchby_csharp">
+<a href="#matchby_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>By</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}One of `exact` (default), `re`, or `substring`. For string-typed fields, specify `re` to
+match by using the `values` as regular expressions, or specify `substring` to match by treating the `values` as
+substrings to find within the string field.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -582,6 +608,32 @@ where the `key` field takes on one or more of the values provided here.
     </dt>
     <dd>{{% md %}}A list of values to match against the `key` field. Only retrieves images
 where the `key` field takes on one or more of the values provided here.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="all_go">
+<a href="#all_go" style="color: inherit; text-decoration: inherit;">All</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to require that a field match all of the `values` instead of just one or more of
+them. This is useful when matching against multi-valued fields such as lists or sets where you want to ensure
+that all of the `values` are present in the list or set.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchby_go">
+<a href="#matchby_go" style="color: inherit; text-decoration: inherit;">Match<wbr>By</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}One of `exact` (default), `re`, or `substring`. For string-typed fields, specify `re` to
+match by using the `values` as regular expressions, or specify `substring` to match by treating the `values` as
+substrings to find within the string field.
 {{% /md %}}</dd>
 
 </dl>
@@ -616,6 +668,32 @@ where the `key` field takes on one or more of the values provided here.
 where the `key` field takes on one or more of the values provided here.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="all_nodejs">
+<a href="#all_nodejs" style="color: inherit; text-decoration: inherit;">all</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to require that a field match all of the `values` instead of just one or more of
+them. This is useful when matching against multi-valued fields such as lists or sets where you want to ensure
+that all of the `values` are present in the list or set.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matchby_nodejs">
+<a href="#matchby_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>By</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}One of `exact` (default), `re`, or `substring`. For string-typed fields, specify `re` to
+match by using the `values` as regular expressions, or specify `substring` to match by treating the `values` as
+substrings to find within the string field.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -642,10 +720,36 @@ where the `key` field takes on one or more of the values provided here.
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of values to match against the `key` field. Only retrieves images
 where the `key` field takes on one or more of the values provided here.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="all_python">
+<a href="#all_python" style="color: inherit; text-decoration: inherit;">all</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to require that a field match all of the `values` instead of just one or more of
+them. This is useful when matching against multi-valued fields such as lists or sets where you want to ensure
+that all of the `values` are present in the list or set.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="match_by_python">
+<a href="#match_by_python" style="color: inherit; text-decoration: inherit;">match_<wbr>by</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}One of `exact` (default), `re`, or `substring`. For string-typed fields, specify `re` to
+match by using the `values` as regular expressions, or specify `substring` to match by treating the `values` as
+substrings to find within the string field.
 {{% /md %}}</dd>
 
 </dl>
@@ -1189,7 +1293,7 @@ snapshots and backups and are only available within your account.
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1210,7 +1314,7 @@ snapshots and backups and are only available within your account.
 <a href="#min_disk_size_python" style="color: inherit; text-decoration: inherit;">min_<wbr>disk_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1248,7 +1352,7 @@ snapshots and backups and are only available within your account.
 <a href="#regions_python" style="color: inherit; text-decoration: inherit;">regions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1288,7 +1392,7 @@ snapshots and backups and are only available within your account.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
