@@ -3,7 +3,7 @@ title: "Module alikafka"
 title_tag: "Module alikafka | Package @pulumi/alicloud | Node.js SDK"
 linktitle: "alikafka"
 meta_desc: "Explore members of the alikafka module in the @pulumi/alicloud package."
-git_sha: "53a14196404e14d4db003ca4874e5c6735471578"
+git_sha: "1e99e347a9a110e183f8ab5e2230e5ca3afe964d"
 block_external_search_index: true
 ---
 
@@ -42,7 +42,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="ConsumerGroup" data-link-title="ConsumerGroup">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/consumerGroup.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/consumerGroup.ts#L48">
         Resource <strong>ConsumerGroup</strong>
     </a>
 </h3>
@@ -90,7 +90,7 @@ const defaultConsumerGroup = new alicloud.alikafka.ConsumerGroup("defaultConsume
 ```
 
 <h4 class="pdoc-member-header" id="ConsumerGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/consumerGroup.ts#L87"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/consumerGroup.ts#L87"> <b>constructor</b></a>
 </h4>
 
 
@@ -104,7 +104,7 @@ Create a ConsumerGroup resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ConsumerGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/consumerGroup.ts#L58">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/consumerGroup.ts#L58">method <b>get</b></a>
 </h4>
 
 
@@ -115,14 +115,14 @@ Get an existing ConsumerGroup resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ConsumerGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/consumerGroup.ts#L48">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/consumerGroup.ts#L48">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ConsumerGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/consumerGroup.ts#L69">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/consumerGroup.ts#L69">method <b>isInstance</b></a>
 </h4>
 
 
@@ -133,7 +133,7 @@ Returns true if the given object is an instance of ConsumerGroup.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ConsumerGroup-consumerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/consumerGroup.ts#L79">property <b>consumerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/consumerGroup.ts#L79">property <b>consumerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>consumerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -141,7 +141,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 ID of the consumer group. The length cannot exceed 64 characters.
 
 <h4 class="pdoc-member-header" id="ConsumerGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/consumerGroup.ts#L48">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/consumerGroup.ts#L48">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -150,7 +150,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ConsumerGroup-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/consumerGroup.ts#L83">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/consumerGroup.ts#L83">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -158,7 +158,7 @@ deployments and may be missing (undefined) during planning phases.
 ID of the ALIKAFKA Instance that owns the groups.
 
 <h4 class="pdoc-member-header" id="ConsumerGroup-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/consumerGroup.ts#L87">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/consumerGroup.ts#L87">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -166,7 +166,7 @@ ID of the ALIKAFKA Instance that owns the groups.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ConsumerGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/consumerGroup.ts#L48">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/consumerGroup.ts#L48">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -175,7 +175,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Instance" data-link-title="Instance">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L48">
         Resource <strong>Instance</strong>
     </a>
 </h3>
@@ -223,7 +223,7 @@ const defaultInstance = new alicloud.alikafka.Instance("defaultInstance", {
 ```
 
 <h4 class="pdoc-member-header" id="Instance-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L131"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L131"> <b>constructor</b></a>
 </h4>
 
 
@@ -237,7 +237,7 @@ Create a Instance resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Instance-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L58">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L58">method <b>get</b></a>
 </h4>
 
 
@@ -248,14 +248,14 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Instance-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L48">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L48">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Instance-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L69">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L69">method <b>isInstance</b></a>
 </h4>
 
 
@@ -266,7 +266,7 @@ Returns true if the given object is an instance of Instance.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Instance-deployType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L79">property <b>deployType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L79">property <b>deployType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deployType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -274,7 +274,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The deploy type of the instance. Currently only support two deploy type, 4: eip/vpc instance, 5: vpc instance.
 
 <h4 class="pdoc-member-header" id="Instance-diskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L83">property <b>diskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L83">property <b>diskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>diskSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -282,7 +282,7 @@ The deploy type of the instance. Currently only support two deploy type, 4: eip/
 The disk size of the instance. When modify this value, it only support adjust to a greater value.
 
 <h4 class="pdoc-member-header" id="Instance-diskType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L87">property <b>diskType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L87">property <b>diskType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>diskType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -290,7 +290,7 @@ The disk size of the instance. When modify this value, it only support adjust to
 The disk type of the instance. 0: efficient cloud disk , 1: SSD.
 
 <h4 class="pdoc-member-header" id="Instance-eipMax">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L91">property <b>eipMax</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L91">property <b>eipMax</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eipMax: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -298,7 +298,7 @@ The disk type of the instance. 0: efficient cloud disk , 1: SSD.
 The max bandwidth of the instance. When modify this value, it only support adjust to a greater value.
 
 <h4 class="pdoc-member-header" id="Instance-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L48">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L48">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -307,7 +307,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Instance-ioMax">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L95">property <b>ioMax</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L95">property <b>ioMax</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ioMax: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -315,7 +315,7 @@ deployments and may be missing (undefined) during planning phases.
 The max value of io of the instance. When modify this value, it only support adjust to a greater value.
 
 <h4 class="pdoc-member-header" id="Instance-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L99">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L99">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -323,7 +323,7 @@ The max value of io of the instance. When modify this value, it only support adj
 Name of your Kafka instance. The length should between 3 and 64 characters. If not set, will use instance id as instance name.
 
 <h4 class="pdoc-member-header" id="Instance-paidType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L103">property <b>paidType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L103">property <b>paidType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>paidType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -331,7 +331,7 @@ Name of your Kafka instance. The length should between 3 and 64 characters. If n
 The paid type of the instance. Support two type, "PrePaid": pre paid type instance, "PostPaid": post paid type instance. Default is PostPaid. When modify this value, it only support adjust from post pay to pre pay.
 
 <h4 class="pdoc-member-header" id="Instance-securityGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L107">property <b>securityGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L107">property <b>securityGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>securityGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -339,7 +339,7 @@ The paid type of the instance. Support two type, "PrePaid": pre paid type instan
 （Optional, ForceNew, Available in v1.93.0+） The ID of security group for this instance. If the security group is empty, system will create a default one.
 
 <h4 class="pdoc-member-header" id="Instance-specType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L111">property <b>specType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L111">property <b>specType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>specType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -347,7 +347,7 @@ The paid type of the instance. Support two type, "PrePaid": pre paid type instan
 The spec type of the instance. Support two type, "normal": normal version instance, "professional": professional version instance. Default is normal. When modify this value, it only support adjust from normal to professional. Note only pre paid type instance support professional specific type.
 
 <h4 class="pdoc-member-header" id="Instance-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L115">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L115">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -355,7 +355,7 @@ The spec type of the instance. Support two type, "normal": normal version instan
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Instance-topicQuota">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L119">property <b>topicQuota</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L119">property <b>topicQuota</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>topicQuota: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -363,7 +363,7 @@ A mapping of tags to assign to the resource.
 The max num of topic can be create of the instance. When modify this value, it only adjust to a greater value.
 
 <h4 class="pdoc-member-header" id="Instance-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L48">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L48">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -372,7 +372,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Instance-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L123">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L123">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -380,7 +380,7 @@ deployments.
 The ID of attaching VPC to instance.
 
 <h4 class="pdoc-member-header" id="Instance-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L127">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L127">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vswitchId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -388,7 +388,7 @@ The ID of attaching VPC to instance.
 The ID of attaching vswitch to instance.
 
 <h4 class="pdoc-member-header" id="Instance-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L131">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L131">property <b>zoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>zoneId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -396,7 +396,7 @@ The ID of attaching vswitch to instance.
 The Zone to launch the kafka instance.
 
 <h3 class="pdoc-module-header" id="SaslAcl" data-link-title="SaslAcl">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslAcl.ts#L63">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslAcl.ts#L63">
         Resource <strong>SaslAcl</strong>
     </a>
 </h3>
@@ -459,7 +459,7 @@ const defaultSaslAcl = new alicloud.alikafka.SaslAcl("defaultSaslAcl", {
 ```
 
 <h4 class="pdoc-member-header" id="SaslAcl-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslAcl.ts#L118"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslAcl.ts#L118"> <b>constructor</b></a>
 </h4>
 
 
@@ -473,7 +473,7 @@ Create a SaslAcl resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SaslAcl-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslAcl.ts#L73">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslAcl.ts#L73">method <b>get</b></a>
 </h4>
 
 
@@ -484,14 +484,14 @@ Get an existing SaslAcl resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SaslAcl-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslAcl.ts#L63">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslAcl.ts#L63">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SaslAcl-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslAcl.ts#L84">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslAcl.ts#L84">method <b>isInstance</b></a>
 </h4>
 
 
@@ -502,7 +502,7 @@ Returns true if the given object is an instance of SaslAcl.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SaslAcl-aclOperationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslAcl.ts#L94">property <b>aclOperationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslAcl.ts#L94">property <b>aclOperationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>aclOperationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -510,7 +510,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Operation type for this acl. The operation type can only be "Write" and "Read".
 
 <h4 class="pdoc-member-header" id="SaslAcl-aclResourceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslAcl.ts#L98">property <b>aclResourceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslAcl.ts#L98">property <b>aclResourceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>aclResourceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -518,7 +518,7 @@ Operation type for this acl. The operation type can only be "Write" and "Read".
 Resource name for this acl. The resource name should be a topic or consumer group name.
 
 <h4 class="pdoc-member-header" id="SaslAcl-aclResourcePatternType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslAcl.ts#L102">property <b>aclResourcePatternType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslAcl.ts#L102">property <b>aclResourcePatternType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>aclResourcePatternType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -526,7 +526,7 @@ Resource name for this acl. The resource name should be a topic or consumer grou
 Resource pattern type for this acl. The resource pattern support two types "LITERAL" and "PREFIXED". "LITERAL": A literal name defines the full name of a resource. The special wildcard character "*" can be used to represent a resource with any name. "PREFIXED": A prefixed name defines a prefix for a resource.
 
 <h4 class="pdoc-member-header" id="SaslAcl-aclResourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslAcl.ts#L106">property <b>aclResourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslAcl.ts#L106">property <b>aclResourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>aclResourceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -534,7 +534,7 @@ Resource pattern type for this acl. The resource pattern support two types "LITE
 Resource type for this acl. The resource type can only be "Topic" and "Group".
 
 <h4 class="pdoc-member-header" id="SaslAcl-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslAcl.ts#L110">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslAcl.ts#L110">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -542,7 +542,7 @@ Resource type for this acl. The resource type can only be "Topic" and "Group".
 The host of the acl.
 
 <h4 class="pdoc-member-header" id="SaslAcl-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslAcl.ts#L63">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslAcl.ts#L63">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -551,7 +551,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SaslAcl-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslAcl.ts#L114">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslAcl.ts#L114">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -559,7 +559,7 @@ deployments and may be missing (undefined) during planning phases.
 ID of the ALIKAFKA Instance that owns the groups.
 
 <h4 class="pdoc-member-header" id="SaslAcl-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslAcl.ts#L63">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslAcl.ts#L63">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -568,7 +568,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="SaslAcl-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslAcl.ts#L118">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslAcl.ts#L118">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -576,7 +576,7 @@ deployments.
 Username for the sasl user. The length should between 1 to 64 characters. The user should be an existed sasl user.
 
 <h3 class="pdoc-module-header" id="SaslUser" data-link-title="SaslUser">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslUser.ts#L50">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslUser.ts#L50">
         Resource <strong>SaslUser</strong>
     </a>
 </h3>
@@ -626,7 +626,7 @@ const defaultSaslUser = new alicloud.alikafka.SaslUser("defaultSaslUser", {
 ```
 
 <h4 class="pdoc-member-header" id="SaslUser-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslUser.ts#L97"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslUser.ts#L97"> <b>constructor</b></a>
 </h4>
 
 
@@ -640,7 +640,7 @@ Create a SaslUser resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SaslUser-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslUser.ts#L60">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslUser.ts#L60">method <b>get</b></a>
 </h4>
 
 
@@ -651,14 +651,14 @@ Get an existing SaslUser resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SaslUser-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslUser.ts#L50">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslUser.ts#L50">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SaslUser-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslUser.ts#L71">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslUser.ts#L71">method <b>isInstance</b></a>
 </h4>
 
 
@@ -669,7 +669,7 @@ Returns true if the given object is an instance of SaslUser.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SaslUser-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslUser.ts#L50">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslUser.ts#L50">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -678,7 +678,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SaslUser-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslUser.ts#L81">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslUser.ts#L81">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -686,7 +686,7 @@ deployments and may be missing (undefined) during planning phases.
 ID of the ALIKAFKA Instance that owns the groups.
 
 <h4 class="pdoc-member-header" id="SaslUser-kmsEncryptedPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslUser.ts#L85">property <b>kmsEncryptedPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslUser.ts#L85">property <b>kmsEncryptedPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kmsEncryptedPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -694,7 +694,7 @@ ID of the ALIKAFKA Instance that owns the groups.
 An KMS encrypts password used to a db account. You have to specify one of `password` and `kmsEncryptedPassword` fields.
 
 <h4 class="pdoc-member-header" id="SaslUser-kmsEncryptionContext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslUser.ts#L89">property <b>kmsEncryptionContext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslUser.ts#L89">property <b>kmsEncryptionContext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kmsEncryptionContext: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -702,7 +702,7 @@ An KMS encrypts password used to a db account. You have to specify one of `passw
 An KMS encryption context used to decrypt `kmsEncryptedPassword` before creating or updating a user with `kmsEncryptedPassword`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kmsEncryptedPassword` is set.
 
 <h4 class="pdoc-member-header" id="SaslUser-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslUser.ts#L93">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslUser.ts#L93">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -710,7 +710,7 @@ An KMS encryption context used to decrypt `kmsEncryptedPassword` before creating
 Operation password. It may consist of letters, digits, or underlines, with a length of 1 to 64 characters. You have to specify one of `password` and `kmsEncryptedPassword` fields.
 
 <h4 class="pdoc-member-header" id="SaslUser-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslUser.ts#L50">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslUser.ts#L50">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -719,7 +719,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="SaslUser-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslUser.ts#L97">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslUser.ts#L97">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -727,7 +727,7 @@ deployments.
 Username for the sasl user. The length should between 1 to 64 characters. The characters can only contain 'a'-'z', 'A'-'Z', '0'-'9', '_' and '-'.
 
 <h3 class="pdoc-module-header" id="Topic" data-link-title="Topic">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/topic.ts#L52">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/topic.ts#L52">
         Resource <strong>Topic</strong>
     </a>
 </h3>
@@ -779,7 +779,7 @@ const defaultTopic = new alicloud.alikafka.Topic("defaultTopic", {
 ```
 
 <h4 class="pdoc-member-header" id="Topic-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/topic.ts#L107"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/topic.ts#L107"> <b>constructor</b></a>
 </h4>
 
 
@@ -793,7 +793,7 @@ Create a Topic resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Topic-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/topic.ts#L62">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/topic.ts#L62">method <b>get</b></a>
 </h4>
 
 
@@ -804,14 +804,14 @@ Get an existing Topic resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Topic-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/topic.ts#L52">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/topic.ts#L52">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Topic-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/topic.ts#L73">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/topic.ts#L73">method <b>isInstance</b></a>
 </h4>
 
 
@@ -822,7 +822,7 @@ Returns true if the given object is an instance of Topic.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Topic-compactTopic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/topic.ts#L83">property <b>compactTopic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/topic.ts#L83">property <b>compactTopic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>compactTopic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -830,7 +830,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Whether the topic is compactTopic or not. Compact topic must be a localTopic.
 
 <h4 class="pdoc-member-header" id="Topic-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/topic.ts#L52">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/topic.ts#L52">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -839,7 +839,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Topic-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/topic.ts#L87">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/topic.ts#L87">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -847,7 +847,7 @@ deployments and may be missing (undefined) during planning phases.
 InstanceId of your Kafka resource, the topic will create in this instance.
 
 <h4 class="pdoc-member-header" id="Topic-localTopic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/topic.ts#L91">property <b>localTopic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/topic.ts#L91">property <b>localTopic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>localTopic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -855,7 +855,7 @@ InstanceId of your Kafka resource, the topic will create in this instance.
 Whether the topic is localTopic or not.
 
 <h4 class="pdoc-member-header" id="Topic-partitionNum">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/topic.ts#L95">property <b>partitionNum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/topic.ts#L95">property <b>partitionNum</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>partitionNum: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -863,7 +863,7 @@ Whether the topic is localTopic or not.
 The number of partitions of the topic. The number should between 1 and 48.
 
 <h4 class="pdoc-member-header" id="Topic-remark">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/topic.ts#L99">property <b>remark</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/topic.ts#L99">property <b>remark</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>remark: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -871,7 +871,7 @@ The number of partitions of the topic. The number should between 1 and 48.
 This attribute is a concise description of topic. The length cannot exceed 64.
 
 <h4 class="pdoc-member-header" id="Topic-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/topic.ts#L103">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/topic.ts#L103">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -879,7 +879,7 @@ This attribute is a concise description of topic. The length cannot exceed 64.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Topic-topic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/topic.ts#L107">property <b>topic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/topic.ts#L107">property <b>topic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>topic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -887,7 +887,7 @@ A mapping of tags to assign to the resource.
 Name of the topic. Two topics on a single instance cannot have the same name. The length cannot exceed 64 characters.
 
 <h4 class="pdoc-member-header" id="Topic-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/topic.ts#L52">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/topic.ts#L52">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -899,7 +899,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ConsumerGroupArgs" data-link-title="ConsumerGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/consumerGroup.ts#L148">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/consumerGroup.ts#L148">
         interface <strong>ConsumerGroupArgs</strong>
     </a>
 </h3>
@@ -909,7 +909,7 @@ deployments.
 The set of arguments for constructing a ConsumerGroup resource.
 
 <h4 class="pdoc-member-header" id="ConsumerGroupArgs-consumerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/consumerGroup.ts#L152">property <b>consumerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/consumerGroup.ts#L152">property <b>consumerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>consumerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -917,7 +917,7 @@ The set of arguments for constructing a ConsumerGroup resource.
 ID of the consumer group. The length cannot exceed 64 characters.
 
 <h4 class="pdoc-member-header" id="ConsumerGroupArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/consumerGroup.ts#L156">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/consumerGroup.ts#L156">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -925,7 +925,7 @@ ID of the consumer group. The length cannot exceed 64 characters.
 ID of the ALIKAFKA Instance that owns the groups.
 
 <h4 class="pdoc-member-header" id="ConsumerGroupArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/consumerGroup.ts#L160">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/consumerGroup.ts#L160">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -933,7 +933,7 @@ ID of the ALIKAFKA Instance that owns the groups.
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="ConsumerGroupState" data-link-title="ConsumerGroupState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/consumerGroup.ts#L130">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/consumerGroup.ts#L130">
         interface <strong>ConsumerGroupState</strong>
     </a>
 </h3>
@@ -943,7 +943,7 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering ConsumerGroup resources.
 
 <h4 class="pdoc-member-header" id="ConsumerGroupState-consumerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/consumerGroup.ts#L134">property <b>consumerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/consumerGroup.ts#L134">property <b>consumerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>consumerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -951,7 +951,7 @@ Input properties used for looking up and filtering ConsumerGroup resources.
 ID of the consumer group. The length cannot exceed 64 characters.
 
 <h4 class="pdoc-member-header" id="ConsumerGroupState-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/consumerGroup.ts#L138">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/consumerGroup.ts#L138">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -959,7 +959,7 @@ ID of the consumer group. The length cannot exceed 64 characters.
 ID of the ALIKAFKA Instance that owns the groups.
 
 <h4 class="pdoc-member-header" id="ConsumerGroupState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/consumerGroup.ts#L142">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/consumerGroup.ts#L142">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -967,7 +967,7 @@ ID of the ALIKAFKA Instance that owns the groups.
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="InstanceArgs" data-link-title="InstanceArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L270">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L270">
         interface <strong>InstanceArgs</strong>
     </a>
 </h3>
@@ -977,7 +977,7 @@ A mapping of tags to assign to the resource.
 The set of arguments for constructing a Instance resource.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-deployType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L274">property <b>deployType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L274">property <b>deployType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deployType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -985,7 +985,7 @@ The set of arguments for constructing a Instance resource.
 The deploy type of the instance. Currently only support two deploy type, 4: eip/vpc instance, 5: vpc instance.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-diskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L278">property <b>diskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L278">property <b>diskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -993,7 +993,7 @@ The deploy type of the instance. Currently only support two deploy type, 4: eip/
 The disk size of the instance. When modify this value, it only support adjust to a greater value.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-diskType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L282">property <b>diskType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L282">property <b>diskType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1001,7 +1001,7 @@ The disk size of the instance. When modify this value, it only support adjust to
 The disk type of the instance. 0: efficient cloud disk , 1: SSD.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-eipMax">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L286">property <b>eipMax</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L286">property <b>eipMax</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eipMax?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1009,7 +1009,7 @@ The disk type of the instance. 0: efficient cloud disk , 1: SSD.
 The max bandwidth of the instance. When modify this value, it only support adjust to a greater value.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-ioMax">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L290">property <b>ioMax</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L290">property <b>ioMax</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ioMax: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1017,7 +1017,7 @@ The max bandwidth of the instance. When modify this value, it only support adjus
 The max value of io of the instance. When modify this value, it only support adjust to a greater value.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L294">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L294">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1025,7 +1025,7 @@ The max value of io of the instance. When modify this value, it only support adj
 Name of your Kafka instance. The length should between 3 and 64 characters. If not set, will use instance id as instance name.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-paidType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L298">property <b>paidType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L298">property <b>paidType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>paidType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1033,7 +1033,7 @@ Name of your Kafka instance. The length should between 3 and 64 characters. If n
 The paid type of the instance. Support two type, "PrePaid": pre paid type instance, "PostPaid": post paid type instance. Default is PostPaid. When modify this value, it only support adjust from post pay to pre pay.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-securityGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L302">property <b>securityGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L302">property <b>securityGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1041,7 +1041,7 @@ The paid type of the instance. Support two type, "PrePaid": pre paid type instan
 （Optional, ForceNew, Available in v1.93.0+） The ID of security group for this instance. If the security group is empty, system will create a default one.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-specType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L306">property <b>specType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L306">property <b>specType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>specType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1049,7 +1049,7 @@ The paid type of the instance. Support two type, "PrePaid": pre paid type instan
 The spec type of the instance. Support two type, "normal": normal version instance, "professional": professional version instance. Default is normal. When modify this value, it only support adjust from normal to professional. Note only pre paid type instance support professional specific type.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L310">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L310">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1057,7 +1057,7 @@ The spec type of the instance. Support two type, "normal": normal version instan
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-topicQuota">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L314">property <b>topicQuota</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L314">property <b>topicQuota</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>topicQuota: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1065,7 +1065,7 @@ A mapping of tags to assign to the resource.
 The max num of topic can be create of the instance. When modify this value, it only adjust to a greater value.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L318">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L318">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vswitchId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1073,7 +1073,7 @@ The max num of topic can be create of the instance. When modify this value, it o
 The ID of attaching vswitch to instance.
 
 <h3 class="pdoc-module-header" id="InstanceState" data-link-title="InstanceState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L208">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L208">
         interface <strong>InstanceState</strong>
     </a>
 </h3>
@@ -1083,7 +1083,7 @@ The ID of attaching vswitch to instance.
 Input properties used for looking up and filtering Instance resources.
 
 <h4 class="pdoc-member-header" id="InstanceState-deployType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L212">property <b>deployType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L212">property <b>deployType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deployType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1091,7 +1091,7 @@ Input properties used for looking up and filtering Instance resources.
 The deploy type of the instance. Currently only support two deploy type, 4: eip/vpc instance, 5: vpc instance.
 
 <h4 class="pdoc-member-header" id="InstanceState-diskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L216">property <b>diskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L216">property <b>diskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1099,7 +1099,7 @@ The deploy type of the instance. Currently only support two deploy type, 4: eip/
 The disk size of the instance. When modify this value, it only support adjust to a greater value.
 
 <h4 class="pdoc-member-header" id="InstanceState-diskType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L220">property <b>diskType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L220">property <b>diskType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1107,7 +1107,7 @@ The disk size of the instance. When modify this value, it only support adjust to
 The disk type of the instance. 0: efficient cloud disk , 1: SSD.
 
 <h4 class="pdoc-member-header" id="InstanceState-eipMax">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L224">property <b>eipMax</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L224">property <b>eipMax</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eipMax?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1115,7 +1115,7 @@ The disk type of the instance. 0: efficient cloud disk , 1: SSD.
 The max bandwidth of the instance. When modify this value, it only support adjust to a greater value.
 
 <h4 class="pdoc-member-header" id="InstanceState-ioMax">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L228">property <b>ioMax</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L228">property <b>ioMax</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ioMax?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1123,7 +1123,7 @@ The max bandwidth of the instance. When modify this value, it only support adjus
 The max value of io of the instance. When modify this value, it only support adjust to a greater value.
 
 <h4 class="pdoc-member-header" id="InstanceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L232">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L232">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1131,7 +1131,7 @@ The max value of io of the instance. When modify this value, it only support adj
 Name of your Kafka instance. The length should between 3 and 64 characters. If not set, will use instance id as instance name.
 
 <h4 class="pdoc-member-header" id="InstanceState-paidType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L236">property <b>paidType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L236">property <b>paidType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>paidType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1139,7 +1139,7 @@ Name of your Kafka instance. The length should between 3 and 64 characters. If n
 The paid type of the instance. Support two type, "PrePaid": pre paid type instance, "PostPaid": post paid type instance. Default is PostPaid. When modify this value, it only support adjust from post pay to pre pay.
 
 <h4 class="pdoc-member-header" id="InstanceState-securityGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L240">property <b>securityGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L240">property <b>securityGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1147,7 +1147,7 @@ The paid type of the instance. Support two type, "PrePaid": pre paid type instan
 （Optional, ForceNew, Available in v1.93.0+） The ID of security group for this instance. If the security group is empty, system will create a default one.
 
 <h4 class="pdoc-member-header" id="InstanceState-specType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L244">property <b>specType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L244">property <b>specType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>specType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1155,7 +1155,7 @@ The paid type of the instance. Support two type, "PrePaid": pre paid type instan
 The spec type of the instance. Support two type, "normal": normal version instance, "professional": professional version instance. Default is normal. When modify this value, it only support adjust from normal to professional. Note only pre paid type instance support professional specific type.
 
 <h4 class="pdoc-member-header" id="InstanceState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L248">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L248">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1163,7 +1163,7 @@ The spec type of the instance. Support two type, "normal": normal version instan
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="InstanceState-topicQuota">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L252">property <b>topicQuota</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L252">property <b>topicQuota</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>topicQuota?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1171,7 +1171,7 @@ A mapping of tags to assign to the resource.
 The max num of topic can be create of the instance. When modify this value, it only adjust to a greater value.
 
 <h4 class="pdoc-member-header" id="InstanceState-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L256">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L256">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1179,7 +1179,7 @@ The max num of topic can be create of the instance. When modify this value, it o
 The ID of attaching VPC to instance.
 
 <h4 class="pdoc-member-header" id="InstanceState-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L260">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L260">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vswitchId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1187,7 +1187,7 @@ The ID of attaching VPC to instance.
 The ID of attaching vswitch to instance.
 
 <h4 class="pdoc-member-header" id="InstanceState-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/instance.ts#L264">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/instance.ts#L264">property <b>zoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1195,7 +1195,7 @@ The ID of attaching vswitch to instance.
 The Zone to launch the kafka instance.
 
 <h3 class="pdoc-module-header" id="SaslAclArgs" data-link-title="SaslAclArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslAcl.ts#L215">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslAcl.ts#L215">
         interface <strong>SaslAclArgs</strong>
     </a>
 </h3>
@@ -1205,7 +1205,7 @@ The Zone to launch the kafka instance.
 The set of arguments for constructing a SaslAcl resource.
 
 <h4 class="pdoc-member-header" id="SaslAclArgs-aclOperationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslAcl.ts#L219">property <b>aclOperationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslAcl.ts#L219">property <b>aclOperationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aclOperationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1213,7 +1213,7 @@ The set of arguments for constructing a SaslAcl resource.
 Operation type for this acl. The operation type can only be "Write" and "Read".
 
 <h4 class="pdoc-member-header" id="SaslAclArgs-aclResourceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslAcl.ts#L223">property <b>aclResourceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslAcl.ts#L223">property <b>aclResourceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aclResourceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1221,7 +1221,7 @@ Operation type for this acl. The operation type can only be "Write" and "Read".
 Resource name for this acl. The resource name should be a topic or consumer group name.
 
 <h4 class="pdoc-member-header" id="SaslAclArgs-aclResourcePatternType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslAcl.ts#L227">property <b>aclResourcePatternType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslAcl.ts#L227">property <b>aclResourcePatternType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aclResourcePatternType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1229,7 +1229,7 @@ Resource name for this acl. The resource name should be a topic or consumer grou
 Resource pattern type for this acl. The resource pattern support two types "LITERAL" and "PREFIXED". "LITERAL": A literal name defines the full name of a resource. The special wildcard character "*" can be used to represent a resource with any name. "PREFIXED": A prefixed name defines a prefix for a resource.
 
 <h4 class="pdoc-member-header" id="SaslAclArgs-aclResourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslAcl.ts#L231">property <b>aclResourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslAcl.ts#L231">property <b>aclResourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aclResourceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1237,7 +1237,7 @@ Resource pattern type for this acl. The resource pattern support two types "LITE
 Resource type for this acl. The resource type can only be "Topic" and "Group".
 
 <h4 class="pdoc-member-header" id="SaslAclArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslAcl.ts#L235">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslAcl.ts#L235">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1245,7 +1245,7 @@ Resource type for this acl. The resource type can only be "Topic" and "Group".
 ID of the ALIKAFKA Instance that owns the groups.
 
 <h4 class="pdoc-member-header" id="SaslAclArgs-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslAcl.ts#L239">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslAcl.ts#L239">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1253,7 +1253,7 @@ ID of the ALIKAFKA Instance that owns the groups.
 Username for the sasl user. The length should between 1 to 64 characters. The user should be an existed sasl user.
 
 <h3 class="pdoc-module-header" id="SaslAclState" data-link-title="SaslAclState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslAcl.ts#L181">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslAcl.ts#L181">
         interface <strong>SaslAclState</strong>
     </a>
 </h3>
@@ -1263,7 +1263,7 @@ Username for the sasl user. The length should between 1 to 64 characters. The us
 Input properties used for looking up and filtering SaslAcl resources.
 
 <h4 class="pdoc-member-header" id="SaslAclState-aclOperationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslAcl.ts#L185">property <b>aclOperationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslAcl.ts#L185">property <b>aclOperationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aclOperationType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1271,7 +1271,7 @@ Input properties used for looking up and filtering SaslAcl resources.
 Operation type for this acl. The operation type can only be "Write" and "Read".
 
 <h4 class="pdoc-member-header" id="SaslAclState-aclResourceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslAcl.ts#L189">property <b>aclResourceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslAcl.ts#L189">property <b>aclResourceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aclResourceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1279,7 +1279,7 @@ Operation type for this acl. The operation type can only be "Write" and "Read".
 Resource name for this acl. The resource name should be a topic or consumer group name.
 
 <h4 class="pdoc-member-header" id="SaslAclState-aclResourcePatternType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslAcl.ts#L193">property <b>aclResourcePatternType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslAcl.ts#L193">property <b>aclResourcePatternType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aclResourcePatternType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1287,7 +1287,7 @@ Resource name for this acl. The resource name should be a topic or consumer grou
 Resource pattern type for this acl. The resource pattern support two types "LITERAL" and "PREFIXED". "LITERAL": A literal name defines the full name of a resource. The special wildcard character "*" can be used to represent a resource with any name. "PREFIXED": A prefixed name defines a prefix for a resource.
 
 <h4 class="pdoc-member-header" id="SaslAclState-aclResourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslAcl.ts#L197">property <b>aclResourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslAcl.ts#L197">property <b>aclResourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aclResourceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1295,7 +1295,7 @@ Resource pattern type for this acl. The resource pattern support two types "LITE
 Resource type for this acl. The resource type can only be "Topic" and "Group".
 
 <h4 class="pdoc-member-header" id="SaslAclState-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslAcl.ts#L201">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslAcl.ts#L201">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>host?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1303,7 +1303,7 @@ Resource type for this acl. The resource type can only be "Topic" and "Group".
 The host of the acl.
 
 <h4 class="pdoc-member-header" id="SaslAclState-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslAcl.ts#L205">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslAcl.ts#L205">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1311,7 +1311,7 @@ The host of the acl.
 ID of the ALIKAFKA Instance that owns the groups.
 
 <h4 class="pdoc-member-header" id="SaslAclState-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslAcl.ts#L209">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslAcl.ts#L209">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1319,7 +1319,7 @@ ID of the ALIKAFKA Instance that owns the groups.
 Username for the sasl user. The length should between 1 to 64 characters. The user should be an existed sasl user.
 
 <h3 class="pdoc-module-header" id="SaslUserArgs" data-link-title="SaslUserArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslUser.ts#L170">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslUser.ts#L170">
         interface <strong>SaslUserArgs</strong>
     </a>
 </h3>
@@ -1329,7 +1329,7 @@ Username for the sasl user. The length should between 1 to 64 characters. The us
 The set of arguments for constructing a SaslUser resource.
 
 <h4 class="pdoc-member-header" id="SaslUserArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslUser.ts#L174">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslUser.ts#L174">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1337,7 +1337,7 @@ The set of arguments for constructing a SaslUser resource.
 ID of the ALIKAFKA Instance that owns the groups.
 
 <h4 class="pdoc-member-header" id="SaslUserArgs-kmsEncryptedPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslUser.ts#L178">property <b>kmsEncryptedPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslUser.ts#L178">property <b>kmsEncryptedPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsEncryptedPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1345,7 +1345,7 @@ ID of the ALIKAFKA Instance that owns the groups.
 An KMS encrypts password used to a db account. You have to specify one of `password` and `kmsEncryptedPassword` fields.
 
 <h4 class="pdoc-member-header" id="SaslUserArgs-kmsEncryptionContext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslUser.ts#L182">property <b>kmsEncryptionContext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslUser.ts#L182">property <b>kmsEncryptionContext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsEncryptionContext?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1353,7 +1353,7 @@ An KMS encrypts password used to a db account. You have to specify one of `passw
 An KMS encryption context used to decrypt `kmsEncryptedPassword` before creating or updating a user with `kmsEncryptedPassword`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kmsEncryptedPassword` is set.
 
 <h4 class="pdoc-member-header" id="SaslUserArgs-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslUser.ts#L186">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslUser.ts#L186">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1361,7 +1361,7 @@ An KMS encryption context used to decrypt `kmsEncryptedPassword` before creating
 Operation password. It may consist of letters, digits, or underlines, with a length of 1 to 64 characters. You have to specify one of `password` and `kmsEncryptedPassword` fields.
 
 <h4 class="pdoc-member-header" id="SaslUserArgs-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslUser.ts#L190">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslUser.ts#L190">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1369,7 +1369,7 @@ Operation password. It may consist of letters, digits, or underlines, with a len
 Username for the sasl user. The length should between 1 to 64 characters. The characters can only contain 'a'-'z', 'A'-'Z', '0'-'9', '_' and '-'.
 
 <h3 class="pdoc-module-header" id="SaslUserState" data-link-title="SaslUserState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslUser.ts#L144">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslUser.ts#L144">
         interface <strong>SaslUserState</strong>
     </a>
 </h3>
@@ -1379,7 +1379,7 @@ Username for the sasl user. The length should between 1 to 64 characters. The ch
 Input properties used for looking up and filtering SaslUser resources.
 
 <h4 class="pdoc-member-header" id="SaslUserState-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslUser.ts#L148">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslUser.ts#L148">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1387,7 +1387,7 @@ Input properties used for looking up and filtering SaslUser resources.
 ID of the ALIKAFKA Instance that owns the groups.
 
 <h4 class="pdoc-member-header" id="SaslUserState-kmsEncryptedPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslUser.ts#L152">property <b>kmsEncryptedPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslUser.ts#L152">property <b>kmsEncryptedPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsEncryptedPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1395,7 +1395,7 @@ ID of the ALIKAFKA Instance that owns the groups.
 An KMS encrypts password used to a db account. You have to specify one of `password` and `kmsEncryptedPassword` fields.
 
 <h4 class="pdoc-member-header" id="SaslUserState-kmsEncryptionContext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslUser.ts#L156">property <b>kmsEncryptionContext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslUser.ts#L156">property <b>kmsEncryptionContext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsEncryptionContext?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1403,7 +1403,7 @@ An KMS encrypts password used to a db account. You have to specify one of `passw
 An KMS encryption context used to decrypt `kmsEncryptedPassword` before creating or updating a user with `kmsEncryptedPassword`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kmsEncryptedPassword` is set.
 
 <h4 class="pdoc-member-header" id="SaslUserState-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslUser.ts#L160">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslUser.ts#L160">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1411,7 +1411,7 @@ An KMS encryption context used to decrypt `kmsEncryptedPassword` before creating
 Operation password. It may consist of letters, digits, or underlines, with a length of 1 to 64 characters. You have to specify one of `password` and `kmsEncryptedPassword` fields.
 
 <h4 class="pdoc-member-header" id="SaslUserState-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/saslUser.ts#L164">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/saslUser.ts#L164">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1419,7 +1419,7 @@ Operation password. It may consist of letters, digits, or underlines, with a len
 Username for the sasl user. The length should between 1 to 64 characters. The characters can only contain 'a'-'z', 'A'-'Z', '0'-'9', '_' and '-'.
 
 <h3 class="pdoc-module-header" id="TopicArgs" data-link-title="TopicArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/topic.ts#L195">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/topic.ts#L195">
         interface <strong>TopicArgs</strong>
     </a>
 </h3>
@@ -1429,7 +1429,7 @@ Username for the sasl user. The length should between 1 to 64 characters. The ch
 The set of arguments for constructing a Topic resource.
 
 <h4 class="pdoc-member-header" id="TopicArgs-compactTopic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/topic.ts#L199">property <b>compactTopic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/topic.ts#L199">property <b>compactTopic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>compactTopic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1437,7 +1437,7 @@ The set of arguments for constructing a Topic resource.
 Whether the topic is compactTopic or not. Compact topic must be a localTopic.
 
 <h4 class="pdoc-member-header" id="TopicArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/topic.ts#L203">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/topic.ts#L203">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1445,7 +1445,7 @@ Whether the topic is compactTopic or not. Compact topic must be a localTopic.
 InstanceId of your Kafka resource, the topic will create in this instance.
 
 <h4 class="pdoc-member-header" id="TopicArgs-localTopic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/topic.ts#L207">property <b>localTopic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/topic.ts#L207">property <b>localTopic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>localTopic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1453,7 +1453,7 @@ InstanceId of your Kafka resource, the topic will create in this instance.
 Whether the topic is localTopic or not.
 
 <h4 class="pdoc-member-header" id="TopicArgs-partitionNum">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/topic.ts#L211">property <b>partitionNum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/topic.ts#L211">property <b>partitionNum</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>partitionNum?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1461,7 +1461,7 @@ Whether the topic is localTopic or not.
 The number of partitions of the topic. The number should between 1 and 48.
 
 <h4 class="pdoc-member-header" id="TopicArgs-remark">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/topic.ts#L215">property <b>remark</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/topic.ts#L215">property <b>remark</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>remark: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1469,7 +1469,7 @@ The number of partitions of the topic. The number should between 1 and 48.
 This attribute is a concise description of topic. The length cannot exceed 64.
 
 <h4 class="pdoc-member-header" id="TopicArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/topic.ts#L219">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/topic.ts#L219">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1477,7 +1477,7 @@ This attribute is a concise description of topic. The length cannot exceed 64.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="TopicArgs-topic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/topic.ts#L223">property <b>topic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/topic.ts#L223">property <b>topic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>topic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1485,7 +1485,7 @@ A mapping of tags to assign to the resource.
 Name of the topic. Two topics on a single instance cannot have the same name. The length cannot exceed 64 characters.
 
 <h3 class="pdoc-module-header" id="TopicState" data-link-title="TopicState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/topic.ts#L161">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/topic.ts#L161">
         interface <strong>TopicState</strong>
     </a>
 </h3>
@@ -1495,7 +1495,7 @@ Name of the topic. Two topics on a single instance cannot have the same name. Th
 Input properties used for looking up and filtering Topic resources.
 
 <h4 class="pdoc-member-header" id="TopicState-compactTopic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/topic.ts#L165">property <b>compactTopic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/topic.ts#L165">property <b>compactTopic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>compactTopic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1503,7 +1503,7 @@ Input properties used for looking up and filtering Topic resources.
 Whether the topic is compactTopic or not. Compact topic must be a localTopic.
 
 <h4 class="pdoc-member-header" id="TopicState-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/topic.ts#L169">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/topic.ts#L169">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1511,7 +1511,7 @@ Whether the topic is compactTopic or not. Compact topic must be a localTopic.
 InstanceId of your Kafka resource, the topic will create in this instance.
 
 <h4 class="pdoc-member-header" id="TopicState-localTopic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/topic.ts#L173">property <b>localTopic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/topic.ts#L173">property <b>localTopic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>localTopic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1519,7 +1519,7 @@ InstanceId of your Kafka resource, the topic will create in this instance.
 Whether the topic is localTopic or not.
 
 <h4 class="pdoc-member-header" id="TopicState-partitionNum">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/topic.ts#L177">property <b>partitionNum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/topic.ts#L177">property <b>partitionNum</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>partitionNum?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1527,7 +1527,7 @@ Whether the topic is localTopic or not.
 The number of partitions of the topic. The number should between 1 and 48.
 
 <h4 class="pdoc-member-header" id="TopicState-remark">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/topic.ts#L181">property <b>remark</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/topic.ts#L181">property <b>remark</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>remark?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1535,7 +1535,7 @@ The number of partitions of the topic. The number should between 1 and 48.
 This attribute is a concise description of topic. The length cannot exceed 64.
 
 <h4 class="pdoc-member-header" id="TopicState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/topic.ts#L185">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/topic.ts#L185">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1543,7 +1543,7 @@ This attribute is a concise description of topic. The length cannot exceed 64.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="TopicState-topic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/alikafka/topic.ts#L189">property <b>topic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/1e99e347a9a110e183f8ab5e2230e5ca3afe964d/sdk/nodejs/alikafka/topic.ts#L189">property <b>topic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>topic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
