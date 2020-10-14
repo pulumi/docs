@@ -3,7 +3,6 @@ env:
 
 name: cli docs build
 on:
-  pull_request:
   repository_dispatch:
     types:
       - pulumi-cli
