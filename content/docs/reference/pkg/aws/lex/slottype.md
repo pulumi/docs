@@ -29,7 +29,7 @@ class MyStack : Stack
     {
         var flowerTypes = new Aws.Lex.SlotType("flowerTypes", new Aws.Lex.SlotTypeArgs
         {
-            CreateVersion = false,
+            CreateVersion = true,
             Description = "Types of flowers to order",
             EnumerationValues = 
             {
@@ -73,7 +73,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := lex.NewSlotType(ctx, "flowerTypes", &lex.SlotTypeArgs{
-			CreateVersion: pulumi.Bool(false),
+			CreateVersion: pulumi.Bool(true),
 			Description:   pulumi.String("Types of flowers to order"),
 			EnumerationValues: lex.SlotTypeEnumerationValueArray{
 				&lex.SlotTypeEnumerationValueArgs{
@@ -109,7 +109,7 @@ import pulumi
 import pulumi_aws as aws
 
 flower_types = aws.lex.SlotType("flowerTypes",
-    create_version=False,
+    create_version=True,
     description="Types of flowers to order",
     enumeration_values=[
         aws.lex.SlotTypeEnumerationValueArgs(
@@ -139,7 +139,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const flowerTypes = new aws.lex.SlotType("flower_types", {
-    createVersion: false,
+    createVersion: true,
     description: "Types of flowers to order",
     enumerationValues: [
         {
@@ -370,7 +370,7 @@ documented under enumeration_value.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines if a new slot type version is created when the initial resource is created and on each
-update. Defaults to true.
+update. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -406,7 +406,7 @@ update. Defaults to true.
     <dd>{{% md %}}Determines the slot resolution strategy that Amazon Lex
 uses to return slot type values. `ORIGINAL_VALUE` returns the value entered by the user if the user
 value is similar to the slot value. `TOP_RESOLUTION` returns the first value in the resolution list
-if there is a resolution list for the slot, otherwise null is returned.
+if there is a resolution list for the slot, otherwise null is returned. Defaults to `ORIGINAL_VALUE`.
 {{% /md %}}</dd>
 
 </dl>
@@ -439,7 +439,7 @@ documented under enumeration_value.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines if a new slot type version is created when the initial resource is created and on each
-update. Defaults to true.
+update. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -475,7 +475,7 @@ update. Defaults to true.
     <dd>{{% md %}}Determines the slot resolution strategy that Amazon Lex
 uses to return slot type values. `ORIGINAL_VALUE` returns the value entered by the user if the user
 value is similar to the slot value. `TOP_RESOLUTION` returns the first value in the resolution list
-if there is a resolution list for the slot, otherwise null is returned.
+if there is a resolution list for the slot, otherwise null is returned. Defaults to `ORIGINAL_VALUE`.
 {{% /md %}}</dd>
 
 </dl>
@@ -508,7 +508,7 @@ documented under enumeration_value.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Determines if a new slot type version is created when the initial resource is created and on each
-update. Defaults to true.
+update. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -544,7 +544,7 @@ update. Defaults to true.
     <dd>{{% md %}}Determines the slot resolution strategy that Amazon Lex
 uses to return slot type values. `ORIGINAL_VALUE` returns the value entered by the user if the user
 value is similar to the slot value. `TOP_RESOLUTION` returns the first value in the resolution list
-if there is a resolution list for the slot, otherwise null is returned.
+if there is a resolution list for the slot, otherwise null is returned. Defaults to `ORIGINAL_VALUE`.
 {{% /md %}}</dd>
 
 </dl>
@@ -577,7 +577,7 @@ documented under enumeration_value.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines if a new slot type version is created when the initial resource is created and on each
-update. Defaults to true.
+update. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -613,7 +613,7 @@ update. Defaults to true.
     <dd>{{% md %}}Determines the slot resolution strategy that Amazon Lex
 uses to return slot type values. `ORIGINAL_VALUE` returns the value entered by the user if the user
 value is similar to the slot value. `TOP_RESOLUTION` returns the first value in the resolution list
-if there is a resolution list for the slot, otherwise null is returned.
+if there is a resolution list for the slot, otherwise null is returned. Defaults to `ORIGINAL_VALUE`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1030,7 +1030,7 @@ not included as an argument because the resource will add it automatically when 
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines if a new slot type version is created when the initial resource is created and on each
-update. Defaults to true.
+update. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1102,7 +1102,7 @@ documented under enumeration_value.
     <dd>{{% md %}}Determines the slot resolution strategy that Amazon Lex
 uses to return slot type values. `ORIGINAL_VALUE` returns the value entered by the user if the user
 value is similar to the slot value. `TOP_RESOLUTION` returns the first value in the resolution list
-if there is a resolution list for the slot, otherwise null is returned.
+if there is a resolution list for the slot, otherwise null is returned. Defaults to `ORIGINAL_VALUE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1144,7 +1144,7 @@ not included as an argument because the resource will add it automatically when 
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines if a new slot type version is created when the initial resource is created and on each
-update. Defaults to true.
+update. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1216,7 +1216,7 @@ documented under enumeration_value.
     <dd>{{% md %}}Determines the slot resolution strategy that Amazon Lex
 uses to return slot type values. `ORIGINAL_VALUE` returns the value entered by the user if the user
 value is similar to the slot value. `TOP_RESOLUTION` returns the first value in the resolution list
-if there is a resolution list for the slot, otherwise null is returned.
+if there is a resolution list for the slot, otherwise null is returned. Defaults to `ORIGINAL_VALUE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1258,7 +1258,7 @@ not included as an argument because the resource will add it automatically when 
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Determines if a new slot type version is created when the initial resource is created and on each
-update. Defaults to true.
+update. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1330,7 +1330,7 @@ documented under enumeration_value.
     <dd>{{% md %}}Determines the slot resolution strategy that Amazon Lex
 uses to return slot type values. `ORIGINAL_VALUE` returns the value entered by the user if the user
 value is similar to the slot value. `TOP_RESOLUTION` returns the first value in the resolution list
-if there is a resolution list for the slot, otherwise null is returned.
+if there is a resolution list for the slot, otherwise null is returned. Defaults to `ORIGINAL_VALUE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1372,7 +1372,7 @@ not included as an argument because the resource will add it automatically when 
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines if a new slot type version is created when the initial resource is created and on each
-update. Defaults to true.
+update. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1444,7 +1444,7 @@ documented under enumeration_value.
     <dd>{{% md %}}Determines the slot resolution strategy that Amazon Lex
 uses to return slot type values. `ORIGINAL_VALUE` returns the value entered by the user if the user
 value is similar to the slot value. `TOP_RESOLUTION` returns the first value in the resolution list
-if there is a resolution list for the slot, otherwise null is returned.
+if there is a resolution list for the slot, otherwise null is returned. Defaults to `ORIGINAL_VALUE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

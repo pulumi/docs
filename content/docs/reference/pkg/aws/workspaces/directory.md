@@ -44,6 +44,7 @@ class MyStack : Stack
         });
         var mainDirectory = new Aws.DirectoryService.Directory("mainDirectory", new Aws.DirectoryService.DirectoryArgs
         {
+            Name = "corp.example.com",
             Password = "#S1ncerely",
             Size = "Small",
             VpcSettings = new Aws.DirectoryService.Inputs.DirectoryVpcSettingsArgs
@@ -108,6 +109,7 @@ func main() {
 			return err
 		}
 		mainDirectory, err := directoryservice.NewDirectory(ctx, "mainDirectory", &directoryservice.DirectoryArgs{
+			Name:     pulumi.String("corp.example.com"),
 			Password: pulumi.String("#S1ncerely"),
 			Size:     pulumi.String("Small"),
 			VpcSettings: &directoryservice.DirectoryVpcSettingsArgs{
@@ -153,6 +155,7 @@ private_b = aws.ec2.Subnet("private-b",
     availability_zone="us-east-1b",
     cidr_block="10.0.1.0/24")
 main_directory = aws.directoryservice.Directory("mainDirectory",
+    name="corp.example.com",
     password="#S1ncerely",
     size="Small",
     vpc_settings=aws.directoryservice.DirectoryVpcSettingsArgs(
@@ -190,6 +193,7 @@ const private_b = new aws.ec2.Subnet("private-b", {
     cidrBlock: "10.0.1.0/24",
 });
 const mainDirectory = new aws.directoryservice.Directory("mainDirectory", {
+    name: "corp.example.com",
     password: "#S1ncerely",
     size: "Small",
     vpcSettings: {

@@ -37,10 +37,7 @@ class MyStack : Stack
             {
                 aws_security_group.Lb_sg.Id,
             },
-            Subnets = 
-            {
-                aws_subnet.Public.Select(__item => __item.Id).ToList(),
-            },
+            Subnets = aws_subnet.Public.Select(__item => __item.Id).ToList(),
             EnableDeletionProtection = true,
             AccessLogs = new Aws.LB.Inputs.LoadBalancerAccessLogsArgs
             {
@@ -73,7 +70,7 @@ test = aws.lb.LoadBalancer("test",
     internal=False,
     load_balancer_type="application",
     security_groups=[aws_security_group["lb_sg"]["id"]],
-    subnets=[[__item["id"] for __item in aws_subnet["public"]]],
+    subnets=[__item["id"] for __item in aws_subnet["public"]],
     enable_deletion_protection=True,
     access_logs=aws.lb.LoadBalancerAccessLogsArgs(
         bucket=aws_s3_bucket["lb_logs"]["bucket"],
@@ -97,7 +94,7 @@ const test = new aws.lb.LoadBalancer("test", {
     internal: false,
     loadBalancerType: "application",
     securityGroups: [aws_security_group.lb_sg.id],
-    subnets: [aws_subnet["public"].map(__item => __item.id)],
+    subnets: aws_subnet["public"].map(__item => __item.id),
     enableDeletionProtection: true,
     accessLogs: {
         bucket: aws_s3_bucket.lb_logs.bucket,
@@ -127,10 +124,7 @@ class MyStack : Stack
         {
             Internal = false,
             LoadBalancerType = "network",
-            Subnets = 
-            {
-                aws_subnet.Public.Select(__item => __item.Id).ToList(),
-            },
+            Subnets = aws_subnet.Public.Select(__item => __item.Id).ToList(),
             EnableDeletionProtection = true,
             Tags = 
             {
@@ -156,7 +150,7 @@ import pulumi_aws as aws
 test = aws.lb.LoadBalancer("test",
     internal=False,
     load_balancer_type="network",
-    subnets=[[__item["id"] for __item in aws_subnet["public"]]],
+    subnets=[__item["id"] for __item in aws_subnet["public"]],
     enable_deletion_protection=True,
     tags={
         "Environment": "production",
@@ -174,7 +168,7 @@ import * as aws from "@pulumi/aws";
 const test = new aws.lb.LoadBalancer("test", {
     internal: false,
     loadBalancerType: "network",
-    subnets: [aws_subnet["public"].map(__item => __item.id)],
+    subnets: aws_subnet["public"].map(__item => __item.id),
     enableDeletionProtection: true,
     tags: {
         Environment: "production",

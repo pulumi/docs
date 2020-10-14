@@ -2297,6 +2297,17 @@ Routes are matched based on the specified value, where `0` is the highest priori
     <dd>{{% md %}}The retry policy.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_csharp">
+<a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespecgrpcroutetimeout">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Timeout<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The types of timeouts.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2335,6 +2346,17 @@ Routes are matched based on the specified value, where `0` is the highest priori
         <span class="property-type"><a href="#routespecgrpcrouteretrypolicy">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The retry policy.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_go">
+<a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespecgrpcroutetimeout">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}The types of timeouts.
 {{% /md %}}</dd>
 
 </dl>
@@ -2377,6 +2399,17 @@ Routes are matched based on the specified value, where `0` is the highest priori
     <dd>{{% md %}}The retry policy.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_nodejs">
+<a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespecgrpcroutetimeout">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}The types of timeouts.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2415,6 +2448,17 @@ Routes are matched based on the specified value, where `0` is the highest priori
         <span class="property-type"><a href="#routespecgrpcrouteretrypolicy">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The retry policy.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_python">
+<a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespecgrpcroutetimeout">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Timeout<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The types of timeouts.
 {{% /md %}}</dd>
 
 </dl>
@@ -2694,6 +2738,18 @@ You can specify one or more targets and their relative weights with which to dis
 
     <dt class="property-optional"
             title="Optional">
+        <span id="prefix_csharp">
+<a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters.
+This parameter must always start with /, which by itself matches all requests to the virtual router service name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
 </span> 
@@ -2730,6 +2786,18 @@ You can specify one or more targets and their relative weights with which to dis
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The method name to match from the request. If you specify a name, you must also specify a `service_name`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="prefix_go">
+<a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters.
+This parameter must always start with /, which by itself matches all requests to the virtual router service name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2774,6 +2842,18 @@ You can specify one or more targets and their relative weights with which to dis
 
     <dt class="property-optional"
             title="Optional">
+        <span id="prefix_nodejs">
+<a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters.
+This parameter must always start with /, which by itself matches all requests to the virtual router service name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span> 
@@ -2810,6 +2890,18 @@ You can specify one or more targets and their relative weights with which to dis
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The method name to match from the request. If you specify a name, you must also specify a `service_name`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="prefix_python">
+<a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters.
+This parameter must always start with /, which by itself matches all requests to the virtual router service name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3824,6 +3916,408 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 
 
 
+<h4 id="routespecgrpcroutetimeout">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Timeout</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RouteSpecGrpcRouteTimeout">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RouteSpecGrpcRouteTimeout">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecGrpcRouteTimeoutArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecGrpcRouteTimeoutOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecGrpcRouteTimeoutArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecGrpcRouteTimeout.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_csharp">
+<a href="#idle_csharp" style="color: inherit; text-decoration: inherit;">Idle</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespecgrpcroutetimeoutidle">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Timeout<wbr>Idle<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perrequest_csharp">
+<a href="#perrequest_csharp" style="color: inherit; text-decoration: inherit;">Per<wbr>Request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespecgrpcroutetimeoutperrequest">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Timeout<wbr>Per<wbr>Request<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The per request timeout.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_go">
+<a href="#idle_go" style="color: inherit; text-decoration: inherit;">Idle</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespecgrpcroutetimeoutidle">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Timeout<wbr>Idle</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perrequest_go">
+<a href="#perrequest_go" style="color: inherit; text-decoration: inherit;">Per<wbr>Request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespecgrpcroutetimeoutperrequest">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Timeout<wbr>Per<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}The per request timeout.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_nodejs">
+<a href="#idle_nodejs" style="color: inherit; text-decoration: inherit;">idle</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespecgrpcroutetimeoutidle">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Timeout<wbr>Idle</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perrequest_nodejs">
+<a href="#perrequest_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespecgrpcroutetimeoutperrequest">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Timeout<wbr>Per<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}The per request timeout.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_python">
+<a href="#idle_python" style="color: inherit; text-decoration: inherit;">idle</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespecgrpcroutetimeoutidle">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Timeout<wbr>Idle<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="per_request_python">
+<a href="#per_request_python" style="color: inherit; text-decoration: inherit;">per_<wbr>request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespecgrpcroutetimeoutperrequest">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Timeout<wbr>Per<wbr>Request<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The per request timeout.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="routespecgrpcroutetimeoutidle">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Timeout<wbr>Idle</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RouteSpecGrpcRouteTimeoutIdle">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RouteSpecGrpcRouteTimeoutIdle">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecGrpcRouteTimeoutIdleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecGrpcRouteTimeoutIdleOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecGrpcRouteTimeoutIdleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecGrpcRouteTimeoutIdle.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_csharp">
+<a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_go">
+<a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_nodejs">
+<a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_python">
+<a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="routespecgrpcroutetimeoutperrequest">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Timeout<wbr>Per<wbr>Request</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RouteSpecGrpcRouteTimeoutPerRequest">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RouteSpecGrpcRouteTimeoutPerRequest">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecGrpcRouteTimeoutPerRequestArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecGrpcRouteTimeoutPerRequestOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecGrpcRouteTimeoutPerRequestArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecGrpcRouteTimeoutPerRequest.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_csharp">
+<a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_go">
+<a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_nodejs">
+<a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_python">
+<a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="routespechttp2route">Route<wbr>Spec<wbr>Http2Route</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RouteSpecHttp2Route">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RouteSpecHttp2Route">output</a> API doc for this type.
@@ -3875,6 +4369,17 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
     <dd>{{% md %}}The retry policy.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_csharp">
+<a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routetimeout">Route<wbr>Spec<wbr>Http2Route<wbr>Timeout<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The types of timeouts.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -3913,6 +4418,17 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
         <span class="property-type"><a href="#routespechttp2routeretrypolicy">Route<wbr>Spec<wbr>Http2Route<wbr>Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The retry policy.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_go">
+<a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routetimeout">Route<wbr>Spec<wbr>Http2Route<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}The types of timeouts.
 {{% /md %}}</dd>
 
 </dl>
@@ -3955,6 +4471,17 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
     <dd>{{% md %}}The retry policy.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_nodejs">
+<a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routetimeout">Route<wbr>Spec<wbr>Http2Route<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}The types of timeouts.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -3993,6 +4520,17 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
         <span class="property-type"><a href="#routespechttp2routeretrypolicy">Route<wbr>Spec<wbr>Http2Route<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The retry policy.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_python">
+<a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routetimeout">Route<wbr>Spec<wbr>Http2Route<wbr>Timeout<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The types of timeouts.
 {{% /md %}}</dd>
 
 </dl>
@@ -5402,6 +5940,408 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 
 
 
+<h4 id="routespechttp2routetimeout">Route<wbr>Spec<wbr>Http2Route<wbr>Timeout</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RouteSpecHttp2RouteTimeout">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RouteSpecHttp2RouteTimeout">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecHttp2RouteTimeoutArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecHttp2RouteTimeoutOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecHttp2RouteTimeoutArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecHttp2RouteTimeout.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_csharp">
+<a href="#idle_csharp" style="color: inherit; text-decoration: inherit;">Idle</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routetimeoutidle">Route<wbr>Spec<wbr>Http2Route<wbr>Timeout<wbr>Idle<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perrequest_csharp">
+<a href="#perrequest_csharp" style="color: inherit; text-decoration: inherit;">Per<wbr>Request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routetimeoutperrequest">Route<wbr>Spec<wbr>Http2Route<wbr>Timeout<wbr>Per<wbr>Request<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The per request timeout.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_go">
+<a href="#idle_go" style="color: inherit; text-decoration: inherit;">Idle</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routetimeoutidle">Route<wbr>Spec<wbr>Http2Route<wbr>Timeout<wbr>Idle</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perrequest_go">
+<a href="#perrequest_go" style="color: inherit; text-decoration: inherit;">Per<wbr>Request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routetimeoutperrequest">Route<wbr>Spec<wbr>Http2Route<wbr>Timeout<wbr>Per<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}The per request timeout.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_nodejs">
+<a href="#idle_nodejs" style="color: inherit; text-decoration: inherit;">idle</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routetimeoutidle">Route<wbr>Spec<wbr>Http2Route<wbr>Timeout<wbr>Idle</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perrequest_nodejs">
+<a href="#perrequest_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routetimeoutperrequest">Route<wbr>Spec<wbr>Http2Route<wbr>Timeout<wbr>Per<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}The per request timeout.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_python">
+<a href="#idle_python" style="color: inherit; text-decoration: inherit;">idle</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routetimeoutidle">Route<wbr>Spec<wbr>Http2Route<wbr>Timeout<wbr>Idle<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="per_request_python">
+<a href="#per_request_python" style="color: inherit; text-decoration: inherit;">per_<wbr>request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routetimeoutperrequest">Route<wbr>Spec<wbr>Http2Route<wbr>Timeout<wbr>Per<wbr>Request<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The per request timeout.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="routespechttp2routetimeoutidle">Route<wbr>Spec<wbr>Http2Route<wbr>Timeout<wbr>Idle</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RouteSpecHttp2RouteTimeoutIdle">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RouteSpecHttp2RouteTimeoutIdle">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecHttp2RouteTimeoutIdleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecHttp2RouteTimeoutIdleOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecHttp2RouteTimeoutIdleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecHttp2RouteTimeoutIdle.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_csharp">
+<a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_go">
+<a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_nodejs">
+<a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_python">
+<a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="routespechttp2routetimeoutperrequest">Route<wbr>Spec<wbr>Http2Route<wbr>Timeout<wbr>Per<wbr>Request</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RouteSpecHttp2RouteTimeoutPerRequest">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RouteSpecHttp2RouteTimeoutPerRequest">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecHttp2RouteTimeoutPerRequestArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecHttp2RouteTimeoutPerRequestOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecHttp2RouteTimeoutPerRequestArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecHttp2RouteTimeoutPerRequest.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_csharp">
+<a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_go">
+<a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_nodejs">
+<a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_python">
+<a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="routespechttproute">Route<wbr>Spec<wbr>Http<wbr>Route</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RouteSpecHttpRoute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RouteSpecHttpRoute">output</a> API doc for this type.
@@ -5453,6 +6393,17 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
     <dd>{{% md %}}The retry policy.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_csharp">
+<a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproutetimeout">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Timeout<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The types of timeouts.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -5491,6 +6442,17 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
         <span class="property-type"><a href="#routespechttprouteretrypolicy">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The retry policy.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_go">
+<a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproutetimeout">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}The types of timeouts.
 {{% /md %}}</dd>
 
 </dl>
@@ -5533,6 +6495,17 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
     <dd>{{% md %}}The retry policy.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_nodejs">
+<a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproutetimeout">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}The types of timeouts.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -5571,6 +6544,17 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
         <span class="property-type"><a href="#routespechttprouteretrypolicy">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The retry policy.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_python">
+<a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproutetimeout">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Timeout<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The types of timeouts.
 {{% /md %}}</dd>
 
 </dl>
@@ -6980,6 +7964,408 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
 
 
 
+<h4 id="routespechttproutetimeout">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Timeout</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RouteSpecHttpRouteTimeout">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RouteSpecHttpRouteTimeout">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecHttpRouteTimeoutArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecHttpRouteTimeoutOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecHttpRouteTimeoutArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecHttpRouteTimeout.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_csharp">
+<a href="#idle_csharp" style="color: inherit; text-decoration: inherit;">Idle</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproutetimeoutidle">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Timeout<wbr>Idle<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perrequest_csharp">
+<a href="#perrequest_csharp" style="color: inherit; text-decoration: inherit;">Per<wbr>Request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproutetimeoutperrequest">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Timeout<wbr>Per<wbr>Request<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The per request timeout.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_go">
+<a href="#idle_go" style="color: inherit; text-decoration: inherit;">Idle</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproutetimeoutidle">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Timeout<wbr>Idle</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perrequest_go">
+<a href="#perrequest_go" style="color: inherit; text-decoration: inherit;">Per<wbr>Request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproutetimeoutperrequest">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Timeout<wbr>Per<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}The per request timeout.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_nodejs">
+<a href="#idle_nodejs" style="color: inherit; text-decoration: inherit;">idle</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproutetimeoutidle">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Timeout<wbr>Idle</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perrequest_nodejs">
+<a href="#perrequest_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproutetimeoutperrequest">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Timeout<wbr>Per<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}The per request timeout.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_python">
+<a href="#idle_python" style="color: inherit; text-decoration: inherit;">idle</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproutetimeoutidle">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Timeout<wbr>Idle<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="per_request_python">
+<a href="#per_request_python" style="color: inherit; text-decoration: inherit;">per_<wbr>request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproutetimeoutperrequest">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Timeout<wbr>Per<wbr>Request<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The per request timeout.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="routespechttproutetimeoutidle">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Timeout<wbr>Idle</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RouteSpecHttpRouteTimeoutIdle">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RouteSpecHttpRouteTimeoutIdle">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecHttpRouteTimeoutIdleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecHttpRouteTimeoutIdleOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecHttpRouteTimeoutIdleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecHttpRouteTimeoutIdle.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_csharp">
+<a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_go">
+<a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_nodejs">
+<a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_python">
+<a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="routespechttproutetimeoutperrequest">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Timeout<wbr>Per<wbr>Request</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RouteSpecHttpRouteTimeoutPerRequest">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RouteSpecHttpRouteTimeoutPerRequest">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecHttpRouteTimeoutPerRequestArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecHttpRouteTimeoutPerRequestOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecHttpRouteTimeoutPerRequestArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecHttpRouteTimeoutPerRequest.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_csharp">
+<a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_go">
+<a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_nodejs">
+<a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_python">
+<a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="routespectcproute">Route<wbr>Spec<wbr>Tcp<wbr>Route</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RouteSpecTcpRoute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RouteSpecTcpRoute">output</a> API doc for this type.
@@ -7009,6 +8395,17 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
     <dd>{{% md %}}The action to take if a match is determined.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_csharp">
+<a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespectcproutetimeout">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Timeout<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The types of timeouts.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -7025,6 +8422,17 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
         <span class="property-type"><a href="#routespectcprouteaction">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The action to take if a match is determined.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_go">
+<a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespectcproutetimeout">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}The types of timeouts.
 {{% /md %}}</dd>
 
 </dl>
@@ -7045,6 +8453,17 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
     <dd>{{% md %}}The action to take if a match is determined.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_nodejs">
+<a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespectcproutetimeout">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}The types of timeouts.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -7061,6 +8480,17 @@ Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP statu
         <span class="property-type"><a href="#routespectcprouteaction">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action to take if a match is determined.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_python">
+<a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespectcproutetimeout">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Timeout<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The types of timeouts.
 {{% /md %}}</dd>
 
 </dl>
@@ -7289,6 +8719,230 @@ You can specify one or more targets and their relative weights with which to dis
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative weight of the weighted target. An integer between 0 and 100.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="routespectcproutetimeout">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Timeout</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RouteSpecTcpRouteTimeout">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RouteSpecTcpRouteTimeout">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecTcpRouteTimeoutArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecTcpRouteTimeoutOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecTcpRouteTimeoutArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecTcpRouteTimeout.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_csharp">
+<a href="#idle_csharp" style="color: inherit; text-decoration: inherit;">Idle</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespectcproutetimeoutidle">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Timeout<wbr>Idle<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_go">
+<a href="#idle_go" style="color: inherit; text-decoration: inherit;">Idle</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespectcproutetimeoutidle">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Timeout<wbr>Idle</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_nodejs">
+<a href="#idle_nodejs" style="color: inherit; text-decoration: inherit;">idle</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespectcproutetimeoutidle">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Timeout<wbr>Idle</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_python">
+<a href="#idle_python" style="color: inherit; text-decoration: inherit;">idle</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespectcproutetimeoutidle">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Timeout<wbr>Idle<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="routespectcproutetimeoutidle">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Timeout<wbr>Idle</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RouteSpecTcpRouteTimeoutIdle">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RouteSpecTcpRouteTimeoutIdle">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecTcpRouteTimeoutIdleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecTcpRouteTimeoutIdleOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecTcpRouteTimeoutIdleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecTcpRouteTimeoutIdle.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_csharp">
+<a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_go">
+<a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_nodejs">
+<a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_python">
+<a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
 {{% /md %}}</dd>
 
 </dl>

@@ -24,6 +24,7 @@ Explore the resources and functions of the redshift module in the AWS package.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getcluster" title="GetCluster"><span class="symbol function"></span>GetCluster</a></li>
+    <li><a href="getorderablecluster" title="GetOrderableCluster"><span class="symbol function"></span>GetOrderableCluster</a></li>
     <li><a href="getserviceaccount" title="GetServiceAccount"><span class="symbol function"></span>GetServiceAccount</a></li>
 </ul>
 
@@ -36,7 +37,7 @@ Explore the resources and functions of the redshift module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.6.1</dd>
+	<dd>3.7.0</dd>
 </dl>
 
 

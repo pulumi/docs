@@ -572,7 +572,7 @@ The TargetGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetgroupstickiness">Target<wbr>Group<wbr>Stickiness<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A Stickiness block. Stickiness blocks are documented below. `stickiness` is only valid if used with Load Balancers of type `Application`
+    <dd>{{% md %}}A Stickiness block. Stickiness blocks are documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -738,7 +738,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetgroupstickiness">Target<wbr>Group<wbr>Stickiness</a></span>
     </dt>
-    <dd>{{% md %}}A Stickiness block. Stickiness blocks are documented below. `stickiness` is only valid if used with Load Balancers of type `Application`
+    <dd>{{% md %}}A Stickiness block. Stickiness blocks are documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -904,7 +904,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetgroupstickiness">Target<wbr>Group<wbr>Stickiness</a></span>
     </dt>
-    <dd>{{% md %}}A Stickiness block. Stickiness blocks are documented below. `stickiness` is only valid if used with Load Balancers of type `Application`
+    <dd>{{% md %}}A Stickiness block. Stickiness blocks are documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1070,7 +1070,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetgroupstickiness">Target<wbr>Group<wbr>Stickiness<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A Stickiness block. Stickiness blocks are documented below. `stickiness` is only valid if used with Load Balancers of type `Application`
+    <dd>{{% md %}}A Stickiness block. Stickiness blocks are documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1552,7 +1552,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetgroupstickiness">Target<wbr>Group<wbr>Stickiness<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A Stickiness block. Stickiness blocks are documented below. `stickiness` is only valid if used with Load Balancers of type `Application`
+    <dd>{{% md %}}A Stickiness block. Stickiness blocks are documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1740,7 +1740,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetgroupstickiness">Target<wbr>Group<wbr>Stickiness</a></span>
     </dt>
-    <dd>{{% md %}}A Stickiness block. Stickiness blocks are documented below. `stickiness` is only valid if used with Load Balancers of type `Application`
+    <dd>{{% md %}}A Stickiness block. Stickiness blocks are documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1928,7 +1928,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetgroupstickiness">Target<wbr>Group<wbr>Stickiness</a></span>
     </dt>
-    <dd>{{% md %}}A Stickiness block. Stickiness blocks are documented below. `stickiness` is only valid if used with Load Balancers of type `Application`
+    <dd>{{% md %}}A Stickiness block. Stickiness blocks are documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2116,7 +2116,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetgroupstickiness">Target<wbr>Group<wbr>Stickiness<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A Stickiness block. Stickiness blocks are documented below. `stickiness` is only valid if used with Load Balancers of type `Application`
+    <dd>{{% md %}}A Stickiness block. Stickiness blocks are documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2640,7 +2640,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of sticky sessions. The only current possible value is `lb_cookie`.
+    <dd>{{% md %}}The type of sticky sessions. The only current possible values are `lb_cookie` for ALBs and `source_ip` for NLBs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2651,7 +2651,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The time period, in seconds, during which requests from a client should be routed to the same target. After this time period expires, the load balancer-generated cookie is considered stale. The range is 1 second to 1 week (604800 seconds). The default value is 1 day (86400 seconds).
+    <dd>{{% md %}}Only used when the type is `lb_cookie`. The time period, in seconds, during which requests from a client should be routed to the same target. After this time period expires, the load balancer-generated cookie is considered stale. The range is 1 second to 1 week (604800 seconds). The default value is 1 day (86400 seconds).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2680,7 +2680,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of sticky sessions. The only current possible value is `lb_cookie`.
+    <dd>{{% md %}}The type of sticky sessions. The only current possible values are `lb_cookie` for ALBs and `source_ip` for NLBs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2691,7 +2691,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The time period, in seconds, during which requests from a client should be routed to the same target. After this time period expires, the load balancer-generated cookie is considered stale. The range is 1 second to 1 week (604800 seconds). The default value is 1 day (86400 seconds).
+    <dd>{{% md %}}Only used when the type is `lb_cookie`. The time period, in seconds, during which requests from a client should be routed to the same target. After this time period expires, the load balancer-generated cookie is considered stale. The range is 1 second to 1 week (604800 seconds). The default value is 1 day (86400 seconds).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2720,7 +2720,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of sticky sessions. The only current possible value is `lb_cookie`.
+    <dd>{{% md %}}The type of sticky sessions. The only current possible values are `lb_cookie` for ALBs and `source_ip` for NLBs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2731,7 +2731,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The time period, in seconds, during which requests from a client should be routed to the same target. After this time period expires, the load balancer-generated cookie is considered stale. The range is 1 second to 1 week (604800 seconds). The default value is 1 day (86400 seconds).
+    <dd>{{% md %}}Only used when the type is `lb_cookie`. The time period, in seconds, during which requests from a client should be routed to the same target. After this time period expires, the load balancer-generated cookie is considered stale. The range is 1 second to 1 week (604800 seconds). The default value is 1 day (86400 seconds).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2760,7 +2760,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of sticky sessions. The only current possible value is `lb_cookie`.
+    <dd>{{% md %}}The type of sticky sessions. The only current possible values are `lb_cookie` for ALBs and `source_ip` for NLBs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2771,7 +2771,7 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The time period, in seconds, during which requests from a client should be routed to the same target. After this time period expires, the load balancer-generated cookie is considered stale. The range is 1 second to 1 week (604800 seconds). The default value is 1 day (86400 seconds).
+    <dd>{{% md %}}Only used when the type is `lb_cookie`. The time period, in seconds, during which requests from a client should be routed to the same target. After this time period expires, the load balancer-generated cookie is considered stale. The range is 1 second to 1 week (604800 seconds). The default value is 1 day (86400 seconds).
 {{% /md %}}</dd>
 
     <dt class="property-optional"

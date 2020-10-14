@@ -46,6 +46,7 @@ class MyStack : Stack
         });
         var barDirectory = new Aws.DirectoryService.Directory("barDirectory", new Aws.DirectoryService.DirectoryArgs
         {
+            Name = "corp.notexample.com",
             Password = "SuperSecretPassw0rd",
             Size = "Small",
             VpcSettings = new Aws.DirectoryService.Inputs.DirectoryVpcSettingsArgs
@@ -104,6 +105,7 @@ func main() {
 			return err
 		}
 		_, err = directoryservice.NewDirectory(ctx, "barDirectory", &directoryservice.DirectoryArgs{
+			Name:     pulumi.String("corp.notexample.com"),
 			Password: pulumi.String("SuperSecretPassw0rd"),
 			Size:     pulumi.String("Small"),
 			VpcSettings: &directoryservice.DirectoryVpcSettingsArgs{
@@ -142,6 +144,7 @@ bar_subnet = aws.ec2.Subnet("barSubnet",
     availability_zone="us-west-2b",
     cidr_block="10.0.2.0/24")
 bar_directory = aws.directoryservice.Directory("barDirectory",
+    name="corp.notexample.com",
     password="SuperSecretPassw0rd",
     size="Small",
     vpc_settings=aws.directoryservice.DirectoryVpcSettingsArgs(
@@ -176,6 +179,7 @@ const barSubnet = new aws.ec2.Subnet("barSubnet", {
     cidrBlock: "10.0.2.0/24",
 });
 const barDirectory = new aws.directoryservice.Directory("barDirectory", {
+    name: "corp.notexample.com",
     password: "SuperSecretPassw0rd",
     size: "Small",
     vpcSettings: {
@@ -221,6 +225,7 @@ class MyStack : Stack
         });
         var barDirectory = new Aws.DirectoryService.Directory("barDirectory", new Aws.DirectoryService.DirectoryArgs
         {
+            Name = "corp.notexample.com",
             Password = "SuperSecretPassw0rd",
             Edition = "Standard",
             Type = "MicrosoftAD",
@@ -280,6 +285,7 @@ func main() {
 			return err
 		}
 		_, err = directoryservice.NewDirectory(ctx, "barDirectory", &directoryservice.DirectoryArgs{
+			Name:     pulumi.String("corp.notexample.com"),
 			Password: pulumi.String("SuperSecretPassw0rd"),
 			Edition:  pulumi.String("Standard"),
 			Type:     pulumi.String("MicrosoftAD"),
@@ -319,6 +325,7 @@ bar_subnet = aws.ec2.Subnet("barSubnet",
     availability_zone="us-west-2b",
     cidr_block="10.0.2.0/24")
 bar_directory = aws.directoryservice.Directory("barDirectory",
+    name="corp.notexample.com",
     password="SuperSecretPassw0rd",
     edition="Standard",
     type="MicrosoftAD",
@@ -354,6 +361,7 @@ const barSubnet = new aws.ec2.Subnet("barSubnet", {
     cidrBlock: "10.0.2.0/24",
 });
 const barDirectory = new aws.directoryservice.Directory("barDirectory", {
+    name: "corp.notexample.com",
     password: "SuperSecretPassw0rd",
     edition: "Standard",
     type: "MicrosoftAD",
@@ -400,6 +408,7 @@ class MyStack : Stack
         });
         var connector = new Aws.DirectoryService.Directory("connector", new Aws.DirectoryService.DirectoryArgs
         {
+            Name = "corp.notexample.com",
             Password = "SuperSecretPassw0rd",
             Size = "Small",
             Type = "ADConnector",
@@ -460,6 +469,7 @@ func main() {
 			return err
 		}
 		_, err = directoryservice.NewDirectory(ctx, "connector", &directoryservice.DirectoryArgs{
+			Name:     pulumi.String("corp.notexample.com"),
 			Password: pulumi.String("SuperSecretPassw0rd"),
 			Size:     pulumi.String("Small"),
 			Type:     pulumi.String("ADConnector"),
@@ -500,6 +510,7 @@ bar = aws.ec2.Subnet("bar",
     availability_zone="us-west-2b",
     cidr_block="10.0.2.0/24")
 connector = aws.directoryservice.Directory("connector",
+    name="corp.notexample.com",
     password="SuperSecretPassw0rd",
     size="Small",
     type="ADConnector",
@@ -534,6 +545,7 @@ const bar = new aws.ec2.Subnet("bar", {
     cidrBlock: "10.0.2.0/24",
 });
 const connector = new aws.directoryservice.Directory("connector", {
+    name: "corp.notexample.com",
     password: "SuperSecretPassw0rd",
     size: "Small",
     type: "ADConnector",
@@ -737,6 +749,17 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The fully qualified name for the directory, such as `corp.example.com`
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
@@ -803,17 +826,6 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The fully qualified name for the directory, such as `corp.example.com`
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="shortname_csharp">
 <a href="#shortname_csharp" style="color: inherit; text-decoration: inherit;">Short<wbr>Name</a>
 </span> 
@@ -873,6 +885,17 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The fully qualified name for the directory, such as `corp.example.com`
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -942,17 +965,6 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The fully qualified name for the directory, such as `corp.example.com`
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="shortname_go">
 <a href="#shortname_go" style="color: inherit; text-decoration: inherit;">Short<wbr>Name</a>
 </span> 
@@ -1012,6 +1024,17 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The fully qualified name for the directory, such as `corp.example.com`
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1081,17 +1104,6 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The fully qualified name for the directory, such as `corp.example.com`
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="shortname_nodejs">
 <a href="#shortname_nodejs" style="color: inherit; text-decoration: inherit;">short<wbr>Name</a>
 </span> 
@@ -1151,6 +1163,17 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The fully qualified name for the directory, such as `corp.example.com`
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1216,17 +1239,6 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable single-sign on for the directory. Requires `alias`. Defaults to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The fully qualified name for the directory, such as `corp.example.com`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
