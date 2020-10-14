@@ -44,7 +44,7 @@ spec:
         secretName: test-secret
 ```
 
-This method works and will allow access to cloud resources from your app. You can approach this with a security-conscious mindset and make sure the permissions that the keys are associated with are narrowly scoped (following the [principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege)). However, unfortunately, if you have an information security team looking over your shoulder, they will still see this practice and be extremely concerned.
+This method works and will allow access to cloud resources from your app. You can approach this with a security-conscious mindset and make sure the permissions that the keys are associated with are narrowly scoped (following the [principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege)). Unfortunately, if you have an information security team looking over your shoulder, they will still see this practice and be extremely concerned.
 
 In this first in a series of posts, we'll talk about why this might be a problem, examine the mindset of a malicious user attacking your Kubernetes cluster, and introduce the mechanisms for avoiding these patterns.
 
