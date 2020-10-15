@@ -43,6 +43,22 @@ Subsequent updates can be installed in the usual way:
 $ brew upgrade pulumi
 ```
 
+### MacPorts
+
+You can install Pulumi through the [MacPorts package manager](https://www.macports.org/):
+
+```bash
+$ sudo port install pulumi
+```
+
+This will install the `pulumi` CLI to `/opt/local/bin/pulumi` and add it to your path.
+
+Subsequent updates can be installed in the usual way:
+
+```bash
+$ sudo port upgrade outdated
+```
+
 ### Installation Script
 
 Alternatively, you can run our installation script.
