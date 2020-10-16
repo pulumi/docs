@@ -50,15 +50,7 @@ spec:
         secretName: test-secret
 ```
 
-<<<<<<< HEAD
-This method works and will allow access to cloud resources from your app. You can approach this with a security-conscious mindset and make sure the permissions that the keys are associated with are narrowly scoped (following the [principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege)). However, unfortunately, if you have an information security team looking over your shoulder, they will still see this practice and be extremely concerned.
-=======
 This method works and will allow access to cloud resources from your app. You can approach this with a security-conscious mindset and make sure the permissions that the keys are associated with are narrowly scoped (following the [principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege)). Unfortunately, if you have an information security team looking over your shoulder, they will still see this practice and be extremely concerned.
-
-In this first in a series of posts, we'll talk about why this might be a problem, examine the mindset of a malicious user attacking your Kubernetes cluster, and introduce the mechanisms for avoiding these patterns.
-
-<!--more-->
->>>>>>> d0c319f10abef08907a1e58246b33859f0c11374
 
 ## The Static Credential Problem
 
@@ -69,11 +61,7 @@ It's rare for a malicious user to immediately find the keys to the kingdom when 
 A well-secured environment attempts to limit the capability for an attacker to [pivot](https://en.wikipedia.org/wiki/Exploit_(computer_security)#Pivoting) by adding more layers for them to get through and restricting the amount of time they have to get through those layers.
 
 If you decide to use static credentials, the most important thing to consider is that they can be easily stolen and copied by an attacker. Credentials often live indefinitely and will continue to work until manually revoked.
-<<<<<<< HEAD
-In addition, hard coding credentials into a Kubernetes secret  presents multiple layers that an attacker could steal them from:
-=======
 In addition, hard coding credentials into a Kubernetes secret presents multiple layers that an attacker could steal them from:
->>>>>>> d0c319f10abef08907a1e58246b33859f0c11374
 
 - the Kubernetes API (by retrieving the secret)
 - inside the running pod (by grabbing the environment variables, where they're in plaintext).
@@ -88,19 +76,11 @@ To mitigate this, many cloud providers offer a solution to push roles all the wa
 
 ### AWS EKS
 
-<<<<<<< HEAD
-EKS is the youngest of the managed Kubernetes offerings and was the last of the three to provider the native capability to push IAM roles down to pods. Previously, operators could install third-party solutions like [KIAM](https://github.com/uswitch/kiam) and [Kube2IAM](https://github.com/jtblin/kube2iam) in their clusters, and both of these solutions are widely used and well tested.
-
-EKS now offers a native solution, which involves creating a cluster with an OpenID connect issuer attached to it. You can read more about this [here](https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.html).
-
-Once you've created a cluster and associated an IAM OIDC provider to it, you can deploy Kubernetes pods which use an [AWS IAM Role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html) which you'll need to create.. To leverage this IAM role in your pod, you have to patch the Kubernetes [service account](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/) associated with the pod and add annotations that tell the pod which IAM role to use.
-=======
 EKS initially required the install of third-party solutions like [KIAM](https://github.com/uswitch/kiam) and [Kube2IAM](https://github.com/jtblin/kube2iam) in the cluster -- both of which are solutions that are widely used and well tested.
 
 EKS now offers a native solution, which involves creating a cluster with an OpenID connect issuer attached to it. You can read more about this [here](https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.html).
 
 Once you've created a cluster and associated an IAM OIDC provider to it, you can deploy Kubernetes pods which use an [AWS IAM Role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html) which you'll need to create. To leverage this IAM role in your pod, you have to patch the Kubernetes [service account](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/) associated with the pod and add annotations that tell the pod which IAM role to use.
->>>>>>> d0c319f10abef08907a1e58246b33859f0c11374
 
 Pulumi's first class support for Kubernetes Helm Charts and AWS resources mean you can perform all of this in one Pulumi program. Look out for the rest of this series to see how it's done!
 
@@ -116,8 +96,4 @@ Google's GKE has native support for what it calls ["Workload Identity"](https://
 
 ## Wrap up
 
-<<<<<<< HEAD
-Hopefully, I've made a compelling case for why you should reconsider using static credentials for your application, now introduced the idea for how to avoid using them in your cloud-native applications. In my next post, I'll introduce the application we're going to deploy to all of these different cloud providers, and show you how to deploy it securely on AWS EKS. Stay tuned!
-=======
 We've detailed compelling case for why you should reconsider using static credentials for your application, and introduced the idea for how to avoid using them in your cloud-native applications. In our next post, I'll introduce the application we're going to deploy to all of these different cloud providers, and show you how to deploy it securely on AWS EKS. Stay tuned!
->>>>>>> d0c319f10abef08907a1e58246b33859f0c11374
