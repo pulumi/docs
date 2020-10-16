@@ -3,7 +3,6 @@ env:
 
 name: cli docs build
 on:
-  pull_request:
   repository_dispatch:
     types:
       - pulumi-cli
@@ -14,12 +13,15 @@ jobs:
     steps:
       - name: checkout docs repo
         uses: actions/checkout@v2
+      - name: set the pulumi version
+        run: |
+          echo "PULUMI_VERSION=${{ github.event.client_payload.ref }}" >> $GITHUB_ENV
       - name: pull-request
         uses: repo-sync/pull-request@v2
         with:
           source_branch: "pulumi/${{ github.run_id }}-${{ github.run_number }}"
           destination_branch: "master"
-          pr_title: "Regen docs pulumi@${{ github.event.client_payload.ref }}"
+          pr_title: "Regen docs pulumi@${PULUMI_VERSION}"
           pr_body: ""
           pr_label: "automation/pulumi-cli-docs"
           github_token: ${{ secrets.PULUMI_BOT_TOKEN }}
@@ -29,8 +31,7 @@ jobs:
     steps:
       - name: set the pulumi version
         run: |
-          echo "PULUMI_VERSION=2.12.0" >> $GITHUB_ENV
-          #echo "{PULUMI_VERSION}={${{ github.event.client_payload.ref }}}" >> $GITHUB_ENV
+          echo "PULUMI_VERSION=${{ github.event.client_payload.ref }}" >> $GITHUB_ENV
       - name: checkout docs repo
         uses: actions/checkout@v2
         with:
