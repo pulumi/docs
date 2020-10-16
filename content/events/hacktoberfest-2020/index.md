@@ -6,7 +6,7 @@ subtitle: Help us build new open source capabilities for Pulumi
 unlisted: false
 redirect_to: https://organize.mlh.io/participants/events/4954-pulumi-hacktoberfest
 event:
-  eventbrite_url: " "
+  eventbrite_url: ""
   registration_url: https://organize.mlh.io/participants/events/4954-pulumi-hacktoberfest
   calendly_url: ""
   eventbrite_id: ""
