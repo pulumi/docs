@@ -9,7 +9,7 @@ tags:
     - cloud engineering summit=
 ---
 
-Mission accomplished. Putting on a new event is always risky, especially when the calendar is saturated with virtual conferences. The goal of the Cloud Engineering Summit was to bring the level of conversation above specific technologies and take a holistic look into the future of the cloud and you knocked it out of the park! Here are the stats:
+Putting on a new event is always risky, especially when the calendar is saturated with virtual conferences. Our goal for the Cloud Engineering Summit was to bring the level of conversation above specific technologies and take a holistic look into the future of the cloud and you knocked it out of the park! Here are the stats:
 
 - 46 industry leaders
 - 17 hours of content
@@ -18,9 +18,9 @@ Mission accomplished. Putting on a new event is always risky, especially when th
 
 <!--more-->
 
-[Joe Duffy's](https://twitter.com/funcofjoe) keynote kicked off the summit by describing the current state of cloud engineer and what the future holds for cloud engineering. Watch Joe's keynote, [The Future of Cloud Engineering](https://cloudengineering.heysummit.com/talks/welcome-keynote/) to set the stage for the summit.
+[Joe Duffy](https://twitter.com/funcofjoe) kicked off the summit by assessing the current state of DevOps and the transition to Cloud Engineering. Watch Joe's keynote, [The Future of Cloud Engineering](https://cloudengineering.heysummit.com/talks/welcome-keynote/) to set the stage for the summit.
 
-Following the themes Joe addressed, Summit speakers covered a wide array of topics ranging from future architecture, to the impact of architecture on workflows, and to how teams will build the cloud infrastructure in the future. Here are the ones you don't want to miss!
+Following the themes Joe addressed, summit speakers covered a wide array of topics ranging from future architecture, to the impact of architecture on workflows, and to how teams will build the cloud infrastructure in the future. Here are the ones you don't want to miss!
 
 ## Panels
 
@@ -98,6 +98,6 @@ Following the themes Joe addressed, Summit speakers covered a wide array of topi
     <a href="https://cloudengineering.heysummit.com/talks/designing-for-remote-teams/"><b>All-Remote Teams at Scale</b><br>Christie Lenneville</a>
 </div>
 
-And don't forget to watch our workshop!
+If you want to get hands-on, don't forget to watch our workshop where we walk through the basics all the way to deploying an application and Kubernetes!
 
 [**Introduction to Infrastructure as Code with Pulumi and AWS**](https://cloudengineering.heysummit.com/talks/introduction-to-infrastructure-as-code/)
