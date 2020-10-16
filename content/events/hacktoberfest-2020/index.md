@@ -8,7 +8,7 @@ redirect_to: https://organize.mlh.io/participants/events/4954-pulumi-hacktoberfe
 event:
   eventbrite_url: " "
   registration_url: https://organize.mlh.io/participants/events/4954-pulumi-hacktoberfest
-  calendly_url: " "
+  calendly_url: ""
   eventbrite_id: ""
   start_date: 2020-10-22
   time: 9:00 AM - 11:00 AM
