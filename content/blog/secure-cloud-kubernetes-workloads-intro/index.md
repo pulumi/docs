@@ -14,7 +14,13 @@ tags:
 
 As you build your cloud-native Kubernetes applications, you might eventually find you need to access cloud resources that reside outside your Kubernetes cluster. Perhaps you need to store static files in an object store (Amazon S3, Google Cloud Storage or Azure Blog Storage) or use a queuing system to pass messages to other services (Amazon SQS, Azure Service Bus or Google Pub/Sub).
 
-Once you start to access these services from within your application, you'll need to find a way to authenticate to the cloud providers API, which involves somehow managing credentials. It can be tempting at this point to create a "user" in your cloud provider and then create credentials like AWS Access Keys or a Google Cloud Service Account Key and store those inside your Kubernetes workload. A common approach is to store these credentials as a Kubernetes secret and then consume that secret as an environment variable in your running pods:
+Once you start to access these services from within your application, you'll need to find a way to authenticate to the cloud providers API, which involves authentication and permissions.
+
+In this first in a series of posts, we'll talk about ways you can authenticate securely, examine the mindset of a malicious user attacking your Kubernetes cluster, and introduce the mechanisms for avoiding bad patterns, like storing long term credentials where they can be retrieved by someone who shouldn't have them.
+
+<!--more-->
+
+When you get started provisioning your Kubernetes workloads that access cloud resources, it can be tempting to create a "user" in your cloud provider and then create credentials like AWS Access Keys or a Google Cloud Service Account Key and store those inside your Kubernetes workload. A common approach is to store these credentials as a Kubernetes secret and then consume that secret as an environment variable in your running pods:
 
 ```yaml
 apiVersion: v1
@@ -45,10 +51,6 @@ spec:
 ```
 
 This method works and will allow access to cloud resources from your app. You can approach this with a security-conscious mindset and make sure the permissions that the keys are associated with are narrowly scoped (following the [principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege)). However, unfortunately, if you have an information security team looking over your shoulder, they will still see this practice and be extremely concerned.
-
-In this first in a series of posts, we'll talk about why this might be a problem, examine the mindset of a malicious user attacking your Kubernetes cluster, and introduce the mechanisms for avoiding these patterns.
-
-<!--more-->
 
 ## The Static Credential Problem
 
