@@ -27,7 +27,7 @@ main:
     In this workshop, the Pulumi team will show you how to define, deploy and manage Azure resources using Infrastructure as Code through a series of hands-on labs. The techniques work for any cloud -- Azure, AWS, and GCP. You'll be able to leverage your favorite languages including Python, Go, JavaScript, TypeScript, and C# instead of YAML or domain-specific languages.
 
 
-    After completing this workshop, you'll be up and running with IaC fundamentals, modern application architectures across many clouds, and Kubernetes best-practices that are ready for production environments. You'll also be ready to empower your development teams to be more productive -- continuously deploying both their applications and infrastructure.
+    After completing this workshop, you'll be up and running with IaC fundamentals, modern application architectures across many clouds, and best-practices that are ready for production environments. You'll also be ready to empower your development teams to be more productive -- continuously deploying both their applications and infrastructure.
   presenters:
     - name: Mikhail Shilkov
       role: Software Engineer, Pulumi
@@ -35,8 +35,8 @@ main:
       role: Software Engineer, Pulumi
   learn:
     - Infrastructure as Code fundamentals.
-    - Multi cloud architectures for modern applications.
-    - Kubernetes best practices for production environments.
+    - Multi-cloud architectures for modern applications.
+    - Azure best practices for production environments.
   youtube_url: ""
 form:
   gotowebinar_key: "1145386961095792398"
