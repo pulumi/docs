@@ -20,7 +20,7 @@ Mission accomplished. Putting on a new event is always risky, especially when th
 
 [Joe Duffy's](https://twitter.com/funcofjoe) keynote kicked off the summit by describing the current state of cloud engineer and what the future holds for cloud engineering. Watch Joe's keynote, [The Future of Cloud Engineering](https://cloudengineering.heysummit.com/talks/welcome-keynote/) to set the stage for the summit.
 
-Following the themes Joe addressed, summit speakers covered a wide array of topics ranging from future architecture, to the impact of architecture on workflows, and to how teams will build the cloud infrastructure in the future. Here are the ones you don't want to miss!
+Following the themes Joe addressed, Summit speakers covered a wide array of topics ranging from future architecture, to the impact of architecture on workflows, and to how teams will build the cloud infrastructure in the future. Here are the ones you don't want to miss!
 
 ## Panels
 
