@@ -1,10 +1,14 @@
 ---
-meta_desc: Join Pulumi for Hacktoberfest and help us build open source integrations, automation and libraries.
+meta_desc: Join Pulumi for Hacktoberfest and help us build open source
+  integrations, automation and libraries.
 title: Hacktoberfest 2020
 subtitle: Help us build new open source capabilities for Pulumi
 unlisted: false
 event:
-  registration_url: https://hacktoberfest.digitalocean.com
+  eventbrite_url: ""
+  registration_url: https://organize.mlh.io/participants/events/4954-pulumi-hacktoberfest
+  calendly_url: ""
+  eventbrite_id: ""
   start_date: 2020-10-22
   time: 9:00 AM - 11:00 AM
   cost: $0
@@ -31,13 +35,13 @@ This year, Pulumi is participating in Hacktoberfest with three areas where the c
 ## How to get started
 
 1. **[Register](https://hacktoberfest.digitalocean.com)** on the Hacktoberfest site for access to get credit for your open source contributions.
-2. [**Join the Pulumi Community Slack**](https://slack.pulumi.com)and head over to the #Hacktoberfest channel.
+2. **[Join the Pulumi Community Slack](https://slack.pulumi.com)** and head over to the #Hacktoberfest channel.
 3. **Recruit a team to work on your idea** - we'll pin a form on the #Hacktoberfest channel for you to register your team.
 4. **Start hacking** - The Pulumi team will share tutorials on this page to help you get started during the hackathon.
 
 ## Schedule
 
-**10/20/2020** - 9:00 AM PDT - Tutorial content shared on our #Hacktoberfest Slack channel
+**10/21/2020** - 9:00 AM PDT - Tutorial content shared on our #Hacktoberfest Slack channel
 
 **10/22/2020** - 9:00 AM PDT - Kickoff and team formation
 
