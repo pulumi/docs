@@ -129,8 +129,8 @@ import * as pulumi from "@pulumi/pulumi";
     <li><a href="#LiftedObject"><span class="symbol api"></span>LiftedObject</a></li>
     <li><a href="#mergeOptions"><span class="symbol api"></span>mergeOptions</a></li>
     <li><a href="#NumberConfigOptions"><span class="symbol api"></span>NumberConfigOptions</a></li>
-    <li><a href="#output"><span class="symbol api"></span>output</a></li>
     <li><a href="#Output"><span class="symbol api"></span>Output</a></li>
+    <li><a href="#output"><span class="symbol api"></span>output</a></li>
     <li><a href="#OutputConstructor"><span class="symbol api"></span>OutputConstructor</a></li>
     <li><a href="#OutputInstance"><span class="symbol api"></span>OutputInstance</a></li>
     <li><a href="#ResourceError"><span class="symbol api"></span>ResourceError</a></li>
@@ -1550,35 +1550,6 @@ The maximum number value, inclusive. If the number is greater than this, a Confi
 
 The minimum number value, inclusive. If the number is less than this, a ConfigRangeError is thrown.
 
-<h3 class="pdoc-module-header" id="output" data-link-title="output">
-    <a href="https://github.com/pulumi/pulumi/blob/eaac9280f5484f94213dbf54c9fd6f009d87db12/sdk/nodejs/output.ts#L516">
-        function <strong>output</strong>
-    </a>
-</h3>
-
-
-<pre class="highlight"><code><span class='kd'></span>output&lt;T&gt;(val: <a href='#Input'>Input</a>&lt;T&gt;): <a href='#Output'>Output</a>&lt;<a href='#Unwrap'>Unwrap</a>&lt;T&gt;&gt;</code></pre>
-
-
-[output] takes any Input value and converts it into an Output, deeply unwrapping nested Input
-values as necessary.
-
-The expected way to use this function is like so:
-
-```ts
-     var transformed = pulumi.output(someVal).apply(unwrapped => {
-         // Do whatever you want now.  'unwrapped' will contain no outputs/promises inside
-         // here, so you can easily do whatever sort of transformation is most convenient.
-     });
-
-     // the result can be passed to another Resource.  The dependency information will be
-     // properly maintained.
-     var someResource = new SomeResource(name, { data: transformed ... });
-```
-
-
-<pre class="highlight"><code><span class='kd'></span>output&lt;T&gt;(val: <a href='#Input'>Input</a>&lt;T&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='#Output'>Output</a>&lt;<a href='#Unwrap'>Unwrap</a>&lt;T | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;&gt;</code></pre>
-
 <h3 class="pdoc-module-header" id="Output" data-link-title="Output">
     <a href="https://github.com/pulumi/pulumi/blob/eaac9280f5484f94213dbf54c9fd6f009d87db12/sdk/nodejs/output.ts#L890">
         type <strong>Output</strong>
@@ -1627,6 +1598,35 @@ Instead of having to write:
      const age  : Output<number> = o.apply(v => v.age);
      const first: Output<Order> = o.apply(v => v.orders[0]);
 ```
+
+<h3 class="pdoc-module-header" id="output" data-link-title="output">
+    <a href="https://github.com/pulumi/pulumi/blob/eaac9280f5484f94213dbf54c9fd6f009d87db12/sdk/nodejs/output.ts#L516">
+        function <strong>output</strong>
+    </a>
+</h3>
+
+
+<pre class="highlight"><code><span class='kd'></span>output&lt;T&gt;(val: <a href='#Input'>Input</a>&lt;T&gt;): <a href='#Output'>Output</a>&lt;<a href='#Unwrap'>Unwrap</a>&lt;T&gt;&gt;</code></pre>
+
+
+[output] takes any Input value and converts it into an Output, deeply unwrapping nested Input
+values as necessary.
+
+The expected way to use this function is like so:
+
+```ts
+     var transformed = pulumi.output(someVal).apply(unwrapped => {
+         // Do whatever you want now.  'unwrapped' will contain no outputs/promises inside
+         // here, so you can easily do whatever sort of transformation is most convenient.
+     });
+
+     // the result can be passed to another Resource.  The dependency information will be
+     // properly maintained.
+     var someResource = new SomeResource(name, { data: transformed ... });
+```
+
+
+<pre class="highlight"><code><span class='kd'></span>output&lt;T&gt;(val: <a href='#Input'>Input</a>&lt;T&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='#Output'>Output</a>&lt;<a href='#Unwrap'>Unwrap</a>&lt;T | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;&gt;</code></pre>
 
 <h3 class="pdoc-module-header" id="OutputConstructor" data-link-title="OutputConstructor">
     <a href="https://github.com/pulumi/pulumi/blob/eaac9280f5484f94213dbf54c9fd6f009d87db12/sdk/nodejs/output.ts#L834">
