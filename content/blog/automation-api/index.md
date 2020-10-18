@@ -11,26 +11,32 @@ tags:
 
 Today’s Infrastructure as Code platforms have enabled organizations to build rich, reliable, and complex cloud-based applications and architectures. But as teams move to modern cloud technologies and reorganize their engineering organizations to get the full power and agility of the cloud, they continue looking for ways to drive increased software-driven automation.  While modern Infrastructure as Code tools bring key software engineering benefits to cloud engineering, they remain focused on human-driven workflows. For example, a person running `pulumi up` at their terminal or wiring the Pulumi CLI into their CI/CD system. To scale up how we deploy and manage cloud infrastructure and ultimately unlock the cloud's value and agility, we believe it will be critical to building software systems around our Infrastructure as Code platforms - systems that scale with software, not just humans.
 
-Pulumi's approach of using general purpose languages enables a new way of doing Infrastructure as Code -- something we call Infrastructure as Software -- bringing all of the great lessons learned over decades of building software to your infrastructure (languages, IDEs, testing, debugging, componentization, packaging, versioning, and more).
+Pulumi's approach of using general purpose languages enables Infrastructure as Software -- bringing all of the great lessons learned over decades of building software to your infrastructure (languages, IDEs, testing, debugging, componentization, packaging, versioning, and more).
 
-Today we’re excited to announce the Pulumi Automation API, a powerful programmatic layer on top of Pulumi’s declarative Infrastructure as Software. The Automation API exposes Pulumi programs and stacks as strongly-typed and composable building blocks. No CLI, no human-in-the-loop, just code. Pulumi can be fully embedded inside your software projects - to power a wide range of custom cloud infrastructure automation projects within your cloud engineering team.
+Today we’re excited to announce the Pulumi Automation API, a robust programmatic layer on top of Pulumi’s declarative Infrastructure as Software. The Automation API exposes Pulumi programs and stacks as strongly-typed and composable building blocks.
+
+Pulumi can be fully embedded inside your software projects - to power a wide range of custom cloud infrastructure automation projects. No CLI, no human-in-the-loop, just code.
+
+## Enabling Cloud Engineering
 
 Pulumi customers are already applying the Automation API to an incredible breadth of different scenarios. We continue to be amazed by the creativity that it unlocks as a new fundamental building block for cloud engineering.
 
-A few examples of the kinds of scenarios we’ve seen users apply the Pulumi Automation API to so far:
+So far, our users have applied the Pulumi Automation API to these scenarios:
 
-- **Platform APIs** - Embedding Pulumi opens up a world of possibility for building internal  and public cloud platforms that serve your infrastructure abstractions, enabling new approaches to SaaS, including IaaS and PaaS products and platforms. Expose declarative infrastructure defined with your best practices behind a REST, gRPC, or Custom Resource API that can be easily consumed by developers and operators alike.
+- **Platform APIs** - Embedding Pulumi opens up a world of possibilities for building internal and public cloud platforms that serve your infrastructure abstractions. It enables new approaches to SaaS, including IaaS and PaaS products and platforms. You can create declarative infrastructure defined by your best practices and expose it behind a REST, gRPC, or Custom Resource API that developers and operators alike can easily consume.
 - **Complex Workflow Orchestration** - Distributed systems and microservices incur a significant coordination burden, and dependencies across API boundaries are difficult to track and maintain. Automation API is the layer that orchestrates multi-stack deployments, codifying dependencies, and enabling safe incremental deployment. Networking, database systems, application code, schema migrations, and more can be coordinated in a single strongly typed, familiar programming environment.
-- **Cloud Development Frameworks** - Automation API provides building blocks in your favorite language. With them, you can author higher-lever frameworks and components that blur the lines between infrastructure and application. We expect to see more frameworks that focus on application code that ambiently creates the infrastructure to power itself.
+- **Cloud Development Frameworks** - Automation API provides building blocks in your favorite language. With them, you can author higher-level frameworks and components that blur the lines between infrastructure and application. We expect to see more frameworks that focus on application code that ambiently creates its own infrastructure.
 - **Supercharged Ops Tooling** - Create hardened and tested tooling to automate anything entering your ticketing system. From allocating timebound developer VMs to upgrading TLS certificates and scaling servers, Automation API enables you to build custom CLIs and tools that leverage the full power of Infrastructure as Software underneath custom user interfaces.
 
-The Automation API is a new subpackage in each of Pulumi’s language-specific SDKs that provides APIs to create and manage Stacks and perform lifecycle operations like update, refresh, preview, and destroy. It is a strongly typed and safe way to use Pulumi in embedded contexts such as web servers without having to shell out to a CLI. You can define a Pulumi program as a function inside of your codebase rather than in a separate project and use methods to get and set config programmatically. The Automation API uses a gRPC interface to execute programs and control and communicate with the core Pulumi engine. It still requires a Pulumi CLI installation, as this is how we bundle and distribute the core engine. Today it’s available in preview for [TypeScript/JavaScript](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/x/auto) and [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/x/auto), with support for [Python](https://github.com/pulumi/pulumi/compare/auto/python) and [C#](https://github.com/pulumi/pulumi/compare/auto/dotnet) under active development.
+The Automation API is a new subpackage in each of Pulumi’s language-specific SDKs that provides APIs to create and manage Stacks and perform lifecycle operations like update, refresh, preview, and destroy. It is a strongly typed and safe way to use Pulumi in embedded contexts such as web servers without having to shell out to a CLI.
+
+You can define a Pulumi program as a function inside of your codebase rather than in a separate project and use methods to get and set configuration parameters programmatically. The Automation API uses a gRPC interface to execute programs that control and communicate with the core Pulumi engine. It still requires a Pulumi CLI installation, as this is how we bundle and distribute the core engine. Today it’s available in preview for [TypeScript/JavaScript](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/x/auto) and [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/x/auto), with support for [Python](https://github.com/pulumi/pulumi/compare/auto/python) and [C#](https://github.com/pulumi/pulumi/compare/auto/dotnet) under active development.
 
 ## Platform APIs
 
-For SaaS scenarios like deploying infrastructure in response to user action, shelling out and relying on scripts in online services brings operational challenges with observability and reliability. Automation API is just another package and can be instrumented, profiled, and monitored with your existing APM tools like Honeycomb, Prometheus, and Datadog.
+For SaaS scenarios like deploying infrastructure in response to user action, relying on shell scripts for online services brings operational challenges with observability and reliability. Automation API is just another package and can be instrumented, profiled, and monitored with your existing APM tools like Honeycomb, Prometheus, and Datadog.
 
-Automation API runs inside of your favorite frameworks and interacts with your other packages exactly as you’d expect. We can define custom declarative infrastructure and expose it to end users behind a familiar REST interface:
+Automation API runs inside your favorite frameworks and interacts with your other packages exactly as you’d expect. We can define custom declarative infrastructure and expose it to end-users behind a familiar REST interface:
 
 {{< chooser language "typescript,go" >}}
 
@@ -180,9 +186,9 @@ We’re seeing customers reach for Automation API to build internal cloud platfo
 
 ## Complex Workflow Orchestration
 
-There’s no longer a choice between small, decoupled units of infrastructure and a maintainable orchestration process. The Automation API executes just like any other code in your application, meaning that a single process can deploy infrastructure and manage related activities such as database migrations and blue/green deployments.
+Choosing between small, decoupled units of infrastructure and a maintainable orchestration process is no longer necessary. The Automation API executes just like any other code in your application, meaning that a single process can deploy infrastructure and manage related activities such as database migrations and blue/green deployments.
 
-Like any other Pulumi program, we define our cloud resources. In this case an AWS RDS database:
+Like any other Pulumi program, we define our cloud resources. In this case, an AWS RDS database:
 
 {{< chooser language "typescript,go" >}}
 
@@ -234,7 +240,7 @@ ctx.Export("dbPass", dbPass)
 
 {{< /chooser >}}
 
-But with Automation API we can configure perform database migrations and preload rows in the same program:
+But with Automation API, we can perform database migrations and preload rows in the same program:
 
 {{< chooser language "typescript,go" >}}
 
@@ -409,7 +415,7 @@ nAnimalsService := web.NewWebService("nAnimals", func() http.Handler {
 
 Check out the full `halloumi` source in [TypeScript](https://github.com/pulumi/halloumi/tree/main/nodejs) and [Go](https://github.com/pulumi/halloumi/tree/main/go).
 
-Like any other framework, you can even set a breakpoint to debug orchestration logic or the pulumi program itself including `Apply` callbacks.
+Like any other framework, you can even set a breakpoint to debug orchestration logic or the pulumi program itself, including `Apply` callbacks.
 
 ![Debuggin demo](debugging.gif)
 
@@ -490,11 +496,11 @@ fmt.Printf("destroyed %d stack(s)\n", success)
 
 ![vmgr cron demo](vmgr_cron.gif)
 
-Our VM provisioner uses Automation API, but it’s backed by Pulumi’s desired state model. This means that there’s no chance of resources leaking or getting lost. Check out the full [`vmgr` example here](https://github.com/pulumi/automation-api-examples/tree/main/go/vm_manager_azure). For a cloud native example, take a look at our `eksctl` inspired [`aksctl` for Azure AKS](https://github.com/jaxxstorm/aksctl).
+Our VM provisioner uses Automation API, backed by Pulumi’s desired state model. This means that there’s no chance of resources leaking or getting lost. Check out the full [`vmgr` example here](https://github.com/pulumi/automation-api-examples/tree/main/go/vm_manager_azure). For a cloud-native example, take a look at our `eksctl` inspired [`aksctl` for Azure AKS](https://github.com/jaxxstorm/aksctl).
 
 ## Give it a Try Today!
 
-The Automation API is your tool to tame Cloud Engineering complexity and give your team the leverage to automate your cloud infrastructure. It is fully open source and available today for TypeScript/JavaScript and Go. Want to learn more? Come hang out with us in the [#automation-api community slack channel](https://pulumi-community.slack.com/archives/C019YSXN04B). Download the [latest Pulumi release](https://www.pulumi.com/docs/get-started/install/) and check out these resources to get started:
+The Automation API is your tool to tame Cloud Engineering complexity and give your team the leverage to automate your cloud infrastructure. It is completely open source and available today for TypeScript/JavaScript and Go. Want to learn more? Come hang out with us in the [#automation-api community slack channel](https://pulumi-community.slack.com/archives/C019YSXN04B). Download the latest Pulumi release and check out these resources to get started:
 
 - [Go documentation](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/x/auto)
 - [JavaScript/TypeScript documentation](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/pulumi/x/automation/)
@@ -506,6 +512,6 @@ The Automation API is your tool to tame Cloud Engineering complexity and give yo
 
 Keep an eye out! [Python](https://github.com/pulumi/pulumi/compare/auto/python) and [C#](https://github.com/pulumi/pulumi/compare/auto/dotnet) support are under active development and coming soon.
 
-Last, we'd like to give a special thank you to the members of the community who have consulted with us, chimed in on the [original github issue](https://github.com/pulumi/pulumi/issues/3901), and have been there for the journey in [community slack](https://pulumi-community.slack.com/archives/C019YSXN04B).
+We'd like to give a special thank you to the community members who have consulted with us, chimed in on the [original GitHub issue](https://github.com/pulumi/pulumi/issues/3901), and have been there for the journey in [community slack](https://pulumi-community.slack.com/archives/C019YSXN04B).
 
 🏭 🏭 🏭 Happy automating! 🏭 🏭 🏭
