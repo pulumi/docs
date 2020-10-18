@@ -1,6 +1,6 @@
 ---
 title: "The Pulumi Automation API - The Next Quantum Leap in IaC"
-date: 2020-10-10
+date: 2020-10-19
 meta_desc: "Introducing the Pulumi Automation API - Scaling Cloud Projects with Software, Not Humans"
 meta_image: automation_api.png
 authors:
@@ -170,7 +170,7 @@ func main() {
 
 {{< /chooser >}}
 
-TODO gif
+![HTTP server demo](http.gif)
 
 Check out the full `Pulumi over HTTP` example in [TypeScript](https://github.com/pulumi/automation-api-examples/tree/main/nodejs/pulumiOverHttp-ts) and [Go](https://github.com/pulumi/automation-api-examples/tree/main/go/pulumi_over_http).
 
@@ -316,7 +316,7 @@ CREATE TABLE IF NOT EXISTS hello_pulumi(
 
 {{< /chooser >}}
 
-TODO gif
+![Database migration demo](dbmigration.gif)
 
 See the full database deployment and migration Automation API program in [TypeScript](https://github.com/pulumi/automation-api-examples/tree/main/nodejs/databaseMigration-ts) and [Go](https://github.com/pulumi/automation-api-examples/tree/main/go/database_migration).
 
@@ -405,13 +405,13 @@ nAnimalsService := web.NewWebService("nAnimals", func() http.Handler {
 
 {{< /chooser >}}
 
-TODO gif
+![Halloumi demo](halloumi.gif)
 
 Check out the full `halloumi` source in [TypeScript](https://github.com/pulumi/halloumi/tree/main/nodejs) and [Go](https://github.com/pulumi/halloumi/tree/main/go).
 
 Like any other framework, you can even set a breakpoint to debug orchestration logic or the pulumi program itself including `Apply` callbacks.
 
-TODO gif
+![Debuggin demo](debugging.gif)
 
 ## Supercharged Ops Tooling
 
@@ -449,7 +449,7 @@ func NewAddCmd() *cobra.Command {
 }
 ```
 
-TODO gif
+![vmgr add demo](vmgr_add.gif)
 
 Our `vmgr cron` environment cleanup job takes advantage of Pulumi’s declarative model. It queries the Pulumi Service for stacks older than five days and removes them along with any child resources:
 
@@ -488,11 +488,13 @@ for _, sName := range stacksToDestroy {
 fmt.Printf("destroyed %d stack(s)\n", success)
 ```
 
+![vmgr cron demo](vmgr_cron.gif)
+
 Our VM provisioner uses Automation API, but it’s backed by Pulumi’s desired state model. This means that there’s no chance of resources leaking or getting lost. Check out the full [`vmgr` example here](https://github.com/pulumi/automation-api-examples/tree/main/go/vm_manager_azure). For a cloud native example, take a look at our `eksctl` inspired [`aksctl` for Azure AKS](https://github.com/jaxxstorm/aksctl).
 
 ## Give it a Try Today!
 
-The Automation API is your tool to tame Cloud Engineering complexity and give your team the leverage to automate your cloud infrastructure. It is fully open source and available today for TypeScript/JavaScript and Go. Want to learn more? Come hang out with us in the [#automation-api community slack channel](https://pulumi-community.slack.com/archives/C019YSXN04B). Download the latest Pulumi release and check out these resources to get started:
+The Automation API is your tool to tame Cloud Engineering complexity and give your team the leverage to automate your cloud infrastructure. It is fully open source and available today for TypeScript/JavaScript and Go. Want to learn more? Come hang out with us in the [#automation-api community slack channel](https://pulumi-community.slack.com/archives/C019YSXN04B). Download the [latest Pulumi release](https://www.pulumi.com/docs/get-started/install/) and check out these resources to get started:
 
 - [Go documentation](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/x/auto)
 - [JavaScript/TypeScript documentation](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/pulumi/x/automation/)
@@ -501,6 +503,8 @@ The Automation API is your tool to tame Cloud Engineering complexity and give yo
 - [The Pulumi Kubernetes Operator](https://github.com/pulumi/pulumi-kubernetes-operator)
 - [aksctl](https://github.com/jaxxstorm/aksctl)
 - [Halloumi](https://github.com/pulumi/halloumi)
+
+Keep an eye out! [Python](https://github.com/pulumi/pulumi/compare/auto/python) and [C#](https://github.com/pulumi/pulumi/compare/auto/dotnet) support are under active development and coming soon.
 
 Last, we'd like to give a special thank you to the members of the community who have consulted with us, chimed in on the [original github issue](https://github.com/pulumi/pulumi/issues/3901), and have been there for the journey in [community slack](https://pulumi-community.slack.com/archives/C019YSXN04B).
 
