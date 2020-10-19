@@ -1,6 +1,6 @@
 ---
 title: "Cloud Engineering Summit Reloaded"
-date: 2020-10-16
+date: 2020-10-20
 meta_desc: "Watch popular talks and panels from the Cloud Engineering Summit."
 meta_image: cloud_engineering.png
 authors:
