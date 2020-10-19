@@ -253,7 +253,7 @@ var bucketObject = new BucketObject("index.html", new BucketObjectArgs
     Acl = "public-read",
     ContentType = "text/html",
     Bucket = bucket.BucketName,
-    Content = hmtlString,
+    Content = htmlString,
 });
 ```
 
