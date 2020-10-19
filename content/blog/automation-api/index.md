@@ -9,7 +9,11 @@ tags:
     - automation api
 ---
 
-Today’s Infrastructure as Code platforms have enabled organizations to build rich, reliable, and complex cloud-based applications and architectures. But as teams move to modern cloud technologies and reorganize their engineering organizations to get the full power and agility of the cloud, they continue looking for ways to drive increased software-driven automation.  While modern Infrastructure as Code tools bring key software engineering benefits to cloud engineering, they remain focused on human-driven workflows. For example, a person running `pulumi up` at their terminal or wiring the Pulumi CLI into their CI/CD system. To scale up how we deploy and manage cloud infrastructure and ultimately unlock the cloud's value and agility, we believe it will be critical to building software systems around our Infrastructure as Code platforms - systems that scale with software, not just humans.
+Today’s Infrastructure as Code platforms let organizations build rich, reliable, and complex cloud-based applications and architectures. But as teams move to modern cloud technologies,  they continue to search for ways to drive increased software-driven automation. Although modern Infrastructure as Code tools bring key software engineering benefits to cloud engineering, they remain focused on human-driven workflows. For example, a person running `pulumi up` at their terminal or wiring the Pulumi CLI into their CI/CD system. 
+
+To scale up how we deploy and manage cloud infrastructure and ultimately unlock the cloud's value and agility, we believe it will be critical to building software systems around our Infrastructure as Code platforms - systems that scale with software, not just humans.
+
+<!--more-->
 
 Pulumi's approach of using general purpose languages enables Infrastructure as Software -- bringing all of the great lessons learned over decades of building software to your infrastructure (languages, IDEs, testing, debugging, componentization, packaging, versioning, and more).
 
