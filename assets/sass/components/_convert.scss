@@ -107,9 +107,7 @@ pulumi-convert {
 
                 @screen xl {
                     @apply overflow-visible;
-                }
 
-                @screen xl {
                     pulumi-tooltip {
                         display: inherit;
                     }
@@ -123,7 +121,7 @@ pulumi-convert {
                     }
 
                     .label {
-                        @apply mx-2 font-body text-gray-500 whitespace-no-wrap overflow-scroll;
+                        @apply mx-2 font-body text-gray-500 whitespace-no-wrap overflow-hidden;
                     }
 
                     .indicator {
@@ -139,6 +137,15 @@ pulumi-convert {
 
                         .indicator {
                             @apply bg-orange-300;
+                        }
+                    }
+
+                    // Hide fourth (and greater) tabs until we have enough screen width to use them.
+                    &:nth-of-type(n + 4) {
+                        @apply hidden;
+
+                        @screen xl {
+                            @apply flex;
                         }
                     }
                 }
