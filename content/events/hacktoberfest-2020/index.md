@@ -38,7 +38,7 @@ Here are some helpful links to get you started with Policy as Code:
 * [Example Policy Packs](https://github.com/pulumi/examples/tree/master/policy-packs) - Example policies for common cloud providers.
 * [Configurable Policy Packs](https://www.pulumi.com/docs/guides/crossguard/configuration/) - A guide to authoring flexible Policy Packs that can be configured and reused.
 
-### Operator and Automation API
+### Automation API
 
 The recently unveiled [Automation API](https://www.pulumi.com/blog/automation-api/) provides a robust programmatic layer on top of Pulumi's declarative Infrastructure as Software. By exposing Pulumi programs and stacks as strongly-typed composable building blocks, it means that Pulumi can now be fully embedded inside your software projects.
 
