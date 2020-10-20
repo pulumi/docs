@@ -2,7 +2,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <meta name="google-site-verification" content="j-Opn93zR4YQcV5bbYN99BmNc48BT5mzd2VpzKaW9YY" />
+
+    <!-- Google Site Verification for Google Webmaster tools and YouTube. -->
+    <meta name="google-site-verification" content="N-ezSTIu4P3bSc4TqidV4wWCkMzFiMN269ZgDYArGkk" />
 
     {{ if .Params.redirect_to }}
         <meta http-equiv="refresh" content="0; url={{ .Params.redirect_to }}" />
@@ -132,9 +134,6 @@
 
     <!-- Preload the component JavaScript to help our Google Page Speed score. -->
     <link rel="preload" href="/js/components/components.esm.js" as="script" crossorigin="anonymous">
-
-    <!-- Google Site Verification for Google Webmaster tools and YouTube. -->
-    <meta name="google-site-verification" content="N-ezSTIu4P3bSc4TqidV4wWCkMzFiMN269ZgDYArGkk" />
 
     {{/* Tests to enforce required frontmatter for certain content types. */}}
     {{ if and (eq .Type "blog") .IsPage }}
