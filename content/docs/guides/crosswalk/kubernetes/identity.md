@@ -333,7 +333,8 @@ the `roles/editor` role, and authenticate as the ServiceAccount to use with the 
 ```bash
 $ gcloud iam service-accounts create my-service-account --description MyServiceAccount --display-name MyServiceAccount
 $ gcloud iam service-accounts keys create ~/key.json --iam-account my-service-account@pulumi-development.iam.gserviceaccount.com
-$ gcloud projects add-iam-policy-binding pulumi-development  --member serviceAccount:my-service-account@pulumi-development.iam.gserviceaccount.com --role roles/editor --role roles/container.clusterAdmin
+$ gcloud projects add-iam-policy-binding pulumi-development --member serviceAccount:my-service-account@pulumi-development.iam.gserviceaccount.com --role roles/editor
+$ gcloud projects add-iam-policy-binding pulumi-development --member serviceAccount:my-service-account@pulumi-development.iam.gserviceaccount.com --role roles/container.clusterAdmin
 $ gcloud auth activate-service-account --key-file ~/key.json
 ```
 
