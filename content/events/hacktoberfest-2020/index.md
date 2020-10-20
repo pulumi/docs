@@ -47,6 +47,7 @@ Here are some helpful links to get you started on authoring your own component r
 
 * [Creating and Reusing Cloud Components using Package Managers](https://www.pulumi.com/docs/tutorials/aws/s3-folder-component/) - A step-by-step guide to building and publishing a `StaticWebsite` component.
 * [AWS Lambda Warmer as Pulumi Component](https://mikhail.io/2018/08/aws-lambda-warmer-as-pulumi-component/) - An abstraction of a common pattern to avoid cold starts in AWS Lambda.
+* Docker Image Component in [Typescript](https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/image.ts), [Python](https://github.com/pulumi/pulumi-docker/blob/master/sdk/python/pulumi_docker/image.py), [C#](https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Image.cs) and [Go](https://github.com/pulumi/pulumi-docker/blob/master/sdk/go/docker/image.go) - An example in each supported language, so you can use what works best for you.
 * [Pulumi Programming Model](https://www.pulumi.com/docs/intro/concepts/programming-model/#components) - Documentation to understand the underlying concepts in a Pulumi program.
 
 ## How to get started
