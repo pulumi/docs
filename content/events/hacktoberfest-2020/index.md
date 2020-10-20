@@ -26,11 +26,28 @@ block_external_search_index: false
 
 Hacktoberfest® is open to everyone in our global community. Whether you’re a developer, student learning to code, event host, or company of any size, you can help drive growth of open source and make positive contributions to an ever-growing community. All backgrounds and skill levels are encouraged to complete the challenge.
 
-This year, Pulumi is participating in Hacktoberfest with three areas where the community at large can collaborate to build new open source capabilities:
+This year, Pulumi is participating in Hacktoberfest with three areas where the community at large can collaborate to build new open source capabilities.
 
-1. **Native Pulumi Providers** - Want Pulumi to work better with your favorite cloud services? We'll show you how to get started building providers that let Pulumi users take full advantage of these services.
-2. **Operator and Automation API** - Learn how to use Pulumi's new Kubernetes Superpowers to build truly automated deployments for your workloads.
-3. **Reusable Infrastructure Libraries** - Create new abstractions and infrastructure building blocks using Pulumi.
+### Native Pulumi Providers
+
+Want Pulumi to work better with your favorite cloud services? We'll show you how to get started building providers that let Pulumi users take full advantage of these services.
+
+### Operator and Automation API
+
+Learn how to use Pulumi's new Kubernetes Superpowers to build truly automated deployments for your workloads.
+
+### Reusable Infrastructure Libraries
+
+One of Pulumi's superpowers is that it allows you to easily create new abstractions and infrastructure building blocks. In fact,
+some of our own libraries like [awsx](https://github.com/pulumi/pulumi-awsx) and [kx](https://github.com/pulumi/pulumi-kubernetesx) 
+do just that by creating higher-level components (i.e. [component resources](https://www.pulumi.com/docs/intro/concepts/programming-model/#components)) 
+on top of the [pulumi-aws](https://github.com/pulumi/pulumi-aws) and [pulumi-kubernetes](https://github.com/pulumi/pulumi-kubernetes) providers respectively. 
+
+Here are some helpful links to get you started on authoring your own component resources:
+
+* [Creating and Reusing Cloud Components using Package Managers](https://www.pulumi.com/docs/tutorials/aws/s3-folder-component/) - A step-by-step guide to building and publishing a `StaticWebsite` component.
+* [AWS Lambda Warmer as Pulumi Component](https://mikhail.io/2018/08/aws-lambda-warmer-as-pulumi-component/) - An abstraction of a common pattern to avoid cold starts in AWS Lambda.
+* [Pulumi Programming Model](https://www.pulumi.com/docs/intro/concepts/programming-model/#components) - Documentation to understand the underlying concepts in a Pulumi program.
 
 ## How to get started
 
