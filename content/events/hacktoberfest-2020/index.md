@@ -28,17 +28,31 @@ Hacktoberfest® is open to everyone in our global community. Whether you’re a 
 
 This year, Pulumi is participating in Hacktoberfest with three areas where the community at large can collaborate to build new open source capabilities.
 
-### Native Pulumi Providers
+### Policy as Code
 
-Want Pulumi to work better with your favorite cloud services? We'll show you how to get started building providers that let Pulumi users take full advantage of these services.
+[Pulumi CrossGuard](https://www.pulumi.com/docs/guides/crossguard/) allows you to create policies for logic that you may want to enforce on your cloud resources as code. Policies are written as validation functions that are evaluated against all resources in your Pulumi stack. An example of this in practice is [AWSGuard](https://github.com/pulumi/pulumi-policy-aws), a library that codifies best practices for AWS.
+
+Here are some helpful links to get you started with Policy as Code:
+
+* [Crossguard Core Concepts](https://www.pulumi.com/docs/guides/crossguard/core-concepts/) - An in-depth guide to the core concepts for Policy as Code.
+* [Example Policy Packs](https://github.com/pulumi/examples/tree/master/policy-packs) - Example policies for common cloud providers.
+* [Configurable Policy Packs](https://www.pulumi.com/docs/guides/crossguard/configuration/) - A guide to authoring flexible Policy Packs that can be configured and reused.
 
 ### Operator and Automation API
 
-Learn how to use Pulumi's new Kubernetes Superpowers to build truly automated deployments for your workloads.
+The recently unveiled [Automation API](https://www.pulumi.com/blog/automation-api/) provides a robust programmatic layer on top of Pulumi's declarative Infrastructure as Software. By exposing Pulumi programs and stacks as strongly-typed composable building blocks, it means that Pulumi can now be fully embedded inside your software projects.
+
+We've already seen the Automation API being used in incredibly creative ways, and we'd love to see what you dream up with it.
+
+Here are some helpful links to get you started with the Automation API:
+
+* [Go Documentation](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/x/auto) - Go documentation for the Automation API.
+* [TypeScript/JavaScript Documentation](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/pulumi/x/automation/) - Typescript documentation for the Automation API.
+* [Automation API examples](https://github.com/pulumi/automation-api-examples) - Examples of different Automation API use cases.
 
 ### Reusable Infrastructure Libraries
 
-One of Pulumi's superpowers is that it allows you to easily create new abstractions and infrastructure building blocks. In fact, some of our own libraries like [awsx](https://github.com/pulumi/pulumi-awsx) and [kx](https://github.com/pulumi/pulumi-kubernetesx) do just that by creating higher-level components (i.e. [component resources](https://www.pulumi.com/docs/intro/concepts/programming-model/#components)) on top of the [pulumi-aws](https://github.com/pulumi/pulumi-aws) and [pulumi-kubernetes](https://github.com/pulumi/pulumi-kubernetes) providers respectively.
+One of Pulumi's superpowers is that it allows you to easily create new abstractions and infrastructure building blocks in the form of [component resources](https://www.pulumi.com/docs/intro/concepts/programming-model/#components). A component is a logical container for physical cloud resources and controls how resources are grouped in the CLI. In fact, some of our own libraries like [awsx](https://github.com/pulumi/pulumi-awsx) and [kx](https://github.com/pulumi/pulumi-kubernetesx) do just that by creating higher-level components (i.e. component resources) on top of the [pulumi-aws](https://github.com/pulumi/pulumi-aws) and [pulumi-kubernetes](https://github.com/pulumi/pulumi-kubernetes) providers respectively.
 
 Here are some helpful links to get you started on authoring your own component resources:
 
