@@ -38,10 +38,7 @@ Learn how to use Pulumi's new Kubernetes Superpowers to build truly automated de
 
 ### Reusable Infrastructure Libraries
 
-One of Pulumi's superpowers is that it allows you to easily create new abstractions and infrastructure building blocks. In fact,
-some of our own libraries like [awsx](https://github.com/pulumi/pulumi-awsx) and [kx](https://github.com/pulumi/pulumi-kubernetesx) 
-do just that by creating higher-level components (i.e. [component resources](https://www.pulumi.com/docs/intro/concepts/programming-model/#components)) 
-on top of the [pulumi-aws](https://github.com/pulumi/pulumi-aws) and [pulumi-kubernetes](https://github.com/pulumi/pulumi-kubernetes) providers respectively. 
+One of Pulumi's superpowers is that it allows you to easily create new abstractions and infrastructure building blocks. In fact, some of our own libraries like [awsx](https://github.com/pulumi/pulumi-awsx) and [kx](https://github.com/pulumi/pulumi-kubernetesx) do just that by creating higher-level components (i.e. [component resources](https://www.pulumi.com/docs/intro/concepts/programming-model/#components)) on top of the [pulumi-aws](https://github.com/pulumi/pulumi-aws) and [pulumi-kubernetes](https://github.com/pulumi/pulumi-kubernetes) providers respectively.
 
 Here are some helpful links to get you started on authoring your own component resources:
 
