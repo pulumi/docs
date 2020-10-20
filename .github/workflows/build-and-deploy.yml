@@ -19,6 +19,10 @@ jobs:
       - name: Turnstyle
         if: ${{ github.event_name == 'push' }}
         uses: softprops/turnstyle@v1
+        with:
+            # Stop waiting after 30 minutes -- this is temporary, just to release what's currently queued.
+            # A follow-up PR will raise this to a value closer to the default GHA job timeout.
+            continue-after-seconds: 1800
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
