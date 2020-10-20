@@ -133,6 +133,9 @@
     <!-- Preload the component JavaScript to help our Google Page Speed score. -->
     <link rel="preload" href="/js/components/components.esm.js" as="script" crossorigin="anonymous">
 
+    <!-- Google Site Verification for Google Webmaster tools and YouTube. -->
+    <meta name="google-site-verification" content="N-ezSTIu4P3bSc4TqidV4wWCkMzFiMN269ZgDYArGkk" />
+
     {{/* Tests to enforce required frontmatter for certain content types. */}}
     {{ if and (eq .Type "blog") .IsPage }}
         {{ if not .Params.authors }}
