@@ -7,11 +7,14 @@ const { Octokit } = require("@octokit/rest");
 // prevent the current workflow from continuing).
 // Inspired by https://github.com/softprops/turnstyle.
 async function waitForInProgressRuns() {
+
+    // See https://docs.github.com/en/free-pro-team@latest/actions/reference/environment-variables
+    // for an explanation of each of these variables.
     const githubToken = process.env.GITHUB_TOKEN;
     const currentRunID = parseInt(process.env.GITHUB_RUN_ID, 10);
     const workflowName = process.env.GITHUB_WORKFLOW;
     const [ owner, repo ] = process.env.GITHUB_REPOSITORY.split("/");
-    const branch = process.env.GITHUB_REF.replace("refs/heads/", "");
+    const branch = process.env.GITHUB_HEAD_REF || GITHUB_REF.replace("refs/heads/", "");
     const status = "in_progress";
 
     const octokit = new Octokit({
@@ -32,11 +35,14 @@ async function waitForInProgressRuns() {
         .sort((a, b) => b.id - a.id)
         .filter(run => run.id < currentRunID);
 
+    console.log(`Found ${recent.length} other ${workflowName} job(s) running on branch ${branch}.`);
+
     if (recent.length > 0) {
         const [ mostRecent ] = recent;
-        console.log(`⏱  Found ${recent.length} other ${workflowName} job(s) running on branch ${branch}.`);
-        console.log(`   Waiting for ${mostRecent.html_url} to complete before continuing...`);
+        console.log(`Waiting for ${mostRecent.html_url} to complete before continuing.`);
         await Promise.resolve(setTimeout(waitForInProgressRuns, 60000)); // One minute.
+    } else {
+        console.log("Continuing.");
     }
 }
 

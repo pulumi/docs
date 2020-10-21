@@ -40,12 +40,6 @@ jobs:
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@releases/v1
 
-      - name: Wait for running jobs to complete
-        if: ${{ github.event_name == 'push' }}
-        run: node scripts/await-in-progress.js
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Build and deploy
         run: make ci_${GITHUB_EVENT_NAME}
         env:
