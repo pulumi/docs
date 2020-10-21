@@ -146,12 +146,12 @@ Next you will create a new bucket object on the lines right after creating the b
 
 ```csharp
 var filePath = Path.GetFullPath("./site/index.html");
-var hmtlString = File.ReadAllText(filePath);
+var htmlString = File.ReadAllText(filePath);
 
 var bucketObject = new BucketObject("index.html", new BucketObjectArgs
 {
     Bucket = bucket.BucketName,
-    Content = hmtlString,
+    Content = htmlString,
 });
 ```
 
