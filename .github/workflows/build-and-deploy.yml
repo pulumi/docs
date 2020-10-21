@@ -14,18 +14,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      # Turnstyle is used to prevent multiple push jobs from running at the same time. We
-      # limit it to push jobs to allow PR jobs to run concurrently.
-      - name: Turnstyle
-        if: ${{ github.event_name == 'push' }}
-        uses: softprops/turnstyle@v1
-        with:
-            # Stop waiting after 30 minutes -- this is temporary, just to release what's currently queued.
-            # A follow-up PR will raise this to a value closer to the default GHA job timeout.
-            continue-after-seconds: 1800
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - uses: actions/checkout@v2
 
       - uses: actions/setup-node@v1
@@ -51,6 +39,12 @@ jobs:
 
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@releases/v1
+
+      - name: Wait for running jobs to complete
+        if: ${{ github.event_name == 'push' }}
+        run: node scripts/await-in-progress.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and deploy
         run: make ci_${GITHUB_EVENT_NAME}
