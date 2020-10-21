@@ -2,6 +2,10 @@
 title: "Workshop: GitOps with Pulumi and GitLab"
 meta_desc: "Learn how to implement GitOps for your cloud infrastructure using
   Pulumi and GitLab. "
+
+aliases:
+  - /webinars/workshop-gitops-with-pulumi-and-gitlab
+
 featured: false
 pre_recorded: false
 pulumi_tv: false

@@ -2,6 +2,10 @@
 title: Azure Infrastructure as Code Workshop
 meta_desc: In this workshop, Mikhail Shilkov and Paul Stack show you how to
   tackle common challenges using Infrastructure as Code.
+
+aliases:
+  - /webinars/azure-infrastructure-as-code-workshop-2020-10-19
+
 featured: false
 pre_recorded: false
 pulumi_tv: false
@@ -21,7 +25,7 @@ main:
   datetime: Thu Oct 29, 2020 AT 07:00AM PT
   description: >-
     Want to learn how to use the only Infrastructure as Code (IaC) tool that
-    supports 100% of Azure capabilities? 
+    supports 100% of Azure capabilities?
 
 
     In this workshop, the Pulumi team will show you how to define, deploy and manage Azure resources using Infrastructure as Code through a series of hands-on labs. The techniques work for any cloud -- Azure, AWS, and GCP. You'll be able to leverage your favorite languages including Python, Go, JavaScript, TypeScript, and C# instead of YAML or domain-specific languages.

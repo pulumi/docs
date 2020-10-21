@@ -4,6 +4,10 @@ meta_desc: Join Pulumi for Hacktoberfest and help us build open source
 title: Hacktoberfest 2020
 subtitle: Help us build new open source capabilities for Pulumi
 unlisted: false
+
+aliases:
+  - /events/hacktoberfest-2020
+
 event:
   eventbrite_url: ""
   registration_url: https://organize.mlh.io/participants/events/4954-pulumi-hacktoberfest

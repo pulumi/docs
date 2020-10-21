@@ -3,6 +3,9 @@
 title: "Anomaly Detection with AWS GuardDuty and Slack"
 meta_desc: "In this episode, Lee Zen walks you through anomaly detection with Amazon GuardDuty + Slack using TypeScript and Pulumi."
 
+aliases:
+  - /webinars/aws-anomaly-detection-guardduty-slack
+
 # A featured webinar will display first in the list.
 featured: false
 

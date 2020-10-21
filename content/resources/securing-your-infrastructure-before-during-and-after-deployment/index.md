@@ -3,6 +3,7 @@ title: Securing Infrastructure Before, During & After Deployment
 meta_desc: "Join CircleCI, Pulumi, and Snyk to learn how developers can find and
   fix security issues and validate workload definitions against secure
   configuration best practices. "
+
 featured: false
 pre_recorded: false
 pulumi_tv: false

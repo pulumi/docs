@@ -3,6 +3,9 @@
 title: "Azure Cosmos DB Serverless Preview"
 meta_desc: "In today's episode, we explore the next generation Microsoft Azure provider for Pulumi. We take it for a spin on Azure's Cosmos DB serverless preview."
 
+aliases:
+  - /webinars/azure-cosmos-serverless-db-preview
+
 # A featured webinar will display first in the list.
 featured: false
 
