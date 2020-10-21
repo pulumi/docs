@@ -39,34 +39,55 @@
     <!-- What is a Cloud Engineer? -->
     <a id="what"></a>
     <section class="bg-white pt-24 px-4 justify-center">
+        <div class="container mx-auto flex flex-col lg:mx-auto lg:flex lg:flex-row lg:items-center lg:justify-center">
+            <div class="lg:w-1/2">
+                <h3 class="mt-4 text-4xl text-gray-800">
+                    What is Cloud Engineering?
+                </h3>
+                <p>
+                    Cloud Engineering can be simply defined as the apply the practices of software engineering to
+                    cloud computing, but in reality it is a much more complex discipline and category than that simple
+                    definition. The cloud gives you boundless opportunites to innovate but with those opportunites comes
+                    add complexity. In many ways the cloud is world's biggest super computer and Cloud Engineers, like yourself,
+                    are tasked with understanding and building on top of these massive systems. The cloud has pushed teams to
+                    move in the direction of distributed applications with modern archietectures enabling teams to go form
+                    ideation to delivering customer value faster and with more accuracy than ever before. We've entered a new era
+                    of software development where you're not writing client server applications like you did 20, 15, 10,
+                    even 5 years ago, all software is cloud software.
+                </p>
+                <p>
+                    As we enter this new era of software development we must not only look to the future but also remember our past
+                    and understand where we are today. Not everyone or every team is at the same place in their cloud engineering
+                    journey and our tooling must flexible enough to meet an ever changing set of demands. Some of us are already
+                    writing cloud native applications and need modern tooling to abstract away boilerplate code and easier collaboration
+                    amongst our peers. Others of us are running legacy applications that you want to modernize to take advantage of all
+                    the capabilities the cloud provides you. Cloud Engineering meets you where you are today while providing a clear
+                    path to a cloud native future.
+                </p>
+            </div>
+            <div class="lg:w-1/2">
+                {{ partial "pulumipus" (dict "type" "rocket") }}
+            </div>
+        </div>
+    </section>
+
+    <a id="essentials"></a>
+    <section class="bg-white pt-24 px-4 justify-center">
         <div class="container mx-auto">
-            <h3 class="mt-4 text-4xl text-gray-800">
-                What is Cloud Engineering?
-            </h3>
-            <p>
-                Aliquam id nisi vel sapien rutrum viverra ut viverra justo. Curabitur congue dui nisi,
-                sit amet maximus ipsum finibus nec. Ut non nunc eget dolor lobortis ultrices ut vitae
-                diam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus
-                mus. Etiam a ipsum vel risus elementum maximus sit amet sed elit. Curabitur quis est dictum,
-                ullamcorper ipsum nec, finibus risus. Pellentesque nec lorem vitae massa venenatis bibendum.
-                Nullam et nisl quis metus iaculis bibendum. Nam imperdiet risus sit amet nibh gravida
-                tincidunt. Morbi quis ultrices sem. Donec sagittis ex arcu, non congue ipsum posuere non.
-                Etiam imperdiet sem at lacus maximus, id posuere massa tempor. Maecenas porttitor, tortor a
-                eleifend dapibus, ipsum ligula pharetra enim, at vestibulum sapien sapien nec nibh. Nulla lorem
-                libero, pulvinar non egestas id, consectetur a urna. Donec eget velit aliquet, pharetra augue
-                quis, viverra dolor.
-            </p>
-            <p>
-                Duis eu gravida mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer est
-                nulla, tempus in tincidunt in, ultricies ut quam. Suspendisse potenti. Sed nec congue justo, feugiat
-                tristique arcu. Curabitur in efficitur est, ac sagittis odio. Nam vehicula nulla dui, dignissim malesuada
-                mauris lacinia tempus. Phasellus in bibendum magna. Morbi molestie, neque quis molestie varius, ex
-                ipsum euismod leo, a semper arcu ex quis nunc. Ut vehicula, leo quis vehicula pellentesque, tellus justo
-                auctor arcu, in ultricies augue eros in dui. Vestibulum bibendum rhoncus porttitor. Maecenas et sapien
-                nec urna dignissim tempus sit amet eu tortor. Nulla arcu velit, bibendum ac ultricies vitae, ultricies
-                luctus justo. Nulla non orci eu lectus cursus facilisis. Mauris orci purus, feugiat eget aliquet quis,
-                venenatis ut libero. Suspendisse in felis eget lorem feugiat dapibus et eget mi.
-            </p>
+            <h3>Ten Essentials of Cloud Engineering</h3>
+            <div class="container mx-auto flex flex-col lg:mx-auto lg:flex-row lg:flex-wrap lg:items-center lg:justify-center">
+                {{ range $i, $item := .Params.essentials }}
+                    <div class="lg:w-1/2 text-center">
+                        <h3 class="pl-10">
+                            <span class="inline-block flex rounded-full bg-purple-500 uppercase px-2 py-1 text-white font-bold mr-3">{{ $i }}</span>
+                            Some title
+                        </h3>
+                        <p>
+                            some description and <a>cta</a>.
+                        </p>
+                    </div>
+                {{ end }}
+            </div>
         </div>
     </section>
 
@@ -76,7 +97,7 @@
     <section class="bg-white pt-24 px-4 justify-center">
         <div class="container mx-auto">
             <h3 class="mt-4 text-4xl text-gray-800">
-                The ten essentials of Cloud Engineering
+                The Three Pillars of Cloud Engineering
             </h3>
             <p>
                 Aliquam id nisi vel sapien rutrum viverra ut viverra justo. Curabitur congue dui nisi,

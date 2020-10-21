@@ -7,6 +7,37 @@ meta_desc: |
     Duis eu gravida mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer est nulla,
     tempus in tincidunt in, ultricies ut quam.
 
+essentials:
+  - title: title
+    description: description
+
+  - title: title
+    description: description
+
+  - title: title
+    description: description
+
+  - title: title
+    description: description
+
+  - title: title
+    description: description
+
+  - title: title
+    description: description
+
+  - title: title
+    description: description
+
+  - title: title
+    description: description
+
+  - title: title
+    description: description
+
+  - title: title
+    description: description
+
 video_list:
     section_title: Featured Content
     items:
