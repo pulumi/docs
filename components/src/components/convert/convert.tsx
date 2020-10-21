@@ -465,7 +465,7 @@ export class Convert {
                             <strong>Sorry, we couldn't convert your code.</strong>
                         </p>
                         <p>
-                            There could be a problem with the code you submitted, or it might use a feature
+                            There could be a problem with the code you submitted, or it might use a
                             feature { this.conversionTool.name } doesn't yet support. For help converting
                             a { this.sourceLanguageName } project to Pulumi,
                             please <a href="https://pulumi.com/about#contact">contact us</a> or join us in
