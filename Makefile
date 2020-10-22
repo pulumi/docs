@@ -29,6 +29,12 @@ serve:
 	$(MAKE) lint
 	./scripts/serve.sh
 
+.PHONY: serve_marketing
+serve_marketing:
+	@echo -e "\033[0;32mSERVE MARKETING:\033[0m"
+	$(MAKE) lint
+	HUGO_ENVIRONMENT=marketing-dev ./scripts/serve.sh
+
 .PHONY: serve_components
 serve_components:
 	@echo -e "\033[0;32mSERVE COMPONENTS:\033[0m"
