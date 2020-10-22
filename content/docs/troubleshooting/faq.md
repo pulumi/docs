@@ -82,6 +82,7 @@ Yes, you can! The Pulumi CLI allows you to export and import checkpoints so you 
 ```sh
 $ pulumi stack select my-app-production # switch to the stack we want to export
 $ pulumi stack export --file my-app-production.checkpoint.json # export the stack's checkpoint to a local file
+$ pulumi logout
 $ pulumi login
 $ pulumi stack init my-app-production # create a new stack with the same name on pulumi.com
 $ pulumi stack import --file my-app-production.checkpoint.json # import the new existing checkpoint into pulumi.com
