@@ -14,7 +14,7 @@ async function waitForInProgressRuns() {
     const currentRunID = parseInt(process.env.GITHUB_RUN_ID, 10);
     const workflowName = process.env.GITHUB_WORKFLOW;
     const [ owner, repo ] = process.env.GITHUB_REPOSITORY.split("/");
-    const branch = process.env.GITHUB_HEAD_REF || GITHUB_REF.replace("refs/heads/", "");
+    const branch = process.env.GITHUB_HEAD_REF || process.env.GITHUB_REF.replace("refs/heads/", "");
     const status = "in_progress";
 
     const octokit = new Octokit({
@@ -45,5 +45,13 @@ async function waitForInProgressRuns() {
         console.log("Continuing.");
     }
 }
+
+// Unhandled errors that happen within Promises yield warnings, but do not (yet) cause the
+// process to exit nonzero. Since we want this script to fail loudly when something goes
+// wrong, we listen for unhandledRejection events and rethrow, exiting 1.
+// https://nodejs.org/api/process.html#process_event_unhandledrejection
+process.on("unhandledRejection", (error) => {
+    throw error;
+});
 
 waitForInProgressRuns();
