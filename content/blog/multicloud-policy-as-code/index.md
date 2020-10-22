@@ -28,7 +28,7 @@ Whether you create policies for a single project or across you organization, Cro
 
 A policy is made up of:
 
--  a name
+- a name
 - a description
 - an enforcement level
 - a resource validation
@@ -50,250 +50,254 @@ Let's take a look at a common scenario. The following examples show how to preve
 
 ### AWS
 
-<pulumi-chooser type="language" options="typescript,python" mode="local">
-    <pulumi-choosable type="language" value="typescript">
+{{< chooser language "typescript,python" >}}
+{{% choosable language typescript %}}
 
-        ```typescript
-        import * as aws from "@pulumi/aws";
-        import { PolicyPack, ReportViolation, validateResourceOfType } from "@pulumi/policy";
+```typescript
+import * as aws from "@pulumi/aws";
+import { PolicyPack, ReportViolation, validateResourceOfType } from "@pulumi/policy";
 
-        new PolicyPack("policy-pack-typescript", {
-            policies: [{
-                name: "s3-no-public-read",
-                description: "Prohibits setting the publicRead or publicReadWrite permission on AWS S3 buckets.",
-                enforcementLevel: "mandatory",
-                validateResource: validateResourceOfType(aws.s3.Bucket, (bucket, args, reportViolation) => {
-                    if (bucket.acl === "public-read" || bucket.acl === "public-read-write") {
-                        reportViolation(
-                            "You cannot set public-read or public-read-write on an S3 bucket. " +
-                            "Read more about ACLs here: https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html");
-                    }
-                }),
-            }],
-        });
-        ```
-    </pulumi-choosable>
+new PolicyPack("policy-pack-typescript", {
+    policies: [{
+        name: "s3-no-public-read",
+        description: "Prohibits setting the publicRead or publicReadWrite permission on AWS S3 buckets.",
+        enforcementLevel: "mandatory",
+        validateResource: validateResourceOfType(aws.s3.Bucket, (bucket, args, reportViolation) => {
+            if (bucket.acl === "public-read" || bucket.acl === "public-read-write") {
+                reportViolation(
+                    "You cannot set public-read or public-read-write on an S3 bucket. " +
+                    "Read more about ACLs here: https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html");
+            }
+        }),
+    }],
+});
+```
 
-    <pulumi-choosable type="language" value="python">
+{{% /choosable %}}
+{{% choosable language python %}}
 
-        ```python
-        from pulumi_policy import (
-            EnforcementLevel,
-            PolicyPack,
-            ReportViolation,
-            ResourceValidationArgs,
-            ResourceValidationPolicy,
-        )
+```python
+from pulumi_policy import (
+    EnforcementLevel,
+    PolicyPack,
+    ReportViolation,
+    ResourceValidationArgs,
+    ResourceValidationPolicy,
+)
 
-        def s3_no_public_read_validator(args: ResourceValidationArgs, report_violation: ReportViolation):
-            if args.resource_type == "aws:s3/bucket:Bucket" and "acl" in args.props:
-                acl = args.props["acl"]
-                if acl == "public-read" or acl == "public-read-write":
-                    report_violation(
-                        "You cannot set public-read or public-read-write on an S3 bucket. " +
-                        "Read more about ACLs here: https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html")
+def s3_no_public_read_validator(args: ResourceValidationArgs, report_violation: ReportViolation):
+    if args.resource_type == "aws:s3/bucket:Bucket" and "acl" in args.props:
+        acl = args.props["acl"]
+        if acl == "public-read" or acl == "public-read-write":
+            report_violation(
+                "You cannot set public-read or public-read-write on an S3 bucket. " +
+                "Read more about ACLs here: https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html")
 
-        s3_no_public_read = ResourceValidationPolicy(
-            name="s3-no-public-read",
-            description="Prohibits setting the publicRead or publicReadWrite permission on AWS S3 buckets.",
-            validate=s3_no_public_read_validator,
-        )
+s3_no_public_read = ResourceValidationPolicy(
+    name="s3-no-public-read",
+    description="Prohibits setting the publicRead or publicReadWrite permission on AWS S3 buckets.",
+    validate=s3_no_public_read_validator,
+)
 
-        PolicyPack(
-            name="aws-python",
-            enforcement_level=EnforcementLevel.MANDATORY,
-            policies=[
-                s3_no_public_read,
-            ],
-        )
-        ```
-    </pulumi-choosable>
-</pulumi-chooser>
+PolicyPack(
+    name="aws-python",
+    enforcement_level=EnforcementLevel.MANDATORY,
+    policies=[
+        s3_no_public_read,
+    ],
+)
+```
+
+{{% /choosable %}}
+{{< /chooser >}}
 
 ### Azure
 
-<pulumi-chooser type="language" options="typescript,python" mode="local">
-    <pulumi-choosable type="language" value="typescript">
-        ```typescript
-        import * as azure from "@pulumi/azure";
-        import { PolicyPack, validateResourceOfType } from "@pulumi/policy";
+{{< chooser language "typescript,python" >}}
+{{% choosable language typescript %}}
 
-        new PolicyPack("azure-typescript", {
-            policies: [{
-                name: "storage-container-no-public-read",
-                description: "Prohibits setting the public permission on Azure Storage Blob Containers.",
-                enforcementLevel: "mandatory",
-                validateResource: validateResourceOfType(azure.storage.Container, (container, args, reportViolation) => {
-                    if (container.containerAccessType === "blob" || container.containerAccessType === "container") {
-                        reportViolation(
-                            "Azure Storage Container must not have blob or container access set. " +
-                            "Read more about read access here: " +
-                            "https://docs.microsoft.com/en-us/azure/storage/blobs/storage-manage-access-to-resources");
-                    }
-                }),
-            }],
-        });
-        ```
-    </pulumi-choosable>
+```typescript
+import * as azure from "@pulumi/azure";
+import { PolicyPack, validateResourceOfType } from "@pulumi/policy";
 
-    <pulumi-choosable type="language" value="python">
+new PolicyPack("azure-typescript", {
+    policies: [{
+        name: "storage-container-no-public-read",
+        description: "Prohibits setting the public permission on Azure Storage Blob Containers.",
+        enforcementLevel: "mandatory",
+        validateResource: validateResourceOfType(azure.storage.Container, (container, args, reportViolation) => {
+            if (container.containerAccessType === "blob" || container.containerAccessType === "container") {
+                reportViolation(
+                    "Azure Storage Container must not have blob or container access set. " +
+                    "Read more about read access here: " +
+                    "https://docs.microsoft.com/en-us/azure/storage/blobs/storage-manage-access-to-resources");
+            }
+        }),
+    }],
+});
+```
 
-        ```python
-        from pulumi_policy import (
-            EnforcementLevel,
-            PolicyPack,
-            ReportViolation,
-            ResourceValidationArgs,
-            ResourceValidationPolicy,
-        )
+{{% /choosable %}}
+{{% choosable language python %}}
 
-        def storage_container_no_public_read_validator(args: ResourceValidationArgs, report_violation: ReportViolation):
-            if args.resource_type == "azure:storage/container:Container" and "containerAccessType" in args.props:
-                access_type = args.props["containerAccessType"]
-                if access_type == "blob" or access_type == "container":
-                    report_violation(
-                        "Azure Storage Container must not have blob or container access set. " +
-                        "Read more about read access here: " +
-                        "https://docs.microsoft.com/en-us/azure/storage/blobs/storage-manage-access-to-resources")
+```python
+from pulumi_policy import (
+    EnforcementLevel,
+    PolicyPack,
+    ReportViolation,
+    ResourceValidationArgs,
+    ResourceValidationPolicy,
+)
 
-        storage_container_no_public_read = ResourceValidationPolicy(
-            name="storage-container-no-public-read",
-            description="Prohibits setting the public permission on Azure Storage Blob Containers.",
-            validate=storage_container_no_public_read_validator,
-        )
+def storage_container_no_public_read_validator(args: ResourceValidationArgs, report_violation: ReportViolation):
+    if args.resource_type == "azure:storage/container:Container" and "containerAccessType" in args.props:
+        access_type = args.props["containerAccessType"]
+        if access_type == "blob" or access_type == "container":
+            report_violation(
+                "Azure Storage Container must not have blob or container access set. " +
+                "Read more about read access here: " +
+                "https://docs.microsoft.com/en-us/azure/storage/blobs/storage-manage-access-to-resources")
 
-        PolicyPack(
-            name="azure-python",
-            enforcement_level=EnforcementLevel.MANDATORY,
-            policies=[
-                storage_container_no_public_read,
-            ],
-        )
-        ```
-    </pulumi-choosable>
-</pulumi-chooser>
+storage_container_no_public_read = ResourceValidationPolicy(
+    name="storage-container-no-public-read",
+    description="Prohibits setting the public permission on Azure Storage Blob Containers.",
+    validate=storage_container_no_public_read_validator,
+)
 
+PolicyPack(
+    name="azure-python",
+    enforcement_level=EnforcementLevel.MANDATORY,
+    policies=[
+        storage_container_no_public_read,
+    ],
+)
+```
+
+{{% /choosable %}}
+{{< /chooser >}}
 
 ### Google Cloud Platform
 
-<pulumi-chooser type="language" options="typescript,python" mode="local">
-    <pulumi-choosable type="language" value="typescript">
+{{< chooser language "typescript,python" >}}
+{{% choosable language typescript %}}
 
-        ```typescript
-        import * as gcp from "@pulumi/gcp";
-        import { PolicyPack, validateResourceOfType } from "@pulumi/policy";
+```typescript
+import * as gcp from "@pulumi/gcp";
+import { PolicyPack, validateResourceOfType } from "@pulumi/policy";
 
-        new PolicyPack("gcp-typescript", {
-            policies: [{
-                name: "storage-bucket-no-public-read",
-                description: "Prohibits setting the publicRead or publicReadWrite permission on GCP Storage buckets.",
-                enforcementLevel: "mandatory",
-                validateResource: validateResourceOfType(gcp.storage.BucketACL, (acl, args, reportViolation) => {
-                    if (acl.predefinedAcl === "public-read" || acl.predefinedAcl === "public-read-write") {
-                        reportViolation("Storage buckets acl cannot be set to public-read or public-read-write.");
-                    }
-                }),
-            }],
-        });
-        ```
-    </pulumi-choosable>
+new PolicyPack("gcp-typescript", {
+    policies: [{
+        name: "storage-bucket-no-public-read",
+        description: "Prohibits setting the publicRead or publicReadWrite permission on GCP Storage buckets.",
+        enforcementLevel: "mandatory",
+        validateResource: validateResourceOfType(gcp.storage.BucketACL, (acl, args, reportViolation) => {
+            if (acl.predefinedAcl === "public-read" || acl.predefinedAcl === "public-read-write") {
+                reportViolation("Storage buckets acl cannot be set to public-read or public-read-write.");
+            }
+        }),
+    }],
+});
+```
 
-    <pulumi-choosable type="language" value="python">
+{{% /choosable %}}
+{{% choosable language python %}}
 
-        ```python
-        from pulumi_policy import (
-            EnforcementLevel,
-            PolicyPack,
-            ReportViolation,
-            ResourceValidationArgs,
-            ResourceValidationPolicy,
-        )
+```python
+from pulumi_policy import (
+    EnforcementLevel,
+    PolicyPack,
+    ReportViolation,
+    ResourceValidationArgs,
+    ResourceValidationPolicy,
+)
 
-        def storage_bucket_no_public_read_validator(args: ResourceValidationArgs, report_violation: ReportViolation):
-            if args.resource_type == "gcp:storage/bucketACL:BucketACL" and "predefinedAcl" in args.props:
-                acl = args.props["predefinedAcl"]
-                if acl == "public-read" or acl == "public-read-write":
-                    report_violation("Storage buckets acl cannot be set to public-read or public-read-write.")
+def storage_bucket_no_public_read_validator(args: ResourceValidationArgs, report_violation: ReportViolation):
+    if args.resource_type == "gcp:storage/bucketACL:BucketACL" and "predefinedAcl" in args.props:
+        acl = args.props["predefinedAcl"]
+        if acl == "public-read" or acl == "public-read-write":
+            report_violation("Storage buckets acl cannot be set to public-read or public-read-write.")
 
-        storage_bucket_no_public_read = ResourceValidationPolicy(
-            name="storage-bucket-no-public-read",
-            description="Prohibits setting the publicRead or publicReadWrite permission on GCP Storage buckets.",
-            validate=storage_bucket_no_public_read_validator,
-        )
+storage_bucket_no_public_read = ResourceValidationPolicy(
+    name="storage-bucket-no-public-read",
+    description="Prohibits setting the publicRead or publicReadWrite permission on GCP Storage buckets.",
+    validate=storage_bucket_no_public_read_validator,
+)
 
-        PolicyPack(
-            name="gcp-python",
-            enforcement_level=EnforcementLevel.MANDATORY,
-            policies=[
-                storage_bucket_no_public_read,
-            ],
-        )
-        ```
-    </pulumi-choosable>
-</pulumi-chooser>
+PolicyPack(
+    name="gcp-python",
+    enforcement_level=EnforcementLevel.MANDATORY,
+    policies=[
+        storage_bucket_no_public_read,
+    ],
+)
+```
+
+{{% /choosable %}}
+{{< /chooser >}}
 
 ### Kubernetes
 
-<pulumi-chooser type="language" options="typescript,python" mode="local">
-    <pulumi-choosable type="language" value="typescript">
+{{< chooser language "typescript,python" >}}
+{{% choosable language typescript %}}
 
-        ```typescript
-        import * as k8s from "@pulumi/kubernetes";
-        import { PolicyPack, validateResourceOfType } from "@pulumi/policy";
+```typescript
+import * as k8s from "@pulumi/kubernetes";
+import { PolicyPack, validateResourceOfType } from "@pulumi/policy";
 
-        new PolicyPack("kubernetes-typescript", {
-            policies: [{
-                name: "no-public-services",
-                description: "Kubernetes Services should be cluster-private.",
-                enforcementLevel: "mandatory",
-                validateResource: validateResourceOfType(k8s.core.v1.Service, (svc, args, reportViolation) => {
-                    if (svc.spec && svc.spec.type === "LoadBalancer") {
-                        reportViolation("Kubernetes Services cannot be of type LoadBalancer, which are exposed to " +
-                            "anything that can reach the Kubernetes cluster. This likely including the " +
-                            "public Internet.");
-                    }
-                }),
-            }],
-        });
-        ```
-    </pulumi-choosable>
+new PolicyPack("kubernetes-typescript", {
+    policies: [{
+        name: "no-public-services",
+        description: "Kubernetes Services should be cluster-private.",
+        enforcementLevel: "mandatory",
+        validateResource: validateResourceOfType(k8s.core.v1.Service, (svc, args, reportViolation) => {
+            if (svc.spec && svc.spec.type === "LoadBalancer") {
+                reportViolation("Kubernetes Services cannot be of type LoadBalancer, which are exposed to " +
+                    "anything that can reach the Kubernetes cluster. This likely including the " +
+                    "public Internet.");
+            }
+        }),
+    }],
+});
+```
 
-    <pulumi-choosable type="language" value="python">
+{{% /choosable %}}
+{{% choosable language python %}}
 
-        ```python
-        from pulumi_policy import (
-            EnforcementLevel,
-            PolicyPack,
-            ReportViolation,
-            ResourceValidationArgs,
-            ResourceValidationPolicy,
-        )
+```python
+from pulumi_policy import (
+    EnforcementLevel,
+    PolicyPack,
+    ReportViolation,
+    ResourceValidationArgs,
+    ResourceValidationPolicy,
+)
 
-        def no_public_services_validator(args: ResourceValidationArgs, report_violation: ReportViolation):
-            if args.resource_type == "kubernetes:core/v1:Service" and "spec" in args.props:
-                spec = args.props["spec"]
-                if "type" in spec and spec["type"] == "LoadBalancer":
-                    report_violation(
-                        "Kubernetes Services cannot be of type LoadBalancer, which are exposed to " +
-                        "anything that can reach the Kubernetes cluster. This likely including the " +
-                        "public Internet.")
+def no_public_services_validator(args: ResourceValidationArgs, report_violation: ReportViolation):
+    if args.resource_type == "kubernetes:core/v1:Service" and "spec" in args.props:
+        spec = args.props["spec"]
+        if "type" in spec and spec["type"] == "LoadBalancer":
+            report_violation(
+                "Kubernetes Services cannot be of type LoadBalancer, which are exposed to " +
+                "anything that can reach the Kubernetes cluster. This likely including the " +
+                "public Internet.")
 
-        no_public_services = ResourceValidationPolicy(
-            name="no-public-services",
-            description="Kubernetes Services should be cluster-private.",
-            validate=no_public_services_validator,
-        )
+no_public_services = ResourceValidationPolicy(
+    name="no-public-services",
+    description="Kubernetes Services should be cluster-private.",
+    validate=no_public_services_validator,
+)
 
-        PolicyPack(
-            name="kubernetes-python",
-            enforcement_level=EnforcementLevel.MANDATORY,
-            policies=[
-                no_public_services,
-            ],
-        )
-        ```
-    </pulumi-choosable>
-</pulumi-chooser>
+PolicyPack(
+    name="kubernetes-python",
+    enforcement_level=EnforcementLevel.MANDATORY,
+    policies=[
+        no_public_services,
+    ],
+)
+```
+
+{{% /choosable %}}
+{{< /chooser >}}
 
 ## All Clouds and All Resources
 
