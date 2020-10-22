@@ -9,9 +9,9 @@ tags:
     - policy as code
 ---
 
-Policies protect your infrastructure by controlling access, set limits that reduce the blast radius of an incident, and manage infrastructure operations. Policies are commonly created through a form on a cloud providers administrative console, which can make replicating or versioning the policy more difficult. With Policy as Code, you can apply software engineering practices such as automated testing, deployment, and version control when creating policies.
+Policies protect your infrastructure by controlling access, set limits that reduce the blast radius of an incident, and manage infrastructure operations. Policies are commonly created through a form on a cloud provider's administrative console, making replicating or versioning the policy more difficult. With Policy as Code, you can apply software engineering practices such as automated testing, deployment, and version control when creating policies.
 
-CrossGuard is Pulumi's Policy as Code solution that lets you create, verify, apply, and enforce policies. Policies are standalone packages that can be run against any Pulumi stack. That means your policies are language agnostic and work with any language supported by Pulumi. Policy Packages are policy bundles that evaluate every resource in your stack whether they are deployed in AWX, Azure, Google Cloud Platform, or Kubernetes.
+CrossGuard is Pulumi's Policy as Code solution that lets you create, verify, apply, and enforce policies. Policies are standalone packages that can be run against any Pulumi stack. That means your policies are language agnostic and work with any language supported by Pulumi. Policy Packages are policy bundles that evaluate every resource in your stack, whether deployed in AWX, Azure, Google Cloud Platform, or Kubernetes.
 
 <!--more-->
 
@@ -20,9 +20,9 @@ The key features of CrossGuard are:
 - Policy SDK for coding custom policies using TypeScript/Javascript or Python
 - Validating infrastructure before deployment by verifying it locally
 - Policy playbooks for enforcing best practices for security, reliability, and cost
-- Validating all the infrastructure deployed by organization
+- Validating all the infrastructure deployed by an organization.
 
-Whether you create policies for a single project or across you organization, CrossGuard enforces best practices for cost, compliance, security, and team practices.
+Whether you create policies for a single project or across your organization, CrossGuard enforces best practices for cost, compliance, security, and team practices.
 
 ## Parts of a policy
 
@@ -36,18 +36,17 @@ A policy is made up of the following parts:
 
 ![Parts of a policy](policy-parts.png)
 
-Policies enforce a specific logic. In the example above, Kubernetes can't expose services to the Internet. We accomplish this by not allowing a `spec` to create LoadBalancer when a service is declared. Policies are checked during `pulumi preview` and during `pulumi update` to enforce the restrictions we have defined.
+Policies enforce a specific logic. In the example above, Kubernetes can't expose services to the Internet. We accomplish this by not allowing a `spec` to create LoadBalancer when a service is declared. Policies are checked during `pulumi preview` and during `pulumi update` to enforce defined restrictions.
 
-There are two types of policies, a `ResourceValidationPolicy` that a particular resource in a stack, and a  `StackValidationPolicy` that validates the stack as a whole. When CrossGuard calls a `ResourceValidationPolicy`, it checks each resource in the stack. These checks are before a resource is created and blocks any resources that fails the policy logic.
+There are two types of policies, a `ResourceValidationPolicy` that a particular resource in a stack, and a  `StackValidationPolicy` that validates the stack as a whole. When CrossGuard calls a `ResourceValidationPolicy`, it checks each resource in the stack. These checks are before a resource is created and blocks any resources that fail the policy logic.
 
-A `StackValidationPolicy` is run against the entire stack which requires that all the resources are created and registered. Resources that fail validation are not blocked from being created or modified during `pulumi up`. Out of compliance resources will fail during preview or update and we recommend running `pulumi preview` to catch these resources. Stack validation policies inspect multiple resources at once. This lets you validate resources that are dependent on other resources, for example a database that requires persistent storage.
+A `StackValidationPolicy` is run against the entire stack, requiring all the resources to be created and registered. Resources that fail validation are not blocked from being created or modified during `pulumi up`. Out of compliance resources will fail during preview or update, and we recommend running `pulumi preview` to catch these resources. Stack validation policies inspect multiple resources at once. This lets you validate resources dependent on other resources, such as a database that requires persistent storage.
 
-Now that we have an understanding of how CrossGuard works, let's look at examples for several cloud providers and kubernetes.
+Now that we understand how CrossGuard works. let's look at examples for several cloud providers and Kubernetes.
 
 ## Examples
 
-Let's take a look at a common scenario. The following examples show how to prevent access to data in AWS, Azure, Google Cloud Platform, and Kubernetes using either TypeScript or Python to create policies. You can create any of these policies by
-createing a new directory and running 'pulumi policy new`, e.g.:
+The following examples are a common scenario showing how to prevent access to data in AWS, Azure, Google Cloud Platform, and Kubernetes using either TypeScript or Python to create policies. You can try out any of these policies by creating a new directory and running 'pulumi policy new`, e.g.:
 
 ```bash
 $ mkdir az-python-storage-policy && cd az-python-storage-policy
@@ -307,7 +306,7 @@ PolicyPack(
 
 ## All Clouds and all resources
 
-Policy as Code is a powerful tool for protecting and managing your infrastructure. As you can see that Pulumi supports policies for all resources on all clouds. We have examples and articles to get you started with Policy as Code.
+Policy as Code is a powerful tool for protecting and managing your infrastructure. As you can see, Pulumi supports policies for all resources on all clouds. We have examples and articles to get you started with Policy as Code.
 
 - [Policy Pack Examples](https://github.com/pulumi/examples/tree/master/policy-packs)
 - [Get Started with Policy as Code]({{< relref "/docs/get-started/crossguard" >}})
