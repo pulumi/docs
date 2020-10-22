@@ -17,16 +17,16 @@ CrossGuard is Pulumi's Policy as Code solution that lets you create, verify, app
 
 The key features of CrossGuard are:
 
-Policy SDK for coding custom policies using TypeScript/Javascript or Python
-Validating infrastructure before deployment by verifying it locally
-Policy playbooks for enforcing best practices for security, reliability, and cost
-Validating all the infrastructure deployed by organization
+- Policy SDK for coding custom policies using TypeScript/Javascript or Python
+- Validating infrastructure before deployment by verifying it locally
+- Policy playbooks for enforcing best practices for security, reliability, and cost
+- Validating all the infrastructure deployed by organization
 
 Whether you create policies for a single project or across you organization, CrossGuard enforces best practices for cost, compliance, security, and team practices.
 
 ## Parts of a policy
 
-A policy is made up of:
+A policy is made up of the following parts:
 
 - a name
 - a description
@@ -46,7 +46,13 @@ Now that we have an understanding of how CrossGuard works, let's look at example
 
 ## Examples
 
-Let's take a look at a common scenario. The following examples show how to prevent access to data in AWS, Azure, Google Cloud Platform, and Kubernetes using either TypeScript or Python to create policies.
+Let's take a look at a common scenario. The following examples show how to prevent access to data in AWS, Azure, Google Cloud Platform, and Kubernetes using either TypeScript or Python to create policies. You can create any of these policies by
+createing a new directory and running 'pulumi policy new`, e.g.:
+
+```bash
+$ mkdir az-python-storage-policy && cd az-python-storage-policy
+$ pulumi policy new azure-python
+```
 
 ### AWS
 
@@ -299,7 +305,7 @@ PolicyPack(
 {{% /choosable %}}
 {{< /chooser >}}
 
-## All Clouds and All Resources
+## All Clouds and all resources
 
 Policy as Code is a powerful tool for protecting and managing your infrastructure. As you can see that Pulumi supports policies for all resources on all clouds. We have examples and articles to get you started with Policy as Code.
 
