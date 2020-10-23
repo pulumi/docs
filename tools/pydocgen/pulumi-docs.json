@@ -300,6 +300,12 @@
       "package_name": "pulumi_akamai",
       "pulumi_provider_name": "akamai",
       "terraform_provider_name": "akamai"
+    },
+    {
+      "name": "Pulumi Venafi",
+      "package_name": "pulumi_venafi",
+      "pulumi_provider_name": "venafi",
+      "terraform_provider_name": "venafi"
     }
   ]
 }
