@@ -58,6 +58,7 @@ TOOLS_REPOS=(
     "pulumi-terraform"
     "pulumi-tls"
     "pulumi-vault"
+    "pulumi-venafi"
     "pulumi-vsphere"
     "pulumi-wavefront"
 )
