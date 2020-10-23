@@ -315,4 +315,4 @@ Policy as Code is a powerful tool for protecting and managing your infrastructur
 - [Manage Any Infrastructure with Policy as Code]({{< relref "/blog/automatically-enforcing-aws-resource-tagging-policies" >}})
 - [Enforcing Different Kinds of Policies for Cloud Resources]({{< relref "/blog/enforcing-different-kinds-of-policies-for-cloud-resources" >}})
 - [Running AWS IAM Access Analyzer at Deployment Time]({{< relref "/blog/aws-iam-access-analyzer-and-crossguard" >}})
-[Authoring CrossGuard Policy with Open Policy Agent (OPA)]({{< relref "/blog/opa-support-for-crossguard" >}})
+- [Authoring CrossGuard Policy with Open Policy Agent (OPA)]({{< relref "/blog/opa-support-for-crossguard" >}})
