@@ -19,7 +19,7 @@ The key features of CrossGuard are:
 
 - Policy SDK for coding custom policies using TypeScript/JavaScript or Python
 - Validating infrastructure before deployment by verifying it locally
-- Policy playbooks for enforcing best practices for security, reliability, and cost
+- Policy Packs for enforcing best practices for security, reliability, and cost
 - Validating all the infrastructure deployed by an organization.
 
 Whether you create policies for a single project or across your organization, CrossGuard enforces best practices for cost, compliance, security, and team practices.
