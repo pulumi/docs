@@ -11,7 +11,7 @@ tags:
 
 Policies protect your infrastructure by controlling access, set limits that reduce the blast radius of an incident, and manage infrastructure operations. Policies are commonly created through a form on a cloud provider's administrative console, making replicating or versioning the policy more difficult. With Policy as Code, you can apply software engineering practices such as automated testing, deployment, and version control when creating policies.
 
-CrossGuard is Pulumi's Policy as Code solution that lets you create, verify, apply, and enforce policies. Policies are standalone packages that can be run against any Pulumi stack. That means your policies are language agnostic and work with any language supported by Pulumi. Policy Packages are policy bundles that evaluate every resource in your stack, whether deployed in AWX, Azure, Google Cloud Platform, or Kubernetes.
+CrossGuard is Pulumi's Policy as Code solution that lets you create, verify, apply, and enforce policies. Policies are standalone packages that can be run against any Pulumi stack. That means your policies are language agnostic and work with any language supported by Pulumi. Policy Packages are policy bundles that evaluate every resource in your stack, whether deployed in AWS, Azure, Google Cloud, or Kubernetes.
 
 <!--more-->
 
