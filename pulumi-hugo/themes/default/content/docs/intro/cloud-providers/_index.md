@@ -49,6 +49,7 @@ aliases: ["/docs/reference/clouds/"]
 * [Rancher2]({{< relref "./rancher2" >}})
 * [Spotinst]({{< relref "./spotinst" >}})
 * [Vault]({{< relref "./vault" >}})
+* [Venafi]({{< relref "./venafi" >}})
 
 ## Database Providers
 
