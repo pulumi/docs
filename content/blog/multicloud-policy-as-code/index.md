@@ -181,7 +181,7 @@ PolicyPack(
 {{% /choosable %}}
 {{< /chooser >}}
 
-### Google Cloud Platform
+### Google Cloud
 
 {{< chooser language "typescript,python" >}}
 {{% choosable language typescript %}}
