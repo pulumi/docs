@@ -108,19 +108,25 @@ for bucket in $buckets; do
                 deletables+=($bucket_name)
             fi
         elif [ "$1" == "pr" ]; then
-            associated_pr="$(get_pr_for_commit $bucket_commit || echo '')"
 
-            if [ ! -z "$associated_pr" ]; then
-                pr_number="$(echo $associated_pr | jq -r '.[0].number')"
-                pr_state="$(echo $associated_pr | jq -r '.[0].state')"
+            # Parse the bucket name for the PR number. A bit gross, but more reliable than
+            # asking GitHub for the PR associated with a commit, because commits are often
+            # removed when squashed or rebased.
+            pr_number="$(echo $bucket_name | sed "s/^$(origin_bucket_prefix)-pr-\([0-9]*\)-.*$/\1/")"
+            pr_metadata="$(curl \
+                -s \
+                -f \
+                -H "Authorization: token ${GITHUB_TOKEN}" \
+                "https://api.github.com/repos/pulumi/docs/pulls/${pr_number}" || echo "{}")"
 
-                if [ "$pr_state" == "closed" ]; then
-                    maybe_echo
-                    maybe_echo "❌ This bucket's PR has been closed (https://github.com/pulumi/docs/pull/${pr_number}), so it can safely be deleted."
-                    maybe_echo "   aws s3 rb s3://${bucket_name} --force"
+            pr_state="$(echo $pr_metadata | jq -r '.state')"
 
-                    deletables+=($bucket_name)
-                fi
+            if [ "$pr_state" != "open" ]; then
+                maybe_echo
+                maybe_echo "❌ This bucket's PR state is ${pr_state} (https://github.com/pulumi/docs/pull/${pr_number}), so it can safely be deleted."
+                maybe_echo "   aws s3 rb s3://${bucket_name} --force"
+
+                deletables+=($bucket_name)
             fi
         fi
 
