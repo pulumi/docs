@@ -17,7 +17,7 @@ CrossGuard is Pulumi's Policy as Code solution that lets you create, verify, app
 
 The key features of CrossGuard are:
 
-- Policy SDK for coding custom policies using TypeScript/Javascript or Python
+- Policy SDK for coding custom policies using TypeScript/JavaScript or Python
 - Validating infrastructure before deployment by verifying it locally
 - Policy playbooks for enforcing best practices for security, reliability, and cost
 - Validating all the infrastructure deployed by an organization.
