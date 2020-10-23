@@ -46,7 +46,7 @@ Now that we understand how CrossGuard works. let's look at examples for several 
 
 ## Examples
 
-The following examples are a common scenario showing how to prevent access to data in AWS, Azure, Google Cloud Platform, and Kubernetes using either TypeScript or Python to create policies. You can try out any of these policies by creating a new directory and running 'pulumi policy new`, e.g.:
+The following examples are a common scenario showing how to prevent access to data in AWS, Azure, Google Cloud Platform, and Kubernetes using either TypeScript or Python to create policies. You can try out any of these policies by creating a new directory and running `pulumi policy new`, e.g.:
 
 ```bash
 $ mkdir az-python-storage-policy && cd az-python-storage-policy
