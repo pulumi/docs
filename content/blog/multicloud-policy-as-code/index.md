@@ -1,6 +1,6 @@
 ---
 title: "Policy as Code for Any Cloud Provider"
-date: 2020-10-22T11:43:21-05:00
+date: 2020-10-27
 meta_desc: "Create policies for all clouds from AWS, Azure, Google Cloud Platform, and Kubernetes"
 meta_image: meta.png
 authors:
