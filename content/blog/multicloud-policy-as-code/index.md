@@ -40,7 +40,7 @@ Policies enforce a specific logic. In the example above, Kubernetes can't expose
 
 There are two types of policies, a `ResourceValidationPolicy` that validates a particular resource in a stack, and a  `StackValidationPolicy` that validates the stack as a whole. When CrossGuard calls a `ResourceValidationPolicy`, it checks each resource in the stack. These checks are before a resource is created and blocks any resources that fail the policy logic.
 
-A `StackValidationPolicy` is run against the entire stack, requiring all the resources to be created and registered. Resources that fail validation are not blocked from being created or modified during `pulumi up`. Out of compliance resources will fail during preview or update, and we recommend running `pulumi preview` to catch these resources. Stack validation policies inspect multiple resources at once. This lets you validate resources dependent on other resources, such as a database that requires persistent storage.
+A `StackValidationPolicy` is run against the entire stack, requiring all the resources to be created and registered. Resources that fail validation will be blocked from being created or modified during `pulumi up`. Out of compliance resources will fail during preview or update, and we recommend running `pulumi preview` to catch these resources. Stack validation policies inspect multiple resources at once. This lets you validate resources dependent on other resources, such as a database that requires persistent storage.
 
 Now that we understand how CrossGuard works. let's look at examples for several cloud providers and Kubernetes.
 
