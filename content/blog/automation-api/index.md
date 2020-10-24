@@ -11,7 +11,7 @@ tags:
 
 Today’s Infrastructure as Code platforms let organizations build rich, reliable, and complex cloud-based applications and architectures. But as teams move to modern cloud technologies,  they continue to search for ways to drive increased software-driven automation. Although modern Infrastructure as Code tools bring key software engineering benefits to cloud engineering, they remain focused on human-driven workflows. For example, a person running `pulumi up` at their terminal or wiring the Pulumi CLI into their CI/CD system.
 
-To scale up how we deploy and manage cloud infrastructure and ultimately unlock the cloud's value and agility, we believe it will be critical to building software systems around our Infrastructure as Code platforms - systems that scale with software, not just humans.
+To scale up how we deploy and manage cloud infrastructure and ultimately unlock the cloud's value and agility, we believe it will be critical to build software systems around our Infrastructure as Code platforms - systems that scale with software, not just humans.
 
 <!--more-->
 
@@ -19,7 +19,7 @@ Pulumi's approach of using general purpose languages enables Infrastructure as S
 
 Today we’re excited to announce the Pulumi Automation API, a robust programmatic layer on top of Pulumi’s declarative Infrastructure as Software. The Automation API exposes Pulumi programs and stacks as strongly-typed and composable building blocks.
 
-Pulumi can be fully embedded inside your software projects - to power a wide range of custom cloud infrastructure automation projects. No CLI, no human-in-the-loop, just code.
+With Automation API, Pulumi can be fully embedded inside your software projects - to power a wide range of custom cloud infrastructure automation projects. No CLI, no human-in-the-loop, just code.
 
 ## Enabling Cloud Engineering
 
@@ -34,7 +34,7 @@ So far, our users have applied the Pulumi Automation API to these scenarios:
 
 The Automation API is a new subpackage in each of Pulumi’s language-specific SDKs that provides APIs to create and manage Stacks and perform lifecycle operations like update, refresh, preview, and destroy. It is a strongly typed and safe way to use Pulumi in embedded contexts such as web servers without having to shell out to a CLI.
 
-You can define a Pulumi program as a function inside of your codebase rather than in a separate project and use methods to get and set configuration parameters programmatically. The Automation API uses a gRPC interface to execute programs that control and communicate with the core Pulumi engine. It still requires a Pulumi CLI installation, as this is how we bundle and distribute the core engine. Today it’s available in preview for [TypeScript/JavaScript](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/x/auto) and [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/x/auto), with support for [Python](https://github.com/pulumi/pulumi/compare/auto/python) and [C#](https://github.com/pulumi/pulumi/compare/auto/dotnet) under active development.
+You can define a Pulumi program as a function inside of your codebase rather than in a separate project and use methods to get and set configuration parameters programmatically. The Automation API uses a gRPC interface to execute programs that control and communicate with the core Pulumi engine. It still requires a Pulumi CLI installation, as this is how we bundle and distribute the core engine. Today it’s available in preview for [TypeScript/JavaScript](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/pulumi/x/automation) and [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/x/auto), with support for [Python](https://github.com/pulumi/pulumi/compare/auto/python) and [C#](https://github.com/pulumi/pulumi/compare/auto/dotnet) under active development.
 
 ## Platform APIs
 
@@ -433,29 +433,29 @@ Have a look at our temporary development VM provisioner for Azure `vmgr`. A simp
 func NewAddCmd() *cobra.Command {
     return &cobra.Command{
         Use:   "add",
-        Short: "add deploys an additional additional vm stack",
+        Short: "add deploys an additional vm stack",
         Run: func(cmd *cobra.Command, args []string) {
-                stackName := fmt.Sprintf("vmgr%d", rangeIn(10000000, 99999999))
-                // create a new stack for our VM with an Inline program.
-                // the program is nil for now, but we'll set it later after retrieving some dependent outputs.
-                s, err := auto.NewStackInlineSource(ctx, stackName, projectName, nil /* Program */)
-                fmt.Println("ensuring network is configured...")
-                // lookout network and resource group info
-                subnetID, rgName, err := EnsureNetwork(ctx, projectName)
-                // set our program for the deployment with the resulting network info
-                stack.SetProgram(GetDeployVMFunc(subnetID, rgName))
-                fmt.Println("deploying vm...")
-                // deploy our VM stack
-                stdoutStreamer := optup.ProgressStreams(os.Stdout)
+            stackName := fmt.Sprintf("vmgr%d", rangeIn(10000000, 99999999))
+            // create a new stack for our VM with an Inline program.
+            // the program is nil for now, but we'll set it later after retrieving some dependent outputs.
+            s, err := auto.NewStackInlineSource(ctx, stackName, projectName, nil /* Program */)
+            fmt.Println("ensuring network is configured...")
+            // lookout network and resource group info
+            subnetID, rgName, err := EnsureNetwork(ctx, projectName)
+            // set our program for the deployment with the resulting network info
+            stack.SetProgram(GetDeployVMFunc(subnetID, rgName))
+            fmt.Println("deploying vm...")
+            // deploy our VM stack
+            stdoutStreamer := optup.ProgressStreams(os.Stdout)
 
-                res, err := s.Up(ctx, stdoutStreamer)
-                if err != nil {
-                    fmt.Printf("Failed to deploy vm stack: %v\n", err)
-                    os.Exit(1)
-                }
-                fmt.Printf("deployed server running at public IP %s\n", res.Outputs["ip"].Value)
-            },
-        }
+            res, err := s.Up(ctx, stdoutStreamer)
+            if err != nil {
+                fmt.Printf("Failed to deploy vm stack: %v\n", err)
+                os.Exit(1)
+            }
+            fmt.Printf("deployed server running at public IP %s\n", res.Outputs["ip"].Value)
+        },
+    }
 }
 ```
 
