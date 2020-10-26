@@ -33,7 +33,7 @@ Explore the resources and functions of the pkiSecret module in the Vault package
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vault).</dd>
 	<dt>Version</dt>
-	<dd>2.4.0</dd>
+	<dd>3.0.0</dd>
 </dl>
 
 
@@ -44,7 +44,7 @@ Explore the resources and functions of the pkiSecret module in the Vault package
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.PkiSecret.html" title="Pulumi.Vault.PkiSecret">Pulumi.Vault.PkiSecret</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/pkisecret?tab=doc#" title="vault/pkisecret">vault/pkisecret</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/pkisecret?tab=doc#" title="vault/pkisecret">vault/pkisecret</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/vault/pkiSecret/#" title="@pulumi/vault/pkisecret">@pulumi/vault/pkisecret</a></dd>

@@ -29,7 +29,7 @@ meta_desc: "Explore the GetEntity function of the identity module, including exa
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupEntity<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/identity?tab=doc#LookupEntityArgs">LookupEntityArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/identity?tab=doc#LookupEntityResult">LookupEntityResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupEntity<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/identity?tab=doc#LookupEntityArgs">LookupEntityArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/identity?tab=doc#LookupEntityResult">LookupEntityResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupEntity` in the Go SDK.
 
@@ -959,7 +959,7 @@ Vault, serialized in JSON format.
 <a href="#aliases_python" style="color: inherit; text-decoration: inherit;">aliases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getentityalias">List[Get<wbr>Entity<wbr>Alias]</a></span>
+        <span class="property-type"><a href="#getentityalias">Sequence[Get<wbr>Entity<wbr>Alias]</a></span>
     </dt>
     <dd>{{% md %}}A list of entity alias. Structure is documented below.
 {{% /md %}}</dd>
@@ -993,7 +993,7 @@ Vault, serialized in JSON format.
 <a href="#direct_group_ids_python" style="color: inherit; text-decoration: inherit;">direct_<wbr>group_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of Group IDs of which the entity is directly a member of
 {{% /md %}}</dd>
@@ -1035,7 +1035,7 @@ Vault, serialized in JSON format.
 <a href="#group_ids_python" style="color: inherit; text-decoration: inherit;">group_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of all Group IDs of which the entity is a member of
 {{% /md %}}</dd>
@@ -1057,7 +1057,7 @@ Vault, serialized in JSON format.
 <a href="#inherited_group_ids_python" style="color: inherit; text-decoration: inherit;">inherited_<wbr>group_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of all Group IDs of which the entity is a member of transitively
 {{% /md %}}</dd>
@@ -1079,7 +1079,7 @@ Vault, serialized in JSON format.
 <a href="#merged_entity_ids_python" style="color: inherit; text-decoration: inherit;">merged_<wbr>entity_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Other entity IDs which is merged with this entity
 {{% /md %}}</dd>
@@ -1090,7 +1090,7 @@ Vault, serialized in JSON format.
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Arbitrary metadata
 {{% /md %}}</dd>
@@ -1112,7 +1112,7 @@ Vault, serialized in JSON format.
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of policies attached to the entity
 {{% /md %}}</dd>
@@ -1136,7 +1136,7 @@ Vault, serialized in JSON format.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/identity?tab=doc#GetEntityAliasType">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/identity?tab=doc#GetEntityAliasType">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Identity.Outputs.GetEntityAlias.html">output</a> API doc for this type.
@@ -1512,8 +1512,8 @@ Vault, serialized in JSON format.
 
     <dt class="property-required"
             title="Required">
-        <span id="creationtime_python">
-<a href="#creationtime_python" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
+        <span id="creation_time_python">
+<a href="#creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1534,8 +1534,8 @@ Vault, serialized in JSON format.
 
     <dt class="property-required"
             title="Required">
-        <span id="lastupdatetime_python">
-<a href="#lastupdatetime_python" style="color: inherit; text-decoration: inherit;">last<wbr>Update<wbr>Time</a>
+        <span id="last_update_time_python">
+<a href="#last_update_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>update_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1545,11 +1545,11 @@ Vault, serialized in JSON format.
 
     <dt class="property-required"
             title="Required">
-        <span id="mergedfromcanonicalids_python">
-<a href="#mergedfromcanonicalids_python" style="color: inherit; text-decoration: inherit;">merged<wbr>From<wbr>Canonical<wbr>Ids</a>
+        <span id="merged_from_canonical_ids_python">
+<a href="#merged_from_canonical_ids_python" style="color: inherit; text-decoration: inherit;">merged_<wbr>from_<wbr>canonical_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of canonical IDs merged with this alias
 {{% /md %}}</dd>
@@ -1560,31 +1560,9 @@ Vault, serialized in JSON format.
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Arbitrary metadata
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="mountpath_python">
-<a href="#mountpath_python" style="color: inherit; text-decoration: inherit;">mount<wbr>Path</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Authentication mount path which this alias belongs to
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="mounttype_python">
-<a href="#mounttype_python" style="color: inherit; text-decoration: inherit;">mount<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Authentication mount type which this alias belongs to
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1596,6 +1574,28 @@ Vault, serialized in JSON format.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Authentication mount acccessor which this alias belongs to
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mount_path_python">
+<a href="#mount_path_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Authentication mount path which this alias belongs to
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mount_type_python">
+<a href="#mount_type_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Authentication mount type which this alias belongs to
 {{% /md %}}</dd>
 
     <dt class="property-required"
