@@ -364,8 +364,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#influxdbinfluxdb">Influx<wbr>Db<wbr>Influxdb<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to influxdb from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}influxdb.conf configuration values
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -522,8 +521,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#influxdbinfluxdb">Influx<wbr>Db<wbr>Influxdb</a></span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to influxdb from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}influxdb.conf configuration values
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -680,8 +678,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#influxdbinfluxdb">Influx<wbr>Db<wbr>Influxdb</a></span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to influxdb from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}influxdb.conf configuration values
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -838,8 +835,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#influxdbinfluxdb">Influx<wbr>Db<wbr>Influxdb<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to influxdb from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}influxdb.conf configuration values
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1539,8 +1535,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#influxdbinfluxdb">Influx<wbr>Db<wbr>Influxdb<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to influxdb from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}influxdb.conf configuration values
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1785,8 +1780,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#influxdbinfluxdb">Influx<wbr>Db<wbr>Influxdb</a></span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to influxdb from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}influxdb.conf configuration values
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2031,8 +2025,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#influxdbinfluxdb">Influx<wbr>Db<wbr>Influxdb</a></span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to influxdb from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}influxdb.conf configuration values
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2277,8 +2270,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#influxdbinfluxdb">Influx<wbr>Db<wbr>Influxdb<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to influxdb from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}influxdb.conf configuration values
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2938,6 +2930,17 @@ deletion is done.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="influxdb_csharp">
+<a href="#influxdb_csharp" style="color: inherit; text-decoration: inherit;">Influxdb</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#influxdbinfluxdbuserconfiginfluxdb">Influx<wbr>Db<wbr>Influxdb<wbr>User<wbr>Config<wbr>Influxdb<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}influxdb.conf configuration values
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="ipfilters_csharp">
 <a href="#ipfilters_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filters</a>
 </span> 
@@ -3008,6 +3011,17 @@ only when a new service is being created.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Serve the web frontend using a custom CNAME pointing to the Aiven DNS name
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="influxdb_go">
+<a href="#influxdb_go" style="color: inherit; text-decoration: inherit;">Influxdb</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#influxdbinfluxdbuserconfiginfluxdb">Influx<wbr>Db<wbr>Influxdb<wbr>User<wbr>Config<wbr>Influxdb</a></span>
+    </dt>
+    <dd>{{% md %}}influxdb.conf configuration values
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3086,6 +3100,17 @@ only when a new service is being created.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="influxdb_nodejs">
+<a href="#influxdb_nodejs" style="color: inherit; text-decoration: inherit;">influxdb</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#influxdbinfluxdbuserconfiginfluxdb">Influx<wbr>Db<wbr>Influxdb<wbr>User<wbr>Config<wbr>Influxdb</a></span>
+    </dt>
+    <dd>{{% md %}}influxdb.conf configuration values
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="ipfilters_nodejs">
 <a href="#ipfilters_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Filters</a>
 </span> 
@@ -3160,6 +3185,17 @@ only when a new service is being created.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="influxdb_python">
+<a href="#influxdb_python" style="color: inherit; text-decoration: inherit;">influxdb</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#influxdbinfluxdbuserconfiginfluxdb">Influx<wbr>Db<wbr>Influxdb<wbr>User<wbr>Config<wbr>Influxdb<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}influxdb.conf configuration values
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="ip_filters_python">
 <a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
 </span> 
@@ -3221,6 +3257,296 @@ only when a new service is being created.
 
 
 
+<h4 id="influxdbinfluxdbuserconfiginfluxdb">Influx<wbr>Db<wbr>Influxdb<wbr>User<wbr>Config<wbr>Influxdb</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#InfluxDbInfluxdbUserConfigInfluxdb">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#InfluxDbInfluxdbUserConfigInfluxdb">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#InfluxDbInfluxdbUserConfigInfluxdbArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#InfluxDbInfluxdbUserConfigInfluxdbOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.InfluxDbInfluxdbUserConfigInfluxdbArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.InfluxDbInfluxdbUserConfigInfluxdb.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logqueriesafter_csharp">
+<a href="#logqueriesafter_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Queries<wbr>After</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum duration in seconds before a query is 
+logged as a slow query. Setting this to 0 (the default) will never log slow queries.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxrowlimit_csharp">
+<a href="#maxrowlimit_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Row<wbr>Limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum number of rows returned in a non-chunked query. 
+Setting this to 0 (the default) allows an unlimited number to be returned.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxselectbuckets_csharp">
+<a href="#maxselectbuckets_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Select<wbr>Buckets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum number of `GROUP BY time()` buckets that 
+can be processed in a query. Setting this to 0 (the default) allows an unlimited number to
+be processed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxselectpoint_csharp">
+<a href="#maxselectpoint_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Select<wbr>Point</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum number of points that can be processed in a 
+SELECT statement. Setting this to 0 (the default) allows an unlimited number to be processed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="querytimeout_csharp">
+<a href="#querytimeout_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum duration in seconds before a query is killed. 
+Setting this to 0 (the default) will never kill slow queries.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logqueriesafter_go">
+<a href="#logqueriesafter_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Queries<wbr>After</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum duration in seconds before a query is 
+logged as a slow query. Setting this to 0 (the default) will never log slow queries.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxrowlimit_go">
+<a href="#maxrowlimit_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Row<wbr>Limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum number of rows returned in a non-chunked query. 
+Setting this to 0 (the default) allows an unlimited number to be returned.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxselectbuckets_go">
+<a href="#maxselectbuckets_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Select<wbr>Buckets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum number of `GROUP BY time()` buckets that 
+can be processed in a query. Setting this to 0 (the default) allows an unlimited number to
+be processed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxselectpoint_go">
+<a href="#maxselectpoint_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Select<wbr>Point</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum number of points that can be processed in a 
+SELECT statement. Setting this to 0 (the default) allows an unlimited number to be processed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="querytimeout_go">
+<a href="#querytimeout_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum duration in seconds before a query is killed. 
+Setting this to 0 (the default) will never kill slow queries.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logqueriesafter_nodejs">
+<a href="#logqueriesafter_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Queries<wbr>After</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum duration in seconds before a query is 
+logged as a slow query. Setting this to 0 (the default) will never log slow queries.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxrowlimit_nodejs">
+<a href="#maxrowlimit_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Row<wbr>Limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum number of rows returned in a non-chunked query. 
+Setting this to 0 (the default) allows an unlimited number to be returned.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxselectbuckets_nodejs">
+<a href="#maxselectbuckets_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Select<wbr>Buckets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum number of `GROUP BY time()` buckets that 
+can be processed in a query. Setting this to 0 (the default) allows an unlimited number to
+be processed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxselectpoint_nodejs">
+<a href="#maxselectpoint_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Select<wbr>Point</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum number of points that can be processed in a 
+SELECT statement. Setting this to 0 (the default) allows an unlimited number to be processed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="querytimeout_nodejs">
+<a href="#querytimeout_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum duration in seconds before a query is killed. 
+Setting this to 0 (the default) will never kill slow queries.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="log_queries_after_python">
+<a href="#log_queries_after_python" style="color: inherit; text-decoration: inherit;">log_<wbr>queries_<wbr>after</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum duration in seconds before a query is 
+logged as a slow query. Setting this to 0 (the default) will never log slow queries.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_row_limit_python">
+<a href="#max_row_limit_python" style="color: inherit; text-decoration: inherit;">max_<wbr>row_<wbr>limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum number of rows returned in a non-chunked query. 
+Setting this to 0 (the default) allows an unlimited number to be returned.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_select_buckets_python">
+<a href="#max_select_buckets_python" style="color: inherit; text-decoration: inherit;">max_<wbr>select_<wbr>buckets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum number of `GROUP BY time()` buckets that 
+can be processed in a query. Setting this to 0 (the default) allows an unlimited number to
+be processed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_select_point_python">
+<a href="#max_select_point_python" style="color: inherit; text-decoration: inherit;">max_<wbr>select_<wbr>point</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum number of points that can be processed in a 
+SELECT statement. Setting this to 0 (the default) allows an unlimited number to be processed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="query_timeout_python">
+<a href="#query_timeout_python" style="color: inherit; text-decoration: inherit;">query_<wbr>timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum duration in seconds before a query is killed. 
+Setting this to 0 (the default) will never kill slow queries.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="influxdbinfluxdbuserconfigprivateaccess">Influx<wbr>Db<wbr>Influxdb<wbr>User<wbr>Config<wbr>Private<wbr>Access</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#InfluxDbInfluxdbUserConfigPrivateAccess">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#InfluxDbInfluxdbUserConfigPrivateAccess">output</a> API doc for this type.
@@ -3247,8 +3573,7 @@ only when a new service is being created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to influxdb from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}influxdb.conf configuration values
 {{% /md %}}</dd>
 
 </dl>
@@ -3266,8 +3591,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to influxdb from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}influxdb.conf configuration values
 {{% /md %}}</dd>
 
 </dl>
@@ -3285,8 +3609,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to influxdb from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}influxdb.conf configuration values
 {{% /md %}}</dd>
 
 </dl>
@@ -3304,8 +3627,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to influxdb from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}influxdb.conf configuration values
 {{% /md %}}</dd>
 
 </dl>
@@ -3341,8 +3663,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to influxdb from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}influxdb.conf configuration values
 {{% /md %}}</dd>
 
 </dl>
@@ -3360,8 +3681,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to influxdb from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}influxdb.conf configuration values
 {{% /md %}}</dd>
 
 </dl>
@@ -3379,8 +3699,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to influxdb from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}influxdb.conf configuration values
 {{% /md %}}</dd>
 
 </dl>
@@ -3398,8 +3717,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to influxdb from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}influxdb.conf configuration values
 {{% /md %}}</dd>
 
 </dl>

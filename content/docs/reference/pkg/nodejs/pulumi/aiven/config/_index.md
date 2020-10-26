@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/aiven | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/aiven package."
-git_sha: "37ee3baab307b74c9d5a7a6a7ec277be797632e0"
+git_sha: "b2da66fc21160ee4fbf4240f9977d8f69a688905"
 block_external_search_index: true
 ---
 
@@ -27,7 +27,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="apiToken" data-link-title="apiToken">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/37ee3baab307b74c9d5a7a6a7ec277be797632e0/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/b2da66fc21160ee4fbf4240f9977d8f69a688905/sdk/nodejs/config/vars.ts#L12">
         let <strong>apiToken</strong>
     </a>
 </h3>

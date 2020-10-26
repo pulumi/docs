@@ -8964,6 +8964,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="starttlspolicy_csharp">
+<a href="#starttlspolicy_csharp" style="color: inherit; text-decoration: inherit;">Starttls<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
 </span> 
@@ -9033,6 +9043,16 @@ The following output properties are available:
             title="Optional">
         <span id="skipverify_go">
 <a href="#skipverify_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Verify</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="starttlspolicy_go">
+<a href="#starttlspolicy_go" style="color: inherit; text-decoration: inherit;">Starttls<wbr>Policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -9118,6 +9138,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="starttlspolicy_nodejs">
+<a href="#starttlspolicy_nodejs" style="color: inherit; text-decoration: inherit;">starttls<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span> 
@@ -9187,6 +9217,16 @@ The following output properties are available:
             title="Optional">
         <span id="skip_verify_python">
 <a href="#skip_verify_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>verify</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="starttls_policy_python">
+<a href="#starttls_policy_python" style="color: inherit; text-decoration: inherit;">starttls_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9326,6 +9366,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="influxdb_csharp">
+<a href="#influxdb_csharp" style="color: inherit; text-decoration: inherit;">Influxdb</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceinfluxdbuserconfiginfluxdb">Get<wbr>Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Influxdb<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="ipfilters_csharp">
 <a href="#ipfilters_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filters</a>
 </span> 
@@ -9388,6 +9438,16 @@ The following output properties are available:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="influxdb_go">
+<a href="#influxdb_go" style="color: inherit; text-decoration: inherit;">Influxdb</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceinfluxdbuserconfiginfluxdb">Get<wbr>Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Influxdb</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9460,6 +9520,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="influxdb_nodejs">
+<a href="#influxdb_nodejs" style="color: inherit; text-decoration: inherit;">influxdb</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceinfluxdbuserconfiginfluxdb">Get<wbr>Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Influxdb</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="ipfilters_nodejs">
 <a href="#ipfilters_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Filters</a>
 </span> 
@@ -9527,6 +9597,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="influxdb_python">
+<a href="#influxdb_python" style="color: inherit; text-decoration: inherit;">influxdb</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceinfluxdbuserconfiginfluxdb">Get<wbr>Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Influxdb<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="ip_filters_python">
 <a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
 </span> 
@@ -9569,6 +9649,252 @@ The following output properties are available:
             title="Optional">
         <span id="service_to_fork_from_python">
 <a href="#service_to_fork_from_python" style="color: inherit; text-decoration: inherit;">service_<wbr>to_<wbr>fork_<wbr>from</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="getserviceinfluxdbuserconfiginfluxdb">Get<wbr>Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Influxdb</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetServiceInfluxdbUserConfigInfluxdb">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceInfluxdbUserConfigInfluxdb">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceInfluxdbUserConfigInfluxdbArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceInfluxdbUserConfigInfluxdb">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetServiceInfluxdbUserConfigInfluxdbArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetServiceInfluxdbUserConfigInfluxdb.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logqueriesafter_csharp">
+<a href="#logqueriesafter_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Queries<wbr>After</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxrowlimit_csharp">
+<a href="#maxrowlimit_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Row<wbr>Limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxselectbuckets_csharp">
+<a href="#maxselectbuckets_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Select<wbr>Buckets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxselectpoint_csharp">
+<a href="#maxselectpoint_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Select<wbr>Point</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="querytimeout_csharp">
+<a href="#querytimeout_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logqueriesafter_go">
+<a href="#logqueriesafter_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Queries<wbr>After</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxrowlimit_go">
+<a href="#maxrowlimit_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Row<wbr>Limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxselectbuckets_go">
+<a href="#maxselectbuckets_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Select<wbr>Buckets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxselectpoint_go">
+<a href="#maxselectpoint_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Select<wbr>Point</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="querytimeout_go">
+<a href="#querytimeout_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logqueriesafter_nodejs">
+<a href="#logqueriesafter_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Queries<wbr>After</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxrowlimit_nodejs">
+<a href="#maxrowlimit_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Row<wbr>Limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxselectbuckets_nodejs">
+<a href="#maxselectbuckets_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Select<wbr>Buckets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxselectpoint_nodejs">
+<a href="#maxselectpoint_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Select<wbr>Point</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="querytimeout_nodejs">
+<a href="#querytimeout_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="log_queries_after_python">
+<a href="#log_queries_after_python" style="color: inherit; text-decoration: inherit;">log_<wbr>queries_<wbr>after</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_row_limit_python">
+<a href="#max_row_limit_python" style="color: inherit; text-decoration: inherit;">max_<wbr>row_<wbr>limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_select_buckets_python">
+<a href="#max_select_buckets_python" style="color: inherit; text-decoration: inherit;">max_<wbr>select_<wbr>buckets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_select_point_python">
+<a href="#max_select_point_python" style="color: inherit; text-decoration: inherit;">max_<wbr>select_<wbr>point</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="query_timeout_python">
+<a href="#query_timeout_python" style="color: inherit; text-decoration: inherit;">query_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17130,8 +17456,28 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="maxfilesperprocess_csharp">
+<a href="#maxfilesperprocess_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Files<wbr>Per<wbr>Process</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="maxlockspertransaction_csharp">
 <a href="#maxlockspertransaction_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Locks<wbr>Per<wbr>Transaction</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxlogicalreplicationworkers_csharp">
+<a href="#maxlogicalreplicationworkers_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Logical<wbr>Replication<wbr>Workers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -17180,6 +17526,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="maxreplicationslots_csharp">
+<a href="#maxreplicationslots_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Replication<wbr>Slots</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="maxstackdepth_csharp">
 <a href="#maxstackdepth_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Stack<wbr>Depth</a>
 </span> 
@@ -17202,6 +17558,16 @@ The following output properties are available:
             title="Optional">
         <span id="maxstandbystreamingdelay_csharp">
 <a href="#maxstandbystreamingdelay_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Standby<wbr>Streaming<wbr>Delay</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxwalsenders_csharp">
+<a href="#maxwalsenders_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Wal<wbr>Senders</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -17477,8 +17843,28 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="maxfilesperprocess_go">
+<a href="#maxfilesperprocess_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Files<wbr>Per<wbr>Process</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="maxlockspertransaction_go">
 <a href="#maxlockspertransaction_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Locks<wbr>Per<wbr>Transaction</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxlogicalreplicationworkers_go">
+<a href="#maxlogicalreplicationworkers_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Logical<wbr>Replication<wbr>Workers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -17527,6 +17913,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="maxreplicationslots_go">
+<a href="#maxreplicationslots_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Replication<wbr>Slots</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="maxstackdepth_go">
 <a href="#maxstackdepth_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Stack<wbr>Depth</a>
 </span> 
@@ -17549,6 +17945,16 @@ The following output properties are available:
             title="Optional">
         <span id="maxstandbystreamingdelay_go">
 <a href="#maxstandbystreamingdelay_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Standby<wbr>Streaming<wbr>Delay</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxwalsenders_go">
+<a href="#maxwalsenders_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Wal<wbr>Senders</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -17824,8 +18230,28 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="maxfilesperprocess_nodejs">
+<a href="#maxfilesperprocess_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Files<wbr>Per<wbr>Process</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="maxlockspertransaction_nodejs">
 <a href="#maxlockspertransaction_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Locks<wbr>Per<wbr>Transaction</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxlogicalreplicationworkers_nodejs">
+<a href="#maxlogicalreplicationworkers_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Logical<wbr>Replication<wbr>Workers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -17874,6 +18300,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="maxreplicationslots_nodejs">
+<a href="#maxreplicationslots_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Replication<wbr>Slots</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="maxstackdepth_nodejs">
 <a href="#maxstackdepth_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Stack<wbr>Depth</a>
 </span> 
@@ -17896,6 +18332,16 @@ The following output properties are available:
             title="Optional">
         <span id="maxstandbystreamingdelay_nodejs">
 <a href="#maxstandbystreamingdelay_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Standby<wbr>Streaming<wbr>Delay</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxwalsenders_nodejs">
+<a href="#maxwalsenders_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Wal<wbr>Senders</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -18171,8 +18617,28 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="max_files_per_process_python">
+<a href="#max_files_per_process_python" style="color: inherit; text-decoration: inherit;">max_<wbr>files_<wbr>per_<wbr>process</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="max_locks_per_transaction_python">
 <a href="#max_locks_per_transaction_python" style="color: inherit; text-decoration: inherit;">max_<wbr>locks_<wbr>per_<wbr>transaction</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_logical_replication_workers_python">
+<a href="#max_logical_replication_workers_python" style="color: inherit; text-decoration: inherit;">max_<wbr>logical_<wbr>replication_<wbr>workers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -18221,6 +18687,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="max_replication_slots_python">
+<a href="#max_replication_slots_python" style="color: inherit; text-decoration: inherit;">max_<wbr>replication_<wbr>slots</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="max_stack_depth_python">
 <a href="#max_stack_depth_python" style="color: inherit; text-decoration: inherit;">max_<wbr>stack_<wbr>depth</a>
 </span> 
@@ -18243,6 +18719,16 @@ The following output properties are available:
             title="Optional">
         <span id="max_standby_streaming_delay_python">
 <a href="#max_standby_streaming_delay_python" style="color: inherit; text-decoration: inherit;">max_<wbr>standby_<wbr>streaming_<wbr>delay</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_wal_senders_python">
+<a href="#max_wal_senders_python" style="color: inherit; text-decoration: inherit;">max_<wbr>wal_<wbr>senders</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

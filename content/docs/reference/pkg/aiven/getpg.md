@@ -4384,6 +4384,17 @@ milliseconds to run, -1 disables
 
     <dt class="property-optional"
             title="Optional">
+        <span id="maxfilesperprocess_csharp">
+<a href="#maxfilesperprocess_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Files<wbr>Per<wbr>Process</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}PostgreSQL maximum number of files that can be open per process
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="maxlockspertransaction_csharp">
 <a href="#maxlockspertransaction_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Locks<wbr>Per<wbr>Transaction</a>
 </span> 
@@ -4391,6 +4402,18 @@ milliseconds to run, -1 disables
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}PostgreSQL maximum locks per transaction
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxlogicalreplicationworkers_csharp">
+<a href="#maxlogicalreplicationworkers_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Logical<wbr>Replication<wbr>Workers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}PostgreSQL maximum logical replication workers 
+(taken from the pool of max_parallel_workers)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4441,6 +4464,17 @@ started by a single Gather or Gather Merge node.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="maxreplicationslots_csharp">
+<a href="#maxreplicationslots_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Replication<wbr>Slots</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}PostgreSQL maximum replication slots
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="maxstackdepth_csharp">
 <a href="#maxstackdepth_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Stack<wbr>Depth</a>
 </span> 
@@ -4470,6 +4504,17 @@ started by a single Gather or Gather Merge node.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Max standby streaming delay in milliseconds
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxwalsenders_csharp">
+<a href="#maxwalsenders_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Wal<wbr>Senders</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}PostgreSQL maximum WAL senders
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4796,6 +4841,17 @@ milliseconds to run, -1 disables
 
     <dt class="property-optional"
             title="Optional">
+        <span id="maxfilesperprocess_go">
+<a href="#maxfilesperprocess_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Files<wbr>Per<wbr>Process</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}PostgreSQL maximum number of files that can be open per process
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="maxlockspertransaction_go">
 <a href="#maxlockspertransaction_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Locks<wbr>Per<wbr>Transaction</a>
 </span> 
@@ -4803,6 +4859,18 @@ milliseconds to run, -1 disables
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}PostgreSQL maximum locks per transaction
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxlogicalreplicationworkers_go">
+<a href="#maxlogicalreplicationworkers_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Logical<wbr>Replication<wbr>Workers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}PostgreSQL maximum logical replication workers 
+(taken from the pool of max_parallel_workers)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4853,6 +4921,17 @@ started by a single Gather or Gather Merge node.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="maxreplicationslots_go">
+<a href="#maxreplicationslots_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Replication<wbr>Slots</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}PostgreSQL maximum replication slots
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="maxstackdepth_go">
 <a href="#maxstackdepth_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Stack<wbr>Depth</a>
 </span> 
@@ -4882,6 +4961,17 @@ started by a single Gather or Gather Merge node.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Max standby streaming delay in milliseconds
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxwalsenders_go">
+<a href="#maxwalsenders_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Wal<wbr>Senders</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}PostgreSQL maximum WAL senders
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5208,6 +5298,17 @@ milliseconds to run, -1 disables
 
     <dt class="property-optional"
             title="Optional">
+        <span id="maxfilesperprocess_nodejs">
+<a href="#maxfilesperprocess_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Files<wbr>Per<wbr>Process</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}PostgreSQL maximum number of files that can be open per process
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="maxlockspertransaction_nodejs">
 <a href="#maxlockspertransaction_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Locks<wbr>Per<wbr>Transaction</a>
 </span> 
@@ -5215,6 +5316,18 @@ milliseconds to run, -1 disables
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}PostgreSQL maximum locks per transaction
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxlogicalreplicationworkers_nodejs">
+<a href="#maxlogicalreplicationworkers_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Logical<wbr>Replication<wbr>Workers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}PostgreSQL maximum logical replication workers 
+(taken from the pool of max_parallel_workers)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5265,6 +5378,17 @@ started by a single Gather or Gather Merge node.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="maxreplicationslots_nodejs">
+<a href="#maxreplicationslots_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Replication<wbr>Slots</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}PostgreSQL maximum replication slots
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="maxstackdepth_nodejs">
 <a href="#maxstackdepth_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Stack<wbr>Depth</a>
 </span> 
@@ -5294,6 +5418,17 @@ started by a single Gather or Gather Merge node.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Max standby streaming delay in milliseconds
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxwalsenders_nodejs">
+<a href="#maxwalsenders_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Wal<wbr>Senders</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}PostgreSQL maximum WAL senders
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5620,6 +5755,17 @@ milliseconds to run, -1 disables
 
     <dt class="property-optional"
             title="Optional">
+        <span id="max_files_per_process_python">
+<a href="#max_files_per_process_python" style="color: inherit; text-decoration: inherit;">max_<wbr>files_<wbr>per_<wbr>process</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}PostgreSQL maximum number of files that can be open per process
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="max_locks_per_transaction_python">
 <a href="#max_locks_per_transaction_python" style="color: inherit; text-decoration: inherit;">max_<wbr>locks_<wbr>per_<wbr>transaction</a>
 </span> 
@@ -5627,6 +5773,18 @@ milliseconds to run, -1 disables
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}PostgreSQL maximum locks per transaction
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_logical_replication_workers_python">
+<a href="#max_logical_replication_workers_python" style="color: inherit; text-decoration: inherit;">max_<wbr>logical_<wbr>replication_<wbr>workers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}PostgreSQL maximum logical replication workers 
+(taken from the pool of max_parallel_workers)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5677,6 +5835,17 @@ started by a single Gather or Gather Merge node.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="max_replication_slots_python">
+<a href="#max_replication_slots_python" style="color: inherit; text-decoration: inherit;">max_<wbr>replication_<wbr>slots</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}PostgreSQL maximum replication slots
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="max_stack_depth_python">
 <a href="#max_stack_depth_python" style="color: inherit; text-decoration: inherit;">max_<wbr>stack_<wbr>depth</a>
 </span> 
@@ -5706,6 +5875,17 @@ started by a single Gather or Gather Merge node.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Max standby streaming delay in milliseconds
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_wal_senders_python">
+<a href="#max_wal_senders_python" style="color: inherit; text-decoration: inherit;">max_<wbr>wal_<wbr>senders</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}PostgreSQL maximum WAL senders
 {{% /md %}}</dd>
 
     <dt class="property-optional"
