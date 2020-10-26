@@ -25,11 +25,11 @@ Creates a table resource in a dataset for Google BigQuery. For more information 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/bigquery/#pulumi_gcp.bigquery.Table">Table</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">clusterings</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">dataset_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_configuration</span><span class="p">:</span> <span class="nx">Optional[TableEncryptionConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">expiration_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">external_data_configuration</span><span class="p">:</span> <span class="nx">Optional[TableExternalDataConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">range_partitioning</span><span class="p">:</span> <span class="nx">Optional[TableRangePartitioningArgs]</span> = None<span class="p">, </span><span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">table_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_partitioning</span><span class="p">:</span> <span class="nx">Optional[TableTimePartitioningArgs]</span> = None<span class="p">, </span><span class="nx">view</span><span class="p">:</span> <span class="nx">Optional[TableViewArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/bigquery/#pulumi_gcp.bigquery.Table">Table</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">clusterings</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">dataset_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_configuration</span><span class="p">:</span> <span class="nx">Optional[TableEncryptionConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">expiration_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">external_data_configuration</span><span class="p">:</span> <span class="nx">Optional[TableExternalDataConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">materialized_view</span><span class="p">:</span> <span class="nx">Optional[TableMaterializedViewArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">range_partitioning</span><span class="p">:</span> <span class="nx">Optional[TableRangePartitioningArgs]</span> = None<span class="p">, </span><span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">table_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_partitioning</span><span class="p">:</span> <span class="nx">Optional[TableTimePartitioningArgs]</span> = None<span class="p">, </span><span class="nx">view</span><span class="p">:</span> <span class="nx">Optional[TableViewArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#Table">NewTable</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#TableArgs">TableArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#Table">Table</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery?tab=doc#Table">NewTable</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery?tab=doc#TableArgs">TableArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery?tab=doc#Table">Table</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -103,7 +103,7 @@ Creates a table resource in a dataset for Google BigQuery. For more information 
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -123,7 +123,7 @@ Creates a table resource in a dataset for Google BigQuery. For more information 
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#TableArgs">TableArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery?tab=doc#TableArgs">TableArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -133,7 +133,7 @@ Creates a table resource in a dataset for Google BigQuery. For more information 
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -306,6 +306,18 @@ if it were a standard BigQuery table. Structure is documented below.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of labels to assign to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="materializedview_csharp">
+<a href="#materializedview_csharp" style="color: inherit; text-decoration: inherit;">Materialized<wbr>View</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tablematerializedview">Table<wbr>Materialized<wbr>View<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}If specified, configures this table as a materialized view.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -497,6 +509,18 @@ if it were a standard BigQuery table. Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="materializedview_go">
+<a href="#materializedview_go" style="color: inherit; text-decoration: inherit;">Materialized<wbr>View</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tablematerializedview">Table<wbr>Materialized<wbr>View</a></span>
+    </dt>
+    <dd>{{% md %}}If specified, configures this table as a materialized view.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span> 
@@ -684,6 +708,18 @@ if it were a standard BigQuery table. Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="materializedview_nodejs">
+<a href="#materializedview_nodejs" style="color: inherit; text-decoration: inherit;">materialized<wbr>View</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tablematerializedview">Table<wbr>Materialized<wbr>View</a></span>
+    </dt>
+    <dd>{{% md %}}If specified, configures this table as a materialized view.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span> 
@@ -867,6 +903,18 @@ if it were a standard BigQuery table. Structure is documented below.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of labels to assign to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="materialized_view_python">
+<a href="#materialized_view_python" style="color: inherit; text-decoration: inherit;">materialized_<wbr>view</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tablematerializedview">Table<wbr>Materialized<wbr>View<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}If specified, configures this table as a materialized view.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1062,8 +1110,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The only type supported is DAY, which will generate
-one partition per day based on data loading time.
+    <dd>{{% md %}}The supported types are DAY, HOUR, MONTH, and YEAR,
+which will generate one partition per day, hour, month, and year, respectively.
 {{% /md %}}</dd>
 
 </dl>
@@ -1179,8 +1227,8 @@ one partition per day based on data loading time.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The only type supported is DAY, which will generate
-one partition per day based on data loading time.
+    <dd>{{% md %}}The supported types are DAY, HOUR, MONTH, and YEAR,
+which will generate one partition per day, hour, month, and year, respectively.
 {{% /md %}}</dd>
 
 </dl>
@@ -1296,8 +1344,8 @@ one partition per day based on data loading time.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The only type supported is DAY, which will generate
-one partition per day based on data loading time.
+    <dd>{{% md %}}The supported types are DAY, HOUR, MONTH, and YEAR,
+which will generate one partition per day, hour, month, and year, respectively.
 {{% /md %}}</dd>
 
 </dl>
@@ -1413,8 +1461,8 @@ one partition per day based on data loading time.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The only type supported is DAY, which will generate
-one partition per day based on data loading time.
+    <dd>{{% md %}}The supported types are DAY, HOUR, MONTH, and YEAR,
+which will generate one partition per day, hour, month, and year, respectively.
 {{% /md %}}</dd>
 
 </dl>
@@ -1437,11 +1485,11 @@ Get an existing Table resource's state with the given name, ID, and optional ext
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">clusterings</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">creation_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">dataset_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_configuration</span><span class="p">:</span> <span class="nx">Optional[TableEncryptionConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">external_data_configuration</span><span class="p">:</span> <span class="nx">Optional[TableExternalDataConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">last_modified_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">num_bytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">num_long_term_bytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">num_rows</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">range_partitioning</span><span class="p">:</span> <span class="nx">Optional[TableRangePartitioningArgs]</span> = None<span class="p">, </span><span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">table_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_partitioning</span><span class="p">:</span> <span class="nx">Optional[TableTimePartitioningArgs]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">view</span><span class="p">:</span> <span class="nx">Optional[TableViewArgs]</span> = None<span class="p">) -&gt;</span> Table</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">clusterings</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">creation_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">dataset_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_configuration</span><span class="p">:</span> <span class="nx">Optional[TableEncryptionConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">external_data_configuration</span><span class="p">:</span> <span class="nx">Optional[TableExternalDataConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">last_modified_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">materialized_view</span><span class="p">:</span> <span class="nx">Optional[TableMaterializedViewArgs]</span> = None<span class="p">, </span><span class="nx">num_bytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">num_long_term_bytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">num_rows</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">range_partitioning</span><span class="p">:</span> <span class="nx">Optional[TableRangePartitioningArgs]</span> = None<span class="p">, </span><span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">table_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_partitioning</span><span class="p">:</span> <span class="nx">Optional[TableTimePartitioningArgs]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">view</span><span class="p">:</span> <span class="nx">Optional[TableViewArgs]</span> = None<span class="p">) -&gt;</span> Table</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTable<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#TableState">TableState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#Table">Table</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTable<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery?tab=doc#TableState">TableState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery?tab=doc#Table">Table</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1696,6 +1744,18 @@ if it were a standard BigQuery table. Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_materializedview_csharp">
+<a href="#state_materializedview_csharp" style="color: inherit; text-decoration: inherit;">Materialized<wbr>View</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tablematerializedview">Table<wbr>Materialized<wbr>View<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}If specified, configures this table as a materialized view.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_numbytes_csharp">
 <a href="#state_numbytes_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Bytes</a>
 </span> 
@@ -1815,8 +1875,8 @@ partitioning for this table. Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The only type supported is DAY, which will generate
-one partition per day based on data loading time.
+    <dd>{{% md %}}The supported types are DAY, HOUR, MONTH, and YEAR,
+which will generate one partition per day, hour, month, and year, respectively.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1983,6 +2043,18 @@ if it were a standard BigQuery table. Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_materializedview_go">
+<a href="#state_materializedview_go" style="color: inherit; text-decoration: inherit;">Materialized<wbr>View</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tablematerializedview">Table<wbr>Materialized<wbr>View</a></span>
+    </dt>
+    <dd>{{% md %}}If specified, configures this table as a materialized view.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_numbytes_go">
 <a href="#state_numbytes_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Bytes</a>
 </span> 
@@ -2102,8 +2174,8 @@ partitioning for this table. Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The only type supported is DAY, which will generate
-one partition per day based on data loading time.
+    <dd>{{% md %}}The supported types are DAY, HOUR, MONTH, and YEAR,
+which will generate one partition per day, hour, month, and year, respectively.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2270,6 +2342,18 @@ if it were a standard BigQuery table. Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_materializedview_nodejs">
+<a href="#state_materializedview_nodejs" style="color: inherit; text-decoration: inherit;">materialized<wbr>View</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tablematerializedview">Table<wbr>Materialized<wbr>View</a></span>
+    </dt>
+    <dd>{{% md %}}If specified, configures this table as a materialized view.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_numbytes_nodejs">
 <a href="#state_numbytes_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Bytes</a>
 </span> 
@@ -2389,8 +2473,8 @@ partitioning for this table. Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The only type supported is DAY, which will generate
-one partition per day based on data loading time.
+    <dd>{{% md %}}The supported types are DAY, HOUR, MONTH, and YEAR,
+which will generate one partition per day, hour, month, and year, respectively.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2557,6 +2641,18 @@ if it were a standard BigQuery table. Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_materialized_view_python">
+<a href="#state_materialized_view_python" style="color: inherit; text-decoration: inherit;">materialized_<wbr>view</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tablematerializedview">Table<wbr>Materialized<wbr>View<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}If specified, configures this table as a materialized view.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_num_bytes_python">
 <a href="#state_num_bytes_python" style="color: inherit; text-decoration: inherit;">num_<wbr>bytes</a>
 </span> 
@@ -2676,8 +2772,8 @@ partitioning for this table. Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The only type supported is DAY, which will generate
-one partition per day based on data loading time.
+    <dd>{{% md %}}The supported types are DAY, HOUR, MONTH, and YEAR,
+which will generate one partition per day, hour, month, and year, respectively.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2713,7 +2809,7 @@ Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#TableEncryptionConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#TableEncryptionConfigurationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery?tab=doc#TableEncryptionConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery?tab=doc#TableEncryptionConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.TableEncryptionConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.TableEncryptionConfiguration.html">output</a> API doc for this type.
@@ -2819,7 +2915,7 @@ encrypt/decrypt permissions on this key - you may want to see the
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#TableExternalDataConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#TableExternalDataConfigurationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery?tab=doc#TableExternalDataConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery?tab=doc#TableExternalDataConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.TableExternalDataConfiguration.html">output</a> API doc for this type.
@@ -3421,7 +3517,7 @@ datasource, after creation the computed schema will be stored in
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#TableExternalDataConfigurationCsvOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#TableExternalDataConfigurationCsvOptionsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery?tab=doc#TableExternalDataConfigurationCsvOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery?tab=doc#TableExternalDataConfigurationCsvOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationCsvOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.TableExternalDataConfigurationCsvOptions.html">output</a> API doc for this type.
@@ -3779,7 +3875,7 @@ that BigQuery will skip when reading the data. At least one of `range` or
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#TableExternalDataConfigurationGoogleSheetsOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#TableExternalDataConfigurationGoogleSheetsOptionsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery?tab=doc#TableExternalDataConfigurationGoogleSheetsOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery?tab=doc#TableExternalDataConfigurationGoogleSheetsOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationGoogleSheetsOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.TableExternalDataConfigurationGoogleSheetsOptions.html">output</a> API doc for this type.
@@ -3925,7 +4021,7 @@ that BigQuery will skip when reading the data. At least one of `range` or
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#TableExternalDataConfigurationHivePartitioningOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#TableExternalDataConfigurationHivePartitioningOptionsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery?tab=doc#TableExternalDataConfigurationHivePartitioningOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery?tab=doc#TableExternalDataConfigurationHivePartitioningOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationHivePartitioningOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.TableExternalDataConfigurationHivePartitioningOptions.html">output</a> API doc for this type.
@@ -4109,13 +4205,199 @@ Note that when `mode` is set to `CUSTOM`, you must encode the partition key sche
 
 
 
+<h4 id="tablematerializedview">Table<wbr>Materialized<wbr>View</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TableMaterializedView">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TableMaterializedView">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery?tab=doc#TableMaterializedViewArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery?tab=doc#TableMaterializedViewOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.TableMaterializedViewArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.TableMaterializedView.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="query_csharp">
+<a href="#query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A query whose result is persisted.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablerefresh_csharp">
+<a href="#enablerefresh_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Refresh</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to use BigQuery's automatic refresh for this materialized view when the base table is updated.
+The default value is true.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="refreshintervalms_csharp">
+<a href="#refreshintervalms_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Interval<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum frequency at which this materialized view will be refreshed.
+The default value is 1800000
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="query_go">
+<a href="#query_go" style="color: inherit; text-decoration: inherit;">Query</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A query whose result is persisted.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablerefresh_go">
+<a href="#enablerefresh_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Refresh</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to use BigQuery's automatic refresh for this materialized view when the base table is updated.
+The default value is true.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="refreshintervalms_go">
+<a href="#refreshintervalms_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Interval<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum frequency at which this materialized view will be refreshed.
+The default value is 1800000
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="query_nodejs">
+<a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A query whose result is persisted.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablerefresh_nodejs">
+<a href="#enablerefresh_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Refresh</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to use BigQuery's automatic refresh for this materialized view when the base table is updated.
+The default value is true.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="refreshintervalms_nodejs">
+<a href="#refreshintervalms_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Interval<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum frequency at which this materialized view will be refreshed.
+The default value is 1800000
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="query_python">
+<a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A query whose result is persisted.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_refresh_python">
+<a href="#enable_refresh_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>refresh</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to use BigQuery's automatic refresh for this materialized view when the base table is updated.
+The default value is true.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="refresh_interval_ms_python">
+<a href="#refresh_interval_ms_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>interval_<wbr>ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum frequency at which this materialized view will be refreshed.
+The default value is 1800000
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="tablerangepartitioning">Table<wbr>Range<wbr>Partitioning</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TableRangePartitioning">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TableRangePartitioning">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#TableRangePartitioningArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#TableRangePartitioningOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery?tab=doc#TableRangePartitioningArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery?tab=doc#TableRangePartitioningOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.TableRangePartitioningArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.TableRangePartitioning.html">output</a> API doc for this type.
@@ -4257,7 +4539,7 @@ Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#TableRangePartitioningRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#TableRangePartitioningRangeOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery?tab=doc#TableRangePartitioningRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery?tab=doc#TableRangePartitioningRangeOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.TableRangePartitioningRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.TableRangePartitioningRange.html">output</a> API doc for this type.
@@ -4435,7 +4717,7 @@ Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#TableTimePartitioningArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#TableTimePartitioningOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery?tab=doc#TableTimePartitioningArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery?tab=doc#TableTimePartitioningOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.TableTimePartitioningArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.TableTimePartitioning.html">output</a> API doc for this type.
@@ -4455,8 +4737,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The only type supported is DAY, which will generate
-one partition per day based on data loading time.
+    <dd>{{% md %}}The supported types are DAY, HOUR, MONTH, and YEAR,
+which will generate one partition per day, hour, month, and year, respectively.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4511,8 +4793,8 @@ specified.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The only type supported is DAY, which will generate
-one partition per day based on data loading time.
+    <dd>{{% md %}}The supported types are DAY, HOUR, MONTH, and YEAR,
+which will generate one partition per day, hour, month, and year, respectively.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4567,8 +4849,8 @@ specified.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The only type supported is DAY, which will generate
-one partition per day based on data loading time.
+    <dd>{{% md %}}The supported types are DAY, HOUR, MONTH, and YEAR,
+which will generate one partition per day, hour, month, and year, respectively.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4623,8 +4905,8 @@ specified.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The only type supported is DAY, which will generate
-one partition per day based on data loading time.
+    <dd>{{% md %}}The supported types are DAY, HOUR, MONTH, and YEAR,
+which will generate one partition per day, hour, month, and year, respectively.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4677,7 +4959,7 @@ specified.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#TableViewArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#TableViewOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery?tab=doc#TableViewArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery?tab=doc#TableViewOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.TableViewArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.TableView.html">output</a> API doc for this type.
@@ -4697,7 +4979,7 @@ specified.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A query that BigQuery executes when the view is referenced.
+    <dd>{{% md %}}A query whose result is persisted.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4727,7 +5009,7 @@ The default value is true. If set to false, the view will use BigQuery's standar
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A query that BigQuery executes when the view is referenced.
+    <dd>{{% md %}}A query whose result is persisted.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4757,7 +5039,7 @@ The default value is true. If set to false, the view will use BigQuery's standar
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A query that BigQuery executes when the view is referenced.
+    <dd>{{% md %}}A query whose result is persisted.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4787,7 +5069,7 @@ The default value is true. If set to false, the view will use BigQuery's standar
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A query that BigQuery executes when the view is referenced.
+    <dd>{{% md %}}A query whose result is persisted.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

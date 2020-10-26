@@ -33,7 +33,7 @@ To get more information about Trigger, see:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#Trigger">NewTrigger</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerArgs">TriggerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#Trigger">Trigger</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudbuild?tab=doc#Trigger">NewTrigger</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudbuild?tab=doc#TriggerArgs">TriggerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudbuild?tab=doc#Trigger">Trigger</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -107,7 +107,7 @@ To get more information about Trigger, see:
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -127,7 +127,7 @@ To get more information about Trigger, see:
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerArgs">TriggerArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudbuild?tab=doc#TriggerArgs">TriggerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -137,7 +137,7 @@ To get more information about Trigger, see:
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1041,7 +1041,7 @@ Get an existing Trigger resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTrigger<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerState">TriggerState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#Trigger">Trigger</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTrigger<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudbuild?tab=doc#TriggerState">TriggerState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudbuild?tab=doc#Trigger">Trigger</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1909,7 +1909,7 @@ Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudbuild?tab=doc#TriggerBuildArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudbuild?tab=doc#TriggerBuildOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Inputs.TriggerBuildArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Outputs.TriggerBuild.html">output</a> API doc for this type.
@@ -2503,7 +2503,7 @@ completes or the build itself times out.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildArtifactsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildArtifactsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudbuild?tab=doc#TriggerBuildArtifactsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudbuild?tab=doc#TriggerBuildArtifactsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Inputs.TriggerBuildArtifactsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Outputs.TriggerBuildArtifacts.html">output</a> API doc for this type.
@@ -2669,7 +2669,7 @@ Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildArtifactsObjectsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildArtifactsObjectsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudbuild?tab=doc#TriggerBuildArtifactsObjectsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudbuild?tab=doc#TriggerBuildArtifactsObjectsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Inputs.TriggerBuildArtifactsObjectsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Outputs.TriggerBuildArtifactsObjects.html">output</a> API doc for this type.
@@ -2707,11 +2707,11 @@ this location as a prefix.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timing_csharp">
-<a href="#timing_csharp" style="color: inherit; text-decoration: inherit;">Timing</a>
+        <span id="timings_csharp">
+<a href="#timings_csharp" style="color: inherit; text-decoration: inherit;">Timings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildartifactsobjectstiming">Trigger<wbr>Build<wbr>Artifacts<wbr>Objects<wbr>Timing<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerbuildartifactsobjectstiming">List&lt;Trigger<wbr>Build<wbr>Artifacts<wbr>Objects<wbr>Timing<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}-
 Output only. Stores timing information for pushing all artifact objects.
@@ -2751,11 +2751,11 @@ this location as a prefix.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timing_go">
-<a href="#timing_go" style="color: inherit; text-decoration: inherit;">Timing</a>
+        <span id="timings_go">
+<a href="#timings_go" style="color: inherit; text-decoration: inherit;">Timings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildartifactsobjectstiming">Trigger<wbr>Build<wbr>Artifacts<wbr>Objects<wbr>Timing</a></span>
+        <span class="property-type"><a href="#triggerbuildartifactsobjectstiming">[]Trigger<wbr>Build<wbr>Artifacts<wbr>Objects<wbr>Timing</a></span>
     </dt>
     <dd>{{% md %}}-
 Output only. Stores timing information for pushing all artifact objects.
@@ -2795,11 +2795,11 @@ this location as a prefix.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timing_nodejs">
-<a href="#timing_nodejs" style="color: inherit; text-decoration: inherit;">timing</a>
+        <span id="timings_nodejs">
+<a href="#timings_nodejs" style="color: inherit; text-decoration: inherit;">timings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildartifactsobjectstiming">Trigger<wbr>Build<wbr>Artifacts<wbr>Objects<wbr>Timing</a></span>
+        <span class="property-type"><a href="#triggerbuildartifactsobjectstiming">Trigger<wbr>Build<wbr>Artifacts<wbr>Objects<wbr>Timing[]</a></span>
     </dt>
     <dd>{{% md %}}-
 Output only. Stores timing information for pushing all artifact objects.
@@ -2839,11 +2839,11 @@ this location as a prefix.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timing_python">
-<a href="#timing_python" style="color: inherit; text-decoration: inherit;">timing</a>
+        <span id="timings_python">
+<a href="#timings_python" style="color: inherit; text-decoration: inherit;">timings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildartifactsobjectstiming">Trigger<wbr>Build<wbr>Artifacts<wbr>Objects<wbr>Timing<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerbuildartifactsobjectstiming">Sequence[Trigger<wbr>Build<wbr>Artifacts<wbr>Objects<wbr>Timing<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}-
 Output only. Stores timing information for pushing all artifact objects.
@@ -2863,7 +2863,7 @@ Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildArtifactsObjectsTimingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildArtifactsObjectsTimingOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudbuild?tab=doc#TriggerBuildArtifactsObjectsTimingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudbuild?tab=doc#TriggerBuildArtifactsObjectsTimingOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Inputs.TriggerBuildArtifactsObjectsTimingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Outputs.TriggerBuildArtifactsObjectsTiming.html">output</a> API doc for this type.
@@ -3013,7 +3013,7 @@ nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:2
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildOptionsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudbuild?tab=doc#TriggerBuildOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudbuild?tab=doc#TriggerBuildOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Inputs.TriggerBuildOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Outputs.TriggerBuildOptions.html">output</a> API doc for this type.
@@ -3687,7 +3687,7 @@ This field is experimental.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildOptionsVolumeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildOptionsVolumeOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudbuild?tab=doc#TriggerBuildOptionsVolumeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudbuild?tab=doc#TriggerBuildOptionsVolumeOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Inputs.TriggerBuildOptionsVolumeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Outputs.TriggerBuildOptionsVolume.html">output</a> API doc for this type.
@@ -3837,7 +3837,7 @@ build step or with certain reserved volume paths.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildSecretArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildSecretOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudbuild?tab=doc#TriggerBuildSecretArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudbuild?tab=doc#TriggerBuildSecretOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Inputs.TriggerBuildSecretArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Outputs.TriggerBuildSecret.html">output</a> API doc for this type.
@@ -3979,7 +3979,7 @@ will be available to all build steps in this build.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildSourceOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudbuild?tab=doc#TriggerBuildSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudbuild?tab=doc#TriggerBuildSourceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Inputs.TriggerBuildSourceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Outputs.TriggerBuildSource.html">output</a> API doc for this type.
@@ -4121,7 +4121,7 @@ Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildSourceRepoSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildSourceRepoSourceOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudbuild?tab=doc#TriggerBuildSourceRepoSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudbuild?tab=doc#TriggerBuildSourceRepoSourceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Inputs.TriggerBuildSourceRepoSourceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Outputs.TriggerBuildSourceRepoSource.html">output</a> API doc for this type.
@@ -4571,7 +4571,7 @@ described at https://github.com/google/re2/wiki/Syntax
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildSourceStorageSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildSourceStorageSourceOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudbuild?tab=doc#TriggerBuildSourceStorageSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudbuild?tab=doc#TriggerBuildSourceStorageSourceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Inputs.TriggerBuildSourceStorageSourceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Outputs.TriggerBuildSourceStorageSource.html">output</a> API doc for this type.
@@ -4757,7 +4757,7 @@ If the generation is omitted, the latest generation will be used
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildStepArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildStepOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudbuild?tab=doc#TriggerBuildStepArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudbuild?tab=doc#TriggerBuildStepOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Inputs.TriggerBuildStepArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Outputs.TriggerBuildStep.html">output</a> API doc for this type.
@@ -5435,7 +5435,7 @@ have completed successfully.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildStepVolumeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildStepVolumeOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudbuild?tab=doc#TriggerBuildStepVolumeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudbuild?tab=doc#TriggerBuildStepVolumeOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Inputs.TriggerBuildStepVolumeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Outputs.TriggerBuildStepVolume.html">output</a> API doc for this type.
@@ -5585,7 +5585,7 @@ build step or with certain reserved volume paths.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerGithubArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerGithubOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudbuild?tab=doc#TriggerGithubArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudbuild?tab=doc#TriggerGithubOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Inputs.TriggerGithubArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Outputs.TriggerGithub.html">output</a> API doc for this type.
@@ -5827,7 +5827,7 @@ Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerGithubPullRequestArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerGithubPullRequestOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudbuild?tab=doc#TriggerGithubPullRequestArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudbuild?tab=doc#TriggerGithubPullRequestOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Inputs.TriggerGithubPullRequestArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Outputs.TriggerGithubPullRequest.html">output</a> API doc for this type.
@@ -5859,7 +5859,7 @@ Structure is documented below.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Whether to block builds on a "/gcbrun" comment from a repository owner or collaborator.
-Possible values are `COMMENTS_DISABLED` and `COMMENTS_ENABLED`.
+Possible values are `COMMENTS_DISABLED`, `COMMENTS_ENABLED`, and `COMMENTS_ENABLED_FOR_EXTERNAL_CONTRIBUTORS_ONLY`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5900,7 +5900,7 @@ Possible values are `COMMENTS_DISABLED` and `COMMENTS_ENABLED`.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Whether to block builds on a "/gcbrun" comment from a repository owner or collaborator.
-Possible values are `COMMENTS_DISABLED` and `COMMENTS_ENABLED`.
+Possible values are `COMMENTS_DISABLED`, `COMMENTS_ENABLED`, and `COMMENTS_ENABLED_FOR_EXTERNAL_CONTRIBUTORS_ONLY`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5941,7 +5941,7 @@ Possible values are `COMMENTS_DISABLED` and `COMMENTS_ENABLED`.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Whether to block builds on a "/gcbrun" comment from a repository owner or collaborator.
-Possible values are `COMMENTS_DISABLED` and `COMMENTS_ENABLED`.
+Possible values are `COMMENTS_DISABLED`, `COMMENTS_ENABLED`, and `COMMENTS_ENABLED_FOR_EXTERNAL_CONTRIBUTORS_ONLY`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5982,7 +5982,7 @@ Possible values are `COMMENTS_DISABLED` and `COMMENTS_ENABLED`.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Whether to block builds on a "/gcbrun" comment from a repository owner or collaborator.
-Possible values are `COMMENTS_DISABLED` and `COMMENTS_ENABLED`.
+Possible values are `COMMENTS_DISABLED`, `COMMENTS_ENABLED`, and `COMMENTS_ENABLED_FOR_EXTERNAL_CONTRIBUTORS_ONLY`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6009,7 +6009,7 @@ Possible values are `COMMENTS_DISABLED` and `COMMENTS_ENABLED`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerGithubPushArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerGithubPushOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudbuild?tab=doc#TriggerGithubPushArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudbuild?tab=doc#TriggerGithubPushOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Inputs.TriggerGithubPushArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Outputs.TriggerGithubPush.html">output</a> API doc for this type.
@@ -6187,7 +6187,7 @@ Possible values are `COMMENTS_DISABLED` and `COMMENTS_ENABLED`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerTriggerTemplateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerTriggerTemplateOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudbuild?tab=doc#TriggerTriggerTemplateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudbuild?tab=doc#TriggerTriggerTemplateOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Inputs.TriggerTriggerTemplateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Outputs.TriggerTriggerTemplate.html">output</a> API doc for this type.

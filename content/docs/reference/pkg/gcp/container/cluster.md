@@ -29,11 +29,11 @@ plaintext. [Read more about secrets in state](https://www.pulumi.com/docs/intro/
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/container/#pulumi_gcp.container.Cluster">Cluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addons_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAddonsConfigArgs]</span> = None<span class="p">, </span><span class="nx">authenticator_groups_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAuthenticatorGroupsConfigArgs]</span> = None<span class="p">, </span><span class="nx">cluster_autoscaling</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterAutoscalingArgs]</span> = None<span class="p">, </span><span class="nx">cluster_ipv4_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_telemetry</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterTelemetryArgs]</span> = None<span class="p">, </span><span class="nx">database_encryption</span><span class="p">:</span> <span class="nx">Optional[ClusterDatabaseEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">default_max_pods_per_node</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">default_snat_status</span><span class="p">:</span> <span class="nx">Optional[ClusterDefaultSnatStatusArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_binary_authorization</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_intranode_visibility</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_kubernetes_alpha</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_legacy_abac</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_shielded_nodes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_tpu</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">initial_node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ip_allocation_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterIpAllocationPolicyArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logging_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterMaintenancePolicyArgs]</span> = None<span class="p">, </span><span class="nx">master_auth</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterAuthArgs]</span> = None<span class="p">, </span><span class="nx">master_authorized_networks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterAuthorizedNetworksConfigArgs]</span> = None<span class="p">, </span><span class="nx">min_master_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitoring_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterNetworkPolicyArgs]</span> = None<span class="p">, </span><span class="nx">networking_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_config</span><span class="p">:</span> <span class="nx">Optional[ClusterNodeConfigArgs]</span> = None<span class="p">, </span><span class="nx">node_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">node_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterNodePoolArgs]]</span> = None<span class="p">, </span><span class="nx">node_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pod_security_policy_config</span><span class="p">:</span> <span class="nx">Optional[ClusterPodSecurityPolicyConfigArgs]</span> = None<span class="p">, </span><span class="nx">private_cluster_config</span><span class="p">:</span> <span class="nx">Optional[ClusterPrivateClusterConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">release_channel</span><span class="p">:</span> <span class="nx">Optional[ClusterReleaseChannelArgs]</span> = None<span class="p">, </span><span class="nx">remove_default_node_pool</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_usage_export_config</span><span class="p">:</span> <span class="nx">Optional[ClusterResourceUsageExportConfigArgs]</span> = None<span class="p">, </span><span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vertical_pod_autoscaling</span><span class="p">:</span> <span class="nx">Optional[ClusterVerticalPodAutoscalingArgs]</span> = None<span class="p">, </span><span class="nx">workload_identity_config</span><span class="p">:</span> <span class="nx">Optional[ClusterWorkloadIdentityConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/container/#pulumi_gcp.container.Cluster">Cluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addons_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAddonsConfigArgs]</span> = None<span class="p">, </span><span class="nx">authenticator_groups_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAuthenticatorGroupsConfigArgs]</span> = None<span class="p">, </span><span class="nx">cluster_autoscaling</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterAutoscalingArgs]</span> = None<span class="p">, </span><span class="nx">cluster_ipv4_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_telemetry</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterTelemetryArgs]</span> = None<span class="p">, </span><span class="nx">database_encryption</span><span class="p">:</span> <span class="nx">Optional[ClusterDatabaseEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">datapath_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_max_pods_per_node</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">default_snat_status</span><span class="p">:</span> <span class="nx">Optional[ClusterDefaultSnatStatusArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_binary_authorization</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_intranode_visibility</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_kubernetes_alpha</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_legacy_abac</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_shielded_nodes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_tpu</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">initial_node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ip_allocation_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterIpAllocationPolicyArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logging_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterMaintenancePolicyArgs]</span> = None<span class="p">, </span><span class="nx">master_auth</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterAuthArgs]</span> = None<span class="p">, </span><span class="nx">master_authorized_networks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterAuthorizedNetworksConfigArgs]</span> = None<span class="p">, </span><span class="nx">min_master_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitoring_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterNetworkPolicyArgs]</span> = None<span class="p">, </span><span class="nx">networking_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_config</span><span class="p">:</span> <span class="nx">Optional[ClusterNodeConfigArgs]</span> = None<span class="p">, </span><span class="nx">node_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">node_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterNodePoolArgs]]</span> = None<span class="p">, </span><span class="nx">node_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_config</span><span class="p">:</span> <span class="nx">Optional[ClusterNotificationConfigArgs]</span> = None<span class="p">, </span><span class="nx">pod_security_policy_config</span><span class="p">:</span> <span class="nx">Optional[ClusterPodSecurityPolicyConfigArgs]</span> = None<span class="p">, </span><span class="nx">private_cluster_config</span><span class="p">:</span> <span class="nx">Optional[ClusterPrivateClusterConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">release_channel</span><span class="p">:</span> <span class="nx">Optional[ClusterReleaseChannelArgs]</span> = None<span class="p">, </span><span class="nx">remove_default_node_pool</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_usage_export_config</span><span class="p">:</span> <span class="nx">Optional[ClusterResourceUsageExportConfigArgs]</span> = None<span class="p">, </span><span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vertical_pod_autoscaling</span><span class="p">:</span> <span class="nx">Optional[ClusterVerticalPodAutoscalingArgs]</span> = None<span class="p">, </span><span class="nx">workload_identity_config</span><span class="p">:</span> <span class="nx">Optional[ClusterWorkloadIdentityConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#Cluster">NewCluster</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterArgs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#Cluster">Cluster</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#Cluster">NewCluster</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterArgs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#Cluster">Cluster</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -107,7 +107,7 @@ plaintext. [Read more about secrets in state](https://www.pulumi.com/docs/intro/
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -127,7 +127,7 @@ plaintext. [Read more about secrets in state](https://www.pulumi.com/docs/intro/
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterArgs">ClusterArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterArgs">ClusterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -137,7 +137,7 @@ plaintext. [Read more about secrets in state](https://www.pulumi.com/docs/intro/
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -277,6 +277,17 @@ Structure is documented below.
         <span class="property-type"><a href="#clusterdatabaseencryption">Cluster<wbr>Database<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datapathprovider_csharp">
+<a href="#datapathprovider_csharp" style="color: inherit; text-decoration: inherit;">Datapath<wbr>Provider</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -640,6 +651,17 @@ To update nodes in other node pools, use the `version` attribute on the node poo
 
     <dt class="property-optional"
             title="Optional">
+        <span id="notificationconfig_csharp">
+<a href="#notificationconfig_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusternotificationconfig">Cluster<wbr>Notification<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The notification config for sending cluster upgrade notifications
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="podsecuritypolicyconfig_csharp">
 <a href="#podsecuritypolicyconfig_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Security<wbr>Policy<wbr>Config</a>
 </span> 
@@ -689,8 +711,8 @@ When updating this field, GKE imposes specific version requirements. See
 [Migrating between release channels](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels#migrating_between_release_channels)
 for more details; the `gcp.container.getEngineVersions` datasource can provide
 the default version for a channel. Note that removing the `release_channel`
-field from your config will cause this provider to stop managing your cluster's
-release channel, but will not unenroll it. Instead, use the `"UNSPECIFIED"`
+field from your config will cause the provider to stop managing your cluster's
+release channel, but will not un-enroll it. Instead, use the `"UNSPECIFIED"`
 channel. Structure is documented below.
 {{% /md %}}</dd>
 
@@ -852,6 +874,17 @@ Structure is documented below.
         <span class="property-type"><a href="#clusterdatabaseencryption">Cluster<wbr>Database<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datapathprovider_go">
+<a href="#datapathprovider_go" style="color: inherit; text-decoration: inherit;">Datapath<wbr>Provider</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1215,6 +1248,17 @@ To update nodes in other node pools, use the `version` attribute on the node poo
 
     <dt class="property-optional"
             title="Optional">
+        <span id="notificationconfig_go">
+<a href="#notificationconfig_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusternotificationconfig">Cluster<wbr>Notification<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The notification config for sending cluster upgrade notifications
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="podsecuritypolicyconfig_go">
 <a href="#podsecuritypolicyconfig_go" style="color: inherit; text-decoration: inherit;">Pod<wbr>Security<wbr>Policy<wbr>Config</a>
 </span> 
@@ -1264,8 +1308,8 @@ When updating this field, GKE imposes specific version requirements. See
 [Migrating between release channels](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels#migrating_between_release_channels)
 for more details; the `gcp.container.getEngineVersions` datasource can provide
 the default version for a channel. Note that removing the `release_channel`
-field from your config will cause this provider to stop managing your cluster's
-release channel, but will not unenroll it. Instead, use the `"UNSPECIFIED"`
+field from your config will cause the provider to stop managing your cluster's
+release channel, but will not un-enroll it. Instead, use the `"UNSPECIFIED"`
 channel. Structure is documented below.
 {{% /md %}}</dd>
 
@@ -1427,6 +1471,17 @@ Structure is documented below.
         <span class="property-type"><a href="#clusterdatabaseencryption">Cluster<wbr>Database<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datapathprovider_nodejs">
+<a href="#datapathprovider_nodejs" style="color: inherit; text-decoration: inherit;">datapath<wbr>Provider</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1790,6 +1845,17 @@ To update nodes in other node pools, use the `version` attribute on the node poo
 
     <dt class="property-optional"
             title="Optional">
+        <span id="notificationconfig_nodejs">
+<a href="#notificationconfig_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusternotificationconfig">Cluster<wbr>Notification<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The notification config for sending cluster upgrade notifications
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="podsecuritypolicyconfig_nodejs">
 <a href="#podsecuritypolicyconfig_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Security<wbr>Policy<wbr>Config</a>
 </span> 
@@ -1839,8 +1905,8 @@ When updating this field, GKE imposes specific version requirements. See
 [Migrating between release channels](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels#migrating_between_release_channels)
 for more details; the `gcp.container.getEngineVersions` datasource can provide
 the default version for a channel. Note that removing the `release_channel`
-field from your config will cause this provider to stop managing your cluster's
-release channel, but will not unenroll it. Instead, use the `"UNSPECIFIED"`
+field from your config will cause the provider to stop managing your cluster's
+release channel, but will not un-enroll it. Instead, use the `"UNSPECIFIED"`
 channel. Structure is documented below.
 {{% /md %}}</dd>
 
@@ -2002,6 +2068,17 @@ Structure is documented below.
         <span class="property-type"><a href="#clusterdatabaseencryption">Cluster<wbr>Database<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datapath_provider_python">
+<a href="#datapath_provider_python" style="color: inherit; text-decoration: inherit;">datapath_<wbr>provider</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2365,6 +2442,17 @@ To update nodes in other node pools, use the `version` attribute on the node poo
 
     <dt class="property-optional"
             title="Optional">
+        <span id="notification_config_python">
+<a href="#notification_config_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusternotificationconfig">Cluster<wbr>Notification<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The notification config for sending cluster upgrade notifications
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="pod_security_policy_config_python">
 <a href="#pod_security_policy_config_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>security_<wbr>policy_<wbr>config</a>
 </span> 
@@ -2414,8 +2502,8 @@ When updating this field, GKE imposes specific version requirements. See
 [Migrating between release channels](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels#migrating_between_release_channels)
 for more details; the `gcp.container.getEngineVersions` datasource can provide
 the default version for a channel. Note that removing the `release_channel`
-field from your config will cause this provider to stop managing your cluster's
-release channel, but will not unenroll it. Instead, use the `"UNSPECIFIED"`
+field from your config will cause the provider to stop managing your cluster's
+release channel, but will not un-enroll it. Instead, use the `"UNSPECIFIED"`
 channel. Structure is documented below.
 {{% /md %}}</dd>
 
@@ -2973,11 +3061,11 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addons_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAddonsConfigArgs]</span> = None<span class="p">, </span><span class="nx">authenticator_groups_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAuthenticatorGroupsConfigArgs]</span> = None<span class="p">, </span><span class="nx">cluster_autoscaling</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterAutoscalingArgs]</span> = None<span class="p">, </span><span class="nx">cluster_ipv4_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_telemetry</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterTelemetryArgs]</span> = None<span class="p">, </span><span class="nx">database_encryption</span><span class="p">:</span> <span class="nx">Optional[ClusterDatabaseEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">default_max_pods_per_node</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">default_snat_status</span><span class="p">:</span> <span class="nx">Optional[ClusterDefaultSnatStatusArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_binary_authorization</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_intranode_visibility</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_kubernetes_alpha</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_legacy_abac</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_shielded_nodes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_tpu</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initial_node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">instance_group_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">ip_allocation_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterIpAllocationPolicyArgs]</span> = None<span class="p">, </span><span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logging_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterMaintenancePolicyArgs]</span> = None<span class="p">, </span><span class="nx">master_auth</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterAuthArgs]</span> = None<span class="p">, </span><span class="nx">master_authorized_networks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterAuthorizedNetworksConfigArgs]</span> = None<span class="p">, </span><span class="nx">master_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">min_master_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitoring_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterNetworkPolicyArgs]</span> = None<span class="p">, </span><span class="nx">networking_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_config</span><span class="p">:</span> <span class="nx">Optional[ClusterNodeConfigArgs]</span> = None<span class="p">, </span><span class="nx">node_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">node_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterNodePoolArgs]]</span> = None<span class="p">, </span><span class="nx">node_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pod_security_policy_config</span><span class="p">:</span> <span class="nx">Optional[ClusterPodSecurityPolicyConfigArgs]</span> = None<span class="p">, </span><span class="nx">private_cluster_config</span><span class="p">:</span> <span class="nx">Optional[ClusterPrivateClusterConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">release_channel</span><span class="p">:</span> <span class="nx">Optional[ClusterReleaseChannelArgs]</span> = None<span class="p">, </span><span class="nx">remove_default_node_pool</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_usage_export_config</span><span class="p">:</span> <span class="nx">Optional[ClusterResourceUsageExportConfigArgs]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">services_ipv4_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tpu_ipv4_cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vertical_pod_autoscaling</span><span class="p">:</span> <span class="nx">Optional[ClusterVerticalPodAutoscalingArgs]</span> = None<span class="p">, </span><span class="nx">workload_identity_config</span><span class="p">:</span> <span class="nx">Optional[ClusterWorkloadIdentityConfigArgs]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addons_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAddonsConfigArgs]</span> = None<span class="p">, </span><span class="nx">authenticator_groups_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAuthenticatorGroupsConfigArgs]</span> = None<span class="p">, </span><span class="nx">cluster_autoscaling</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterAutoscalingArgs]</span> = None<span class="p">, </span><span class="nx">cluster_ipv4_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_telemetry</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterTelemetryArgs]</span> = None<span class="p">, </span><span class="nx">database_encryption</span><span class="p">:</span> <span class="nx">Optional[ClusterDatabaseEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">datapath_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_max_pods_per_node</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">default_snat_status</span><span class="p">:</span> <span class="nx">Optional[ClusterDefaultSnatStatusArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_binary_authorization</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_intranode_visibility</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_kubernetes_alpha</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_legacy_abac</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_shielded_nodes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_tpu</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initial_node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">instance_group_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">ip_allocation_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterIpAllocationPolicyArgs]</span> = None<span class="p">, </span><span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logging_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterMaintenancePolicyArgs]</span> = None<span class="p">, </span><span class="nx">master_auth</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterAuthArgs]</span> = None<span class="p">, </span><span class="nx">master_authorized_networks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterAuthorizedNetworksConfigArgs]</span> = None<span class="p">, </span><span class="nx">master_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">min_master_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitoring_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterNetworkPolicyArgs]</span> = None<span class="p">, </span><span class="nx">networking_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_config</span><span class="p">:</span> <span class="nx">Optional[ClusterNodeConfigArgs]</span> = None<span class="p">, </span><span class="nx">node_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">node_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterNodePoolArgs]]</span> = None<span class="p">, </span><span class="nx">node_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_config</span><span class="p">:</span> <span class="nx">Optional[ClusterNotificationConfigArgs]</span> = None<span class="p">, </span><span class="nx">operation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pod_security_policy_config</span><span class="p">:</span> <span class="nx">Optional[ClusterPodSecurityPolicyConfigArgs]</span> = None<span class="p">, </span><span class="nx">private_cluster_config</span><span class="p">:</span> <span class="nx">Optional[ClusterPrivateClusterConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">release_channel</span><span class="p">:</span> <span class="nx">Optional[ClusterReleaseChannelArgs]</span> = None<span class="p">, </span><span class="nx">remove_default_node_pool</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_usage_export_config</span><span class="p">:</span> <span class="nx">Optional[ClusterResourceUsageExportConfigArgs]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">services_ipv4_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tpu_ipv4_cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vertical_pod_autoscaling</span><span class="p">:</span> <span class="nx">Optional[ClusterVerticalPodAutoscalingArgs]</span> = None<span class="p">, </span><span class="nx">workload_identity_config</span><span class="p">:</span> <span class="nx">Optional[ClusterWorkloadIdentityConfigArgs]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterState">ClusterState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#Cluster">Cluster</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterState">ClusterState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#Cluster">Cluster</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -3163,6 +3251,17 @@ Structure is documented below.
         <span class="property-type"><a href="#clusterdatabaseencryption">Cluster<wbr>Database<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_datapathprovider_csharp">
+<a href="#state_datapathprovider_csharp" style="color: inherit; text-decoration: inherit;">Datapath<wbr>Provider</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3573,6 +3672,17 @@ To update nodes in other node pools, use the `version` attribute on the node poo
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_notificationconfig_csharp">
+<a href="#state_notificationconfig_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusternotificationconfig">Cluster<wbr>Notification<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The notification config for sending cluster upgrade notifications
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_operation_csharp">
 <a href="#state_operation_csharp" style="color: inherit; text-decoration: inherit;">Operation</a>
 </span> 
@@ -3632,8 +3742,8 @@ When updating this field, GKE imposes specific version requirements. See
 [Migrating between release channels](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels#migrating_between_release_channels)
 for more details; the `gcp.container.getEngineVersions` datasource can provide
 the default version for a channel. Note that removing the `release_channel`
-field from your config will cause this provider to stop managing your cluster's
-release channel, but will not unenroll it. Instead, use the `"UNSPECIFIED"`
+field from your config will cause the provider to stop managing your cluster's
+release channel, but will not un-enroll it. Instead, use the `"UNSPECIFIED"`
 channel. Structure is documented below.
 {{% /md %}}</dd>
 
@@ -3833,6 +3943,17 @@ Structure is documented below.
         <span class="property-type"><a href="#clusterdatabaseencryption">Cluster<wbr>Database<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_datapathprovider_go">
+<a href="#state_datapathprovider_go" style="color: inherit; text-decoration: inherit;">Datapath<wbr>Provider</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4243,6 +4364,17 @@ To update nodes in other node pools, use the `version` attribute on the node poo
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_notificationconfig_go">
+<a href="#state_notificationconfig_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusternotificationconfig">Cluster<wbr>Notification<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The notification config for sending cluster upgrade notifications
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_operation_go">
 <a href="#state_operation_go" style="color: inherit; text-decoration: inherit;">Operation</a>
 </span> 
@@ -4302,8 +4434,8 @@ When updating this field, GKE imposes specific version requirements. See
 [Migrating between release channels](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels#migrating_between_release_channels)
 for more details; the `gcp.container.getEngineVersions` datasource can provide
 the default version for a channel. Note that removing the `release_channel`
-field from your config will cause this provider to stop managing your cluster's
-release channel, but will not unenroll it. Instead, use the `"UNSPECIFIED"`
+field from your config will cause the provider to stop managing your cluster's
+release channel, but will not un-enroll it. Instead, use the `"UNSPECIFIED"`
 channel. Structure is documented below.
 {{% /md %}}</dd>
 
@@ -4503,6 +4635,17 @@ Structure is documented below.
         <span class="property-type"><a href="#clusterdatabaseencryption">Cluster<wbr>Database<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_datapathprovider_nodejs">
+<a href="#state_datapathprovider_nodejs" style="color: inherit; text-decoration: inherit;">datapath<wbr>Provider</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4913,6 +5056,17 @@ To update nodes in other node pools, use the `version` attribute on the node poo
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_notificationconfig_nodejs">
+<a href="#state_notificationconfig_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusternotificationconfig">Cluster<wbr>Notification<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The notification config for sending cluster upgrade notifications
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_operation_nodejs">
 <a href="#state_operation_nodejs" style="color: inherit; text-decoration: inherit;">operation</a>
 </span> 
@@ -4972,8 +5126,8 @@ When updating this field, GKE imposes specific version requirements. See
 [Migrating between release channels](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels#migrating_between_release_channels)
 for more details; the `gcp.container.getEngineVersions` datasource can provide
 the default version for a channel. Note that removing the `release_channel`
-field from your config will cause this provider to stop managing your cluster's
-release channel, but will not unenroll it. Instead, use the `"UNSPECIFIED"`
+field from your config will cause the provider to stop managing your cluster's
+release channel, but will not un-enroll it. Instead, use the `"UNSPECIFIED"`
 channel. Structure is documented below.
 {{% /md %}}</dd>
 
@@ -5173,6 +5327,17 @@ Structure is documented below.
         <span class="property-type"><a href="#clusterdatabaseencryption">Cluster<wbr>Database<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_datapath_provider_python">
+<a href="#state_datapath_provider_python" style="color: inherit; text-decoration: inherit;">datapath_<wbr>provider</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5583,6 +5748,17 @@ To update nodes in other node pools, use the `version` attribute on the node poo
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_notification_config_python">
+<a href="#state_notification_config_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusternotificationconfig">Cluster<wbr>Notification<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The notification config for sending cluster upgrade notifications
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_operation_python">
 <a href="#state_operation_python" style="color: inherit; text-decoration: inherit;">operation</a>
 </span> 
@@ -5642,8 +5818,8 @@ When updating this field, GKE imposes specific version requirements. See
 [Migrating between release channels](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels#migrating_between_release_channels)
 for more details; the `gcp.container.getEngineVersions` datasource can provide
 the default version for a channel. Note that removing the `release_channel`
-field from your config will cause this provider to stop managing your cluster's
-release channel, but will not unenroll it. Instead, use the `"UNSPECIFIED"`
+field from your config will cause the provider to stop managing your cluster's
+release channel, but will not un-enroll it. Instead, use the `"UNSPECIFIED"`
 channel. Structure is documented below.
 {{% /md %}}</dd>
 
@@ -5781,7 +5957,7 @@ Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterAddonsConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterAddonsConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterAddonsConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterAddonsConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterAddonsConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterAddonsConfig.html">output</a> API doc for this type.
@@ -6295,7 +6471,7 @@ Defaults to disabled; set `disabled = false` to enable.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterAddonsConfigCloudrunConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterAddonsConfigCloudrunConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterAddonsConfigCloudrunConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterAddonsConfigCloudrunConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterAddonsConfigCloudrunConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterAddonsConfigCloudrunConfig.html">output</a> API doc for this type.
@@ -6437,7 +6613,7 @@ Set `load_balancer_type=LOAD_BALANCER_TYPE_INTERNAL` to configure it as internal
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterAddonsConfigConfigConnectorConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterAddonsConfigConfigConnectorConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterAddonsConfigConfigConnectorConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterAddonsConfigConfigConnectorConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterAddonsConfigConfigConnectorConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterAddonsConfigConfigConnectorConfig.html">output</a> API doc for this type.
@@ -6531,7 +6707,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterAddonsConfigDnsCacheConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterAddonsConfigDnsCacheConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterAddonsConfigDnsCacheConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterAddonsConfigDnsCacheConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterAddonsConfigDnsCacheConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterAddonsConfigDnsCacheConfig.html">output</a> API doc for this type.
@@ -6625,7 +6801,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterAddonsConfigGcePersistentDiskCsiDriverConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterAddonsConfigGcePersistentDiskCsiDriverConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterAddonsConfigGcePersistentDiskCsiDriverConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterAddonsConfigGcePersistentDiskCsiDriverConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterAddonsConfigGcePersistentDiskCsiDriverConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterAddonsConfigGcePersistentDiskCsiDriverConfig.html">output</a> API doc for this type.
@@ -6719,7 +6895,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterAddonsConfigHorizontalPodAutoscalingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterAddonsConfigHorizontalPodAutoscalingOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterAddonsConfigHorizontalPodAutoscalingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterAddonsConfigHorizontalPodAutoscalingOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterAddonsConfigHorizontalPodAutoscalingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterAddonsConfigHorizontalPodAutoscaling.html">output</a> API doc for this type.
@@ -6813,7 +6989,7 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterAddonsConfigHttpLoadBalancingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterAddonsConfigHttpLoadBalancingOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterAddonsConfigHttpLoadBalancingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterAddonsConfigHttpLoadBalancingOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterAddonsConfigHttpLoadBalancingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterAddonsConfigHttpLoadBalancing.html">output</a> API doc for this type.
@@ -6907,7 +7083,7 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterAddonsConfigIstioConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterAddonsConfigIstioConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterAddonsConfigIstioConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterAddonsConfigIstioConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterAddonsConfigIstioConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterAddonsConfigIstioConfig.html">output</a> API doc for this type.
@@ -7045,7 +7221,7 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterAddonsConfigKalmConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterAddonsConfigKalmConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterAddonsConfigKalmConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterAddonsConfigKalmConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterAddonsConfigKalmConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterAddonsConfigKalmConfig.html">output</a> API doc for this type.
@@ -7139,7 +7315,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterAddonsConfigNetworkPolicyConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterAddonsConfigNetworkPolicyConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterAddonsConfigNetworkPolicyConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterAddonsConfigNetworkPolicyConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterAddonsConfigNetworkPolicyConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterAddonsConfigNetworkPolicyConfig.html">output</a> API doc for this type.
@@ -7233,7 +7409,7 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterAuthenticatorGroupsConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterAuthenticatorGroupsConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterAuthenticatorGroupsConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterAuthenticatorGroupsConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterAuthenticatorGroupsConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterAuthenticatorGroupsConfig.html">output</a> API doc for this type.
@@ -7323,7 +7499,7 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterClusterAutoscalingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterClusterAutoscalingOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterClusterAutoscalingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterClusterAutoscalingOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterClusterAutoscalingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterClusterAutoscaling.html">output</a> API doc for this type.
@@ -7577,7 +7753,7 @@ in addition to node auto-provisioning. Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterClusterAutoscalingAutoProvisioningDefaultsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterClusterAutoscalingAutoProvisioningDefaultsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterClusterAutoscalingAutoProvisioningDefaultsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterClusterAutoscalingAutoProvisioningDefaultsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterClusterAutoscalingAutoProvisioningDefaultsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterClusterAutoscalingAutoProvisioningDefaults.html">output</a> API doc for this type.
@@ -7799,7 +7975,7 @@ In order to use the configured `oauth_scopes` for logging and monitoring, the se
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterClusterAutoscalingResourceLimitArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterClusterAutoscalingResourceLimitOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterClusterAutoscalingResourceLimitArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterClusterAutoscalingResourceLimitOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterClusterAutoscalingResourceLimitArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterClusterAutoscalingResourceLimit.html">output</a> API doc for this type.
@@ -7985,7 +8161,7 @@ for a list of types.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterClusterTelemetryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterClusterTelemetryOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterClusterTelemetryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterClusterTelemetryOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterClusterTelemetryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterClusterTelemetry.html">output</a> API doc for this type.
@@ -8075,7 +8251,7 @@ for a list of types.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterDatabaseEncryptionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterDatabaseEncryptionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterDatabaseEncryptionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterDatabaseEncryptionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterDatabaseEncryptionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterDatabaseEncryption.html">output</a> API doc for this type.
@@ -8209,7 +8385,7 @@ for a list of types.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterDefaultSnatStatusArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterDefaultSnatStatusOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterDefaultSnatStatusArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterDefaultSnatStatusOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterDefaultSnatStatusArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterDefaultSnatStatus.html">output</a> API doc for this type.
@@ -8303,7 +8479,7 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterIpAllocationPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterIpAllocationPolicyOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterIpAllocationPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterIpAllocationPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterIpAllocationPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterIpAllocationPolicy.html">output</a> API doc for this type.
@@ -8577,7 +8753,7 @@ GKE-managed one.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterMaintenancePolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterMaintenancePolicyOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterMaintenancePolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterMaintenancePolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterMaintenancePolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterMaintenancePolicy.html">output</a> API doc for this type.
@@ -8723,7 +8899,7 @@ recurring maintenance operations.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterMaintenancePolicyDailyMaintenanceWindowArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterMaintenancePolicyDailyMaintenanceWindowOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterMaintenancePolicyDailyMaintenanceWindowArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterMaintenancePolicyDailyMaintenanceWindowOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterMaintenancePolicyDailyMaintenanceWindowArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterMaintenancePolicyDailyMaintenanceWindow.html">output</a> API doc for this type.
@@ -8849,7 +9025,7 @@ recurring maintenance operations.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterMaintenancePolicyRecurringWindowArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterMaintenancePolicyRecurringWindowOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterMaintenancePolicyRecurringWindowArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterMaintenancePolicyRecurringWindowOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterMaintenancePolicyRecurringWindowArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterMaintenancePolicyRecurringWindow.html">output</a> API doc for this type.
@@ -9015,7 +9191,7 @@ recurring maintenance operations.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterMasterAuthArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterMasterAuthOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterMasterAuthArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterMasterAuthOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterMasterAuthArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterMasterAuth.html">output</a> API doc for this type.
@@ -9321,7 +9497,7 @@ the Kubernetes master endpoint. If not present basic auth will be disabled.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterMasterAuthClientCertificateConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterMasterAuthClientCertificateConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterMasterAuthClientCertificateConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterMasterAuthClientCertificateConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterMasterAuthClientCertificateConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterMasterAuthClientCertificateConfig.html">output</a> API doc for this type.
@@ -9407,7 +9583,7 @@ the Kubernetes master endpoint. If not present basic auth will be disabled.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterMasterAuthorizedNetworksConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterMasterAuthorizedNetworksConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterMasterAuthorizedNetworksConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterMasterAuthorizedNetworksConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterMasterAuthorizedNetworksConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterMasterAuthorizedNetworksConfig.html">output</a> API doc for this type.
@@ -9501,7 +9677,7 @@ Kubernetes cluster master through HTTPS.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterMasterAuthorizedNetworksConfigCidrBlockArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterMasterAuthorizedNetworksConfigCidrBlockOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterMasterAuthorizedNetworksConfigCidrBlockArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterMasterAuthorizedNetworksConfigCidrBlockOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterMasterAuthorizedNetworksConfigCidrBlockArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterMasterAuthorizedNetworksConfigCidrBlock.html">output</a> API doc for this type.
@@ -9639,7 +9815,7 @@ Must be specified in CIDR notation.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterNetworkPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterNetworkPolicyOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNetworkPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNetworkPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterNetworkPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterNetworkPolicy.html">output</a> API doc for this type.
@@ -9777,7 +9953,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterNodeConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterNodeConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNodeConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNodeConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterNodeConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterNodeConfig.html">output</a> API doc for this type.
@@ -10855,7 +11031,7 @@ Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterNodeConfigGuestAcceleratorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterNodeConfigGuestAcceleratorOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNodeConfigGuestAcceleratorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNodeConfigGuestAcceleratorOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterNodeConfigGuestAcceleratorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterNodeConfigGuestAccelerator.html">output</a> API doc for this type.
@@ -10989,7 +11165,7 @@ Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterNodeConfigKubeletConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterNodeConfigKubeletConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNodeConfigKubeletConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNodeConfigKubeletConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterNodeConfigKubeletConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterNodeConfigKubeletConfig.html">output</a> API doc for this type.
@@ -11191,7 +11367,7 @@ such as `"300ms"`. Valid time units are "ns", "us" (or "µs"), "ms", "s", "m",
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterNodeConfigLinuxNodeConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterNodeConfigLinuxNodeConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNodeConfigLinuxNodeConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNodeConfigLinuxNodeConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterNodeConfigLinuxNodeConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterNodeConfigLinuxNodeConfig.html">output</a> API doc for this type.
@@ -11289,7 +11465,7 @@ and all pods running on the nodes. Specified as a map from the key, such as
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterNodeConfigSandboxConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterNodeConfigSandboxConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNodeConfigSandboxConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNodeConfigSandboxConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterNodeConfigSandboxConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterNodeConfigSandboxConfig.html">output</a> API doc for this type.
@@ -11383,7 +11559,7 @@ Accepted values are:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterNodeConfigShieldedInstanceConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterNodeConfigShieldedInstanceConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNodeConfigShieldedInstanceConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNodeConfigShieldedInstanceConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterNodeConfigShieldedInstanceConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterNodeConfigShieldedInstanceConfig.html">output</a> API doc for this type.
@@ -11517,7 +11693,7 @@ Accepted values are:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterNodeConfigTaintArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterNodeConfigTaintOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNodeConfigTaintArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNodeConfigTaintOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterNodeConfigTaintArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterNodeConfigTaint.html">output</a> API doc for this type.
@@ -11695,7 +11871,7 @@ Accepted values are:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterNodeConfigWorkloadMetadataConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterNodeConfigWorkloadMetadataConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNodeConfigWorkloadMetadataConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNodeConfigWorkloadMetadataConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterNodeConfigWorkloadMetadataConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterNodeConfigWorkloadMetadataConfig.html">output</a> API doc for this type.
@@ -11805,7 +11981,7 @@ Accepted values are:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterNodePoolArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterNodePoolOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNodePoolArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNodePoolOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterNodePoolArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterNodePool.html">output</a> API doc for this type.
@@ -12407,7 +12583,7 @@ a zonal cluster, omit the cluster's zone.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterNodePoolAutoscalingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterNodePoolAutoscalingOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNodePoolAutoscalingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNodePoolAutoscalingOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterNodePoolAutoscalingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterNodePoolAutoscaling.html">output</a> API doc for this type.
@@ -12533,7 +12709,7 @@ a zonal cluster, omit the cluster's zone.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterNodePoolManagementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterNodePoolManagementOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNodePoolManagementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNodePoolManagementOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterNodePoolManagementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterNodePoolManagement.html">output</a> API doc for this type.
@@ -12659,7 +12835,7 @@ a zonal cluster, omit the cluster's zone.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterNodePoolNodeConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterNodePoolNodeConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNodePoolNodeConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNodePoolNodeConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterNodePoolNodeConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterNodePoolNodeConfig.html">output</a> API doc for this type.
@@ -13737,7 +13913,7 @@ Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterNodePoolNodeConfigGuestAcceleratorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterNodePoolNodeConfigGuestAcceleratorOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNodePoolNodeConfigGuestAcceleratorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNodePoolNodeConfigGuestAcceleratorOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterNodePoolNodeConfigGuestAcceleratorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterNodePoolNodeConfigGuestAccelerator.html">output</a> API doc for this type.
@@ -13871,7 +14047,7 @@ Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterNodePoolNodeConfigKubeletConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterNodePoolNodeConfigKubeletConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNodePoolNodeConfigKubeletConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNodePoolNodeConfigKubeletConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterNodePoolNodeConfigKubeletConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterNodePoolNodeConfigKubeletConfig.html">output</a> API doc for this type.
@@ -14073,7 +14249,7 @@ such as `"300ms"`. Valid time units are "ns", "us" (or "µs"), "ms", "s", "m",
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterNodePoolNodeConfigLinuxNodeConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterNodePoolNodeConfigLinuxNodeConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNodePoolNodeConfigLinuxNodeConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNodePoolNodeConfigLinuxNodeConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterNodePoolNodeConfigLinuxNodeConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterNodePoolNodeConfigLinuxNodeConfig.html">output</a> API doc for this type.
@@ -14171,7 +14347,7 @@ and all pods running on the nodes. Specified as a map from the key, such as
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterNodePoolNodeConfigSandboxConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterNodePoolNodeConfigSandboxConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNodePoolNodeConfigSandboxConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNodePoolNodeConfigSandboxConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterNodePoolNodeConfigSandboxConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterNodePoolNodeConfigSandboxConfig.html">output</a> API doc for this type.
@@ -14265,7 +14441,7 @@ Accepted values are:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterNodePoolNodeConfigShieldedInstanceConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterNodePoolNodeConfigShieldedInstanceConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNodePoolNodeConfigShieldedInstanceConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNodePoolNodeConfigShieldedInstanceConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterNodePoolNodeConfigShieldedInstanceConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterNodePoolNodeConfigShieldedInstanceConfig.html">output</a> API doc for this type.
@@ -14399,7 +14575,7 @@ Accepted values are:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterNodePoolNodeConfigTaintArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterNodePoolNodeConfigTaintOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNodePoolNodeConfigTaintArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNodePoolNodeConfigTaintOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterNodePoolNodeConfigTaintArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterNodePoolNodeConfigTaint.html">output</a> API doc for this type.
@@ -14577,7 +14753,7 @@ Accepted values are:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterNodePoolNodeConfigWorkloadMetadataConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterNodePoolNodeConfigWorkloadMetadataConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNodePoolNodeConfigWorkloadMetadataConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNodePoolNodeConfigWorkloadMetadataConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterNodePoolNodeConfigWorkloadMetadataConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterNodePoolNodeConfigWorkloadMetadataConfig.html">output</a> API doc for this type.
@@ -14687,7 +14863,7 @@ Accepted values are:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterNodePoolUpgradeSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterNodePoolUpgradeSettingsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNodePoolUpgradeSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNodePoolUpgradeSettingsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterNodePoolUpgradeSettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterNodePoolUpgradeSettings.html">output</a> API doc for this type.
@@ -14807,13 +14983,233 @@ Accepted values are:
 
 
 
+<h4 id="clusternotificationconfig">Cluster<wbr>Notification<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterNotificationConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterNotificationConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNotificationConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNotificationConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterNotificationConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterNotificationConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="pubsub_csharp">
+<a href="#pubsub_csharp" style="color: inherit; text-decoration: inherit;">Pubsub</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusternotificationconfigpubsub">Cluster<wbr>Notification<wbr>Config<wbr>Pubsub<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="pubsub_go">
+<a href="#pubsub_go" style="color: inherit; text-decoration: inherit;">Pubsub</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusternotificationconfigpubsub">Cluster<wbr>Notification<wbr>Config<wbr>Pubsub</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="pubsub_nodejs">
+<a href="#pubsub_nodejs" style="color: inherit; text-decoration: inherit;">pubsub</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusternotificationconfigpubsub">Cluster<wbr>Notification<wbr>Config<wbr>Pubsub</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="pubsub_python">
+<a href="#pubsub_python" style="color: inherit; text-decoration: inherit;">pubsub</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusternotificationconfigpubsub">Cluster<wbr>Notification<wbr>Config<wbr>Pubsub<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="clusternotificationconfigpubsub">Cluster<wbr>Notification<wbr>Config<wbr>Pubsub</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterNotificationConfigPubsub">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterNotificationConfigPubsub">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNotificationConfigPubsubArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterNotificationConfigPubsubOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterNotificationConfigPubsubArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterNotificationConfigPubsub.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable the PodSecurityPolicy controller for this cluster.
+If enabled, pods must be valid under a PodSecurityPolicy to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="topic_csharp">
+<a href="#topic_csharp" style="color: inherit; text-decoration: inherit;">Topic</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable the PodSecurityPolicy controller for this cluster.
+If enabled, pods must be valid under a PodSecurityPolicy to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="topic_go">
+<a href="#topic_go" style="color: inherit; text-decoration: inherit;">Topic</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Enable the PodSecurityPolicy controller for this cluster.
+If enabled, pods must be valid under a PodSecurityPolicy to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="topic_nodejs">
+<a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable the PodSecurityPolicy controller for this cluster.
+If enabled, pods must be valid under a PodSecurityPolicy to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="topic_python">
+<a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="clusterpodsecuritypolicyconfig">Cluster<wbr>Pod<wbr>Security<wbr>Policy<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterPodSecurityPolicyConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterPodSecurityPolicyConfig">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterPodSecurityPolicyConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterPodSecurityPolicyConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterPodSecurityPolicyConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterPodSecurityPolicyConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterPodSecurityPolicyConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterPodSecurityPolicyConfig.html">output</a> API doc for this type.
@@ -14907,7 +15303,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterPrivateClusterConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterPrivateClusterConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterPrivateClusterConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterPrivateClusterConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterPrivateClusterConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterPrivateClusterConfig.html">output</a> API doc for this type.
@@ -15317,7 +15713,7 @@ for more details. This field only applies to private clusters, when
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterPrivateClusterConfigMasterGlobalAccessConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterPrivateClusterConfigMasterGlobalAccessConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterPrivateClusterConfigMasterGlobalAccessConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterPrivateClusterConfigMasterGlobalAccessConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterPrivateClusterConfigMasterGlobalAccessConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterPrivateClusterConfigMasterGlobalAccessConfig.html">output</a> API doc for this type.
@@ -15411,7 +15807,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterReleaseChannelArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterReleaseChannelOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterReleaseChannelArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterReleaseChannelOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterReleaseChannelArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterReleaseChannel.html">output</a> API doc for this type.
@@ -15521,7 +15917,7 @@ Accepted values are:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterResourceUsageExportConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterResourceUsageExportConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterResourceUsageExportConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterResourceUsageExportConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterResourceUsageExportConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterResourceUsageExportConfig.html">output</a> API doc for this type.
@@ -15719,7 +16115,7 @@ billing export. Defaults to `true`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterResourceUsageExportConfigBigqueryDestinationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterResourceUsageExportConfigBigqueryDestinationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterResourceUsageExportConfigBigqueryDestinationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterResourceUsageExportConfigBigqueryDestinationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterResourceUsageExportConfigBigqueryDestinationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterResourceUsageExportConfigBigqueryDestination.html">output</a> API doc for this type.
@@ -15805,7 +16201,7 @@ billing export. Defaults to `true`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterVerticalPodAutoscalingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterVerticalPodAutoscalingOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterVerticalPodAutoscalingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterVerticalPodAutoscalingOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterVerticalPodAutoscalingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterVerticalPodAutoscaling.html">output</a> API doc for this type.
@@ -15899,7 +16295,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterWorkloadIdentityConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterWorkloadIdentityConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterWorkloadIdentityConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#ClusterWorkloadIdentityConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterWorkloadIdentityConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterWorkloadIdentityConfig.html">output</a> API doc for this type.

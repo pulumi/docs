@@ -3,7 +3,7 @@ title: "Module cloudidentity"
 title_tag: "Module cloudidentity | Package @pulumi/gcp | Node.js SDK"
 linktitle: "cloudidentity"
 meta_desc: "Explore members of the cloudidentity module in the @pulumi/gcp package."
-git_sha: "fc3da3c5794a45df688a785c73dd9311acde14c6"
+git_sha: "392523e57a3e8f1656dce673bd0ce66ebb8dc12e"
 block_external_search_index: true
 ---
 
@@ -42,7 +42,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Group" data-link-title="Group">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/group.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/group.ts#L20">
         Resource <strong>Group</strong>
     </a>
 </h3>
@@ -51,10 +51,16 @@ block_external_search_index: true
 
 A Cloud Identity resource representing a Group.
 
+> **Warning:** If you are using User ADCs (Application Default Credentials) with this resource,
+you must specify a `billingProject` and set `userProjectOverride` to true
+in the provider configuration. Otherwise the Cloud Identity API will return a 403 error.
+Your account must have the `serviceusage.services.use` permission on the
+`billingProject` you defined.
+
 #### Example Usage
 
 <h4 class="pdoc-member-header" id="Group-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/group.ts#L81"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/group.ts#L87"> <b>constructor</b></a>
 </h4>
 
 
@@ -68,7 +74,7 @@ Create a Group resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Group-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/group.ts#L24">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/group.ts#L30">method <b>get</b></a>
 </h4>
 
 
@@ -79,14 +85,14 @@ Get an existing Group resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Group-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/group.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/group.ts#L20">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Group-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/group.ts#L35">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/group.ts#L41">method <b>isInstance</b></a>
 </h4>
 
 
@@ -97,7 +103,7 @@ Returns true if the given object is an instance of Group.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Group-createTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/group.ts#L45">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/group.ts#L51">property <b>createTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -105,7 +111,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The time when the Group was created.
 
 <h4 class="pdoc-member-header" id="Group-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/group.ts#L50">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/group.ts#L56">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -114,7 +120,7 @@ An extended description to help users determine the purpose of a Group.
 Must not be longer than 4,096 characters.
 
 <h4 class="pdoc-member-header" id="Group-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/group.ts#L54">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/group.ts#L60">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -122,7 +128,7 @@ Must not be longer than 4,096 characters.
 The display name of the Group.
 
 <h4 class="pdoc-member-header" id="Group-groupKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/group.ts#L59">property <b>groupKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/group.ts#L65">property <b>groupKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GroupGroupKey'>GroupGroupKey</a>&gt;;</code></pre>
@@ -131,7 +137,7 @@ EntityKey of the Group.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Group-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/group.ts#L14">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/group.ts#L20">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -140,7 +146,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Group-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/group.ts#L66">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/group.ts#L72">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</code></pre>
@@ -151,7 +157,7 @@ Must not contain more than one entry. Must contain the entry
 'system/groups/external': '' if the Group is an external-identity-mapped group.
 
 <h4 class="pdoc-member-header" id="Group-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/group.ts#L70">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/group.ts#L76">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -159,7 +165,7 @@ Must not contain more than one entry. Must contain the entry
 Resource name of the Group in the format: groups/{group_id}, where group_id is the unique ID assigned to the Group.
 
 <h4 class="pdoc-member-header" id="Group-parent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/group.ts#L77">property <b>parent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/group.ts#L83">property <b>parent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -170,7 +176,7 @@ Must be of the form identitysources/{identity_source_id} for external-identity-m
 groups or customers/{customer_id} for Google Groups.
 
 <h4 class="pdoc-member-header" id="Group-updateTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/group.ts#L81">property <b>updateTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/group.ts#L87">property <b>updateTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>updateTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -178,7 +184,7 @@ groups or customers/{customer_id} for Google Groups.
 The time when the Group was last updated.
 
 <h4 class="pdoc-member-header" id="Group-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/group.ts#L14">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/group.ts#L20">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -187,7 +193,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="GroupMembership" data-link-title="GroupMembership">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/groupMembership.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/groupMembership.ts#L20">
         Resource <strong>GroupMembership</strong>
     </a>
 </h3>
@@ -196,10 +202,16 @@ deployments.
 
 A Membership defines a relationship between a Group and an entity belonging to that Group, referred to as a "member".
 
+> **Warning:** If you are using User ADCs (Application Default Credentials) with this resource,
+you must specify a `billingProject` and set `userProjectOverride` to true
+in the provider configuration. Otherwise the Cloud Identity API will return a 403 error.
+Your account must have the `serviceusage.services.use` permission on the
+`billingProject` you defined.
+
 #### Example Usage
 
 <h4 class="pdoc-member-header" id="GroupMembership-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/groupMembership.ts#L78"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/groupMembership.ts#L84"> <b>constructor</b></a>
 </h4>
 
 
@@ -213,7 +225,7 @@ Create a GroupMembership resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="GroupMembership-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/groupMembership.ts#L24">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/groupMembership.ts#L30">method <b>get</b></a>
 </h4>
 
 
@@ -224,14 +236,14 @@ Get an existing GroupMembership resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="GroupMembership-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/groupMembership.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/groupMembership.ts#L20">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="GroupMembership-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/groupMembership.ts#L35">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/groupMembership.ts#L41">method <b>isInstance</b></a>
 </h4>
 
 
@@ -242,7 +254,7 @@ Returns true if the given object is an instance of GroupMembership.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="GroupMembership-createTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/groupMembership.ts#L45">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/groupMembership.ts#L51">property <b>createTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -250,7 +262,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The time when the Membership was created.
 
 <h4 class="pdoc-member-header" id="GroupMembership-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/groupMembership.ts#L49">property <b>group</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/groupMembership.ts#L55">property <b>group</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>group: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -258,7 +270,7 @@ The time when the Membership was created.
 The name of the Group to create this membership in.
 
 <h4 class="pdoc-member-header" id="GroupMembership-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/groupMembership.ts#L14">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/groupMembership.ts#L20">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -267,7 +279,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="GroupMembership-memberKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/groupMembership.ts#L54">property <b>memberKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/groupMembership.ts#L60">property <b>memberKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>memberKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GroupMembershipMemberKey'>GroupMembershipMemberKey</a>&gt;;</code></pre>
@@ -276,7 +288,7 @@ EntityKey of the member.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="GroupMembership-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/groupMembership.ts#L59">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/groupMembership.ts#L65">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -285,7 +297,7 @@ The name of the MembershipRole. Must be one of OWNER, MANAGER, MEMBER.
 Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
 
 <h4 class="pdoc-member-header" id="GroupMembership-preferredMemberKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/groupMembership.ts#L64">property <b>preferredMemberKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/groupMembership.ts#L70">property <b>preferredMemberKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>preferredMemberKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GroupMembershipPreferredMemberKey'>GroupMembershipPreferredMemberKey</a>&gt;;</code></pre>
@@ -294,7 +306,7 @@ EntityKey of the member.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="GroupMembership-roles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/groupMembership.ts#L70">property <b>roles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/groupMembership.ts#L76">property <b>roles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GroupMembershipRole'>GroupMembershipRole</a>[]&gt;;</code></pre>
@@ -304,7 +316,7 @@ Must not contain duplicate MembershipRoles with the same name.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="GroupMembership-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/groupMembership.ts#L74">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/groupMembership.ts#L80">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -312,7 +324,7 @@ Structure is documented below.
 The type of the membership.
 
 <h4 class="pdoc-member-header" id="GroupMembership-updateTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/groupMembership.ts#L78">property <b>updateTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/groupMembership.ts#L84">property <b>updateTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>updateTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -320,7 +332,7 @@ The type of the membership.
 The time when the Membership was last updated.
 
 <h4 class="pdoc-member-header" id="GroupMembership-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/groupMembership.ts#L14">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/groupMembership.ts#L20">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -331,7 +343,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getGroupMemberships" data-link-title="getGroupMemberships">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/getGroupMemberships.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/getGroupMemberships.ts#L14">
         Function <strong>getGroupMemberships</strong>
     </a>
 </h3>
@@ -345,7 +357,7 @@ Use this data source to get list of the Cloud Identity Group Memberships within 
 https://cloud.google.com/identity/docs/concepts/overview#memberships
 
 <h3 class="pdoc-module-header" id="getGroups" data-link-title="getGroups">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/getGroups.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/getGroups.ts#L14">
         Function <strong>getGroups</strong>
     </a>
 </h3>
@@ -361,7 +373,7 @@ https://cloud.google.com/identity/docs/concepts/overview#groups
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetGroupMembershipsArgs" data-link-title="GetGroupMembershipsArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/getGroupMemberships.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/getGroupMemberships.ts#L30">
         interface <strong>GetGroupMembershipsArgs</strong>
     </a>
 </h3>
@@ -371,7 +383,7 @@ https://cloud.google.com/identity/docs/concepts/overview#groups
 A collection of arguments for invoking getGroupMemberships.
 
 <h4 class="pdoc-member-header" id="GetGroupMembershipsArgs-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/getGroupMemberships.ts#L34">property <b>group</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/getGroupMemberships.ts#L34">property <b>group</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>group: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -379,7 +391,7 @@ A collection of arguments for invoking getGroupMemberships.
 The parent Group resource under which to lookup the Membership names. Must be of the form groups/{group_id}.
 
 <h3 class="pdoc-module-header" id="GetGroupMembershipsResult" data-link-title="GetGroupMembershipsResult">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/getGroupMemberships.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/getGroupMemberships.ts#L40">
         interface <strong>GetGroupMembershipsResult</strong>
     </a>
 </h3>
@@ -389,12 +401,12 @@ The parent Group resource under which to lookup the Membership names. Must be of
 A collection of values returned by getGroupMemberships.
 
 <h4 class="pdoc-member-header" id="GetGroupMembershipsResult-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/getGroupMemberships.ts#L41">property <b>group</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/getGroupMemberships.ts#L41">property <b>group</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>group: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetGroupMembershipsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/getGroupMemberships.ts#L45">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/getGroupMemberships.ts#L45">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -402,7 +414,7 @@ A collection of values returned by getGroupMemberships.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetGroupMembershipsResult-memberships">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/getGroupMemberships.ts#L49">property <b>memberships</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/getGroupMemberships.ts#L49">property <b>memberships</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memberships: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetGroupMembershipsMembership'>GetGroupMembershipsMembership</a>[];</code></pre>
@@ -410,7 +422,7 @@ The provider-assigned unique ID for this managed resource.
 The list of memberships under the given group. Structure is documented below.
 
 <h3 class="pdoc-module-header" id="GetGroupsArgs" data-link-title="GetGroupsArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/getGroups.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/getGroups.ts#L30">
         interface <strong>GetGroupsArgs</strong>
     </a>
 </h3>
@@ -420,7 +432,7 @@ The list of memberships under the given group. Structure is documented below.
 A collection of arguments for invoking getGroups.
 
 <h4 class="pdoc-member-header" id="GetGroupsArgs-parent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/getGroups.ts#L34">property <b>parent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/getGroups.ts#L34">property <b>parent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parent: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -428,7 +440,7 @@ A collection of arguments for invoking getGroups.
 The parent resource under which to list all Groups. Must be of the form identitysources/{identity_source_id} for external- identity-mapped groups or customers/{customer_id} for Google Groups.
 
 <h3 class="pdoc-module-header" id="GetGroupsResult" data-link-title="GetGroupsResult">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/getGroups.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/getGroups.ts#L40">
         interface <strong>GetGroupsResult</strong>
     </a>
 </h3>
@@ -438,7 +450,7 @@ The parent resource under which to list all Groups. Must be of the form identity
 A collection of values returned by getGroups.
 
 <h4 class="pdoc-member-header" id="GetGroupsResult-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/getGroups.ts#L44">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/getGroups.ts#L44">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groups: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetGroupsGroup'>GetGroupsGroup</a>[];</code></pre>
@@ -446,7 +458,7 @@ A collection of values returned by getGroups.
 The list of groups under the provided customer or namespace. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="GetGroupsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/getGroups.ts#L48">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/getGroups.ts#L48">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -454,12 +466,12 @@ The list of groups under the provided customer or namespace. Structure is docume
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetGroupsResult-parent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/getGroups.ts#L49">property <b>parent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/getGroups.ts#L49">property <b>parent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parent: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GroupArgs" data-link-title="GroupArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/group.ts#L183">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/group.ts#L189">
         interface <strong>GroupArgs</strong>
     </a>
 </h3>
@@ -469,7 +481,7 @@ The provider-assigned unique ID for this managed resource.
 The set of arguments for constructing a Group resource.
 
 <h4 class="pdoc-member-header" id="GroupArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/group.ts#L188">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/group.ts#L194">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -478,7 +490,7 @@ An extended description to help users determine the purpose of a Group.
 Must not be longer than 4,096 characters.
 
 <h4 class="pdoc-member-header" id="GroupArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/group.ts#L192">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/group.ts#L198">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -486,7 +498,7 @@ Must not be longer than 4,096 characters.
 The display name of the Group.
 
 <h4 class="pdoc-member-header" id="GroupArgs-groupKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/group.ts#L197">property <b>groupKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/group.ts#L203">property <b>groupKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GroupGroupKey'>GroupGroupKey</a>&gt;;</code></pre>
@@ -495,7 +507,7 @@ EntityKey of the Group.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="GroupArgs-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/group.ts#L204">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/group.ts#L210">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -506,7 +518,7 @@ Must not contain more than one entry. Must contain the entry
 'system/groups/external': '' if the Group is an external-identity-mapped group.
 
 <h4 class="pdoc-member-header" id="GroupArgs-parent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/group.ts#L211">property <b>parent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/group.ts#L217">property <b>parent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -517,7 +529,7 @@ Must be of the form identitysources/{identity_source_id} for external-identity-m
 groups or customers/{customer_id} for Google Groups.
 
 <h3 class="pdoc-module-header" id="GroupMembershipArgs" data-link-title="GroupMembershipArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/groupMembership.ts#L174">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/groupMembership.ts#L180">
         interface <strong>GroupMembershipArgs</strong>
     </a>
 </h3>
@@ -527,7 +539,7 @@ groups or customers/{customer_id} for Google Groups.
 The set of arguments for constructing a GroupMembership resource.
 
 <h4 class="pdoc-member-header" id="GroupMembershipArgs-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/groupMembership.ts#L178">property <b>group</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/groupMembership.ts#L184">property <b>group</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>group: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -535,7 +547,7 @@ The set of arguments for constructing a GroupMembership resource.
 The name of the Group to create this membership in.
 
 <h4 class="pdoc-member-header" id="GroupMembershipArgs-memberKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/groupMembership.ts#L183">property <b>memberKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/groupMembership.ts#L189">property <b>memberKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memberKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GroupMembershipMemberKey'>GroupMembershipMemberKey</a>&gt;;</code></pre>
@@ -544,7 +556,7 @@ EntityKey of the member.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="GroupMembershipArgs-preferredMemberKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/groupMembership.ts#L188">property <b>preferredMemberKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/groupMembership.ts#L194">property <b>preferredMemberKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preferredMemberKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GroupMembershipPreferredMemberKey'>GroupMembershipPreferredMemberKey</a>&gt;;</code></pre>
@@ -553,7 +565,7 @@ EntityKey of the member.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="GroupMembershipArgs-roles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/groupMembership.ts#L194">property <b>roles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/groupMembership.ts#L200">property <b>roles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GroupMembershipRole'>GroupMembershipRole</a>&gt;[]&gt;;</code></pre>
@@ -563,7 +575,7 @@ Must not contain duplicate MembershipRoles with the same name.
 Structure is documented below.
 
 <h3 class="pdoc-module-header" id="GroupMembershipState" data-link-title="GroupMembershipState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/groupMembership.ts#L131">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/groupMembership.ts#L137">
         interface <strong>GroupMembershipState</strong>
     </a>
 </h3>
@@ -573,7 +585,7 @@ Structure is documented below.
 Input properties used for looking up and filtering GroupMembership resources.
 
 <h4 class="pdoc-member-header" id="GroupMembershipState-createTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/groupMembership.ts#L135">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/groupMembership.ts#L141">property <b>createTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -581,7 +593,7 @@ Input properties used for looking up and filtering GroupMembership resources.
 The time when the Membership was created.
 
 <h4 class="pdoc-member-header" id="GroupMembershipState-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/groupMembership.ts#L139">property <b>group</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/groupMembership.ts#L145">property <b>group</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>group?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -589,7 +601,7 @@ The time when the Membership was created.
 The name of the Group to create this membership in.
 
 <h4 class="pdoc-member-header" id="GroupMembershipState-memberKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/groupMembership.ts#L144">property <b>memberKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/groupMembership.ts#L150">property <b>memberKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memberKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GroupMembershipMemberKey'>GroupMembershipMemberKey</a>&gt;;</code></pre>
@@ -598,7 +610,7 @@ EntityKey of the member.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="GroupMembershipState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/groupMembership.ts#L149">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/groupMembership.ts#L155">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -607,7 +619,7 @@ The name of the MembershipRole. Must be one of OWNER, MANAGER, MEMBER.
 Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
 
 <h4 class="pdoc-member-header" id="GroupMembershipState-preferredMemberKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/groupMembership.ts#L154">property <b>preferredMemberKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/groupMembership.ts#L160">property <b>preferredMemberKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preferredMemberKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GroupMembershipPreferredMemberKey'>GroupMembershipPreferredMemberKey</a>&gt;;</code></pre>
@@ -616,7 +628,7 @@ EntityKey of the member.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="GroupMembershipState-roles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/groupMembership.ts#L160">property <b>roles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/groupMembership.ts#L166">property <b>roles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GroupMembershipRole'>GroupMembershipRole</a>&gt;[]&gt;;</code></pre>
@@ -626,7 +638,7 @@ Must not contain duplicate MembershipRoles with the same name.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="GroupMembershipState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/groupMembership.ts#L164">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/groupMembership.ts#L170">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -634,7 +646,7 @@ Structure is documented below.
 The type of the membership.
 
 <h4 class="pdoc-member-header" id="GroupMembershipState-updateTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/groupMembership.ts#L168">property <b>updateTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/groupMembership.ts#L174">property <b>updateTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updateTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -642,7 +654,7 @@ The type of the membership.
 The time when the Membership was last updated.
 
 <h3 class="pdoc-module-header" id="GroupState" data-link-title="GroupState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/group.ts#L137">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/group.ts#L143">
         interface <strong>GroupState</strong>
     </a>
 </h3>
@@ -652,7 +664,7 @@ The time when the Membership was last updated.
 Input properties used for looking up and filtering Group resources.
 
 <h4 class="pdoc-member-header" id="GroupState-createTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/group.ts#L141">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/group.ts#L147">property <b>createTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -660,7 +672,7 @@ Input properties used for looking up and filtering Group resources.
 The time when the Group was created.
 
 <h4 class="pdoc-member-header" id="GroupState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/group.ts#L146">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/group.ts#L152">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -669,7 +681,7 @@ An extended description to help users determine the purpose of a Group.
 Must not be longer than 4,096 characters.
 
 <h4 class="pdoc-member-header" id="GroupState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/group.ts#L150">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/group.ts#L156">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -677,7 +689,7 @@ Must not be longer than 4,096 characters.
 The display name of the Group.
 
 <h4 class="pdoc-member-header" id="GroupState-groupKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/group.ts#L155">property <b>groupKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/group.ts#L161">property <b>groupKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GroupGroupKey'>GroupGroupKey</a>&gt;;</code></pre>
@@ -686,7 +698,7 @@ EntityKey of the Group.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="GroupState-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/group.ts#L162">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/group.ts#L168">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -697,7 +709,7 @@ Must not contain more than one entry. Must contain the entry
 'system/groups/external': '' if the Group is an external-identity-mapped group.
 
 <h4 class="pdoc-member-header" id="GroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/group.ts#L166">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/group.ts#L172">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -705,7 +717,7 @@ Must not contain more than one entry. Must contain the entry
 Resource name of the Group in the format: groups/{group_id}, where group_id is the unique ID assigned to the Group.
 
 <h4 class="pdoc-member-header" id="GroupState-parent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/group.ts#L173">property <b>parent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/group.ts#L179">property <b>parent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -716,7 +728,7 @@ Must be of the form identitysources/{identity_source_id} for external-identity-m
 groups or customers/{customer_id} for Google Groups.
 
 <h4 class="pdoc-member-header" id="GroupState-updateTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudidentity/group.ts#L177">property <b>updateTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudidentity/group.ts#L183">property <b>updateTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updateTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

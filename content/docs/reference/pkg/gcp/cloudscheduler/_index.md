@@ -23,7 +23,7 @@ Explore the resources and functions of the cloudscheduler module in the GCP pack
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.25.0</dd>
+	<dd>4.0.0</dd>
 </dl>
 
 
@@ -34,7 +34,7 @@ Explore the resources and functions of the cloudscheduler module in the GCP pack
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudScheduler.html" title="Pulumi.Gcp.CloudScheduler">Pulumi.Gcp.CloudScheduler</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudscheduler?tab=doc#" title="gcp/cloudscheduler">gcp/cloudscheduler</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudscheduler?tab=doc#" title="gcp/cloudscheduler">gcp/cloudscheduler</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudscheduler/#" title="@pulumi/gcp/cloudscheduler">@pulumi/gcp/cloudscheduler</a></dd>

@@ -29,7 +29,7 @@ Explore the resources and functions of the identityplatform module in the GCP pa
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.25.0</dd>
+	<dd>4.0.0</dd>
 </dl>
 
 
@@ -40,7 +40,7 @@ Explore the resources and functions of the identityplatform module in the GCP pa
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.IdentityPlatform.html" title="Pulumi.Gcp.IdentityPlatform">Pulumi.Gcp.IdentityPlatform</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/identityplatform?tab=doc#" title="gcp/identityplatform">gcp/identityplatform</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/identityplatform?tab=doc#" title="gcp/identityplatform">gcp/identityplatform</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/identityplatform/#" title="@pulumi/gcp/identityplatform">@pulumi/gcp/identityplatform</a></dd>

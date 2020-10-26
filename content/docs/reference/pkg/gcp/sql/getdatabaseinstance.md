@@ -30,7 +30,7 @@ Use this data source to get information about a Cloud SQL instance
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDatabaseInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sql?tab=doc#LookupDatabaseInstanceArgs">LookupDatabaseInstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sql?tab=doc#LookupDatabaseInstanceResult">LookupDatabaseInstanceResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDatabaseInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sql?tab=doc#LookupDatabaseInstanceArgs">LookupDatabaseInstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sql?tab=doc#LookupDatabaseInstanceResult">LookupDatabaseInstanceResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupDatabaseInstance` in the Go SDK.
 
@@ -202,6 +202,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The MySQL, PostgreSQL or SQL Server (beta) version to use.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="deletionprotection_csharp">
+<a href="#deletionprotection_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -409,6 +419,16 @@ configuration is detailed below.
 
     <dt class="property-"
             title="">
+        <span id="deletionprotection_go">
+<a href="#deletionprotection_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="encryptionkeyname_go">
 <a href="#encryptionkeyname_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key<wbr>Name</a>
 </span> 
@@ -610,6 +630,16 @@ configuration is detailed below.
     </dt>
     <dd>{{% md %}}The MySQL, PostgreSQL or SQL Server (beta) version to use.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="deletionprotection_nodejs">
+<a href="#deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -817,6 +847,16 @@ configuration is detailed below.
 
     <dt class="property-"
             title="">
+        <span id="deletion_protection_python">
+<a href="#deletion_protection_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>protection</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="encryption_key_name_python">
 <a href="#encryption_key_name_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key_<wbr>name</a>
 </span> 
@@ -1009,7 +1049,7 @@ configuration is detailed below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sql?tab=doc#GetDatabaseInstanceIpAddress">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sql?tab=doc#GetDatabaseInstanceIpAddress">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.Outputs.GetDatabaseInstanceIpAddress.html">output</a> API doc for this type.
@@ -1175,7 +1215,7 @@ configuration is detailed below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sql?tab=doc#GetDatabaseInstanceReplicaConfiguration">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sql?tab=doc#GetDatabaseInstanceReplicaConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.Outputs.GetDatabaseInstanceReplicaConfiguration.html">output</a> API doc for this type.
@@ -1701,7 +1741,7 @@ configuration is detailed below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sql?tab=doc#GetDatabaseInstanceServerCaCert">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sql?tab=doc#GetDatabaseInstanceServerCaCert">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.Outputs.GetDatabaseInstanceServerCaCert.html">output</a> API doc for this type.
@@ -1955,7 +1995,7 @@ formatted date time string indicating when this whitelist expires.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sql?tab=doc#GetDatabaseInstanceSetting">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sql?tab=doc#GetDatabaseInstanceSetting">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.Outputs.GetDatabaseInstanceSetting.html">output</a> API doc for this type.
@@ -2753,7 +2793,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sql?tab=doc#GetDatabaseInstanceSettingBackupConfiguration">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sql?tab=doc#GetDatabaseInstanceSettingBackupConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.Outputs.GetDatabaseInstanceSettingBackupConfiguration.html">output</a> API doc for this type.
@@ -3011,7 +3051,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sql?tab=doc#GetDatabaseInstanceSettingDatabaseFlag">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sql?tab=doc#GetDatabaseInstanceSettingDatabaseFlag">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.Outputs.GetDatabaseInstanceSettingDatabaseFlag.html">output</a> API doc for this type.
@@ -3145,7 +3185,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sql?tab=doc#GetDatabaseInstanceSettingIpConfiguration">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sql?tab=doc#GetDatabaseInstanceSettingIpConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.Outputs.GetDatabaseInstanceSettingIpConfiguration.html">output</a> API doc for this type.
@@ -3363,7 +3403,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sql?tab=doc#GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sql?tab=doc#GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.Outputs.GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork.html">output</a> API doc for this type.
@@ -3545,7 +3585,7 @@ formatted date time string indicating when this whitelist expires.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sql?tab=doc#GetDatabaseInstanceSettingLocationPreference">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sql?tab=doc#GetDatabaseInstanceSettingLocationPreference">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.Outputs.GetDatabaseInstanceSettingLocationPreference.html">output</a> API doc for this type.
@@ -3679,7 +3719,7 @@ formatted date time string indicating when this whitelist expires.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sql?tab=doc#GetDatabaseInstanceSettingMaintenanceWindow">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sql?tab=doc#GetDatabaseInstanceSettingMaintenanceWindow">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.Outputs.GetDatabaseInstanceSettingMaintenanceWindow.html">output</a> API doc for this type.

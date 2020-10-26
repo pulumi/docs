@@ -23,7 +23,7 @@ Explore the resources and functions of the serviceusage module in the GCP packag
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.25.0</dd>
+	<dd>4.0.0</dd>
 </dl>
 
 
@@ -34,7 +34,7 @@ Explore the resources and functions of the serviceusage module in the GCP packag
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ServiceUsage.html" title="Pulumi.Gcp.ServiceUsage">Pulumi.Gcp.ServiceUsage</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/serviceusage?tab=doc#" title="gcp/serviceusage">gcp/serviceusage</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/serviceusage?tab=doc#" title="gcp/serviceusage">gcp/serviceusage</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/serviceusage/#" title="@pulumi/gcp/serviceusage">@pulumi/gcp/serviceusage</a></dd>

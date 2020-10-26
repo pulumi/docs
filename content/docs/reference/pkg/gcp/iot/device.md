@@ -33,7 +33,7 @@ To get more information about Device, see:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#Device">NewDevice</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#DeviceArgs">DeviceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#Device">Device</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iot?tab=doc#Device">NewDevice</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iot?tab=doc#DeviceArgs">DeviceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iot?tab=doc#Device">Device</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -107,7 +107,7 @@ To get more information about Device, see:
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -127,7 +127,7 @@ To get more information about Device, see:
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#DeviceArgs">DeviceArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iot?tab=doc#DeviceArgs">DeviceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -137,7 +137,7 @@ To get more information about Device, see:
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -562,11 +562,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="config_csharp">
-<a href="#config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
+        <span id="configs_csharp">
+<a href="#configs_csharp" style="color: inherit; text-decoration: inherit;">Configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deviceconfig">Device<wbr>Config</a></span>
+        <span class="property-type"><a href="#deviceconfig">List&lt;Device<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}The most recent device configuration, which is eventually sent from Cloud IoT Core to the device.
 {{% /md %}}</dd>
@@ -605,11 +605,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="lasterrorstatus_csharp">
-<a href="#lasterrorstatus_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Error<wbr>Status</a>
+        <span id="lasterrorstatuses_csharp">
+<a href="#lasterrorstatuses_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Error<wbr>Statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicelasterrorstatus">Device<wbr>Last<wbr>Error<wbr>Status</a></span>
+        <span class="property-type"><a href="#devicelasterrorstatus">List&lt;Device<wbr>Last<wbr>Error<wbr>Status&gt;</a></span>
     </dt>
     <dd>{{% md %}}The error message of the most recent error, such as a failure to publish to Cloud Pub/Sub.
 {{% /md %}}</dd>
@@ -672,11 +672,11 @@ unique.
 
     <dt class="property-"
             title="">
-        <span id="state_csharp">
-<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+        <span id="states_csharp">
+<a href="#states_csharp" style="color: inherit; text-decoration: inherit;">States</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicestate">Device<wbr>State</a></span>
+        <span class="property-type"><a href="#devicestate">List&lt;Device<wbr>State&gt;</a></span>
     </dt>
     <dd>{{% md %}}The state most recently received from the device.
 {{% /md %}}</dd>
@@ -690,11 +690,11 @@ unique.
 
     <dt class="property-"
             title="">
-        <span id="config_go">
-<a href="#config_go" style="color: inherit; text-decoration: inherit;">Config</a>
+        <span id="configs_go">
+<a href="#configs_go" style="color: inherit; text-decoration: inherit;">Configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deviceconfig">Device<wbr>Config</a></span>
+        <span class="property-type"><a href="#deviceconfig">[]Device<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The most recent device configuration, which is eventually sent from Cloud IoT Core to the device.
 {{% /md %}}</dd>
@@ -733,11 +733,11 @@ unique.
 
     <dt class="property-"
             title="">
-        <span id="lasterrorstatus_go">
-<a href="#lasterrorstatus_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Error<wbr>Status</a>
+        <span id="lasterrorstatuses_go">
+<a href="#lasterrorstatuses_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Error<wbr>Statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicelasterrorstatus">Device<wbr>Last<wbr>Error<wbr>Status</a></span>
+        <span class="property-type"><a href="#devicelasterrorstatus">[]Device<wbr>Last<wbr>Error<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The error message of the most recent error, such as a failure to publish to Cloud Pub/Sub.
 {{% /md %}}</dd>
@@ -800,11 +800,11 @@ unique.
 
     <dt class="property-"
             title="">
-        <span id="state_go">
-<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
+        <span id="states_go">
+<a href="#states_go" style="color: inherit; text-decoration: inherit;">States</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicestate">Device<wbr>State<wbr>Type</a></span>
+        <span class="property-type"><a href="#devicestate">[]Device<wbr>State<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The state most recently received from the device.
 {{% /md %}}</dd>
@@ -818,11 +818,11 @@ unique.
 
     <dt class="property-"
             title="">
-        <span id="config_nodejs">
-<a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
+        <span id="configs_nodejs">
+<a href="#configs_nodejs" style="color: inherit; text-decoration: inherit;">configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deviceconfig">Device<wbr>Config</a></span>
+        <span class="property-type"><a href="#deviceconfig">Device<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}The most recent device configuration, which is eventually sent from Cloud IoT Core to the device.
 {{% /md %}}</dd>
@@ -861,11 +861,11 @@ unique.
 
     <dt class="property-"
             title="">
-        <span id="lasterrorstatus_nodejs">
-<a href="#lasterrorstatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Error<wbr>Status</a>
+        <span id="lasterrorstatuses_nodejs">
+<a href="#lasterrorstatuses_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Error<wbr>Statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicelasterrorstatus">Device<wbr>Last<wbr>Error<wbr>Status</a></span>
+        <span class="property-type"><a href="#devicelasterrorstatus">Device<wbr>Last<wbr>Error<wbr>Status[]</a></span>
     </dt>
     <dd>{{% md %}}The error message of the most recent error, such as a failure to publish to Cloud Pub/Sub.
 {{% /md %}}</dd>
@@ -928,11 +928,11 @@ unique.
 
     <dt class="property-"
             title="">
-        <span id="state_nodejs">
-<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+        <span id="states_nodejs">
+<a href="#states_nodejs" style="color: inherit; text-decoration: inherit;">states</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicestate">Device<wbr>State</a></span>
+        <span class="property-type"><a href="#devicestate">Device<wbr>State[]</a></span>
     </dt>
     <dd>{{% md %}}The state most recently received from the device.
 {{% /md %}}</dd>
@@ -946,11 +946,11 @@ unique.
 
     <dt class="property-"
             title="">
-        <span id="config_python">
-<a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
+        <span id="configs_python">
+<a href="#configs_python" style="color: inherit; text-decoration: inherit;">configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deviceconfig">Device<wbr>Config</a></span>
+        <span class="property-type"><a href="#deviceconfig">Sequence[Device<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}The most recent device configuration, which is eventually sent from Cloud IoT Core to the device.
 {{% /md %}}</dd>
@@ -989,11 +989,11 @@ unique.
 
     <dt class="property-"
             title="">
-        <span id="last_error_status_python">
-<a href="#last_error_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>error_<wbr>status</a>
+        <span id="last_error_statuses_python">
+<a href="#last_error_statuses_python" style="color: inherit; text-decoration: inherit;">last_<wbr>error_<wbr>statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicelasterrorstatus">Device<wbr>Last<wbr>Error<wbr>Status</a></span>
+        <span class="property-type"><a href="#devicelasterrorstatus">Sequence[Device<wbr>Last<wbr>Error<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}The error message of the most recent error, such as a failure to publish to Cloud Pub/Sub.
 {{% /md %}}</dd>
@@ -1056,11 +1056,11 @@ unique.
 
     <dt class="property-"
             title="">
-        <span id="state_python">
-<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
+        <span id="states_python">
+<a href="#states_python" style="color: inherit; text-decoration: inherit;">states</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicestate">Device<wbr>State</a></span>
+        <span class="property-type"><a href="#devicestate">Sequence[Device<wbr>State]</a></span>
     </dt>
     <dd>{{% md %}}The state most recently received from the device.
 {{% /md %}}</dd>
@@ -1085,11 +1085,11 @@ Get an existing Device resource's state with the given name, ID, and optional ex
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">blocked</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[DeviceConfigArgs]</span> = None<span class="p">, </span><span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeviceCredentialArgs]]</span> = None<span class="p">, </span><span class="nx">gateway_config</span><span class="p">:</span> <span class="nx">Optional[DeviceGatewayConfigArgs]</span> = None<span class="p">, </span><span class="nx">last_config_ack_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_config_send_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_error_status</span><span class="p">:</span> <span class="nx">Optional[DeviceLastErrorStatusArgs]</span> = None<span class="p">, </span><span class="nx">last_error_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_event_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_heartbeat_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_state_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">num_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">registry</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[DeviceStateArgs]</span> = None<span class="p">) -&gt;</span> Device</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">blocked</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeviceConfigArgs]]</span> = None<span class="p">, </span><span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeviceCredentialArgs]]</span> = None<span class="p">, </span><span class="nx">gateway_config</span><span class="p">:</span> <span class="nx">Optional[DeviceGatewayConfigArgs]</span> = None<span class="p">, </span><span class="nx">last_config_ack_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_config_send_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_error_statuses</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeviceLastErrorStatusArgs]]</span> = None<span class="p">, </span><span class="nx">last_error_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_event_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_heartbeat_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_state_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">num_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">registry</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">states</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeviceStateArgs]]</span> = None<span class="p">) -&gt;</span> Device</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDevice<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#DeviceState">DeviceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#Device">Device</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDevice<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iot?tab=doc#DeviceState">DeviceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iot?tab=doc#Device">Device</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1212,11 +1212,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_config_csharp">
-<a href="#state_config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
+        <span id="state_configs_csharp">
+<a href="#state_configs_csharp" style="color: inherit; text-decoration: inherit;">Configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deviceconfig">Device<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#deviceconfig">List&lt;Device<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The most recent device configuration, which is eventually sent from Cloud IoT Core to the device.
 {{% /md %}}</dd>
@@ -1269,11 +1269,11 @@ Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_lasterrorstatus_csharp">
-<a href="#state_lasterrorstatus_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Error<wbr>Status</a>
+        <span id="state_lasterrorstatuses_csharp">
+<a href="#state_lasterrorstatuses_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Error<wbr>Statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicelasterrorstatus">Device<wbr>Last<wbr>Error<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#devicelasterrorstatus">List&lt;Device<wbr>Last<wbr>Error<wbr>Status<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The error message of the most recent error, such as a failure to publish to Cloud Pub/Sub.
 {{% /md %}}</dd>
@@ -1381,11 +1381,11 @@ unique.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_state_csharp">
-<a href="#state_state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+        <span id="state_states_csharp">
+<a href="#state_states_csharp" style="color: inherit; text-decoration: inherit;">States</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicestate">Device<wbr>State<wbr>Args</a></span>
+        <span class="property-type"><a href="#devicestate">List&lt;Device<wbr>State<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The state most recently received from the device.
 {{% /md %}}</dd>
@@ -1410,11 +1410,11 @@ unique.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_config_go">
-<a href="#state_config_go" style="color: inherit; text-decoration: inherit;">Config</a>
+        <span id="state_configs_go">
+<a href="#state_configs_go" style="color: inherit; text-decoration: inherit;">Configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deviceconfig">Device<wbr>Config</a></span>
+        <span class="property-type"><a href="#deviceconfig">[]Device<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The most recent device configuration, which is eventually sent from Cloud IoT Core to the device.
 {{% /md %}}</dd>
@@ -1467,11 +1467,11 @@ Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_lasterrorstatus_go">
-<a href="#state_lasterrorstatus_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Error<wbr>Status</a>
+        <span id="state_lasterrorstatuses_go">
+<a href="#state_lasterrorstatuses_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Error<wbr>Statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicelasterrorstatus">Device<wbr>Last<wbr>Error<wbr>Status</a></span>
+        <span class="property-type"><a href="#devicelasterrorstatus">[]Device<wbr>Last<wbr>Error<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The error message of the most recent error, such as a failure to publish to Cloud Pub/Sub.
 {{% /md %}}</dd>
@@ -1579,11 +1579,11 @@ unique.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_state_go">
-<a href="#state_state_go" style="color: inherit; text-decoration: inherit;">State</a>
+        <span id="state_states_go">
+<a href="#state_states_go" style="color: inherit; text-decoration: inherit;">States</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicestate">Device<wbr>State<wbr>Type</a></span>
+        <span class="property-type"><a href="#devicestate">[]Device<wbr>State<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The state most recently received from the device.
 {{% /md %}}</dd>
@@ -1608,11 +1608,11 @@ unique.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_config_nodejs">
-<a href="#state_config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
+        <span id="state_configs_nodejs">
+<a href="#state_configs_nodejs" style="color: inherit; text-decoration: inherit;">configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deviceconfig">Device<wbr>Config</a></span>
+        <span class="property-type"><a href="#deviceconfig">Device<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}The most recent device configuration, which is eventually sent from Cloud IoT Core to the device.
 {{% /md %}}</dd>
@@ -1665,11 +1665,11 @@ Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_lasterrorstatus_nodejs">
-<a href="#state_lasterrorstatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Error<wbr>Status</a>
+        <span id="state_lasterrorstatuses_nodejs">
+<a href="#state_lasterrorstatuses_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Error<wbr>Statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicelasterrorstatus">Device<wbr>Last<wbr>Error<wbr>Status</a></span>
+        <span class="property-type"><a href="#devicelasterrorstatus">Device<wbr>Last<wbr>Error<wbr>Status[]</a></span>
     </dt>
     <dd>{{% md %}}The error message of the most recent error, such as a failure to publish to Cloud Pub/Sub.
 {{% /md %}}</dd>
@@ -1777,11 +1777,11 @@ unique.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_state_nodejs">
-<a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+        <span id="state_states_nodejs">
+<a href="#state_states_nodejs" style="color: inherit; text-decoration: inherit;">states</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicestate">Device<wbr>State</a></span>
+        <span class="property-type"><a href="#devicestate">Device<wbr>State[]</a></span>
     </dt>
     <dd>{{% md %}}The state most recently received from the device.
 {{% /md %}}</dd>
@@ -1806,11 +1806,11 @@ unique.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_config_python">
-<a href="#state_config_python" style="color: inherit; text-decoration: inherit;">config</a>
+        <span id="state_configs_python">
+<a href="#state_configs_python" style="color: inherit; text-decoration: inherit;">configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deviceconfig">Device<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#deviceconfig">Sequence[Device<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The most recent device configuration, which is eventually sent from Cloud IoT Core to the device.
 {{% /md %}}</dd>
@@ -1863,11 +1863,11 @@ Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_last_error_status_python">
-<a href="#state_last_error_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>error_<wbr>status</a>
+        <span id="state_last_error_statuses_python">
+<a href="#state_last_error_statuses_python" style="color: inherit; text-decoration: inherit;">last_<wbr>error_<wbr>statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicelasterrorstatus">Device<wbr>Last<wbr>Error<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#devicelasterrorstatus">Sequence[Device<wbr>Last<wbr>Error<wbr>Status<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The error message of the most recent error, such as a failure to publish to Cloud Pub/Sub.
 {{% /md %}}</dd>
@@ -1975,11 +1975,11 @@ unique.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_state_python">
-<a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
+        <span id="state_states_python">
+<a href="#state_states_python" style="color: inherit; text-decoration: inherit;">states</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicestate">Device<wbr>State<wbr>Args</a></span>
+        <span class="property-type"><a href="#devicestate">Sequence[Device<wbr>State<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The state most recently received from the device.
 {{% /md %}}</dd>
@@ -2005,7 +2005,7 @@ unique.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#DeviceConfigOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iot?tab=doc#DeviceConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iot.Outputs.DeviceConfig.html">output</a> API doc for this type.
@@ -2211,7 +2211,7 @@ unique.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#DeviceCredentialArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#DeviceCredentialOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iot?tab=doc#DeviceCredentialArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iot?tab=doc#DeviceCredentialOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iot.Inputs.DeviceCredentialArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iot.Outputs.DeviceCredential.html">output</a> API doc for this type.
@@ -2349,7 +2349,7 @@ Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#DeviceCredentialPublicKeyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#DeviceCredentialPublicKeyOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iot?tab=doc#DeviceCredentialPublicKeyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iot?tab=doc#DeviceCredentialPublicKeyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iot.Inputs.DeviceCredentialPublicKeyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iot.Outputs.DeviceCredentialPublicKey.html">output</a> API doc for this type.
@@ -2487,7 +2487,7 @@ Possible values are `RSA_PEM`, `RSA_X509_PEM`, `ES256_PEM`, and `ES256_X509_PEM`
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#DeviceGatewayConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#DeviceGatewayConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iot?tab=doc#DeviceGatewayConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iot?tab=doc#DeviceGatewayConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iot.Inputs.DeviceGatewayConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iot.Outputs.DeviceGatewayConfig.html">output</a> API doc for this type.
@@ -2729,7 +2729,7 @@ The most recent time at which the device accessed the gateway specified in last_
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#DeviceLastErrorStatusOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iot?tab=doc#DeviceLastErrorStatusOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iot.Outputs.DeviceLastErrorStatus.html">output</a> API doc for this type.
@@ -2895,7 +2895,7 @@ The most recent time at which the device accessed the gateway specified in last_
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#DeviceStateTypeOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iot?tab=doc#DeviceStateTypeOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iot.Outputs.DeviceState.html">output</a> API doc for this type.

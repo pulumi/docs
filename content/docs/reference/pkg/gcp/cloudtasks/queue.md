@@ -23,11 +23,11 @@ A named resource to which messages are sent by publishers.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/cloudtasks/#pulumi_gcp.cloudtasks.Queue">Queue</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_engine_routing_override</span><span class="p">:</span> <span class="nx">Optional[QueueAppEngineRoutingOverrideArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rate_limits</span><span class="p">:</span> <span class="nx">Optional[QueueRateLimitsArgs]</span> = None<span class="p">, </span><span class="nx">retry_config</span><span class="p">:</span> <span class="nx">Optional[QueueRetryConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/cloudtasks/#pulumi_gcp.cloudtasks.Queue">Queue</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_engine_routing_override</span><span class="p">:</span> <span class="nx">Optional[QueueAppEngineRoutingOverrideArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rate_limits</span><span class="p">:</span> <span class="nx">Optional[QueueRateLimitsArgs]</span> = None<span class="p">, </span><span class="nx">retry_config</span><span class="p">:</span> <span class="nx">Optional[QueueRetryConfigArgs]</span> = None<span class="p">, </span><span class="nx">stackdriver_logging_config</span><span class="p">:</span> <span class="nx">Optional[QueueStackdriverLoggingConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudtasks?tab=doc#Queue">NewQueue</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudtasks?tab=doc#QueueArgs">QueueArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudtasks?tab=doc#Queue">Queue</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudtasks?tab=doc#Queue">NewQueue</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudtasks?tab=doc#QueueArgs">QueueArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudtasks?tab=doc#Queue">Queue</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -101,7 +101,7 @@ A named resource to which messages are sent by publishers.
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -121,7 +121,7 @@ A named resource to which messages are sent by publishers.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudtasks?tab=doc#QueueArgs">QueueArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudtasks?tab=doc#QueueArgs">QueueArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -131,7 +131,7 @@ A named resource to which messages are sent by publishers.
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -272,6 +272,18 @@ Structure is documented below.
 Structure is documented below.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stackdriverloggingconfig_csharp">
+<a href="#stackdriverloggingconfig_csharp" style="color: inherit; text-decoration: inherit;">Stackdriver<wbr>Logging<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#queuestackdriverloggingconfig">Queue<wbr>Stackdriver<wbr>Logging<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration options for writing logs to Stackdriver Logging.
+Structure is documented below.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -353,6 +365,18 @@ Structure is documented below.
         <span class="property-type"><a href="#queueretryconfig">Queue<wbr>Retry<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Settings that determine the retry behavior.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stackdriverloggingconfig_go">
+<a href="#stackdriverloggingconfig_go" style="color: inherit; text-decoration: inherit;">Stackdriver<wbr>Logging<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#queuestackdriverloggingconfig">Queue<wbr>Stackdriver<wbr>Logging<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration options for writing logs to Stackdriver Logging.
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -440,6 +464,18 @@ Structure is documented below.
 Structure is documented below.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stackdriverloggingconfig_nodejs">
+<a href="#stackdriverloggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">stackdriver<wbr>Logging<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#queuestackdriverloggingconfig">Queue<wbr>Stackdriver<wbr>Logging<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration options for writing logs to Stackdriver Logging.
+Structure is documented below.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -521,6 +557,18 @@ Structure is documented below.
         <span class="property-type"><a href="#queueretryconfig">Queue<wbr>Retry<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings that determine the retry behavior.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stackdriver_logging_config_python">
+<a href="#stackdriver_logging_config_python" style="color: inherit; text-decoration: inherit;">stackdriver_<wbr>logging_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#queuestackdriverloggingconfig">Queue<wbr>Stackdriver<wbr>Logging<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration options for writing logs to Stackdriver Logging.
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -623,11 +671,11 @@ Get an existing Queue resource's state with the given name, ID, and optional ext
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_engine_routing_override</span><span class="p">:</span> <span class="nx">Optional[QueueAppEngineRoutingOverrideArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rate_limits</span><span class="p">:</span> <span class="nx">Optional[QueueRateLimitsArgs]</span> = None<span class="p">, </span><span class="nx">retry_config</span><span class="p">:</span> <span class="nx">Optional[QueueRetryConfigArgs]</span> = None<span class="p">) -&gt;</span> Queue</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_engine_routing_override</span><span class="p">:</span> <span class="nx">Optional[QueueAppEngineRoutingOverrideArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rate_limits</span><span class="p">:</span> <span class="nx">Optional[QueueRateLimitsArgs]</span> = None<span class="p">, </span><span class="nx">retry_config</span><span class="p">:</span> <span class="nx">Optional[QueueRetryConfigArgs]</span> = None<span class="p">, </span><span class="nx">stackdriver_logging_config</span><span class="p">:</span> <span class="nx">Optional[QueueStackdriverLoggingConfigArgs]</span> = None<span class="p">) -&gt;</span> Queue</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetQueue<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudtasks?tab=doc#QueueState">QueueState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudtasks?tab=doc#Queue">Queue</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetQueue<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudtasks?tab=doc#QueueState">QueueState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudtasks?tab=doc#Queue">Queue</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -814,6 +862,18 @@ Structure is documented below.
 Structure is documented below.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_stackdriverloggingconfig_csharp">
+<a href="#state_stackdriverloggingconfig_csharp" style="color: inherit; text-decoration: inherit;">Stackdriver<wbr>Logging<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#queuestackdriverloggingconfig">Queue<wbr>Stackdriver<wbr>Logging<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration options for writing logs to Stackdriver Logging.
+Structure is documented below.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -895,6 +955,18 @@ Structure is documented below.
         <span class="property-type"><a href="#queueretryconfig">Queue<wbr>Retry<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Settings that determine the retry behavior.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_stackdriverloggingconfig_go">
+<a href="#state_stackdriverloggingconfig_go" style="color: inherit; text-decoration: inherit;">Stackdriver<wbr>Logging<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#queuestackdriverloggingconfig">Queue<wbr>Stackdriver<wbr>Logging<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration options for writing logs to Stackdriver Logging.
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -982,6 +1054,18 @@ Structure is documented below.
 Structure is documented below.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_stackdriverloggingconfig_nodejs">
+<a href="#state_stackdriverloggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">stackdriver<wbr>Logging<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#queuestackdriverloggingconfig">Queue<wbr>Stackdriver<wbr>Logging<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration options for writing logs to Stackdriver Logging.
+Structure is documented below.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1066,6 +1150,18 @@ Structure is documented below.
 Structure is documented below.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_stackdriver_logging_config_python">
+<a href="#state_stackdriver_logging_config_python" style="color: inherit; text-decoration: inherit;">stackdriver_<wbr>logging_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#queuestackdriverloggingconfig">Queue<wbr>Stackdriver<wbr>Logging<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration options for writing logs to Stackdriver Logging.
+Structure is documented below.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1087,7 +1183,7 @@ Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudtasks?tab=doc#QueueAppEngineRoutingOverrideArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudtasks?tab=doc#QueueAppEngineRoutingOverrideOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudtasks?tab=doc#QueueAppEngineRoutingOverrideArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudtasks?tab=doc#QueueAppEngineRoutingOverrideOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudTasks.Inputs.QueueAppEngineRoutingOverrideArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudTasks.Outputs.QueueAppEngineRoutingOverride.html">output</a> API doc for this type.
@@ -1325,7 +1421,7 @@ By default, the task is sent to the version which is the default version when th
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudtasks?tab=doc#QueueRateLimitsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudtasks?tab=doc#QueueRateLimitsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudtasks?tab=doc#QueueRateLimitsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudtasks?tab=doc#QueueRateLimitsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudTasks.Inputs.QueueRateLimitsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudTasks.Outputs.QueueRateLimits.html">output</a> API doc for this type.
@@ -1539,7 +1635,7 @@ If unspecified when the queue is created, Cloud Tasks will pick the default.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudtasks?tab=doc#QueueRetryConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudtasks?tab=doc#QueueRetryConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudtasks?tab=doc#QueueRetryConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudtasks?tab=doc#QueueRetryConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudTasks.Inputs.QueueRetryConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudTasks.Outputs.QueueRetryConfig.html">output</a> API doc for this type.
@@ -1862,6 +1958,104 @@ If zero, then the task age is unlimited.
     <dd>{{% md %}}A task will be scheduled for retry between minBackoff and
 maxBackoff duration after it fails, if the queue's RetryConfig
 specifies that the task should be retried.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="queuestackdriverloggingconfig">Queue<wbr>Stackdriver<wbr>Logging<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#QueueStackdriverLoggingConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#QueueStackdriverLoggingConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudtasks?tab=doc#QueueStackdriverLoggingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudtasks?tab=doc#QueueStackdriverLoggingConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudTasks.Inputs.QueueStackdriverLoggingConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudTasks.Outputs.QueueStackdriverLoggingConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="samplingratio_csharp">
+<a href="#samplingratio_csharp" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Ratio</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the fraction of operations to write to Stackdriver Logging.
+This field may contain any value between 0.0 and 1.0, inclusive. 0.0 is the
+default and means that no operations are logged.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="samplingratio_go">
+<a href="#samplingratio_go" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Ratio</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the fraction of operations to write to Stackdriver Logging.
+This field may contain any value between 0.0 and 1.0, inclusive. 0.0 is the
+default and means that no operations are logged.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="samplingratio_nodejs">
+<a href="#samplingratio_nodejs" style="color: inherit; text-decoration: inherit;">sampling<wbr>Ratio</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the fraction of operations to write to Stackdriver Logging.
+This field may contain any value between 0.0 and 1.0, inclusive. 0.0 is the
+default and means that no operations are logged.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sampling_ratio_python">
+<a href="#sampling_ratio_python" style="color: inherit; text-decoration: inherit;">sampling_<wbr>ratio</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the fraction of operations to write to Stackdriver Logging.
+This field may contain any value between 0.0 and 1.0, inclusive. 0.0 is the
+default and means that no operations are logged.
 {{% /md %}}</dd>
 
 </dl>

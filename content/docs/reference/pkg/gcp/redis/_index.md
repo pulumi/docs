@@ -28,7 +28,7 @@ Explore the resources and functions of the redis module in the GCP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.25.0</dd>
+	<dd>4.0.0</dd>
 </dl>
 
 
@@ -39,7 +39,7 @@ Explore the resources and functions of the redis module in the GCP package.
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Redis.html" title="Pulumi.Gcp.Redis">Pulumi.Gcp.Redis</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/redis?tab=doc#" title="gcp/redis">gcp/redis</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/redis?tab=doc#" title="gcp/redis">gcp/redis</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/redis/#" title="@pulumi/gcp/redis">@pulumi/gcp/redis</a></dd>

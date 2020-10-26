@@ -38,7 +38,7 @@ To get more information about Entry, see:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datacatalog?tab=doc#Entry">NewEntry</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datacatalog?tab=doc#EntryArgs">EntryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datacatalog?tab=doc#Entry">Entry</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/datacatalog?tab=doc#Entry">NewEntry</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/datacatalog?tab=doc#EntryArgs">EntryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/datacatalog?tab=doc#Entry">Entry</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -112,7 +112,7 @@ To get more information about Entry, see:
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -132,7 +132,7 @@ To get more information about Entry, see:
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datacatalog?tab=doc#EntryArgs">EntryArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/datacatalog?tab=doc#EntryArgs">EntryArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -142,7 +142,7 @@ To get more information about Entry, see:
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -759,11 +759,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="bigquerydateshardedspec_csharp">
-<a href="#bigquerydateshardedspec_csharp" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Date<wbr>Sharded<wbr>Spec</a>
+        <span id="bigquerydateshardedspecs_csharp">
+<a href="#bigquerydateshardedspecs_csharp" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Date<wbr>Sharded<wbr>Specs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerydateshardedspec">Entry<wbr>Bigquery<wbr>Date<wbr>Sharded<wbr>Spec</a></span>
+        <span class="property-type"><a href="#entrybigquerydateshardedspec">List&lt;Entry<wbr>Bigquery<wbr>Date<wbr>Sharded<wbr>Spec&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specification for a group of BigQuery tables with name pattern [prefix]YYYYMMDD. Context:
 https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding.
@@ -771,11 +771,11 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
 
     <dt class="property-"
             title="">
-        <span id="bigquerytablespec_csharp">
-<a href="#bigquerytablespec_csharp" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Table<wbr>Spec</a>
+        <span id="bigquerytablespecs_csharp">
+<a href="#bigquerytablespecs_csharp" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Table<wbr>Specs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerytablespec">Entry<wbr>Bigquery<wbr>Table<wbr>Spec</a></span>
+        <span class="property-type"><a href="#entrybigquerytablespec">List&lt;Entry<wbr>Bigquery<wbr>Table<wbr>Spec&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specification that applies to a BigQuery table. This is only valid on entries of type TABLE.
 {{% /md %}}</dd>
@@ -823,11 +823,11 @@ child resources may not actually be stored in the location in this name.
 
     <dt class="property-"
             title="">
-        <span id="bigquerydateshardedspec_go">
-<a href="#bigquerydateshardedspec_go" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Date<wbr>Sharded<wbr>Spec</a>
+        <span id="bigquerydateshardedspecs_go">
+<a href="#bigquerydateshardedspecs_go" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Date<wbr>Sharded<wbr>Specs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerydateshardedspec">Entry<wbr>Bigquery<wbr>Date<wbr>Sharded<wbr>Spec</a></span>
+        <span class="property-type"><a href="#entrybigquerydateshardedspec">[]Entry<wbr>Bigquery<wbr>Date<wbr>Sharded<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}Specification for a group of BigQuery tables with name pattern [prefix]YYYYMMDD. Context:
 https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding.
@@ -835,11 +835,11 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
 
     <dt class="property-"
             title="">
-        <span id="bigquerytablespec_go">
-<a href="#bigquerytablespec_go" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Table<wbr>Spec</a>
+        <span id="bigquerytablespecs_go">
+<a href="#bigquerytablespecs_go" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Table<wbr>Specs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerytablespec">Entry<wbr>Bigquery<wbr>Table<wbr>Spec</a></span>
+        <span class="property-type"><a href="#entrybigquerytablespec">[]Entry<wbr>Bigquery<wbr>Table<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}Specification that applies to a BigQuery table. This is only valid on entries of type TABLE.
 {{% /md %}}</dd>
@@ -887,11 +887,11 @@ child resources may not actually be stored in the location in this name.
 
     <dt class="property-"
             title="">
-        <span id="bigquerydateshardedspec_nodejs">
-<a href="#bigquerydateshardedspec_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Date<wbr>Sharded<wbr>Spec</a>
+        <span id="bigquerydateshardedspecs_nodejs">
+<a href="#bigquerydateshardedspecs_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Date<wbr>Sharded<wbr>Specs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerydateshardedspec">Entry<wbr>Bigquery<wbr>Date<wbr>Sharded<wbr>Spec</a></span>
+        <span class="property-type"><a href="#entrybigquerydateshardedspec">Entry<wbr>Bigquery<wbr>Date<wbr>Sharded<wbr>Spec[]</a></span>
     </dt>
     <dd>{{% md %}}Specification for a group of BigQuery tables with name pattern [prefix]YYYYMMDD. Context:
 https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding.
@@ -899,11 +899,11 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
 
     <dt class="property-"
             title="">
-        <span id="bigquerytablespec_nodejs">
-<a href="#bigquerytablespec_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Table<wbr>Spec</a>
+        <span id="bigquerytablespecs_nodejs">
+<a href="#bigquerytablespecs_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Table<wbr>Specs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerytablespec">Entry<wbr>Bigquery<wbr>Table<wbr>Spec</a></span>
+        <span class="property-type"><a href="#entrybigquerytablespec">Entry<wbr>Bigquery<wbr>Table<wbr>Spec[]</a></span>
     </dt>
     <dd>{{% md %}}Specification that applies to a BigQuery table. This is only valid on entries of type TABLE.
 {{% /md %}}</dd>
@@ -951,11 +951,11 @@ child resources may not actually be stored in the location in this name.
 
     <dt class="property-"
             title="">
-        <span id="bigquery_date_sharded_spec_python">
-<a href="#bigquery_date_sharded_spec_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>date_<wbr>sharded_<wbr>spec</a>
+        <span id="bigquery_date_sharded_specs_python">
+<a href="#bigquery_date_sharded_specs_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>date_<wbr>sharded_<wbr>specs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerydateshardedspec">Entry<wbr>Bigquery<wbr>Date<wbr>Sharded<wbr>Spec</a></span>
+        <span class="property-type"><a href="#entrybigquerydateshardedspec">Sequence[Entry<wbr>Bigquery<wbr>Date<wbr>Sharded<wbr>Spec]</a></span>
     </dt>
     <dd>{{% md %}}Specification for a group of BigQuery tables with name pattern [prefix]YYYYMMDD. Context:
 https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding.
@@ -963,11 +963,11 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
 
     <dt class="property-"
             title="">
-        <span id="bigquery_table_spec_python">
-<a href="#bigquery_table_spec_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>table_<wbr>spec</a>
+        <span id="bigquery_table_specs_python">
+<a href="#bigquery_table_specs_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>table_<wbr>specs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerytablespec">Entry<wbr>Bigquery<wbr>Table<wbr>Spec</a></span>
+        <span class="property-type"><a href="#entrybigquerytablespec">Sequence[Entry<wbr>Bigquery<wbr>Table<wbr>Spec]</a></span>
     </dt>
     <dd>{{% md %}}Specification that applies to a BigQuery table. This is only valid on entries of type TABLE.
 {{% /md %}}</dd>
@@ -1026,11 +1026,11 @@ Get an existing Entry resource's state with the given name, ID, and optional ext
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bigquery_date_sharded_spec</span><span class="p">:</span> <span class="nx">Optional[EntryBigqueryDateShardedSpecArgs]</span> = None<span class="p">, </span><span class="nx">bigquery_table_spec</span><span class="p">:</span> <span class="nx">Optional[EntryBigqueryTableSpecArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entry_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entry_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gcs_fileset_spec</span><span class="p">:</span> <span class="nx">Optional[EntryGcsFilesetSpecArgs]</span> = None<span class="p">, </span><span class="nx">integrated_system</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">linked_resource</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_specified_system</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_specified_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Entry</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bigquery_date_sharded_specs</span><span class="p">:</span> <span class="nx">Optional[Sequence[EntryBigqueryDateShardedSpecArgs]]</span> = None<span class="p">, </span><span class="nx">bigquery_table_specs</span><span class="p">:</span> <span class="nx">Optional[Sequence[EntryBigqueryTableSpecArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entry_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entry_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gcs_fileset_spec</span><span class="p">:</span> <span class="nx">Optional[EntryGcsFilesetSpecArgs]</span> = None<span class="p">, </span><span class="nx">integrated_system</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">linked_resource</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_specified_system</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_specified_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Entry</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEntry<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datacatalog?tab=doc#EntryState">EntryState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datacatalog?tab=doc#Entry">Entry</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEntry<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/datacatalog?tab=doc#EntryState">EntryState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/datacatalog?tab=doc#Entry">Entry</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1142,11 +1142,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_bigquerydateshardedspec_csharp">
-<a href="#state_bigquerydateshardedspec_csharp" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Date<wbr>Sharded<wbr>Spec</a>
+        <span id="state_bigquerydateshardedspecs_csharp">
+<a href="#state_bigquerydateshardedspecs_csharp" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Date<wbr>Sharded<wbr>Specs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerydateshardedspec">Entry<wbr>Bigquery<wbr>Date<wbr>Sharded<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#entrybigquerydateshardedspec">List&lt;Entry<wbr>Bigquery<wbr>Date<wbr>Sharded<wbr>Spec<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specification for a group of BigQuery tables with name pattern [prefix]YYYYMMDD. Context:
 https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding.
@@ -1154,11 +1154,11 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_bigquerytablespec_csharp">
-<a href="#state_bigquerytablespec_csharp" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Table<wbr>Spec</a>
+        <span id="state_bigquerytablespecs_csharp">
+<a href="#state_bigquerytablespecs_csharp" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Table<wbr>Specs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerytablespec">Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#entrybigquerytablespec">List&lt;Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specification that applies to a BigQuery table. This is only valid on entries of type TABLE.
 {{% /md %}}</dd>
@@ -1324,11 +1324,11 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_bigquerydateshardedspec_go">
-<a href="#state_bigquerydateshardedspec_go" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Date<wbr>Sharded<wbr>Spec</a>
+        <span id="state_bigquerydateshardedspecs_go">
+<a href="#state_bigquerydateshardedspecs_go" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Date<wbr>Sharded<wbr>Specs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerydateshardedspec">Entry<wbr>Bigquery<wbr>Date<wbr>Sharded<wbr>Spec</a></span>
+        <span class="property-type"><a href="#entrybigquerydateshardedspec">[]Entry<wbr>Bigquery<wbr>Date<wbr>Sharded<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}Specification for a group of BigQuery tables with name pattern [prefix]YYYYMMDD. Context:
 https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding.
@@ -1336,11 +1336,11 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_bigquerytablespec_go">
-<a href="#state_bigquerytablespec_go" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Table<wbr>Spec</a>
+        <span id="state_bigquerytablespecs_go">
+<a href="#state_bigquerytablespecs_go" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Table<wbr>Specs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerytablespec">Entry<wbr>Bigquery<wbr>Table<wbr>Spec</a></span>
+        <span class="property-type"><a href="#entrybigquerytablespec">[]Entry<wbr>Bigquery<wbr>Table<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}Specification that applies to a BigQuery table. This is only valid on entries of type TABLE.
 {{% /md %}}</dd>
@@ -1506,11 +1506,11 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_bigquerydateshardedspec_nodejs">
-<a href="#state_bigquerydateshardedspec_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Date<wbr>Sharded<wbr>Spec</a>
+        <span id="state_bigquerydateshardedspecs_nodejs">
+<a href="#state_bigquerydateshardedspecs_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Date<wbr>Sharded<wbr>Specs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerydateshardedspec">Entry<wbr>Bigquery<wbr>Date<wbr>Sharded<wbr>Spec</a></span>
+        <span class="property-type"><a href="#entrybigquerydateshardedspec">Entry<wbr>Bigquery<wbr>Date<wbr>Sharded<wbr>Spec[]</a></span>
     </dt>
     <dd>{{% md %}}Specification for a group of BigQuery tables with name pattern [prefix]YYYYMMDD. Context:
 https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding.
@@ -1518,11 +1518,11 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_bigquerytablespec_nodejs">
-<a href="#state_bigquerytablespec_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Table<wbr>Spec</a>
+        <span id="state_bigquerytablespecs_nodejs">
+<a href="#state_bigquerytablespecs_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Table<wbr>Specs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerytablespec">Entry<wbr>Bigquery<wbr>Table<wbr>Spec</a></span>
+        <span class="property-type"><a href="#entrybigquerytablespec">Entry<wbr>Bigquery<wbr>Table<wbr>Spec[]</a></span>
     </dt>
     <dd>{{% md %}}Specification that applies to a BigQuery table. This is only valid on entries of type TABLE.
 {{% /md %}}</dd>
@@ -1688,11 +1688,11 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_bigquery_date_sharded_spec_python">
-<a href="#state_bigquery_date_sharded_spec_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>date_<wbr>sharded_<wbr>spec</a>
+        <span id="state_bigquery_date_sharded_specs_python">
+<a href="#state_bigquery_date_sharded_specs_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>date_<wbr>sharded_<wbr>specs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerydateshardedspec">Entry<wbr>Bigquery<wbr>Date<wbr>Sharded<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#entrybigquerydateshardedspec">Sequence[Entry<wbr>Bigquery<wbr>Date<wbr>Sharded<wbr>Spec<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specification for a group of BigQuery tables with name pattern [prefix]YYYYMMDD. Context:
 https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding.
@@ -1700,11 +1700,11 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_bigquery_table_spec_python">
-<a href="#state_bigquery_table_spec_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>table_<wbr>spec</a>
+        <span id="state_bigquery_table_specs_python">
+<a href="#state_bigquery_table_specs_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>table_<wbr>specs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerytablespec">Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#entrybigquerytablespec">Sequence[Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specification that applies to a BigQuery table. This is only valid on entries of type TABLE.
 {{% /md %}}</dd>
@@ -1882,7 +1882,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datacatalog?tab=doc#EntryBigqueryDateShardedSpecOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/datacatalog?tab=doc#EntryBigqueryDateShardedSpecOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataCatalog.Outputs.EntryBigqueryDateShardedSpec.html">output</a> API doc for this type.
@@ -2048,7 +2048,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datacatalog?tab=doc#EntryBigqueryTableSpecOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/datacatalog?tab=doc#EntryBigqueryTableSpecOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataCatalog.Outputs.EntryBigqueryTableSpec.html">output</a> API doc for this type.
@@ -2072,21 +2072,21 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tablespec_csharp">
-<a href="#tablespec_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Spec</a>
+        <span id="tablespecs_csharp">
+<a href="#tablespecs_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Specs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerytablespectablespec">Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>Table<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#entrybigquerytablespectablespec">List&lt;Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>Table<wbr>Spec<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="viewspec_csharp">
-<a href="#viewspec_csharp" style="color: inherit; text-decoration: inherit;">View<wbr>Spec</a>
+        <span id="viewspecs_csharp">
+<a href="#viewspecs_csharp" style="color: inherit; text-decoration: inherit;">View<wbr>Specs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerytablespecviewspec">Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>View<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#entrybigquerytablespecviewspec">List&lt;Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>View<wbr>Spec<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2109,21 +2109,21 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tablespec_go">
-<a href="#tablespec_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Spec</a>
+        <span id="tablespecs_go">
+<a href="#tablespecs_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Specs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerytablespectablespec">Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>Table<wbr>Spec</a></span>
+        <span class="property-type"><a href="#entrybigquerytablespectablespec">[]Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>Table<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="viewspec_go">
-<a href="#viewspec_go" style="color: inherit; text-decoration: inherit;">View<wbr>Spec</a>
+        <span id="viewspecs_go">
+<a href="#viewspecs_go" style="color: inherit; text-decoration: inherit;">View<wbr>Specs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerytablespecviewspec">Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>View<wbr>Spec</a></span>
+        <span class="property-type"><a href="#entrybigquerytablespecviewspec">[]Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>View<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2146,21 +2146,21 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tablespec_nodejs">
-<a href="#tablespec_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Spec</a>
+        <span id="tablespecs_nodejs">
+<a href="#tablespecs_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Specs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerytablespectablespec">Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>Table<wbr>Spec</a></span>
+        <span class="property-type"><a href="#entrybigquerytablespectablespec">Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>Table<wbr>Spec[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="viewspec_nodejs">
-<a href="#viewspec_nodejs" style="color: inherit; text-decoration: inherit;">view<wbr>Spec</a>
+        <span id="viewspecs_nodejs">
+<a href="#viewspecs_nodejs" style="color: inherit; text-decoration: inherit;">view<wbr>Specs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerytablespecviewspec">Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>View<wbr>Spec</a></span>
+        <span class="property-type"><a href="#entrybigquerytablespecviewspec">Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>View<wbr>Spec[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2183,21 +2183,21 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 
     <dt class="property-optional"
             title="Optional">
-        <span id="table_spec_python">
-<a href="#table_spec_python" style="color: inherit; text-decoration: inherit;">table_<wbr>spec</a>
+        <span id="table_specs_python">
+<a href="#table_specs_python" style="color: inherit; text-decoration: inherit;">table_<wbr>specs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerytablespectablespec">Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>Table<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#entrybigquerytablespectablespec">Sequence[Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>Table<wbr>Spec<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="view_spec_python">
-<a href="#view_spec_python" style="color: inherit; text-decoration: inherit;">view_<wbr>spec</a>
+        <span id="view_specs_python">
+<a href="#view_specs_python" style="color: inherit; text-decoration: inherit;">view_<wbr>specs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerytablespecviewspec">Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>View<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#entrybigquerytablespecviewspec">Sequence[Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>View<wbr>Spec<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2214,7 +2214,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datacatalog?tab=doc#EntryBigqueryTableSpecTableSpecOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/datacatalog?tab=doc#EntryBigqueryTableSpecTableSpecOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataCatalog.Outputs.EntryBigqueryTableSpecTableSpec.html">output</a> API doc for this type.
@@ -2300,7 +2300,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datacatalog?tab=doc#EntryBigqueryTableSpecViewSpecOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/datacatalog?tab=doc#EntryBigqueryTableSpecViewSpecOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataCatalog.Outputs.EntryBigqueryTableSpecViewSpec.html">output</a> API doc for this type.
@@ -2386,7 +2386,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datacatalog?tab=doc#EntryGcsFilesetSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datacatalog?tab=doc#EntryGcsFilesetSpecOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/datacatalog?tab=doc#EntryGcsFilesetSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/datacatalog?tab=doc#EntryGcsFilesetSpecOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataCatalog.Inputs.EntryGcsFilesetSpecArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataCatalog.Outputs.EntryGcsFilesetSpec.html">output</a> API doc for this type.
@@ -2568,7 +2568,7 @@ Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datacatalog?tab=doc#EntryGcsFilesetSpecSampleGcsFileSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datacatalog?tab=doc#EntryGcsFilesetSpecSampleGcsFileSpecOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/datacatalog?tab=doc#EntryGcsFilesetSpecSampleGcsFileSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/datacatalog?tab=doc#EntryGcsFilesetSpecSampleGcsFileSpecOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataCatalog.Inputs.EntryGcsFilesetSpecSampleGcsFileSpecArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataCatalog.Outputs.EntryGcsFilesetSpecSampleGcsFileSpec.html">output</a> API doc for this type.

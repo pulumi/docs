@@ -35,7 +35,7 @@ To get more information about GuestPolicies, see:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPolicies">NewGuestPolicies</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesArgs">GuestPoliciesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPolicies">GuestPolicies</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPolicies">NewGuestPolicies</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesArgs">GuestPoliciesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPolicies">GuestPolicies</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -109,7 +109,7 @@ To get more information about GuestPolicies, see:
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -129,7 +129,7 @@ To get more information about GuestPolicies, see:
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesArgs">GuestPoliciesArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesArgs">GuestPoliciesArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -139,7 +139,7 @@ To get more information about GuestPolicies, see:
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -903,7 +903,7 @@ Get an existing GuestPolicies resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGuestPolicies<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesState">GuestPoliciesState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPolicies">GuestPolicies</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGuestPolicies<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesState">GuestPoliciesState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPolicies">GuestPolicies</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1631,7 +1631,7 @@ Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesAssignmentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesAssignmentOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesAssignmentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesAssignmentOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesAssignmentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesAssignment.html">output</a> API doc for this type.
@@ -1945,7 +1945,7 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesAssignmentGroupLabelArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesAssignmentGroupLabelOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesAssignmentGroupLabelArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesAssignmentGroupLabelOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesAssignmentGroupLabelArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesAssignmentGroupLabel.html">output</a> API doc for this type.
@@ -2035,7 +2035,7 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesAssignmentOsTypeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesAssignmentOsTypeOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesAssignmentOsTypeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesAssignmentOsTypeOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesAssignmentOsTypeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesAssignmentOsType.html">output</a> API doc for this type.
@@ -2213,7 +2213,7 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesPackageArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesPackageOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesPackageArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesPackageOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesPackageArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesPackage.html">output</a> API doc for this type.
@@ -2451,7 +2451,7 @@ Possible values are `ANY`, `APT`, `YUM`, `ZYPPER`, and `GOO`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesPackageRepositoryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesPackageRepositoryOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesPackageRepositoryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesPackageRepositoryOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesPackageRepositoryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesPackageRepository.html">output</a> API doc for this type.
@@ -2689,7 +2689,7 @@ Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesPackageRepositoryAptArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesPackageRepositoryAptOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesPackageRepositoryAptArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesPackageRepositoryAptOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesPackageRepositoryAptArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesPackageRepositoryApt.html">output</a> API doc for this type.
@@ -2967,7 +2967,7 @@ Possible values are `DEB` and `DEB_SRC`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesPackageRepositoryGooArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesPackageRepositoryGooOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesPackageRepositoryGooArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesPackageRepositoryGooOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesPackageRepositoryGooArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesPackageRepositoryGoo.html">output</a> API doc for this type.
@@ -3113,7 +3113,7 @@ could potentially have conflicting assignments.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesPackageRepositoryYumArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesPackageRepositoryYumOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesPackageRepositoryYumArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesPackageRepositoryYumOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesPackageRepositoryYumArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesPackageRepositoryYum.html">output</a> API doc for this type.
@@ -3339,7 +3339,7 @@ Artifacts in a recipe cannot have the same id.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesPackageRepositoryZypperArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesPackageRepositoryZypperOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesPackageRepositoryZypperArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesPackageRepositoryZypperOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesPackageRepositoryZypperArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesPackageRepositoryZypper.html">output</a> API doc for this type.
@@ -3565,7 +3565,7 @@ Artifacts in a recipe cannot have the same id.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesRecipeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesRecipe.html">output</a> API doc for this type.
@@ -3931,7 +3931,7 @@ Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeArtifactArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeArtifactOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeArtifactArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeArtifactOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesRecipeArtifactArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesRecipeArtifact.html">output</a> API doc for this type.
@@ -4173,7 +4173,7 @@ Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeArtifactGcsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeArtifactGcsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeArtifactGcsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeArtifactGcsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesRecipeArtifactGcsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesRecipeArtifactGcs.html">output</a> API doc for this type.
@@ -4363,7 +4363,7 @@ this value would be foo/bar.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeArtifactRemoteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeArtifactRemoteOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeArtifactRemoteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeArtifactRemoteOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesRecipeArtifactRemoteArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesRecipeArtifactRemote.html">output</a> API doc for this type.
@@ -4505,7 +4505,7 @@ of the steps.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesRecipeInstallStepArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesRecipeInstallStep.html">output</a> API doc for this type.
@@ -4887,7 +4887,7 @@ Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepArchiveExtractionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepArchiveExtractionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepArchiveExtractionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepArchiveExtractionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesRecipeInstallStepArchiveExtractionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesRecipeInstallStepArchiveExtraction.html">output</a> API doc for this type.
@@ -5069,7 +5069,7 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepDpkgInstallationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepDpkgInstallationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepDpkgInstallationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepDpkgInstallationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesRecipeInstallStepDpkgInstallationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesRecipeInstallStepDpkgInstallation.html">output</a> API doc for this type.
@@ -5159,7 +5159,7 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepFileCopyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepFileCopyOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepFileCopyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepFileCopyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesRecipeInstallStepFileCopyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesRecipeInstallStepFileCopy.html">output</a> API doc for this type.
@@ -5405,7 +5405,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepFileExecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepFileExecOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepFileExecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepFileExecOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesRecipeInstallStepFileExecArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesRecipeInstallStepFileExec.html">output</a> API doc for this type.
@@ -5627,7 +5627,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepMsiInstallationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepMsiInstallationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepMsiInstallationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepMsiInstallationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesRecipeInstallStepMsiInstallationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesRecipeInstallStepMsiInstallation.html">output</a> API doc for this type.
@@ -5805,7 +5805,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepRpmInstallationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepRpmInstallationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepRpmInstallationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepRpmInstallationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesRecipeInstallStepRpmInstallationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesRecipeInstallStepRpmInstallation.html">output</a> API doc for this type.
@@ -5895,7 +5895,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepScriptRunArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepScriptRunOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepScriptRunArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepScriptRunOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesRecipeInstallStepScriptRunArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesRecipeInstallStepScriptRun.html">output</a> API doc for this type.
@@ -6081,7 +6081,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesRecipeUpdateStepArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesRecipeUpdateStep.html">output</a> API doc for this type.
@@ -6463,7 +6463,7 @@ Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepArchiveExtractionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepArchiveExtractionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepArchiveExtractionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepArchiveExtractionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesRecipeUpdateStepArchiveExtractionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesRecipeUpdateStepArchiveExtraction.html">output</a> API doc for this type.
@@ -6645,7 +6645,7 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepDpkgInstallationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepDpkgInstallationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepDpkgInstallationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepDpkgInstallationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesRecipeUpdateStepDpkgInstallationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesRecipeUpdateStepDpkgInstallation.html">output</a> API doc for this type.
@@ -6735,7 +6735,7 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepFileCopyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepFileCopyOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepFileCopyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepFileCopyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesRecipeUpdateStepFileCopyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesRecipeUpdateStepFileCopy.html">output</a> API doc for this type.
@@ -6981,7 +6981,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepFileExecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepFileExecOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepFileExecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepFileExecOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesRecipeUpdateStepFileExecArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesRecipeUpdateStepFileExec.html">output</a> API doc for this type.
@@ -7203,7 +7203,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepMsiInstallationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepMsiInstallationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepMsiInstallationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepMsiInstallationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesRecipeUpdateStepMsiInstallationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesRecipeUpdateStepMsiInstallation.html">output</a> API doc for this type.
@@ -7381,7 +7381,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepRpmInstallationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepRpmInstallationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepRpmInstallationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepRpmInstallationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesRecipeUpdateStepRpmInstallationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesRecipeUpdateStepRpmInstallation.html">output</a> API doc for this type.
@@ -7471,7 +7471,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepScriptRunArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepScriptRunOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepScriptRunArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepScriptRunOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesRecipeUpdateStepScriptRunArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesRecipeUpdateStepScriptRun.html">output</a> API doc for this type.

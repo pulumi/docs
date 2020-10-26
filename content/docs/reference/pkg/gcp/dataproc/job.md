@@ -30,7 +30,7 @@ Manages a job resource within a Dataproc cluster within GCE. For more informatio
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#Job">NewJob</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobArgs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#Job">Job</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#Job">NewJob</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#JobArgs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#Job">Job</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -104,7 +104,7 @@ Manages a job resource within a Dataproc cluster within GCE. For more informatio
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -124,7 +124,7 @@ Manages a job resource within a Dataproc cluster within GCE. For more informatio
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobArgs">JobArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#JobArgs">JobArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -134,7 +134,7 @@ Manages a job resource within a Dataproc cluster within GCE. For more informatio
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -859,11 +859,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="status_csharp">
-<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+        <span id="statuses_csharp">
+<a href="#statuses_csharp" style="color: inherit; text-decoration: inherit;">Statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstatus">Job<wbr>Status</a></span>
+        <span class="property-type"><a href="#jobstatus">List&lt;Job<wbr>Status&gt;</a></span>
     </dt>
     <dd>{{% md %}}The status of the job.
 {{% /md %}}</dd>
@@ -909,11 +909,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="status_go">
-<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+        <span id="statuses_go">
+<a href="#statuses_go" style="color: inherit; text-decoration: inherit;">Statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstatus">Job<wbr>Status</a></span>
+        <span class="property-type"><a href="#jobstatus">[]Job<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of the job.
 {{% /md %}}</dd>
@@ -959,11 +959,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="status_nodejs">
-<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+        <span id="statuses_nodejs">
+<a href="#statuses_nodejs" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstatus">Job<wbr>Status</a></span>
+        <span class="property-type"><a href="#jobstatus">Job<wbr>Status[]</a></span>
     </dt>
     <dd>{{% md %}}The status of the job.
 {{% /md %}}</dd>
@@ -1009,11 +1009,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="status_python">
-<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+        <span id="statuses_python">
+<a href="#statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstatus">Job<wbr>Status</a></span>
+        <span class="property-type"><a href="#jobstatus">Sequence[Job<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}The status of the job.
 {{% /md %}}</dd>
@@ -1038,11 +1038,11 @@ Get an existing Job resource's state with the given name, ID, and optional extra
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">driver_controls_files_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">driver_output_resource_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hadoop_config</span><span class="p">:</span> <span class="nx">Optional[JobHadoopConfigArgs]</span> = None<span class="p">, </span><span class="nx">hive_config</span><span class="p">:</span> <span class="nx">Optional[JobHiveConfigArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">pig_config</span><span class="p">:</span> <span class="nx">Optional[JobPigConfigArgs]</span> = None<span class="p">, </span><span class="nx">placement</span><span class="p">:</span> <span class="nx">Optional[JobPlacementArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pyspark_config</span><span class="p">:</span> <span class="nx">Optional[JobPysparkConfigArgs]</span> = None<span class="p">, </span><span class="nx">reference</span><span class="p">:</span> <span class="nx">Optional[JobReferenceArgs]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduling</span><span class="p">:</span> <span class="nx">Optional[JobSchedulingArgs]</span> = None<span class="p">, </span><span class="nx">spark_config</span><span class="p">:</span> <span class="nx">Optional[JobSparkConfigArgs]</span> = None<span class="p">, </span><span class="nx">sparksql_config</span><span class="p">:</span> <span class="nx">Optional[JobSparksqlConfigArgs]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[JobStatusArgs]</span> = None<span class="p">) -&gt;</span> Job</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">driver_controls_files_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">driver_output_resource_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hadoop_config</span><span class="p">:</span> <span class="nx">Optional[JobHadoopConfigArgs]</span> = None<span class="p">, </span><span class="nx">hive_config</span><span class="p">:</span> <span class="nx">Optional[JobHiveConfigArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">pig_config</span><span class="p">:</span> <span class="nx">Optional[JobPigConfigArgs]</span> = None<span class="p">, </span><span class="nx">placement</span><span class="p">:</span> <span class="nx">Optional[JobPlacementArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pyspark_config</span><span class="p">:</span> <span class="nx">Optional[JobPysparkConfigArgs]</span> = None<span class="p">, </span><span class="nx">reference</span><span class="p">:</span> <span class="nx">Optional[JobReferenceArgs]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduling</span><span class="p">:</span> <span class="nx">Optional[JobSchedulingArgs]</span> = None<span class="p">, </span><span class="nx">spark_config</span><span class="p">:</span> <span class="nx">Optional[JobSparkConfigArgs]</span> = None<span class="p">, </span><span class="nx">sparksql_config</span><span class="p">:</span> <span class="nx">Optional[JobSparksqlConfigArgs]</span> = None<span class="p">, </span><span class="nx">statuses</span><span class="p">:</span> <span class="nx">Optional[Sequence[JobStatusArgs]]</span> = None<span class="p">) -&gt;</span> Job</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobState">JobState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#Job">Job</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#JobState">JobState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#Job">Job</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1323,11 +1323,11 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_status_csharp">
-<a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+        <span id="state_statuses_csharp">
+<a href="#state_statuses_csharp" style="color: inherit; text-decoration: inherit;">Statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstatus">Job<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobstatus">List&lt;Job<wbr>Status<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The status of the job.
 {{% /md %}}</dd>
@@ -1510,11 +1510,11 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_status_go">
-<a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+        <span id="state_statuses_go">
+<a href="#state_statuses_go" style="color: inherit; text-decoration: inherit;">Statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstatus">Job<wbr>Status</a></span>
+        <span class="property-type"><a href="#jobstatus">[]Job<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of the job.
 {{% /md %}}</dd>
@@ -1697,11 +1697,11 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_status_nodejs">
-<a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+        <span id="state_statuses_nodejs">
+<a href="#state_statuses_nodejs" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstatus">Job<wbr>Status</a></span>
+        <span class="property-type"><a href="#jobstatus">Job<wbr>Status[]</a></span>
     </dt>
     <dd>{{% md %}}The status of the job.
 {{% /md %}}</dd>
@@ -1884,11 +1884,11 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_status_python">
-<a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
+        <span id="state_statuses_python">
+<a href="#state_statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstatus">Job<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobstatus">Sequence[Job<wbr>Status<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The status of the job.
 {{% /md %}}</dd>
@@ -1914,7 +1914,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobHadoopConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobHadoopConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#JobHadoopConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#JobHadoopConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.JobHadoopConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.JobHadoopConfig.html">output</a> API doc for this type.
@@ -2308,7 +2308,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobHadoopConfigLoggingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobHadoopConfigLoggingConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#JobHadoopConfigLoggingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#JobHadoopConfigLoggingConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.JobHadoopConfigLoggingConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.JobHadoopConfigLoggingConfig.html">output</a> API doc for this type.
@@ -2394,7 +2394,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobHiveConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobHiveConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#JobHiveConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#JobHiveConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.JobHiveConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.JobHiveConfig.html">output</a> API doc for this type.
@@ -2712,7 +2712,7 @@ Conflicts with `query_file_uri`
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobPigConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobPigConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#JobPigConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#JobPigConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.JobPigConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.JobPigConfig.html">output</a> API doc for this type.
@@ -3070,7 +3070,7 @@ Conflicts with `query_file_uri`
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobPigConfigLoggingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobPigConfigLoggingConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#JobPigConfigLoggingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#JobPigConfigLoggingConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.JobPigConfigLoggingConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.JobPigConfigLoggingConfig.html">output</a> API doc for this type.
@@ -3156,7 +3156,7 @@ Conflicts with `query_file_uri`
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobPlacementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobPlacementOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#JobPlacementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#JobPlacementOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.JobPlacementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.JobPlacement.html">output</a> API doc for this type.
@@ -3282,7 +3282,7 @@ Conflicts with `query_file_uri`
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobPysparkConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobPysparkConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#JobPysparkConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#JobPysparkConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.JobPysparkConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.JobPysparkConfig.html">output</a> API doc for this type.
@@ -3676,7 +3676,7 @@ Conflicts with `query_file_uri`
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobPysparkConfigLoggingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobPysparkConfigLoggingConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#JobPysparkConfigLoggingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#JobPysparkConfigLoggingConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.JobPysparkConfigLoggingConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.JobPysparkConfigLoggingConfig.html">output</a> API doc for this type.
@@ -3762,7 +3762,7 @@ Conflicts with `query_file_uri`
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobReferenceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobReferenceOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#JobReferenceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#JobReferenceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.JobReferenceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.JobReference.html">output</a> API doc for this type.
@@ -3848,7 +3848,7 @@ Conflicts with `query_file_uri`
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobSchedulingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobSchedulingOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#JobSchedulingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#JobSchedulingOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.JobSchedulingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.JobScheduling.html">output</a> API doc for this type.
@@ -3934,7 +3934,7 @@ Conflicts with `query_file_uri`
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobSparkConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobSparkConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#JobSparkConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#JobSparkConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.JobSparkConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.JobSparkConfig.html">output</a> API doc for this type.
@@ -4328,7 +4328,7 @@ Conflicts with `query_file_uri`
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobSparkConfigLoggingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobSparkConfigLoggingConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#JobSparkConfigLoggingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#JobSparkConfigLoggingConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.JobSparkConfigLoggingConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.JobSparkConfigLoggingConfig.html">output</a> API doc for this type.
@@ -4414,7 +4414,7 @@ Conflicts with `query_file_uri`
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobSparksqlConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobSparksqlConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#JobSparksqlConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#JobSparksqlConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.JobSparksqlConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.JobSparksqlConfig.html">output</a> API doc for this type.
@@ -4728,7 +4728,7 @@ Conflicts with `query_file_uri`
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobSparksqlConfigLoggingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobSparksqlConfigLoggingConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#JobSparksqlConfigLoggingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#JobSparksqlConfigLoggingConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.JobSparksqlConfigLoggingConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.JobSparksqlConfigLoggingConfig.html">output</a> API doc for this type.
@@ -4814,7 +4814,7 @@ Conflicts with `query_file_uri`
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobStatusOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#JobStatusOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.JobStatus.html">output</a> API doc for this type.

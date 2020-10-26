@@ -34,7 +34,7 @@ To get more information about PatchDeployment, see:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeployment">NewPatchDeployment</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentArgs">PatchDeploymentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeployment">PatchDeployment</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeployment">NewPatchDeployment</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentArgs">PatchDeploymentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeployment">PatchDeployment</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -108,7 +108,7 @@ To get more information about PatchDeployment, see:
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -128,7 +128,7 @@ To get more information about PatchDeployment, see:
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentArgs">PatchDeploymentArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentArgs">PatchDeploymentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -138,7 +138,7 @@ To get more information about PatchDeployment, see:
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -966,7 +966,7 @@ Get an existing PatchDeployment resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPatchDeployment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentState">PatchDeploymentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeployment">PatchDeployment</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPatchDeployment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentState">PatchDeploymentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeployment">PatchDeployment</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1758,7 +1758,7 @@ format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentInstanceFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentInstanceFilterOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentInstanceFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentInstanceFilterOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentInstanceFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentInstanceFilter.html">output</a> API doc for this type.
@@ -2040,7 +2040,7 @@ VMs when targeting configs, for example prefix="prod-".
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentInstanceFilterGroupLabelArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentInstanceFilterGroupLabelOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentInstanceFilterGroupLabelArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentInstanceFilterGroupLabelOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentInstanceFilterGroupLabelArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentInstanceFilterGroupLabel.html">output</a> API doc for this type.
@@ -2130,7 +2130,7 @@ VMs when targeting configs, for example prefix="prod-".
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentOneTimeScheduleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentOneTimeScheduleOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentOneTimeScheduleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentOneTimeScheduleOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentOneTimeScheduleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentOneTimeSchedule.html">output</a> API doc for this type.
@@ -2224,7 +2224,7 @@ accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentPatchConfig.html">output</a> API doc for this type.
@@ -2654,7 +2654,7 @@ Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigAptArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigAptOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigAptArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigAptOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigAptArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentPatchConfigApt.html">output</a> API doc for this type.
@@ -2844,7 +2844,7 @@ Possible values are `DIST` and `UPGRADE`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigGooArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigGooOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigGooArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigGooOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigGooArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentPatchConfigGoo.html">output</a> API doc for this type.
@@ -2934,7 +2934,7 @@ Possible values are `DIST` and `UPGRADE`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPostStepArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPostStepOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPostStepArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPostStepOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigPostStepArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentPatchConfigPostStep.html">output</a> API doc for this type.
@@ -3076,7 +3076,7 @@ Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPostStepLinuxExecStepConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPostStepLinuxExecStepConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPostStepLinuxExecStepConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPostStepLinuxExecStepConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigPostStepLinuxExecStepConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentPatchConfigPostStepLinuxExecStepConfig.html">output</a> API doc for this type.
@@ -3310,7 +3310,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObject.html">output</a> API doc for this type.
@@ -3488,7 +3488,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPostStepWindowsExecStepConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPostStepWindowsExecStepConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPostStepWindowsExecStepConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPostStepWindowsExecStepConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigPostStepWindowsExecStepConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentPatchConfigPostStepWindowsExecStepConfig.html">output</a> API doc for this type.
@@ -3722,7 +3722,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObjectArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObjectOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObjectArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObjectOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObjectArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObject.html">output</a> API doc for this type.
@@ -3900,7 +3900,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPreStepArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPreStepOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPreStepArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPreStepOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigPreStepArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentPatchConfigPreStep.html">output</a> API doc for this type.
@@ -4042,7 +4042,7 @@ Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPreStepLinuxExecStepConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPreStepLinuxExecStepConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPreStepLinuxExecStepConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPreStepLinuxExecStepConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigPreStepLinuxExecStepConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentPatchConfigPreStepLinuxExecStepConfig.html">output</a> API doc for this type.
@@ -4276,7 +4276,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObject.html">output</a> API doc for this type.
@@ -4454,7 +4454,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPreStepWindowsExecStepConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPreStepWindowsExecStepConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPreStepWindowsExecStepConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPreStepWindowsExecStepConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigPreStepWindowsExecStepConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentPatchConfigPreStepWindowsExecStepConfig.html">output</a> API doc for this type.
@@ -4688,7 +4688,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObjectArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObjectOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObjectArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObjectOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObjectArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObject.html">output</a> API doc for this type.
@@ -4866,7 +4866,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigWindowsUpdateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigWindowsUpdateOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigWindowsUpdateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigWindowsUpdateOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigWindowsUpdateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentPatchConfigWindowsUpdate.html">output</a> API doc for this type.
@@ -5052,7 +5052,7 @@ This field must not be used with other patch configurations.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigYumArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigYumOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigYumArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigYumOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigYumArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentPatchConfigYum.html">output</a> API doc for this type.
@@ -5282,7 +5282,7 @@ any other patch configuration fields.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigZypperArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigZypperOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigZypperArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigZypperOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigZypperArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentPatchConfigZypper.html">output</a> API doc for this type.
@@ -5596,7 +5596,7 @@ This field must not be used with other patch configurations.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentRecurringScheduleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentRecurringScheduleOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentRecurringScheduleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentRecurringScheduleOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentRecurringScheduleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentRecurringSchedule.html">output</a> API doc for this type.
@@ -6038,7 +6038,7 @@ Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentRecurringScheduleMonthlyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentRecurringScheduleMonthlyOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentRecurringScheduleMonthlyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentRecurringScheduleMonthlyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentRecurringScheduleMonthlyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentRecurringScheduleMonthly.html">output</a> API doc for this type.
@@ -6184,7 +6184,7 @@ Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth.html">output</a> API doc for this type.
@@ -6322,7 +6322,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentRecurringScheduleTimeOfDayArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentRecurringScheduleTimeOfDayOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentRecurringScheduleTimeOfDayArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentRecurringScheduleTimeOfDayOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentRecurringScheduleTimeOfDayArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentRecurringScheduleTimeOfDay.html">output</a> API doc for this type.
@@ -6548,7 +6548,7 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentRecurringScheduleTimeZoneArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentRecurringScheduleTimeZoneOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentRecurringScheduleTimeZoneArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentRecurringScheduleTimeZoneOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentRecurringScheduleTimeZoneArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentRecurringScheduleTimeZone.html">output</a> API doc for this type.
@@ -6682,7 +6682,7 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentRecurringScheduleWeeklyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentRecurringScheduleWeeklyOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentRecurringScheduleWeeklyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentRecurringScheduleWeeklyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentRecurringScheduleWeeklyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentRecurringScheduleWeekly.html">output</a> API doc for this type.
@@ -6776,7 +6776,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentRolloutArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentRolloutOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentRolloutArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentRolloutOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentRolloutArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentRollout.html">output</a> API doc for this type.
@@ -6934,7 +6934,7 @@ Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentRolloutDisruptionBudgetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/osconfig?tab=doc#PatchDeploymentRolloutDisruptionBudgetOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentRolloutDisruptionBudgetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentRolloutDisruptionBudgetOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentRolloutDisruptionBudgetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentRolloutDisruptionBudget.html">output</a> API doc for this type.

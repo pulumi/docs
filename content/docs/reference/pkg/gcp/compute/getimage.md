@@ -26,12 +26,12 @@ Get information about a Google Compute Image. Check that your service account ha
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_image(</span><span class="nx">family</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetImageResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_image(</span><span class="nx">family</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetImageResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupImage<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#LookupImageArgs">LookupImageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#LookupImageResult">LookupImageResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupImage<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#LookupImageArgs">LookupImageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#LookupImageResult">LookupImageResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupImage` in the Go SDK.
 
@@ -66,16 +66,23 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="filter_csharp">
+<a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}or `family` - (Required) The name of a specific image or a family.
-Exactly one of `name` of `family` must be specified. If `name` is specified, it will fetch
-the corresponding image. If `family` is specified, it will returns the latest image
-that is part of an image family and is not deprecated.
+    <dd>{{% md %}}The name of the image.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -111,16 +118,23 @@ provided, the provider project is used. If you are using a
 
     <dt class="property-optional"
             title="Optional">
+        <span id="filter_go">
+<a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}or `family` - (Required) The name of a specific image or a family.
-Exactly one of `name` of `family` must be specified. If `name` is specified, it will fetch
-the corresponding image. If `family` is specified, it will returns the latest image
-that is part of an image family and is not deprecated.
+    <dd>{{% md %}}The name of the image.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -156,16 +170,23 @@ provided, the provider project is used. If you are using a
 
     <dt class="property-optional"
             title="Optional">
+        <span id="filter_nodejs">
+<a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}or `family` - (Required) The name of a specific image or a family.
-Exactly one of `name` of `family` must be specified. If `name` is specified, it will fetch
-the corresponding image. If `family` is specified, it will returns the latest image
-that is part of an image family and is not deprecated.
+    <dd>{{% md %}}The name of the image.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -201,16 +222,23 @@ provided, the provider project is used. If you are using a
 
     <dt class="property-optional"
             title="Optional">
+        <span id="filter_python">
+<a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}or `family` - (Required) The name of a specific image or a family.
-Exactly one of `name` of `family` must be specified. If `name` is specified, it will fetch
-the corresponding image. If `family` is specified, it will returns the latest image
-that is part of an image family and is not deprecated.
+    <dd>{{% md %}}The name of the image.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -458,6 +486,16 @@ that protects this image.
     <dd>{{% md %}}The status of the image. Possible values are **FAILED**, **PENDING**, or **READY**.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="filter_csharp">
+<a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -676,6 +714,16 @@ that protects this image.
     </dt>
     <dd>{{% md %}}The status of the image. Possible values are **FAILED**, **PENDING**, or **READY**.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="filter_go">
+<a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -896,6 +944,16 @@ that protects this image.
     <dd>{{% md %}}The status of the image. Possible values are **FAILED**, **PENDING**, or **READY**.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="filter_nodejs">
+<a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1114,6 +1172,16 @@ that protects this image.
     </dt>
     <dd>{{% md %}}The status of the image. Possible values are **FAILED**, **PENDING**, or **READY**.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="filter_python">
+<a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

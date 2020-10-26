@@ -28,11 +28,11 @@ whole cluster!
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/dataproc/#pulumi_gcp.dataproc.Cluster">Cluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_config</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterConfigArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/dataproc/#pulumi_gcp.dataproc.Cluster">Cluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_config</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterConfigArgs]</span> = None<span class="p">, </span><span class="nx">graceful_decommission_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#Cluster">NewCluster</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterArgs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#Cluster">Cluster</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#Cluster">NewCluster</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#ClusterArgs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#Cluster">Cluster</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -106,7 +106,7 @@ whole cluster!
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -126,7 +126,7 @@ whole cluster!
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterArgs">ClusterArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#ClusterArgs">ClusterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -136,7 +136,7 @@ whole cluster!
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -214,6 +214,18 @@ Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="gracefuldecommissiontimeout_csharp">
+<a href="#gracefuldecommissiontimeout_csharp" style="color: inherit; text-decoration: inherit;">Graceful<wbr>Decommission<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The timeout duration which allows graceful decomissioning when you change the number of worker nodes directly through a
+terraform apply
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span> 
@@ -278,6 +290,18 @@ Defaults to `global`.
     </dt>
     <dd>{{% md %}}Allows you to configure various aspects of the cluster.
 Structure defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gracefuldecommissiontimeout_go">
+<a href="#gracefuldecommissiontimeout_go" style="color: inherit; text-decoration: inherit;">Graceful<wbr>Decommission<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The timeout duration which allows graceful decomissioning when you change the number of worker nodes directly through a
+terraform apply
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -350,6 +374,18 @@ Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="gracefuldecommissiontimeout_nodejs">
+<a href="#gracefuldecommissiontimeout_nodejs" style="color: inherit; text-decoration: inherit;">graceful<wbr>Decommission<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The timeout duration which allows graceful decomissioning when you change the number of worker nodes directly through a
+terraform apply
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
@@ -414,6 +450,18 @@ Defaults to `global`.
     </dt>
     <dd>{{% md %}}Allows you to configure various aspects of the cluster.
 Structure defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="graceful_decommission_timeout_python">
+<a href="#graceful_decommission_timeout_python" style="color: inherit; text-decoration: inherit;">graceful_<wbr>decommission_<wbr>timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The timeout duration which allows graceful decomissioning when you change the number of worker nodes directly through a
+terraform apply
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -564,11 +612,11 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_config</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterConfigArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_config</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterConfigArgs]</span> = None<span class="p">, </span><span class="nx">graceful_decommission_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterState">ClusterState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#Cluster">Cluster</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#ClusterState">ClusterState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#Cluster">Cluster</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -692,6 +740,18 @@ Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_gracefuldecommissiontimeout_csharp">
+<a href="#state_gracefuldecommissiontimeout_csharp" style="color: inherit; text-decoration: inherit;">Graceful<wbr>Decommission<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The timeout duration which allows graceful decomissioning when you change the number of worker nodes directly through a
+terraform apply
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span> 
@@ -756,6 +816,18 @@ Defaults to `global`.
     </dt>
     <dd>{{% md %}}Allows you to configure various aspects of the cluster.
 Structure defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_gracefuldecommissiontimeout_go">
+<a href="#state_gracefuldecommissiontimeout_go" style="color: inherit; text-decoration: inherit;">Graceful<wbr>Decommission<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The timeout duration which allows graceful decomissioning when you change the number of worker nodes directly through a
+terraform apply
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -828,6 +900,18 @@ Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_gracefuldecommissiontimeout_nodejs">
+<a href="#state_gracefuldecommissiontimeout_nodejs" style="color: inherit; text-decoration: inherit;">graceful<wbr>Decommission<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The timeout duration which allows graceful decomissioning when you change the number of worker nodes directly through a
+terraform apply
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
@@ -892,6 +976,18 @@ Defaults to `global`.
     </dt>
     <dd>{{% md %}}Allows you to configure various aspects of the cluster.
 Structure defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_graceful_decommission_timeout_python">
+<a href="#state_graceful_decommission_timeout_python" style="color: inherit; text-decoration: inherit;">graceful_<wbr>decommission_<wbr>timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The timeout duration which allows graceful decomissioning when you change the number of worker nodes directly through a
+terraform apply
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -964,7 +1060,7 @@ Defaults to `global`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#ClusterClusterConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#ClusterClusterConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfig.html">output</a> API doc for this type.
@@ -1654,7 +1750,7 @@ in a cluster.. Structure defined below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigAutoscalingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigAutoscalingConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#ClusterClusterConfigAutoscalingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#ClusterClusterConfigAutoscalingConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigAutoscalingConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigAutoscalingConfig.html">output</a> API doc for this type.
@@ -1744,7 +1840,7 @@ in a cluster.. Structure defined below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigEncryptionConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigEncryptionConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#ClusterClusterConfigEncryptionConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#ClusterClusterConfigEncryptionConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigEncryptionConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigEncryptionConfig.html">output</a> API doc for this type.
@@ -1838,7 +1934,7 @@ all instances in the cluster.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigEndpointConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigEndpointConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#ClusterClusterConfigEndpointConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#ClusterClusterConfigEndpointConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigEndpointConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigEndpointConfig.html">output</a> API doc for this type.
@@ -1972,7 +2068,7 @@ on the cluster from external sources (aka Component Gateway). Defaults to false.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigGceClusterConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigGceClusterConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#ClusterClusterConfigGceClusterConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#ClusterClusterConfigGceClusterConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigGceClusterConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigGceClusterConfig.html">output</a> API doc for this type.
@@ -1992,7 +2088,7 @@ on the cluster from external sources (aka Component Gateway). Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}By default, clusters are not restricted to internal IP addresses, 
+    <dd>{{% md %}}By default, clusters are not restricted to internal IP addresses,
 and will have ephemeral external IP addresses assigned to each instance. If set to true, all
 instances in the cluster will only have internal IP addresses. Note: Private Google Access
 (also known as `privateIpGoogleAccess`) must be enabled on the subnetwork that the cluster
@@ -2107,7 +2203,7 @@ which computing resources are available for use with other configs such as
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}By default, clusters are not restricted to internal IP addresses, 
+    <dd>{{% md %}}By default, clusters are not restricted to internal IP addresses,
 and will have ephemeral external IP addresses assigned to each instance. If set to true, all
 instances in the cluster will only have internal IP addresses. Note: Private Google Access
 (also known as `privateIpGoogleAccess`) must be enabled on the subnetwork that the cluster
@@ -2222,7 +2318,7 @@ which computing resources are available for use with other configs such as
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}By default, clusters are not restricted to internal IP addresses, 
+    <dd>{{% md %}}By default, clusters are not restricted to internal IP addresses,
 and will have ephemeral external IP addresses assigned to each instance. If set to true, all
 instances in the cluster will only have internal IP addresses. Note: Private Google Access
 (also known as `privateIpGoogleAccess`) must be enabled on the subnetwork that the cluster
@@ -2337,7 +2433,7 @@ which computing resources are available for use with other configs such as
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}By default, clusters are not restricted to internal IP addresses, 
+    <dd>{{% md %}}By default, clusters are not restricted to internal IP addresses,
 and will have ephemeral external IP addresses assigned to each instance. If set to true, all
 instances in the cluster will only have internal IP addresses. Note: Private Google Access
 (also known as `privateIpGoogleAccess`) must be enabled on the subnetwork that the cluster
@@ -2450,7 +2546,7 @@ which computing resources are available for use with other configs such as
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigInitializationActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigInitializationActionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#ClusterClusterConfigInitializationActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#ClusterClusterConfigInitializationActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigInitializationActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigInitializationAction.html">output</a> API doc for this type.
@@ -2596,7 +2692,7 @@ computed value if not set (currently 300).
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigLifecycleConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigLifecycleConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#ClusterClusterConfigLifecycleConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#ClusterClusterConfigLifecycleConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigLifecycleConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigLifecycleConfig.html">output</a> API doc for this type.
@@ -2782,7 +2878,7 @@ Example: "2014-10-02T15:01:23.045123456Z".
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigMasterConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigMasterConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#ClusterClusterConfigMasterConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#ClusterClusterConfigMasterConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigMasterConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigMasterConfig.html">output</a> API doc for this type.
@@ -3160,7 +3256,7 @@ Defaults to 0.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigMasterConfigAcceleratorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigMasterConfigAcceleratorOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#ClusterClusterConfigMasterConfigAcceleratorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#ClusterClusterConfigMasterConfigAcceleratorOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigMasterConfigAcceleratorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigMasterConfigAccelerator.html">output</a> API doc for this type.
@@ -3294,7 +3390,7 @@ Defaults to 0.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigMasterConfigDiskConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigMasterConfigDiskConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#ClusterClusterConfigMasterConfigDiskConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#ClusterClusterConfigMasterConfigDiskConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigMasterConfigDiskConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigMasterConfigDiskConfig.html">output</a> API doc for this type.
@@ -3492,7 +3588,7 @@ attached to each preemptible worker node. Defaults to 0.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigPreemptibleWorkerConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigPreemptibleWorkerConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#ClusterClusterConfigPreemptibleWorkerConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#ClusterClusterConfigPreemptibleWorkerConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigPreemptibleWorkerConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigPreemptibleWorkerConfig.html">output</a> API doc for this type.
@@ -3670,7 +3766,7 @@ Defaults to 0.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigPreemptibleWorkerConfigDiskConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigPreemptibleWorkerConfigDiskConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#ClusterClusterConfigPreemptibleWorkerConfigDiskConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#ClusterClusterConfigPreemptibleWorkerConfigDiskConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigPreemptibleWorkerConfigDiskConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigPreemptibleWorkerConfigDiskConfig.html">output</a> API doc for this type.
@@ -3868,7 +3964,7 @@ attached to each preemptible worker node. Defaults to 0.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigSecurityConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigSecurityConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#ClusterClusterConfigSecurityConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#ClusterClusterConfigSecurityConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigSecurityConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigSecurityConfig.html">output</a> API doc for this type.
@@ -3958,7 +4054,7 @@ attached to each preemptible worker node. Defaults to 0.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigSecurityConfigKerberosConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigSecurityConfigKerberosConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#ClusterClusterConfigSecurityConfigKerberosConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#ClusterClusterConfigSecurityConfigKerberosConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigSecurityConfigKerberosConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigSecurityConfigKerberosConfig.html">output</a> API doc for this type.
@@ -4728,7 +4824,7 @@ SSL encryption. If not provided, Dataproc will provide a self-signed certificate
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigSoftwareConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigSoftwareConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#ClusterClusterConfigSoftwareConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#ClusterClusterConfigSoftwareConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigSoftwareConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigSoftwareConfig.html">output</a> API doc for this type.
@@ -4763,7 +4859,7 @@ latest version. For a list of valid versions see
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The set of optional components to activate on the cluster. 
+    <dd>{{% md %}}The set of optional components to activate on the cluster.
 Accepted values are:
 * ANACONDA
 * DRUID
@@ -4832,7 +4928,7 @@ latest version. For a list of valid versions see
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The set of optional components to activate on the cluster. 
+    <dd>{{% md %}}The set of optional components to activate on the cluster.
 Accepted values are:
 * ANACONDA
 * DRUID
@@ -4901,7 +4997,7 @@ latest version. For a list of valid versions see
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The set of optional components to activate on the cluster. 
+    <dd>{{% md %}}The set of optional components to activate on the cluster.
 Accepted values are:
 * ANACONDA
 * DRUID
@@ -4970,7 +5066,7 @@ latest version. For a list of valid versions see
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}The set of optional components to activate on the cluster. 
+    <dd>{{% md %}}The set of optional components to activate on the cluster.
 Accepted values are:
 * ANACONDA
 * DRUID
@@ -5022,7 +5118,7 @@ a cluster. For a list of valid properties please see
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigWorkerConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigWorkerConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#ClusterClusterConfigWorkerConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#ClusterClusterConfigWorkerConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigWorkerConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigWorkerConfig.html">output</a> API doc for this type.
@@ -5400,7 +5496,7 @@ Defaults to 0.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigWorkerConfigAcceleratorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigWorkerConfigAcceleratorOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#ClusterClusterConfigWorkerConfigAcceleratorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#ClusterClusterConfigWorkerConfigAcceleratorOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigWorkerConfigAcceleratorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigWorkerConfigAccelerator.html">output</a> API doc for this type.
@@ -5534,7 +5630,7 @@ Defaults to 0.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigWorkerConfigDiskConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigWorkerConfigDiskConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#ClusterClusterConfigWorkerConfigDiskConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc?tab=doc#ClusterClusterConfigWorkerConfigDiskConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigWorkerConfigDiskConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigWorkerConfigDiskConfig.html">output</a> API doc for this type.

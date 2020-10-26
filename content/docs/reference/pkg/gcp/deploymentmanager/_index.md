@@ -23,7 +23,7 @@ Explore the resources and functions of the deploymentmanager module in the GCP p
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.25.0</dd>
+	<dd>4.0.0</dd>
 </dl>
 
 
@@ -34,7 +34,7 @@ Explore the resources and functions of the deploymentmanager module in the GCP p
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DeploymentManager.html" title="Pulumi.Gcp.DeploymentManager">Pulumi.Gcp.DeploymentManager</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/deploymentmanager?tab=doc#" title="gcp/deploymentmanager">gcp/deploymentmanager</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/deploymentmanager?tab=doc#" title="gcp/deploymentmanager">gcp/deploymentmanager</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/deploymentmanager/#" title="@pulumi/gcp/deploymentmanager">@pulumi/gcp/deploymentmanager</a></dd>

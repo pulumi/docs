@@ -29,11 +29,11 @@ To get more information about DeviceRegistry, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/iot/#pulumi_gcp.iot.Registry">Registry</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[Sequence[RegistryCredentialArgs]]</span> = None<span class="p">, </span><span class="nx">event_notification_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[RegistryEventNotificationConfigItemArgs]]</span> = None<span class="p">, </span><span class="nx">http_config</span><span class="p">:</span> <span class="nx">Optional[RegistryHttpConfigArgs]</span> = None<span class="p">, </span><span class="nx">log_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mqtt_config</span><span class="p">:</span> <span class="nx">Optional[RegistryMqttConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state_notification_config</span><span class="p">:</span> <span class="nx">Optional[RegistryStateNotificationConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/iot/#pulumi_gcp.iot.Registry">Registry</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[Sequence[RegistryCredentialArgs]]</span> = None<span class="p">, </span><span class="nx">event_notification_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[RegistryEventNotificationConfigItemArgs]]</span> = None<span class="p">, </span><span class="nx">http_config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">log_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mqtt_config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state_notification_config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#Registry">NewRegistry</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#RegistryArgs">RegistryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#Registry">Registry</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iot?tab=doc#Registry">NewRegistry</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iot?tab=doc#RegistryArgs">RegistryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iot?tab=doc#Registry">Registry</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -107,7 +107,7 @@ To get more information about DeviceRegistry, see:
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -127,7 +127,7 @@ To get more information about DeviceRegistry, see:
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#RegistryArgs">RegistryArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iot?tab=doc#RegistryArgs">RegistryArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -137,7 +137,7 @@ To get more information about DeviceRegistry, see:
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -232,7 +232,7 @@ Structure is documented below.
 <a href="#httpconfig_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registryhttpconfig">Registry<wbr>Http<wbr>Config<wbr>Args</a></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Activate or deactivate HTTP.
 The structure is documented below.
@@ -261,7 +261,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
 <a href="#mqttconfig_csharp" style="color: inherit; text-decoration: inherit;">Mqtt<wbr>Config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrymqttconfig">Registry<wbr>Mqtt<wbr>Config<wbr>Args</a></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Activate or deactivate MQTT.
 The structure is documented below.
@@ -308,7 +308,7 @@ If it is not provided, the provider region is used.
 <a href="#statenotificationconfig_csharp" style="color: inherit; text-decoration: inherit;">State<wbr>Notification<wbr>Config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrystatenotificationconfig">Registry<wbr>State<wbr>Notification<wbr>Config<wbr>Args</a></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A PubSub topic to publish device state updates.
 The structure is documented below.
@@ -352,7 +352,7 @@ Structure is documented below.
 <a href="#httpconfig_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registryhttpconfig">Registry<wbr>Http<wbr>Config</a></span>
+        <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Activate or deactivate HTTP.
 The structure is documented below.
@@ -381,7 +381,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
 <a href="#mqttconfig_go" style="color: inherit; text-decoration: inherit;">Mqtt<wbr>Config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrymqttconfig">Registry<wbr>Mqtt<wbr>Config</a></span>
+        <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Activate or deactivate MQTT.
 The structure is documented below.
@@ -428,7 +428,7 @@ If it is not provided, the provider region is used.
 <a href="#statenotificationconfig_go" style="color: inherit; text-decoration: inherit;">State<wbr>Notification<wbr>Config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrystatenotificationconfig">Registry<wbr>State<wbr>Notification<wbr>Config</a></span>
+        <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A PubSub topic to publish device state updates.
 The structure is documented below.
@@ -472,7 +472,7 @@ Structure is documented below.
 <a href="#httpconfig_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registryhttpconfig">Registry<wbr>Http<wbr>Config</a></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Activate or deactivate HTTP.
 The structure is documented below.
@@ -501,7 +501,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
 <a href="#mqttconfig_nodejs" style="color: inherit; text-decoration: inherit;">mqtt<wbr>Config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrymqttconfig">Registry<wbr>Mqtt<wbr>Config</a></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Activate or deactivate MQTT.
 The structure is documented below.
@@ -548,7 +548,7 @@ If it is not provided, the provider region is used.
 <a href="#statenotificationconfig_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Notification<wbr>Config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrystatenotificationconfig">Registry<wbr>State<wbr>Notification<wbr>Config</a></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A PubSub topic to publish device state updates.
 The structure is documented below.
@@ -592,7 +592,7 @@ Structure is documented below.
 <a href="#http_config_python" style="color: inherit; text-decoration: inherit;">http_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registryhttpconfig">Registry<wbr>Http<wbr>Config<wbr>Args</a></span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Activate or deactivate HTTP.
 The structure is documented below.
@@ -621,7 +621,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
 <a href="#mqtt_config_python" style="color: inherit; text-decoration: inherit;">mqtt_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrymqttconfig">Registry<wbr>Mqtt<wbr>Config<wbr>Args</a></span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Activate or deactivate MQTT.
 The structure is documented below.
@@ -668,7 +668,7 @@ If it is not provided, the provider region is used.
 <a href="#state_notification_config_python" style="color: inherit; text-decoration: inherit;">state_<wbr>notification_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrystatenotificationconfig">Registry<wbr>State<wbr>Notification<wbr>Config<wbr>Args</a></span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A PubSub topic to publish device state updates.
 The structure is documented below.
@@ -773,11 +773,11 @@ Get an existing Registry resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[Sequence[RegistryCredentialArgs]]</span> = None<span class="p">, </span><span class="nx">event_notification_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[RegistryEventNotificationConfigItemArgs]]</span> = None<span class="p">, </span><span class="nx">http_config</span><span class="p">:</span> <span class="nx">Optional[RegistryHttpConfigArgs]</span> = None<span class="p">, </span><span class="nx">log_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mqtt_config</span><span class="p">:</span> <span class="nx">Optional[RegistryMqttConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state_notification_config</span><span class="p">:</span> <span class="nx">Optional[RegistryStateNotificationConfigArgs]</span> = None<span class="p">) -&gt;</span> Registry</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[Sequence[RegistryCredentialArgs]]</span> = None<span class="p">, </span><span class="nx">event_notification_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[RegistryEventNotificationConfigItemArgs]]</span> = None<span class="p">, </span><span class="nx">http_config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">log_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mqtt_config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state_notification_config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">) -&gt;</span> Registry</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRegistry<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#RegistryState">RegistryState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#Registry">Registry</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRegistry<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iot?tab=doc#RegistryState">RegistryState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iot?tab=doc#Registry">Registry</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -918,7 +918,7 @@ Structure is documented below.
 <a href="#state_httpconfig_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registryhttpconfig">Registry<wbr>Http<wbr>Config<wbr>Args</a></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Activate or deactivate HTTP.
 The structure is documented below.
@@ -947,7 +947,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
 <a href="#state_mqttconfig_csharp" style="color: inherit; text-decoration: inherit;">Mqtt<wbr>Config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrymqttconfig">Registry<wbr>Mqtt<wbr>Config<wbr>Args</a></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Activate or deactivate MQTT.
 The structure is documented below.
@@ -994,7 +994,7 @@ If it is not provided, the provider region is used.
 <a href="#state_statenotificationconfig_csharp" style="color: inherit; text-decoration: inherit;">State<wbr>Notification<wbr>Config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrystatenotificationconfig">Registry<wbr>State<wbr>Notification<wbr>Config<wbr>Args</a></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A PubSub topic to publish device state updates.
 The structure is documented below.
@@ -1038,7 +1038,7 @@ Structure is documented below.
 <a href="#state_httpconfig_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registryhttpconfig">Registry<wbr>Http<wbr>Config</a></span>
+        <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Activate or deactivate HTTP.
 The structure is documented below.
@@ -1067,7 +1067,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
 <a href="#state_mqttconfig_go" style="color: inherit; text-decoration: inherit;">Mqtt<wbr>Config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrymqttconfig">Registry<wbr>Mqtt<wbr>Config</a></span>
+        <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Activate or deactivate MQTT.
 The structure is documented below.
@@ -1114,7 +1114,7 @@ If it is not provided, the provider region is used.
 <a href="#state_statenotificationconfig_go" style="color: inherit; text-decoration: inherit;">State<wbr>Notification<wbr>Config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrystatenotificationconfig">Registry<wbr>State<wbr>Notification<wbr>Config</a></span>
+        <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A PubSub topic to publish device state updates.
 The structure is documented below.
@@ -1158,7 +1158,7 @@ Structure is documented below.
 <a href="#state_httpconfig_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registryhttpconfig">Registry<wbr>Http<wbr>Config</a></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Activate or deactivate HTTP.
 The structure is documented below.
@@ -1187,7 +1187,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
 <a href="#state_mqttconfig_nodejs" style="color: inherit; text-decoration: inherit;">mqtt<wbr>Config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrymqttconfig">Registry<wbr>Mqtt<wbr>Config</a></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Activate or deactivate MQTT.
 The structure is documented below.
@@ -1234,7 +1234,7 @@ If it is not provided, the provider region is used.
 <a href="#state_statenotificationconfig_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Notification<wbr>Config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrystatenotificationconfig">Registry<wbr>State<wbr>Notification<wbr>Config</a></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A PubSub topic to publish device state updates.
 The structure is documented below.
@@ -1278,7 +1278,7 @@ Structure is documented below.
 <a href="#state_http_config_python" style="color: inherit; text-decoration: inherit;">http_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registryhttpconfig">Registry<wbr>Http<wbr>Config<wbr>Args</a></span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Activate or deactivate HTTP.
 The structure is documented below.
@@ -1307,7 +1307,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
 <a href="#state_mqtt_config_python" style="color: inherit; text-decoration: inherit;">mqtt_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrymqttconfig">Registry<wbr>Mqtt<wbr>Config<wbr>Args</a></span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Activate or deactivate MQTT.
 The structure is documented below.
@@ -1354,7 +1354,7 @@ If it is not provided, the provider region is used.
 <a href="#state_state_notification_config_python" style="color: inherit; text-decoration: inherit;">state_<wbr>notification_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrystatenotificationconfig">Registry<wbr>State<wbr>Notification<wbr>Config<wbr>Args</a></span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A PubSub topic to publish device state updates.
 The structure is documented below.
@@ -1381,7 +1381,7 @@ The structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#RegistryCredentialArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#RegistryCredentialOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iot?tab=doc#RegistryCredentialArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iot?tab=doc#RegistryCredentialOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iot.Inputs.RegistryCredentialArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iot.Outputs.RegistryCredential.html">output</a> API doc for this type.
@@ -1399,7 +1399,7 @@ The structure is documented below.
 <a href="#publickeycertificate_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Certificate</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrycredentialpublickeycertificate">Registry<wbr>Credential<wbr>Public<wbr>Key<wbr>Certificate<wbr>Args</a></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A public key certificate format and data.
 {{% /md %}}</dd>
@@ -1417,7 +1417,7 @@ The structure is documented below.
 <a href="#publickeycertificate_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Certificate</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrycredentialpublickeycertificate">Registry<wbr>Credential<wbr>Public<wbr>Key<wbr>Certificate</a></span>
+        <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A public key certificate format and data.
 {{% /md %}}</dd>
@@ -1435,7 +1435,7 @@ The structure is documented below.
 <a href="#publickeycertificate_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key<wbr>Certificate</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrycredentialpublickeycertificate">Registry<wbr>Credential<wbr>Public<wbr>Key<wbr>Certificate</a></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A public key certificate format and data.
 {{% /md %}}</dd>
@@ -1453,143 +1453,9 @@ The structure is documented below.
 <a href="#public_key_certificate_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrycredentialpublickeycertificate">Registry<wbr>Credential<wbr>Public<wbr>Key<wbr>Certificate<wbr>Args</a></span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A public key certificate format and data.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-<h4 id="registrycredentialpublickeycertificate">Registry<wbr>Credential<wbr>Public<wbr>Key<wbr>Certificate</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegistryCredentialPublicKeyCertificate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegistryCredentialPublicKeyCertificate">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#RegistryCredentialPublicKeyCertificateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#RegistryCredentialPublicKeyCertificateOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iot.Inputs.RegistryCredentialPublicKeyCertificateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iot.Outputs.RegistryCredentialPublicKeyCertificate.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="certificate_csharp">
-<a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The certificate data.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="format_csharp">
-<a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The field allows only `X509_CERTIFICATE_PEM`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="certificate_go">
-<a href="#certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The certificate data.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="format_go">
-<a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The field allows only `X509_CERTIFICATE_PEM`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="certificate_nodejs">
-<a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The certificate data.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="format_nodejs">
-<a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The field allows only `X509_CERTIFICATE_PEM`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="certificate_python">
-<a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The certificate data.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="format_python">
-<a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The field allows only `X509_CERTIFICATE_PEM`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1605,7 +1471,7 @@ The structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#RegistryEventNotificationConfigItemArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#RegistryEventNotificationConfigItemOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iot?tab=doc#RegistryEventNotificationConfigItemArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iot?tab=doc#RegistryEventNotificationConfigItemOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iot.Inputs.RegistryEventNotificationConfigItemArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iot.Outputs.RegistryEventNotificationConfigItem.html">output</a> API doc for this type.
@@ -1740,276 +1606,6 @@ configuration will be used. The string must not include the
 leading '/' character. If empty, all strings are matched. Empty
 value can only be used for the last `event_notification_configs`
 item.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-<h4 id="registryhttpconfig">Registry<wbr>Http<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegistryHttpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegistryHttpConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#RegistryHttpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#RegistryHttpConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iot.Inputs.RegistryHttpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iot.Outputs.RegistryHttpConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="httpenabledstate_csharp">
-<a href="#httpenabledstate_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Enabled<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The field allows `HTTP_ENABLED` or `HTTP_DISABLED`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="httpenabledstate_go">
-<a href="#httpenabledstate_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Enabled<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The field allows `HTTP_ENABLED` or `HTTP_DISABLED`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="httpenabledstate_nodejs">
-<a href="#httpenabledstate_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Enabled<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The field allows `HTTP_ENABLED` or `HTTP_DISABLED`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="http_enabled_state_python">
-<a href="#http_enabled_state_python" style="color: inherit; text-decoration: inherit;">http_<wbr>enabled_<wbr>state</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The field allows `HTTP_ENABLED` or `HTTP_DISABLED`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-<h4 id="registrymqttconfig">Registry<wbr>Mqtt<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegistryMqttConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegistryMqttConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#RegistryMqttConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#RegistryMqttConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iot.Inputs.RegistryMqttConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iot.Outputs.RegistryMqttConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="mqttenabledstate_csharp">
-<a href="#mqttenabledstate_csharp" style="color: inherit; text-decoration: inherit;">Mqtt<wbr>Enabled<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The field allows `MQTT_ENABLED` or `MQTT_DISABLED`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="mqttenabledstate_go">
-<a href="#mqttenabledstate_go" style="color: inherit; text-decoration: inherit;">Mqtt<wbr>Enabled<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The field allows `MQTT_ENABLED` or `MQTT_DISABLED`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="mqttenabledstate_nodejs">
-<a href="#mqttenabledstate_nodejs" style="color: inherit; text-decoration: inherit;">mqtt<wbr>Enabled<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The field allows `MQTT_ENABLED` or `MQTT_DISABLED`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="mqtt_enabled_state_python">
-<a href="#mqtt_enabled_state_python" style="color: inherit; text-decoration: inherit;">mqtt_<wbr>enabled_<wbr>state</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The field allows `MQTT_ENABLED` or `MQTT_DISABLED`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-<h4 id="registrystatenotificationconfig">Registry<wbr>State<wbr>Notification<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegistryStateNotificationConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegistryStateNotificationConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#RegistryStateNotificationConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#RegistryStateNotificationConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iot.Inputs.RegistryStateNotificationConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iot.Outputs.RegistryStateNotificationConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="pubsubtopicname_csharp">
-<a href="#pubsubtopicname_csharp" style="color: inherit; text-decoration: inherit;">Pubsub<wbr>Topic<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}PubSub topic name to publish device events.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="pubsubtopicname_go">
-<a href="#pubsubtopicname_go" style="color: inherit; text-decoration: inherit;">Pubsub<wbr>Topic<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}PubSub topic name to publish device events.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="pubsubtopicname_nodejs">
-<a href="#pubsubtopicname_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Topic<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}PubSub topic name to publish device events.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="pubsub_topic_name_python">
-<a href="#pubsub_topic_name_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>topic_<wbr>name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}PubSub topic name to publish device events.
 {{% /md %}}</dd>
 
 </dl>

@@ -14,7 +14,7 @@ A Cloud TPU instance.
 
 To get more information about Node, see:
 
-* [API documentation](https://cloud.google.com/tpu/docs/reference/rest/)
+* [API documentation](https://cloud.google.com/tpu/docs/reference/rest/v1/projects.locations.nodes)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/tpu/docs/)
 
@@ -29,11 +29,11 @@ To get more information about Node, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/tpu/#pulumi_gcp.tpu.Node">Node</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accelerator_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduling_config</span><span class="p">:</span> <span class="nx">Optional[NodeSchedulingConfigArgs]</span> = None<span class="p">, </span><span class="nx">tensorflow_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/tpu/#pulumi_gcp.tpu.Node">Node</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accelerator_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduling_config</span><span class="p">:</span> <span class="nx">Optional[NodeSchedulingConfigArgs]</span> = None<span class="p">, </span><span class="nx">tensorflow_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_service_networking</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/tpu?tab=doc#Node">NewNode</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/tpu?tab=doc#NodeArgs">NodeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/tpu?tab=doc#Node">Node</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/tpu?tab=doc#Node">NewNode</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/tpu?tab=doc#NodeArgs">NodeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/tpu?tab=doc#Node">Node</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -107,7 +107,7 @@ To get more information about Node, see:
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -127,7 +127,7 @@ To get more information about Node, see:
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/tpu?tab=doc#NodeArgs">NodeArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/tpu?tab=doc#NodeArgs">NodeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -137,7 +137,7 @@ To get more information about Node, see:
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -214,24 +214,6 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-required"
             title="Required">
-        <span id="cidrblock_csharp">
-<a href="#cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The CIDR block that the TPU node will use when selecting an IP
-address. This CIDR block must be a /29 block; the Compute Engine
-networks API forbids a smaller block, and using a larger block would
-be wasteful (a node can only consume one IP address).
-Errors will occur if the CIDR block has already been used for a
-currently existing TPU node, the CIDR block conflicts with any
-subnetworks in the user's provided network, or the provided network
-is peered with another network that is using that CIDR block.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="tensorflowversion_csharp">
 <a href="#tensorflowversion_csharp" style="color: inherit; text-decoration: inherit;">Tensorflow<wbr>Version</a>
 </span> 
@@ -250,6 +232,24 @@ is peered with another network that is using that CIDR block.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The GCP location for the TPU.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cidrblock_csharp">
+<a href="#cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The CIDR block that the TPU node will use when selecting an IP
+address. This CIDR block must be a /29 block; the Compute Engine
+networks API forbids a smaller block, and using a larger block would
+be wasteful (a node can only consume one IP address).
+Errors will occur if the CIDR block has already been used for a
+currently existing TPU node, the CIDR block conflicts with any
+subnetworks in the user's provided network, or the provided network
+is peered with another network that is using that CIDR block.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -323,6 +323,20 @@ If it is not provided, the provider project is used.
 Structure is documented below.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="useservicenetworking_csharp">
+<a href="#useservicenetworking_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Service<wbr>Networking</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the VPC peering for the node is set up through Service Networking API.
+The VPC Peering should be set up before provisioning the node. If this field is set,
+cidr_block field should not be specified. If the network that you want to peer the
+TPU Node to is a Shared VPC network, the node must be created with this this field enabled.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -339,24 +353,6 @@ Structure is documented below.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of hardware accelerators associated with this node.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="cidrblock_go">
-<a href="#cidrblock_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The CIDR block that the TPU node will use when selecting an IP
-address. This CIDR block must be a /29 block; the Compute Engine
-networks API forbids a smaller block, and using a larger block would
-be wasteful (a node can only consume one IP address).
-Errors will occur if the CIDR block has already been used for a
-currently existing TPU node, the CIDR block conflicts with any
-subnetworks in the user's provided network, or the provided network
-is peered with another network that is using that CIDR block.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -379,6 +375,24 @@ is peered with another network that is using that CIDR block.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The GCP location for the TPU.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cidrblock_go">
+<a href="#cidrblock_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The CIDR block that the TPU node will use when selecting an IP
+address. This CIDR block must be a /29 block; the Compute Engine
+networks API forbids a smaller block, and using a larger block would
+be wasteful (a node can only consume one IP address).
+Errors will occur if the CIDR block has already been used for a
+currently existing TPU node, the CIDR block conflicts with any
+subnetworks in the user's provided network, or the provided network
+is peered with another network that is using that CIDR block.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -452,6 +466,20 @@ If it is not provided, the provider project is used.
 Structure is documented below.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="useservicenetworking_go">
+<a href="#useservicenetworking_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Service<wbr>Networking</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the VPC peering for the node is set up through Service Networking API.
+The VPC Peering should be set up before provisioning the node. If this field is set,
+cidr_block field should not be specified. If the network that you want to peer the
+TPU Node to is a Shared VPC network, the node must be created with this this field enabled.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -468,24 +496,6 @@ Structure is documented below.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of hardware accelerators associated with this node.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="cidrblock_nodejs">
-<a href="#cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Block</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The CIDR block that the TPU node will use when selecting an IP
-address. This CIDR block must be a /29 block; the Compute Engine
-networks API forbids a smaller block, and using a larger block would
-be wasteful (a node can only consume one IP address).
-Errors will occur if the CIDR block has already been used for a
-currently existing TPU node, the CIDR block conflicts with any
-subnetworks in the user's provided network, or the provided network
-is peered with another network that is using that CIDR block.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -508,6 +518,24 @@ is peered with another network that is using that CIDR block.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The GCP location for the TPU.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cidrblock_nodejs">
+<a href="#cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Block</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The CIDR block that the TPU node will use when selecting an IP
+address. This CIDR block must be a /29 block; the Compute Engine
+networks API forbids a smaller block, and using a larger block would
+be wasteful (a node can only consume one IP address).
+Errors will occur if the CIDR block has already been used for a
+currently existing TPU node, the CIDR block conflicts with any
+subnetworks in the user's provided network, or the provided network
+is peered with another network that is using that CIDR block.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -581,6 +609,20 @@ If it is not provided, the provider project is used.
 Structure is documented below.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="useservicenetworking_nodejs">
+<a href="#useservicenetworking_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Service<wbr>Networking</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the VPC peering for the node is set up through Service Networking API.
+The VPC Peering should be set up before provisioning the node. If this field is set,
+cidr_block field should not be specified. If the network that you want to peer the
+TPU Node to is a Shared VPC network, the node must be created with this this field enabled.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -597,24 +639,6 @@ Structure is documented below.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of hardware accelerators associated with this node.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="cidr_block_python">
-<a href="#cidr_block_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>block</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The CIDR block that the TPU node will use when selecting an IP
-address. This CIDR block must be a /29 block; the Compute Engine
-networks API forbids a smaller block, and using a larger block would
-be wasteful (a node can only consume one IP address).
-Errors will occur if the CIDR block has already been used for a
-currently existing TPU node, the CIDR block conflicts with any
-subnetworks in the user's provided network, or the provided network
-is peered with another network that is using that CIDR block.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -637,6 +661,24 @@ is peered with another network that is using that CIDR block.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The GCP location for the TPU.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cidr_block_python">
+<a href="#cidr_block_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>block</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The CIDR block that the TPU node will use when selecting an IP
+address. This CIDR block must be a /29 block; the Compute Engine
+networks API forbids a smaller block, and using a larger block would
+be wasteful (a node can only consume one IP address).
+Errors will occur if the CIDR block has already been used for a
+currently existing TPU node, the CIDR block conflicts with any
+subnetworks in the user's provided network, or the provided network
+is peered with another network that is using that CIDR block.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -708,6 +750,20 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Sets the scheduling options for this TPU instance.
 Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="use_service_networking_python">
+<a href="#use_service_networking_python" style="color: inherit; text-decoration: inherit;">use_<wbr>service_<wbr>networking</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the VPC peering for the node is set up through Service Networking API.
+The VPC Peering should be set up before provisioning the node. If this field is set,
+cidr_block field should not be specified. If the network that you want to peer the
+TPU Node to is a Shared VPC network, the node must be created with this this field enabled.
 {{% /md %}}</dd>
 
 </dl>
@@ -905,11 +961,11 @@ Get an existing Node resource's state with the given name, ID, and optional extr
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accelerator_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[NodeNetworkEndpointArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduling_config</span><span class="p">:</span> <span class="nx">Optional[NodeSchedulingConfigArgs]</span> = None<span class="p">, </span><span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tensorflow_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Node</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accelerator_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[NodeNetworkEndpointArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduling_config</span><span class="p">:</span> <span class="nx">Optional[NodeSchedulingConfigArgs]</span> = None<span class="p">, </span><span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tensorflow_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_service_networking</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Node</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNode<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/tpu?tab=doc#NodeState">NodeState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/tpu?tab=doc#Node">Node</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNode<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/tpu?tab=doc#NodeState">NodeState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/tpu?tab=doc#Node">Node</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1156,6 +1212,20 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_useservicenetworking_csharp">
+<a href="#state_useservicenetworking_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Service<wbr>Networking</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the VPC peering for the node is set up through Service Networking API.
+The VPC Peering should be set up before provisioning the node. If this field is set,
+cidr_block field should not be specified. If the network that you want to peer the
+TPU Node to is a Shared VPC network, the node must be created with this this field enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_zone_csharp">
 <a href="#state_zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
 </span> 
@@ -1305,6 +1375,20 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The version of Tensorflow running in the Node.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_useservicenetworking_go">
+<a href="#state_useservicenetworking_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Service<wbr>Networking</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the VPC peering for the node is set up through Service Networking API.
+The VPC Peering should be set up before provisioning the node. If this field is set,
+cidr_block field should not be specified. If the network that you want to peer the
+TPU Node to is a Shared VPC network, the node must be created with this this field enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1462,6 +1546,20 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_useservicenetworking_nodejs">
+<a href="#state_useservicenetworking_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Service<wbr>Networking</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the VPC peering for the node is set up through Service Networking API.
+The VPC Peering should be set up before provisioning the node. If this field is set,
+cidr_block field should not be specified. If the network that you want to peer the
+TPU Node to is a Shared VPC network, the node must be created with this this field enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_zone_nodejs">
 <a href="#state_zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
 </span> 
@@ -1615,6 +1713,20 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_use_service_networking_python">
+<a href="#state_use_service_networking_python" style="color: inherit; text-decoration: inherit;">use_<wbr>service_<wbr>networking</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the VPC peering for the node is set up through Service Networking API.
+The VPC Peering should be set up before provisioning the node. If this field is set,
+cidr_block field should not be specified. If the network that you want to peer the
+TPU Node to is a Shared VPC network, the node must be created with this this field enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_zone_python">
 <a href="#state_zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
 </span> 
@@ -1645,7 +1757,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/tpu?tab=doc#NodeNetworkEndpointOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/tpu?tab=doc#NodeNetworkEndpointOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Tpu.Outputs.NodeNetworkEndpoint.html">output</a> API doc for this type.
@@ -1771,7 +1883,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/tpu?tab=doc#NodeSchedulingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/tpu?tab=doc#NodeSchedulingConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/tpu?tab=doc#NodeSchedulingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/tpu?tab=doc#NodeSchedulingConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Tpu.Inputs.NodeSchedulingConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Tpu.Outputs.NodeSchedulingConfig.html">output</a> API doc for this type.
