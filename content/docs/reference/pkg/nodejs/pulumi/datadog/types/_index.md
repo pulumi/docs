@@ -3,7 +3,7 @@ title: "Module types"
 title_tag: "Module types | Package @pulumi/datadog | Node.js SDK"
 linktitle: "types"
 meta_desc: "Explore members of the types module in the @pulumi/datadog package."
-git_sha: "fb1d7bb05113900133753972d246e63d20da0c76"
+git_sha: "4a9696fedeeb30e678910e4ac2a27473a438894a"
 block_external_search_index: true
 ---
 
