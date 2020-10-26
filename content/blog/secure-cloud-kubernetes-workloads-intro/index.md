@@ -82,7 +82,7 @@ EKS now offers a native solution, which involves creating a cluster with an Open
 
 Once you've created a cluster and associated an IAM OIDC provider to it, you can deploy Kubernetes pods which use an [AWS IAM Role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html) which you'll need to create. To leverage this IAM role in your pod, you have to patch the Kubernetes [service account](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/) associated with the pod and add annotations that tell the pod which IAM role to use.
 
-Pulumi's first class support for Kubernetes Helm Charts and AWS resources mean you can perform all of this in one Pulumi program. Look out for the rest of this series to see how it's done!
+Pulumi's first-class support for Kubernetes Helm Charts and AWS resources means you can perform all of this in one Pulumi program. Look out for the rest of this series to see how it's done!
 
 ### Azure AKS
 
