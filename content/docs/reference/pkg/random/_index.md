@@ -33,7 +33,7 @@ A Pulumi package to safely use randomness in Pulumi programs.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`random` Terraform Provider](https://github.com/terraform-providers/terraform-provider-random).</dd>
 	<dt>Version</dt>
-	<dd>2.3.1</dd>
+	<dd>2.4.0</dd>
 </dl>
 
 
