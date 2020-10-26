@@ -23,7 +23,7 @@ Explore the resources and functions of the gcp module in the SignalFx package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`signalfx` Terraform Provider](https://github.com/splunk-terraform/terraform-provider-signalfx).</dd>
 	<dt>Version</dt>
-	<dd>3.0.1</dd>
+	<dd>3.1.0</dd>
 </dl>
 
 
