@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/kong | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/kong package."
-git_sha: "e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91"
+git_sha: "ae45caf2a4e102a370568a2424a49f1dcaaa61fb"
 block_external_search_index: true
 ---
 
@@ -33,7 +33,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="kongAdminPassword" data-link-title="kongAdminPassword">
-    <a href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-kong/blob/ae45caf2a4e102a370568a2424a49f1dcaaa61fb/sdk/nodejs/config/vars.ts#L12">
         let <strong>kongAdminPassword</strong>
     </a>
 </h3>
@@ -43,7 +43,7 @@ block_external_search_index: true
 An basic auth password for kong admin
 
 <h3 class="pdoc-module-header" id="kongAdminToken" data-link-title="kongAdminToken">
-    <a href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/config/vars.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-kong/blob/ae45caf2a4e102a370568a2424a49f1dcaaa61fb/sdk/nodejs/config/vars.ts#L16">
         let <strong>kongAdminToken</strong>
     </a>
 </h3>
@@ -53,7 +53,7 @@ An basic auth password for kong admin
 API key for the kong api (Enterprise Edition)
 
 <h3 class="pdoc-module-header" id="kongAdminUri" data-link-title="kongAdminUri">
-    <a href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/config/vars.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-kong/blob/ae45caf2a4e102a370568a2424a49f1dcaaa61fb/sdk/nodejs/config/vars.ts#L20">
         let <strong>kongAdminUri</strong>
     </a>
 </h3>
@@ -63,7 +63,7 @@ API key for the kong api (Enterprise Edition)
 The address of the kong admin url e.g. http://localhost:8001
 
 <h3 class="pdoc-module-header" id="kongAdminUsername" data-link-title="kongAdminUsername">
-    <a href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/config/vars.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-kong/blob/ae45caf2a4e102a370568a2424a49f1dcaaa61fb/sdk/nodejs/config/vars.ts#L24">
         let <strong>kongAdminUsername</strong>
     </a>
 </h3>
@@ -73,7 +73,7 @@ The address of the kong admin url e.g. http://localhost:8001
 An basic auth user for kong admin
 
 <h3 class="pdoc-module-header" id="kongApiKey" data-link-title="kongApiKey">
-    <a href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/config/vars.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-kong/blob/ae45caf2a4e102a370568a2424a49f1dcaaa61fb/sdk/nodejs/config/vars.ts#L28">
         let <strong>kongApiKey</strong>
     </a>
 </h3>
@@ -83,7 +83,7 @@ An basic auth user for kong admin
 API key for the kong api (if you have locked it down)
 
 <h3 class="pdoc-module-header" id="strictPluginsMatch" data-link-title="strictPluginsMatch">
-    <a href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/config/vars.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-kong/blob/ae45caf2a4e102a370568a2424a49f1dcaaa61fb/sdk/nodejs/config/vars.ts#L32">
         let <strong>strictPluginsMatch</strong>
     </a>
 </h3>
@@ -93,7 +93,7 @@ API key for the kong api (if you have locked it down)
 Should plugins `config_json` field strictly match plugin configuration
 
 <h3 class="pdoc-module-header" id="tlsSkipVerify" data-link-title="tlsSkipVerify">
-    <a href="https://github.com/pulumi/pulumi-kong/blob/e0f57e7964d2e06a2c64c3651f6281ff3fa6ea91/sdk/nodejs/config/vars.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-kong/blob/ae45caf2a4e102a370568a2424a49f1dcaaa61fb/sdk/nodejs/config/vars.ts#L36">
         let <strong>tlsSkipVerify</strong>
     </a>
 </h3>
