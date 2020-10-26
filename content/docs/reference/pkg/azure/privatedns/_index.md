@@ -37,7 +37,7 @@ Explore the resources and functions of the privatedns module in the Azure packag
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.25.0</dd>
+	<dd>3.28.0</dd>
 </dl>
 
 

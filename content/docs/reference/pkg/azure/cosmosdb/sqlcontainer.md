@@ -1634,6 +1634,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="compositeindices_csharp">
+<a href="#compositeindices_csharp" style="color: inherit; text-decoration: inherit;">Composite<wbr>Indices</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlcontainerindexingpolicycompositeindex">List&lt;Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Composite<wbr>Index<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `composite_index` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="excludedpaths_csharp">
 <a href="#excludedpaths_csharp" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Paths</a>
 </span> 
@@ -1671,6 +1682,17 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="compositeindices_go">
+<a href="#compositeindices_go" style="color: inherit; text-decoration: inherit;">Composite<wbr>Indices</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlcontainerindexingpolicycompositeindex">[]Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Composite<wbr>Index</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `composite_index` blocks as defined below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1714,6 +1736,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="compositeindices_nodejs">
+<a href="#compositeindices_nodejs" style="color: inherit; text-decoration: inherit;">composite<wbr>Indices</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlcontainerindexingpolicycompositeindex">Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Composite<wbr>Index[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `composite_index` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="excludedpaths_nodejs">
 <a href="#excludedpaths_nodejs" style="color: inherit; text-decoration: inherit;">excluded<wbr>Paths</a>
 </span> 
@@ -1754,6 +1787,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="composite_indices_python">
+<a href="#composite_indices_python" style="color: inherit; text-decoration: inherit;">composite_<wbr>indices</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlcontainerindexingpolicycompositeindex">Sequence[Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Composite<wbr>Index<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `composite_index` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="excluded_paths_python">
 <a href="#excluded_paths_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>paths</a>
 </span> 
@@ -1783,6 +1827,230 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Indicates the indexing mode. Possible values include: `Consistent` and `None`. Defaults to `Consistent`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="sqlcontainerindexingpolicycompositeindex">Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Composite<wbr>Index</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SqlContainerIndexingPolicyCompositeIndex">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SqlContainerIndexingPolicyCompositeIndex">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb?tab=doc#SqlContainerIndexingPolicyCompositeIndexArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb?tab=doc#SqlContainerIndexingPolicyCompositeIndexOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.CosmosDB.Inputs.SqlContainerIndexingPolicyCompositeIndexArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.CosmosDB.Outputs.SqlContainerIndexingPolicyCompositeIndex.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="indices_csharp">
+<a href="#indices_csharp" style="color: inherit; text-decoration: inherit;">Indices</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlcontainerindexingpolicycompositeindexindex">List&lt;Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Composite<wbr>Index<wbr>Index<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `index` blocks as defined below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="indices_go">
+<a href="#indices_go" style="color: inherit; text-decoration: inherit;">Indices</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlcontainerindexingpolicycompositeindexindex">[]Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Composite<wbr>Index<wbr>Index</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `index` blocks as defined below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="indices_nodejs">
+<a href="#indices_nodejs" style="color: inherit; text-decoration: inherit;">indices</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlcontainerindexingpolicycompositeindexindex">Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Composite<wbr>Index<wbr>Index[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `index` blocks as defined below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="indices_python">
+<a href="#indices_python" style="color: inherit; text-decoration: inherit;">indices</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlcontainerindexingpolicycompositeindexindex">Sequence[Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Composite<wbr>Index<wbr>Index<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `index` blocks as defined below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="sqlcontainerindexingpolicycompositeindexindex">Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Composite<wbr>Index<wbr>Index</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SqlContainerIndexingPolicyCompositeIndexIndex">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SqlContainerIndexingPolicyCompositeIndexIndex">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb?tab=doc#SqlContainerIndexingPolicyCompositeIndexIndexArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb?tab=doc#SqlContainerIndexingPolicyCompositeIndexIndexOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.CosmosDB.Inputs.SqlContainerIndexingPolicyCompositeIndexIndexArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.CosmosDB.Outputs.SqlContainerIndexingPolicyCompositeIndexIndex.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="order_csharp">
+<a href="#order_csharp" style="color: inherit; text-decoration: inherit;">Order</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Order of the index. Possible values are `Ascending` or `Descending`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Path for which the indexing behavior applies to.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="order_go">
+<a href="#order_go" style="color: inherit; text-decoration: inherit;">Order</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Order of the index. Possible values are `Ascending` or `Descending`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Path for which the indexing behavior applies to.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="order_nodejs">
+<a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Order of the index. Possible values are `Ascending` or `Descending`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Path for which the indexing behavior applies to.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="order_python">
+<a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Order of the index. Possible values are `Ascending` or `Descending`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Path for which the indexing behavior applies to.
 {{% /md %}}</dd>
 
 </dl>

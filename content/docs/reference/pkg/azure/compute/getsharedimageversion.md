@@ -431,6 +431,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="osdiskimagesizegb_csharp">
+<a href="#osdiskimagesizegb_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Image<wbr>Size<wbr>Gb</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The size of the OS disk snapshot (in Gigabytes) which was the source of this Shared Image Version.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="osdisksnapshotid_csharp">
 <a href="#osdisksnapshotid_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Snapshot<wbr>Id</a>
 </span> 
@@ -552,6 +563,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Azure Region in which this Image Version exists.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="osdiskimagesizegb_go">
+<a href="#osdiskimagesizegb_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Image<wbr>Size<wbr>Gb</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The size of the OS disk snapshot (in Gigabytes) which was the source of this Shared Image Version.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -681,6 +703,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="osdiskimagesizegb_nodejs">
+<a href="#osdiskimagesizegb_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk<wbr>Image<wbr>Size<wbr>Gb</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The size of the OS disk snapshot (in Gigabytes) which was the source of this Shared Image Version.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="osdisksnapshotid_nodejs">
 <a href="#osdisksnapshotid_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk<wbr>Snapshot<wbr>Id</a>
 </span> 
@@ -802,6 +835,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Azure Region in which this Image Version exists.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="os_disk_image_size_gb_python">
+<a href="#os_disk_image_size_gb_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>image_<wbr>size_<wbr>gb</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The size of the OS disk snapshot (in Gigabytes) which was the source of this Shared Image Version.
 {{% /md %}}</dd>
 
     <dt class="property-"

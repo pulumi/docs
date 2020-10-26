@@ -450,7 +450,7 @@ types will be evaluated. Possible values are `All`, `Indexed`, `Microsoft.Contai
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The metadata for the policy definition. This
-is a json object representing additional metadata that should be stored
+is a JSON string representing additional metadata that should be stored
 with the policy definition.
 {{% /md %}}</dd>
 
@@ -475,7 +475,7 @@ new resource to be created.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Parameters for the policy definition. This field
-is a json object that allows you to parameterize your policy definition.
+is a JSON string that allows you to parameterize your policy definition.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -487,7 +487,7 @@ is a json object that allows you to parameterize your policy definition.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The policy rule for the policy definition. This
-is a json object representing the rule that contains an if and
+is a JSON string representing the rule that contains an if and
 a then block.
 {{% /md %}}</dd>
 
@@ -574,7 +574,7 @@ types will be evaluated. Possible values are `All`, `Indexed`, `Microsoft.Contai
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The metadata for the policy definition. This
-is a json object representing additional metadata that should be stored
+is a JSON string representing additional metadata that should be stored
 with the policy definition.
 {{% /md %}}</dd>
 
@@ -599,7 +599,7 @@ new resource to be created.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Parameters for the policy definition. This field
-is a json object that allows you to parameterize your policy definition.
+is a JSON string that allows you to parameterize your policy definition.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -611,7 +611,7 @@ is a json object that allows you to parameterize your policy definition.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The policy rule for the policy definition. This
-is a json object representing the rule that contains an if and
+is a JSON string representing the rule that contains an if and
 a then block.
 {{% /md %}}</dd>
 
@@ -698,7 +698,7 @@ types will be evaluated. Possible values are `All`, `Indexed`, `Microsoft.Contai
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The metadata for the policy definition. This
-is a json object representing additional metadata that should be stored
+is a JSON string representing additional metadata that should be stored
 with the policy definition.
 {{% /md %}}</dd>
 
@@ -723,7 +723,7 @@ new resource to be created.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Parameters for the policy definition. This field
-is a json object that allows you to parameterize your policy definition.
+is a JSON string that allows you to parameterize your policy definition.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -735,7 +735,7 @@ is a json object that allows you to parameterize your policy definition.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The policy rule for the policy definition. This
-is a json object representing the rule that contains an if and
+is a JSON string representing the rule that contains an if and
 a then block.
 {{% /md %}}</dd>
 
@@ -822,7 +822,7 @@ types will be evaluated. Possible values are `All`, `Indexed`, `Microsoft.Contai
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The metadata for the policy definition. This
-is a json object representing additional metadata that should be stored
+is a JSON string representing additional metadata that should be stored
 with the policy definition.
 {{% /md %}}</dd>
 
@@ -847,7 +847,7 @@ new resource to be created.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Parameters for the policy definition. This field
-is a json object that allows you to parameterize your policy definition.
+is a JSON string that allows you to parameterize your policy definition.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -859,7 +859,7 @@ is a json object that allows you to parameterize your policy definition.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The policy rule for the policy definition. This
-is a json object representing the rule that contains an if and
+is a JSON string representing the rule that contains an if and
 a then block.
 {{% /md %}}</dd>
 
@@ -1129,7 +1129,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The metadata for the policy definition. This
-is a json object representing additional metadata that should be stored
+is a JSON string representing additional metadata that should be stored
 with the policy definition.
 {{% /md %}}</dd>
 
@@ -1166,7 +1166,7 @@ new resource to be created.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Parameters for the policy definition. This field
-is a json object that allows you to parameterize your policy definition.
+is a JSON string that allows you to parameterize your policy definition.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1178,7 +1178,7 @@ is a json object that allows you to parameterize your policy definition.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The policy rule for the policy definition. This
-is a json object representing the rule that contains an if and
+is a JSON string representing the rule that contains an if and
 a then block.
 {{% /md %}}</dd>
 
@@ -1253,7 +1253,7 @@ a then block.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The metadata for the policy definition. This
-is a json object representing additional metadata that should be stored
+is a JSON string representing additional metadata that should be stored
 with the policy definition.
 {{% /md %}}</dd>
 
@@ -1290,7 +1290,7 @@ new resource to be created.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Parameters for the policy definition. This field
-is a json object that allows you to parameterize your policy definition.
+is a JSON string that allows you to parameterize your policy definition.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1302,7 +1302,7 @@ is a json object that allows you to parameterize your policy definition.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The policy rule for the policy definition. This
-is a json object representing the rule that contains an if and
+is a JSON string representing the rule that contains an if and
 a then block.
 {{% /md %}}</dd>
 
@@ -1377,7 +1377,7 @@ a then block.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The metadata for the policy definition. This
-is a json object representing additional metadata that should be stored
+is a JSON string representing additional metadata that should be stored
 with the policy definition.
 {{% /md %}}</dd>
 
@@ -1414,7 +1414,7 @@ new resource to be created.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Parameters for the policy definition. This field
-is a json object that allows you to parameterize your policy definition.
+is a JSON string that allows you to parameterize your policy definition.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1426,7 +1426,7 @@ is a json object that allows you to parameterize your policy definition.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The policy rule for the policy definition. This
-is a json object representing the rule that contains an if and
+is a JSON string representing the rule that contains an if and
 a then block.
 {{% /md %}}</dd>
 
@@ -1501,7 +1501,7 @@ a then block.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The metadata for the policy definition. This
-is a json object representing additional metadata that should be stored
+is a JSON string representing additional metadata that should be stored
 with the policy definition.
 {{% /md %}}</dd>
 
@@ -1538,7 +1538,7 @@ new resource to be created.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Parameters for the policy definition. This field
-is a json object that allows you to parameterize your policy definition.
+is a JSON string that allows you to parameterize your policy definition.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1550,7 +1550,7 @@ is a json object that allows you to parameterize your policy definition.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The policy rule for the policy definition. This
-is a json object representing the rule that contains an if and
+is a JSON string representing the rule that contains an if and
 a then block.
 {{% /md %}}</dd>
 
