@@ -3,7 +3,7 @@ title: "Module types/output"
 title_tag: "Module types/output | Package @pulumi/packet | Node.js SDK"
 linktitle: "output"
 meta_desc: "Explore members of the output module in the @pulumi/packet package."
-git_sha: "fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4"
+git_sha: "b320edb2294faa15546601f94a5f1b83db1599ce"
 block_external_search_index: true
 ---
 
@@ -40,14 +40,14 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="DeviceIpAddress" data-link-title="DeviceIpAddress">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L8">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L8">
         interface <strong>DeviceIpAddress</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>DeviceIpAddress</span></code></pre>
 <h4 class="pdoc-member-header" id="DeviceIpAddress-cidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L12">property <b>cidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L12">property <b>cidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cidr?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -55,12 +55,12 @@ block_external_search_index: true
 CIDR suffix for IP address block to be assigned, i.e. amount of addresses.
 
 <h4 class="pdoc-member-header" id="DeviceIpAddress-reservationIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L13">property <b>reservationIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L13">property <b>reservationIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reservationIds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="DeviceIpAddress-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L17">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L17">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -68,14 +68,14 @@ CIDR suffix for IP address block to be assigned, i.e. amount of addresses.
 One of [`privateIpv4`, `publicIpv4`, `publicIpv6`]
 
 <h3 class="pdoc-module-header" id="DeviceNetwork" data-link-title="DeviceNetwork">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L20">
         interface <strong>DeviceNetwork</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>DeviceNetwork</span></code></pre>
 <h4 class="pdoc-member-header" id="DeviceNetwork-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L24">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L24">property <b>address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>address: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -83,7 +83,7 @@ One of [`privateIpv4`, `publicIpv4`, `publicIpv6`]
 IPv4 or IPv6 address string
 
 <h4 class="pdoc-member-header" id="DeviceNetwork-cidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L28">property <b>cidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L28">property <b>cidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cidr: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -91,7 +91,7 @@ IPv4 or IPv6 address string
 CIDR suffix for IP address block to be assigned, i.e. amount of addresses.
 
 <h4 class="pdoc-member-header" id="DeviceNetwork-family">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L33">property <b>family</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L33">property <b>family</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>family: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -100,7 +100,7 @@ IP version - "4" or "6"
 * `networkType` Network type of a device, used in [Layer 2 networking](https://www.packet.com/developers/docs/network/advanced/layer-2/). Will be one of `layer3`, `hybrid`, `layer2-individual` and `layer2-bonded`.
 
 <h4 class="pdoc-member-header" id="DeviceNetwork-gateway">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L37">property <b>gateway</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L37">property <b>gateway</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gateway: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -108,7 +108,7 @@ IP version - "4" or "6"
 address of router
 
 <h4 class="pdoc-member-header" id="DeviceNetwork-public">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L41">property <b>public</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L41">property <b>public</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>public: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -116,14 +116,14 @@ address of router
 whether the address is routable from the Internet
 
 <h3 class="pdoc-module-header" id="DevicePort" data-link-title="DevicePort">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L44">
         interface <strong>DevicePort</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>DevicePort</span></code></pre>
 <h4 class="pdoc-member-header" id="DevicePort-bonded">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L49">property <b>bonded</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L49">property <b>bonded</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bonded: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -132,7 +132,7 @@ Whether this port is part of a bond in bonded network setup
 * `projectId`- The ID of the project the device belongs to
 
 <h4 class="pdoc-member-header" id="DevicePort-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L53">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L53">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -140,7 +140,7 @@ Whether this port is part of a bond in bonded network setup
 ID of the port
 
 <h4 class="pdoc-member-header" id="DevicePort-mac">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L57">property <b>mac</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L57">property <b>mac</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mac: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -148,7 +148,7 @@ ID of the port
 MAC address assigned to the port
 
 <h4 class="pdoc-member-header" id="DevicePort-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L61">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L61">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -156,7 +156,7 @@ MAC address assigned to the port
 Name of the port (e.g. `eth0`, or `bond0`)
 
 <h4 class="pdoc-member-header" id="DevicePort-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L65">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L65">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -164,14 +164,14 @@ Name of the port (e.g. `eth0`, or `bond0`)
 One of [`privateIpv4`, `publicIpv4`, `publicIpv6`]
 
 <h3 class="pdoc-module-header" id="GetDeviceBgpNeighborsBgpNeighbor" data-link-title="GetDeviceBgpNeighborsBgpNeighbor">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L68">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L68">
         interface <strong>GetDeviceBgpNeighborsBgpNeighbor</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetDeviceBgpNeighborsBgpNeighbor</span></code></pre>
 <h4 class="pdoc-member-header" id="GetDeviceBgpNeighborsBgpNeighbor-addressFamily">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L72">property <b>addressFamily</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L72">property <b>addressFamily</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addressFamily: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -179,7 +179,7 @@ One of [`privateIpv4`, `publicIpv4`, `publicIpv6`]
 IP address version, 4 or 6
 
 <h4 class="pdoc-member-header" id="GetDeviceBgpNeighborsBgpNeighbor-customerAs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L76">property <b>customerAs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L76">property <b>customerAs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customerAs: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -187,7 +187,7 @@ IP address version, 4 or 6
 Local autonomous system number
 
 <h4 class="pdoc-member-header" id="GetDeviceBgpNeighborsBgpNeighbor-customerIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L80">property <b>customerIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L80">property <b>customerIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customerIp: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -195,7 +195,7 @@ Local autonomous system number
 Local used peer IP address
 
 <h4 class="pdoc-member-header" id="GetDeviceBgpNeighborsBgpNeighbor-md5Enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L84">property <b>md5Enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L84">property <b>md5Enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>md5Enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -203,7 +203,7 @@ Local used peer IP address
 Whether BGP session is password enabled
 
 <h4 class="pdoc-member-header" id="GetDeviceBgpNeighborsBgpNeighbor-md5Password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L88">property <b>md5Password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L88">property <b>md5Password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>md5Password: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -211,7 +211,7 @@ Whether BGP session is password enabled
 BGP session password in plaintext (not a checksum)
 
 <h4 class="pdoc-member-header" id="GetDeviceBgpNeighborsBgpNeighbor-multihop">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L92">property <b>multihop</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L92">property <b>multihop</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>multihop: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -219,7 +219,7 @@ BGP session password in plaintext (not a checksum)
 Whether the neighbor is in EBGP multihop session
 
 <h4 class="pdoc-member-header" id="GetDeviceBgpNeighborsBgpNeighbor-peerAs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L96">property <b>peerAs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L96">property <b>peerAs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>peerAs: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -227,7 +227,7 @@ Whether the neighbor is in EBGP multihop session
 Peer AS number (different than customerAs for EBGP)
 
 <h4 class="pdoc-member-header" id="GetDeviceBgpNeighborsBgpNeighbor-peerIps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L100">property <b>peerIps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L100">property <b>peerIps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>peerIps?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -235,7 +235,7 @@ Peer AS number (different than customerAs for EBGP)
 Array of IP addresses of this neighbor's peers
 
 <h4 class="pdoc-member-header" id="GetDeviceBgpNeighborsBgpNeighbor-routesIns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L104">property <b>routesIns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L104">property <b>routesIns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>routesIns: <a href='#GetDeviceBgpNeighborsBgpNeighborRoutesIn'>GetDeviceBgpNeighborsBgpNeighborRoutesIn</a>[];</code></pre>
@@ -243,7 +243,7 @@ Array of IP addresses of this neighbor's peers
 Array of incoming routes. Each route has attributes:
 
 <h4 class="pdoc-member-header" id="GetDeviceBgpNeighborsBgpNeighbor-routesOuts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L108">property <b>routesOuts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L108">property <b>routesOuts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>routesOuts: <a href='#GetDeviceBgpNeighborsBgpNeighborRoutesOut'>GetDeviceBgpNeighborsBgpNeighborRoutesOut</a>[];</code></pre>
@@ -251,14 +251,14 @@ Array of incoming routes. Each route has attributes:
 Array of outgoing routes in the same format
 
 <h3 class="pdoc-module-header" id="GetDeviceBgpNeighborsBgpNeighborRoutesIn" data-link-title="GetDeviceBgpNeighborsBgpNeighborRoutesIn">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L111">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L111">
         interface <strong>GetDeviceBgpNeighborsBgpNeighborRoutesIn</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetDeviceBgpNeighborsBgpNeighborRoutesIn</span></code></pre>
 <h4 class="pdoc-member-header" id="GetDeviceBgpNeighborsBgpNeighborRoutesIn-exact">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L115">property <b>exact</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L115">property <b>exact</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>exact: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -266,7 +266,7 @@ Array of outgoing routes in the same format
 (bool) Whether the route is exact
 
 <h4 class="pdoc-member-header" id="GetDeviceBgpNeighborsBgpNeighborRoutesIn-route">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L119">property <b>route</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L119">property <b>route</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>route: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -274,14 +274,14 @@ Array of outgoing routes in the same format
 CIDR expression of route (ip/mask)
 
 <h3 class="pdoc-module-header" id="GetDeviceBgpNeighborsBgpNeighborRoutesOut" data-link-title="GetDeviceBgpNeighborsBgpNeighborRoutesOut">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L122">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L122">
         interface <strong>GetDeviceBgpNeighborsBgpNeighborRoutesOut</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetDeviceBgpNeighborsBgpNeighborRoutesOut</span></code></pre>
 <h4 class="pdoc-member-header" id="GetDeviceBgpNeighborsBgpNeighborRoutesOut-exact">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L126">property <b>exact</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L126">property <b>exact</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>exact: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -289,7 +289,7 @@ CIDR expression of route (ip/mask)
 (bool) Whether the route is exact
 
 <h4 class="pdoc-member-header" id="GetDeviceBgpNeighborsBgpNeighborRoutesOut-route">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L130">property <b>route</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L130">property <b>route</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>route: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -297,14 +297,14 @@ CIDR expression of route (ip/mask)
 CIDR expression of route (ip/mask)
 
 <h3 class="pdoc-module-header" id="GetDeviceNetwork" data-link-title="GetDeviceNetwork">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L133">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L133">
         interface <strong>GetDeviceNetwork</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetDeviceNetwork</span></code></pre>
 <h4 class="pdoc-member-header" id="GetDeviceNetwork-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L137">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L137">property <b>address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>address: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -312,7 +312,7 @@ CIDR expression of route (ip/mask)
 IPv4 or IPv6 address string
 
 <h4 class="pdoc-member-header" id="GetDeviceNetwork-cidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L141">property <b>cidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L141">property <b>cidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cidr: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -320,7 +320,7 @@ IPv4 or IPv6 address string
 Bit length of the network mask of the address
 
 <h4 class="pdoc-member-header" id="GetDeviceNetwork-family">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L145">property <b>family</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L145">property <b>family</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>family: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -328,7 +328,7 @@ Bit length of the network mask of the address
 IP version - "4" or "6"
 
 <h4 class="pdoc-member-header" id="GetDeviceNetwork-gateway">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L149">property <b>gateway</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L149">property <b>gateway</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gateway: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -336,7 +336,7 @@ IP version - "4" or "6"
 Address of router
 
 <h4 class="pdoc-member-header" id="GetDeviceNetwork-public">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L153">property <b>public</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L153">property <b>public</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>public: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -344,14 +344,14 @@ Address of router
 Whether the address is routable from the Internet
 
 <h3 class="pdoc-module-header" id="GetDevicePort" data-link-title="GetDevicePort">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L156">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L156">
         interface <strong>GetDevicePort</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetDevicePort</span></code></pre>
 <h4 class="pdoc-member-header" id="GetDevicePort-bonded">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L160">property <b>bonded</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L160">property <b>bonded</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bonded: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -359,7 +359,7 @@ Whether the address is routable from the Internet
 Whether this port is part of a bond in bonded network setup
 
 <h4 class="pdoc-member-header" id="GetDevicePort-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L164">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L164">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -367,7 +367,7 @@ Whether this port is part of a bond in bonded network setup
 ID of the port
 
 <h4 class="pdoc-member-header" id="GetDevicePort-mac">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L168">property <b>mac</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L168">property <b>mac</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mac: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -375,7 +375,7 @@ ID of the port
 MAC address assigned to the port
 
 <h4 class="pdoc-member-header" id="GetDevicePort-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L172">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L172">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -383,7 +383,7 @@ MAC address assigned to the port
 Name of the port (e.g. `eth0`, or `bond0`)
 
 <h4 class="pdoc-member-header" id="GetDevicePort-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L176">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L176">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -391,14 +391,14 @@ Name of the port (e.g. `eth0`, or `bond0`)
 Type of the port (e.g. `NetworkPort` or `NetworkBondPort`)
 
 <h3 class="pdoc-module-header" id="GetProjectBgpConfig" data-link-title="GetProjectBgpConfig">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L179">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L179">
         interface <strong>GetProjectBgpConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetProjectBgpConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="GetProjectBgpConfig-asn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L183">property <b>asn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L183">property <b>asn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>asn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -406,7 +406,7 @@ Type of the port (e.g. `NetworkPort` or `NetworkBondPort`)
 Autonomous System Numer for local BGP deployment
 
 <h4 class="pdoc-member-header" id="GetProjectBgpConfig-deploymentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L187">property <b>deploymentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L187">property <b>deploymentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deploymentType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -414,7 +414,7 @@ Autonomous System Numer for local BGP deployment
 `private` or `public`, the `private` is likely to be usable immediately, the `public` will need to be review by Packet engineers
 
 <h4 class="pdoc-member-header" id="GetProjectBgpConfig-maxPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L191">property <b>maxPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L191">property <b>maxPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxPrefix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -422,7 +422,7 @@ Autonomous System Numer for local BGP deployment
 The maximum number of route filters allowed per server
 
 <h4 class="pdoc-member-header" id="GetProjectBgpConfig-md5">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L195">property <b>md5</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L195">property <b>md5</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>md5?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -430,7 +430,7 @@ The maximum number of route filters allowed per server
 Password for BGP session in plaintext (not a checksum)
 
 <h4 class="pdoc-member-header" id="GetProjectBgpConfig-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L199">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L199">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -438,31 +438,31 @@ Password for BGP session in plaintext (not a checksum)
 status of BGP configuration in the project
 
 <h3 class="pdoc-module-header" id="GetVolumeSnapshotPolicy" data-link-title="GetVolumeSnapshotPolicy">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L202">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L202">
         interface <strong>GetVolumeSnapshotPolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetVolumeSnapshotPolicy</span></code></pre>
 <h4 class="pdoc-member-header" id="GetVolumeSnapshotPolicy-snapshotCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L203">property <b>snapshotCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L203">property <b>snapshotCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotCount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVolumeSnapshotPolicy-snapshotFrequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L204">property <b>snapshotFrequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L204">property <b>snapshotFrequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotFrequency: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ProjectBgpConfig" data-link-title="ProjectBgpConfig">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L207">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L207">
         interface <strong>ProjectBgpConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ProjectBgpConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="ProjectBgpConfig-asn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L211">property <b>asn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L211">property <b>asn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>asn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -470,7 +470,7 @@ status of BGP configuration in the project
 Autonomous System Number for local BGP deployment
 
 <h4 class="pdoc-member-header" id="ProjectBgpConfig-deploymentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L215">property <b>deploymentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L215">property <b>deploymentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deploymentType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -478,7 +478,7 @@ Autonomous System Number for local BGP deployment
 `private` or `public`, the `private` is likely to be usable immediately, the `public` will need to be review by Packet engineers
 
 <h4 class="pdoc-member-header" id="ProjectBgpConfig-maxPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L219">property <b>maxPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L219">property <b>maxPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxPrefix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -486,7 +486,7 @@ Autonomous System Number for local BGP deployment
 The maximum number of route filters allowed per server
 
 <h4 class="pdoc-member-header" id="ProjectBgpConfig-md5">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L223">property <b>md5</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L223">property <b>md5</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>md5?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -494,7 +494,7 @@ The maximum number of route filters allowed per server
 Password for BGP session in plaintext (not a checksum)
 
 <h4 class="pdoc-member-header" id="ProjectBgpConfig-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L227">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L227">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -502,98 +502,98 @@ Password for BGP session in plaintext (not a checksum)
 status of BGP configuration in the project
 
 <h3 class="pdoc-module-header" id="SpotMarketRequestInstanceParameters" data-link-title="SpotMarketRequestInstanceParameters">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L230">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L230">
         interface <strong>SpotMarketRequestInstanceParameters</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>SpotMarketRequestInstanceParameters</span></code></pre>
 <h4 class="pdoc-member-header" id="SpotMarketRequestInstanceParameters-alwaysPxe">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L231">property <b>alwaysPxe</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L231">property <b>alwaysPxe</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alwaysPxe?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="SpotMarketRequestInstanceParameters-billingCycle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L232">property <b>billingCycle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L232">property <b>billingCycle</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>billingCycle: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="SpotMarketRequestInstanceParameters-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L233">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L233">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="SpotMarketRequestInstanceParameters-features">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L234">property <b>features</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L234">property <b>features</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>features?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="SpotMarketRequestInstanceParameters-hostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L235">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L235">property <b>hostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostname: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="SpotMarketRequestInstanceParameters-locked">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L236">property <b>locked</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L236">property <b>locked</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>locked?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="SpotMarketRequestInstanceParameters-operatingSystem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L237">property <b>operatingSystem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L237">property <b>operatingSystem</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>operatingSystem: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="SpotMarketRequestInstanceParameters-plan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L238">property <b>plan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L238">property <b>plan</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>plan: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="SpotMarketRequestInstanceParameters-projectSshKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L239">property <b>projectSshKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L239">property <b>projectSshKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectSshKeys?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="SpotMarketRequestInstanceParameters-termintationTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L240">property <b>termintationTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L240">property <b>termintationTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>termintationTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="SpotMarketRequestInstanceParameters-userSshKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L241">property <b>userSshKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L241">property <b>userSshKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userSshKeys?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="SpotMarketRequestInstanceParameters-userdata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L242">property <b>userdata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L242">property <b>userdata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userdata?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="VolumeAttachment" data-link-title="VolumeAttachment">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L245">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L245">
         interface <strong>VolumeAttachment</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>VolumeAttachment</span></code></pre>
 <h4 class="pdoc-member-header" id="VolumeAttachment-href">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L246">property <b>href</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L246">property <b>href</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>href: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="VolumeSnapshotPolicy" data-link-title="VolumeSnapshotPolicy">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L249">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L249">
         interface <strong>VolumeSnapshotPolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>VolumeSnapshotPolicy</span></code></pre>
 <h4 class="pdoc-member-header" id="VolumeSnapshotPolicy-snapshotCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L250">property <b>snapshotCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L250">property <b>snapshotCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotCount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="VolumeSnapshotPolicy-snapshotFrequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/fb216ee1d7d99ad8e7b9f8ca9ea143f5d6b2c1a4/sdk/nodejs/types/output.ts#L251">property <b>snapshotFrequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-packet/blob/b320edb2294faa15546601f94a5f1b83db1599ce/sdk/nodejs/types/output.ts#L251">property <b>snapshotFrequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotFrequency: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>

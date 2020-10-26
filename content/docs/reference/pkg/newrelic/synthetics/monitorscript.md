@@ -12,6 +12,86 @@ meta_desc: "Explore the MonitorScript resource of the synthetics module, includi
 
 Use this resource to update a synthetics monitor script in New Relic.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using System.IO;
+using Pulumi;
+using NewRelic = Pulumi.NewRelic;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foo = new NewRelic.Synthetics.Monitor("foo", new NewRelic.Synthetics.MonitorArgs
+        {
+            Type = "SCRIPT_BROWSER",
+            Frequency = 5,
+            Status = "ENABLED",
+            Locations = 
+            {
+                "AWS_US_EAST_1",
+            },
+        });
+        var fooScript = new NewRelic.Synthetics.MonitorScript("fooScript", new NewRelic.Synthetics.MonitorScriptArgs
+        {
+            MonitorId = foo.Id,
+            Text = File.ReadAllText($"{path.Module}/foo_script.js"),
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_newrelic as newrelic
+
+foo = newrelic.synthetics.Monitor("foo",
+    type="SCRIPT_BROWSER",
+    frequency=5,
+    status="ENABLED",
+    locations=["AWS_US_EAST_1"])
+foo_script = newrelic.synthetics.MonitorScript("fooScript",
+    monitor_id=foo.id,
+    text=(lambda path: open(path).read())(f"{path['module']}/foo_script.js"))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as newrelic from "@pulumi/newrelic";
+import * from "fs";
+
+const foo = new newrelic.synthetics.Monitor("foo", {
+    type: "SCRIPT_BROWSER",
+    frequency: 5,
+    status: "ENABLED",
+    locations: ["AWS_US_EAST_1"],
+});
+const fooScript = new newrelic.synthetics.MonitorScript("fooScript", {
+    monitorId: foo.id,
+    text: fs.readFileSync(`${path.module}/foo_script.js`),
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a MonitorScript Resource {#create}

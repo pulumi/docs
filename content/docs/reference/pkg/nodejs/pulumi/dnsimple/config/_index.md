@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/dnsimple | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/dnsimple package."
-git_sha: "00b84da99d40ba29fee1d3e6ca40645e8a35c81d"
+git_sha: "c65fea3c17b661e6dee516dd2433b271a7d30ee6"
 block_external_search_index: true
 ---
 
@@ -28,7 +28,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="account" data-link-title="account">
-    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/00b84da99d40ba29fee1d3e6ca40645e8a35c81d/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/c65fea3c17b661e6dee516dd2433b271a7d30ee6/sdk/nodejs/config/vars.ts#L12">
         let <strong>account</strong>
     </a>
 </h3>
@@ -38,7 +38,7 @@ block_external_search_index: true
 The account for API operations.
 
 <h3 class="pdoc-module-header" id="token" data-link-title="token">
-    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/00b84da99d40ba29fee1d3e6ca40645e8a35c81d/sdk/nodejs/config/vars.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/c65fea3c17b661e6dee516dd2433b271a7d30ee6/sdk/nodejs/config/vars.ts#L16">
         let <strong>token</strong>
     </a>
 </h3>

@@ -1151,7 +1151,7 @@ The fields of the network attributes are:
 <a href="#networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdevicenetwork">List[Get<wbr>Device<wbr>Network]</a></span>
+        <span class="property-type"><a href="#getdevicenetwork">Sequence[Get<wbr>Device<wbr>Network]</a></span>
     </dt>
     <dd>{{% md %}}The device's private and public IP (v4 and v6) network details. When a device is run without any special network configuration, it will have 3 networks: 
 * Public IPv4 at `packet_device.name.network.0`
@@ -1189,7 +1189,7 @@ The fields of the network attributes are:
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdeviceport">List[Get<wbr>Device<wbr>Port]</a></span>
+        <span class="property-type"><a href="#getdeviceport">Sequence[Get<wbr>Device<wbr>Port]</a></span>
     </dt>
     <dd>{{% md %}}Ports assigned to the device
 {{% /md %}}</dd>
@@ -1221,7 +1221,7 @@ The fields of the network attributes are:
 <a href="#ssh_key_ids_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>key_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of IDs of SSH keys deployed in the device, can be both user or project SSH keys
 {{% /md %}}</dd>
@@ -1253,7 +1253,7 @@ The fields of the network attributes are:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Tags attached to the device
 {{% /md %}}</dd>
@@ -1492,7 +1492,7 @@ The fields of the network attributes are:
 <a href="#cidr_python" style="color: inherit; text-decoration: inherit;">cidr</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Bit length of the network mask of the address
 {{% /md %}}</dd>
@@ -1503,7 +1503,7 @@ The fields of the network attributes are:
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}IP version - "4" or "6"
 {{% /md %}}</dd>

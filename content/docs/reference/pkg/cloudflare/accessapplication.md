@@ -166,7 +166,7 @@ const stagingApp = new cloudflare.AccessApplication("staging_app", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.AccessApplication">AccessApplication</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allowed_idps</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">auto_redirect_to_identity</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cors_headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessApplicationCorsHeaderArgs]]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.AccessApplication">AccessApplication</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allowed_idps</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">auto_redirect_to_identity</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cors_headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessApplicationCorsHeaderArgs]]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_binding_cookie</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -369,7 +369,8 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The account to which the access application should be added. Conflicts with `zone_id`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -409,6 +410,17 @@ below for reference structure.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="enablebindingcookie_csharp">
+<a href="#enablebindingcookie_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Binding<wbr>Cookie</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Option to provide increased security against compromised authorization tokens and CSRF attacks by requiring an additional "binding" cookie on requests. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="sessionduration_csharp">
 <a href="#sessionduration_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Duration</a>
 </span> 
@@ -419,16 +431,16 @@ below for reference structure.
 re-authorise. Must be one of `0s`, `15m`, `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
+    <dt class="property-optional"
+            title="Optional">
         <span id="zoneid_csharp">
 <a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The DNS zone to which the access rule should be added.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field will be removed in version 3 and replaced with the account_id field.{{% /md %}}</p></dd>
+    <dd>{{% md %}}The DNS zone to which the access application should be added. Conflicts with `account_id`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -468,7 +480,8 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The account to which the access application should be added. Conflicts with `zone_id`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -508,6 +521,17 @@ below for reference structure.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="enablebindingcookie_go">
+<a href="#enablebindingcookie_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Binding<wbr>Cookie</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Option to provide increased security against compromised authorization tokens and CSRF attacks by requiring an additional "binding" cookie on requests. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="sessionduration_go">
 <a href="#sessionduration_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Duration</a>
 </span> 
@@ -518,16 +542,16 @@ below for reference structure.
 re-authorise. Must be one of `0s`, `15m`, `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
+    <dt class="property-optional"
+            title="Optional">
         <span id="zoneid_go">
 <a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The DNS zone to which the access rule should be added.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field will be removed in version 3 and replaced with the account_id field.{{% /md %}}</p></dd>
+    <dd>{{% md %}}The DNS zone to which the access application should be added. Conflicts with `account_id`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -567,7 +591,8 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The account to which the access application should be added. Conflicts with `zone_id`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -607,6 +632,17 @@ below for reference structure.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="enablebindingcookie_nodejs">
+<a href="#enablebindingcookie_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Binding<wbr>Cookie</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Option to provide increased security against compromised authorization tokens and CSRF attacks by requiring an additional "binding" cookie on requests. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="sessionduration_nodejs">
 <a href="#sessionduration_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Duration</a>
 </span> 
@@ -617,16 +653,16 @@ below for reference structure.
 re-authorise. Must be one of `0s`, `15m`, `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
+    <dt class="property-optional"
+            title="Optional">
         <span id="zoneid_nodejs">
 <a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The DNS zone to which the access rule should be added.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field will be removed in version 3 and replaced with the account_id field.{{% /md %}}</p></dd>
+    <dd>{{% md %}}The DNS zone to which the access application should be added. Conflicts with `account_id`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -666,7 +702,8 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The account to which the access application should be added. Conflicts with `zone_id`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -706,6 +743,17 @@ below for reference structure.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="enable_binding_cookie_python">
+<a href="#enable_binding_cookie_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>binding_<wbr>cookie</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Option to provide increased security against compromised authorization tokens and CSRF attacks by requiring an additional "binding" cookie on requests. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="session_duration_python">
 <a href="#session_duration_python" style="color: inherit; text-decoration: inherit;">session_<wbr>duration</a>
 </span> 
@@ -716,16 +764,16 @@ below for reference structure.
 re-authorise. Must be one of `0s`, `15m`, `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
+    <dt class="property-optional"
+            title="Optional">
         <span id="zone_id_python">
 <a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The DNS zone to which the access rule should be added.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field will be removed in version 3 and replaced with the account_id field.{{% /md %}}</p></dd>
+    <dd>{{% md %}}The DNS zone to which the access application should be added. Conflicts with `account_id`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -870,7 +918,7 @@ Get an existing AccessApplication resource's state with the given name, ID, and 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allowed_idps</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">aud</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_redirect_to_identity</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cors_headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessApplicationCorsHeaderArgs]]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AccessApplication</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allowed_idps</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">aud</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_redirect_to_identity</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cors_headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessApplicationCorsHeaderArgs]]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_binding_cookie</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AccessApplication</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -992,7 +1040,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The account to which the access application should be added. Conflicts with `zone_id`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1055,6 +1104,17 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_enablebindingcookie_csharp">
+<a href="#state_enablebindingcookie_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Binding<wbr>Cookie</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Option to provide increased security against compromised authorization tokens and CSRF attacks by requiring an additional "binding" cookie on requests. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -1076,16 +1136,16 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
 re-authorise. Must be one of `0s`, `15m`, `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_zoneid_csharp">
 <a href="#state_zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The DNS zone to which the access rule should be added.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field will be removed in version 3 and replaced with the account_id field.{{% /md %}}</p></dd>
+    <dd>{{% md %}}The DNS zone to which the access application should be added. Conflicts with `account_id`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1102,7 +1162,8 @@ re-authorise. Must be one of `0s`, `15m`, `30m`, `6h`, `12h`, `24h`, `168h`, `73
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The account to which the access application should be added. Conflicts with `zone_id`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1165,6 +1226,17 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_enablebindingcookie_go">
+<a href="#state_enablebindingcookie_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Binding<wbr>Cookie</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Option to provide increased security against compromised authorization tokens and CSRF attacks by requiring an additional "binding" cookie on requests. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -1186,16 +1258,16 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
 re-authorise. Must be one of `0s`, `15m`, `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_zoneid_go">
 <a href="#state_zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The DNS zone to which the access rule should be added.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field will be removed in version 3 and replaced with the account_id field.{{% /md %}}</p></dd>
+    <dd>{{% md %}}The DNS zone to which the access application should be added. Conflicts with `account_id`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1212,7 +1284,8 @@ re-authorise. Must be one of `0s`, `15m`, `30m`, `6h`, `12h`, `24h`, `168h`, `73
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The account to which the access application should be added. Conflicts with `zone_id`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1275,6 +1348,17 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_enablebindingcookie_nodejs">
+<a href="#state_enablebindingcookie_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Binding<wbr>Cookie</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Option to provide increased security against compromised authorization tokens and CSRF attacks by requiring an additional "binding" cookie on requests. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -1296,16 +1380,16 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
 re-authorise. Must be one of `0s`, `15m`, `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_zoneid_nodejs">
 <a href="#state_zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The DNS zone to which the access rule should be added.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field will be removed in version 3 and replaced with the account_id field.{{% /md %}}</p></dd>
+    <dd>{{% md %}}The DNS zone to which the access application should be added. Conflicts with `account_id`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1322,7 +1406,8 @@ re-authorise. Must be one of `0s`, `15m`, `30m`, `6h`, `12h`, `24h`, `168h`, `73
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The account to which the access application should be added. Conflicts with `zone_id`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1385,6 +1470,17 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_enable_binding_cookie_python">
+<a href="#state_enable_binding_cookie_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>binding_<wbr>cookie</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Option to provide increased security against compromised authorization tokens and CSRF attacks by requiring an additional "binding" cookie on requests. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -1406,16 +1502,16 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
 re-authorise. Must be one of `0s`, `15m`, `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_zone_id_python">
 <a href="#state_zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The DNS zone to which the access rule should be added.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field will be removed in version 3 and replaced with the account_id field.{{% /md %}}</p></dd>
+    <dd>{{% md %}}The DNS zone to which the access application should be added. Conflicts with `account_id`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

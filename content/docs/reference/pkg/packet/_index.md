@@ -54,7 +54,7 @@ A Pulumi package for creating and managing Packet cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`packet` Terraform Provider](https://github.com/terraform-providers/terraform-provider-packet).</dd>
 	<dt>Version</dt>
-	<dd>3.1.0</dd>
+	<dd>3.2.0</dd>
 </dl>
 
 

@@ -239,7 +239,7 @@ const example = pulumi.output(azuread.getServicePrincipal({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_service_principal(</span><span class="nx">application_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oauth2_permissions</span><span class="p">:</span> <span class="nx">Optional[List[GetServicePrincipalOauth2PermissionArgs]]</span> = None<span class="p">, </span><span class="nx">object_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetServicePrincipalResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_service_principal(</span><span class="nx">application_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oauth2_permissions</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetServicePrincipalOauth2PermissionArgs]]</span> = None<span class="p">, </span><span class="nx">object_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetServicePrincipalResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -447,7 +447,7 @@ The following arguments are supported:
 <a href="#oauth2_permissions_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>permissions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceprincipaloauth2permission">List[Get<wbr>Service<wbr>Principal<wbr>Oauth2Permission<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getserviceprincipaloauth2permission">Sequence[Get<wbr>Service<wbr>Principal<wbr>Oauth2Permission<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of OAuth 2.0 permissions exposed by the associated application. Each permission is covered by a `oauth2_permission` block as documented below.
 {{% /md %}}</dd>
@@ -696,7 +696,7 @@ The following output properties are available:
 <a href="#app_roles_python" style="color: inherit; text-decoration: inherit;">app_<wbr>roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceprincipalapprole">List[Get<wbr>Service<wbr>Principal<wbr>App<wbr>Role]</a></span>
+        <span class="property-type"><a href="#getserviceprincipalapprole">Sequence[Get<wbr>Service<wbr>Principal<wbr>App<wbr>Role]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -738,7 +738,7 @@ The following output properties are available:
 <a href="#oauth2_permissions_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>permissions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceprincipaloauth2permission">List[Get<wbr>Service<wbr>Principal<wbr>Oauth2Permission]</a></span>
+        <span class="property-type"><a href="#getserviceprincipaloauth2permission">Sequence[Get<wbr>Service<wbr>Principal<wbr>Oauth2Permission]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1008,7 +1008,7 @@ The following output properties are available:
 <a href="#allowed_member_types_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>member_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether this app role definition can be assigned to users and groups, or to other applications (that are accessing this application in daemon service scenarios). Possible values are: `User` and `Application`, or both.
 {{% /md %}}</dd>
