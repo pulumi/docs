@@ -12,6 +12,120 @@ meta_desc: "Explore the GetClientInstallationProvider function of the saml modul
 
 This data source can be used to retrieve Installation Provider of a SAML Client.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using System.IO;
+using Pulumi;
+using Aws = Pulumi.Aws;
+using Keycloak = Pulumi.Keycloak;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var realm = new Keycloak.Realm("realm", new Keycloak.RealmArgs
+        {
+            Realm = "my-realm",
+            Enabled = true,
+        });
+        var samlClient = new Keycloak.Saml.Client("samlClient", new Keycloak.Saml.ClientArgs
+        {
+            RealmId = realm.Id,
+            ClientId = "test-saml-client",
+            SignDocuments = false,
+            SignAssertions = true,
+            IncludeAuthnStatement = true,
+            SigningCertificate = File.ReadAllText("saml-cert.pem"),
+            SigningPrivateKey = File.ReadAllText("saml-key.pem"),
+        });
+        var samlIdpDescriptor = Output.Tuple(realm.Id, samlClient.Id).Apply(values =>
+        {
+            var realmId = values.Item1;
+            var samlClientId = values.Item2;
+            return Keycloak.Saml.GetClientInstallationProvider.InvokeAsync(new Keycloak.Saml.GetClientInstallationProviderArgs
+            {
+                RealmId = realmId,
+                ClientId = samlClientId,
+                ProviderId = "saml-idp-descriptor",
+            });
+        });
+        var @default = new Aws.Iam.SamlProvider("default", new Aws.Iam.SamlProviderArgs
+        {
+            SamlMetadataDocument = samlIdpDescriptor.Apply(samlIdpDescriptor => samlIdpDescriptor.Value),
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+import pulumi_keycloak as keycloak
+
+realm = keycloak.Realm("realm",
+    realm="my-realm",
+    enabled=True)
+saml_client = keycloak.saml.Client("samlClient",
+    realm_id=realm.id,
+    client_id="test-saml-client",
+    sign_documents=False,
+    sign_assertions=True,
+    include_authn_statement=True,
+    signing_certificate=(lambda path: open(path).read())("saml-cert.pem"),
+    signing_private_key=(lambda path: open(path).read())("saml-key.pem"))
+saml_idp_descriptor = pulumi.Output.all(realm.id, saml_client.id).apply(lambda realmId, samlClientId: keycloak.saml.get_client_installation_provider(realm_id=realm_id,
+    client_id=saml_client_id,
+    provider_id="saml-idp-descriptor"))
+default = aws.iam.SamlProvider("default", saml_metadata_document=saml_idp_descriptor.value)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+import * as keycloak from "@pulumi/keycloak";
+import * from "fs";
+
+const realm = new keycloak.Realm("realm", {
+    realm: "my-realm",
+    enabled: true,
+});
+const samlClient = new keycloak.saml.Client("samlClient", {
+    realmId: realm.id,
+    clientId: "test-saml-client",
+    signDocuments: false,
+    signAssertions: true,
+    includeAuthnStatement: true,
+    signingCertificate: fs.readFileSync("saml-cert.pem"),
+    signingPrivateKey: fs.readFileSync("saml-key.pem"),
+});
+const samlIdpDescriptor = pulumi.all([realm.id, samlClient.id]).apply(([realmId, samlClientId]) => keycloak.saml.getClientInstallationProvider({
+    realmId: realmId,
+    clientId: samlClientId,
+    providerId: "saml-idp-descriptor",
+}));
+const _default = new aws.iam.SamlProvider("default", {samlMetadataDocument: samlIdpDescriptor.value});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetClientInstallationProvider {#using}
