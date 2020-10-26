@@ -709,7 +709,7 @@ The following output properties are available:
 <a href="#user_ids_python" style="color: inherit; text-decoration: inherit;">user_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of UUIDs of user accounts which beling to this project
 {{% /md %}}</dd>
@@ -937,7 +937,7 @@ The following output properties are available:
 <a href="#asn_python" style="color: inherit; text-decoration: inherit;">asn</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Autonomous System Numer for local BGP deployment
 {{% /md %}}</dd>
@@ -959,7 +959,7 @@ The following output properties are available:
 <a href="#max_prefix_python" style="color: inherit; text-decoration: inherit;">max_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of route filters allowed per server
 {{% /md %}}</dd>

@@ -1368,7 +1368,7 @@ The following state arguments are supported:
 <a href="#asn_python" style="color: inherit; text-decoration: inherit;">asn</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Autonomous System Number for local BGP deployment
 {{% /md %}}</dd>
@@ -1390,7 +1390,7 @@ The following state arguments are supported:
 <a href="#max_prefix_python" style="color: inherit; text-decoration: inherit;">max_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of route filters allowed per server
 {{% /md %}}</dd>

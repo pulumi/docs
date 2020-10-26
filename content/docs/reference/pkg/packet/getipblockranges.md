@@ -518,7 +518,7 @@ The following output properties are available:
 <a href="#global_ipv4s_python" style="color: inherit; text-decoration: inherit;">global_<wbr>ipv4s</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}list of CIDR expressions for Global IPv4 blocks in the project
 {{% /md %}}</dd>
@@ -540,7 +540,7 @@ The following output properties are available:
 <a href="#ipv6s_python" style="color: inherit; text-decoration: inherit;">ipv6s</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}list of CIDR expressions for IPv6 blocks in the project
 {{% /md %}}</dd>
@@ -551,7 +551,7 @@ The following output properties are available:
 <a href="#private_ipv4s_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ipv4s</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}list of CIDR expressions for Private IPv4 blocks in the project
 {{% /md %}}</dd>
@@ -572,7 +572,7 @@ The following output properties are available:
 <a href="#public_ipv4s_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ipv4s</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}list of CIDR expressions for Public IPv4 blocks in the project
 {{% /md %}}</dd>

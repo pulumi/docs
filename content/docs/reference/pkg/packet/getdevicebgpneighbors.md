@@ -341,7 +341,7 @@ The following output properties are available:
 <a href="#bgp_neighbors_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>neighbors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdevicebgpneighborsbgpneighbor">List[Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor]</a></span>
+        <span class="property-type"><a href="#getdevicebgpneighborsbgpneighbor">Sequence[Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor]</a></span>
     </dt>
     <dd>{{% md %}}array of BGP neighbor records with attributes:
 {{% /md %}}</dd>
@@ -755,7 +755,7 @@ The following output properties are available:
 <a href="#address_family_python" style="color: inherit; text-decoration: inherit;">address_<wbr>family</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}IP address version, 4 or 6
 {{% /md %}}</dd>
@@ -766,7 +766,7 @@ The following output properties are available:
 <a href="#customer_as_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>as</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Local autonomous system number
 {{% /md %}}</dd>
@@ -821,7 +821,7 @@ The following output properties are available:
 <a href="#peer_as_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>as</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Peer AS number (different than customer_as for EBGP)
 {{% /md %}}</dd>
@@ -832,7 +832,7 @@ The following output properties are available:
 <a href="#routes_ins_python" style="color: inherit; text-decoration: inherit;">routes_<wbr>ins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdevicebgpneighborsbgpneighborroutesin">List[Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor<wbr>Routes<wbr>In<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getdevicebgpneighborsbgpneighborroutesin">Sequence[Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor<wbr>Routes<wbr>In<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of incoming routes. Each route has attributes:
 {{% /md %}}</dd>
@@ -843,7 +843,7 @@ The following output properties are available:
 <a href="#routes_outs_python" style="color: inherit; text-decoration: inherit;">routes_<wbr>outs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdevicebgpneighborsbgpneighborroutesout">List[Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor<wbr>Routes<wbr>Out<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getdevicebgpneighborsbgpneighborroutesout">Sequence[Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor<wbr>Routes<wbr>Out<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of outgoing routes in the same format
 {{% /md %}}</dd>
@@ -854,7 +854,7 @@ The following output properties are available:
 <a href="#peer_ips_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Array of IP addresses of this neighbor's peers
 {{% /md %}}</dd>
