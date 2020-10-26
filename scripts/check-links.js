@@ -257,6 +257,7 @@ function getDefaultExcludedKeywords() {
         "http://my-bucket-1234567.s3-website.us-west-2.amazonaws.com",
         "https://gitlab.com/users/sign_in",
         "https://gitlab.com/profile/applications",
+        "https://blog.coinbase.com/",
     ];
 }
 
