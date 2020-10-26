@@ -12,6 +12,171 @@ meta_desc: "Explore the ServiceIntegration resource of the PagerDuty package, in
 
 A [service integration](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Services/post_services_id_integrations) is an integration that belongs to a service.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Pagerduty = Pulumi.Pagerduty;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleUser = new Pagerduty.User("exampleUser", new Pagerduty.UserArgs
+        {
+            Email = "125.greenholt.earline@graham.name",
+            Teams = 
+            {
+                pagerduty_team.Example.Id,
+            },
+        });
+        var foo = new Pagerduty.EscalationPolicy("foo", new Pagerduty.EscalationPolicyArgs
+        {
+            NumLoops = 2,
+            Rules = 
+            {
+                new Pagerduty.Inputs.EscalationPolicyRuleArgs
+                {
+                    EscalationDelayInMinutes = 10,
+                    Targets = 
+                    {
+                        new Pagerduty.Inputs.EscalationPolicyRuleTargetArgs
+                        {
+                            Id = exampleUser.Id,
+                            Type = "user",
+                        },
+                    },
+                },
+            },
+        });
+        var exampleService = new Pagerduty.Service("exampleService", new Pagerduty.ServiceArgs
+        {
+            AcknowledgementTimeout = "600",
+            AutoResolveTimeout = "14400",
+            EscalationPolicy = pagerduty_escalation_policy.Example.Id,
+        });
+        var exampleServiceIntegration = new Pagerduty.ServiceIntegration("exampleServiceIntegration", new Pagerduty.ServiceIntegrationArgs
+        {
+            Service = exampleService.Id,
+            Type = "generic_events_api_inbound_integration",
+        });
+        var datadogVendor = Output.Create(Pagerduty.GetVendor.InvokeAsync(new Pagerduty.GetVendorArgs
+        {
+            Name = "Datadog",
+        }));
+        var datadogServiceIntegration = new Pagerduty.ServiceIntegration("datadogServiceIntegration", new Pagerduty.ServiceIntegrationArgs
+        {
+            Service = exampleService.Id,
+            Vendor = datadogVendor.Apply(datadogVendor => datadogVendor.Id),
+        });
+        var cloudwatchVendor = Output.Create(Pagerduty.GetVendor.InvokeAsync(new Pagerduty.GetVendorArgs
+        {
+            Name = "Cloudwatch",
+        }));
+        var cloudwatchServiceIntegration = new Pagerduty.ServiceIntegration("cloudwatchServiceIntegration", new Pagerduty.ServiceIntegrationArgs
+        {
+            Service = exampleService.Id,
+            Vendor = cloudwatchVendor.Apply(cloudwatchVendor => cloudwatchVendor.Id),
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_pagerduty as pagerduty
+
+example_user = pagerduty.User("exampleUser",
+    email="125.greenholt.earline@graham.name",
+    teams=[pagerduty_team["example"]["id"]])
+foo = pagerduty.EscalationPolicy("foo",
+    num_loops=2,
+    rules=[pagerduty.EscalationPolicyRuleArgs(
+        escalation_delay_in_minutes=10,
+        targets=[pagerduty.EscalationPolicyRuleTargetArgs(
+            id=example_user.id,
+            type="user",
+        )],
+    )])
+example_service = pagerduty.Service("exampleService",
+    acknowledgement_timeout="600",
+    auto_resolve_timeout="14400",
+    escalation_policy=pagerduty_escalation_policy["example"]["id"])
+example_service_integration = pagerduty.ServiceIntegration("exampleServiceIntegration",
+    service=example_service.id,
+    type="generic_events_api_inbound_integration")
+datadog_vendor = pagerduty.get_vendor(name="Datadog")
+datadog_service_integration = pagerduty.ServiceIntegration("datadogServiceIntegration",
+    service=example_service.id,
+    vendor=datadog_vendor.id)
+cloudwatch_vendor = pagerduty.get_vendor(name="Cloudwatch")
+cloudwatch_service_integration = pagerduty.ServiceIntegration("cloudwatchServiceIntegration",
+    service=example_service.id,
+    vendor=cloudwatch_vendor.id)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as pagerduty from "@pulumi/pagerduty";
+
+const exampleUser = new pagerduty.User("example", {
+    email: "125.greenholt.earline@graham.name",
+    teams: [pagerduty_team_example.id],
+});
+const foo = new pagerduty.EscalationPolicy("foo", {
+    numLoops: 2,
+    rules: [{
+        escalationDelayInMinutes: 10,
+        targets: [{
+            id: exampleUser.id,
+            type: "user",
+        }],
+    }],
+});
+const exampleService = new pagerduty.Service("example", {
+    acknowledgementTimeout: "600",
+    autoResolveTimeout: "14400",
+    escalationPolicy: pagerduty_escalation_policy_example.id,
+});
+const exampleServiceIntegration = new pagerduty.ServiceIntegration("example", {
+    service: exampleService.id,
+    type: "generic_events_api_inbound_integration",
+});
+const datadogVendor = pulumi.output(pagerduty.getVendor({
+    name: "Datadog",
+}, { async: true }));
+const datadogServiceIntegration = new pagerduty.ServiceIntegration("datadog", {
+    service: exampleService.id,
+    vendor: datadogVendor.id,
+});
+const cloudwatchVendor = pulumi.output(pagerduty.getVendor({
+    name: "Cloudwatch",
+}, { async: true }));
+const cloudwatchServiceIntegration = new pagerduty.ServiceIntegration("cloudwatch", {
+    service: exampleService.id,
+    vendor: cloudwatchVendor.id,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ServiceIntegration Resource {#create}

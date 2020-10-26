@@ -12,6 +12,122 @@ meta_desc: "Explore the Service resource of the PagerDuty package, including exa
 
 A [service](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Services/get_services) represents something you monitor (like a web service, email service, or database service). It is a container for related incidents that associates them with escalation policies.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Pagerduty = Pulumi.Pagerduty;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleUser = new Pagerduty.User("exampleUser", new Pagerduty.UserArgs
+        {
+            Email = "125.greenholt.earline@graham.name",
+            Teams = 
+            {
+                pagerduty_team.Example.Id,
+            },
+        });
+        var foo = new Pagerduty.EscalationPolicy("foo", new Pagerduty.EscalationPolicyArgs
+        {
+            NumLoops = 2,
+            Rules = 
+            {
+                new Pagerduty.Inputs.EscalationPolicyRuleArgs
+                {
+                    EscalationDelayInMinutes = 10,
+                    Targets = 
+                    {
+                        new Pagerduty.Inputs.EscalationPolicyRuleTargetArgs
+                        {
+                            Id = exampleUser.Id,
+                            Type = "user",
+                        },
+                    },
+                },
+            },
+        });
+        var exampleService = new Pagerduty.Service("exampleService", new Pagerduty.ServiceArgs
+        {
+            AcknowledgementTimeout = "600",
+            AlertCreation = "create_incidents",
+            AutoResolveTimeout = "14400",
+            EscalationPolicy = pagerduty_escalation_policy.Example.Id,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_pagerduty as pagerduty
+
+example_user = pagerduty.User("exampleUser",
+    email="125.greenholt.earline@graham.name",
+    teams=[pagerduty_team["example"]["id"]])
+foo = pagerduty.EscalationPolicy("foo",
+    num_loops=2,
+    rules=[pagerduty.EscalationPolicyRuleArgs(
+        escalation_delay_in_minutes=10,
+        targets=[pagerduty.EscalationPolicyRuleTargetArgs(
+            id=example_user.id,
+            type="user",
+        )],
+    )])
+example_service = pagerduty.Service("exampleService",
+    acknowledgement_timeout="600",
+    alert_creation="create_incidents",
+    auto_resolve_timeout="14400",
+    escalation_policy=pagerduty_escalation_policy["example"]["id"])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as pagerduty from "@pulumi/pagerduty";
+
+const exampleUser = new pagerduty.User("example", {
+    email: "125.greenholt.earline@graham.name",
+    teams: [pagerduty_team_example.id],
+});
+const foo = new pagerduty.EscalationPolicy("foo", {
+    numLoops: 2,
+    rules: [{
+        escalationDelayInMinutes: 10,
+        targets: [{
+            id: exampleUser.id,
+            type: "user",
+        }],
+    }],
+});
+const exampleService = new pagerduty.Service("example", {
+    acknowledgementTimeout: "600",
+    alertCreation: "create_incidents",
+    autoResolveTimeout: "14400",
+    escalationPolicy: pagerduty_escalation_policy_example.id,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Service Resource {#create}
@@ -23,7 +139,7 @@ A [service](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Services/
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_pagerduty/#pulumi_pagerduty.Service">Service</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acknowledgement_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">alert_creation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">alert_grouping</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">alert_grouping_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">auto_resolve_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">escalation_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">incident_urgency_rule</span><span class="p">:</span> <span class="nx">Optional[ServiceIncidentUrgencyRuleArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduled_actions</span><span class="p">:</span> <span class="nx">Optional[List[ServiceScheduledActionArgs]]</span> = None<span class="p">, </span><span class="nx">support_hours</span><span class="p">:</span> <span class="nx">Optional[ServiceSupportHoursArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_pagerduty/#pulumi_pagerduty.Service">Service</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acknowledgement_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">alert_creation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">alert_grouping</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">alert_grouping_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">auto_resolve_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">escalation_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">incident_urgency_rule</span><span class="p">:</span> <span class="nx">Optional[ServiceIncidentUrgencyRuleArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduled_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceScheduledActionArgs]]</span> = None<span class="p">, </span><span class="nx">support_hours</span><span class="p">:</span> <span class="nx">Optional[ServiceSupportHoursArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -617,7 +733,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#alert_grouping_timeout_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>grouping_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The duration in minutes within which to automatically group incoming alerts. This setting applies only when `alert_grouping` is set to `time`. To continue grouping alerts until the incident is resolved, set this value to `0`.
 {{% /md %}}</dd>
@@ -670,7 +786,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#scheduled_actions_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicescheduledaction">List[Service<wbr>Scheduled<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicescheduledaction">Sequence[Service<wbr>Scheduled<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -943,7 +1059,7 @@ Get an existing Service resource's state with the given name, ID, and optional e
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acknowledgement_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">alert_creation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">alert_grouping</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">alert_grouping_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">auto_resolve_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">escalation_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">html_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">incident_urgency_rule</span><span class="p">:</span> <span class="nx">Optional[ServiceIncidentUrgencyRuleArgs]</span> = None<span class="p">, </span><span class="nx">last_incident_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduled_actions</span><span class="p">:</span> <span class="nx">Optional[List[ServiceScheduledActionArgs]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">support_hours</span><span class="p">:</span> <span class="nx">Optional[ServiceSupportHoursArgs]</span> = None<span class="p">) -&gt;</span> Service</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acknowledgement_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">alert_creation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">alert_grouping</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">alert_grouping_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">auto_resolve_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">escalation_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">html_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">incident_urgency_rule</span><span class="p">:</span> <span class="nx">Optional[ServiceIncidentUrgencyRuleArgs]</span> = None<span class="p">, </span><span class="nx">last_incident_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduled_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceScheduledActionArgs]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">support_hours</span><span class="p">:</span> <span class="nx">Optional[ServiceSupportHoursArgs]</span> = None<span class="p">) -&gt;</span> Service</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1588,7 +1704,7 @@ The following state arguments are supported:
 <a href="#state_alert_grouping_timeout_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>grouping_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The duration in minutes within which to automatically group incoming alerts. This setting applies only when `alert_grouping` is set to `time`. To continue grouping alerts until the incident is resolved, set this value to `0`.
 {{% /md %}}</dd>
@@ -1682,7 +1798,7 @@ The following state arguments are supported:
 <a href="#state_scheduled_actions_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicescheduledaction">List[Service<wbr>Scheduled<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicescheduledaction">Sequence[Service<wbr>Scheduled<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2355,7 +2471,7 @@ The following state arguments are supported:
 <a href="#ats_python" style="color: inherit; text-decoration: inherit;">ats</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicescheduledactionat">List[Service<wbr>Scheduled<wbr>Action<wbr>At<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicescheduledactionat">Sequence[Service<wbr>Scheduled<wbr>Action<wbr>At<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A block representing when the scheduled action will occur.
 {{% /md %}}</dd>
@@ -2736,7 +2852,7 @@ Monday and `7` being Sunday.
 <a href="#days_of_weeks_python" style="color: inherit; text-decoration: inherit;">days_<wbr>of_<wbr>weeks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}Array of days of week as integers. `1` to `7`, `1` being
 Monday and `7` being Sunday.

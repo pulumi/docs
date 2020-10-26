@@ -12,6 +12,126 @@ meta_desc: "Explore the UserContactMethod resource of the PagerDuty package, inc
 
 A [contact method](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Users/get_users_id_contact_methods) is a contact method for a PagerDuty user (email, phone or SMS).
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Pagerduty = Pulumi.Pagerduty;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Pagerduty.User("example", new Pagerduty.UserArgs
+        {
+            Email = "125.greenholt.earline@graham.name",
+            Teams = 
+            {
+                pagerduty_team.Example.Id,
+            },
+        });
+        var email = new Pagerduty.UserContactMethod("email", new Pagerduty.UserContactMethodArgs
+        {
+            Address = "foo@bar.com",
+            Label = "Work",
+            Type = "email_contact_method",
+            UserId = example.Id,
+        });
+        var phone = new Pagerduty.UserContactMethod("phone", new Pagerduty.UserContactMethodArgs
+        {
+            Address = "2025550199",
+            CountryCode = 1,
+            Label = "Work",
+            Type = "phone_contact_method",
+            UserId = example.Id,
+        });
+        var sms = new Pagerduty.UserContactMethod("sms", new Pagerduty.UserContactMethodArgs
+        {
+            Address = "2025550199",
+            CountryCode = 1,
+            Label = "Work",
+            Type = "sms_contact_method",
+            UserId = example.Id,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_pagerduty as pagerduty
+
+example = pagerduty.User("example",
+    email="125.greenholt.earline@graham.name",
+    teams=[pagerduty_team["example"]["id"]])
+email = pagerduty.UserContactMethod("email",
+    address="foo@bar.com",
+    label="Work",
+    type="email_contact_method",
+    user_id=example.id)
+phone = pagerduty.UserContactMethod("phone",
+    address="2025550199",
+    country_code=1,
+    label="Work",
+    type="phone_contact_method",
+    user_id=example.id)
+sms = pagerduty.UserContactMethod("sms",
+    address="2025550199",
+    country_code=1,
+    label="Work",
+    type="sms_contact_method",
+    user_id=example.id)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as pagerduty from "@pulumi/pagerduty";
+
+const example = new pagerduty.User("example", {
+    email: "125.greenholt.earline@graham.name",
+    teams: [pagerduty_team_example.id],
+});
+const email = new pagerduty.UserContactMethod("email", {
+    address: "foo@bar.com",
+    label: "Work",
+    type: "email_contact_method",
+    userId: example.id,
+});
+const phone = new pagerduty.UserContactMethod("phone", {
+    address: "2025550199",
+    countryCode: 1,
+    label: "Work",
+    type: "phone_contact_method",
+    userId: example.id,
+});
+const sms = new pagerduty.UserContactMethod("sms", {
+    address: "2025550199",
+    countryCode: 1,
+    label: "Work",
+    type: "sms_contact_method",
+    userId: example.id,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a UserContactMethod Resource {#create}
@@ -23,7 +143,7 @@ A [contact method](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Us
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_pagerduty/#pulumi_pagerduty.UserContactMethod">UserContactMethod</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">country_code</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">send_short_email</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_pagerduty/#pulumi_pagerduty.UserContactMethod">UserContactMethod</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">country_code</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">send_short_email</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -464,7 +584,7 @@ The UserContactMethod resource accepts the following [input]({{< relref "/docs/i
 <a href="#country_code_python" style="color: inherit; text-decoration: inherit;">country_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The 1-to-3 digit country calling code. Required when using `phone_contact_method` or `sms_contact_method`.
 {{% /md %}}</dd>
@@ -667,7 +787,7 @@ Get an existing UserContactMethod resource's state with the given name, ID, and 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">blacklisted</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">country_code</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">send_short_email</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> UserContactMethod</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">blacklisted</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">country_code</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">send_short_email</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> UserContactMethod</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1094,7 +1214,7 @@ The following state arguments are supported:
 <a href="#state_country_code_python" style="color: inherit; text-decoration: inherit;">country_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The 1-to-3 digit country calling code. Required when using `phone_contact_method` or `sms_contact_method`.
 {{% /md %}}</dd>

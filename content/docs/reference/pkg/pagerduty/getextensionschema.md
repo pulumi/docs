@@ -12,6 +12,145 @@ meta_desc: "Explore the GetExtensionSchema function of the PagerDuty package, in
 
 Use this data source to get information about a specific [extension](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Extension_Schemas/get_extension_schemas) vendor that you can use for a service (e.g: Slack, Generic Webhook, ServiceNow).
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Pagerduty = Pulumi.Pagerduty;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var webhook = Output.Create(Pagerduty.GetExtensionSchema.InvokeAsync(new Pagerduty.GetExtensionSchemaArgs
+        {
+            Name = "Generic V2 Webhook",
+        }));
+        var exampleUser = new Pagerduty.User("exampleUser", new Pagerduty.UserArgs
+        {
+            Email = "howard.james@example.domain",
+            Teams = 
+            {
+                pagerduty_team.Example.Id,
+            },
+        });
+        var foo = new Pagerduty.EscalationPolicy("foo", new Pagerduty.EscalationPolicyArgs
+        {
+            NumLoops = 2,
+            Rules = 
+            {
+                new Pagerduty.Inputs.EscalationPolicyRuleArgs
+                {
+                    EscalationDelayInMinutes = 10,
+                    Targets = 
+                    {
+                        new Pagerduty.Inputs.EscalationPolicyRuleTargetArgs
+                        {
+                            Id = exampleUser.Id,
+                            Type = "user",
+                        },
+                    },
+                },
+            },
+        });
+        var exampleService = new Pagerduty.Service("exampleService", new Pagerduty.ServiceArgs
+        {
+            AcknowledgementTimeout = "600",
+            AutoResolveTimeout = "14400",
+            EscalationPolicy = pagerduty_escalation_policy.Example.Id,
+        });
+        var slack = new Pagerduty.Extension("slack", new Pagerduty.ExtensionArgs
+        {
+            EndpointUrl = "https://generic_webhook_url/XXXXXX/BBBBBB",
+            ExtensionObjects = 
+            {
+                exampleService.Id,
+            },
+            ExtensionSchema = webhook.Apply(webhook => webhook.Id),
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_pagerduty as pagerduty
+
+webhook = pagerduty.get_extension_schema(name="Generic V2 Webhook")
+example_user = pagerduty.User("exampleUser",
+    email="howard.james@example.domain",
+    teams=[pagerduty_team["example"]["id"]])
+foo = pagerduty.EscalationPolicy("foo",
+    num_loops=2,
+    rules=[pagerduty.EscalationPolicyRuleArgs(
+        escalation_delay_in_minutes=10,
+        targets=[pagerduty.EscalationPolicyRuleTargetArgs(
+            id=example_user.id,
+            type="user",
+        )],
+    )])
+example_service = pagerduty.Service("exampleService",
+    acknowledgement_timeout="600",
+    auto_resolve_timeout="14400",
+    escalation_policy=pagerduty_escalation_policy["example"]["id"])
+slack = pagerduty.Extension("slack",
+    endpoint_url="https://generic_webhook_url/XXXXXX/BBBBBB",
+    extension_objects=[example_service.id],
+    extension_schema=webhook.id)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as pagerduty from "@pulumi/pagerduty";
+
+const webhook = pulumi.output(pagerduty.getExtensionSchema({
+    name: "Generic V2 Webhook",
+}, { async: true }));
+const exampleUser = new pagerduty.User("example", {
+    email: "howard.james@example.domain",
+    teams: [pagerduty_team_example.id],
+});
+const foo = new pagerduty.EscalationPolicy("foo", {
+    numLoops: 2,
+    rules: [{
+        escalationDelayInMinutes: 10,
+        targets: [{
+            id: exampleUser.id,
+            type: "user",
+        }],
+    }],
+});
+const exampleService = new pagerduty.Service("example", {
+    acknowledgementTimeout: "600",
+    autoResolveTimeout: "14400",
+    escalationPolicy: pagerduty_escalation_policy_example.id,
+});
+const slack = new pagerduty.Extension("slack", {
+    endpointUrl: "https://generic_webhook_url/XXXXXX/BBBBBB",
+    extensionObjects: [exampleService.id],
+    extensionSchema: webhook.id,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetExtensionSchema {#using}
