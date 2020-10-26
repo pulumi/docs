@@ -3,7 +3,7 @@ title: "Package @pulumi/fastly"
 title_tag: "Package @pulumi/fastly | Node.js SDK"
 linktitle: "@pulumi/fastly"
 meta_desc: "Explore members of the @pulumi/fastly package."
-git_sha: "230d1c659111d065aa3381645c5d3684f4799cd7"
+git_sha: "6e211759fa3c748e84d62a1ab5be9dd6a99eb665"
 block_external_search_index: true
 ---
 
@@ -91,7 +91,7 @@ import * as fastly from "@pulumi/fastly";
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Provider" data-link-title="Provider">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/provider.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/provider.ts#L13">
         Resource <strong>Provider</strong>
     </a>
 </h3>
@@ -104,7 +104,7 @@ construction to achieve fine-grained programmatic control over provider settings
 [documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.
 
 <h4 class="pdoc-member-header" id="Provider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/provider.ts#L26"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/provider.ts#L26"> <b>constructor</b></a>
 </h4>
 
 
@@ -118,14 +118,14 @@ Create a Provider resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/provider.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/provider.ts#L13">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/provider.ts#L21">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/provider.ts#L21">method <b>isInstance</b></a>
 </h4>
 
 
@@ -136,14 +136,14 @@ Returns true if the given object is an instance of Provider.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Provider-register">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/provider.ts#L13">method <b>register</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/provider.ts#L13">method <b>register</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>static </span>register(provider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/provider.ts#L13">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/provider.ts#L13">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -152,7 +152,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/provider.ts#L13">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/provider.ts#L13">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -161,14 +161,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ServiceACLEntriesv1" data-link-title="ServiceACLEntriesv1">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceACLEntriesv1.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceACLEntriesv1.ts#L9">
         Resource <strong>ServiceACLEntriesv1</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>ServiceACLEntriesv1</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="ServiceACLEntriesv1-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceACLEntriesv1.ts#L48"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceACLEntriesv1.ts#L48"> <b>constructor</b></a>
 </h4>
 
 
@@ -182,7 +182,7 @@ Create a ServiceACLEntriesv1 resource with the given unique name, arguments, and
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ServiceACLEntriesv1-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceACLEntriesv1.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceACLEntriesv1.ts#L19">method <b>get</b></a>
 </h4>
 
 
@@ -193,14 +193,14 @@ Get an existing ServiceACLEntriesv1 resource's state with the given name, ID, an
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ServiceACLEntriesv1-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceACLEntriesv1.ts#L9">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceACLEntriesv1.ts#L9">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ServiceACLEntriesv1-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceACLEntriesv1.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceACLEntriesv1.ts#L30">method <b>isInstance</b></a>
 </h4>
 
 
@@ -211,7 +211,7 @@ Returns true if the given object is an instance of ServiceACLEntriesv1.  This is
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ServiceACLEntriesv1-aclId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceACLEntriesv1.ts#L40">property <b>aclId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceACLEntriesv1.ts#L40">property <b>aclId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>aclId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -219,7 +219,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ID of the ACL that the items belong to
 
 <h4 class="pdoc-member-header" id="ServiceACLEntriesv1-entries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceACLEntriesv1.ts#L44">property <b>entries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceACLEntriesv1.ts#L44">property <b>entries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>entries: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#ServiceACLEntriesv1Entry'>ServiceACLEntriesv1Entry</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -227,7 +227,7 @@ The ID of the ACL that the items belong to
 A Set ACL entries that are applied to the service. Defined below
 
 <h4 class="pdoc-member-header" id="ServiceACLEntriesv1-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceACLEntriesv1.ts#L9">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceACLEntriesv1.ts#L9">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -236,7 +236,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ServiceACLEntriesv1-serviceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceACLEntriesv1.ts#L48">property <b>serviceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceACLEntriesv1.ts#L48">property <b>serviceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -244,7 +244,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the Service that the ACL belongs to
 
 <h4 class="pdoc-member-header" id="ServiceACLEntriesv1-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceACLEntriesv1.ts#L9">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceACLEntriesv1.ts#L9">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -253,7 +253,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ServiceCompute" data-link-title="ServiceCompute">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L16">
         Resource <strong>ServiceCompute</strong>
     </a>
 </h3>
@@ -267,7 +267,7 @@ traffic to the Fastly service. See Fastly's guide on [Adding CNAME Records][fast
 on their documentation site for guidance.
 
 <h4 class="pdoc-member-header" id="ServiceCompute-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L212"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L212"> <b>constructor</b></a>
 </h4>
 
 
@@ -281,7 +281,7 @@ Create a ServiceCompute resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ServiceCompute-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L26">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L26">method <b>get</b></a>
 </h4>
 
 
@@ -292,14 +292,14 @@ Get an existing ServiceCompute resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ServiceCompute-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ServiceCompute-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L37">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L37">method <b>isInstance</b></a>
 </h4>
 
 
@@ -310,7 +310,7 @@ Returns true if the given object is an instance of ServiceCompute.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ServiceCompute-activate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L47">property <b>activate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L47">property <b>activate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>activate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -318,7 +318,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Conditionally prevents the Service from being activated. The apply step will continue to create a new draft version but will not activate it if this is set to false. Default true.
 
 <h4 class="pdoc-member-header" id="ServiceCompute-activeVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L51">property <b>activeVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L51">property <b>activeVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>activeVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -326,7 +326,7 @@ Conditionally prevents the Service from being activated. The apply step will con
 The currently active version of your Fastly Service.
 
 <h4 class="pdoc-member-header" id="ServiceCompute-backends">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L57">property <b>backends</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L57">property <b>backends</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backends: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#ServiceComputeBackend'>ServiceComputeBackend</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -336,7 +336,7 @@ Defined below. Backends must be defined in this argument, or defined in the
 `vcl` argument below
 
 <h4 class="pdoc-member-header" id="ServiceCompute-bigqueryloggings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L62">property <b>bigqueryloggings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L62">property <b>bigqueryloggings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bigqueryloggings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#ServiceComputeBigquerylogging'>ServiceComputeBigquerylogging</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -345,7 +345,7 @@ A BigQuery endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceCompute-blobstorageloggings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L67">property <b>blobstorageloggings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L67">property <b>blobstorageloggings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>blobstorageloggings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#ServiceComputeBlobstoragelogging'>ServiceComputeBlobstoragelogging</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -354,12 +354,12 @@ An Azure Blob Storage endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceCompute-clonedVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L68">property <b>clonedVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L68">property <b>clonedVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clonedVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceCompute-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L72">property <b>comment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L72">property <b>comment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>comment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -367,7 +367,7 @@ Defined below.
 An optional comment about the Domain.
 
 <h4 class="pdoc-member-header" id="ServiceCompute-domains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L76">property <b>domains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L76">property <b>domains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domains: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#ServiceComputeDomain'>ServiceComputeDomain</a>[]&gt;;</code></pre>
@@ -375,7 +375,7 @@ An optional comment about the Domain.
 The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 
 <h4 class="pdoc-member-header" id="ServiceCompute-forceDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L81">property <b>forceDestroy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L81">property <b>forceDestroy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>forceDestroy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -384,7 +384,7 @@ Services that are active cannot be destroyed. In
 order to destroy the Service, set `forceDestroy` to `true`. Default `false`.
 
 <h4 class="pdoc-member-header" id="ServiceCompute-gcsloggings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L86">property <b>gcsloggings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L86">property <b>gcsloggings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>gcsloggings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#ServiceComputeGcslogging'>ServiceComputeGcslogging</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -393,7 +393,7 @@ A gcs endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceCompute-healthchecks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L90">property <b>healthchecks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L90">property <b>healthchecks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>healthchecks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#ServiceComputeHealthcheck'>ServiceComputeHealthcheck</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -401,7 +401,7 @@ Defined below.
 Name of a defined `healthcheck` to assign to this backend.
 
 <h4 class="pdoc-member-header" id="ServiceCompute-httpsloggings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L95">property <b>httpsloggings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L95">property <b>httpsloggings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>httpsloggings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#ServiceComputeHttpslogging'>ServiceComputeHttpslogging</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -410,7 +410,7 @@ An HTTPS endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceCompute-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -419,7 +419,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ServiceCompute-logentries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L100">property <b>logentries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L100">property <b>logentries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logentries: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#ServiceComputeLogentry'>ServiceComputeLogentry</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -428,7 +428,7 @@ A logentries endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceCompute-loggingCloudfiles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L105">property <b>loggingCloudfiles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L105">property <b>loggingCloudfiles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loggingCloudfiles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#ServiceComputeLoggingCloudfile'>ServiceComputeLoggingCloudfile</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -437,7 +437,7 @@ A Rackspace Cloud Files endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceCompute-loggingDatadogs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L110">property <b>loggingDatadogs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L110">property <b>loggingDatadogs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loggingDatadogs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#ServiceComputeLoggingDatadog'>ServiceComputeLoggingDatadog</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -446,7 +446,7 @@ A Datadog endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceCompute-loggingDigitaloceans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L115">property <b>loggingDigitaloceans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L115">property <b>loggingDigitaloceans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loggingDigitaloceans: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#ServiceComputeLoggingDigitalocean'>ServiceComputeLoggingDigitalocean</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -455,7 +455,7 @@ A DigitalOcean Spaces endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceCompute-loggingElasticsearches">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L120">property <b>loggingElasticsearches</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L120">property <b>loggingElasticsearches</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loggingElasticsearches: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#ServiceComputeLoggingElasticsearch'>ServiceComputeLoggingElasticsearch</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -464,7 +464,7 @@ An Elasticsearch endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceCompute-loggingFtps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L125">property <b>loggingFtps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L125">property <b>loggingFtps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loggingFtps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#ServiceComputeLoggingFtp'>ServiceComputeLoggingFtp</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -473,7 +473,7 @@ An FTP endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceCompute-loggingGooglepubsubs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L130">property <b>loggingGooglepubsubs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L130">property <b>loggingGooglepubsubs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loggingGooglepubsubs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#ServiceComputeLoggingGooglepubsub'>ServiceComputeLoggingGooglepubsub</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -482,7 +482,7 @@ A Google Cloud Pub/Sub endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceCompute-loggingHeroku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L135">property <b>loggingHeroku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L135">property <b>loggingHeroku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loggingHeroku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#ServiceComputeLoggingHeroku'>ServiceComputeLoggingHeroku</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -491,7 +491,7 @@ A Heroku endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceCompute-loggingHoneycombs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L140">property <b>loggingHoneycombs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L140">property <b>loggingHoneycombs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loggingHoneycombs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#ServiceComputeLoggingHoneycomb'>ServiceComputeLoggingHoneycomb</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -500,7 +500,7 @@ A Honeycomb endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceCompute-loggingKafkas">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L145">property <b>loggingKafkas</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L145">property <b>loggingKafkas</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loggingKafkas: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#ServiceComputeLoggingKafka'>ServiceComputeLoggingKafka</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -509,7 +509,7 @@ A Kafka endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceCompute-loggingLogglies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L150">property <b>loggingLogglies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L150">property <b>loggingLogglies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loggingLogglies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#ServiceComputeLoggingLoggly'>ServiceComputeLoggingLoggly</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -518,7 +518,7 @@ A Loggly endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceCompute-loggingLogshuttles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L155">property <b>loggingLogshuttles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L155">property <b>loggingLogshuttles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loggingLogshuttles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#ServiceComputeLoggingLogshuttle'>ServiceComputeLoggingLogshuttle</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -527,7 +527,7 @@ A Log Shuttle endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceCompute-loggingNewrelics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L160">property <b>loggingNewrelics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L160">property <b>loggingNewrelics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loggingNewrelics: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#ServiceComputeLoggingNewrelic'>ServiceComputeLoggingNewrelic</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -536,7 +536,7 @@ A New Relic endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceCompute-loggingOpenstacks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L165">property <b>loggingOpenstacks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L165">property <b>loggingOpenstacks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loggingOpenstacks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#ServiceComputeLoggingOpenstack'>ServiceComputeLoggingOpenstack</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -545,7 +545,7 @@ An OpenStack endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceCompute-loggingScalyrs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L170">property <b>loggingScalyrs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L170">property <b>loggingScalyrs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loggingScalyrs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#ServiceComputeLoggingScalyr'>ServiceComputeLoggingScalyr</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -554,7 +554,7 @@ A Scalyr endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceCompute-loggingSftps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L175">property <b>loggingSftps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L175">property <b>loggingSftps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loggingSftps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#ServiceComputeLoggingSftp'>ServiceComputeLoggingSftp</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -563,7 +563,7 @@ An SFTP endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceCompute-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L179">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L179">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -571,7 +571,7 @@ Defined below.
 The unique name of the Rackspace Cloud Files logging endpoint.
 
 <h4 class="pdoc-member-header" id="ServiceCompute-package">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L183">property <b>package</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L183">property <b>package</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>package: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#ServiceComputePackage'>ServiceComputePackage</a>&gt;;</code></pre>
@@ -579,7 +579,7 @@ The unique name of the Rackspace Cloud Files logging endpoint.
 A Wasm deployment package to upload. Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceCompute-papertrails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L188">property <b>papertrails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L188">property <b>papertrails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>papertrails: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#ServiceComputePapertrail'>ServiceComputePapertrail</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -588,7 +588,7 @@ A Papertrail endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceCompute-s3loggings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L193">property <b>s3loggings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L193">property <b>s3loggings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>s3loggings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#ServiceComputeS3logging'>ServiceComputeS3logging</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -597,7 +597,7 @@ A set of S3 Buckets to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceCompute-splunks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L198">property <b>splunks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L198">property <b>splunks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>splunks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#ServiceComputeSplunk'>ServiceComputeSplunk</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -606,7 +606,7 @@ A Splunk endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceCompute-sumologics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L203">property <b>sumologics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L203">property <b>sumologics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sumologics: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#ServiceComputeSumologic'>ServiceComputeSumologic</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -615,7 +615,7 @@ A Sumologic endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceCompute-syslogs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L208">property <b>syslogs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L208">property <b>syslogs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>syslogs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#ServiceComputeSyslog'>ServiceComputeSyslog</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -624,7 +624,7 @@ A syslog endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceCompute-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -633,7 +633,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ServiceCompute-versionComment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L212">property <b>versionComment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L212">property <b>versionComment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>versionComment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -641,14 +641,14 @@ deployments.
 Description field for the version.
 
 <h3 class="pdoc-module-header" id="ServiceDictionaryItemsv1" data-link-title="ServiceDictionaryItemsv1">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceDictionaryItemsv1.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceDictionaryItemsv1.ts#L7">
         Resource <strong>ServiceDictionaryItemsv1</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>ServiceDictionaryItemsv1</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="ServiceDictionaryItemsv1-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceDictionaryItemsv1.ts#L46"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceDictionaryItemsv1.ts#L46"> <b>constructor</b></a>
 </h4>
 
 
@@ -662,7 +662,7 @@ Create a ServiceDictionaryItemsv1 resource with the given unique name, arguments
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ServiceDictionaryItemsv1-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceDictionaryItemsv1.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceDictionaryItemsv1.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -673,14 +673,14 @@ Get an existing ServiceDictionaryItemsv1 resource's state with the given name, I
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ServiceDictionaryItemsv1-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceDictionaryItemsv1.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceDictionaryItemsv1.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ServiceDictionaryItemsv1-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceDictionaryItemsv1.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceDictionaryItemsv1.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -691,7 +691,7 @@ Returns true if the given object is an instance of ServiceDictionaryItemsv1.  Th
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ServiceDictionaryItemsv1-dictionaryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceDictionaryItemsv1.ts#L38">property <b>dictionaryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceDictionaryItemsv1.ts#L38">property <b>dictionaryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dictionaryId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -699,7 +699,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ID of the dictionary that the items belong to
 
 <h4 class="pdoc-member-header" id="ServiceDictionaryItemsv1-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceDictionaryItemsv1.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceDictionaryItemsv1.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -708,7 +708,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ServiceDictionaryItemsv1-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceDictionaryItemsv1.ts#L42">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceDictionaryItemsv1.ts#L42">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -716,7 +716,7 @@ deployments and may be missing (undefined) during planning phases.
 A map representing an entry in the dictionary, (key/value)
 
 <h4 class="pdoc-member-header" id="ServiceDictionaryItemsv1-serviceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceDictionaryItemsv1.ts#L46">property <b>serviceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceDictionaryItemsv1.ts#L46">property <b>serviceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -724,7 +724,7 @@ A map representing an entry in the dictionary, (key/value)
 The ID of the service that the dictionary belongs to
 
 <h4 class="pdoc-member-header" id="ServiceDictionaryItemsv1-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceDictionaryItemsv1.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceDictionaryItemsv1.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -733,14 +733,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ServiceDynamicSnippetContentv1" data-link-title="ServiceDynamicSnippetContentv1">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceDynamicSnippetContentv1.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceDynamicSnippetContentv1.ts#L7">
         Resource <strong>ServiceDynamicSnippetContentv1</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>ServiceDynamicSnippetContentv1</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="ServiceDynamicSnippetContentv1-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceDynamicSnippetContentv1.ts#L46"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceDynamicSnippetContentv1.ts#L46"> <b>constructor</b></a>
 </h4>
 
 
@@ -754,7 +754,7 @@ Create a ServiceDynamicSnippetContentv1 resource with the given unique name, arg
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ServiceDynamicSnippetContentv1-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceDynamicSnippetContentv1.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceDynamicSnippetContentv1.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -765,14 +765,14 @@ Get an existing ServiceDynamicSnippetContentv1 resource's state with the given n
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ServiceDynamicSnippetContentv1-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceDynamicSnippetContentv1.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceDynamicSnippetContentv1.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ServiceDynamicSnippetContentv1-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceDynamicSnippetContentv1.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceDynamicSnippetContentv1.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -783,7 +783,7 @@ Returns true if the given object is an instance of ServiceDynamicSnippetContentv
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ServiceDynamicSnippetContentv1-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceDynamicSnippetContentv1.ts#L38">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceDynamicSnippetContentv1.ts#L38">property <b>content</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>content: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -791,7 +791,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The VCL code that specifies exactly what the snippet does.
 
 <h4 class="pdoc-member-header" id="ServiceDynamicSnippetContentv1-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceDynamicSnippetContentv1.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceDynamicSnippetContentv1.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -800,7 +800,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ServiceDynamicSnippetContentv1-serviceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceDynamicSnippetContentv1.ts#L42">property <b>serviceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceDynamicSnippetContentv1.ts#L42">property <b>serviceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -808,7 +808,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the service that the dynamic snippet belongs to
 
 <h4 class="pdoc-member-header" id="ServiceDynamicSnippetContentv1-snippetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceDynamicSnippetContentv1.ts#L46">property <b>snippetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceDynamicSnippetContentv1.ts#L46">property <b>snippetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>snippetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -816,7 +816,7 @@ The ID of the service that the dynamic snippet belongs to
 The ID of the dynamic snippet that the content belong to
 
 <h4 class="pdoc-member-header" id="ServiceDynamicSnippetContentv1-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceDynamicSnippetContentv1.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceDynamicSnippetContentv1.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -825,14 +825,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Servicev1" data-link-title="Servicev1">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L9">
         Resource <strong>Servicev1</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Servicev1</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="Servicev1-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L269"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L269"> <b>constructor</b></a>
 </h4>
 
 
@@ -846,7 +846,7 @@ Create a Servicev1 resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Servicev1-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L19">method <b>get</b></a>
 </h4>
 
 
@@ -857,14 +857,14 @@ Get an existing Servicev1 resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Servicev1-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L9">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L9">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Servicev1-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L30">method <b>isInstance</b></a>
 </h4>
 
 
@@ -875,7 +875,7 @@ Returns true if the given object is an instance of Servicev1.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Servicev1-acls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L40">property <b>acls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L40">property <b>acls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>acls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Acl'>Servicev1Acl</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -883,7 +883,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A set of ACL configuration blocks.  Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1-activate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L44">property <b>activate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L44">property <b>activate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>activate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -891,7 +891,7 @@ A set of ACL configuration blocks.  Defined below.
 Conditionally prevents the Service from being activated. The apply step will continue to create a new draft version but will not activate it if this is set to false. Default true.
 
 <h4 class="pdoc-member-header" id="Servicev1-activeVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L48">property <b>activeVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L48">property <b>activeVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>activeVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -899,7 +899,7 @@ Conditionally prevents the Service from being activated. The apply step will con
 The currently active version of your Fastly Service.
 
 <h4 class="pdoc-member-header" id="Servicev1-backends">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L54">property <b>backends</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L54">property <b>backends</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backends: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Backend'>Servicev1Backend</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -909,7 +909,7 @@ Defined below. Backends must be defined in this argument, or defined in the
 `vcl` argument below
 
 <h4 class="pdoc-member-header" id="Servicev1-bigqueryloggings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L59">property <b>bigqueryloggings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L59">property <b>bigqueryloggings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bigqueryloggings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Bigquerylogging'>Servicev1Bigquerylogging</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -918,7 +918,7 @@ A BigQuery endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1-blobstorageloggings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L64">property <b>blobstorageloggings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L64">property <b>blobstorageloggings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>blobstorageloggings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Blobstoragelogging'>Servicev1Blobstoragelogging</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -927,7 +927,7 @@ An Azure Blob Storage endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1-cacheSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L68">property <b>cacheSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L68">property <b>cacheSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cacheSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1CacheSetting'>Servicev1CacheSetting</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -935,7 +935,7 @@ Defined below.
 A set of Cache Settings, allowing you to override
 
 <h4 class="pdoc-member-header" id="Servicev1-clonedVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L72">property <b>clonedVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L72">property <b>clonedVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clonedVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -943,7 +943,7 @@ A set of Cache Settings, allowing you to override
 The latest cloned version by the provider. The value gets only set after running `pulumi up`.
 
 <h4 class="pdoc-member-header" id="Servicev1-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L76">property <b>comment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L76">property <b>comment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>comment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -951,7 +951,7 @@ The latest cloned version by the provider. The value gets only set after running
 An optional comment about the Director.
 
 <h4 class="pdoc-member-header" id="Servicev1-conditions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L81">property <b>conditions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L81">property <b>conditions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>conditions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Condition'>Servicev1Condition</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -960,7 +960,7 @@ A set of conditions to add logic to any basic
 configuration object in this service. Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1-defaultHost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L85">property <b>defaultHost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L85">property <b>defaultHost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultHost: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -968,7 +968,7 @@ configuration object in this service. Defined below.
 Sets the host header.
 
 <h4 class="pdoc-member-header" id="Servicev1-defaultTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L90">property <b>defaultTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L90">property <b>defaultTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -977,7 +977,7 @@ The default Time-to-live (TTL) for
 requests.
 
 <h4 class="pdoc-member-header" id="Servicev1-dictionaries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L94">property <b>dictionaries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L94">property <b>dictionaries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dictionaries: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Dictionary'>Servicev1Dictionary</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -985,7 +985,7 @@ requests.
 A set of dictionaries that allow the storing of key values pair for use within VCL functions. Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1-directors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L99">property <b>directors</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L99">property <b>directors</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>directors: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Director'>Servicev1Director</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -994,7 +994,7 @@ A director to allow more control over balancing traffic over backends.
 when an item is not to be cached based on an above `condition`. Defined below
 
 <h4 class="pdoc-member-header" id="Servicev1-domains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L103">property <b>domains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L103">property <b>domains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domains: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Domain'>Servicev1Domain</a>[]&gt;;</code></pre>
@@ -1002,7 +1002,7 @@ when an item is not to be cached based on an above `condition`. Defined below
 The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 
 <h4 class="pdoc-member-header" id="Servicev1-dynamicsnippets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L107">property <b>dynamicsnippets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L107">property <b>dynamicsnippets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dynamicsnippets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Dynamicsnippet'>Servicev1Dynamicsnippet</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1010,7 +1010,7 @@ The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces
 A set of custom, "dynamic" VCL Snippet configuration blocks.  Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1-forceDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L112">property <b>forceDestroy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L112">property <b>forceDestroy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>forceDestroy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1019,7 +1019,7 @@ Services that are active cannot be destroyed. In
 order to destroy the Service, set `forceDestroy` to `true`. Default `false`.
 
 <h4 class="pdoc-member-header" id="Servicev1-gcsloggings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L117">property <b>gcsloggings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L117">property <b>gcsloggings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>gcsloggings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Gcslogging'>Servicev1Gcslogging</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1028,7 +1028,7 @@ A gcs endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1-gzips">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L122">property <b>gzips</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L122">property <b>gzips</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>gzips: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Gzip'>Servicev1Gzip</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1037,7 +1037,7 @@ A set of gzip rules to control automatic gzipping of
 content. Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1-headers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L127">property <b>headers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L127">property <b>headers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>headers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Header'>Servicev1Header</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1046,7 +1046,7 @@ A set of Headers to manipulate for each request. Defined
 below.
 
 <h4 class="pdoc-member-header" id="Servicev1-healthchecks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L131">property <b>healthchecks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L131">property <b>healthchecks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>healthchecks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Healthcheck'>Servicev1Healthcheck</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1054,7 +1054,7 @@ below.
 Name of a defined `healthcheck` to assign to this backend.
 
 <h4 class="pdoc-member-header" id="Servicev1-httpsloggings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L136">property <b>httpsloggings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L136">property <b>httpsloggings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>httpsloggings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Httpslogging'>Servicev1Httpslogging</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1063,7 +1063,7 @@ An HTTPS endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L9">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L9">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1072,7 +1072,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Servicev1-logentries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L141">property <b>logentries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L141">property <b>logentries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logentries: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Logentry'>Servicev1Logentry</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1081,7 +1081,7 @@ A logentries endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1-loggingCloudfiles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L146">property <b>loggingCloudfiles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L146">property <b>loggingCloudfiles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loggingCloudfiles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1LoggingCloudfile'>Servicev1LoggingCloudfile</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1090,7 +1090,7 @@ A Rackspace Cloud Files endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1-loggingDatadogs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L151">property <b>loggingDatadogs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L151">property <b>loggingDatadogs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loggingDatadogs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1LoggingDatadog'>Servicev1LoggingDatadog</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1099,7 +1099,7 @@ A Datadog endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1-loggingDigitaloceans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L156">property <b>loggingDigitaloceans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L156">property <b>loggingDigitaloceans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loggingDigitaloceans: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1LoggingDigitalocean'>Servicev1LoggingDigitalocean</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1108,7 +1108,7 @@ A DigitalOcean Spaces endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1-loggingElasticsearches">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L161">property <b>loggingElasticsearches</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L161">property <b>loggingElasticsearches</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loggingElasticsearches: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1LoggingElasticsearch'>Servicev1LoggingElasticsearch</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1117,7 +1117,7 @@ An Elasticsearch endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1-loggingFtps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L166">property <b>loggingFtps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L166">property <b>loggingFtps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loggingFtps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1LoggingFtp'>Servicev1LoggingFtp</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1126,7 +1126,7 @@ An FTP endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1-loggingGooglepubsubs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L171">property <b>loggingGooglepubsubs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L171">property <b>loggingGooglepubsubs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loggingGooglepubsubs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1LoggingGooglepubsub'>Servicev1LoggingGooglepubsub</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1135,7 +1135,7 @@ A Google Cloud Pub/Sub endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1-loggingHeroku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L176">property <b>loggingHeroku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L176">property <b>loggingHeroku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loggingHeroku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1LoggingHeroku'>Servicev1LoggingHeroku</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1144,7 +1144,7 @@ A Heroku endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1-loggingHoneycombs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L181">property <b>loggingHoneycombs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L181">property <b>loggingHoneycombs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loggingHoneycombs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1LoggingHoneycomb'>Servicev1LoggingHoneycomb</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1153,7 +1153,7 @@ A Honeycomb endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1-loggingKafkas">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L186">property <b>loggingKafkas</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L186">property <b>loggingKafkas</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loggingKafkas: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1LoggingKafka'>Servicev1LoggingKafka</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1162,7 +1162,7 @@ A Kafka endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1-loggingLogglies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L191">property <b>loggingLogglies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L191">property <b>loggingLogglies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loggingLogglies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1LoggingLoggly'>Servicev1LoggingLoggly</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1171,7 +1171,7 @@ A Loggly endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1-loggingLogshuttles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L196">property <b>loggingLogshuttles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L196">property <b>loggingLogshuttles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loggingLogshuttles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1LoggingLogshuttle'>Servicev1LoggingLogshuttle</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1180,7 +1180,7 @@ A Log Shuttle endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1-loggingNewrelics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L201">property <b>loggingNewrelics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L201">property <b>loggingNewrelics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loggingNewrelics: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1LoggingNewrelic'>Servicev1LoggingNewrelic</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1189,7 +1189,7 @@ A New Relic endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1-loggingOpenstacks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L206">property <b>loggingOpenstacks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L206">property <b>loggingOpenstacks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loggingOpenstacks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1LoggingOpenstack'>Servicev1LoggingOpenstack</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1198,7 +1198,7 @@ An OpenStack endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1-loggingScalyrs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L211">property <b>loggingScalyrs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L211">property <b>loggingScalyrs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loggingScalyrs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1LoggingScalyr'>Servicev1LoggingScalyr</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1207,7 +1207,7 @@ A Scalyr endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1-loggingSftps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L216">property <b>loggingSftps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L216">property <b>loggingSftps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loggingSftps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1LoggingSftp'>Servicev1LoggingSftp</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1216,7 +1216,7 @@ An SFTP endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L220">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L220">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1224,7 +1224,7 @@ Defined below.
 A unique name to identify this dictionary.
 
 <h4 class="pdoc-member-header" id="Servicev1-papertrails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L225">property <b>papertrails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L225">property <b>papertrails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>papertrails: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Papertrail'>Servicev1Papertrail</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1233,7 +1233,7 @@ A Papertrail endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1-requestSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L229">property <b>requestSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L229">property <b>requestSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requestSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1RequestSetting'>Servicev1RequestSetting</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1241,7 +1241,7 @@ Defined below.
 A set of Request modifiers. Defined below
 
 <h4 class="pdoc-member-header" id="Servicev1-responseObjects">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L233">property <b>responseObjects</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L233">property <b>responseObjects</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>responseObjects: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1ResponseObject'>Servicev1ResponseObject</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1249,7 +1249,7 @@ A set of Request modifiers. Defined below
 The name of the response object used by the Web Application Firewall.
 
 <h4 class="pdoc-member-header" id="Servicev1-s3loggings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L238">property <b>s3loggings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L238">property <b>s3loggings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>s3loggings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1S3logging'>Servicev1S3logging</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1258,7 +1258,7 @@ A set of S3 Buckets to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1-snippets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L242">property <b>snippets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L242">property <b>snippets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>snippets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Snippet'>Servicev1Snippet</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1266,7 +1266,7 @@ Defined below.
 A set of custom, "regular" (non-dynamic) VCL Snippet configuration blocks.  Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1-splunks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L247">property <b>splunks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L247">property <b>splunks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>splunks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Splunk'>Servicev1Splunk</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1275,7 +1275,7 @@ A Splunk endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1-sumologics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L252">property <b>sumologics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L252">property <b>sumologics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sumologics: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Sumologic'>Servicev1Sumologic</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1284,7 +1284,7 @@ A Sumologic endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1-syslogs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L257">property <b>syslogs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L257">property <b>syslogs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>syslogs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Syslog'>Servicev1Syslog</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1293,7 +1293,7 @@ A syslog endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L9">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L9">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1302,7 +1302,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Servicev1-vcls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L261">property <b>vcls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L261">property <b>vcls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vcls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Vcl'>Servicev1Vcl</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1310,7 +1310,7 @@ deployments.
 A set of custom VCL configuration blocks. See the [Fastly documentation](https://docs.fastly.com/vcl/custom-vcl/uploading-custom-vcl/) for more information on using custom VCL.
 
 <h4 class="pdoc-member-header" id="Servicev1-versionComment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L265">property <b>versionComment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L265">property <b>versionComment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>versionComment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1318,7 +1318,7 @@ A set of custom VCL configuration blocks. See the [Fastly documentation](https:/
 Description field for the version.
 
 <h4 class="pdoc-member-header" id="Servicev1-waf">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L269">property <b>waf</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L269">property <b>waf</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>waf: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Waf'>Servicev1Waf</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1326,14 +1326,14 @@ Description field for the version.
 A WAF configuration block.  Defined below.
 
 <h3 class="pdoc-module-header" id="ServiceWafConfiguration" data-link-title="ServiceWafConfiguration">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L9">
         Resource <strong>ServiceWafConfiguration</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>ServiceWafConfiguration</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="ServiceWafConfiguration-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L156"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L160"> <b>constructor</b></a>
 </h4>
 
 
@@ -1347,7 +1347,7 @@ Create a ServiceWafConfiguration resource with the given unique name, arguments,
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfiguration-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L19">method <b>get</b></a>
 </h4>
 
 
@@ -1358,14 +1358,14 @@ Get an existing ServiceWafConfiguration resource's state with the given name, ID
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfiguration-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L9">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L9">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ServiceWafConfiguration-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L30">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1376,7 +1376,7 @@ Returns true if the given object is an instance of ServiceWafConfiguration.  Thi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfiguration-allowedHttpVersions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L40">property <b>allowedHttpVersions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L40">property <b>allowedHttpVersions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allowedHttpVersions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1384,7 +1384,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Allowed HTTP versions.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfiguration-allowedMethods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L44">property <b>allowedMethods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L44">property <b>allowedMethods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allowedMethods: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1392,7 +1392,7 @@ Allowed HTTP versions.
 A space-separated list of HTTP method names.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfiguration-allowedRequestContentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L48">property <b>allowedRequestContentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L48">property <b>allowedRequestContentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allowedRequestContentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1400,7 +1400,7 @@ A space-separated list of HTTP method names.
 Allowed request content types.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfiguration-allowedRequestContentTypeCharset">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L52">property <b>allowedRequestContentTypeCharset</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L52">property <b>allowedRequestContentTypeCharset</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allowedRequestContentTypeCharset: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1408,7 +1408,7 @@ Allowed request content types.
 Allowed request content type charset.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfiguration-argLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L56">property <b>argLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L56">property <b>argLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>argLength: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1416,7 +1416,7 @@ Allowed request content type charset.
 The maximum number of arguments allowed.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfiguration-argNameLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L60">property <b>argNameLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L60">property <b>argNameLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>argNameLength: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1424,7 +1424,7 @@ The maximum number of arguments allowed.
 The maximum allowed argument name length.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfiguration-combinedFileSizes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L64">property <b>combinedFileSizes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L64">property <b>combinedFileSizes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>combinedFileSizes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1432,7 +1432,7 @@ The maximum allowed argument name length.
 The maximum allowed size of all files.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfiguration-criticalAnomalyScore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L68">property <b>criticalAnomalyScore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L68">property <b>criticalAnomalyScore</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>criticalAnomalyScore: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1440,7 +1440,7 @@ The maximum allowed size of all files.
 Score value to add for critical anomalies.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfiguration-crsValidateUtf8Encoding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L72">property <b>crsValidateUtf8Encoding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L72">property <b>crsValidateUtf8Encoding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>crsValidateUtf8Encoding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1448,7 +1448,7 @@ Score value to add for critical anomalies.
 CRS validate UTF8 encoding.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfiguration-errorAnomalyScore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L76">property <b>errorAnomalyScore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L76">property <b>errorAnomalyScore</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>errorAnomalyScore: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1456,7 +1456,7 @@ CRS validate UTF8 encoding.
 Score value to add for error anomalies.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfiguration-highRiskCountryCodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L80">property <b>highRiskCountryCodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L80">property <b>highRiskCountryCodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>highRiskCountryCodes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1464,7 +1464,7 @@ Score value to add for error anomalies.
 A space-separated list of country codes in ISO 3166-1 (two-letter) format.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfiguration-httpViolationScoreThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L84">property <b>httpViolationScoreThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L84">property <b>httpViolationScoreThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>httpViolationScoreThreshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1472,7 +1472,7 @@ A space-separated list of country codes in ISO 3166-1 (two-letter) format.
 HTTP violation threshold.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfiguration-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L9">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L9">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1481,7 +1481,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfiguration-inboundAnomalyScoreThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L88">property <b>inboundAnomalyScoreThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L88">property <b>inboundAnomalyScoreThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>inboundAnomalyScoreThreshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1489,7 +1489,7 @@ deployments and may be missing (undefined) during planning phases.
 Inbound anomaly threshold.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfiguration-lfiScoreThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L92">property <b>lfiScoreThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L92">property <b>lfiScoreThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lfiScoreThreshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1497,7 +1497,7 @@ Inbound anomaly threshold.
 Local file inclusion attack threshold.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfiguration-maxFileSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L96">property <b>maxFileSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L96">property <b>maxFileSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxFileSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1505,7 +1505,7 @@ Local file inclusion attack threshold.
 The maximum allowed file size, in bytes.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfiguration-maxNumArgs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L100">property <b>maxNumArgs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L100">property <b>maxNumArgs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxNumArgs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1513,7 +1513,7 @@ The maximum allowed file size, in bytes.
 The maximum number of arguments allowed.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfiguration-noticeAnomalyScore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L104">property <b>noticeAnomalyScore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L104">property <b>noticeAnomalyScore</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>noticeAnomalyScore: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1521,7 +1521,7 @@ The maximum number of arguments allowed.
 Score value to add for notice anomalies.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfiguration-paranoiaLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L108">property <b>paranoiaLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L108">property <b>paranoiaLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>paranoiaLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1529,7 +1529,7 @@ Score value to add for notice anomalies.
 The configured paranoia level.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfiguration-phpInjectionScoreThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L112">property <b>phpInjectionScoreThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L112">property <b>phpInjectionScoreThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>phpInjectionScoreThreshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1537,7 +1537,7 @@ The configured paranoia level.
 PHP injection threshold.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfiguration-rceScoreThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L116">property <b>rceScoreThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L116">property <b>rceScoreThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rceScoreThreshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1545,7 +1545,7 @@ PHP injection threshold.
 Remote code execution threshold.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfiguration-restrictedExtensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L120">property <b>restrictedExtensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L120">property <b>restrictedExtensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>restrictedExtensions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1553,7 +1553,7 @@ Remote code execution threshold.
 A space-separated list of allowed file extensions.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfiguration-restrictedHeaders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L124">property <b>restrictedHeaders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L124">property <b>restrictedHeaders</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>restrictedHeaders: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1561,15 +1561,23 @@ A space-separated list of allowed file extensions.
 A space-separated list of allowed header names.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfiguration-rfiScoreThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L128">property <b>rfiScoreThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L128">property <b>rfiScoreThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rfiScoreThreshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 
 Remote file inclusion attack threshold.
 
+<h4 class="pdoc-member-header" id="ServiceWafConfiguration-ruleExclusions">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L132">property <b>ruleExclusions</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>ruleExclusions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#ServiceWafConfigurationRuleExclusion'>ServiceWafConfigurationRuleExclusion</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The Web Application Firewall's rule exclusions.
+
 <h4 class="pdoc-member-header" id="ServiceWafConfiguration-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L132">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L136">property <b>rules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#ServiceWafConfigurationRule'>ServiceWafConfigurationRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1577,7 +1585,7 @@ Remote file inclusion attack threshold.
 The Web Application Firewall's active rules.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfiguration-sessionFixationScoreThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L136">property <b>sessionFixationScoreThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L140">property <b>sessionFixationScoreThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sessionFixationScoreThreshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1585,7 +1593,7 @@ The Web Application Firewall's active rules.
 Session fixation attack threshold.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfiguration-sqlInjectionScoreThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L140">property <b>sqlInjectionScoreThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L144">property <b>sqlInjectionScoreThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sqlInjectionScoreThreshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1593,7 +1601,7 @@ Session fixation attack threshold.
 SQL injection attack threshold.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfiguration-totalArgLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L144">property <b>totalArgLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L148">property <b>totalArgLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>totalArgLength: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1601,7 +1609,7 @@ SQL injection attack threshold.
 The maximum size of argument names and values.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfiguration-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L9">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L9">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1610,7 +1618,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfiguration-wafId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L148">property <b>wafId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L152">property <b>wafId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>wafId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1618,7 +1626,7 @@ deployments.
 The ID of the Web Application Firewall that the configuration belongs to.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfiguration-warningAnomalyScore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L152">property <b>warningAnomalyScore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L156">property <b>warningAnomalyScore</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>warningAnomalyScore: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1626,7 +1634,7 @@ The ID of the Web Application Firewall that the configuration belongs to.
 Score value to add for warning anomalies.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfiguration-xssScoreThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L156">property <b>xssScoreThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L160">property <b>xssScoreThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>xssScoreThreshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1634,7 +1642,7 @@ Score value to add for warning anomalies.
 XSS attack threshold.
 
 <h3 class="pdoc-module-header" id="Userv1" data-link-title="Userv1">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/userv1.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/userv1.ts#L23">
         Resource <strong>Userv1</strong>
     </a>
 </h3>
@@ -1657,7 +1665,7 @@ const demo = new fastly.Userv1("demo", {
 ```
 
 <h4 class="pdoc-member-header" id="Userv1-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/userv1.ts#L62"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/userv1.ts#L62"> <b>constructor</b></a>
 </h4>
 
 
@@ -1671,7 +1679,7 @@ Create a Userv1 resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Userv1-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/userv1.ts#L33">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/userv1.ts#L33">method <b>get</b></a>
 </h4>
 
 
@@ -1682,14 +1690,14 @@ Get an existing Userv1 resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Userv1-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/userv1.ts#L23">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/userv1.ts#L23">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Userv1-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/userv1.ts#L44">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/userv1.ts#L44">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1700,7 +1708,7 @@ Returns true if the given object is an instance of Userv1.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Userv1-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/userv1.ts#L23">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/userv1.ts#L23">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1709,7 +1717,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Userv1-login">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/userv1.ts#L54">property <b>login</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/userv1.ts#L54">property <b>login</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>login: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1717,7 +1725,7 @@ deployments and may be missing (undefined) during planning phases.
 The email address, which is the login name, of the User.
 
 <h4 class="pdoc-member-header" id="Userv1-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/userv1.ts#L58">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/userv1.ts#L58">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1725,7 +1733,7 @@ The email address, which is the login name, of the User.
 The real life name of the user.
 
 <h4 class="pdoc-member-header" id="Userv1-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/userv1.ts#L62">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/userv1.ts#L62">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1733,7 +1741,7 @@ The real life name of the user.
 The role of this user. Can be `user` (the default), `billing`, `engineer`, or `superuser`. For detailed information on the abilities granted to each role, see [Fastly's Documentation on User roles](https://docs.fastly.com/en/guides/configuring-user-roles-and-permissions#user-roles-and-what-they-can-do).
 
 <h4 class="pdoc-member-header" id="Userv1-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/userv1.ts#L23">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/userv1.ts#L23">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1744,7 +1752,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getFastlyIpRanges" data-link-title="getFastlyIpRanges">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/getFastlyIpRanges.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/getFastlyIpRanges.ts#L31">
         Function <strong>getFastlyIpRanges</strong>
     </a>
 </h3>
@@ -1775,7 +1783,7 @@ const fromFastly = new aws.ec2.SecurityGroup("from_fastly", {
 ```
 
 <h3 class="pdoc-module-header" id="getWafRules" data-link-title="getWafRules">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/getWafRules.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/getWafRules.ts#L9">
         Function <strong>getWafRules</strong>
     </a>
 </h3>
@@ -1786,7 +1794,7 @@ const fromFastly = new aws.ec2.SecurityGroup("from_fastly", {
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="getEnv" data-link-title="getEnv">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/utilities.ts#L5">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/utilities.ts#L5">
         function <strong>getEnv</strong>
     </a>
 </h3>
@@ -1795,7 +1803,7 @@ const fromFastly = new aws.ec2.SecurityGroup("from_fastly", {
 <pre class="highlight"><code><span class='kd'></span>getEnv(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvBoolean" data-link-title="getEnvBoolean">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/utilities.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/utilities.ts#L15">
         function <strong>getEnvBoolean</strong>
     </a>
 </h3>
@@ -1804,7 +1812,7 @@ const fromFastly = new aws.ec2.SecurityGroup("from_fastly", {
 <pre class="highlight"><code><span class='kd'></span>getEnvBoolean(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvNumber" data-link-title="getEnvNumber">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/utilities.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/utilities.ts#L30">
         function <strong>getEnvNumber</strong>
     </a>
 </h3>
@@ -1813,7 +1821,7 @@ const fromFastly = new aws.ec2.SecurityGroup("from_fastly", {
 <pre class="highlight"><code><span class='kd'></span>getEnvNumber(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="GetFastlyIpRangesResult" data-link-title="GetFastlyIpRangesResult">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/getFastlyIpRanges.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/getFastlyIpRanges.ts#L46">
         interface <strong>GetFastlyIpRangesResult</strong>
     </a>
 </h3>
@@ -1823,7 +1831,7 @@ const fromFastly = new aws.ec2.SecurityGroup("from_fastly", {
 A collection of values returned by getFastlyIpRanges.
 
 <h4 class="pdoc-member-header" id="GetFastlyIpRangesResult-cidrBlocks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/getFastlyIpRanges.ts#L50">property <b>cidrBlocks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/getFastlyIpRanges.ts#L50">property <b>cidrBlocks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cidrBlocks: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1831,7 +1839,7 @@ A collection of values returned by getFastlyIpRanges.
 The lexically ordered list of ipv4 CIDR blocks.
 
 <h4 class="pdoc-member-header" id="GetFastlyIpRangesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/getFastlyIpRanges.ts#L54">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/getFastlyIpRanges.ts#L54">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1839,7 +1847,7 @@ The lexically ordered list of ipv4 CIDR blocks.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetFastlyIpRangesResult-ipv6CidrBlocks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/getFastlyIpRanges.ts#L58">property <b>ipv6CidrBlocks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/getFastlyIpRanges.ts#L58">property <b>ipv6CidrBlocks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipv6CidrBlocks: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1847,7 +1855,7 @@ The provider-assigned unique ID for this managed resource.
 The lexically ordered list of ipv6 CIDR blocks.
 
 <h3 class="pdoc-module-header" id="getVersion" data-link-title="getVersion">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/utilities.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/utilities.ts#L41">
         function <strong>getVersion</strong>
     </a>
 </h3>
@@ -1856,7 +1864,7 @@ The lexically ordered list of ipv6 CIDR blocks.
 <pre class="highlight"><code><span class='kd'></span>getVersion(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="GetWafRulesArgs" data-link-title="GetWafRulesArgs">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/getWafRules.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/getWafRules.ts#L28">
         interface <strong>GetWafRulesArgs</strong>
     </a>
 </h3>
@@ -1866,7 +1874,7 @@ The lexically ordered list of ipv6 CIDR blocks.
 A collection of arguments for invoking getWafRules.
 
 <h4 class="pdoc-member-header" id="GetWafRulesArgs-excludeModsecRuleIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/getWafRules.ts#L32">property <b>excludeModsecRuleIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/getWafRules.ts#L32">property <b>excludeModsecRuleIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>excludeModsecRuleIds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>[];</code></pre>
@@ -1874,7 +1882,7 @@ A collection of arguments for invoking getWafRules.
 Exclusion filter by WAF rule's ModSecurity ID.
 
 <h4 class="pdoc-member-header" id="GetWafRulesArgs-publishers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/getWafRules.ts#L36">property <b>publishers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/getWafRules.ts#L36">property <b>publishers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publishers?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1882,7 +1890,7 @@ Exclusion filter by WAF rule's ModSecurity ID.
 Inclusion filter by WAF rule's publishers.
 
 <h4 class="pdoc-member-header" id="GetWafRulesArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/getWafRules.ts#L40">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/getWafRules.ts#L40">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1890,7 +1898,7 @@ Inclusion filter by WAF rule's publishers.
 Inclusion filter by WAF rule's tags.
 
 <h3 class="pdoc-module-header" id="GetWafRulesResult" data-link-title="GetWafRulesResult">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/getWafRules.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/getWafRules.ts#L46">
         interface <strong>GetWafRulesResult</strong>
     </a>
 </h3>
@@ -1900,12 +1908,12 @@ Inclusion filter by WAF rule's tags.
 A collection of values returned by getWafRules.
 
 <h4 class="pdoc-member-header" id="GetWafRulesResult-excludeModsecRuleIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/getWafRules.ts#L47">property <b>excludeModsecRuleIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/getWafRules.ts#L47">property <b>excludeModsecRuleIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>excludeModsecRuleIds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetWafRulesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/getWafRules.ts#L51">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/getWafRules.ts#L51">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1913,12 +1921,12 @@ A collection of values returned by getWafRules.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetWafRulesResult-publishers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/getWafRules.ts#L52">property <b>publishers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/getWafRules.ts#L52">property <b>publishers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publishers?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetWafRulesResult-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/getWafRules.ts#L56">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/getWafRules.ts#L56">property <b>rules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#GetWafRulesRule'>GetWafRulesRule</a>[];</code></pre>
@@ -1926,12 +1934,12 @@ The provider-assigned unique ID for this managed resource.
 The Web Application Firewall's rules result set.
 
 <h4 class="pdoc-member-header" id="GetWafRulesResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/getWafRules.ts#L57">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/getWafRules.ts#L57">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h3 class="pdoc-module-header" id="ProviderArgs" data-link-title="ProviderArgs">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/provider.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/provider.ts#L56">
         interface <strong>ProviderArgs</strong>
     </a>
 </h3>
@@ -1941,7 +1949,7 @@ The Web Application Firewall's rules result set.
 The set of arguments for constructing a Provider resource.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-apiKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/provider.ts#L60">property <b>apiKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/provider.ts#L60">property <b>apiKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1949,7 +1957,7 @@ The set of arguments for constructing a Provider resource.
 Fastly API Key from https://app.fastly.com/#account
 
 <h4 class="pdoc-member-header" id="ProviderArgs-baseUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/provider.ts#L64">property <b>baseUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/provider.ts#L64">property <b>baseUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>baseUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1957,7 +1965,7 @@ Fastly API Key from https://app.fastly.com/#account
 Fastly API URL
 
 <h3 class="pdoc-module-header" id="ServiceACLEntriesv1Args" data-link-title="ServiceACLEntriesv1Args">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceACLEntriesv1.ts#L109">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceACLEntriesv1.ts#L109">
         interface <strong>ServiceACLEntriesv1Args</strong>
     </a>
 </h3>
@@ -1967,7 +1975,7 @@ Fastly API URL
 The set of arguments for constructing a ServiceACLEntriesv1 resource.
 
 <h4 class="pdoc-member-header" id="ServiceACLEntriesv1Args-aclId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceACLEntriesv1.ts#L113">property <b>aclId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceACLEntriesv1.ts#L113">property <b>aclId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aclId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1975,7 +1983,7 @@ The set of arguments for constructing a ServiceACLEntriesv1 resource.
 The ID of the ACL that the items belong to
 
 <h4 class="pdoc-member-header" id="ServiceACLEntriesv1Args-entries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceACLEntriesv1.ts#L117">property <b>entries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceACLEntriesv1.ts#L117">property <b>entries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceACLEntriesv1Entry'>ServiceACLEntriesv1Entry</a>&gt;[]&gt;;</code></pre>
@@ -1983,7 +1991,7 @@ The ID of the ACL that the items belong to
 A Set ACL entries that are applied to the service. Defined below
 
 <h4 class="pdoc-member-header" id="ServiceACLEntriesv1Args-serviceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceACLEntriesv1.ts#L121">property <b>serviceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceACLEntriesv1.ts#L121">property <b>serviceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1991,7 +1999,7 @@ A Set ACL entries that are applied to the service. Defined below
 The ID of the Service that the ACL belongs to
 
 <h3 class="pdoc-module-header" id="ServiceACLEntriesv1State" data-link-title="ServiceACLEntriesv1State">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceACLEntriesv1.ts#L91">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceACLEntriesv1.ts#L91">
         interface <strong>ServiceACLEntriesv1State</strong>
     </a>
 </h3>
@@ -2001,7 +2009,7 @@ The ID of the Service that the ACL belongs to
 Input properties used for looking up and filtering ServiceACLEntriesv1 resources.
 
 <h4 class="pdoc-member-header" id="ServiceACLEntriesv1State-aclId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceACLEntriesv1.ts#L95">property <b>aclId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceACLEntriesv1.ts#L95">property <b>aclId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aclId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2009,7 +2017,7 @@ Input properties used for looking up and filtering ServiceACLEntriesv1 resources
 The ID of the ACL that the items belong to
 
 <h4 class="pdoc-member-header" id="ServiceACLEntriesv1State-entries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceACLEntriesv1.ts#L99">property <b>entries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceACLEntriesv1.ts#L99">property <b>entries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceACLEntriesv1Entry'>ServiceACLEntriesv1Entry</a>&gt;[]&gt;;</code></pre>
@@ -2017,7 +2025,7 @@ The ID of the ACL that the items belong to
 A Set ACL entries that are applied to the service. Defined below
 
 <h4 class="pdoc-member-header" id="ServiceACLEntriesv1State-serviceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceACLEntriesv1.ts#L103">property <b>serviceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceACLEntriesv1.ts#L103">property <b>serviceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2025,7 +2033,7 @@ A Set ACL entries that are applied to the service. Defined below
 The ID of the Service that the ACL belongs to
 
 <h3 class="pdoc-module-header" id="ServiceComputeArgs" data-link-title="ServiceComputeArgs">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L496">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L496">
         interface <strong>ServiceComputeArgs</strong>
     </a>
 </h3>
@@ -2035,7 +2043,7 @@ The ID of the Service that the ACL belongs to
 The set of arguments for constructing a ServiceCompute resource.
 
 <h4 class="pdoc-member-header" id="ServiceComputeArgs-activate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L500">property <b>activate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L500">property <b>activate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>activate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2043,7 +2051,7 @@ The set of arguments for constructing a ServiceCompute resource.
 Conditionally prevents the Service from being activated. The apply step will continue to create a new draft version but will not activate it if this is set to false. Default true.
 
 <h4 class="pdoc-member-header" id="ServiceComputeArgs-backends">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L506">property <b>backends</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L506">property <b>backends</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backends?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeBackend'>ServiceComputeBackend</a>&gt;[]&gt;;</code></pre>
@@ -2053,7 +2061,7 @@ Defined below. Backends must be defined in this argument, or defined in the
 `vcl` argument below
 
 <h4 class="pdoc-member-header" id="ServiceComputeArgs-bigqueryloggings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L511">property <b>bigqueryloggings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L511">property <b>bigqueryloggings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bigqueryloggings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeBigquerylogging'>ServiceComputeBigquerylogging</a>&gt;[]&gt;;</code></pre>
@@ -2062,7 +2070,7 @@ A BigQuery endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeArgs-blobstorageloggings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L516">property <b>blobstorageloggings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L516">property <b>blobstorageloggings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>blobstorageloggings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeBlobstoragelogging'>ServiceComputeBlobstoragelogging</a>&gt;[]&gt;;</code></pre>
@@ -2071,7 +2079,7 @@ An Azure Blob Storage endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeArgs-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L520">property <b>comment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L520">property <b>comment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>comment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2079,7 +2087,7 @@ Defined below.
 An optional comment about the Domain.
 
 <h4 class="pdoc-member-header" id="ServiceComputeArgs-domains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L524">property <b>domains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L524">property <b>domains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domains: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeDomain'>ServiceComputeDomain</a>&gt;[]&gt;;</code></pre>
@@ -2087,7 +2095,7 @@ An optional comment about the Domain.
 The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 
 <h4 class="pdoc-member-header" id="ServiceComputeArgs-forceDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L529">property <b>forceDestroy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L529">property <b>forceDestroy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceDestroy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2096,7 +2104,7 @@ Services that are active cannot be destroyed. In
 order to destroy the Service, set `forceDestroy` to `true`. Default `false`.
 
 <h4 class="pdoc-member-header" id="ServiceComputeArgs-gcsloggings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L534">property <b>gcsloggings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L534">property <b>gcsloggings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gcsloggings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeGcslogging'>ServiceComputeGcslogging</a>&gt;[]&gt;;</code></pre>
@@ -2105,7 +2113,7 @@ A gcs endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeArgs-healthchecks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L538">property <b>healthchecks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L538">property <b>healthchecks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthchecks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeHealthcheck'>ServiceComputeHealthcheck</a>&gt;[]&gt;;</code></pre>
@@ -2113,7 +2121,7 @@ Defined below.
 Name of a defined `healthcheck` to assign to this backend.
 
 <h4 class="pdoc-member-header" id="ServiceComputeArgs-httpsloggings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L543">property <b>httpsloggings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L543">property <b>httpsloggings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpsloggings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeHttpslogging'>ServiceComputeHttpslogging</a>&gt;[]&gt;;</code></pre>
@@ -2122,7 +2130,7 @@ An HTTPS endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeArgs-logentries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L548">property <b>logentries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L548">property <b>logentries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logentries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeLogentry'>ServiceComputeLogentry</a>&gt;[]&gt;;</code></pre>
@@ -2131,7 +2139,7 @@ A logentries endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeArgs-loggingCloudfiles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L553">property <b>loggingCloudfiles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L553">property <b>loggingCloudfiles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingCloudfiles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeLoggingCloudfile'>ServiceComputeLoggingCloudfile</a>&gt;[]&gt;;</code></pre>
@@ -2140,7 +2148,7 @@ A Rackspace Cloud Files endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeArgs-loggingDatadogs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L558">property <b>loggingDatadogs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L558">property <b>loggingDatadogs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingDatadogs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeLoggingDatadog'>ServiceComputeLoggingDatadog</a>&gt;[]&gt;;</code></pre>
@@ -2149,7 +2157,7 @@ A Datadog endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeArgs-loggingDigitaloceans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L563">property <b>loggingDigitaloceans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L563">property <b>loggingDigitaloceans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingDigitaloceans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeLoggingDigitalocean'>ServiceComputeLoggingDigitalocean</a>&gt;[]&gt;;</code></pre>
@@ -2158,7 +2166,7 @@ A DigitalOcean Spaces endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeArgs-loggingElasticsearches">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L568">property <b>loggingElasticsearches</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L568">property <b>loggingElasticsearches</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingElasticsearches?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeLoggingElasticsearch'>ServiceComputeLoggingElasticsearch</a>&gt;[]&gt;;</code></pre>
@@ -2167,7 +2175,7 @@ An Elasticsearch endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeArgs-loggingFtps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L573">property <b>loggingFtps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L573">property <b>loggingFtps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingFtps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeLoggingFtp'>ServiceComputeLoggingFtp</a>&gt;[]&gt;;</code></pre>
@@ -2176,7 +2184,7 @@ An FTP endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeArgs-loggingGooglepubsubs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L578">property <b>loggingGooglepubsubs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L578">property <b>loggingGooglepubsubs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingGooglepubsubs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeLoggingGooglepubsub'>ServiceComputeLoggingGooglepubsub</a>&gt;[]&gt;;</code></pre>
@@ -2185,7 +2193,7 @@ A Google Cloud Pub/Sub endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeArgs-loggingHeroku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L583">property <b>loggingHeroku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L583">property <b>loggingHeroku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingHeroku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeLoggingHeroku'>ServiceComputeLoggingHeroku</a>&gt;[]&gt;;</code></pre>
@@ -2194,7 +2202,7 @@ A Heroku endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeArgs-loggingHoneycombs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L588">property <b>loggingHoneycombs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L588">property <b>loggingHoneycombs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingHoneycombs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeLoggingHoneycomb'>ServiceComputeLoggingHoneycomb</a>&gt;[]&gt;;</code></pre>
@@ -2203,7 +2211,7 @@ A Honeycomb endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeArgs-loggingKafkas">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L593">property <b>loggingKafkas</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L593">property <b>loggingKafkas</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingKafkas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeLoggingKafka'>ServiceComputeLoggingKafka</a>&gt;[]&gt;;</code></pre>
@@ -2212,7 +2220,7 @@ A Kafka endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeArgs-loggingLogglies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L598">property <b>loggingLogglies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L598">property <b>loggingLogglies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingLogglies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeLoggingLoggly'>ServiceComputeLoggingLoggly</a>&gt;[]&gt;;</code></pre>
@@ -2221,7 +2229,7 @@ A Loggly endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeArgs-loggingLogshuttles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L603">property <b>loggingLogshuttles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L603">property <b>loggingLogshuttles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingLogshuttles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeLoggingLogshuttle'>ServiceComputeLoggingLogshuttle</a>&gt;[]&gt;;</code></pre>
@@ -2230,7 +2238,7 @@ A Log Shuttle endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeArgs-loggingNewrelics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L608">property <b>loggingNewrelics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L608">property <b>loggingNewrelics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingNewrelics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeLoggingNewrelic'>ServiceComputeLoggingNewrelic</a>&gt;[]&gt;;</code></pre>
@@ -2239,7 +2247,7 @@ A New Relic endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeArgs-loggingOpenstacks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L613">property <b>loggingOpenstacks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L613">property <b>loggingOpenstacks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingOpenstacks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeLoggingOpenstack'>ServiceComputeLoggingOpenstack</a>&gt;[]&gt;;</code></pre>
@@ -2248,7 +2256,7 @@ An OpenStack endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeArgs-loggingScalyrs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L618">property <b>loggingScalyrs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L618">property <b>loggingScalyrs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingScalyrs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeLoggingScalyr'>ServiceComputeLoggingScalyr</a>&gt;[]&gt;;</code></pre>
@@ -2257,7 +2265,7 @@ A Scalyr endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeArgs-loggingSftps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L623">property <b>loggingSftps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L623">property <b>loggingSftps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingSftps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeLoggingSftp'>ServiceComputeLoggingSftp</a>&gt;[]&gt;;</code></pre>
@@ -2266,7 +2274,7 @@ An SFTP endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L627">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L627">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2274,7 +2282,7 @@ Defined below.
 The unique name of the Rackspace Cloud Files logging endpoint.
 
 <h4 class="pdoc-member-header" id="ServiceComputeArgs-package">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L631">property <b>package</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L631">property <b>package</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>package: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputePackage'>ServiceComputePackage</a>&gt;;</code></pre>
@@ -2282,7 +2290,7 @@ The unique name of the Rackspace Cloud Files logging endpoint.
 A Wasm deployment package to upload. Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeArgs-papertrails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L636">property <b>papertrails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L636">property <b>papertrails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>papertrails?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputePapertrail'>ServiceComputePapertrail</a>&gt;[]&gt;;</code></pre>
@@ -2291,7 +2299,7 @@ A Papertrail endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeArgs-s3loggings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L641">property <b>s3loggings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L641">property <b>s3loggings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3loggings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeS3logging'>ServiceComputeS3logging</a>&gt;[]&gt;;</code></pre>
@@ -2300,7 +2308,7 @@ A set of S3 Buckets to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeArgs-splunks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L646">property <b>splunks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L646">property <b>splunks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>splunks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeSplunk'>ServiceComputeSplunk</a>&gt;[]&gt;;</code></pre>
@@ -2309,7 +2317,7 @@ A Splunk endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeArgs-sumologics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L651">property <b>sumologics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L651">property <b>sumologics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sumologics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeSumologic'>ServiceComputeSumologic</a>&gt;[]&gt;;</code></pre>
@@ -2318,7 +2326,7 @@ A Sumologic endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeArgs-syslogs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L656">property <b>syslogs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L656">property <b>syslogs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>syslogs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeSyslog'>ServiceComputeSyslog</a>&gt;[]&gt;;</code></pre>
@@ -2327,7 +2335,7 @@ A syslog endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeArgs-versionComment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L660">property <b>versionComment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L660">property <b>versionComment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versionComment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2335,7 +2343,7 @@ Defined below.
 Description field for the version.
 
 <h3 class="pdoc-module-header" id="ServiceComputeState" data-link-title="ServiceComputeState">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L321">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L321">
         interface <strong>ServiceComputeState</strong>
     </a>
 </h3>
@@ -2345,7 +2353,7 @@ Description field for the version.
 Input properties used for looking up and filtering ServiceCompute resources.
 
 <h4 class="pdoc-member-header" id="ServiceComputeState-activate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L325">property <b>activate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L325">property <b>activate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>activate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2353,7 +2361,7 @@ Input properties used for looking up and filtering ServiceCompute resources.
 Conditionally prevents the Service from being activated. The apply step will continue to create a new draft version but will not activate it if this is set to false. Default true.
 
 <h4 class="pdoc-member-header" id="ServiceComputeState-activeVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L329">property <b>activeVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L329">property <b>activeVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>activeVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2361,7 +2369,7 @@ Conditionally prevents the Service from being activated. The apply step will con
 The currently active version of your Fastly Service.
 
 <h4 class="pdoc-member-header" id="ServiceComputeState-backends">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L335">property <b>backends</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L335">property <b>backends</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backends?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeBackend'>ServiceComputeBackend</a>&gt;[]&gt;;</code></pre>
@@ -2371,7 +2379,7 @@ Defined below. Backends must be defined in this argument, or defined in the
 `vcl` argument below
 
 <h4 class="pdoc-member-header" id="ServiceComputeState-bigqueryloggings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L340">property <b>bigqueryloggings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L340">property <b>bigqueryloggings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bigqueryloggings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeBigquerylogging'>ServiceComputeBigquerylogging</a>&gt;[]&gt;;</code></pre>
@@ -2380,7 +2388,7 @@ A BigQuery endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeState-blobstorageloggings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L345">property <b>blobstorageloggings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L345">property <b>blobstorageloggings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>blobstorageloggings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeBlobstoragelogging'>ServiceComputeBlobstoragelogging</a>&gt;[]&gt;;</code></pre>
@@ -2389,12 +2397,12 @@ An Azure Blob Storage endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeState-clonedVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L346">property <b>clonedVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L346">property <b>clonedVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clonedVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceComputeState-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L350">property <b>comment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L350">property <b>comment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>comment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2402,7 +2410,7 @@ Defined below.
 An optional comment about the Domain.
 
 <h4 class="pdoc-member-header" id="ServiceComputeState-domains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L354">property <b>domains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L354">property <b>domains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domains?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeDomain'>ServiceComputeDomain</a>&gt;[]&gt;;</code></pre>
@@ -2410,7 +2418,7 @@ An optional comment about the Domain.
 The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 
 <h4 class="pdoc-member-header" id="ServiceComputeState-forceDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L359">property <b>forceDestroy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L359">property <b>forceDestroy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceDestroy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2419,7 +2427,7 @@ Services that are active cannot be destroyed. In
 order to destroy the Service, set `forceDestroy` to `true`. Default `false`.
 
 <h4 class="pdoc-member-header" id="ServiceComputeState-gcsloggings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L364">property <b>gcsloggings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L364">property <b>gcsloggings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gcsloggings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeGcslogging'>ServiceComputeGcslogging</a>&gt;[]&gt;;</code></pre>
@@ -2428,7 +2436,7 @@ A gcs endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeState-healthchecks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L368">property <b>healthchecks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L368">property <b>healthchecks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthchecks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeHealthcheck'>ServiceComputeHealthcheck</a>&gt;[]&gt;;</code></pre>
@@ -2436,7 +2444,7 @@ Defined below.
 Name of a defined `healthcheck` to assign to this backend.
 
 <h4 class="pdoc-member-header" id="ServiceComputeState-httpsloggings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L373">property <b>httpsloggings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L373">property <b>httpsloggings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpsloggings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeHttpslogging'>ServiceComputeHttpslogging</a>&gt;[]&gt;;</code></pre>
@@ -2445,7 +2453,7 @@ An HTTPS endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeState-logentries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L378">property <b>logentries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L378">property <b>logentries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logentries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeLogentry'>ServiceComputeLogentry</a>&gt;[]&gt;;</code></pre>
@@ -2454,7 +2462,7 @@ A logentries endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeState-loggingCloudfiles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L383">property <b>loggingCloudfiles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L383">property <b>loggingCloudfiles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingCloudfiles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeLoggingCloudfile'>ServiceComputeLoggingCloudfile</a>&gt;[]&gt;;</code></pre>
@@ -2463,7 +2471,7 @@ A Rackspace Cloud Files endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeState-loggingDatadogs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L388">property <b>loggingDatadogs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L388">property <b>loggingDatadogs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingDatadogs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeLoggingDatadog'>ServiceComputeLoggingDatadog</a>&gt;[]&gt;;</code></pre>
@@ -2472,7 +2480,7 @@ A Datadog endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeState-loggingDigitaloceans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L393">property <b>loggingDigitaloceans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L393">property <b>loggingDigitaloceans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingDigitaloceans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeLoggingDigitalocean'>ServiceComputeLoggingDigitalocean</a>&gt;[]&gt;;</code></pre>
@@ -2481,7 +2489,7 @@ A DigitalOcean Spaces endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeState-loggingElasticsearches">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L398">property <b>loggingElasticsearches</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L398">property <b>loggingElasticsearches</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingElasticsearches?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeLoggingElasticsearch'>ServiceComputeLoggingElasticsearch</a>&gt;[]&gt;;</code></pre>
@@ -2490,7 +2498,7 @@ An Elasticsearch endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeState-loggingFtps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L403">property <b>loggingFtps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L403">property <b>loggingFtps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingFtps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeLoggingFtp'>ServiceComputeLoggingFtp</a>&gt;[]&gt;;</code></pre>
@@ -2499,7 +2507,7 @@ An FTP endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeState-loggingGooglepubsubs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L408">property <b>loggingGooglepubsubs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L408">property <b>loggingGooglepubsubs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingGooglepubsubs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeLoggingGooglepubsub'>ServiceComputeLoggingGooglepubsub</a>&gt;[]&gt;;</code></pre>
@@ -2508,7 +2516,7 @@ A Google Cloud Pub/Sub endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeState-loggingHeroku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L413">property <b>loggingHeroku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L413">property <b>loggingHeroku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingHeroku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeLoggingHeroku'>ServiceComputeLoggingHeroku</a>&gt;[]&gt;;</code></pre>
@@ -2517,7 +2525,7 @@ A Heroku endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeState-loggingHoneycombs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L418">property <b>loggingHoneycombs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L418">property <b>loggingHoneycombs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingHoneycombs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeLoggingHoneycomb'>ServiceComputeLoggingHoneycomb</a>&gt;[]&gt;;</code></pre>
@@ -2526,7 +2534,7 @@ A Honeycomb endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeState-loggingKafkas">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L423">property <b>loggingKafkas</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L423">property <b>loggingKafkas</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingKafkas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeLoggingKafka'>ServiceComputeLoggingKafka</a>&gt;[]&gt;;</code></pre>
@@ -2535,7 +2543,7 @@ A Kafka endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeState-loggingLogglies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L428">property <b>loggingLogglies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L428">property <b>loggingLogglies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingLogglies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeLoggingLoggly'>ServiceComputeLoggingLoggly</a>&gt;[]&gt;;</code></pre>
@@ -2544,7 +2552,7 @@ A Loggly endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeState-loggingLogshuttles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L433">property <b>loggingLogshuttles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L433">property <b>loggingLogshuttles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingLogshuttles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeLoggingLogshuttle'>ServiceComputeLoggingLogshuttle</a>&gt;[]&gt;;</code></pre>
@@ -2553,7 +2561,7 @@ A Log Shuttle endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeState-loggingNewrelics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L438">property <b>loggingNewrelics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L438">property <b>loggingNewrelics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingNewrelics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeLoggingNewrelic'>ServiceComputeLoggingNewrelic</a>&gt;[]&gt;;</code></pre>
@@ -2562,7 +2570,7 @@ A New Relic endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeState-loggingOpenstacks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L443">property <b>loggingOpenstacks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L443">property <b>loggingOpenstacks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingOpenstacks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeLoggingOpenstack'>ServiceComputeLoggingOpenstack</a>&gt;[]&gt;;</code></pre>
@@ -2571,7 +2579,7 @@ An OpenStack endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeState-loggingScalyrs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L448">property <b>loggingScalyrs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L448">property <b>loggingScalyrs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingScalyrs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeLoggingScalyr'>ServiceComputeLoggingScalyr</a>&gt;[]&gt;;</code></pre>
@@ -2580,7 +2588,7 @@ A Scalyr endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeState-loggingSftps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L453">property <b>loggingSftps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L453">property <b>loggingSftps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingSftps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeLoggingSftp'>ServiceComputeLoggingSftp</a>&gt;[]&gt;;</code></pre>
@@ -2589,7 +2597,7 @@ An SFTP endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L457">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L457">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2597,7 +2605,7 @@ Defined below.
 The unique name of the Rackspace Cloud Files logging endpoint.
 
 <h4 class="pdoc-member-header" id="ServiceComputeState-package">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L461">property <b>package</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L461">property <b>package</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>package?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputePackage'>ServiceComputePackage</a>&gt;;</code></pre>
@@ -2605,7 +2613,7 @@ The unique name of the Rackspace Cloud Files logging endpoint.
 A Wasm deployment package to upload. Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeState-papertrails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L466">property <b>papertrails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L466">property <b>papertrails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>papertrails?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputePapertrail'>ServiceComputePapertrail</a>&gt;[]&gt;;</code></pre>
@@ -2614,7 +2622,7 @@ A Papertrail endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeState-s3loggings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L471">property <b>s3loggings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L471">property <b>s3loggings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3loggings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeS3logging'>ServiceComputeS3logging</a>&gt;[]&gt;;</code></pre>
@@ -2623,7 +2631,7 @@ A set of S3 Buckets to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeState-splunks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L476">property <b>splunks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L476">property <b>splunks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>splunks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeSplunk'>ServiceComputeSplunk</a>&gt;[]&gt;;</code></pre>
@@ -2632,7 +2640,7 @@ A Splunk endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeState-sumologics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L481">property <b>sumologics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L481">property <b>sumologics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sumologics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeSumologic'>ServiceComputeSumologic</a>&gt;[]&gt;;</code></pre>
@@ -2641,7 +2649,7 @@ A Sumologic endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeState-syslogs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L486">property <b>syslogs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L486">property <b>syslogs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>syslogs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceComputeSyslog'>ServiceComputeSyslog</a>&gt;[]&gt;;</code></pre>
@@ -2650,7 +2658,7 @@ A syslog endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceComputeState-versionComment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceCompute.ts#L490">property <b>versionComment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceCompute.ts#L490">property <b>versionComment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versionComment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2658,7 +2666,7 @@ Defined below.
 Description field for the version.
 
 <h3 class="pdoc-module-header" id="ServiceDictionaryItemsv1Args" data-link-title="ServiceDictionaryItemsv1Args">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceDictionaryItemsv1.ts#L107">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceDictionaryItemsv1.ts#L107">
         interface <strong>ServiceDictionaryItemsv1Args</strong>
     </a>
 </h3>
@@ -2668,7 +2676,7 @@ Description field for the version.
 The set of arguments for constructing a ServiceDictionaryItemsv1 resource.
 
 <h4 class="pdoc-member-header" id="ServiceDictionaryItemsv1Args-dictionaryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceDictionaryItemsv1.ts#L111">property <b>dictionaryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceDictionaryItemsv1.ts#L111">property <b>dictionaryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dictionaryId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2676,7 +2684,7 @@ The set of arguments for constructing a ServiceDictionaryItemsv1 resource.
 The ID of the dictionary that the items belong to
 
 <h4 class="pdoc-member-header" id="ServiceDictionaryItemsv1Args-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceDictionaryItemsv1.ts#L115">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceDictionaryItemsv1.ts#L115">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>items?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -2684,7 +2692,7 @@ The ID of the dictionary that the items belong to
 A map representing an entry in the dictionary, (key/value)
 
 <h4 class="pdoc-member-header" id="ServiceDictionaryItemsv1Args-serviceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceDictionaryItemsv1.ts#L119">property <b>serviceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceDictionaryItemsv1.ts#L119">property <b>serviceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2692,7 +2700,7 @@ A map representing an entry in the dictionary, (key/value)
 The ID of the service that the dictionary belongs to
 
 <h3 class="pdoc-module-header" id="ServiceDictionaryItemsv1State" data-link-title="ServiceDictionaryItemsv1State">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceDictionaryItemsv1.ts#L89">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceDictionaryItemsv1.ts#L89">
         interface <strong>ServiceDictionaryItemsv1State</strong>
     </a>
 </h3>
@@ -2702,7 +2710,7 @@ The ID of the service that the dictionary belongs to
 Input properties used for looking up and filtering ServiceDictionaryItemsv1 resources.
 
 <h4 class="pdoc-member-header" id="ServiceDictionaryItemsv1State-dictionaryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceDictionaryItemsv1.ts#L93">property <b>dictionaryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceDictionaryItemsv1.ts#L93">property <b>dictionaryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dictionaryId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2710,7 +2718,7 @@ Input properties used for looking up and filtering ServiceDictionaryItemsv1 reso
 The ID of the dictionary that the items belong to
 
 <h4 class="pdoc-member-header" id="ServiceDictionaryItemsv1State-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceDictionaryItemsv1.ts#L97">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceDictionaryItemsv1.ts#L97">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>items?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -2718,7 +2726,7 @@ The ID of the dictionary that the items belong to
 A map representing an entry in the dictionary, (key/value)
 
 <h4 class="pdoc-member-header" id="ServiceDictionaryItemsv1State-serviceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceDictionaryItemsv1.ts#L101">property <b>serviceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceDictionaryItemsv1.ts#L101">property <b>serviceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2726,7 +2734,7 @@ A map representing an entry in the dictionary, (key/value)
 The ID of the service that the dictionary belongs to
 
 <h3 class="pdoc-module-header" id="ServiceDynamicSnippetContentv1Args" data-link-title="ServiceDynamicSnippetContentv1Args">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceDynamicSnippetContentv1.ts#L110">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceDynamicSnippetContentv1.ts#L110">
         interface <strong>ServiceDynamicSnippetContentv1Args</strong>
     </a>
 </h3>
@@ -2736,7 +2744,7 @@ The ID of the service that the dictionary belongs to
 The set of arguments for constructing a ServiceDynamicSnippetContentv1 resource.
 
 <h4 class="pdoc-member-header" id="ServiceDynamicSnippetContentv1Args-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceDynamicSnippetContentv1.ts#L114">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceDynamicSnippetContentv1.ts#L114">property <b>content</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>content: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2744,7 +2752,7 @@ The set of arguments for constructing a ServiceDynamicSnippetContentv1 resource.
 The VCL code that specifies exactly what the snippet does.
 
 <h4 class="pdoc-member-header" id="ServiceDynamicSnippetContentv1Args-serviceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceDynamicSnippetContentv1.ts#L118">property <b>serviceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceDynamicSnippetContentv1.ts#L118">property <b>serviceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2752,7 +2760,7 @@ The VCL code that specifies exactly what the snippet does.
 The ID of the service that the dynamic snippet belongs to
 
 <h4 class="pdoc-member-header" id="ServiceDynamicSnippetContentv1Args-snippetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceDynamicSnippetContentv1.ts#L122">property <b>snippetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceDynamicSnippetContentv1.ts#L122">property <b>snippetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snippetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2760,7 +2768,7 @@ The ID of the service that the dynamic snippet belongs to
 The ID of the dynamic snippet that the content belong to
 
 <h3 class="pdoc-module-header" id="ServiceDynamicSnippetContentv1State" data-link-title="ServiceDynamicSnippetContentv1State">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceDynamicSnippetContentv1.ts#L92">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceDynamicSnippetContentv1.ts#L92">
         interface <strong>ServiceDynamicSnippetContentv1State</strong>
     </a>
 </h3>
@@ -2770,7 +2778,7 @@ The ID of the dynamic snippet that the content belong to
 Input properties used for looking up and filtering ServiceDynamicSnippetContentv1 resources.
 
 <h4 class="pdoc-member-header" id="ServiceDynamicSnippetContentv1State-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceDynamicSnippetContentv1.ts#L96">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceDynamicSnippetContentv1.ts#L96">property <b>content</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>content?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2778,7 +2786,7 @@ Input properties used for looking up and filtering ServiceDynamicSnippetContentv
 The VCL code that specifies exactly what the snippet does.
 
 <h4 class="pdoc-member-header" id="ServiceDynamicSnippetContentv1State-serviceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceDynamicSnippetContentv1.ts#L100">property <b>serviceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceDynamicSnippetContentv1.ts#L100">property <b>serviceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2786,7 +2794,7 @@ The VCL code that specifies exactly what the snippet does.
 The ID of the service that the dynamic snippet belongs to
 
 <h4 class="pdoc-member-header" id="ServiceDynamicSnippetContentv1State-snippetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceDynamicSnippetContentv1.ts#L104">property <b>snippetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceDynamicSnippetContentv1.ts#L104">property <b>snippetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snippetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2794,7 +2802,7 @@ The ID of the service that the dynamic snippet belongs to
 The ID of the dynamic snippet that the content belong to
 
 <h3 class="pdoc-module-header" id="Servicev1Args" data-link-title="Servicev1Args">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L642">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L642">
         interface <strong>Servicev1Args</strong>
     </a>
 </h3>
@@ -2804,7 +2812,7 @@ The ID of the dynamic snippet that the content belong to
 The set of arguments for constructing a Servicev1 resource.
 
 <h4 class="pdoc-member-header" id="Servicev1Args-acls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L646">property <b>acls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L646">property <b>acls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>acls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Acl'>Servicev1Acl</a>&gt;[]&gt;;</code></pre>
@@ -2812,7 +2820,7 @@ The set of arguments for constructing a Servicev1 resource.
 A set of ACL configuration blocks.  Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1Args-activate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L650">property <b>activate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L650">property <b>activate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>activate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2820,7 +2828,7 @@ A set of ACL configuration blocks.  Defined below.
 Conditionally prevents the Service from being activated. The apply step will continue to create a new draft version but will not activate it if this is set to false. Default true.
 
 <h4 class="pdoc-member-header" id="Servicev1Args-backends">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L656">property <b>backends</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L656">property <b>backends</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backends?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Backend'>Servicev1Backend</a>&gt;[]&gt;;</code></pre>
@@ -2830,7 +2838,7 @@ Defined below. Backends must be defined in this argument, or defined in the
 `vcl` argument below
 
 <h4 class="pdoc-member-header" id="Servicev1Args-bigqueryloggings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L661">property <b>bigqueryloggings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L661">property <b>bigqueryloggings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bigqueryloggings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Bigquerylogging'>Servicev1Bigquerylogging</a>&gt;[]&gt;;</code></pre>
@@ -2839,7 +2847,7 @@ A BigQuery endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1Args-blobstorageloggings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L666">property <b>blobstorageloggings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L666">property <b>blobstorageloggings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>blobstorageloggings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Blobstoragelogging'>Servicev1Blobstoragelogging</a>&gt;[]&gt;;</code></pre>
@@ -2848,7 +2856,7 @@ An Azure Blob Storage endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1Args-cacheSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L670">property <b>cacheSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L670">property <b>cacheSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cacheSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1CacheSetting'>Servicev1CacheSetting</a>&gt;[]&gt;;</code></pre>
@@ -2856,7 +2864,7 @@ Defined below.
 A set of Cache Settings, allowing you to override
 
 <h4 class="pdoc-member-header" id="Servicev1Args-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L674">property <b>comment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L674">property <b>comment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>comment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2864,7 +2872,7 @@ A set of Cache Settings, allowing you to override
 An optional comment about the Director.
 
 <h4 class="pdoc-member-header" id="Servicev1Args-conditions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L679">property <b>conditions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L679">property <b>conditions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>conditions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Condition'>Servicev1Condition</a>&gt;[]&gt;;</code></pre>
@@ -2873,7 +2881,7 @@ A set of conditions to add logic to any basic
 configuration object in this service. Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1Args-defaultHost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L683">property <b>defaultHost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L683">property <b>defaultHost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultHost?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2881,7 +2889,7 @@ configuration object in this service. Defined below.
 Sets the host header.
 
 <h4 class="pdoc-member-header" id="Servicev1Args-defaultTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L688">property <b>defaultTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L688">property <b>defaultTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2890,7 +2898,7 @@ The default Time-to-live (TTL) for
 requests.
 
 <h4 class="pdoc-member-header" id="Servicev1Args-dictionaries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L692">property <b>dictionaries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L692">property <b>dictionaries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dictionaries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Dictionary'>Servicev1Dictionary</a>&gt;[]&gt;;</code></pre>
@@ -2898,7 +2906,7 @@ requests.
 A set of dictionaries that allow the storing of key values pair for use within VCL functions. Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1Args-directors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L697">property <b>directors</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L697">property <b>directors</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>directors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Director'>Servicev1Director</a>&gt;[]&gt;;</code></pre>
@@ -2907,7 +2915,7 @@ A director to allow more control over balancing traffic over backends.
 when an item is not to be cached based on an above `condition`. Defined below
 
 <h4 class="pdoc-member-header" id="Servicev1Args-domains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L701">property <b>domains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L701">property <b>domains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domains: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Domain'>Servicev1Domain</a>&gt;[]&gt;;</code></pre>
@@ -2915,7 +2923,7 @@ when an item is not to be cached based on an above `condition`. Defined below
 The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 
 <h4 class="pdoc-member-header" id="Servicev1Args-dynamicsnippets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L705">property <b>dynamicsnippets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L705">property <b>dynamicsnippets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dynamicsnippets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Dynamicsnippet'>Servicev1Dynamicsnippet</a>&gt;[]&gt;;</code></pre>
@@ -2923,7 +2931,7 @@ The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces
 A set of custom, "dynamic" VCL Snippet configuration blocks.  Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1Args-forceDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L710">property <b>forceDestroy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L710">property <b>forceDestroy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceDestroy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2932,7 +2940,7 @@ Services that are active cannot be destroyed. In
 order to destroy the Service, set `forceDestroy` to `true`. Default `false`.
 
 <h4 class="pdoc-member-header" id="Servicev1Args-gcsloggings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L715">property <b>gcsloggings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L715">property <b>gcsloggings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gcsloggings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Gcslogging'>Servicev1Gcslogging</a>&gt;[]&gt;;</code></pre>
@@ -2941,7 +2949,7 @@ A gcs endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1Args-gzips">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L720">property <b>gzips</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L720">property <b>gzips</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gzips?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Gzip'>Servicev1Gzip</a>&gt;[]&gt;;</code></pre>
@@ -2950,7 +2958,7 @@ A set of gzip rules to control automatic gzipping of
 content. Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1Args-headers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L725">property <b>headers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L725">property <b>headers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>headers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Header'>Servicev1Header</a>&gt;[]&gt;;</code></pre>
@@ -2959,7 +2967,7 @@ A set of Headers to manipulate for each request. Defined
 below.
 
 <h4 class="pdoc-member-header" id="Servicev1Args-healthchecks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L729">property <b>healthchecks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L729">property <b>healthchecks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthchecks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Healthcheck'>Servicev1Healthcheck</a>&gt;[]&gt;;</code></pre>
@@ -2967,7 +2975,7 @@ below.
 Name of a defined `healthcheck` to assign to this backend.
 
 <h4 class="pdoc-member-header" id="Servicev1Args-httpsloggings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L734">property <b>httpsloggings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L734">property <b>httpsloggings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpsloggings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Httpslogging'>Servicev1Httpslogging</a>&gt;[]&gt;;</code></pre>
@@ -2976,7 +2984,7 @@ An HTTPS endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1Args-logentries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L739">property <b>logentries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L739">property <b>logentries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logentries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Logentry'>Servicev1Logentry</a>&gt;[]&gt;;</code></pre>
@@ -2985,7 +2993,7 @@ A logentries endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1Args-loggingCloudfiles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L744">property <b>loggingCloudfiles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L744">property <b>loggingCloudfiles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingCloudfiles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingCloudfile'>Servicev1LoggingCloudfile</a>&gt;[]&gt;;</code></pre>
@@ -2994,7 +3002,7 @@ A Rackspace Cloud Files endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1Args-loggingDatadogs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L749">property <b>loggingDatadogs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L749">property <b>loggingDatadogs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingDatadogs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingDatadog'>Servicev1LoggingDatadog</a>&gt;[]&gt;;</code></pre>
@@ -3003,7 +3011,7 @@ A Datadog endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1Args-loggingDigitaloceans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L754">property <b>loggingDigitaloceans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L754">property <b>loggingDigitaloceans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingDigitaloceans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingDigitalocean'>Servicev1LoggingDigitalocean</a>&gt;[]&gt;;</code></pre>
@@ -3012,7 +3020,7 @@ A DigitalOcean Spaces endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1Args-loggingElasticsearches">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L759">property <b>loggingElasticsearches</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L759">property <b>loggingElasticsearches</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingElasticsearches?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingElasticsearch'>Servicev1LoggingElasticsearch</a>&gt;[]&gt;;</code></pre>
@@ -3021,7 +3029,7 @@ An Elasticsearch endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1Args-loggingFtps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L764">property <b>loggingFtps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L764">property <b>loggingFtps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingFtps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingFtp'>Servicev1LoggingFtp</a>&gt;[]&gt;;</code></pre>
@@ -3030,7 +3038,7 @@ An FTP endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1Args-loggingGooglepubsubs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L769">property <b>loggingGooglepubsubs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L769">property <b>loggingGooglepubsubs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingGooglepubsubs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingGooglepubsub'>Servicev1LoggingGooglepubsub</a>&gt;[]&gt;;</code></pre>
@@ -3039,7 +3047,7 @@ A Google Cloud Pub/Sub endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1Args-loggingHeroku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L774">property <b>loggingHeroku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L774">property <b>loggingHeroku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingHeroku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingHeroku'>Servicev1LoggingHeroku</a>&gt;[]&gt;;</code></pre>
@@ -3048,7 +3056,7 @@ A Heroku endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1Args-loggingHoneycombs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L779">property <b>loggingHoneycombs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L779">property <b>loggingHoneycombs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingHoneycombs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingHoneycomb'>Servicev1LoggingHoneycomb</a>&gt;[]&gt;;</code></pre>
@@ -3057,7 +3065,7 @@ A Honeycomb endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1Args-loggingKafkas">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L784">property <b>loggingKafkas</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L784">property <b>loggingKafkas</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingKafkas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingKafka'>Servicev1LoggingKafka</a>&gt;[]&gt;;</code></pre>
@@ -3066,7 +3074,7 @@ A Kafka endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1Args-loggingLogglies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L789">property <b>loggingLogglies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L789">property <b>loggingLogglies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingLogglies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingLoggly'>Servicev1LoggingLoggly</a>&gt;[]&gt;;</code></pre>
@@ -3075,7 +3083,7 @@ A Loggly endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1Args-loggingLogshuttles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L794">property <b>loggingLogshuttles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L794">property <b>loggingLogshuttles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingLogshuttles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingLogshuttle'>Servicev1LoggingLogshuttle</a>&gt;[]&gt;;</code></pre>
@@ -3084,7 +3092,7 @@ A Log Shuttle endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1Args-loggingNewrelics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L799">property <b>loggingNewrelics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L799">property <b>loggingNewrelics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingNewrelics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingNewrelic'>Servicev1LoggingNewrelic</a>&gt;[]&gt;;</code></pre>
@@ -3093,7 +3101,7 @@ A New Relic endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1Args-loggingOpenstacks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L804">property <b>loggingOpenstacks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L804">property <b>loggingOpenstacks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingOpenstacks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingOpenstack'>Servicev1LoggingOpenstack</a>&gt;[]&gt;;</code></pre>
@@ -3102,7 +3110,7 @@ An OpenStack endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1Args-loggingScalyrs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L809">property <b>loggingScalyrs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L809">property <b>loggingScalyrs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingScalyrs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingScalyr'>Servicev1LoggingScalyr</a>&gt;[]&gt;;</code></pre>
@@ -3111,7 +3119,7 @@ A Scalyr endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1Args-loggingSftps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L814">property <b>loggingSftps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L814">property <b>loggingSftps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingSftps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingSftp'>Servicev1LoggingSftp</a>&gt;[]&gt;;</code></pre>
@@ -3120,7 +3128,7 @@ An SFTP endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1Args-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L818">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L818">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3128,7 +3136,7 @@ Defined below.
 A unique name to identify this dictionary.
 
 <h4 class="pdoc-member-header" id="Servicev1Args-papertrails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L823">property <b>papertrails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L823">property <b>papertrails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>papertrails?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Papertrail'>Servicev1Papertrail</a>&gt;[]&gt;;</code></pre>
@@ -3137,7 +3145,7 @@ A Papertrail endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1Args-requestSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L827">property <b>requestSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L827">property <b>requestSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1RequestSetting'>Servicev1RequestSetting</a>&gt;[]&gt;;</code></pre>
@@ -3145,7 +3153,7 @@ Defined below.
 A set of Request modifiers. Defined below
 
 <h4 class="pdoc-member-header" id="Servicev1Args-responseObjects">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L831">property <b>responseObjects</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L831">property <b>responseObjects</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseObjects?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1ResponseObject'>Servicev1ResponseObject</a>&gt;[]&gt;;</code></pre>
@@ -3153,7 +3161,7 @@ A set of Request modifiers. Defined below
 The name of the response object used by the Web Application Firewall.
 
 <h4 class="pdoc-member-header" id="Servicev1Args-s3loggings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L836">property <b>s3loggings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L836">property <b>s3loggings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3loggings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1S3logging'>Servicev1S3logging</a>&gt;[]&gt;;</code></pre>
@@ -3162,7 +3170,7 @@ A set of S3 Buckets to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1Args-snippets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L840">property <b>snippets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L840">property <b>snippets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snippets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Snippet'>Servicev1Snippet</a>&gt;[]&gt;;</code></pre>
@@ -3170,7 +3178,7 @@ Defined below.
 A set of custom, "regular" (non-dynamic) VCL Snippet configuration blocks.  Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1Args-splunks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L845">property <b>splunks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L845">property <b>splunks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>splunks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Splunk'>Servicev1Splunk</a>&gt;[]&gt;;</code></pre>
@@ -3179,7 +3187,7 @@ A Splunk endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1Args-sumologics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L850">property <b>sumologics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L850">property <b>sumologics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sumologics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Sumologic'>Servicev1Sumologic</a>&gt;[]&gt;;</code></pre>
@@ -3188,7 +3196,7 @@ A Sumologic endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1Args-syslogs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L855">property <b>syslogs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L855">property <b>syslogs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>syslogs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Syslog'>Servicev1Syslog</a>&gt;[]&gt;;</code></pre>
@@ -3197,7 +3205,7 @@ A syslog endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1Args-vcls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L859">property <b>vcls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L859">property <b>vcls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vcls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Vcl'>Servicev1Vcl</a>&gt;[]&gt;;</code></pre>
@@ -3205,7 +3213,7 @@ Defined below.
 A set of custom VCL configuration blocks. See the [Fastly documentation](https://docs.fastly.com/vcl/custom-vcl/uploading-custom-vcl/) for more information on using custom VCL.
 
 <h4 class="pdoc-member-header" id="Servicev1Args-versionComment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L863">property <b>versionComment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L863">property <b>versionComment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versionComment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3213,7 +3221,7 @@ A set of custom VCL configuration blocks. See the [Fastly documentation](https:/
 Description field for the version.
 
 <h4 class="pdoc-member-header" id="Servicev1Args-waf">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L867">property <b>waf</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L867">property <b>waf</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waf?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Waf'>Servicev1Waf</a>&gt;;</code></pre>
@@ -3221,7 +3229,7 @@ Description field for the version.
 A WAF configuration block.  Defined below.
 
 <h3 class="pdoc-module-header" id="Servicev1State" data-link-title="Servicev1State">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L403">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L403">
         interface <strong>Servicev1State</strong>
     </a>
 </h3>
@@ -3231,7 +3239,7 @@ A WAF configuration block.  Defined below.
 Input properties used for looking up and filtering Servicev1 resources.
 
 <h4 class="pdoc-member-header" id="Servicev1State-acls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L407">property <b>acls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L407">property <b>acls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>acls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Acl'>Servicev1Acl</a>&gt;[]&gt;;</code></pre>
@@ -3239,7 +3247,7 @@ Input properties used for looking up and filtering Servicev1 resources.
 A set of ACL configuration blocks.  Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1State-activate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L411">property <b>activate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L411">property <b>activate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>activate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3247,7 +3255,7 @@ A set of ACL configuration blocks.  Defined below.
 Conditionally prevents the Service from being activated. The apply step will continue to create a new draft version but will not activate it if this is set to false. Default true.
 
 <h4 class="pdoc-member-header" id="Servicev1State-activeVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L415">property <b>activeVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L415">property <b>activeVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>activeVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3255,7 +3263,7 @@ Conditionally prevents the Service from being activated. The apply step will con
 The currently active version of your Fastly Service.
 
 <h4 class="pdoc-member-header" id="Servicev1State-backends">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L421">property <b>backends</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L421">property <b>backends</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backends?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Backend'>Servicev1Backend</a>&gt;[]&gt;;</code></pre>
@@ -3265,7 +3273,7 @@ Defined below. Backends must be defined in this argument, or defined in the
 `vcl` argument below
 
 <h4 class="pdoc-member-header" id="Servicev1State-bigqueryloggings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L426">property <b>bigqueryloggings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L426">property <b>bigqueryloggings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bigqueryloggings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Bigquerylogging'>Servicev1Bigquerylogging</a>&gt;[]&gt;;</code></pre>
@@ -3274,7 +3282,7 @@ A BigQuery endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1State-blobstorageloggings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L431">property <b>blobstorageloggings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L431">property <b>blobstorageloggings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>blobstorageloggings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Blobstoragelogging'>Servicev1Blobstoragelogging</a>&gt;[]&gt;;</code></pre>
@@ -3283,7 +3291,7 @@ An Azure Blob Storage endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1State-cacheSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L435">property <b>cacheSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L435">property <b>cacheSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cacheSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1CacheSetting'>Servicev1CacheSetting</a>&gt;[]&gt;;</code></pre>
@@ -3291,7 +3299,7 @@ Defined below.
 A set of Cache Settings, allowing you to override
 
 <h4 class="pdoc-member-header" id="Servicev1State-clonedVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L439">property <b>clonedVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L439">property <b>clonedVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clonedVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3299,7 +3307,7 @@ A set of Cache Settings, allowing you to override
 The latest cloned version by the provider. The value gets only set after running `pulumi up`.
 
 <h4 class="pdoc-member-header" id="Servicev1State-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L443">property <b>comment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L443">property <b>comment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>comment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3307,7 +3315,7 @@ The latest cloned version by the provider. The value gets only set after running
 An optional comment about the Director.
 
 <h4 class="pdoc-member-header" id="Servicev1State-conditions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L448">property <b>conditions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L448">property <b>conditions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>conditions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Condition'>Servicev1Condition</a>&gt;[]&gt;;</code></pre>
@@ -3316,7 +3324,7 @@ A set of conditions to add logic to any basic
 configuration object in this service. Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1State-defaultHost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L452">property <b>defaultHost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L452">property <b>defaultHost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultHost?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3324,7 +3332,7 @@ configuration object in this service. Defined below.
 Sets the host header.
 
 <h4 class="pdoc-member-header" id="Servicev1State-defaultTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L457">property <b>defaultTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L457">property <b>defaultTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3333,7 +3341,7 @@ The default Time-to-live (TTL) for
 requests.
 
 <h4 class="pdoc-member-header" id="Servicev1State-dictionaries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L461">property <b>dictionaries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L461">property <b>dictionaries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dictionaries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Dictionary'>Servicev1Dictionary</a>&gt;[]&gt;;</code></pre>
@@ -3341,7 +3349,7 @@ requests.
 A set of dictionaries that allow the storing of key values pair for use within VCL functions. Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1State-directors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L466">property <b>directors</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L466">property <b>directors</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>directors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Director'>Servicev1Director</a>&gt;[]&gt;;</code></pre>
@@ -3350,7 +3358,7 @@ A director to allow more control over balancing traffic over backends.
 when an item is not to be cached based on an above `condition`. Defined below
 
 <h4 class="pdoc-member-header" id="Servicev1State-domains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L470">property <b>domains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L470">property <b>domains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domains?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Domain'>Servicev1Domain</a>&gt;[]&gt;;</code></pre>
@@ -3358,7 +3366,7 @@ when an item is not to be cached based on an above `condition`. Defined below
 The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 
 <h4 class="pdoc-member-header" id="Servicev1State-dynamicsnippets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L474">property <b>dynamicsnippets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L474">property <b>dynamicsnippets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dynamicsnippets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Dynamicsnippet'>Servicev1Dynamicsnippet</a>&gt;[]&gt;;</code></pre>
@@ -3366,7 +3374,7 @@ The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces
 A set of custom, "dynamic" VCL Snippet configuration blocks.  Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1State-forceDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L479">property <b>forceDestroy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L479">property <b>forceDestroy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceDestroy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3375,7 +3383,7 @@ Services that are active cannot be destroyed. In
 order to destroy the Service, set `forceDestroy` to `true`. Default `false`.
 
 <h4 class="pdoc-member-header" id="Servicev1State-gcsloggings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L484">property <b>gcsloggings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L484">property <b>gcsloggings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gcsloggings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Gcslogging'>Servicev1Gcslogging</a>&gt;[]&gt;;</code></pre>
@@ -3384,7 +3392,7 @@ A gcs endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1State-gzips">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L489">property <b>gzips</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L489">property <b>gzips</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gzips?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Gzip'>Servicev1Gzip</a>&gt;[]&gt;;</code></pre>
@@ -3393,7 +3401,7 @@ A set of gzip rules to control automatic gzipping of
 content. Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1State-headers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L494">property <b>headers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L494">property <b>headers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>headers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Header'>Servicev1Header</a>&gt;[]&gt;;</code></pre>
@@ -3402,7 +3410,7 @@ A set of Headers to manipulate for each request. Defined
 below.
 
 <h4 class="pdoc-member-header" id="Servicev1State-healthchecks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L498">property <b>healthchecks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L498">property <b>healthchecks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthchecks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Healthcheck'>Servicev1Healthcheck</a>&gt;[]&gt;;</code></pre>
@@ -3410,7 +3418,7 @@ below.
 Name of a defined `healthcheck` to assign to this backend.
 
 <h4 class="pdoc-member-header" id="Servicev1State-httpsloggings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L503">property <b>httpsloggings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L503">property <b>httpsloggings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpsloggings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Httpslogging'>Servicev1Httpslogging</a>&gt;[]&gt;;</code></pre>
@@ -3419,7 +3427,7 @@ An HTTPS endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1State-logentries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L508">property <b>logentries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L508">property <b>logentries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logentries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Logentry'>Servicev1Logentry</a>&gt;[]&gt;;</code></pre>
@@ -3428,7 +3436,7 @@ A logentries endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1State-loggingCloudfiles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L513">property <b>loggingCloudfiles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L513">property <b>loggingCloudfiles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingCloudfiles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingCloudfile'>Servicev1LoggingCloudfile</a>&gt;[]&gt;;</code></pre>
@@ -3437,7 +3445,7 @@ A Rackspace Cloud Files endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1State-loggingDatadogs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L518">property <b>loggingDatadogs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L518">property <b>loggingDatadogs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingDatadogs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingDatadog'>Servicev1LoggingDatadog</a>&gt;[]&gt;;</code></pre>
@@ -3446,7 +3454,7 @@ A Datadog endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1State-loggingDigitaloceans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L523">property <b>loggingDigitaloceans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L523">property <b>loggingDigitaloceans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingDigitaloceans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingDigitalocean'>Servicev1LoggingDigitalocean</a>&gt;[]&gt;;</code></pre>
@@ -3455,7 +3463,7 @@ A DigitalOcean Spaces endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1State-loggingElasticsearches">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L528">property <b>loggingElasticsearches</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L528">property <b>loggingElasticsearches</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingElasticsearches?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingElasticsearch'>Servicev1LoggingElasticsearch</a>&gt;[]&gt;;</code></pre>
@@ -3464,7 +3472,7 @@ An Elasticsearch endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1State-loggingFtps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L533">property <b>loggingFtps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L533">property <b>loggingFtps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingFtps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingFtp'>Servicev1LoggingFtp</a>&gt;[]&gt;;</code></pre>
@@ -3473,7 +3481,7 @@ An FTP endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1State-loggingGooglepubsubs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L538">property <b>loggingGooglepubsubs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L538">property <b>loggingGooglepubsubs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingGooglepubsubs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingGooglepubsub'>Servicev1LoggingGooglepubsub</a>&gt;[]&gt;;</code></pre>
@@ -3482,7 +3490,7 @@ A Google Cloud Pub/Sub endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1State-loggingHeroku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L543">property <b>loggingHeroku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L543">property <b>loggingHeroku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingHeroku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingHeroku'>Servicev1LoggingHeroku</a>&gt;[]&gt;;</code></pre>
@@ -3491,7 +3499,7 @@ A Heroku endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1State-loggingHoneycombs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L548">property <b>loggingHoneycombs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L548">property <b>loggingHoneycombs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingHoneycombs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingHoneycomb'>Servicev1LoggingHoneycomb</a>&gt;[]&gt;;</code></pre>
@@ -3500,7 +3508,7 @@ A Honeycomb endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1State-loggingKafkas">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L553">property <b>loggingKafkas</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L553">property <b>loggingKafkas</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingKafkas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingKafka'>Servicev1LoggingKafka</a>&gt;[]&gt;;</code></pre>
@@ -3509,7 +3517,7 @@ A Kafka endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1State-loggingLogglies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L558">property <b>loggingLogglies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L558">property <b>loggingLogglies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingLogglies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingLoggly'>Servicev1LoggingLoggly</a>&gt;[]&gt;;</code></pre>
@@ -3518,7 +3526,7 @@ A Loggly endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1State-loggingLogshuttles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L563">property <b>loggingLogshuttles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L563">property <b>loggingLogshuttles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingLogshuttles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingLogshuttle'>Servicev1LoggingLogshuttle</a>&gt;[]&gt;;</code></pre>
@@ -3527,7 +3535,7 @@ A Log Shuttle endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1State-loggingNewrelics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L568">property <b>loggingNewrelics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L568">property <b>loggingNewrelics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingNewrelics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingNewrelic'>Servicev1LoggingNewrelic</a>&gt;[]&gt;;</code></pre>
@@ -3536,7 +3544,7 @@ A New Relic endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1State-loggingOpenstacks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L573">property <b>loggingOpenstacks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L573">property <b>loggingOpenstacks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingOpenstacks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingOpenstack'>Servicev1LoggingOpenstack</a>&gt;[]&gt;;</code></pre>
@@ -3545,7 +3553,7 @@ An OpenStack endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1State-loggingScalyrs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L578">property <b>loggingScalyrs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L578">property <b>loggingScalyrs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingScalyrs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingScalyr'>Servicev1LoggingScalyr</a>&gt;[]&gt;;</code></pre>
@@ -3554,7 +3562,7 @@ A Scalyr endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1State-loggingSftps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L583">property <b>loggingSftps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L583">property <b>loggingSftps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingSftps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingSftp'>Servicev1LoggingSftp</a>&gt;[]&gt;;</code></pre>
@@ -3563,7 +3571,7 @@ An SFTP endpoint to send streaming logs to.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1State-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L587">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L587">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3571,7 +3579,7 @@ Defined below.
 A unique name to identify this dictionary.
 
 <h4 class="pdoc-member-header" id="Servicev1State-papertrails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L592">property <b>papertrails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L592">property <b>papertrails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>papertrails?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Papertrail'>Servicev1Papertrail</a>&gt;[]&gt;;</code></pre>
@@ -3580,7 +3588,7 @@ A Papertrail endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1State-requestSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L596">property <b>requestSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L596">property <b>requestSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1RequestSetting'>Servicev1RequestSetting</a>&gt;[]&gt;;</code></pre>
@@ -3588,7 +3596,7 @@ Defined below.
 A set of Request modifiers. Defined below
 
 <h4 class="pdoc-member-header" id="Servicev1State-responseObjects">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L600">property <b>responseObjects</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L600">property <b>responseObjects</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseObjects?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1ResponseObject'>Servicev1ResponseObject</a>&gt;[]&gt;;</code></pre>
@@ -3596,7 +3604,7 @@ A set of Request modifiers. Defined below
 The name of the response object used by the Web Application Firewall.
 
 <h4 class="pdoc-member-header" id="Servicev1State-s3loggings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L605">property <b>s3loggings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L605">property <b>s3loggings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3loggings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1S3logging'>Servicev1S3logging</a>&gt;[]&gt;;</code></pre>
@@ -3605,7 +3613,7 @@ A set of S3 Buckets to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1State-snippets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L609">property <b>snippets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L609">property <b>snippets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snippets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Snippet'>Servicev1Snippet</a>&gt;[]&gt;;</code></pre>
@@ -3613,7 +3621,7 @@ Defined below.
 A set of custom, "regular" (non-dynamic) VCL Snippet configuration blocks.  Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1State-splunks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L614">property <b>splunks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L614">property <b>splunks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>splunks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Splunk'>Servicev1Splunk</a>&gt;[]&gt;;</code></pre>
@@ -3622,7 +3630,7 @@ A Splunk endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1State-sumologics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L619">property <b>sumologics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L619">property <b>sumologics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sumologics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Sumologic'>Servicev1Sumologic</a>&gt;[]&gt;;</code></pre>
@@ -3631,7 +3639,7 @@ A Sumologic endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1State-syslogs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L624">property <b>syslogs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L624">property <b>syslogs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>syslogs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Syslog'>Servicev1Syslog</a>&gt;[]&gt;;</code></pre>
@@ -3640,7 +3648,7 @@ A syslog endpoint to send streaming logs too.
 Defined below.
 
 <h4 class="pdoc-member-header" id="Servicev1State-vcls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L628">property <b>vcls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L628">property <b>vcls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vcls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Vcl'>Servicev1Vcl</a>&gt;[]&gt;;</code></pre>
@@ -3648,7 +3656,7 @@ Defined below.
 A set of custom VCL configuration blocks. See the [Fastly documentation](https://docs.fastly.com/vcl/custom-vcl/uploading-custom-vcl/) for more information on using custom VCL.
 
 <h4 class="pdoc-member-header" id="Servicev1State-versionComment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L632">property <b>versionComment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L632">property <b>versionComment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versionComment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3656,7 +3664,7 @@ A set of custom VCL configuration blocks. See the [Fastly documentation](https:/
 Description field for the version.
 
 <h4 class="pdoc-member-header" id="Servicev1State-waf">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/servicev1.ts#L636">property <b>waf</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/servicev1.ts#L636">property <b>waf</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waf?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Waf'>Servicev1Waf</a>&gt;;</code></pre>
@@ -3664,7 +3672,7 @@ Description field for the version.
 A WAF configuration block.  Defined below.
 
 <h3 class="pdoc-module-header" id="ServiceWafConfigurationArgs" data-link-title="ServiceWafConfigurationArgs">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L376">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L386">
         interface <strong>ServiceWafConfigurationArgs</strong>
     </a>
 </h3>
@@ -3674,7 +3682,7 @@ A WAF configuration block.  Defined below.
 The set of arguments for constructing a ServiceWafConfiguration resource.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationArgs-allowedHttpVersions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L380">property <b>allowedHttpVersions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L390">property <b>allowedHttpVersions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedHttpVersions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3682,7 +3690,7 @@ The set of arguments for constructing a ServiceWafConfiguration resource.
 Allowed HTTP versions.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationArgs-allowedMethods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L384">property <b>allowedMethods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L394">property <b>allowedMethods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedMethods?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3690,7 +3698,7 @@ Allowed HTTP versions.
 A space-separated list of HTTP method names.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationArgs-allowedRequestContentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L388">property <b>allowedRequestContentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L398">property <b>allowedRequestContentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedRequestContentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3698,7 +3706,7 @@ A space-separated list of HTTP method names.
 Allowed request content types.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationArgs-allowedRequestContentTypeCharset">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L392">property <b>allowedRequestContentTypeCharset</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L402">property <b>allowedRequestContentTypeCharset</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedRequestContentTypeCharset?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3706,7 +3714,7 @@ Allowed request content types.
 Allowed request content type charset.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationArgs-argLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L396">property <b>argLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L406">property <b>argLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>argLength?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3714,7 +3722,7 @@ Allowed request content type charset.
 The maximum number of arguments allowed.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationArgs-argNameLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L400">property <b>argNameLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L410">property <b>argNameLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>argNameLength?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3722,7 +3730,7 @@ The maximum number of arguments allowed.
 The maximum allowed argument name length.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationArgs-combinedFileSizes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L404">property <b>combinedFileSizes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L414">property <b>combinedFileSizes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>combinedFileSizes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3730,7 +3738,7 @@ The maximum allowed argument name length.
 The maximum allowed size of all files.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationArgs-criticalAnomalyScore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L408">property <b>criticalAnomalyScore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L418">property <b>criticalAnomalyScore</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>criticalAnomalyScore?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3738,7 +3746,7 @@ The maximum allowed size of all files.
 Score value to add for critical anomalies.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationArgs-crsValidateUtf8Encoding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L412">property <b>crsValidateUtf8Encoding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L422">property <b>crsValidateUtf8Encoding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>crsValidateUtf8Encoding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3746,7 +3754,7 @@ Score value to add for critical anomalies.
 CRS validate UTF8 encoding.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationArgs-errorAnomalyScore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L416">property <b>errorAnomalyScore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L426">property <b>errorAnomalyScore</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>errorAnomalyScore?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3754,7 +3762,7 @@ CRS validate UTF8 encoding.
 Score value to add for error anomalies.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationArgs-highRiskCountryCodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L420">property <b>highRiskCountryCodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L430">property <b>highRiskCountryCodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>highRiskCountryCodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3762,7 +3770,7 @@ Score value to add for error anomalies.
 A space-separated list of country codes in ISO 3166-1 (two-letter) format.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationArgs-httpViolationScoreThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L424">property <b>httpViolationScoreThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L434">property <b>httpViolationScoreThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpViolationScoreThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3770,7 +3778,7 @@ A space-separated list of country codes in ISO 3166-1 (two-letter) format.
 HTTP violation threshold.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationArgs-inboundAnomalyScoreThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L428">property <b>inboundAnomalyScoreThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L438">property <b>inboundAnomalyScoreThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inboundAnomalyScoreThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3778,7 +3786,7 @@ HTTP violation threshold.
 Inbound anomaly threshold.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationArgs-lfiScoreThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L432">property <b>lfiScoreThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L442">property <b>lfiScoreThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lfiScoreThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3786,7 +3794,7 @@ Inbound anomaly threshold.
 Local file inclusion attack threshold.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationArgs-maxFileSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L436">property <b>maxFileSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L446">property <b>maxFileSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxFileSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3794,7 +3802,7 @@ Local file inclusion attack threshold.
 The maximum allowed file size, in bytes.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationArgs-maxNumArgs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L440">property <b>maxNumArgs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L450">property <b>maxNumArgs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxNumArgs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3802,7 +3810,7 @@ The maximum allowed file size, in bytes.
 The maximum number of arguments allowed.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationArgs-noticeAnomalyScore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L444">property <b>noticeAnomalyScore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L454">property <b>noticeAnomalyScore</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>noticeAnomalyScore?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3810,7 +3818,7 @@ The maximum number of arguments allowed.
 Score value to add for notice anomalies.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationArgs-paranoiaLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L448">property <b>paranoiaLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L458">property <b>paranoiaLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>paranoiaLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3818,7 +3826,7 @@ Score value to add for notice anomalies.
 The configured paranoia level.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationArgs-phpInjectionScoreThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L452">property <b>phpInjectionScoreThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L462">property <b>phpInjectionScoreThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>phpInjectionScoreThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3826,7 +3834,7 @@ The configured paranoia level.
 PHP injection threshold.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationArgs-rceScoreThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L456">property <b>rceScoreThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L466">property <b>rceScoreThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rceScoreThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3834,7 +3842,7 @@ PHP injection threshold.
 Remote code execution threshold.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationArgs-restrictedExtensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L460">property <b>restrictedExtensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L470">property <b>restrictedExtensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>restrictedExtensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3842,7 +3850,7 @@ Remote code execution threshold.
 A space-separated list of allowed file extensions.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationArgs-restrictedHeaders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L464">property <b>restrictedHeaders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L474">property <b>restrictedHeaders</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>restrictedHeaders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3850,15 +3858,23 @@ A space-separated list of allowed file extensions.
 A space-separated list of allowed header names.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationArgs-rfiScoreThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L468">property <b>rfiScoreThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L478">property <b>rfiScoreThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rfiScoreThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 
 Remote file inclusion attack threshold.
 
+<h4 class="pdoc-member-header" id="ServiceWafConfigurationArgs-ruleExclusions">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L482">property <b>ruleExclusions</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>ruleExclusions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceWafConfigurationRuleExclusion'>ServiceWafConfigurationRuleExclusion</a>&gt;[]&gt;;</code></pre>
+
+The Web Application Firewall's rule exclusions.
+
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationArgs-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L472">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L486">property <b>rules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceWafConfigurationRule'>ServiceWafConfigurationRule</a>&gt;[]&gt;;</code></pre>
@@ -3866,7 +3882,7 @@ Remote file inclusion attack threshold.
 The Web Application Firewall's active rules.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationArgs-sessionFixationScoreThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L476">property <b>sessionFixationScoreThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L490">property <b>sessionFixationScoreThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sessionFixationScoreThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3874,7 +3890,7 @@ The Web Application Firewall's active rules.
 Session fixation attack threshold.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationArgs-sqlInjectionScoreThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L480">property <b>sqlInjectionScoreThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L494">property <b>sqlInjectionScoreThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sqlInjectionScoreThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3882,7 +3898,7 @@ Session fixation attack threshold.
 SQL injection attack threshold.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationArgs-totalArgLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L484">property <b>totalArgLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L498">property <b>totalArgLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>totalArgLength?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3890,7 +3906,7 @@ SQL injection attack threshold.
 The maximum size of argument names and values.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationArgs-wafId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L488">property <b>wafId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L502">property <b>wafId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>wafId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3898,7 +3914,7 @@ The maximum size of argument names and values.
 The ID of the Web Application Firewall that the configuration belongs to.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationArgs-warningAnomalyScore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L492">property <b>warningAnomalyScore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L506">property <b>warningAnomalyScore</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>warningAnomalyScore?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3906,7 +3922,7 @@ The ID of the Web Application Firewall that the configuration belongs to.
 Score value to add for warning anomalies.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationArgs-xssScoreThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L496">property <b>xssScoreThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L510">property <b>xssScoreThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>xssScoreThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3914,7 +3930,7 @@ Score value to add for warning anomalies.
 XSS attack threshold.
 
 <h3 class="pdoc-module-header" id="ServiceWafConfigurationState" data-link-title="ServiceWafConfigurationState">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L250">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L256">
         interface <strong>ServiceWafConfigurationState</strong>
     </a>
 </h3>
@@ -3924,7 +3940,7 @@ XSS attack threshold.
 Input properties used for looking up and filtering ServiceWafConfiguration resources.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationState-allowedHttpVersions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L254">property <b>allowedHttpVersions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L260">property <b>allowedHttpVersions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedHttpVersions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3932,7 +3948,7 @@ Input properties used for looking up and filtering ServiceWafConfiguration resou
 Allowed HTTP versions.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationState-allowedMethods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L258">property <b>allowedMethods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L264">property <b>allowedMethods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedMethods?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3940,7 +3956,7 @@ Allowed HTTP versions.
 A space-separated list of HTTP method names.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationState-allowedRequestContentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L262">property <b>allowedRequestContentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L268">property <b>allowedRequestContentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedRequestContentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3948,7 +3964,7 @@ A space-separated list of HTTP method names.
 Allowed request content types.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationState-allowedRequestContentTypeCharset">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L266">property <b>allowedRequestContentTypeCharset</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L272">property <b>allowedRequestContentTypeCharset</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedRequestContentTypeCharset?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3956,7 +3972,7 @@ Allowed request content types.
 Allowed request content type charset.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationState-argLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L270">property <b>argLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L276">property <b>argLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>argLength?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3964,7 +3980,7 @@ Allowed request content type charset.
 The maximum number of arguments allowed.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationState-argNameLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L274">property <b>argNameLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L280">property <b>argNameLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>argNameLength?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3972,7 +3988,7 @@ The maximum number of arguments allowed.
 The maximum allowed argument name length.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationState-combinedFileSizes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L278">property <b>combinedFileSizes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L284">property <b>combinedFileSizes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>combinedFileSizes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3980,7 +3996,7 @@ The maximum allowed argument name length.
 The maximum allowed size of all files.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationState-criticalAnomalyScore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L282">property <b>criticalAnomalyScore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L288">property <b>criticalAnomalyScore</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>criticalAnomalyScore?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3988,7 +4004,7 @@ The maximum allowed size of all files.
 Score value to add for critical anomalies.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationState-crsValidateUtf8Encoding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L286">property <b>crsValidateUtf8Encoding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L292">property <b>crsValidateUtf8Encoding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>crsValidateUtf8Encoding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3996,7 +4012,7 @@ Score value to add for critical anomalies.
 CRS validate UTF8 encoding.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationState-errorAnomalyScore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L290">property <b>errorAnomalyScore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L296">property <b>errorAnomalyScore</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>errorAnomalyScore?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4004,7 +4020,7 @@ CRS validate UTF8 encoding.
 Score value to add for error anomalies.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationState-highRiskCountryCodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L294">property <b>highRiskCountryCodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L300">property <b>highRiskCountryCodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>highRiskCountryCodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4012,7 +4028,7 @@ Score value to add for error anomalies.
 A space-separated list of country codes in ISO 3166-1 (two-letter) format.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationState-httpViolationScoreThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L298">property <b>httpViolationScoreThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L304">property <b>httpViolationScoreThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpViolationScoreThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4020,7 +4036,7 @@ A space-separated list of country codes in ISO 3166-1 (two-letter) format.
 HTTP violation threshold.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationState-inboundAnomalyScoreThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L302">property <b>inboundAnomalyScoreThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L308">property <b>inboundAnomalyScoreThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inboundAnomalyScoreThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4028,7 +4044,7 @@ HTTP violation threshold.
 Inbound anomaly threshold.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationState-lfiScoreThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L306">property <b>lfiScoreThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L312">property <b>lfiScoreThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lfiScoreThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4036,7 +4052,7 @@ Inbound anomaly threshold.
 Local file inclusion attack threshold.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationState-maxFileSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L310">property <b>maxFileSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L316">property <b>maxFileSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxFileSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4044,7 +4060,7 @@ Local file inclusion attack threshold.
 The maximum allowed file size, in bytes.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationState-maxNumArgs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L314">property <b>maxNumArgs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L320">property <b>maxNumArgs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxNumArgs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4052,7 +4068,7 @@ The maximum allowed file size, in bytes.
 The maximum number of arguments allowed.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationState-noticeAnomalyScore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L318">property <b>noticeAnomalyScore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L324">property <b>noticeAnomalyScore</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>noticeAnomalyScore?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4060,7 +4076,7 @@ The maximum number of arguments allowed.
 Score value to add for notice anomalies.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationState-paranoiaLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L322">property <b>paranoiaLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L328">property <b>paranoiaLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>paranoiaLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4068,7 +4084,7 @@ Score value to add for notice anomalies.
 The configured paranoia level.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationState-phpInjectionScoreThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L326">property <b>phpInjectionScoreThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L332">property <b>phpInjectionScoreThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>phpInjectionScoreThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4076,7 +4092,7 @@ The configured paranoia level.
 PHP injection threshold.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationState-rceScoreThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L330">property <b>rceScoreThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L336">property <b>rceScoreThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rceScoreThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4084,7 +4100,7 @@ PHP injection threshold.
 Remote code execution threshold.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationState-restrictedExtensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L334">property <b>restrictedExtensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L340">property <b>restrictedExtensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>restrictedExtensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4092,7 +4108,7 @@ Remote code execution threshold.
 A space-separated list of allowed file extensions.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationState-restrictedHeaders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L338">property <b>restrictedHeaders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L344">property <b>restrictedHeaders</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>restrictedHeaders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4100,15 +4116,23 @@ A space-separated list of allowed file extensions.
 A space-separated list of allowed header names.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationState-rfiScoreThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L342">property <b>rfiScoreThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L348">property <b>rfiScoreThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rfiScoreThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 
 Remote file inclusion attack threshold.
 
+<h4 class="pdoc-member-header" id="ServiceWafConfigurationState-ruleExclusions">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L352">property <b>ruleExclusions</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>ruleExclusions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceWafConfigurationRuleExclusion'>ServiceWafConfigurationRuleExclusion</a>&gt;[]&gt;;</code></pre>
+
+The Web Application Firewall's rule exclusions.
+
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationState-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L346">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L356">property <b>rules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#ServiceWafConfigurationRule'>ServiceWafConfigurationRule</a>&gt;[]&gt;;</code></pre>
@@ -4116,7 +4140,7 @@ Remote file inclusion attack threshold.
 The Web Application Firewall's active rules.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationState-sessionFixationScoreThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L350">property <b>sessionFixationScoreThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L360">property <b>sessionFixationScoreThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sessionFixationScoreThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4124,7 +4148,7 @@ The Web Application Firewall's active rules.
 Session fixation attack threshold.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationState-sqlInjectionScoreThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L354">property <b>sqlInjectionScoreThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L364">property <b>sqlInjectionScoreThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sqlInjectionScoreThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4132,7 +4156,7 @@ Session fixation attack threshold.
 SQL injection attack threshold.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationState-totalArgLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L358">property <b>totalArgLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L368">property <b>totalArgLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>totalArgLength?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4140,7 +4164,7 @@ SQL injection attack threshold.
 The maximum size of argument names and values.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationState-wafId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L362">property <b>wafId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L372">property <b>wafId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>wafId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4148,7 +4172,7 @@ The maximum size of argument names and values.
 The ID of the Web Application Firewall that the configuration belongs to.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationState-warningAnomalyScore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L366">property <b>warningAnomalyScore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L376">property <b>warningAnomalyScore</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>warningAnomalyScore?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4156,7 +4180,7 @@ The ID of the Web Application Firewall that the configuration belongs to.
 Score value to add for warning anomalies.
 
 <h4 class="pdoc-member-header" id="ServiceWafConfigurationState-xssScoreThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/serviceWafConfiguration.ts#L370">property <b>xssScoreThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/serviceWafConfiguration.ts#L380">property <b>xssScoreThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>xssScoreThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4164,7 +4188,7 @@ Score value to add for warning anomalies.
 XSS attack threshold.
 
 <h3 class="pdoc-module-header" id="Userv1Args" data-link-title="Userv1Args">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/userv1.ts#L120">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/userv1.ts#L120">
         interface <strong>Userv1Args</strong>
     </a>
 </h3>
@@ -4174,7 +4198,7 @@ XSS attack threshold.
 The set of arguments for constructing a Userv1 resource.
 
 <h4 class="pdoc-member-header" id="Userv1Args-login">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/userv1.ts#L124">property <b>login</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/userv1.ts#L124">property <b>login</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>login: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4182,7 +4206,7 @@ The set of arguments for constructing a Userv1 resource.
 The email address, which is the login name, of the User.
 
 <h4 class="pdoc-member-header" id="Userv1Args-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/userv1.ts#L128">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/userv1.ts#L128">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4190,7 +4214,7 @@ The email address, which is the login name, of the User.
 The real life name of the user.
 
 <h4 class="pdoc-member-header" id="Userv1Args-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/userv1.ts#L132">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/userv1.ts#L132">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4198,7 +4222,7 @@ The real life name of the user.
 The role of this user. Can be `user` (the default), `billing`, `engineer`, or `superuser`. For detailed information on the abilities granted to each role, see [Fastly's Documentation on User roles](https://docs.fastly.com/en/guides/configuring-user-roles-and-permissions#user-roles-and-what-they-can-do).
 
 <h3 class="pdoc-module-header" id="Userv1State" data-link-title="Userv1State">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/userv1.ts#L102">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/userv1.ts#L102">
         interface <strong>Userv1State</strong>
     </a>
 </h3>
@@ -4208,7 +4232,7 @@ The role of this user. Can be `user` (the default), `billing`, `engineer`, or `s
 Input properties used for looking up and filtering Userv1 resources.
 
 <h4 class="pdoc-member-header" id="Userv1State-login">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/userv1.ts#L106">property <b>login</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/userv1.ts#L106">property <b>login</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>login?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4216,7 +4240,7 @@ Input properties used for looking up and filtering Userv1 resources.
 The email address, which is the login name, of the User.
 
 <h4 class="pdoc-member-header" id="Userv1State-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/userv1.ts#L110">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/userv1.ts#L110">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4224,7 +4248,7 @@ The email address, which is the login name, of the User.
 The real life name of the user.
 
 <h4 class="pdoc-member-header" id="Userv1State-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/230d1c659111d065aa3381645c5d3684f4799cd7/sdk/nodejs/userv1.ts#L114">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/6e211759fa3c748e84d62a1ab5be9dd6a99eb665/sdk/nodejs/userv1.ts#L114">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
