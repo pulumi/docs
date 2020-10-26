@@ -13,11 +13,133 @@ meta_desc: "Explore the SecurityFirewall resource of the CloudAMQP package, incl
 This resource allows you to configure and manage firewall rules for the CloudAMQP instance. Beware that all rules need to be present, since all older configurations will be overwritten.
 
 Only available for dedicated subscription plans.
-
 ## Depedency
 
 This resource depends on CloudAMQP instance identifier, `cloudamqp_instance.instance.id`.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using CloudAmqp = Pulumi.CloudAmqp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var firewallSettings = new CloudAmqp.SecurityFirewall("firewallSettings", new CloudAmqp.SecurityFirewallArgs
+        {
+            InstanceId = cloudamqp_instance.Instance.Id,
+            Rules = 
+            {
+                new CloudAmqp.Inputs.SecurityFirewallRuleArgs
+                {
+                    Ip = "192.168.0.0/24",
+                    Ports = 
+                    {
+                        4567,
+                        4568,
+                    },
+                    Services = 
+                    {
+                        "AMQP",
+                        "AMQPS",
+                    },
+                },
+                new CloudAmqp.Inputs.SecurityFirewallRuleArgs
+                {
+                    Ip = "10.56.72.0/24",
+                    Ports = {},
+                    Services = 
+                    {
+                        "AMQP",
+                        "AMQPS",
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_cloudamqp as cloudamqp
+
+firewall_settings = cloudamqp.SecurityFirewall("firewallSettings",
+    instance_id=cloudamqp_instance["instance"]["id"],
+    rules=[
+        cloudamqp.SecurityFirewallRuleArgs(
+            ip="192.168.0.0/24",
+            ports=[
+                4567,
+                4568,
+            ],
+            services=[
+                "AMQP",
+                "AMQPS",
+            ],
+        ),
+        cloudamqp.SecurityFirewallRuleArgs(
+            ip="10.56.72.0/24",
+            ports=[],
+            services=[
+                "AMQP",
+                "AMQPS",
+            ],
+        ),
+    ])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as cloudamqp from "@pulumi/cloudamqp";
+
+const firewallSettings = new cloudamqp.SecurityFirewall("firewallSettings", {
+    instanceId: cloudamqp_instance.instance.id,
+    rules: [
+        {
+            ip: "192.168.0.0/24",
+            ports: [
+                4567,
+                4568,
+            ],
+            services: [
+                "AMQP",
+                "AMQPS",
+            ],
+        },
+        {
+            ip: "10.56.72.0/24",
+            ports: [],
+            services: [
+                "AMQP",
+                "AMQPS",
+            ],
+        },
+    ],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SecurityFirewall Resource {#create}
@@ -29,7 +151,7 @@ This resource depends on CloudAMQP instance identifier, `cloudamqp_instance.inst
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudamqp/#pulumi_cloudamqp.SecurityFirewall">SecurityFirewall</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[SecurityFirewallRuleArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudamqp/#pulumi_cloudamqp.SecurityFirewall">SecurityFirewall</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[SecurityFirewallRuleArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -294,7 +416,7 @@ The SecurityFirewall resource accepts the following [input]({{< relref "/docs/in
 <a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The CloudAMQP instance ID.
 {{% /md %}}</dd>
@@ -305,7 +427,7 @@ The SecurityFirewall resource accepts the following [input]({{< relref "/docs/in
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityfirewallrule">List[Security<wbr>Firewall<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#securityfirewallrule">Sequence[Security<wbr>Firewall<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of rules, minimum of 1 needs to be configured. Each `rules` block consists of the field documented below.
 {{% /md %}}</dd>
@@ -409,7 +531,7 @@ Get an existing SecurityFirewall resource's state with the given name, ID, and o
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[SecurityFirewallRuleArgs]]</span> = None<span class="p">) -&gt;</span> SecurityFirewall</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[SecurityFirewallRuleArgs]]</span> = None<span class="p">) -&gt;</span> SecurityFirewall</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -616,7 +738,7 @@ The following state arguments are supported:
 <a href="#state_instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The CloudAMQP instance ID.
 {{% /md %}}</dd>
@@ -627,7 +749,7 @@ The following state arguments are supported:
 <a href="#state_rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityfirewallrule">List[Security<wbr>Firewall<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#securityfirewallrule">Sequence[Security<wbr>Firewall<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of rules, minimum of 1 needs to be configured. Each `rules` block consists of the field documented below.
 {{% /md %}}</dd>
@@ -846,7 +968,7 @@ The following state arguments are supported:
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}Custom ports to be opened
 {{% /md %}}</dd>
@@ -857,7 +979,7 @@ The following state arguments are supported:
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Pre-defined service ports
 {{% /md %}}</dd>
