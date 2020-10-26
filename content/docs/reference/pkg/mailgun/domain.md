@@ -720,7 +720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiving_records_python" style="color: inherit; text-decoration: inherit;">receiving_<wbr>records</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainreceivingrecord">List[Domain<wbr>Receiving<wbr>Record]</a></span>
+        <span class="property-type"><a href="#domainreceivingrecord">Sequence[Domain<wbr>Receiving<wbr>Record]</a></span>
     </dt>
     <dd>{{% md %}}A list of DNS records for receiving validation.
 {{% /md %}}</dd>
@@ -731,7 +731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sending_records_python" style="color: inherit; text-decoration: inherit;">sending_<wbr>records</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainsendingrecord">List[Domain<wbr>Sending<wbr>Record]</a></span>
+        <span class="property-type"><a href="#domainsendingrecord">Sequence[Domain<wbr>Sending<wbr>Record]</a></span>
     </dt>
     <dd>{{% md %}}A list of DNS records for sending validation.
 {{% /md %}}</dd>
@@ -767,7 +767,7 @@ Get an existing Domain resource's state with the given name, ID, and optional ex
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">receiving_records</span><span class="p">:</span> <span class="nx">Optional[List[DomainReceivingRecordArgs]]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sending_records</span><span class="p">:</span> <span class="nx">Optional[List[DomainSendingRecordArgs]]</span> = None<span class="p">, </span><span class="nx">smtp_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">smtp_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spam_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wildcard</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Domain</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">receiving_records</span><span class="p">:</span> <span class="nx">Optional[Sequence[DomainReceivingRecordArgs]]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sending_records</span><span class="p">:</span> <span class="nx">Optional[Sequence[DomainSendingRecordArgs]]</span> = None<span class="p">, </span><span class="nx">smtp_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">smtp_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spam_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wildcard</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Domain</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1192,7 +1192,7 @@ the domain will accept email for sub-domains.
 <a href="#state_receiving_records_python" style="color: inherit; text-decoration: inherit;">receiving_<wbr>records</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainreceivingrecord">List[Domain<wbr>Receiving<wbr>Record<wbr>Args]</a></span>
+        <span class="property-type"><a href="#domainreceivingrecord">Sequence[Domain<wbr>Receiving<wbr>Record<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of DNS records for receiving validation.
 {{% /md %}}</dd>
@@ -1214,7 +1214,7 @@ the domain will accept email for sub-domains.
 <a href="#state_sending_records_python" style="color: inherit; text-decoration: inherit;">sending_<wbr>records</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainsendingrecord">List[Domain<wbr>Sending<wbr>Record<wbr>Args]</a></span>
+        <span class="property-type"><a href="#domainsendingrecord">Sequence[Domain<wbr>Sending<wbr>Record<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of DNS records for sending validation.
 {{% /md %}}</dd>
