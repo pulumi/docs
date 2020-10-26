@@ -480,7 +480,7 @@ The following output properties are available:
 <a href="#domains_python" style="color: inherit; text-decoration: inherit;">domains</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdomainsdomain">List[Get<wbr>Domains<wbr>Domain]</a></span>
+        <span class="property-type"><a href="#getdomainsdomain">Sequence[Get<wbr>Domains<wbr>Domain]</a></span>
     </dt>
     <dd>{{% md %}}One or more `domain` blocks as defined below.
 {{% /md %}}</dd>
