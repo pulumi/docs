@@ -107,7 +107,7 @@ export const azureAdObjectId = example.then(example => example.id);
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_application(</span><span class="nx">application_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oauth2_permissions</span><span class="p">:</span> <span class="nx">Optional[List[GetApplicationOauth2PermissionArgs]]</span> = None<span class="p">, </span><span class="nx">object_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optional_claims</span><span class="p">:</span> <span class="nx">Optional[GetApplicationOptionalClaimsArgs]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetApplicationResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_application(</span><span class="nx">application_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oauth2_permissions</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetApplicationOauth2PermissionArgs]]</span> = None<span class="p">, </span><span class="nx">object_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optional_claims</span><span class="p">:</span> <span class="nx">Optional[GetApplicationOptionalClaimsArgs]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetApplicationResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -348,7 +348,7 @@ The following arguments are supported:
 <a href="#oauth2_permissions_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>permissions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getapplicationoauth2permission">List[Get<wbr>Application<wbr>Oauth2Permission<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getapplicationoauth2permission">Sequence[Get<wbr>Application<wbr>Oauth2Permission<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a `oauth2_permission` block as documented below.
 {{% /md %}}</dd>
@@ -980,7 +980,7 @@ The following output properties are available:
 <a href="#app_roles_python" style="color: inherit; text-decoration: inherit;">app_<wbr>roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getapplicationapprole">List[Get<wbr>Application<wbr>App<wbr>Role]</a></span>
+        <span class="property-type"><a href="#getapplicationapprole">Sequence[Get<wbr>Application<wbr>App<wbr>Role]</a></span>
     </dt>
     <dd>{{% md %}}A collection of `app_role` blocks as documented below. For more information https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles
 {{% /md %}}</dd>
@@ -1045,7 +1045,7 @@ The following output properties are available:
 <a href="#identifier_uris_python" style="color: inherit; text-decoration: inherit;">identifier_<wbr>uris</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of user-defined URI(s) that uniquely identify a Web application within it's Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
 {{% /md %}}</dd>
@@ -1089,7 +1089,7 @@ The following output properties are available:
 <a href="#oauth2_permissions_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>permissions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getapplicationoauth2permission">List[Get<wbr>Application<wbr>Oauth2Permission]</a></span>
+        <span class="property-type"><a href="#getapplicationoauth2permission">Sequence[Get<wbr>Application<wbr>Oauth2Permission]</a></span>
     </dt>
     <dd>{{% md %}}A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a `oauth2_permission` block as documented below.
 {{% /md %}}</dd>
@@ -1111,7 +1111,7 @@ The following output properties are available:
 <a href="#owners_python" style="color: inherit; text-decoration: inherit;">owners</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of User Object IDs that are assigned ownership of the application registration.
 {{% /md %}}</dd>
@@ -1122,7 +1122,7 @@ The following output properties are available:
 <a href="#reply_urls_python" style="color: inherit; text-decoration: inherit;">reply_<wbr>urls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of URLs that user tokens are sent to for sign in, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to.
 {{% /md %}}</dd>
@@ -1133,7 +1133,7 @@ The following output properties are available:
 <a href="#required_resource_accesses_python" style="color: inherit; text-decoration: inherit;">required_<wbr>resource_<wbr>accesses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getapplicationrequiredresourceaccess">List[Get<wbr>Application<wbr>Required<wbr>Resource<wbr>Access]</a></span>
+        <span class="property-type"><a href="#getapplicationrequiredresourceaccess">Sequence[Get<wbr>Application<wbr>Required<wbr>Resource<wbr>Access]</a></span>
     </dt>
     <dd>{{% md %}}A collection of `required_resource_access` blocks as documented below.
 {{% /md %}}</dd>
@@ -1416,7 +1416,7 @@ The following output properties are available:
 <a href="#allowed_member_types_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>member_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether this app role definition can be assigned to users and groups, or to other applications (that are accessing this application in daemon service scenarios). Possible values are: `User` and `Application`, or both.
 {{% /md %}}</dd>
@@ -1986,7 +1986,7 @@ The following output properties are available:
 <a href="#access_tokens_python" style="color: inherit; text-decoration: inherit;">access_<wbr>tokens</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getapplicationoptionalclaimsaccesstoken">List[Get<wbr>Application<wbr>Optional<wbr>Claims<wbr>Access<wbr>Token<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getapplicationoptionalclaimsaccesstoken">Sequence[Get<wbr>Application<wbr>Optional<wbr>Claims<wbr>Access<wbr>Token<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1996,7 +1996,7 @@ The following output properties are available:
 <a href="#id_tokens_python" style="color: inherit; text-decoration: inherit;">id_<wbr>tokens</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getapplicationoptionalclaimsidtoken">List[Get<wbr>Application<wbr>Optional<wbr>Claims<wbr>Id<wbr>Token<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getapplicationoptionalclaimsidtoken">Sequence[Get<wbr>Application<wbr>Optional<wbr>Claims<wbr>Id<wbr>Token<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2195,7 +2195,7 @@ The following output properties are available:
 <a href="#additional_properties_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of Additional Properties of the claim. If a property exists in this list, it modifies the behaviour of the optional claim.
 {{% /md %}}</dd>
@@ -2417,7 +2417,7 @@ The following output properties are available:
 <a href="#additional_properties_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of Additional Properties of the claim. If a property exists in this list, it modifies the behaviour of the optional claim.
 {{% /md %}}</dd>
@@ -2562,7 +2562,7 @@ The following output properties are available:
 <a href="#resource_accesses_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>accesses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getapplicationrequiredresourceaccessresourceaccess">List[Get<wbr>Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Resource<wbr>Access<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getapplicationrequiredresourceaccessresourceaccess">Sequence[Get<wbr>Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Resource<wbr>Access<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of `resource_access` blocks as documented below
 {{% /md %}}</dd>

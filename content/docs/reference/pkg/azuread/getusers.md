@@ -113,7 +113,7 @@ const users = pulumi.output(azuread.getUsers({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_users(</span><span class="nx">ignore_missing</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">mail_nicknames</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">object_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">user_principal_names</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetUsersResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_users(</span><span class="nx">ignore_missing</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">mail_nicknames</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">object_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">user_principal_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetUsersResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -308,7 +308,7 @@ The following arguments are supported:
 <a href="#mail_nicknames_python" style="color: inherit; text-decoration: inherit;">mail_<wbr>nicknames</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The email aliases of the Azure AD Users.
 {{% /md %}}</dd>
@@ -319,7 +319,7 @@ The following arguments are supported:
 <a href="#object_ids_python" style="color: inherit; text-decoration: inherit;">object_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The Object IDs of the Azure AD Users.
 {{% /md %}}</dd>
@@ -330,7 +330,7 @@ The following arguments are supported:
 <a href="#user_principal_names_python" style="color: inherit; text-decoration: inherit;">user_<wbr>principal_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The User Principal Names of the Azure AD Users.
 {{% /md %}}</dd>
@@ -588,7 +588,7 @@ The following output properties are available:
 <a href="#mail_nicknames_python" style="color: inherit; text-decoration: inherit;">mail_<wbr>nicknames</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The email aliases of the Azure AD Users.
 {{% /md %}}</dd>
@@ -599,7 +599,7 @@ The following output properties are available:
 <a href="#object_ids_python" style="color: inherit; text-decoration: inherit;">object_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The Object IDs of the Azure AD Users.
 {{% /md %}}</dd>
@@ -610,7 +610,7 @@ The following output properties are available:
 <a href="#user_principal_names_python" style="color: inherit; text-decoration: inherit;">user_<wbr>principal_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The User Principal Names of the Azure AD Users.
 {{% /md %}}</dd>
@@ -621,7 +621,7 @@ The following output properties are available:
 <a href="#users_python" style="color: inherit; text-decoration: inherit;">users</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusersuser">List[Get<wbr>Users<wbr>User]</a></span>
+        <span class="property-type"><a href="#getusersuser">Sequence[Get<wbr>Users<wbr>User]</a></span>
     </dt>
     <dd>{{% md %}}An Array of Azure AD Users. Each `user` object consists of the fields documented below.
 {{% /md %}}</dd>

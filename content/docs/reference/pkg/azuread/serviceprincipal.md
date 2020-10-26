@@ -165,7 +165,7 @@ const exampleServicePrincipal = new azuread.ServicePrincipal("exampleServicePrin
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azuread/#pulumi_azuread.ServicePrincipal">ServicePrincipal</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_role_assignment_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">application_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oauth2_permissions</span><span class="p">:</span> <span class="nx">Optional[List[ServicePrincipalOauth2PermissionArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azuread/#pulumi_azuread.ServicePrincipal">ServicePrincipal</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_role_assignment_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">application_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oauth2_permissions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServicePrincipalOauth2PermissionArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -518,7 +518,7 @@ The ServicePrincipal resource accepts the following [input]({{< relref "/docs/in
 <a href="#oauth2_permissions_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>permissions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprincipaloauth2permission">List[Service<wbr>Principal<wbr>Oauth2Permission<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceprincipaloauth2permission">Sequence[Service<wbr>Principal<wbr>Oauth2Permission<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of OAuth 2.0 permissions exposed by the associated application. Each permission is covered by a `oauth2_permission` block as documented below.
 {{% /md %}}</dd>
@@ -529,7 +529,7 @@ The ServicePrincipal resource accepts the following [input]({{< relref "/docs/in
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of tags to apply to the Service Principal.
 {{% /md %}}</dd>
@@ -721,7 +721,7 @@ Get an existing ServicePrincipal resource's state with the given name, ID, and o
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_role_assignment_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">application_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oauth2_permissions</span><span class="p">:</span> <span class="nx">Optional[List[ServicePrincipalOauth2PermissionArgs]]</span> = None<span class="p">, </span><span class="nx">object_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> ServicePrincipal</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_role_assignment_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">application_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oauth2_permissions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServicePrincipalOauth2PermissionArgs]]</span> = None<span class="p">, </span><span class="nx">object_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> ServicePrincipal</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1093,7 +1093,7 @@ The following state arguments are supported:
 <a href="#state_oauth2_permissions_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>permissions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprincipaloauth2permission">List[Service<wbr>Principal<wbr>Oauth2Permission<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceprincipaloauth2permission">Sequence[Service<wbr>Principal<wbr>Oauth2Permission<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of OAuth 2.0 permissions exposed by the associated application. Each permission is covered by a `oauth2_permission` block as documented below.
 {{% /md %}}</dd>
@@ -1115,7 +1115,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of tags to apply to the Service Principal.
 {{% /md %}}</dd>
