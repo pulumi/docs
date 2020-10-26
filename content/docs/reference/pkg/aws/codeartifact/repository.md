@@ -231,6 +231,111 @@ const test = new aws.codeartifact.Repository("test", {
 
 {{% /example %}}
 
+### With External Connection
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var upstream = new Aws.CodeArtifact.Repository("upstream", new Aws.CodeArtifact.RepositoryArgs
+        {
+            Repository = "upstream",
+            Domain = aws_codeartifact_domain.Test.Domain,
+        });
+        var test = new Aws.CodeArtifact.Repository("test", new Aws.CodeArtifact.RepositoryArgs
+        {
+            Repository = "example",
+            Domain = aws_codeartifact_domain.Example.Domain,
+            ExternalConnections = new Aws.CodeArtifact.Inputs.RepositoryExternalConnectionsArgs
+            {
+                ExternalConnectionName = "public:npmjs",
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codeartifact"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := codeartifact.NewRepository(ctx, "upstream", &codeartifact.RepositoryArgs{
+			Repository: pulumi.String("upstream"),
+			Domain:     pulumi.Any(aws_codeartifact_domain.Test.Domain),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = codeartifact.NewRepository(ctx, "test", &codeartifact.RepositoryArgs{
+			Repository: pulumi.String("example"),
+			Domain:     pulumi.Any(aws_codeartifact_domain.Example.Domain),
+			ExternalConnections: &codeartifact.RepositoryExternalConnectionsArgs{
+				ExternalConnectionName: pulumi.String("public:npmjs"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+upstream = aws.codeartifact.Repository("upstream",
+    repository="upstream",
+    domain=aws_codeartifact_domain["test"]["domain"])
+test = aws.codeartifact.Repository("test",
+    repository="example",
+    domain=aws_codeartifact_domain["example"]["domain"],
+    external_connections=aws.codeartifact.RepositoryExternalConnectionsArgs(
+        external_connection_name="public:npmjs",
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const upstream = new aws.codeartifact.Repository("upstream", {
+    repository: "upstream",
+    domain: aws_codeartifact_domain.test.domain,
+});
+const test = new aws.codeartifact.Repository("test", {
+    repository: "example",
+    domain: aws_codeartifact_domain.example.domain,
+    externalConnections: {
+        externalConnectionName: "public:npmjs",
+    },
+});
+```
+
+{{% /example %}}
+
 {{% /examples %}}
 
 
@@ -243,7 +348,7 @@ const test = new aws.codeartifact.Repository("test", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/codeartifact/#pulumi_aws.codeartifact.Repository">Repository</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">repository</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">upstreams</span><span class="p">:</span> <span class="nx">Optional[Sequence[RepositoryUpstreamArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/codeartifact/#pulumi_aws.codeartifact.Repository">Repository</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_connections</span><span class="p">:</span> <span class="nx">Optional[RepositoryExternalConnectionsArgs]</span> = None<span class="p">, </span><span class="nx">repository</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">upstreams</span><span class="p">:</span> <span class="nx">Optional[Sequence[RepositoryUpstreamArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -461,6 +566,17 @@ The Repository resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
+        <span id="externalconnections_csharp">
+<a href="#externalconnections_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Connections</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#repositoryexternalconnections">Repository<wbr>External<wbr>Connections<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An array of external connections associated with the repository. Only one external connection can be set per repository. see External Connections.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="upstreams_csharp">
 <a href="#upstreams_csharp" style="color: inherit; text-decoration: inherit;">Upstreams</a>
 </span> 
@@ -519,6 +635,17 @@ The Repository resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The account number of the AWS account that owns the domain.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="externalconnections_go">
+<a href="#externalconnections_go" style="color: inherit; text-decoration: inherit;">External<wbr>Connections</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#repositoryexternalconnections">Repository<wbr>External<wbr>Connections</a></span>
+    </dt>
+    <dd>{{% md %}}An array of external connections associated with the repository. Only one external connection can be set per repository. see External Connections.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -585,6 +712,17 @@ The Repository resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
+        <span id="externalconnections_nodejs">
+<a href="#externalconnections_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Connections</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#repositoryexternalconnections">Repository<wbr>External<wbr>Connections</a></span>
+    </dt>
+    <dd>{{% md %}}An array of external connections associated with the repository. Only one external connection can be set per repository. see External Connections.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="upstreams_nodejs">
 <a href="#upstreams_nodejs" style="color: inherit; text-decoration: inherit;">upstreams</a>
 </span> 
@@ -647,6 +785,17 @@ The Repository resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
+        <span id="external_connections_python">
+<a href="#external_connections_python" style="color: inherit; text-decoration: inherit;">external_<wbr>connections</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#repositoryexternalconnections">Repository<wbr>External<wbr>Connections<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An array of external connections associated with the repository. Only one external connection can be set per repository. see External Connections.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="upstreams_python">
 <a href="#upstreams_python" style="color: inherit; text-decoration: inherit;">upstreams</a>
 </span> 
@@ -698,17 +847,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="externalconnections_csharp">
-<a href="#externalconnections_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Connections</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#repositoryexternalconnection">List&lt;Repository<wbr>External<wbr>Connection&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}An array of external connections associated with the repository. see External Connections
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span> 
@@ -744,17 +882,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the repository.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="externalconnections_go">
-<a href="#externalconnections_go" style="color: inherit; text-decoration: inherit;">External<wbr>Connections</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#repositoryexternalconnection">[]Repository<wbr>External<wbr>Connection</a></span>
-    </dt>
-    <dd>{{% md %}}An array of external connections associated with the repository. see External Connections
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -798,17 +925,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="externalconnections_nodejs">
-<a href="#externalconnections_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Connections</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#repositoryexternalconnection">Repository<wbr>External<wbr>Connection[]</a></span>
-    </dt>
-    <dd>{{% md %}}An array of external connections associated with the repository. see External Connections
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
@@ -848,17 +964,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="external_connections_python">
-<a href="#external_connections_python" style="color: inherit; text-decoration: inherit;">external_<wbr>connections</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#repositoryexternalconnection">Sequence[Repository<wbr>External<wbr>Connection]</a></span>
-    </dt>
-    <dd>{{% md %}}An array of external connections associated with the repository. see External Connections
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
@@ -887,7 +992,7 @@ Get an existing Repository resource's state with the given name, ID, and optiona
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">administrator_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_connections</span><span class="p">:</span> <span class="nx">Optional[Sequence[RepositoryExternalConnectionArgs]]</span> = None<span class="p">, </span><span class="nx">repository</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">upstreams</span><span class="p">:</span> <span class="nx">Optional[Sequence[RepositoryUpstreamArgs]]</span> = None<span class="p">) -&gt;</span> Repository</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">administrator_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_connections</span><span class="p">:</span> <span class="nx">Optional[RepositoryExternalConnectionsArgs]</span> = None<span class="p">, </span><span class="nx">repository</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">upstreams</span><span class="p">:</span> <span class="nx">Optional[Sequence[RepositoryUpstreamArgs]]</span> = None<span class="p">) -&gt;</span> Repository</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1062,9 +1167,9 @@ The following state arguments are supported:
 <a href="#state_externalconnections_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#repositoryexternalconnection">List&lt;Repository<wbr>External<wbr>Connection<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#repositoryexternalconnections">Repository<wbr>External<wbr>Connections<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}An array of external connections associated with the repository. see External Connections
+    <dd>{{% md %}}An array of external connections associated with the repository. Only one external connection can be set per repository. see External Connections.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1157,9 +1262,9 @@ The following state arguments are supported:
 <a href="#state_externalconnections_go" style="color: inherit; text-decoration: inherit;">External<wbr>Connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#repositoryexternalconnection">[]Repository<wbr>External<wbr>Connection</a></span>
+        <span class="property-type"><a href="#repositoryexternalconnections">Repository<wbr>External<wbr>Connections</a></span>
     </dt>
-    <dd>{{% md %}}An array of external connections associated with the repository. see External Connections
+    <dd>{{% md %}}An array of external connections associated with the repository. Only one external connection can be set per repository. see External Connections.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1252,9 +1357,9 @@ The following state arguments are supported:
 <a href="#state_externalconnections_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#repositoryexternalconnection">Repository<wbr>External<wbr>Connection[]</a></span>
+        <span class="property-type"><a href="#repositoryexternalconnections">Repository<wbr>External<wbr>Connections</a></span>
     </dt>
-    <dd>{{% md %}}An array of external connections associated with the repository. see External Connections
+    <dd>{{% md %}}An array of external connections associated with the repository. Only one external connection can be set per repository. see External Connections.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1347,9 +1452,9 @@ The following state arguments are supported:
 <a href="#state_external_connections_python" style="color: inherit; text-decoration: inherit;">external_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#repositoryexternalconnection">Sequence[Repository<wbr>External<wbr>Connection<wbr>Args]</a></span>
+        <span class="property-type"><a href="#repositoryexternalconnections">Repository<wbr>External<wbr>Connections<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}An array of external connections associated with the repository. see External Connections
+    <dd>{{% md %}}An array of external connections associated with the repository. Only one external connection can be set per repository. see External Connections.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1389,16 +1494,16 @@ The following state arguments are supported:
 ## Supporting Types
 
 
-<h4 id="repositoryexternalconnection">Repository<wbr>External<wbr>Connection</h4>
+<h4 id="repositoryexternalconnections">Repository<wbr>External<wbr>Connections</h4>
 {{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RepositoryExternalConnection">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RepositoryExternalConnections">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RepositoryExternalConnections">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codeartifact?tab=doc#RepositoryExternalConnectionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codeartifact?tab=doc#RepositoryExternalConnectionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codeartifact?tab=doc#RepositoryExternalConnectionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeArtifact.Outputs.RepositoryExternalConnection.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeArtifact.Inputs.RepositoryExternalConnectionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeArtifact.Outputs.RepositoryExternalConnections.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1407,8 +1512,8 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="externalconnectionname_csharp">
 <a href="#externalconnectionname_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Connection<wbr>Name</a>
 </span> 
@@ -1426,8 +1531,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The package format associated with a repository's external connection.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1437,8 +1541,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The status of the external connection of a repository.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1447,8 +1550,8 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="externalconnectionname_go">
 <a href="#externalconnectionname_go" style="color: inherit; text-decoration: inherit;">External<wbr>Connection<wbr>Name</a>
 </span> 
@@ -1466,8 +1569,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The package format associated with a repository's external connection.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1477,8 +1579,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The status of the external connection of a repository.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1487,8 +1588,8 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="externalconnectionname_nodejs">
 <a href="#externalconnectionname_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Connection<wbr>Name</a>
 </span> 
@@ -1506,8 +1607,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The package format associated with a repository's external connection.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1517,8 +1617,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The status of the external connection of a repository.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1527,8 +1626,8 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="external_connection_name_python">
 <a href="#external_connection_name_python" style="color: inherit; text-decoration: inherit;">external_<wbr>connection_<wbr>name</a>
 </span> 
@@ -1546,8 +1645,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The package format associated with a repository's external connection.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1557,8 +1655,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The status of the external connection of a repository.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

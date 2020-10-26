@@ -3,7 +3,7 @@ title: "Module types/enums/ec2"
 title_tag: "Module types/enums/ec2 | Package @pulumi/aws | Node.js SDK"
 linktitle: "enums/ec2"
 meta_desc: "Explore members of the enums/ec2 module in the @pulumi/aws package."
-git_sha: "6dda53b70848a0c4579e285220ce00c4601e5e7e"
+git_sha: "3fe1b6f7837e9052ee161f972e63a34dd2fcc624"
 block_external_search_index: true
 ---
 
@@ -31,21 +31,21 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="InstancePlatform" data-link-title="InstancePlatform">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/types/enums/ec2/index.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/types/enums/ec2/index.ts#L16">
         type <strong>InstancePlatform</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> InstancePlatform = <span class='s2'>"Linux/UNIX"</span> | <span class='s2'>"Red Hat Enterprise Linux"</span> | <span class='s2'>"SUSE Linux"</span> | <span class='s2'>"Windows"</span> | <span class='s2'>"Windows with SQL Server"</span> | <span class='s2'>"Windows with SQL Server Enterprise"</span> | <span class='s2'>"Windows with SQL Server Standard"</span> | <span class='s2'>"Windows with SQL Server Web"</span>;</code></pre>
 <h3 class="pdoc-module-header" id="InstanceType" data-link-title="InstanceType">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/types/enums/ec2/index.ts#L188">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/types/enums/ec2/index.ts#L188">
         type <strong>InstanceType</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> InstanceType = <span class='s2'>"a1.2xlarge"</span> | <span class='s2'>"a1.4xlarge"</span> | <span class='s2'>"a1.large"</span> | <span class='s2'>"a1.medium"</span> | <span class='s2'>"a1.xlarge"</span> | <span class='s2'>"c3.2xlarge"</span> | <span class='s2'>"c3.4xlarge"</span> | <span class='s2'>"c3.8xlarge"</span> | <span class='s2'>"c3.large"</span> | <span class='s2'>"c3.xlarge"</span> | <span class='s2'>"c4.2xlarge"</span> | <span class='s2'>"c4.4xlarge"</span> | <span class='s2'>"c4.8xlarge"</span> | <span class='s2'>"c4.large"</span> | <span class='s2'>"c4.xlarge"</span> | <span class='s2'>"c5.18xlarge"</span> | <span class='s2'>"c5.2xlarge"</span> | <span class='s2'>"c5.4xlarge"</span> | <span class='s2'>"c5.9xlarge"</span> | <span class='s2'>"c5.large"</span> | <span class='s2'>"c5.xlarge"</span> | <span class='s2'>"c5a.12xlarge"</span> | <span class='s2'>"c5a.16xlarge"</span> | <span class='s2'>"c5a.2xlarge"</span> | <span class='s2'>"c5a.24xlarge"</span> | <span class='s2'>"c5a.4xlarge"</span> | <span class='s2'>"c5a.8xlarge"</span> | <span class='s2'>"c5a.large"</span> | <span class='s2'>"c5a.xlarge"</span> | <span class='s2'>"c5d.18xlarge"</span> | <span class='s2'>"c5d.2xlarge"</span> | <span class='s2'>"c5d.4xlarge"</span> | <span class='s2'>"c5d.9xlarge"</span> | <span class='s2'>"c5d.large"</span> | <span class='s2'>"c5d.xlarge"</span> | <span class='s2'>"c5n.18xlarge"</span> | <span class='s2'>"c5n.2xlarge"</span> | <span class='s2'>"c5n.4xlarge"</span> | <span class='s2'>"c5n.9xlarge"</span> | <span class='s2'>"c5n.large"</span> | <span class='s2'>"c5n.xlarge"</span> | <span class='s2'>"d2.2xlarge"</span> | <span class='s2'>"d2.4xlarge"</span> | <span class='s2'>"d2.8xlarge"</span> | <span class='s2'>"d2.xlarge"</span> | <span class='s2'>"f1.16xlarge"</span> | <span class='s2'>"f1.2xlarge"</span> | <span class='s2'>"g2.2xlarge"</span> | <span class='s2'>"g2.8xlarge"</span> | <span class='s2'>"g3.16xlarge"</span> | <span class='s2'>"g3.4xlarge"</span> | <span class='s2'>"g3.8xlarge"</span> | <span class='s2'>"g3s.xlarge"</span> | <span class='s2'>"h1.16xlarge"</span> | <span class='s2'>"h1.2xlarge"</span> | <span class='s2'>"h1.4xlarge"</span> | <span class='s2'>"h1.8xlarge"</span> | <span class='s2'>"hs1.8xlarge"</span> | <span class='s2'>"i3.16xlarge"</span> | <span class='s2'>"i3.2xlarge"</span> | <span class='s2'>"i3.4xlarge"</span> | <span class='s2'>"i3.8xlarge"</span> | <span class='s2'>"i3.large"</span> | <span class='s2'>"i3.xlarge"</span> | <span class='s2'>"i3.metal"</span> | <span class='s2'>"m3.2xlarge"</span> | <span class='s2'>"m3.large"</span> | <span class='s2'>"m3.medium"</span> | <span class='s2'>"m3.xlarge"</span> | <span class='s2'>"m4.10xlarge"</span> | <span class='s2'>"m4.16xlarge"</span> | <span class='s2'>"m4.2xlarge"</span> | <span class='s2'>"m4.4xlarge"</span> | <span class='s2'>"m4.large"</span> | <span class='s2'>"m4.xlarge"</span> | <span class='s2'>"m5.large"</span> | <span class='s2'>"m5.xlarge"</span> | <span class='s2'>"m5.2xlarge"</span> | <span class='s2'>"m5.4xlarge"</span> | <span class='s2'>"m5.12xlarge"</span> | <span class='s2'>"m5.24xlarge"</span> | <span class='s2'>"m5d.large"</span> | <span class='s2'>"m5d.xlarge"</span> | <span class='s2'>"m5d.2xlarge"</span> | <span class='s2'>"m5d.4xlarge"</span> | <span class='s2'>"m5d.12xlarge"</span> | <span class='s2'>"m5d.24xlarge"</span> | <span class='s2'>"m5a.12xlarge"</span> | <span class='s2'>"m5a.24xlarge"</span> | <span class='s2'>"m5a.2xlarge"</span> | <span class='s2'>"m5a.4xlarge"</span> | <span class='s2'>"m5a.large"</span> | <span class='s2'>"m5a.xlarge"</span> | <span class='s2'>"p2.16xlarge"</span> | <span class='s2'>"p2.8xlarge"</span> | <span class='s2'>"p2.xlarge"</span> | <span class='s2'>"p3.16xlarge"</span> | <span class='s2'>"p3.2xlarge"</span> | <span class='s2'>"p3.8xlarge"</span> | <span class='s2'>"p3dn.24xlarge"</span> | <span class='s2'>"r3.2xlarge"</span> | <span class='s2'>"r3.4xlarge"</span> | <span class='s2'>"r3.8xlarge"</span> | <span class='s2'>"r3.large"</span> | <span class='s2'>"r3.xlarge"</span> | <span class='s2'>"r4.16xlarge"</span> | <span class='s2'>"r4.2xlarge"</span> | <span class='s2'>"r4.4xlarge"</span> | <span class='s2'>"r4.8xlarge"</span> | <span class='s2'>"r4.large"</span> | <span class='s2'>"r4.xlarge"</span> | <span class='s2'>"r5.12xlarge"</span> | <span class='s2'>"r5.24xlarge"</span> | <span class='s2'>"r5.2xlarge"</span> | <span class='s2'>"r5.4xlarge"</span> | <span class='s2'>"r5.large"</span> | <span class='s2'>"r5.xlarge"</span> | <span class='s2'>"r5a.12xlarge"</span> | <span class='s2'>"r5a.24xlarge"</span> | <span class='s2'>"r5a.2xlarge"</span> | <span class='s2'>"r5a.4xlarge"</span> | <span class='s2'>"r5a.large"</span> | <span class='s2'>"r5a.xlarge"</span> | <span class='s2'>"r5d.12xlarge"</span> | <span class='s2'>"r5d.24xlarge"</span> | <span class='s2'>"r5d.2xlarge"</span> | <span class='s2'>"r5d.4xlarge"</span> | <span class='s2'>"r5d.large"</span> | <span class='s2'>"r5d.xlarge"</span> | <span class='s2'>"t2.2xlarge"</span> | <span class='s2'>"t2.large"</span> | <span class='s2'>"t2.medium"</span> | <span class='s2'>"t2.micro"</span> | <span class='s2'>"t2.nano"</span> | <span class='s2'>"t2.small"</span> | <span class='s2'>"t2.xlarge"</span> | <span class='s2'>"t3.2xlarge"</span> | <span class='s2'>"t3.large"</span> | <span class='s2'>"t3.medium"</span> | <span class='s2'>"t3.micro"</span> | <span class='s2'>"t3.nano"</span> | <span class='s2'>"t3.small"</span> | <span class='s2'>"t3.xlarge"</span> | <span class='s2'>"t3a.2xlarge"</span> | <span class='s2'>"t3a.large"</span> | <span class='s2'>"t3a.medium"</span> | <span class='s2'>"t3a.micro"</span> | <span class='s2'>"t3a.nano"</span> | <span class='s2'>"t3a.small"</span> | <span class='s2'>"t3a.xlarge"</span> | <span class='s2'>"u-12tb1.metal"</span> | <span class='s2'>"u-6tb1.metal"</span> | <span class='s2'>"u-9tb1.metal"</span> | <span class='s2'>"x1.16xlarge"</span> | <span class='s2'>"x1.32xlarge"</span> | <span class='s2'>"x1e.16xlarge"</span> | <span class='s2'>"x1e.2xlarge"</span> | <span class='s2'>"x1e.32xlarge"</span> | <span class='s2'>"x1e.4xlarge"</span> | <span class='s2'>"x1e.8xlarge"</span> | <span class='s2'>"x1e.xlarge"</span> | <span class='s2'>"z1d.12xlarge"</span> | <span class='s2'>"z1d.2xlarge"</span> | <span class='s2'>"z1d.3xlarge"</span> | <span class='s2'>"z1d.6xlarge"</span> | <span class='s2'>"z1d.large"</span> | <span class='s2'>"z1d.xlarge"</span>;</code></pre>
 <h3 class="pdoc-module-header" id="PlacementStrategy" data-link-title="PlacementStrategy">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/types/enums/ec2/index.ts#L206">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/types/enums/ec2/index.ts#L206">
         type <strong>PlacementStrategy</strong>
     </a>
 </h3>
@@ -56,14 +56,14 @@ The strategy of the placement group determines how the instances are organized w
 See https://docs.aws.amazon.com/cli/latest/reference/ec2/create-placement-group.html
 
 <h3 class="pdoc-module-header" id="ProtocolType" data-link-title="ProtocolType">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/types/enums/ec2/index.ts#L215">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/types/enums/ec2/index.ts#L215">
         type <strong>ProtocolType</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> ProtocolType = <span class='s2'>"all"</span> | <span class='s2'>"tcp"</span> | <span class='s2'>"udp"</span> | <span class='s2'>"icmp"</span>;</code></pre>
 <h3 class="pdoc-module-header" id="Tenancy" data-link-title="Tenancy">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/types/enums/ec2/index.ts#L222">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/types/enums/ec2/index.ts#L222">
         type <strong>Tenancy</strong>
     </a>
 </h3>

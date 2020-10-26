@@ -3,7 +3,7 @@ title: "Module lex"
 title_tag: "Module lex | Package @pulumi/aws | Node.js SDK"
 linktitle: "lex"
 meta_desc: "Explore members of the lex module in the @pulumi/aws package."
-git_sha: "6dda53b70848a0c4579e285220ce00c4601e5e7e"
+git_sha: "3fe1b6f7837e9052ee161f972e63a34dd2fcc624"
 block_external_search_index: true
 ---
 
@@ -54,7 +54,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Bot" data-link-title="Bot">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L48">
         Resource <strong>Bot</strong>
     </a>
 </h3>
@@ -99,7 +99,7 @@ const orderFlowersBot = new aws.lex.Bot("order_flowers_bot", {
 ```
 
 <h4 class="pdoc-member-header" id="Bot-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L160"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L160"> <b>constructor</b></a>
 </h4>
 
 
@@ -113,7 +113,7 @@ Create a Bot resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Bot-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L58">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L58">method <b>get</b></a>
 </h4>
 
 
@@ -124,14 +124,14 @@ Get an existing Bot resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Bot-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L48">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L48">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Bot-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L69">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L69">method <b>isInstance</b></a>
 </h4>
 
 
@@ -142,7 +142,7 @@ Returns true if the given object is an instance of Bot.  This is designed to wor
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Bot-abortStatement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L79">property <b>abortStatement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L79">property <b>abortStatement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>abortStatement: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BotAbortStatement'>BotAbortStatement</a>&gt;;</code></pre>
@@ -150,12 +150,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The message that Amazon Lex uses to abort a conversation. Attributes are documented under statement.
 
 <h4 class="pdoc-member-header" id="Bot-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L80">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L80">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Bot-checksum">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L85">property <b>checksum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L85">property <b>checksum</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>checksum: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -164,7 +164,7 @@ Checksum identifying the version of the bot that was created. The checksum is no
 included as an argument because the resource will add it automatically when updating the bot.
 
 <h4 class="pdoc-member-header" id="Bot-childDirected">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L89">property <b>childDirected</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L89">property <b>childDirected</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>childDirected: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -172,7 +172,7 @@ included as an argument because the resource will add it automatically when upda
 By specifying true, you confirm that your use of Amazon Lex is related to a website, program, or other application that is directed or targeted, in whole or in part, to children under age 13 and subject to COPPA. For more information see the [Amazon Lex FAQ](https://aws.amazon.com/lex/faqs#data-security) and the [Amazon Lex PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-childDirected).
 
 <h4 class="pdoc-member-header" id="Bot-clarificationPrompt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L93">property <b>clarificationPrompt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L93">property <b>clarificationPrompt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clarificationPrompt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BotClarificationPrompt'>BotClarificationPrompt</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -180,7 +180,7 @@ By specifying true, you confirm that your use of Amazon Lex is related to a webs
 The message that Amazon Lex uses when it doesn't understand the user's request. Attributes are documented under prompt.
 
 <h4 class="pdoc-member-header" id="Bot-createVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L97">property <b>createVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L97">property <b>createVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -188,7 +188,7 @@ The message that Amazon Lex uses when it doesn't understand the user's request. 
 Determines if a new bot version is created when the initial resource is created and on each update. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="Bot-createdDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L101">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L101">property <b>createdDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createdDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -196,7 +196,7 @@ Determines if a new bot version is created when the initial resource is created 
 The date when the bot version was created.
 
 <h4 class="pdoc-member-header" id="Bot-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L105">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L105">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -204,7 +204,7 @@ The date when the bot version was created.
 A description of the bot.
 
 <h4 class="pdoc-member-header" id="Bot-detectSentiment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L109">property <b>detectSentiment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L109">property <b>detectSentiment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>detectSentiment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -212,7 +212,7 @@ A description of the bot.
 When set to true user utterances are sent to Amazon Comprehend for sentiment analysis. If you don't specify detectSentiment, the default is `false`.
 
 <h4 class="pdoc-member-header" id="Bot-enableModelImprovements">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L113">property <b>enableModelImprovements</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L113">property <b>enableModelImprovements</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enableModelImprovements: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -220,7 +220,7 @@ When set to true user utterances are sent to Amazon Comprehend for sentiment ana
 Set to `true` to enable access to natural language understanding improvements. When you set the `enableModelImprovements` parameter to true you can use the `nluIntentConfidenceThreshold` parameter to configure confidence scores. For more information, see [Confidence Scores](https://docs.aws.amazon.com/lex/latest/dg/confidence-scores.html). You can only set the `enableModelImprovements` parameter in certain Regions. If you set the parameter to true, your bot has access to accuracy improvements. For more information see the [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-enableModelImprovements).
 
 <h4 class="pdoc-member-header" id="Bot-failureReason">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L117">property <b>failureReason</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L117">property <b>failureReason</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>failureReason: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -228,7 +228,7 @@ Set to `true` to enable access to natural language understanding improvements. W
 If status is FAILED, Amazon Lex provides the reason that it failed to build the bot.
 
 <h4 class="pdoc-member-header" id="Bot-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L48">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L48">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -237,7 +237,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Bot-idleSessionTtlInSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L121">property <b>idleSessionTtlInSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L121">property <b>idleSessionTtlInSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>idleSessionTtlInSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -245,7 +245,7 @@ deployments and may be missing (undefined) during planning phases.
 The maximum time in seconds that Amazon Lex retains the data gathered in a conversation. Default is `300`.
 
 <h4 class="pdoc-member-header" id="Bot-intents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L125">property <b>intents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L125">property <b>intents</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>intents: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BotIntent'>BotIntent</a>[]&gt;;</code></pre>
@@ -253,7 +253,7 @@ The maximum time in seconds that Amazon Lex retains the data gathered in a conve
 A set of Intent objects. Each intent represents a command that a user can express. Attributes are documented under intent.
 
 <h4 class="pdoc-member-header" id="Bot-lastUpdatedDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L129">property <b>lastUpdatedDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L129">property <b>lastUpdatedDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lastUpdatedDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -261,7 +261,7 @@ A set of Intent objects. Each intent represents a command that a user can expres
 The date when the $LATEST version of this bot was updated.
 
 <h4 class="pdoc-member-header" id="Bot-locale">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L133">property <b>locale</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L133">property <b>locale</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>locale: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -269,7 +269,7 @@ The date when the $LATEST version of this bot was updated.
 Specifies the target locale for the bot. Any intent used in the bot must be compatible with the locale of the bot. For available locales, see [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-locale). Default is `en-US`.
 
 <h4 class="pdoc-member-header" id="Bot-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L137">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L137">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -277,7 +277,7 @@ Specifies the target locale for the bot. Any intent used in the bot must be comp
 The name of the bot that you want to create, case sensitive.
 
 <h4 class="pdoc-member-header" id="Bot-nluIntentConfidenceThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L141">property <b>nluIntentConfidenceThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L141">property <b>nluIntentConfidenceThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nluIntentConfidenceThreshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -285,7 +285,7 @@ The name of the bot that you want to create, case sensitive.
 Determines the threshold where Amazon Lex will insert the AMAZON.FallbackIntent, AMAZON.KendraSearchIntent, or both when returning alternative intents in a PostContent or PostText response. AMAZON.FallbackIntent and AMAZON.KendraSearchIntent are only inserted if they are configured for the bot. For more information see [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-nluIntentConfidenceThreshold) This value requires `enableModelImprovements` to be set to `true` and the default is `0`.
 
 <h4 class="pdoc-member-header" id="Bot-processBehavior">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L145">property <b>processBehavior</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L145">property <b>processBehavior</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>processBehavior: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -293,7 +293,7 @@ Determines the threshold where Amazon Lex will insert the AMAZON.FallbackIntent,
 If you set the `processBehavior` element to `BUILD`, Amazon Lex builds the bot so that it can be run. If you set the element to `SAVE` Amazon Lex saves the bot, but doesn't build it. Default is `SAVE`.
 
 <h4 class="pdoc-member-header" id="Bot-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L152">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L152">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -304,7 +304,7 @@ build the bot, it sets status to FAILED. Amazon Lex returns the reason for the f
 failureReason response element.
 
 <h4 class="pdoc-member-header" id="Bot-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L48">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L48">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -313,7 +313,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Bot-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L156">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L156">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -321,7 +321,7 @@ deployments.
 The version of the bot.
 
 <h4 class="pdoc-member-header" id="Bot-voiceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L160">property <b>voiceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L160">property <b>voiceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>voiceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -329,7 +329,7 @@ The version of the bot.
 The Amazon Polly voice ID that you want Amazon Lex to use for voice interactions with the user. The locale configured for the voice must match the locale of the bot. For more information, see [Available Voices](http://docs.aws.amazon.com/polly/latest/dg/voicelist.html) in the Amazon Polly Developer Guide.
 
 <h3 class="pdoc-module-header" id="BotAlias" data-link-title="BotAlias">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/botAlias.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/botAlias.ts#L27">
         Resource <strong>BotAlias</strong>
     </a>
 </h3>
@@ -353,7 +353,7 @@ const orderFlowersProd = new aws.lex.BotAlias("order_flowers_prod", {
 ```
 
 <h4 class="pdoc-member-header" id="BotAlias-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/botAlias.ts#L90"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/botAlias.ts#L90"> <b>constructor</b></a>
 </h4>
 
 
@@ -367,7 +367,7 @@ Create a BotAlias resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="BotAlias-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/botAlias.ts#L37">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/botAlias.ts#L37">method <b>get</b></a>
 </h4>
 
 
@@ -378,14 +378,14 @@ Get an existing BotAlias resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="BotAlias-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/botAlias.ts#L27">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/botAlias.ts#L27">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="BotAlias-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/botAlias.ts#L48">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/botAlias.ts#L48">method <b>isInstance</b></a>
 </h4>
 
 
@@ -396,7 +396,7 @@ Returns true if the given object is an instance of BotAlias.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="BotAlias-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/botAlias.ts#L58">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/botAlias.ts#L58">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -404,7 +404,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ARN of the bot alias.
 
 <h4 class="pdoc-member-header" id="BotAlias-botName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/botAlias.ts#L62">property <b>botName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/botAlias.ts#L62">property <b>botName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>botName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -412,7 +412,7 @@ The ARN of the bot alias.
 The name of the bot.
 
 <h4 class="pdoc-member-header" id="BotAlias-botVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/botAlias.ts#L66">property <b>botVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/botAlias.ts#L66">property <b>botVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>botVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -420,7 +420,7 @@ The name of the bot.
 The name of the bot.
 
 <h4 class="pdoc-member-header" id="BotAlias-checksum">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/botAlias.ts#L70">property <b>checksum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/botAlias.ts#L70">property <b>checksum</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>checksum: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -428,7 +428,7 @@ The name of the bot.
 Checksum of the bot alias.
 
 <h4 class="pdoc-member-header" id="BotAlias-conversationLogs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/botAlias.ts#L74">property <b>conversationLogs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/botAlias.ts#L74">property <b>conversationLogs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>conversationLogs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BotAliasConversationLogs'>BotAliasConversationLogs</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -436,7 +436,7 @@ Checksum of the bot alias.
 The settings that determine how Amazon Lex uses conversation logs for the alias. Attributes are documented under conversation_logs.
 
 <h4 class="pdoc-member-header" id="BotAlias-createdDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/botAlias.ts#L78">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/botAlias.ts#L78">property <b>createdDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createdDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -444,7 +444,7 @@ The settings that determine how Amazon Lex uses conversation logs for the alias.
 The date that the bot alias was created.
 
 <h4 class="pdoc-member-header" id="BotAlias-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/botAlias.ts#L82">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/botAlias.ts#L82">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -452,7 +452,7 @@ The date that the bot alias was created.
 A description of the alias.
 
 <h4 class="pdoc-member-header" id="BotAlias-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/botAlias.ts#L27">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/botAlias.ts#L27">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -461,7 +461,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="BotAlias-lastUpdatedDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/botAlias.ts#L86">property <b>lastUpdatedDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/botAlias.ts#L86">property <b>lastUpdatedDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lastUpdatedDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -469,7 +469,7 @@ deployments and may be missing (undefined) during planning phases.
 The date that the bot alias was updated. When you create a resource, the creation date and the last updated date are the same.
 
 <h4 class="pdoc-member-header" id="BotAlias-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/botAlias.ts#L90">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/botAlias.ts#L90">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -477,7 +477,7 @@ The date that the bot alias was updated. When you create a resource, the creatio
 The name of the alias. The name is not case sensitive.
 
 <h4 class="pdoc-member-header" id="BotAlias-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/botAlias.ts#L27">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/botAlias.ts#L27">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -486,7 +486,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Intent" data-link-title="Intent">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L96">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L96">
         Resource <strong>Intent</strong>
     </a>
 </h3>
@@ -579,7 +579,7 @@ const orderFlowersIntent = new aws.lex.Intent("order_flowers_intent", {
 ```
 
 <h4 class="pdoc-member-header" id="Intent-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L213"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L213"> <b>constructor</b></a>
 </h4>
 
 
@@ -593,7 +593,7 @@ Create a Intent resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Intent-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L106">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L106">method <b>get</b></a>
 </h4>
 
 
@@ -604,14 +604,14 @@ Get an existing Intent resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Intent-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L96">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L96">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Intent-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L117">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L117">method <b>isInstance</b></a>
 </h4>
 
 
@@ -622,7 +622,7 @@ Returns true if the given object is an instance of Intent.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Intent-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L127">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L127">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -630,7 +630,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ARN of the Lex intent.
 
 <h4 class="pdoc-member-header" id="Intent-checksum">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L132">property <b>checksum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L132">property <b>checksum</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>checksum: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -639,7 +639,7 @@ Checksum identifying the version of the intent that was created. The checksum is
 included as an argument because the resource will add it automatically when updating the intent.
 
 <h4 class="pdoc-member-header" id="Intent-conclusionStatement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L140">property <b>conclusionStatement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L140">property <b>conclusionStatement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>conclusionStatement: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#IntentConclusionStatement'>IntentConclusionStatement</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -651,7 +651,7 @@ application, you can't specify this element. The `followUpPrompt` and `conclusio
 mutually exclusive. You can specify only one. Attributes are documented under statement.
 
 <h4 class="pdoc-member-header" id="Intent-confirmationPrompt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L146">property <b>confirmationPrompt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L146">property <b>confirmationPrompt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>confirmationPrompt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#IntentConfirmationPrompt'>IntentConfirmationPrompt</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -661,7 +661,7 @@ have a yes or no answer. You you must provide both the `rejectionStatement` and 
 or neither. Attributes are documented under prompt.
 
 <h4 class="pdoc-member-header" id="Intent-createVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L151">property <b>createVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L151">property <b>createVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -670,7 +670,7 @@ Determines if a new slot type version is created when the initial
 resource is created and on each update. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="Intent-createdDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L155">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L155">property <b>createdDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createdDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -678,7 +678,7 @@ resource is created and on each update. Defaults to `false`.
 The date when the intent version was created.
 
 <h4 class="pdoc-member-header" id="Intent-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L159">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L159">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -686,7 +686,7 @@ The date when the intent version was created.
 A description of the bot.
 
 <h4 class="pdoc-member-header" id="Intent-dialogCodeHook">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L164">property <b>dialogCodeHook</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L164">property <b>dialogCodeHook</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dialogCodeHook: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#IntentDialogCodeHook'>IntentDialogCodeHook</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -695,7 +695,7 @@ Specifies a Lambda function to invoke for each user input. You can
 invoke this Lambda function to personalize user interaction. Attributes are documented under code_hook.
 
 <h4 class="pdoc-member-header" id="Intent-followUpPrompt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L171">property <b>followUpPrompt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L171">property <b>followUpPrompt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>followUpPrompt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#IntentFollowUpPrompt'>IntentFollowUpPrompt</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -706,7 +706,7 @@ user to order a drink. The `followUpPrompt` field and the `conclusionStatement` 
 exclusive. You can specify only one. Attributes are documented under follow_up_prompt.
 
 <h4 class="pdoc-member-header" id="Intent-fulfillmentActivity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L177">property <b>fulfillmentActivity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L177">property <b>fulfillmentActivity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fulfillmentActivity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#IntentFulfillmentActivity'>IntentFulfillmentActivity</a>&gt;;</code></pre>
@@ -716,7 +716,7 @@ user provides all of the information for a pizza order, `fulfillmentActivity` de
 places an order with a local pizza store. Attributes are documented under fulfillment_activity.
 
 <h4 class="pdoc-member-header" id="Intent-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L96">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -725,7 +725,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Intent-lastUpdatedDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L181">property <b>lastUpdatedDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L181">property <b>lastUpdatedDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lastUpdatedDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -733,7 +733,7 @@ deployments and may be missing (undefined) during planning phases.
 The date when the $LATEST version of this intent was updated.
 
 <h4 class="pdoc-member-header" id="Intent-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L185">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L185">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -741,7 +741,7 @@ The date when the $LATEST version of this intent was updated.
 The name of the intent slot that you want to create. The name is case sensitive.
 
 <h4 class="pdoc-member-header" id="Intent-parentIntentSignature">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L192">property <b>parentIntentSignature</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L192">property <b>parentIntentSignature</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parentIntentSignature: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -752,7 +752,7 @@ intent on. To find the signature for an intent, see
 in the Alexa Skills Kit.
 
 <h4 class="pdoc-member-header" id="Intent-rejectionStatement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L198">property <b>rejectionStatement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L198">property <b>rejectionStatement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rejectionStatement: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#IntentRejectionStatement'>IntentRejectionStatement</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -762,7 +762,7 @@ Amazon Lex responds with this statement to acknowledge that the intent was cance
 documented below under statement.
 
 <h4 class="pdoc-member-header" id="Intent-sampleUtterances">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L204">property <b>sampleUtterances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L204">property <b>sampleUtterances</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sampleUtterances: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -772,7 +772,7 @@ an Amazon Lex request for a slot value, you can provide those utterances to impr
 is optional. In most cases, Amazon Lex is capable of understanding user utterances.
 
 <h4 class="pdoc-member-header" id="Intent-slots">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L209">property <b>slots</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L209">property <b>slots</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>slots: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#IntentSlot'>IntentSlot</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -781,7 +781,7 @@ An list of intent slots. At runtime, Amazon Lex elicits required slot values
 from the user using prompts defined in the slots. Attributes are documented under slot.
 
 <h4 class="pdoc-member-header" id="Intent-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L96">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L96">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -790,7 +790,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Intent-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L213">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L213">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -798,7 +798,7 @@ deployments.
 The version of the bot.
 
 <h3 class="pdoc-module-header" id="SlotType" data-link-title="SlotType">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/slotType.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/slotType.ts#L43">
         Resource <strong>SlotType</strong>
     </a>
 </h3>
@@ -838,7 +838,7 @@ const flowerTypes = new aws.lex.SlotType("flower_types", {
 ```
 
 <h4 class="pdoc-member-header" id="SlotType-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/slotType.ts#L114"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/slotType.ts#L114"> <b>constructor</b></a>
 </h4>
 
 
@@ -852,7 +852,7 @@ Create a SlotType resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SlotType-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/slotType.ts#L53">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/slotType.ts#L53">method <b>get</b></a>
 </h4>
 
 
@@ -863,14 +863,14 @@ Get an existing SlotType resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SlotType-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/slotType.ts#L43">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/slotType.ts#L43">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SlotType-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/slotType.ts#L64">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/slotType.ts#L64">method <b>isInstance</b></a>
 </h4>
 
 
@@ -881,7 +881,7 @@ Returns true if the given object is an instance of SlotType.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SlotType-checksum">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/slotType.ts#L75">property <b>checksum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/slotType.ts#L75">property <b>checksum</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>checksum: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -890,7 +890,7 @@ Checksum identifying the version of the slot type that was created. The checksum
 not included as an argument because the resource will add it automatically when updating the slot type.
 
 <h4 class="pdoc-member-header" id="SlotType-createVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/slotType.ts#L80">property <b>createVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/slotType.ts#L80">property <b>createVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -899,7 +899,7 @@ Determines if a new slot type version is created when the initial resource is cr
 update. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="SlotType-createdDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/slotType.ts#L84">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/slotType.ts#L84">property <b>createdDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createdDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -907,7 +907,7 @@ update. Defaults to `false`.
 The date when the slot type version was created.
 
 <h4 class="pdoc-member-header" id="SlotType-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/slotType.ts#L88">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/slotType.ts#L88">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -915,7 +915,7 @@ The date when the slot type version was created.
 A description of the slot type.
 
 <h4 class="pdoc-member-header" id="SlotType-enumerationValues">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/slotType.ts#L95">property <b>enumerationValues</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/slotType.ts#L95">property <b>enumerationValues</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enumerationValues: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SlotTypeEnumerationValue'>SlotTypeEnumerationValue</a>[]&gt;;</code></pre>
@@ -926,7 +926,7 @@ train the machine learning model about the values that it resolves for a slot. A
 documented under enumeration_value.
 
 <h4 class="pdoc-member-header" id="SlotType-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/slotType.ts#L43">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/slotType.ts#L43">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -935,7 +935,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SlotType-lastUpdatedDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/slotType.ts#L99">property <b>lastUpdatedDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/slotType.ts#L99">property <b>lastUpdatedDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lastUpdatedDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -943,7 +943,7 @@ deployments and may be missing (undefined) during planning phases.
 The date when the `$LATEST` version of this slot type was updated.
 
 <h4 class="pdoc-member-header" id="SlotType-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/slotType.ts#L103">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/slotType.ts#L103">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -951,7 +951,7 @@ The date when the `$LATEST` version of this slot type was updated.
 The name of the slot type. The name is not case sensitive.
 
 <h4 class="pdoc-member-header" id="SlotType-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/slotType.ts#L43">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/slotType.ts#L43">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -960,7 +960,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="SlotType-valueSelectionStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/slotType.ts#L110">property <b>valueSelectionStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/slotType.ts#L110">property <b>valueSelectionStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>valueSelectionStrategy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -971,7 +971,7 @@ value is similar to the slot value. `TOP_RESOLUTION` returns the first value in 
 if there is a resolution list for the slot, otherwise null is returned. Defaults to `ORIGINAL_VALUE`.
 
 <h4 class="pdoc-member-header" id="SlotType-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/slotType.ts#L114">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/slotType.ts#L114">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -981,7 +981,7 @@ The version of the slot type.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getBot" data-link-title="getBot">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getBot.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getBot.ts#L25">
         Function <strong>getBot</strong>
     </a>
 </h3>
@@ -1005,7 +1005,7 @@ const orderFlowersBot = pulumi.output(aws.lex.getBot({
 ```
 
 <h3 class="pdoc-module-header" id="getBotAlias" data-link-title="getBotAlias">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getBotAlias.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getBotAlias.ts#L25">
         Function <strong>getBotAlias</strong>
     </a>
 </h3>
@@ -1029,7 +1029,7 @@ const orderFlowersProd = pulumi.output(aws.lex.getBotAlias({
 ```
 
 <h3 class="pdoc-module-header" id="getIntent" data-link-title="getIntent">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getIntent.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getIntent.ts#L25">
         Function <strong>getIntent</strong>
     </a>
 </h3>
@@ -1053,7 +1053,7 @@ const orderFlowers = pulumi.output(aws.lex.getIntent({
 ```
 
 <h3 class="pdoc-module-header" id="getSlotType" data-link-title="getSlotType">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getSlotType.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getSlotType.ts#L25">
         Function <strong>getSlotType</strong>
     </a>
 </h3>
@@ -1079,7 +1079,7 @@ const flowerTypes = pulumi.output(aws.lex.getSlotType({
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="BotAliasArgs" data-link-title="BotAliasArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/botAlias.ts#L187">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/botAlias.ts#L187">
         interface <strong>BotAliasArgs</strong>
     </a>
 </h3>
@@ -1089,7 +1089,7 @@ const flowerTypes = pulumi.output(aws.lex.getSlotType({
 The set of arguments for constructing a BotAlias resource.
 
 <h4 class="pdoc-member-header" id="BotAliasArgs-botName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/botAlias.ts#L191">property <b>botName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/botAlias.ts#L191">property <b>botName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>botName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1097,7 +1097,7 @@ The set of arguments for constructing a BotAlias resource.
 The name of the bot.
 
 <h4 class="pdoc-member-header" id="BotAliasArgs-botVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/botAlias.ts#L195">property <b>botVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/botAlias.ts#L195">property <b>botVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>botVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1105,7 +1105,7 @@ The name of the bot.
 The name of the bot.
 
 <h4 class="pdoc-member-header" id="BotAliasArgs-conversationLogs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/botAlias.ts#L199">property <b>conversationLogs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/botAlias.ts#L199">property <b>conversationLogs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>conversationLogs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BotAliasConversationLogs'>BotAliasConversationLogs</a>&gt;;</code></pre>
@@ -1113,7 +1113,7 @@ The name of the bot.
 The settings that determine how Amazon Lex uses conversation logs for the alias. Attributes are documented under conversation_logs.
 
 <h4 class="pdoc-member-header" id="BotAliasArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/botAlias.ts#L203">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/botAlias.ts#L203">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1121,7 +1121,7 @@ The settings that determine how Amazon Lex uses conversation logs for the alias.
 A description of the alias.
 
 <h4 class="pdoc-member-header" id="BotAliasArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/botAlias.ts#L207">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/botAlias.ts#L207">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1129,7 +1129,7 @@ A description of the alias.
 The name of the alias. The name is not case sensitive.
 
 <h3 class="pdoc-module-header" id="BotAliasState" data-link-title="BotAliasState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/botAlias.ts#L145">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/botAlias.ts#L145">
         interface <strong>BotAliasState</strong>
     </a>
 </h3>
@@ -1139,7 +1139,7 @@ The name of the alias. The name is not case sensitive.
 Input properties used for looking up and filtering BotAlias resources.
 
 <h4 class="pdoc-member-header" id="BotAliasState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/botAlias.ts#L149">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/botAlias.ts#L149">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1147,7 +1147,7 @@ Input properties used for looking up and filtering BotAlias resources.
 The ARN of the bot alias.
 
 <h4 class="pdoc-member-header" id="BotAliasState-botName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/botAlias.ts#L153">property <b>botName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/botAlias.ts#L153">property <b>botName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>botName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1155,7 +1155,7 @@ The ARN of the bot alias.
 The name of the bot.
 
 <h4 class="pdoc-member-header" id="BotAliasState-botVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/botAlias.ts#L157">property <b>botVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/botAlias.ts#L157">property <b>botVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>botVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1163,7 +1163,7 @@ The name of the bot.
 The name of the bot.
 
 <h4 class="pdoc-member-header" id="BotAliasState-checksum">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/botAlias.ts#L161">property <b>checksum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/botAlias.ts#L161">property <b>checksum</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>checksum?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1171,7 +1171,7 @@ The name of the bot.
 Checksum of the bot alias.
 
 <h4 class="pdoc-member-header" id="BotAliasState-conversationLogs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/botAlias.ts#L165">property <b>conversationLogs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/botAlias.ts#L165">property <b>conversationLogs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>conversationLogs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BotAliasConversationLogs'>BotAliasConversationLogs</a>&gt;;</code></pre>
@@ -1179,7 +1179,7 @@ Checksum of the bot alias.
 The settings that determine how Amazon Lex uses conversation logs for the alias. Attributes are documented under conversation_logs.
 
 <h4 class="pdoc-member-header" id="BotAliasState-createdDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/botAlias.ts#L169">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/botAlias.ts#L169">property <b>createdDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1187,7 +1187,7 @@ The settings that determine how Amazon Lex uses conversation logs for the alias.
 The date that the bot alias was created.
 
 <h4 class="pdoc-member-header" id="BotAliasState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/botAlias.ts#L173">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/botAlias.ts#L173">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1195,7 +1195,7 @@ The date that the bot alias was created.
 A description of the alias.
 
 <h4 class="pdoc-member-header" id="BotAliasState-lastUpdatedDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/botAlias.ts#L177">property <b>lastUpdatedDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/botAlias.ts#L177">property <b>lastUpdatedDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastUpdatedDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1203,7 +1203,7 @@ A description of the alias.
 The date that the bot alias was updated. When you create a resource, the creation date and the last updated date are the same.
 
 <h4 class="pdoc-member-header" id="BotAliasState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/botAlias.ts#L181">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/botAlias.ts#L181">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1211,7 +1211,7 @@ The date that the bot alias was updated. When you create a resource, the creatio
 The name of the alias. The name is not case sensitive.
 
 <h3 class="pdoc-module-header" id="BotArgs" data-link-title="BotArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L333">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L333">
         interface <strong>BotArgs</strong>
     </a>
 </h3>
@@ -1221,7 +1221,7 @@ The name of the alias. The name is not case sensitive.
 The set of arguments for constructing a Bot resource.
 
 <h4 class="pdoc-member-header" id="BotArgs-abortStatement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L337">property <b>abortStatement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L337">property <b>abortStatement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>abortStatement: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BotAbortStatement'>BotAbortStatement</a>&gt;;</code></pre>
@@ -1229,7 +1229,7 @@ The set of arguments for constructing a Bot resource.
 The message that Amazon Lex uses to abort a conversation. Attributes are documented under statement.
 
 <h4 class="pdoc-member-header" id="BotArgs-childDirected">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L341">property <b>childDirected</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L341">property <b>childDirected</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>childDirected: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1237,7 +1237,7 @@ The message that Amazon Lex uses to abort a conversation. Attributes are documen
 By specifying true, you confirm that your use of Amazon Lex is related to a website, program, or other application that is directed or targeted, in whole or in part, to children under age 13 and subject to COPPA. For more information see the [Amazon Lex FAQ](https://aws.amazon.com/lex/faqs#data-security) and the [Amazon Lex PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-childDirected).
 
 <h4 class="pdoc-member-header" id="BotArgs-clarificationPrompt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L345">property <b>clarificationPrompt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L345">property <b>clarificationPrompt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clarificationPrompt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BotClarificationPrompt'>BotClarificationPrompt</a>&gt;;</code></pre>
@@ -1245,7 +1245,7 @@ By specifying true, you confirm that your use of Amazon Lex is related to a webs
 The message that Amazon Lex uses when it doesn't understand the user's request. Attributes are documented under prompt.
 
 <h4 class="pdoc-member-header" id="BotArgs-createVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L349">property <b>createVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L349">property <b>createVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1253,7 +1253,7 @@ The message that Amazon Lex uses when it doesn't understand the user's request. 
 Determines if a new bot version is created when the initial resource is created and on each update. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="BotArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L353">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L353">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1261,7 +1261,7 @@ Determines if a new bot version is created when the initial resource is created 
 A description of the bot.
 
 <h4 class="pdoc-member-header" id="BotArgs-detectSentiment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L357">property <b>detectSentiment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L357">property <b>detectSentiment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>detectSentiment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1269,7 +1269,7 @@ A description of the bot.
 When set to true user utterances are sent to Amazon Comprehend for sentiment analysis. If you don't specify detectSentiment, the default is `false`.
 
 <h4 class="pdoc-member-header" id="BotArgs-enableModelImprovements">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L361">property <b>enableModelImprovements</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L361">property <b>enableModelImprovements</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableModelImprovements?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1277,7 +1277,7 @@ When set to true user utterances are sent to Amazon Comprehend for sentiment ana
 Set to `true` to enable access to natural language understanding improvements. When you set the `enableModelImprovements` parameter to true you can use the `nluIntentConfidenceThreshold` parameter to configure confidence scores. For more information, see [Confidence Scores](https://docs.aws.amazon.com/lex/latest/dg/confidence-scores.html). You can only set the `enableModelImprovements` parameter in certain Regions. If you set the parameter to true, your bot has access to accuracy improvements. For more information see the [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-enableModelImprovements).
 
 <h4 class="pdoc-member-header" id="BotArgs-idleSessionTtlInSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L365">property <b>idleSessionTtlInSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L365">property <b>idleSessionTtlInSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>idleSessionTtlInSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1285,7 +1285,7 @@ Set to `true` to enable access to natural language understanding improvements. W
 The maximum time in seconds that Amazon Lex retains the data gathered in a conversation. Default is `300`.
 
 <h4 class="pdoc-member-header" id="BotArgs-intents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L369">property <b>intents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L369">property <b>intents</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>intents: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BotIntent'>BotIntent</a>&gt;[]&gt;;</code></pre>
@@ -1293,7 +1293,7 @@ The maximum time in seconds that Amazon Lex retains the data gathered in a conve
 A set of Intent objects. Each intent represents a command that a user can express. Attributes are documented under intent.
 
 <h4 class="pdoc-member-header" id="BotArgs-locale">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L373">property <b>locale</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L373">property <b>locale</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>locale?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1301,7 +1301,7 @@ A set of Intent objects. Each intent represents a command that a user can expres
 Specifies the target locale for the bot. Any intent used in the bot must be compatible with the locale of the bot. For available locales, see [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-locale). Default is `en-US`.
 
 <h4 class="pdoc-member-header" id="BotArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L377">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L377">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1309,7 +1309,7 @@ Specifies the target locale for the bot. Any intent used in the bot must be comp
 The name of the bot that you want to create, case sensitive.
 
 <h4 class="pdoc-member-header" id="BotArgs-nluIntentConfidenceThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L381">property <b>nluIntentConfidenceThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L381">property <b>nluIntentConfidenceThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nluIntentConfidenceThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1317,7 +1317,7 @@ The name of the bot that you want to create, case sensitive.
 Determines the threshold where Amazon Lex will insert the AMAZON.FallbackIntent, AMAZON.KendraSearchIntent, or both when returning alternative intents in a PostContent or PostText response. AMAZON.FallbackIntent and AMAZON.KendraSearchIntent are only inserted if they are configured for the bot. For more information see [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-nluIntentConfidenceThreshold) This value requires `enableModelImprovements` to be set to `true` and the default is `0`.
 
 <h4 class="pdoc-member-header" id="BotArgs-processBehavior">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L385">property <b>processBehavior</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L385">property <b>processBehavior</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>processBehavior?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1325,7 +1325,7 @@ Determines the threshold where Amazon Lex will insert the AMAZON.FallbackIntent,
 If you set the `processBehavior` element to `BUILD`, Amazon Lex builds the bot so that it can be run. If you set the element to `SAVE` Amazon Lex saves the bot, but doesn't build it. Default is `SAVE`.
 
 <h4 class="pdoc-member-header" id="BotArgs-voiceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L389">property <b>voiceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L389">property <b>voiceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>voiceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1333,7 +1333,7 @@ If you set the `processBehavior` element to `BUILD`, Amazon Lex builds the bot s
 The Amazon Polly voice ID that you want Amazon Lex to use for voice interactions with the user. The locale configured for the voice must match the locale of the bot. For more information, see [Available Voices](http://docs.aws.amazon.com/polly/latest/dg/voicelist.html) in the Amazon Polly Developer Guide.
 
 <h3 class="pdoc-module-header" id="BotState" data-link-title="BotState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L242">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L242">
         interface <strong>BotState</strong>
     </a>
 </h3>
@@ -1343,7 +1343,7 @@ The Amazon Polly voice ID that you want Amazon Lex to use for voice interactions
 Input properties used for looking up and filtering Bot resources.
 
 <h4 class="pdoc-member-header" id="BotState-abortStatement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L246">property <b>abortStatement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L246">property <b>abortStatement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>abortStatement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BotAbortStatement'>BotAbortStatement</a>&gt;;</code></pre>
@@ -1351,12 +1351,12 @@ Input properties used for looking up and filtering Bot resources.
 The message that Amazon Lex uses to abort a conversation. Attributes are documented under statement.
 
 <h4 class="pdoc-member-header" id="BotState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L247">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L247">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BotState-checksum">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L252">property <b>checksum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L252">property <b>checksum</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>checksum?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1365,7 +1365,7 @@ Checksum identifying the version of the bot that was created. The checksum is no
 included as an argument because the resource will add it automatically when updating the bot.
 
 <h4 class="pdoc-member-header" id="BotState-childDirected">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L256">property <b>childDirected</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L256">property <b>childDirected</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>childDirected?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1373,7 +1373,7 @@ included as an argument because the resource will add it automatically when upda
 By specifying true, you confirm that your use of Amazon Lex is related to a website, program, or other application that is directed or targeted, in whole or in part, to children under age 13 and subject to COPPA. For more information see the [Amazon Lex FAQ](https://aws.amazon.com/lex/faqs#data-security) and the [Amazon Lex PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-childDirected).
 
 <h4 class="pdoc-member-header" id="BotState-clarificationPrompt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L260">property <b>clarificationPrompt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L260">property <b>clarificationPrompt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clarificationPrompt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BotClarificationPrompt'>BotClarificationPrompt</a>&gt;;</code></pre>
@@ -1381,7 +1381,7 @@ By specifying true, you confirm that your use of Amazon Lex is related to a webs
 The message that Amazon Lex uses when it doesn't understand the user's request. Attributes are documented under prompt.
 
 <h4 class="pdoc-member-header" id="BotState-createVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L264">property <b>createVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L264">property <b>createVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1389,7 +1389,7 @@ The message that Amazon Lex uses when it doesn't understand the user's request. 
 Determines if a new bot version is created when the initial resource is created and on each update. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="BotState-createdDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L268">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L268">property <b>createdDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1397,7 +1397,7 @@ Determines if a new bot version is created when the initial resource is created 
 The date when the bot version was created.
 
 <h4 class="pdoc-member-header" id="BotState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L272">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L272">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1405,7 +1405,7 @@ The date when the bot version was created.
 A description of the bot.
 
 <h4 class="pdoc-member-header" id="BotState-detectSentiment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L276">property <b>detectSentiment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L276">property <b>detectSentiment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>detectSentiment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1413,7 +1413,7 @@ A description of the bot.
 When set to true user utterances are sent to Amazon Comprehend for sentiment analysis. If you don't specify detectSentiment, the default is `false`.
 
 <h4 class="pdoc-member-header" id="BotState-enableModelImprovements">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L280">property <b>enableModelImprovements</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L280">property <b>enableModelImprovements</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableModelImprovements?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1421,7 +1421,7 @@ When set to true user utterances are sent to Amazon Comprehend for sentiment ana
 Set to `true` to enable access to natural language understanding improvements. When you set the `enableModelImprovements` parameter to true you can use the `nluIntentConfidenceThreshold` parameter to configure confidence scores. For more information, see [Confidence Scores](https://docs.aws.amazon.com/lex/latest/dg/confidence-scores.html). You can only set the `enableModelImprovements` parameter in certain Regions. If you set the parameter to true, your bot has access to accuracy improvements. For more information see the [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-enableModelImprovements).
 
 <h4 class="pdoc-member-header" id="BotState-failureReason">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L284">property <b>failureReason</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L284">property <b>failureReason</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>failureReason?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1429,7 +1429,7 @@ Set to `true` to enable access to natural language understanding improvements. W
 If status is FAILED, Amazon Lex provides the reason that it failed to build the bot.
 
 <h4 class="pdoc-member-header" id="BotState-idleSessionTtlInSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L288">property <b>idleSessionTtlInSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L288">property <b>idleSessionTtlInSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>idleSessionTtlInSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1437,7 +1437,7 @@ If status is FAILED, Amazon Lex provides the reason that it failed to build the 
 The maximum time in seconds that Amazon Lex retains the data gathered in a conversation. Default is `300`.
 
 <h4 class="pdoc-member-header" id="BotState-intents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L292">property <b>intents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L292">property <b>intents</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>intents?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BotIntent'>BotIntent</a>&gt;[]&gt;;</code></pre>
@@ -1445,7 +1445,7 @@ The maximum time in seconds that Amazon Lex retains the data gathered in a conve
 A set of Intent objects. Each intent represents a command that a user can express. Attributes are documented under intent.
 
 <h4 class="pdoc-member-header" id="BotState-lastUpdatedDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L296">property <b>lastUpdatedDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L296">property <b>lastUpdatedDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastUpdatedDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1453,7 +1453,7 @@ A set of Intent objects. Each intent represents a command that a user can expres
 The date when the $LATEST version of this bot was updated.
 
 <h4 class="pdoc-member-header" id="BotState-locale">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L300">property <b>locale</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L300">property <b>locale</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>locale?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1461,7 +1461,7 @@ The date when the $LATEST version of this bot was updated.
 Specifies the target locale for the bot. Any intent used in the bot must be compatible with the locale of the bot. For available locales, see [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-locale). Default is `en-US`.
 
 <h4 class="pdoc-member-header" id="BotState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L304">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L304">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1469,7 +1469,7 @@ Specifies the target locale for the bot. Any intent used in the bot must be comp
 The name of the bot that you want to create, case sensitive.
 
 <h4 class="pdoc-member-header" id="BotState-nluIntentConfidenceThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L308">property <b>nluIntentConfidenceThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L308">property <b>nluIntentConfidenceThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nluIntentConfidenceThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1477,7 +1477,7 @@ The name of the bot that you want to create, case sensitive.
 Determines the threshold where Amazon Lex will insert the AMAZON.FallbackIntent, AMAZON.KendraSearchIntent, or both when returning alternative intents in a PostContent or PostText response. AMAZON.FallbackIntent and AMAZON.KendraSearchIntent are only inserted if they are configured for the bot. For more information see [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-nluIntentConfidenceThreshold) This value requires `enableModelImprovements` to be set to `true` and the default is `0`.
 
 <h4 class="pdoc-member-header" id="BotState-processBehavior">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L312">property <b>processBehavior</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L312">property <b>processBehavior</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>processBehavior?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1485,7 +1485,7 @@ Determines the threshold where Amazon Lex will insert the AMAZON.FallbackIntent,
 If you set the `processBehavior` element to `BUILD`, Amazon Lex builds the bot so that it can be run. If you set the element to `SAVE` Amazon Lex saves the bot, but doesn't build it. Default is `SAVE`.
 
 <h4 class="pdoc-member-header" id="BotState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L319">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L319">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1496,7 +1496,7 @@ build the bot, it sets status to FAILED. Amazon Lex returns the reason for the f
 failureReason response element.
 
 <h4 class="pdoc-member-header" id="BotState-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L323">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L323">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1504,7 +1504,7 @@ failureReason response element.
 The version of the bot.
 
 <h4 class="pdoc-member-header" id="BotState-voiceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/bot.ts#L327">property <b>voiceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/bot.ts#L327">property <b>voiceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>voiceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1512,7 +1512,7 @@ The version of the bot.
 The Amazon Polly voice ID that you want Amazon Lex to use for voice interactions with the user. The locale configured for the voice must match the locale of the bot. For more information, see [Available Voices](http://docs.aws.amazon.com/polly/latest/dg/voicelist.html) in the Amazon Polly Developer Guide.
 
 <h3 class="pdoc-module-header" id="GetBotAliasArgs" data-link-title="GetBotAliasArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getBotAlias.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getBotAlias.ts#L42">
         interface <strong>GetBotAliasArgs</strong>
     </a>
 </h3>
@@ -1522,7 +1522,7 @@ The Amazon Polly voice ID that you want Amazon Lex to use for voice interactions
 A collection of arguments for invoking getBotAlias.
 
 <h4 class="pdoc-member-header" id="GetBotAliasArgs-botName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getBotAlias.ts#L46">property <b>botName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getBotAlias.ts#L46">property <b>botName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>botName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1530,7 +1530,7 @@ A collection of arguments for invoking getBotAlias.
 The name of the bot.
 
 <h4 class="pdoc-member-header" id="GetBotAliasArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getBotAlias.ts#L50">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getBotAlias.ts#L50">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1538,7 +1538,7 @@ The name of the bot.
 The name of the bot alias. The name is case sensitive.
 
 <h3 class="pdoc-module-header" id="GetBotAliasResult" data-link-title="GetBotAliasResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getBotAlias.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getBotAlias.ts#L56">
         interface <strong>GetBotAliasResult</strong>
     </a>
 </h3>
@@ -1548,7 +1548,7 @@ The name of the bot alias. The name is case sensitive.
 A collection of values returned by getBotAlias.
 
 <h4 class="pdoc-member-header" id="GetBotAliasResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getBotAlias.ts#L60">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getBotAlias.ts#L60">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1556,7 +1556,7 @@ A collection of values returned by getBotAlias.
 The ARN of the bot alias.
 
 <h4 class="pdoc-member-header" id="GetBotAliasResult-botName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getBotAlias.ts#L64">property <b>botName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getBotAlias.ts#L64">property <b>botName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>botName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1564,7 +1564,7 @@ The ARN of the bot alias.
 The name of the bot.
 
 <h4 class="pdoc-member-header" id="GetBotAliasResult-botVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getBotAlias.ts#L68">property <b>botVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getBotAlias.ts#L68">property <b>botVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>botVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1572,7 +1572,7 @@ The name of the bot.
 The version of the bot that the alias points to.
 
 <h4 class="pdoc-member-header" id="GetBotAliasResult-checksum">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getBotAlias.ts#L72">property <b>checksum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getBotAlias.ts#L72">property <b>checksum</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>checksum: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1580,7 +1580,7 @@ The version of the bot that the alias points to.
 Checksum of the bot alias.
 
 <h4 class="pdoc-member-header" id="GetBotAliasResult-createdDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getBotAlias.ts#L76">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getBotAlias.ts#L76">property <b>createdDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdDate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1588,7 +1588,7 @@ Checksum of the bot alias.
 The date that the bot alias was created.
 
 <h4 class="pdoc-member-header" id="GetBotAliasResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getBotAlias.ts#L80">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getBotAlias.ts#L80">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1596,7 +1596,7 @@ The date that the bot alias was created.
 A description of the alias.
 
 <h4 class="pdoc-member-header" id="GetBotAliasResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getBotAlias.ts#L84">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getBotAlias.ts#L84">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1604,7 +1604,7 @@ A description of the alias.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetBotAliasResult-lastUpdatedDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getBotAlias.ts#L88">property <b>lastUpdatedDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getBotAlias.ts#L88">property <b>lastUpdatedDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastUpdatedDate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1612,7 +1612,7 @@ The provider-assigned unique ID for this managed resource.
 The date that the bot alias was updated. When you create a resource, the creation date and the last updated date are the same.
 
 <h4 class="pdoc-member-header" id="GetBotAliasResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getBotAlias.ts#L92">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getBotAlias.ts#L92">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1620,7 +1620,7 @@ The date that the bot alias was updated. When you create a resource, the creatio
 The name of the alias. The name is not case sensitive.
 
 <h3 class="pdoc-module-header" id="GetBotArgs" data-link-title="GetBotArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getBot.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getBot.ts#L42">
         interface <strong>GetBotArgs</strong>
     </a>
 </h3>
@@ -1630,7 +1630,7 @@ The name of the alias. The name is not case sensitive.
 A collection of arguments for invoking getBot.
 
 <h4 class="pdoc-member-header" id="GetBotArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getBot.ts#L46">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getBot.ts#L46">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1638,7 +1638,7 @@ A collection of arguments for invoking getBot.
 The name of the bot. The name is case sensitive.
 
 <h4 class="pdoc-member-header" id="GetBotArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getBot.ts#L50">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getBot.ts#L50">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1646,7 +1646,7 @@ The name of the bot. The name is case sensitive.
 The version or alias of the bot.
 
 <h3 class="pdoc-module-header" id="GetBotResult" data-link-title="GetBotResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getBot.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getBot.ts#L56">
         interface <strong>GetBotResult</strong>
     </a>
 </h3>
@@ -1656,17 +1656,17 @@ The version or alias of the bot.
 A collection of values returned by getBot.
 
 <h4 class="pdoc-member-header" id="GetBotResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getBot.ts#L57">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getBot.ts#L57">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetBotResult-checksum">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getBot.ts#L58">property <b>checksum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getBot.ts#L58">property <b>checksum</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>checksum: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetBotResult-childDirected">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getBot.ts#L62">property <b>childDirected</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getBot.ts#L62">property <b>childDirected</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>childDirected: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1674,12 +1674,12 @@ A collection of values returned by getBot.
 Specifies if this Amazon Lex Bot is related to a website, program, or other application that is directed or targeted, in whole or in part, to children under age 13 and subject to COPPA.
 
 <h4 class="pdoc-member-header" id="GetBotResult-createdDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getBot.ts#L63">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getBot.ts#L63">property <b>createdDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdDate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetBotResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getBot.ts#L67">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getBot.ts#L67">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1687,7 +1687,7 @@ Specifies if this Amazon Lex Bot is related to a website, program, or other appl
 A description of the bot.
 
 <h4 class="pdoc-member-header" id="GetBotResult-detectSentiment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getBot.ts#L71">property <b>detectSentiment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getBot.ts#L71">property <b>detectSentiment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>detectSentiment: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1695,7 +1695,7 @@ A description of the bot.
 When set to true user utterances are sent to Amazon Comprehend for sentiment analysis.
 
 <h4 class="pdoc-member-header" id="GetBotResult-enableModelImprovements">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getBot.ts#L75">property <b>enableModelImprovements</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getBot.ts#L75">property <b>enableModelImprovements</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableModelImprovements: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1703,12 +1703,12 @@ When set to true user utterances are sent to Amazon Comprehend for sentiment ana
 Set to true if natural language understanding improvements are enabled.
 
 <h4 class="pdoc-member-header" id="GetBotResult-failureReason">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getBot.ts#L76">property <b>failureReason</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getBot.ts#L76">property <b>failureReason</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>failureReason: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetBotResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getBot.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getBot.ts#L80">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1716,7 +1716,7 @@ Set to true if natural language understanding improvements are enabled.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetBotResult-idleSessionTtlInSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getBot.ts#L84">property <b>idleSessionTtlInSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getBot.ts#L84">property <b>idleSessionTtlInSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>idleSessionTtlInSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1724,12 +1724,12 @@ The provider-assigned unique ID for this managed resource.
 The maximum time in seconds that Amazon Lex retains the data gathered in a conversation.
 
 <h4 class="pdoc-member-header" id="GetBotResult-lastUpdatedDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getBot.ts#L85">property <b>lastUpdatedDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getBot.ts#L85">property <b>lastUpdatedDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastUpdatedDate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetBotResult-locale">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getBot.ts#L89">property <b>locale</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getBot.ts#L89">property <b>locale</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>locale: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1737,7 +1737,7 @@ The maximum time in seconds that Amazon Lex retains the data gathered in a conve
 Specifies the target locale for the bot. Any intent used in the bot must be compatible with the locale of the bot.
 
 <h4 class="pdoc-member-header" id="GetBotResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getBot.ts#L93">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getBot.ts#L93">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1745,7 +1745,7 @@ Specifies the target locale for the bot. Any intent used in the bot must be comp
 The name of the bot, case sensitive.
 
 <h4 class="pdoc-member-header" id="GetBotResult-nluIntentConfidenceThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getBot.ts#L97">property <b>nluIntentConfidenceThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getBot.ts#L97">property <b>nluIntentConfidenceThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nluIntentConfidenceThreshold: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1753,17 +1753,17 @@ The name of the bot, case sensitive.
 The threshold where Amazon Lex will insert the AMAZON.FallbackIntent, AMAZON.KendraSearchIntent, or both when returning alternative intents in a PostContent or PostText response. AMAZON.FallbackIntent and AMAZON.KendraSearchIntent are only inserted if they are configured for the bot.
 
 <h4 class="pdoc-member-header" id="GetBotResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getBot.ts#L98">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getBot.ts#L98">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetBotResult-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getBot.ts#L99">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getBot.ts#L99">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetBotResult-voiceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getBot.ts#L103">property <b>voiceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getBot.ts#L103">property <b>voiceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>voiceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1771,7 +1771,7 @@ The threshold where Amazon Lex will insert the AMAZON.FallbackIntent, AMAZON.Ken
 The Amazon Polly voice ID that the Amazon Lex Bot uses for voice interactions with the user.
 
 <h3 class="pdoc-module-header" id="GetIntentArgs" data-link-title="GetIntentArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getIntent.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getIntent.ts#L42">
         interface <strong>GetIntentArgs</strong>
     </a>
 </h3>
@@ -1781,7 +1781,7 @@ The Amazon Polly voice ID that the Amazon Lex Bot uses for voice interactions wi
 A collection of arguments for invoking getIntent.
 
 <h4 class="pdoc-member-header" id="GetIntentArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getIntent.ts#L46">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getIntent.ts#L46">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1789,7 +1789,7 @@ A collection of arguments for invoking getIntent.
 The name of the intent. The name is case sensitive.
 
 <h4 class="pdoc-member-header" id="GetIntentArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getIntent.ts#L50">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getIntent.ts#L50">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1797,7 +1797,7 @@ The name of the intent. The name is case sensitive.
 The version of the intent.
 
 <h3 class="pdoc-module-header" id="GetIntentResult" data-link-title="GetIntentResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getIntent.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getIntent.ts#L56">
         interface <strong>GetIntentResult</strong>
     </a>
 </h3>
@@ -1807,7 +1807,7 @@ The version of the intent.
 A collection of values returned by getIntent.
 
 <h4 class="pdoc-member-header" id="GetIntentResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getIntent.ts#L60">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getIntent.ts#L60">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1815,7 +1815,7 @@ A collection of values returned by getIntent.
 The ARN of the Lex intent.
 
 <h4 class="pdoc-member-header" id="GetIntentResult-checksum">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getIntent.ts#L65">property <b>checksum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getIntent.ts#L65">property <b>checksum</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>checksum: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1824,7 +1824,7 @@ Checksum identifying the version of the intent that was created. The checksum is
 included as an argument because the resource will add it automatically when updating the intent.
 
 <h4 class="pdoc-member-header" id="GetIntentResult-createdDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getIntent.ts#L69">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getIntent.ts#L69">property <b>createdDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdDate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1832,7 +1832,7 @@ included as an argument because the resource will add it automatically when upda
 The date when the intent version was created.
 
 <h4 class="pdoc-member-header" id="GetIntentResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getIntent.ts#L73">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getIntent.ts#L73">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1840,7 +1840,7 @@ The date when the intent version was created.
 A description of the intent.
 
 <h4 class="pdoc-member-header" id="GetIntentResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getIntent.ts#L77">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getIntent.ts#L77">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1848,7 +1848,7 @@ A description of the intent.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetIntentResult-lastUpdatedDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getIntent.ts#L81">property <b>lastUpdatedDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getIntent.ts#L81">property <b>lastUpdatedDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastUpdatedDate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1856,7 +1856,7 @@ The provider-assigned unique ID for this managed resource.
 The date when the $LATEST version of this intent was updated.
 
 <h4 class="pdoc-member-header" id="GetIntentResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getIntent.ts#L85">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getIntent.ts#L85">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1864,7 +1864,7 @@ The date when the $LATEST version of this intent was updated.
 The name of the intent, not case sensitive.
 
 <h4 class="pdoc-member-header" id="GetIntentResult-parentIntentSignature">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getIntent.ts#L92">property <b>parentIntentSignature</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getIntent.ts#L92">property <b>parentIntentSignature</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parentIntentSignature: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1875,7 +1875,7 @@ intent on. To find the signature for an intent, see
 in the Alexa Skills Kit.
 
 <h4 class="pdoc-member-header" id="GetIntentResult-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getIntent.ts#L96">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getIntent.ts#L96">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1883,7 +1883,7 @@ in the Alexa Skills Kit.
 The version of the bot.
 
 <h3 class="pdoc-module-header" id="GetSlotTypeArgs" data-link-title="GetSlotTypeArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getSlotType.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getSlotType.ts#L42">
         interface <strong>GetSlotTypeArgs</strong>
     </a>
 </h3>
@@ -1893,7 +1893,7 @@ The version of the bot.
 A collection of arguments for invoking getSlotType.
 
 <h4 class="pdoc-member-header" id="GetSlotTypeArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getSlotType.ts#L46">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getSlotType.ts#L46">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1901,7 +1901,7 @@ A collection of arguments for invoking getSlotType.
 The name of the slot type. The name is case sensitive.
 
 <h4 class="pdoc-member-header" id="GetSlotTypeArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getSlotType.ts#L50">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getSlotType.ts#L50">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1909,7 +1909,7 @@ The name of the slot type. The name is case sensitive.
 The version of the slot type.
 
 <h3 class="pdoc-module-header" id="GetSlotTypeResult" data-link-title="GetSlotTypeResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getSlotType.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getSlotType.ts#L56">
         interface <strong>GetSlotTypeResult</strong>
     </a>
 </h3>
@@ -1919,7 +1919,7 @@ The version of the slot type.
 A collection of values returned by getSlotType.
 
 <h4 class="pdoc-member-header" id="GetSlotTypeResult-checksum">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getSlotType.ts#L61">property <b>checksum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getSlotType.ts#L61">property <b>checksum</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>checksum: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1928,7 +1928,7 @@ Checksum identifying the version of the slot type that was created. The checksum
 not included as an argument because the resource will add it automatically when updating the slot type.
 
 <h4 class="pdoc-member-header" id="GetSlotTypeResult-createdDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getSlotType.ts#L65">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getSlotType.ts#L65">property <b>createdDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdDate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1936,7 +1936,7 @@ not included as an argument because the resource will add it automatically when 
 The date when the slot type version was created.
 
 <h4 class="pdoc-member-header" id="GetSlotTypeResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getSlotType.ts#L69">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getSlotType.ts#L69">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1944,7 +1944,7 @@ The date when the slot type version was created.
 A description of the slot type.
 
 <h4 class="pdoc-member-header" id="GetSlotTypeResult-enumerationValues">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getSlotType.ts#L75">property <b>enumerationValues</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getSlotType.ts#L75">property <b>enumerationValues</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enumerationValues: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSlotTypeEnumerationValue'>GetSlotTypeEnumerationValue</a>[];</code></pre>
@@ -1954,7 +1954,7 @@ the slot type can take. Each value can have a set of synonyms, which are additio
 train the machine learning model about the values that it resolves for a slot.
 
 <h4 class="pdoc-member-header" id="GetSlotTypeResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getSlotType.ts#L79">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getSlotType.ts#L79">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1962,7 +1962,7 @@ train the machine learning model about the values that it resolves for a slot.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetSlotTypeResult-lastUpdatedDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getSlotType.ts#L83">property <b>lastUpdatedDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getSlotType.ts#L83">property <b>lastUpdatedDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastUpdatedDate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1970,7 +1970,7 @@ The provider-assigned unique ID for this managed resource.
 The date when the $LATEST version of this slot type was updated.
 
 <h4 class="pdoc-member-header" id="GetSlotTypeResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getSlotType.ts#L87">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getSlotType.ts#L87">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1978,7 +1978,7 @@ The date when the $LATEST version of this slot type was updated.
 The name of the slot type. The name is not case sensitive.
 
 <h4 class="pdoc-member-header" id="GetSlotTypeResult-valueSelectionStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getSlotType.ts#L94">property <b>valueSelectionStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getSlotType.ts#L94">property <b>valueSelectionStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueSelectionStrategy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1989,7 +1989,7 @@ value is similar to the slot value. `TOP_RESOLUTION` returns the first value in 
 if there is a resolution list for the slot, otherwise null is returned.
 
 <h4 class="pdoc-member-header" id="GetSlotTypeResult-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/getSlotType.ts#L98">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/getSlotType.ts#L98">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1997,7 +1997,7 @@ if there is a resolution list for the slot, otherwise null is returned.
 The version of the slot type.
 
 <h3 class="pdoc-module-header" id="IntentArgs" data-link-title="IntentArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L377">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L377">
         interface <strong>IntentArgs</strong>
     </a>
 </h3>
@@ -2007,7 +2007,7 @@ The version of the slot type.
 The set of arguments for constructing a Intent resource.
 
 <h4 class="pdoc-member-header" id="IntentArgs-conclusionStatement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L385">property <b>conclusionStatement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L385">property <b>conclusionStatement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>conclusionStatement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IntentConclusionStatement'>IntentConclusionStatement</a>&gt;;</code></pre>
@@ -2019,7 +2019,7 @@ application, you can't specify this element. The `followUpPrompt` and `conclusio
 mutually exclusive. You can specify only one. Attributes are documented under statement.
 
 <h4 class="pdoc-member-header" id="IntentArgs-confirmationPrompt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L391">property <b>confirmationPrompt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L391">property <b>confirmationPrompt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>confirmationPrompt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IntentConfirmationPrompt'>IntentConfirmationPrompt</a>&gt;;</code></pre>
@@ -2029,7 +2029,7 @@ have a yes or no answer. You you must provide both the `rejectionStatement` and 
 or neither. Attributes are documented under prompt.
 
 <h4 class="pdoc-member-header" id="IntentArgs-createVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L396">property <b>createVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L396">property <b>createVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2038,7 +2038,7 @@ Determines if a new slot type version is created when the initial
 resource is created and on each update. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="IntentArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L400">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L400">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2046,7 +2046,7 @@ resource is created and on each update. Defaults to `false`.
 A description of the bot.
 
 <h4 class="pdoc-member-header" id="IntentArgs-dialogCodeHook">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L405">property <b>dialogCodeHook</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L405">property <b>dialogCodeHook</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dialogCodeHook?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IntentDialogCodeHook'>IntentDialogCodeHook</a>&gt;;</code></pre>
@@ -2055,7 +2055,7 @@ Specifies a Lambda function to invoke for each user input. You can
 invoke this Lambda function to personalize user interaction. Attributes are documented under code_hook.
 
 <h4 class="pdoc-member-header" id="IntentArgs-followUpPrompt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L412">property <b>followUpPrompt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L412">property <b>followUpPrompt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>followUpPrompt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IntentFollowUpPrompt'>IntentFollowUpPrompt</a>&gt;;</code></pre>
@@ -2066,7 +2066,7 @@ user to order a drink. The `followUpPrompt` field and the `conclusionStatement` 
 exclusive. You can specify only one. Attributes are documented under follow_up_prompt.
 
 <h4 class="pdoc-member-header" id="IntentArgs-fulfillmentActivity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L418">property <b>fulfillmentActivity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L418">property <b>fulfillmentActivity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fulfillmentActivity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IntentFulfillmentActivity'>IntentFulfillmentActivity</a>&gt;;</code></pre>
@@ -2076,7 +2076,7 @@ user provides all of the information for a pizza order, `fulfillmentActivity` de
 places an order with a local pizza store. Attributes are documented under fulfillment_activity.
 
 <h4 class="pdoc-member-header" id="IntentArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L422">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L422">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2084,7 +2084,7 @@ places an order with a local pizza store. Attributes are documented under fulfil
 The name of the intent slot that you want to create. The name is case sensitive.
 
 <h4 class="pdoc-member-header" id="IntentArgs-parentIntentSignature">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L429">property <b>parentIntentSignature</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L429">property <b>parentIntentSignature</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parentIntentSignature?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2095,7 +2095,7 @@ intent on. To find the signature for an intent, see
 in the Alexa Skills Kit.
 
 <h4 class="pdoc-member-header" id="IntentArgs-rejectionStatement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L435">property <b>rejectionStatement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L435">property <b>rejectionStatement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rejectionStatement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IntentRejectionStatement'>IntentRejectionStatement</a>&gt;;</code></pre>
@@ -2105,7 +2105,7 @@ Amazon Lex responds with this statement to acknowledge that the intent was cance
 documented below under statement.
 
 <h4 class="pdoc-member-header" id="IntentArgs-sampleUtterances">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L441">property <b>sampleUtterances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L441">property <b>sampleUtterances</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sampleUtterances?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2115,7 +2115,7 @@ an Amazon Lex request for a slot value, you can provide those utterances to impr
 is optional. In most cases, Amazon Lex is capable of understanding user utterances.
 
 <h4 class="pdoc-member-header" id="IntentArgs-slots">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L446">property <b>slots</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L446">property <b>slots</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>slots?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IntentSlot'>IntentSlot</a>&gt;[]&gt;;</code></pre>
@@ -2124,7 +2124,7 @@ An list of intent slots. At runtime, Amazon Lex elicits required slot values
 from the user using prompts defined in the slots. Attributes are documented under slot.
 
 <h3 class="pdoc-module-header" id="IntentState" data-link-title="IntentState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L281">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L281">
         interface <strong>IntentState</strong>
     </a>
 </h3>
@@ -2134,7 +2134,7 @@ from the user using prompts defined in the slots. Attributes are documented unde
 Input properties used for looking up and filtering Intent resources.
 
 <h4 class="pdoc-member-header" id="IntentState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L285">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L285">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2142,7 +2142,7 @@ Input properties used for looking up and filtering Intent resources.
 The ARN of the Lex intent.
 
 <h4 class="pdoc-member-header" id="IntentState-checksum">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L290">property <b>checksum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L290">property <b>checksum</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>checksum?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2151,7 +2151,7 @@ Checksum identifying the version of the intent that was created. The checksum is
 included as an argument because the resource will add it automatically when updating the intent.
 
 <h4 class="pdoc-member-header" id="IntentState-conclusionStatement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L298">property <b>conclusionStatement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L298">property <b>conclusionStatement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>conclusionStatement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IntentConclusionStatement'>IntentConclusionStatement</a>&gt;;</code></pre>
@@ -2163,7 +2163,7 @@ application, you can't specify this element. The `followUpPrompt` and `conclusio
 mutually exclusive. You can specify only one. Attributes are documented under statement.
 
 <h4 class="pdoc-member-header" id="IntentState-confirmationPrompt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L304">property <b>confirmationPrompt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L304">property <b>confirmationPrompt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>confirmationPrompt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IntentConfirmationPrompt'>IntentConfirmationPrompt</a>&gt;;</code></pre>
@@ -2173,7 +2173,7 @@ have a yes or no answer. You you must provide both the `rejectionStatement` and 
 or neither. Attributes are documented under prompt.
 
 <h4 class="pdoc-member-header" id="IntentState-createVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L309">property <b>createVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L309">property <b>createVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2182,7 +2182,7 @@ Determines if a new slot type version is created when the initial
 resource is created and on each update. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="IntentState-createdDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L313">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L313">property <b>createdDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2190,7 +2190,7 @@ resource is created and on each update. Defaults to `false`.
 The date when the intent version was created.
 
 <h4 class="pdoc-member-header" id="IntentState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L317">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L317">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2198,7 +2198,7 @@ The date when the intent version was created.
 A description of the bot.
 
 <h4 class="pdoc-member-header" id="IntentState-dialogCodeHook">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L322">property <b>dialogCodeHook</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L322">property <b>dialogCodeHook</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dialogCodeHook?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IntentDialogCodeHook'>IntentDialogCodeHook</a>&gt;;</code></pre>
@@ -2207,7 +2207,7 @@ Specifies a Lambda function to invoke for each user input. You can
 invoke this Lambda function to personalize user interaction. Attributes are documented under code_hook.
 
 <h4 class="pdoc-member-header" id="IntentState-followUpPrompt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L329">property <b>followUpPrompt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L329">property <b>followUpPrompt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>followUpPrompt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IntentFollowUpPrompt'>IntentFollowUpPrompt</a>&gt;;</code></pre>
@@ -2218,7 +2218,7 @@ user to order a drink. The `followUpPrompt` field and the `conclusionStatement` 
 exclusive. You can specify only one. Attributes are documented under follow_up_prompt.
 
 <h4 class="pdoc-member-header" id="IntentState-fulfillmentActivity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L335">property <b>fulfillmentActivity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L335">property <b>fulfillmentActivity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fulfillmentActivity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IntentFulfillmentActivity'>IntentFulfillmentActivity</a>&gt;;</code></pre>
@@ -2228,7 +2228,7 @@ user provides all of the information for a pizza order, `fulfillmentActivity` de
 places an order with a local pizza store. Attributes are documented under fulfillment_activity.
 
 <h4 class="pdoc-member-header" id="IntentState-lastUpdatedDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L339">property <b>lastUpdatedDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L339">property <b>lastUpdatedDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastUpdatedDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2236,7 +2236,7 @@ places an order with a local pizza store. Attributes are documented under fulfil
 The date when the $LATEST version of this intent was updated.
 
 <h4 class="pdoc-member-header" id="IntentState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L343">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L343">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2244,7 +2244,7 @@ The date when the $LATEST version of this intent was updated.
 The name of the intent slot that you want to create. The name is case sensitive.
 
 <h4 class="pdoc-member-header" id="IntentState-parentIntentSignature">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L350">property <b>parentIntentSignature</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L350">property <b>parentIntentSignature</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parentIntentSignature?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2255,7 +2255,7 @@ intent on. To find the signature for an intent, see
 in the Alexa Skills Kit.
 
 <h4 class="pdoc-member-header" id="IntentState-rejectionStatement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L356">property <b>rejectionStatement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L356">property <b>rejectionStatement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rejectionStatement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IntentRejectionStatement'>IntentRejectionStatement</a>&gt;;</code></pre>
@@ -2265,7 +2265,7 @@ Amazon Lex responds with this statement to acknowledge that the intent was cance
 documented below under statement.
 
 <h4 class="pdoc-member-header" id="IntentState-sampleUtterances">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L362">property <b>sampleUtterances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L362">property <b>sampleUtterances</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sampleUtterances?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2275,7 +2275,7 @@ an Amazon Lex request for a slot value, you can provide those utterances to impr
 is optional. In most cases, Amazon Lex is capable of understanding user utterances.
 
 <h4 class="pdoc-member-header" id="IntentState-slots">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L367">property <b>slots</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L367">property <b>slots</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>slots?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IntentSlot'>IntentSlot</a>&gt;[]&gt;;</code></pre>
@@ -2284,7 +2284,7 @@ An list of intent slots. At runtime, Amazon Lex elicits required slot values
 from the user using prompts defined in the slots. Attributes are documented under slot.
 
 <h4 class="pdoc-member-header" id="IntentState-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/intent.ts#L371">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/intent.ts#L371">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2292,7 +2292,7 @@ from the user using prompts defined in the slots. Attributes are documented unde
 The version of the bot.
 
 <h3 class="pdoc-module-header" id="SlotTypeArgs" data-link-title="SlotTypeArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/slotType.ts#L216">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/slotType.ts#L216">
         interface <strong>SlotTypeArgs</strong>
     </a>
 </h3>
@@ -2302,7 +2302,7 @@ The version of the bot.
 The set of arguments for constructing a SlotType resource.
 
 <h4 class="pdoc-member-header" id="SlotTypeArgs-createVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/slotType.ts#L221">property <b>createVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/slotType.ts#L221">property <b>createVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2311,7 +2311,7 @@ Determines if a new slot type version is created when the initial resource is cr
 update. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="SlotTypeArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/slotType.ts#L225">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/slotType.ts#L225">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2319,7 +2319,7 @@ update. Defaults to `false`.
 A description of the slot type.
 
 <h4 class="pdoc-member-header" id="SlotTypeArgs-enumerationValues">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/slotType.ts#L232">property <b>enumerationValues</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/slotType.ts#L232">property <b>enumerationValues</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enumerationValues: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SlotTypeEnumerationValue'>SlotTypeEnumerationValue</a>&gt;[]&gt;;</code></pre>
@@ -2330,7 +2330,7 @@ train the machine learning model about the values that it resolves for a slot. A
 documented under enumeration_value.
 
 <h4 class="pdoc-member-header" id="SlotTypeArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/slotType.ts#L236">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/slotType.ts#L236">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2338,7 +2338,7 @@ documented under enumeration_value.
 The name of the slot type. The name is not case sensitive.
 
 <h4 class="pdoc-member-header" id="SlotTypeArgs-valueSelectionStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/slotType.ts#L243">property <b>valueSelectionStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/slotType.ts#L243">property <b>valueSelectionStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueSelectionStrategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2349,7 +2349,7 @@ value is similar to the slot value. `TOP_RESOLUTION` returns the first value in 
 if there is a resolution list for the slot, otherwise null is returned. Defaults to `ORIGINAL_VALUE`.
 
 <h3 class="pdoc-module-header" id="SlotTypeState" data-link-title="SlotTypeState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/slotType.ts#L166">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/slotType.ts#L166">
         interface <strong>SlotTypeState</strong>
     </a>
 </h3>
@@ -2359,7 +2359,7 @@ if there is a resolution list for the slot, otherwise null is returned. Defaults
 Input properties used for looking up and filtering SlotType resources.
 
 <h4 class="pdoc-member-header" id="SlotTypeState-checksum">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/slotType.ts#L171">property <b>checksum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/slotType.ts#L171">property <b>checksum</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>checksum?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2368,7 +2368,7 @@ Checksum identifying the version of the slot type that was created. The checksum
 not included as an argument because the resource will add it automatically when updating the slot type.
 
 <h4 class="pdoc-member-header" id="SlotTypeState-createVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/slotType.ts#L176">property <b>createVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/slotType.ts#L176">property <b>createVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2377,7 +2377,7 @@ Determines if a new slot type version is created when the initial resource is cr
 update. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="SlotTypeState-createdDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/slotType.ts#L180">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/slotType.ts#L180">property <b>createdDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2385,7 +2385,7 @@ update. Defaults to `false`.
 The date when the slot type version was created.
 
 <h4 class="pdoc-member-header" id="SlotTypeState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/slotType.ts#L184">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/slotType.ts#L184">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2393,7 +2393,7 @@ The date when the slot type version was created.
 A description of the slot type.
 
 <h4 class="pdoc-member-header" id="SlotTypeState-enumerationValues">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/slotType.ts#L191">property <b>enumerationValues</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/slotType.ts#L191">property <b>enumerationValues</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enumerationValues?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SlotTypeEnumerationValue'>SlotTypeEnumerationValue</a>&gt;[]&gt;;</code></pre>
@@ -2404,7 +2404,7 @@ train the machine learning model about the values that it resolves for a slot. A
 documented under enumeration_value.
 
 <h4 class="pdoc-member-header" id="SlotTypeState-lastUpdatedDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/slotType.ts#L195">property <b>lastUpdatedDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/slotType.ts#L195">property <b>lastUpdatedDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastUpdatedDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2412,7 +2412,7 @@ documented under enumeration_value.
 The date when the `$LATEST` version of this slot type was updated.
 
 <h4 class="pdoc-member-header" id="SlotTypeState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/slotType.ts#L199">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/slotType.ts#L199">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2420,7 +2420,7 @@ The date when the `$LATEST` version of this slot type was updated.
 The name of the slot type. The name is not case sensitive.
 
 <h4 class="pdoc-member-header" id="SlotTypeState-valueSelectionStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/slotType.ts#L206">property <b>valueSelectionStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/slotType.ts#L206">property <b>valueSelectionStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueSelectionStrategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2431,7 +2431,7 @@ value is similar to the slot value. `TOP_RESOLUTION` returns the first value in 
 if there is a resolution list for the slot, otherwise null is returned. Defaults to `ORIGINAL_VALUE`.
 
 <h4 class="pdoc-member-header" id="SlotTypeState-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/lex/slotType.ts#L210">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/lex/slotType.ts#L210">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

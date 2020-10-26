@@ -2682,6 +2682,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="s3outposts_csharp">
+<a href="#s3outposts_csharp" style="color: inherit; text-decoration: inherit;">S3outposts</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="sagemaker_csharp">
 <a href="#sagemaker_csharp" style="color: inherit; text-decoration: inherit;">Sagemaker</a>
 </span> 
@@ -4111,6 +4121,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="s3control_go">
 <a href="#s3control_go" style="color: inherit; text-decoration: inherit;">S3control</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="s3outposts_go">
+<a href="#s3outposts_go" style="color: inherit; text-decoration: inherit;">S3outposts</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -5556,6 +5576,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="s3outposts_nodejs">
+<a href="#s3outposts_nodejs" style="color: inherit; text-decoration: inherit;">s3outposts</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="sagemaker_nodejs">
 <a href="#sagemaker_nodejs" style="color: inherit; text-decoration: inherit;">sagemaker</a>
 </span> 
@@ -6985,6 +7015,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="s3control_python">
 <a href="#s3control_python" style="color: inherit; text-decoration: inherit;">s3control</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="s3outposts_python">
+<a href="#s3outposts_python" style="color: inherit; text-decoration: inherit;">s3outposts</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
