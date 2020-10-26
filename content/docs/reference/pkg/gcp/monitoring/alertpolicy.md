@@ -35,7 +35,7 @@ To get more information about AlertPolicy, see:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicy">NewAlertPolicy</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyArgs">AlertPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicy">AlertPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicy">NewAlertPolicy</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyArgs">AlertPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicy">AlertPolicy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -109,7 +109,7 @@ To get more information about AlertPolicy, see:
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -129,7 +129,7 @@ To get more information about AlertPolicy, see:
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyArgs">AlertPolicyArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyArgs">AlertPolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -139,7 +139,7 @@ To get more information about AlertPolicy, see:
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -696,11 +696,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="creationrecord_csharp">
-<a href="#creationrecord_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Record</a>
+        <span id="creationrecords_csharp">
+<a href="#creationrecords_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Records</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicycreationrecord">Alert<wbr>Policy<wbr>Creation<wbr>Record</a></span>
+        <span class="property-type"><a href="#alertpolicycreationrecord">List&lt;Alert<wbr>Policy<wbr>Creation<wbr>Record&gt;</a></span>
     </dt>
     <dd>{{% md %}}A read-only record of the creation of the alerting policy. If provided in a call to create or update, this field will be
 ignored.
@@ -742,11 +742,11 @@ policy.
 
     <dt class="property-"
             title="">
-        <span id="creationrecord_go">
-<a href="#creationrecord_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Record</a>
+        <span id="creationrecords_go">
+<a href="#creationrecords_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Records</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicycreationrecord">Alert<wbr>Policy<wbr>Creation<wbr>Record</a></span>
+        <span class="property-type"><a href="#alertpolicycreationrecord">[]Alert<wbr>Policy<wbr>Creation<wbr>Record</a></span>
     </dt>
     <dd>{{% md %}}A read-only record of the creation of the alerting policy. If provided in a call to create or update, this field will be
 ignored.
@@ -788,11 +788,11 @@ policy.
 
     <dt class="property-"
             title="">
-        <span id="creationrecord_nodejs">
-<a href="#creationrecord_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Record</a>
+        <span id="creationrecords_nodejs">
+<a href="#creationrecords_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Records</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicycreationrecord">Alert<wbr>Policy<wbr>Creation<wbr>Record</a></span>
+        <span class="property-type"><a href="#alertpolicycreationrecord">Alert<wbr>Policy<wbr>Creation<wbr>Record[]</a></span>
     </dt>
     <dd>{{% md %}}A read-only record of the creation of the alerting policy. If provided in a call to create or update, this field will be
 ignored.
@@ -834,11 +834,11 @@ policy.
 
     <dt class="property-"
             title="">
-        <span id="creation_record_python">
-<a href="#creation_record_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>record</a>
+        <span id="creation_records_python">
+<a href="#creation_records_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>records</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicycreationrecord">Alert<wbr>Policy<wbr>Creation<wbr>Record</a></span>
+        <span class="property-type"><a href="#alertpolicycreationrecord">Sequence[Alert<wbr>Policy<wbr>Creation<wbr>Record]</a></span>
     </dt>
     <dd>{{% md %}}A read-only record of the creation of the alerting policy. If provided in a call to create or update, this field will be
 ignored.
@@ -891,11 +891,11 @@ Get an existing AlertPolicy resource's state with the given name, ID, and option
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">combiner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[Sequence[AlertPolicyConditionArgs]]</span> = None<span class="p">, </span><span class="nx">creation_record</span><span class="p">:</span> <span class="nx">Optional[AlertPolicyCreationRecordArgs]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">documentation</span><span class="p">:</span> <span class="nx">Optional[AlertPolicyDocumentationArgs]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_channels</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> AlertPolicy</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">combiner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[Sequence[AlertPolicyConditionArgs]]</span> = None<span class="p">, </span><span class="nx">creation_records</span><span class="p">:</span> <span class="nx">Optional[Sequence[AlertPolicyCreationRecordArgs]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">documentation</span><span class="p">:</span> <span class="nx">Optional[AlertPolicyDocumentationArgs]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_channels</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> AlertPolicy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAlertPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyState">AlertPolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicy">AlertPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAlertPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyState">AlertPolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicy">AlertPolicy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1035,11 +1035,11 @@ Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_creationrecord_csharp">
-<a href="#state_creationrecord_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Record</a>
+        <span id="state_creationrecords_csharp">
+<a href="#state_creationrecords_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Records</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicycreationrecord">Alert<wbr>Policy<wbr>Creation<wbr>Record<wbr>Args</a></span>
+        <span class="property-type"><a href="#alertpolicycreationrecord">List&lt;Alert<wbr>Policy<wbr>Creation<wbr>Record<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A read-only record of the creation of the alerting policy. If provided in a call to create or update, this field will be
 ignored.
@@ -1184,11 +1184,11 @@ Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_creationrecord_go">
-<a href="#state_creationrecord_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Record</a>
+        <span id="state_creationrecords_go">
+<a href="#state_creationrecords_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Records</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicycreationrecord">Alert<wbr>Policy<wbr>Creation<wbr>Record</a></span>
+        <span class="property-type"><a href="#alertpolicycreationrecord">[]Alert<wbr>Policy<wbr>Creation<wbr>Record</a></span>
     </dt>
     <dd>{{% md %}}A read-only record of the creation of the alerting policy. If provided in a call to create or update, this field will be
 ignored.
@@ -1333,11 +1333,11 @@ Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_creationrecord_nodejs">
-<a href="#state_creationrecord_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Record</a>
+        <span id="state_creationrecords_nodejs">
+<a href="#state_creationrecords_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Records</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicycreationrecord">Alert<wbr>Policy<wbr>Creation<wbr>Record</a></span>
+        <span class="property-type"><a href="#alertpolicycreationrecord">Alert<wbr>Policy<wbr>Creation<wbr>Record[]</a></span>
     </dt>
     <dd>{{% md %}}A read-only record of the creation of the alerting policy. If provided in a call to create or update, this field will be
 ignored.
@@ -1482,11 +1482,11 @@ Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_creation_record_python">
-<a href="#state_creation_record_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>record</a>
+        <span id="state_creation_records_python">
+<a href="#state_creation_records_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>records</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicycreationrecord">Alert<wbr>Policy<wbr>Creation<wbr>Record<wbr>Args</a></span>
+        <span class="property-type"><a href="#alertpolicycreationrecord">Sequence[Alert<wbr>Policy<wbr>Creation<wbr>Record<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A read-only record of the creation of the alerting policy. If provided in a call to create or update, this field will be
 ignored.
@@ -1615,7 +1615,7 @@ must begin with a letter.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyConditionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.AlertPolicyConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.AlertPolicyCondition.html">output</a> API doc for this type.
@@ -1893,7 +1893,7 @@ policy.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionAbsentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionAbsentOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionAbsentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionAbsentOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.AlertPolicyConditionConditionAbsentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.AlertPolicyConditionConditionAbsent.html">output</a> API doc for this type.
@@ -2299,7 +2299,7 @@ Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionAbsentAggregationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionAbsentAggregationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionAbsentAggregationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionAbsentAggregationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.AlertPolicyConditionConditionAbsentAggregationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.AlertPolicyConditionConditionAbsentAggregation.html">output</a> API doc for this type.
@@ -2805,7 +2805,7 @@ Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLAT
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionAbsentTriggerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionAbsentTriggerOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionAbsentTriggerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionAbsentTriggerOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.AlertPolicyConditionConditionAbsentTriggerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.AlertPolicyConditionConditionAbsentTrigger.html">output</a> API doc for this type.
@@ -2955,7 +2955,7 @@ condition to be triggered.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.AlertPolicyConditionConditionThresholdArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.AlertPolicyConditionConditionThreshold.html">output</a> API doc for this type.
@@ -3693,7 +3693,7 @@ Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdAggregationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdAggregationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdAggregationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdAggregationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.AlertPolicyConditionConditionThresholdAggregationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.AlertPolicyConditionConditionThresholdAggregation.html">output</a> API doc for this type.
@@ -4199,7 +4199,7 @@ Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLAT
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdDenominatorAggregationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdDenominatorAggregationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdDenominatorAggregationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdDenominatorAggregationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.AlertPolicyConditionConditionThresholdDenominatorAggregationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.AlertPolicyConditionConditionThresholdDenominatorAggregation.html">output</a> API doc for this type.
@@ -4705,7 +4705,7 @@ Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLAT
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdTriggerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdTriggerOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdTriggerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdTriggerOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.AlertPolicyConditionConditionThresholdTriggerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.AlertPolicyConditionConditionThresholdTrigger.html">output</a> API doc for this type.
@@ -4855,7 +4855,7 @@ condition to be triggered.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyCreationRecordOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyCreationRecordOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.AlertPolicyCreationRecord.html">output</a> API doc for this type.
@@ -4981,7 +4981,7 @@ condition to be triggered.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyDocumentationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyDocumentationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyDocumentationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyDocumentationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.AlertPolicyDocumentationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.AlertPolicyDocumentation.html">output</a> API doc for this type.

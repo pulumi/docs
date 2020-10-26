@@ -3,7 +3,7 @@ title: "Module cloudscheduler"
 title_tag: "Module cloudscheduler | Package @pulumi/gcp | Node.js SDK"
 linktitle: "cloudscheduler"
 meta_desc: "Explore members of the cloudscheduler module in the @pulumi/gcp package."
-git_sha: "fc3da3c5794a45df688a785c73dd9311acde14c6"
+git_sha: "392523e57a3e8f1656dce673bd0ce66ebb8dc12e"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Job" data-link-title="Job">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudscheduler/job.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudscheduler/job.ts#L25">
         Resource <strong>Job</strong>
     </a>
 </h3>
@@ -53,7 +53,7 @@ To get more information about Job, see:
 #### Example Usage
 
 <h4 class="pdoc-member-header" id="Job-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudscheduler/job.ts#L117"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudscheduler/job.ts#L118"> <b>constructor</b></a>
 </h4>
 
 
@@ -67,7 +67,7 @@ Create a Job resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Job-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudscheduler/job.ts#L35">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudscheduler/job.ts#L35">method <b>get</b></a>
 </h4>
 
 
@@ -78,14 +78,14 @@ Get an existing Job resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Job-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudscheduler/job.ts#L25">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudscheduler/job.ts#L25">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Job-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudscheduler/job.ts#L46">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudscheduler/job.ts#L46">method <b>isInstance</b></a>
 </h4>
 
 
@@ -96,7 +96,7 @@ Returns true if the given object is an instance of Job.  This is designed to wor
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Job-appEngineHttpTarget">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudscheduler/job.ts#L59">property <b>appEngineHttpTarget</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudscheduler/job.ts#L59">property <b>appEngineHttpTarget</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>appEngineHttpTarget: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobAppEngineHttpTarget'>JobAppEngineHttpTarget</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -107,7 +107,7 @@ send a request to the service instance
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Job-attemptDeadline">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudscheduler/job.ts#L69">property <b>attemptDeadline</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudscheduler/job.ts#L70">property <b>attemptDeadline</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>attemptDeadline: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -118,10 +118,11 @@ execution logs. Cloud Scheduler will retry the job according to the RetryConfig.
 The allowed duration for this deadline is:
 * For HTTP targets, between 15 seconds and 30 minutes.
 * For App Engine HTTP targets, between 15 seconds and 24 hours.
+* **Note**: For PubSub targets, this field is ignored - setting it will introduce an unresolvable diff.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
 
 <h4 class="pdoc-member-header" id="Job-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudscheduler/job.ts#L74">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudscheduler/job.ts#L75">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -130,7 +131,7 @@ A human-readable description for the job.
 This string must not contain more than 500 characters.
 
 <h4 class="pdoc-member-header" id="Job-httpTarget">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudscheduler/job.ts#L81">property <b>httpTarget</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudscheduler/job.ts#L82">property <b>httpTarget</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>httpTarget: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobHttpTarget'>JobHttpTarget</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -141,7 +142,7 @@ send a request to the targeted url
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Job-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudscheduler/job.ts#L25">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudscheduler/job.ts#L25">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -150,7 +151,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Job-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudscheduler/job.ts#L85">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudscheduler/job.ts#L86">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -158,7 +159,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the job.
 
 <h4 class="pdoc-member-header" id="Job-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudscheduler/job.ts#L90">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudscheduler/job.ts#L91">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -167,7 +168,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="Job-pubsubTarget">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudscheduler/job.ts#L97">property <b>pubsubTarget</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudscheduler/job.ts#L98">property <b>pubsubTarget</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pubsubTarget: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobPubsubTarget'>JobPubsubTarget</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -178,7 +179,7 @@ a message to the provided topic
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Job-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudscheduler/job.ts#L101">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudscheduler/job.ts#L102">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -186,7 +187,7 @@ Structure is documented below.
 Region where the scheduler job resides. If it is not provided, this provider will use the provider default.
 
 <h4 class="pdoc-member-header" id="Job-retryConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudscheduler/job.ts#L108">property <b>retryConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudscheduler/job.ts#L109">property <b>retryConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>retryConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobRetryConfig'>JobRetryConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -197,7 +198,7 @@ then it will be retried with exponential backoff according to the settings
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Job-schedule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudscheduler/job.ts#L112">property <b>schedule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudscheduler/job.ts#L113">property <b>schedule</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>schedule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -205,7 +206,7 @@ Structure is documented below.
 Describes the schedule on which the job will be executed.
 
 <h4 class="pdoc-member-header" id="Job-timeZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudscheduler/job.ts#L117">property <b>timeZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudscheduler/job.ts#L118">property <b>timeZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>timeZone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -214,7 +215,7 @@ Specifies the time zone to be used in interpreting schedule.
 The value of this field must be a time zone name from the tz database.
 
 <h4 class="pdoc-member-header" id="Job-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudscheduler/job.ts#L25">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudscheduler/job.ts#L25">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -226,7 +227,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="JobArgs" data-link-title="JobArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudscheduler/job.ts#L241">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudscheduler/job.ts#L243">
         interface <strong>JobArgs</strong>
     </a>
 </h3>
@@ -236,7 +237,7 @@ deployments.
 The set of arguments for constructing a Job resource.
 
 <h4 class="pdoc-member-header" id="JobArgs-appEngineHttpTarget">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudscheduler/job.ts#L248">property <b>appEngineHttpTarget</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudscheduler/job.ts#L250">property <b>appEngineHttpTarget</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appEngineHttpTarget?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobAppEngineHttpTarget'>JobAppEngineHttpTarget</a>&gt;;</code></pre>
@@ -247,7 +248,7 @@ send a request to the service instance
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="JobArgs-attemptDeadline">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudscheduler/job.ts#L258">property <b>attemptDeadline</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudscheduler/job.ts#L261">property <b>attemptDeadline</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attemptDeadline?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -258,10 +259,11 @@ execution logs. Cloud Scheduler will retry the job according to the RetryConfig.
 The allowed duration for this deadline is:
 * For HTTP targets, between 15 seconds and 30 minutes.
 * For App Engine HTTP targets, between 15 seconds and 24 hours.
+* **Note**: For PubSub targets, this field is ignored - setting it will introduce an unresolvable diff.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
 
 <h4 class="pdoc-member-header" id="JobArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudscheduler/job.ts#L263">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudscheduler/job.ts#L266">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -270,7 +272,7 @@ A human-readable description for the job.
 This string must not contain more than 500 characters.
 
 <h4 class="pdoc-member-header" id="JobArgs-httpTarget">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudscheduler/job.ts#L270">property <b>httpTarget</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudscheduler/job.ts#L273">property <b>httpTarget</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpTarget?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobHttpTarget'>JobHttpTarget</a>&gt;;</code></pre>
@@ -281,7 +283,7 @@ send a request to the targeted url
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="JobArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudscheduler/job.ts#L274">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudscheduler/job.ts#L277">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -289,7 +291,7 @@ Structure is documented below.
 The name of the job.
 
 <h4 class="pdoc-member-header" id="JobArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudscheduler/job.ts#L279">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudscheduler/job.ts#L282">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -298,7 +300,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="JobArgs-pubsubTarget">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudscheduler/job.ts#L286">property <b>pubsubTarget</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudscheduler/job.ts#L289">property <b>pubsubTarget</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pubsubTarget?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobPubsubTarget'>JobPubsubTarget</a>&gt;;</code></pre>
@@ -309,7 +311,7 @@ a message to the provided topic
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="JobArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudscheduler/job.ts#L290">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudscheduler/job.ts#L293">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -317,7 +319,7 @@ Structure is documented below.
 Region where the scheduler job resides. If it is not provided, this provider will use the provider default.
 
 <h4 class="pdoc-member-header" id="JobArgs-retryConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudscheduler/job.ts#L297">property <b>retryConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudscheduler/job.ts#L300">property <b>retryConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retryConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobRetryConfig'>JobRetryConfig</a>&gt;;</code></pre>
@@ -328,7 +330,7 @@ then it will be retried with exponential backoff according to the settings
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="JobArgs-schedule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudscheduler/job.ts#L301">property <b>schedule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudscheduler/job.ts#L304">property <b>schedule</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schedule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -336,7 +338,7 @@ Structure is documented below.
 Describes the schedule on which the job will be executed.
 
 <h4 class="pdoc-member-header" id="JobArgs-timeZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudscheduler/job.ts#L306">property <b>timeZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudscheduler/job.ts#L309">property <b>timeZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -345,7 +347,7 @@ Specifies the time zone to be used in interpreting schedule.
 The value of this field must be a time zone name from the tz database.
 
 <h3 class="pdoc-module-header" id="JobState" data-link-title="JobState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudscheduler/job.ts#L170">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudscheduler/job.ts#L171">
         interface <strong>JobState</strong>
     </a>
 </h3>
@@ -355,7 +357,7 @@ The value of this field must be a time zone name from the tz database.
 Input properties used for looking up and filtering Job resources.
 
 <h4 class="pdoc-member-header" id="JobState-appEngineHttpTarget">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudscheduler/job.ts#L177">property <b>appEngineHttpTarget</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudscheduler/job.ts#L178">property <b>appEngineHttpTarget</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appEngineHttpTarget?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobAppEngineHttpTarget'>JobAppEngineHttpTarget</a>&gt;;</code></pre>
@@ -366,7 +368,7 @@ send a request to the service instance
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="JobState-attemptDeadline">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudscheduler/job.ts#L187">property <b>attemptDeadline</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudscheduler/job.ts#L189">property <b>attemptDeadline</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attemptDeadline?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -377,10 +379,11 @@ execution logs. Cloud Scheduler will retry the job according to the RetryConfig.
 The allowed duration for this deadline is:
 * For HTTP targets, between 15 seconds and 30 minutes.
 * For App Engine HTTP targets, between 15 seconds and 24 hours.
+* **Note**: For PubSub targets, this field is ignored - setting it will introduce an unresolvable diff.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
 
 <h4 class="pdoc-member-header" id="JobState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudscheduler/job.ts#L192">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudscheduler/job.ts#L194">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -389,7 +392,7 @@ A human-readable description for the job.
 This string must not contain more than 500 characters.
 
 <h4 class="pdoc-member-header" id="JobState-httpTarget">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudscheduler/job.ts#L199">property <b>httpTarget</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudscheduler/job.ts#L201">property <b>httpTarget</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpTarget?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobHttpTarget'>JobHttpTarget</a>&gt;;</code></pre>
@@ -400,7 +403,7 @@ send a request to the targeted url
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="JobState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudscheduler/job.ts#L203">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudscheduler/job.ts#L205">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -408,7 +411,7 @@ Structure is documented below.
 The name of the job.
 
 <h4 class="pdoc-member-header" id="JobState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudscheduler/job.ts#L208">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudscheduler/job.ts#L210">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -417,7 +420,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="JobState-pubsubTarget">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudscheduler/job.ts#L215">property <b>pubsubTarget</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudscheduler/job.ts#L217">property <b>pubsubTarget</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pubsubTarget?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobPubsubTarget'>JobPubsubTarget</a>&gt;;</code></pre>
@@ -428,7 +431,7 @@ a message to the provided topic
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="JobState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudscheduler/job.ts#L219">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudscheduler/job.ts#L221">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -436,7 +439,7 @@ Structure is documented below.
 Region where the scheduler job resides. If it is not provided, this provider will use the provider default.
 
 <h4 class="pdoc-member-header" id="JobState-retryConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudscheduler/job.ts#L226">property <b>retryConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudscheduler/job.ts#L228">property <b>retryConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retryConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobRetryConfig'>JobRetryConfig</a>&gt;;</code></pre>
@@ -447,7 +450,7 @@ then it will be retried with exponential backoff according to the settings
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="JobState-schedule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudscheduler/job.ts#L230">property <b>schedule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudscheduler/job.ts#L232">property <b>schedule</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schedule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -455,7 +458,7 @@ Structure is documented below.
 Describes the schedule on which the job will be executed.
 
 <h4 class="pdoc-member-header" id="JobState-timeZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/cloudscheduler/job.ts#L235">property <b>timeZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/cloudscheduler/job.ts#L237">property <b>timeZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

@@ -3,7 +3,7 @@ title: "Module secretmanager"
 title_tag: "Module secretmanager | Package @pulumi/gcp | Node.js SDK"
 linktitle: "secretmanager"
 meta_desc: "Explore members of the secretmanager module in the @pulumi/gcp package."
-git_sha: "fc3da3c5794a45df688a785c73dd9311acde14c6"
+git_sha: "392523e57a3e8f1656dce673bd0ce66ebb8dc12e"
 block_external_search_index: true
 ---
 
@@ -48,7 +48,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Secret" data-link-title="Secret">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secret.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secret.ts#L18">
         Resource <strong>Secret</strong>
     </a>
 </h3>
@@ -64,7 +64,7 @@ To get more information about Secret, see:
 #### Example Usage
 
 <h4 class="pdoc-member-header" id="Secret-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secret.ts#L79"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secret.ts#L79"> <b>constructor</b></a>
 </h4>
 
 
@@ -78,7 +78,7 @@ Create a Secret resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Secret-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secret.ts#L28">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secret.ts#L28">method <b>get</b></a>
 </h4>
 
 
@@ -89,14 +89,14 @@ Get an existing Secret resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Secret-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secret.ts#L18">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secret.ts#L18">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Secret-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secret.ts#L39">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secret.ts#L39">method <b>isInstance</b></a>
 </h4>
 
 
@@ -107,7 +107,7 @@ Returns true if the given object is an instance of Secret.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Secret-createTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secret.ts#L49">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secret.ts#L49">property <b>createTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -115,7 +115,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The time at which the Secret was created.
 
 <h4 class="pdoc-member-header" id="Secret-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secret.ts#L18">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secret.ts#L18">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -124,7 +124,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Secret-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secret.ts#L60">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secret.ts#L60">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -139,7 +139,7 @@ An object containing a list of "key": value pairs. Example:
 { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 
 <h4 class="pdoc-member-header" id="Secret-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secret.ts#L64">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secret.ts#L64">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -147,7 +147,7 @@ An object containing a list of "key": value pairs. Example:
 The resource name of the Secret. Format: 'projects/{{project}}/secrets/{{secret_id}}'
 
 <h4 class="pdoc-member-header" id="Secret-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secret.ts#L69">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secret.ts#L69">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -156,7 +156,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="Secret-replication">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secret.ts#L75">property <b>replication</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secret.ts#L75">property <b>replication</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>replication: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SecretReplication'>SecretReplication</a>&gt;;</code></pre>
@@ -166,7 +166,7 @@ after the Secret has been created.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Secret-secretId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secret.ts#L79">property <b>secretId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secret.ts#L79">property <b>secretId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>secretId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -174,7 +174,7 @@ Structure is documented below.
 This must be unique within the project.
 
 <h4 class="pdoc-member-header" id="Secret-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secret.ts#L18">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secret.ts#L18">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -183,7 +183,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SecretIamBinding" data-link-title="SecretIamBinding">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamBinding.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamBinding.ts#L20">
         Resource <strong>SecretIamBinding</strong>
     </a>
 </h3>
@@ -201,7 +201,7 @@ Three different resources help you manage your IAM policy for Secret Manager Sec
 > **Note:** `gcp.secretmanager.SecretIamBinding` resources **can be** used in conjunction with `gcp.secretmanager.SecretIamMember` resources **only if** they do not grant privilege to the same role.
 
 <h4 class="pdoc-member-header" id="SecretIamBinding-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamBinding.ts#L65"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamBinding.ts#L65"> <b>constructor</b></a>
 </h4>
 
 
@@ -215,7 +215,7 @@ Create a SecretIamBinding resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SecretIamBinding-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamBinding.ts#L30">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamBinding.ts#L30">method <b>get</b></a>
 </h4>
 
 
@@ -226,14 +226,14 @@ Get an existing SecretIamBinding resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SecretIamBinding-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamBinding.ts#L20">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamBinding.ts#L20">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SecretIamBinding-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamBinding.ts#L41">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamBinding.ts#L41">method <b>isInstance</b></a>
 </h4>
 
 
@@ -244,12 +244,12 @@ Returns true if the given object is an instance of SecretIamBinding.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SecretIamBinding-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamBinding.ts#L48">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamBinding.ts#L48">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SecretIamBindingCondition'>SecretIamBindingCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SecretIamBinding-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamBinding.ts#L52">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamBinding.ts#L52">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -257,7 +257,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="SecretIamBinding-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamBinding.ts#L20">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamBinding.ts#L20">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -266,12 +266,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SecretIamBinding-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamBinding.ts#L53">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamBinding.ts#L53">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SecretIamBinding-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamBinding.ts#L58">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamBinding.ts#L58">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -280,7 +280,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="SecretIamBinding-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamBinding.ts#L64">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamBinding.ts#L64">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -290,12 +290,12 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h4 class="pdoc-member-header" id="SecretIamBinding-secretId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamBinding.ts#L65">property <b>secretId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamBinding.ts#L65">property <b>secretId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>secretId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SecretIamBinding-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamBinding.ts#L20">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamBinding.ts#L20">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -304,7 +304,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SecretIamMember" data-link-title="SecretIamMember">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamMember.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamMember.ts#L20">
         Resource <strong>SecretIamMember</strong>
     </a>
 </h3>
@@ -322,7 +322,7 @@ Three different resources help you manage your IAM policy for Secret Manager Sec
 > **Note:** `gcp.secretmanager.SecretIamBinding` resources **can be** used in conjunction with `gcp.secretmanager.SecretIamMember` resources **only if** they do not grant privilege to the same role.
 
 <h4 class="pdoc-member-header" id="SecretIamMember-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamMember.ts#L65"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamMember.ts#L65"> <b>constructor</b></a>
 </h4>
 
 
@@ -336,7 +336,7 @@ Create a SecretIamMember resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SecretIamMember-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamMember.ts#L30">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamMember.ts#L30">method <b>get</b></a>
 </h4>
 
 
@@ -347,14 +347,14 @@ Get an existing SecretIamMember resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SecretIamMember-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamMember.ts#L20">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamMember.ts#L20">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SecretIamMember-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamMember.ts#L41">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamMember.ts#L41">method <b>isInstance</b></a>
 </h4>
 
 
@@ -365,12 +365,12 @@ Returns true if the given object is an instance of SecretIamMember.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SecretIamMember-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamMember.ts#L48">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamMember.ts#L48">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SecretIamMemberCondition'>SecretIamMemberCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SecretIamMember-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamMember.ts#L52">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamMember.ts#L52">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -378,7 +378,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="SecretIamMember-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamMember.ts#L20">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamMember.ts#L20">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -387,12 +387,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SecretIamMember-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamMember.ts#L53">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamMember.ts#L53">property <b>member</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SecretIamMember-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamMember.ts#L58">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamMember.ts#L58">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -401,7 +401,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="SecretIamMember-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamMember.ts#L64">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamMember.ts#L64">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -411,12 +411,12 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h4 class="pdoc-member-header" id="SecretIamMember-secretId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamMember.ts#L65">property <b>secretId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamMember.ts#L65">property <b>secretId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>secretId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SecretIamMember-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamMember.ts#L20">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamMember.ts#L20">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -425,7 +425,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SecretIamPolicy" data-link-title="SecretIamPolicy">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamPolicy.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamPolicy.ts#L18">
         Resource <strong>SecretIamPolicy</strong>
     </a>
 </h3>
@@ -443,7 +443,7 @@ Three different resources help you manage your IAM policy for Secret Manager Sec
 > **Note:** `gcp.secretmanager.SecretIamBinding` resources **can be** used in conjunction with `gcp.secretmanager.SecretIamMember` resources **only if** they do not grant privilege to the same role.
 
 <h4 class="pdoc-member-header" id="SecretIamPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamPolicy.ts#L60"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamPolicy.ts#L60"> <b>constructor</b></a>
 </h4>
 
 
@@ -457,7 +457,7 @@ Create a SecretIamPolicy resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SecretIamPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamPolicy.ts#L28">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamPolicy.ts#L28">method <b>get</b></a>
 </h4>
 
 
@@ -468,14 +468,14 @@ Get an existing SecretIamPolicy resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SecretIamPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamPolicy.ts#L18">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamPolicy.ts#L18">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SecretIamPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamPolicy.ts#L39">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamPolicy.ts#L39">method <b>isInstance</b></a>
 </h4>
 
 
@@ -486,7 +486,7 @@ Returns true if the given object is an instance of SecretIamPolicy.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SecretIamPolicy-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamPolicy.ts#L49">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamPolicy.ts#L49">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -494,7 +494,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="SecretIamPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamPolicy.ts#L18">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamPolicy.ts#L18">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -503,7 +503,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SecretIamPolicy-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamPolicy.ts#L54">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamPolicy.ts#L54">property <b>policyData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -512,7 +512,7 @@ The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
 
 <h4 class="pdoc-member-header" id="SecretIamPolicy-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamPolicy.ts#L59">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamPolicy.ts#L59">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -521,12 +521,12 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="SecretIamPolicy-secretId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamPolicy.ts#L60">property <b>secretId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamPolicy.ts#L60">property <b>secretId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>secretId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SecretIamPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamPolicy.ts#L18">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamPolicy.ts#L18">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -535,7 +535,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SecretVersion" data-link-title="SecretVersion">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretVersion.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretVersion.ts#L15">
         Resource <strong>SecretVersion</strong>
     </a>
 </h3>
@@ -550,7 +550,7 @@ state as plain-text.
 #### Example Usage
 
 <h4 class="pdoc-member-header" id="SecretVersion-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretVersion.ts#L67"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretVersion.ts#L67"> <b>constructor</b></a>
 </h4>
 
 
@@ -564,7 +564,7 @@ Create a SecretVersion resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SecretVersion-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretVersion.ts#L25">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretVersion.ts#L25">method <b>get</b></a>
 </h4>
 
 
@@ -575,14 +575,14 @@ Get an existing SecretVersion resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SecretVersion-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretVersion.ts#L15">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretVersion.ts#L15">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SecretVersion-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretVersion.ts#L36">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretVersion.ts#L36">method <b>isInstance</b></a>
 </h4>
 
 
@@ -593,7 +593,7 @@ Returns true if the given object is an instance of SecretVersion.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SecretVersion-createTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretVersion.ts#L46">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretVersion.ts#L46">property <b>createTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -601,7 +601,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The time at which the Secret was created.
 
 <h4 class="pdoc-member-header" id="SecretVersion-destroyTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretVersion.ts#L50">property <b>destroyTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretVersion.ts#L50">property <b>destroyTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>destroyTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -609,7 +609,7 @@ The time at which the Secret was created.
 The time at which the Secret was destroyed. Only present if state is DESTROYED.
 
 <h4 class="pdoc-member-header" id="SecretVersion-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretVersion.ts#L54">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretVersion.ts#L54">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -617,7 +617,7 @@ The time at which the Secret was destroyed. Only present if state is DESTROYED.
 The current state of the SecretVersion.
 
 <h4 class="pdoc-member-header" id="SecretVersion-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretVersion.ts#L15">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretVersion.ts#L15">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -626,7 +626,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SecretVersion-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretVersion.ts#L58">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretVersion.ts#L58">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -634,7 +634,7 @@ deployments and may be missing (undefined) during planning phases.
 The resource name of the SecretVersion. Format: 'projects/{{project}}/secrets/{{secret_id}}/versions/{{version}}'
 
 <h4 class="pdoc-member-header" id="SecretVersion-secret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretVersion.ts#L62">property <b>secret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretVersion.ts#L62">property <b>secret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>secret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -642,7 +642,7 @@ The resource name of the SecretVersion. Format: 'projects/{{project}}/secrets/{{
 Secret Manager secret resource
 
 <h4 class="pdoc-member-header" id="SecretVersion-secretData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretVersion.ts#L67">property <b>secretData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretVersion.ts#L67">property <b>secretData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>secretData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -651,7 +651,7 @@ The secret data. Must be no larger than 64KiB.
 **Note**: This property is sensitive and will not be displayed in the plan.
 
 <h4 class="pdoc-member-header" id="SecretVersion-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretVersion.ts#L15">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretVersion.ts#L15">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -662,7 +662,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getSecretVersion" data-link-title="getSecretVersion">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/getSecretVersion.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/getSecretVersion.ts#L12">
         Function <strong>getSecretVersion</strong>
     </a>
 </h3>
@@ -676,7 +676,7 @@ Get a Secret Manager secret's version. For more information see the [official do
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetSecretVersionArgs" data-link-title="GetSecretVersionArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/getSecretVersion.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/getSecretVersion.ts#L30">
         interface <strong>GetSecretVersionArgs</strong>
     </a>
 </h3>
@@ -686,7 +686,7 @@ Get a Secret Manager secret's version. For more information see the [official do
 A collection of arguments for invoking getSecretVersion.
 
 <h4 class="pdoc-member-header" id="GetSecretVersionArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/getSecretVersion.ts#L35">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/getSecretVersion.ts#L35">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -695,7 +695,7 @@ The project to get the secret version for. If it
 is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="GetSecretVersionArgs-secret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/getSecretVersion.ts#L39">property <b>secret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/getSecretVersion.ts#L39">property <b>secret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secret: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -703,7 +703,7 @@ is not provided, the provider project is used.
 The secret to get the secret version for.
 
 <h4 class="pdoc-member-header" id="GetSecretVersionArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/getSecretVersion.ts#L44">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/getSecretVersion.ts#L44">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -712,7 +712,7 @@ The version of the secret to get. If it
 is not provided, the latest version is retrieved.
 
 <h3 class="pdoc-module-header" id="GetSecretVersionResult" data-link-title="GetSecretVersionResult">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/getSecretVersion.ts#L50">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/getSecretVersion.ts#L50">
         interface <strong>GetSecretVersionResult</strong>
     </a>
 </h3>
@@ -722,7 +722,7 @@ is not provided, the latest version is retrieved.
 A collection of values returned by getSecretVersion.
 
 <h4 class="pdoc-member-header" id="GetSecretVersionResult-createTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/getSecretVersion.ts#L54">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/getSecretVersion.ts#L54">property <b>createTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -730,7 +730,7 @@ A collection of values returned by getSecretVersion.
 The time at which the Secret was created.
 
 <h4 class="pdoc-member-header" id="GetSecretVersionResult-destroyTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/getSecretVersion.ts#L58">property <b>destroyTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/getSecretVersion.ts#L58">property <b>destroyTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destroyTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -738,7 +738,7 @@ The time at which the Secret was created.
 The time at which the Secret was destroyed. Only present if state is DESTROYED.
 
 <h4 class="pdoc-member-header" id="GetSecretVersionResult-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/getSecretVersion.ts#L62">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/getSecretVersion.ts#L62">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -746,7 +746,7 @@ The time at which the Secret was destroyed. Only present if state is DESTROYED.
 True if the current state of the SecretVersion is enabled.
 
 <h4 class="pdoc-member-header" id="GetSecretVersionResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/getSecretVersion.ts#L66">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/getSecretVersion.ts#L66">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -754,7 +754,7 @@ True if the current state of the SecretVersion is enabled.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetSecretVersionResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/getSecretVersion.ts#L71">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/getSecretVersion.ts#L71">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -763,17 +763,17 @@ The resource name of the SecretVersion. Format:
 `projects/{{project}}/secrets/{{secret_id}}/versions/{{version}}`
 
 <h4 class="pdoc-member-header" id="GetSecretVersionResult-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/getSecretVersion.ts#L72">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/getSecretVersion.ts#L72">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSecretVersionResult-secret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/getSecretVersion.ts#L73">property <b>secret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/getSecretVersion.ts#L73">property <b>secret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secret: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSecretVersionResult-secretData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/getSecretVersion.ts#L77">property <b>secretData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/getSecretVersion.ts#L77">property <b>secretData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretData: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -781,12 +781,12 @@ The resource name of the SecretVersion. Format:
 The secret data. No larger than 64KiB.
 
 <h4 class="pdoc-member-header" id="GetSecretVersionResult-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/getSecretVersion.ts#L78">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/getSecretVersion.ts#L78">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="SecretArgs" data-link-title="SecretArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secret.ts#L168">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secret.ts#L168">
         interface <strong>SecretArgs</strong>
     </a>
 </h3>
@@ -796,7 +796,7 @@ The secret data. No larger than 64KiB.
 The set of arguments for constructing a Secret resource.
 
 <h4 class="pdoc-member-header" id="SecretArgs-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secret.ts#L179">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secret.ts#L179">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -811,7 +811,7 @@ An object containing a list of "key": value pairs. Example:
 { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 
 <h4 class="pdoc-member-header" id="SecretArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secret.ts#L184">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secret.ts#L184">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -820,7 +820,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="SecretArgs-replication">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secret.ts#L190">property <b>replication</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secret.ts#L190">property <b>replication</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replication: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SecretReplication'>SecretReplication</a>&gt;;</code></pre>
@@ -830,7 +830,7 @@ after the Secret has been created.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="SecretArgs-secretId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secret.ts#L194">property <b>secretId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secret.ts#L194">property <b>secretId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -838,7 +838,7 @@ Structure is documented below.
 This must be unique within the project.
 
 <h3 class="pdoc-module-header" id="SecretIamBindingArgs" data-link-title="SecretIamBindingArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamBinding.ts#L141">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamBinding.ts#L141">
         interface <strong>SecretIamBindingArgs</strong>
     </a>
 </h3>
@@ -848,17 +848,17 @@ This must be unique within the project.
 The set of arguments for constructing a SecretIamBinding resource.
 
 <h4 class="pdoc-member-header" id="SecretIamBindingArgs-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamBinding.ts#L142">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamBinding.ts#L142">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SecretIamBindingCondition'>SecretIamBindingCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SecretIamBindingArgs-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamBinding.ts#L143">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamBinding.ts#L143">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SecretIamBindingArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamBinding.ts#L148">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamBinding.ts#L148">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -867,7 +867,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="SecretIamBindingArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamBinding.ts#L154">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamBinding.ts#L154">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -877,12 +877,12 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h4 class="pdoc-member-header" id="SecretIamBindingArgs-secretId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamBinding.ts#L155">property <b>secretId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamBinding.ts#L155">property <b>secretId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="SecretIamBindingState" data-link-title="SecretIamBindingState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamBinding.ts#L117">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamBinding.ts#L117">
         interface <strong>SecretIamBindingState</strong>
     </a>
 </h3>
@@ -892,12 +892,12 @@ The role that should be applied. Only one
 Input properties used for looking up and filtering SecretIamBinding resources.
 
 <h4 class="pdoc-member-header" id="SecretIamBindingState-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamBinding.ts#L118">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamBinding.ts#L118">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SecretIamBindingCondition'>SecretIamBindingCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SecretIamBindingState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamBinding.ts#L122">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamBinding.ts#L122">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -905,12 +905,12 @@ Input properties used for looking up and filtering SecretIamBinding resources.
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="SecretIamBindingState-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamBinding.ts#L123">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamBinding.ts#L123">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>members?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SecretIamBindingState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamBinding.ts#L128">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamBinding.ts#L128">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -919,7 +919,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="SecretIamBindingState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamBinding.ts#L134">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamBinding.ts#L134">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -929,12 +929,12 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h4 class="pdoc-member-header" id="SecretIamBindingState-secretId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamBinding.ts#L135">property <b>secretId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamBinding.ts#L135">property <b>secretId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="SecretIamMemberArgs" data-link-title="SecretIamMemberArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamMember.ts#L141">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamMember.ts#L141">
         interface <strong>SecretIamMemberArgs</strong>
     </a>
 </h3>
@@ -944,17 +944,17 @@ The role that should be applied. Only one
 The set of arguments for constructing a SecretIamMember resource.
 
 <h4 class="pdoc-member-header" id="SecretIamMemberArgs-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamMember.ts#L142">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamMember.ts#L142">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SecretIamMemberCondition'>SecretIamMemberCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SecretIamMemberArgs-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamMember.ts#L143">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamMember.ts#L143">property <b>member</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SecretIamMemberArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamMember.ts#L148">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamMember.ts#L148">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -963,7 +963,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="SecretIamMemberArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamMember.ts#L154">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamMember.ts#L154">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -973,12 +973,12 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h4 class="pdoc-member-header" id="SecretIamMemberArgs-secretId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamMember.ts#L155">property <b>secretId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamMember.ts#L155">property <b>secretId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="SecretIamMemberState" data-link-title="SecretIamMemberState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamMember.ts#L117">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamMember.ts#L117">
         interface <strong>SecretIamMemberState</strong>
     </a>
 </h3>
@@ -988,12 +988,12 @@ The role that should be applied. Only one
 Input properties used for looking up and filtering SecretIamMember resources.
 
 <h4 class="pdoc-member-header" id="SecretIamMemberState-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamMember.ts#L118">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamMember.ts#L118">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SecretIamMemberCondition'>SecretIamMemberCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SecretIamMemberState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamMember.ts#L122">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamMember.ts#L122">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1001,12 +1001,12 @@ Input properties used for looking up and filtering SecretIamMember resources.
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="SecretIamMemberState-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamMember.ts#L123">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamMember.ts#L123">property <b>member</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>member?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SecretIamMemberState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamMember.ts#L128">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamMember.ts#L128">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1015,7 +1015,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="SecretIamMemberState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamMember.ts#L134">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamMember.ts#L134">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1025,12 +1025,12 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h4 class="pdoc-member-header" id="SecretIamMemberState-secretId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamMember.ts#L135">property <b>secretId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamMember.ts#L135">property <b>secretId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="SecretIamPolicyArgs" data-link-title="SecretIamPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamPolicy.ts#L126">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamPolicy.ts#L126">
         interface <strong>SecretIamPolicyArgs</strong>
     </a>
 </h3>
@@ -1040,7 +1040,7 @@ The role that should be applied. Only one
 The set of arguments for constructing a SecretIamPolicy resource.
 
 <h4 class="pdoc-member-header" id="SecretIamPolicyArgs-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamPolicy.ts#L131">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamPolicy.ts#L131">property <b>policyData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1049,7 +1049,7 @@ The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
 
 <h4 class="pdoc-member-header" id="SecretIamPolicyArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamPolicy.ts#L136">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamPolicy.ts#L136">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1058,12 +1058,12 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="SecretIamPolicyArgs-secretId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamPolicy.ts#L137">property <b>secretId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamPolicy.ts#L137">property <b>secretId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="SecretIamPolicyState" data-link-title="SecretIamPolicyState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamPolicy.ts#L105">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamPolicy.ts#L105">
         interface <strong>SecretIamPolicyState</strong>
     </a>
 </h3>
@@ -1073,7 +1073,7 @@ If it is not provided, the project will be parsed from the identifier of the par
 Input properties used for looking up and filtering SecretIamPolicy resources.
 
 <h4 class="pdoc-member-header" id="SecretIamPolicyState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamPolicy.ts#L109">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamPolicy.ts#L109">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1081,7 +1081,7 @@ Input properties used for looking up and filtering SecretIamPolicy resources.
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="SecretIamPolicyState-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamPolicy.ts#L114">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamPolicy.ts#L114">property <b>policyData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1090,7 +1090,7 @@ The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
 
 <h4 class="pdoc-member-header" id="SecretIamPolicyState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamPolicy.ts#L119">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamPolicy.ts#L119">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1099,12 +1099,12 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="SecretIamPolicyState-secretId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretIamPolicy.ts#L120">property <b>secretId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretIamPolicy.ts#L120">property <b>secretId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="SecretState" data-link-title="SecretState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secret.ts#L128">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secret.ts#L128">
         interface <strong>SecretState</strong>
     </a>
 </h3>
@@ -1114,7 +1114,7 @@ If it is not provided, the project will be parsed from the identifier of the par
 Input properties used for looking up and filtering Secret resources.
 
 <h4 class="pdoc-member-header" id="SecretState-createTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secret.ts#L132">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secret.ts#L132">property <b>createTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1122,7 +1122,7 @@ Input properties used for looking up and filtering Secret resources.
 The time at which the Secret was created.
 
 <h4 class="pdoc-member-header" id="SecretState-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secret.ts#L143">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secret.ts#L143">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1137,7 +1137,7 @@ An object containing a list of "key": value pairs. Example:
 { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 
 <h4 class="pdoc-member-header" id="SecretState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secret.ts#L147">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secret.ts#L147">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1145,7 +1145,7 @@ An object containing a list of "key": value pairs. Example:
 The resource name of the Secret. Format: 'projects/{{project}}/secrets/{{secret_id}}'
 
 <h4 class="pdoc-member-header" id="SecretState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secret.ts#L152">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secret.ts#L152">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1154,7 +1154,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="SecretState-replication">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secret.ts#L158">property <b>replication</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secret.ts#L158">property <b>replication</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replication?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SecretReplication'>SecretReplication</a>&gt;;</code></pre>
@@ -1164,7 +1164,7 @@ after the Secret has been created.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="SecretState-secretId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secret.ts#L162">property <b>secretId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secret.ts#L162">property <b>secretId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1172,7 +1172,7 @@ Structure is documented below.
 This must be unique within the project.
 
 <h3 class="pdoc-module-header" id="SecretVersionArgs" data-link-title="SecretVersionArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretVersion.ts#L144">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretVersion.ts#L144">
         interface <strong>SecretVersionArgs</strong>
     </a>
 </h3>
@@ -1182,7 +1182,7 @@ This must be unique within the project.
 The set of arguments for constructing a SecretVersion resource.
 
 <h4 class="pdoc-member-header" id="SecretVersionArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretVersion.ts#L148">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretVersion.ts#L148">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1190,7 +1190,7 @@ The set of arguments for constructing a SecretVersion resource.
 The current state of the SecretVersion.
 
 <h4 class="pdoc-member-header" id="SecretVersionArgs-secret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretVersion.ts#L152">property <b>secret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretVersion.ts#L152">property <b>secret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1198,7 +1198,7 @@ The current state of the SecretVersion.
 Secret Manager secret resource
 
 <h4 class="pdoc-member-header" id="SecretVersionArgs-secretData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretVersion.ts#L157">property <b>secretData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretVersion.ts#L157">property <b>secretData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1207,7 +1207,7 @@ The secret data. Must be no larger than 64KiB.
 **Note**: This property is sensitive and will not be displayed in the plan.
 
 <h3 class="pdoc-module-header" id="SecretVersionState" data-link-title="SecretVersionState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretVersion.ts#L113">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretVersion.ts#L113">
         interface <strong>SecretVersionState</strong>
     </a>
 </h3>
@@ -1217,7 +1217,7 @@ The secret data. Must be no larger than 64KiB.
 Input properties used for looking up and filtering SecretVersion resources.
 
 <h4 class="pdoc-member-header" id="SecretVersionState-createTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretVersion.ts#L117">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretVersion.ts#L117">property <b>createTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1225,7 +1225,7 @@ Input properties used for looking up and filtering SecretVersion resources.
 The time at which the Secret was created.
 
 <h4 class="pdoc-member-header" id="SecretVersionState-destroyTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretVersion.ts#L121">property <b>destroyTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretVersion.ts#L121">property <b>destroyTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destroyTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1233,7 +1233,7 @@ The time at which the Secret was created.
 The time at which the Secret was destroyed. Only present if state is DESTROYED.
 
 <h4 class="pdoc-member-header" id="SecretVersionState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretVersion.ts#L125">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretVersion.ts#L125">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1241,7 +1241,7 @@ The time at which the Secret was destroyed. Only present if state is DESTROYED.
 The current state of the SecretVersion.
 
 <h4 class="pdoc-member-header" id="SecretVersionState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretVersion.ts#L129">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretVersion.ts#L129">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1249,7 +1249,7 @@ The current state of the SecretVersion.
 The resource name of the SecretVersion. Format: 'projects/{{project}}/secrets/{{secret_id}}/versions/{{version}}'
 
 <h4 class="pdoc-member-header" id="SecretVersionState-secret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretVersion.ts#L133">property <b>secret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretVersion.ts#L133">property <b>secret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1257,7 +1257,7 @@ The resource name of the SecretVersion. Format: 'projects/{{project}}/secrets/{{
 Secret Manager secret resource
 
 <h4 class="pdoc-member-header" id="SecretVersionState-secretData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/secretmanager/secretVersion.ts#L138">property <b>secretData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/secretmanager/secretVersion.ts#L138">property <b>secretData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

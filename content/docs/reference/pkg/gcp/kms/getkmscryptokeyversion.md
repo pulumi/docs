@@ -35,7 +35,7 @@ A CryptoKeyVersion represents an individual cryptographic key, and the associate
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKMSCryptoKeyVersion<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#GetKMSCryptoKeyVersionArgs">GetKMSCryptoKeyVersionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#GetKMSCryptoKeyVersionResult">GetKMSCryptoKeyVersionResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKMSCryptoKeyVersion<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/kms?tab=doc#GetKMSCryptoKeyVersionArgs">GetKMSCryptoKeyVersionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/kms?tab=doc#GetKMSCryptoKeyVersionResult">GetKMSCryptoKeyVersionResult</a></span>, error)</span></code></pre></div>
 
 {{% /choosable %}}
 
@@ -229,11 +229,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="publickey_csharp">
-<a href="#publickey_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
+        <span id="publickeys_csharp">
+<a href="#publickeys_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkmscryptokeyversionpublickey">Get<wbr>KMSCrypto<wbr>Key<wbr>Version<wbr>Public<wbr>Key</a></span>
+        <span class="property-type"><a href="#getkmscryptokeyversionpublickey">List&lt;Get<wbr>KMSCrypto<wbr>Key<wbr>Version<wbr>Public<wbr>Key&gt;</a></span>
     </dt>
     <dd>{{% md %}}If the enclosing CryptoKey has purpose `ASYMMETRIC_SIGN` or `ASYMMETRIC_DECRYPT`, this block contains details about the public key associated to this CryptoKeyVersion. Structure is documented below.
 {{% /md %}}</dd>
@@ -311,11 +311,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="publickey_go">
-<a href="#publickey_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
+        <span id="publickeys_go">
+<a href="#publickeys_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkmscryptokeyversionpublickey">Get<wbr>KMSCrypto<wbr>Key<wbr>Version<wbr>Public<wbr>Key</a></span>
+        <span class="property-type"><a href="#getkmscryptokeyversionpublickey">[]Get<wbr>KMSCrypto<wbr>Key<wbr>Version<wbr>Public<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}If the enclosing CryptoKey has purpose `ASYMMETRIC_SIGN` or `ASYMMETRIC_DECRYPT`, this block contains details about the public key associated to this CryptoKeyVersion. Structure is documented below.
 {{% /md %}}</dd>
@@ -393,11 +393,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="publickey_nodejs">
-<a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
+        <span id="publickeys_nodejs">
+<a href="#publickeys_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkmscryptokeyversionpublickey">Get<wbr>KMSCrypto<wbr>Key<wbr>Version<wbr>Public<wbr>Key</a></span>
+        <span class="property-type"><a href="#getkmscryptokeyversionpublickey">Get<wbr>KMSCrypto<wbr>Key<wbr>Version<wbr>Public<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}If the enclosing CryptoKey has purpose `ASYMMETRIC_SIGN` or `ASYMMETRIC_DECRYPT`, this block contains details about the public key associated to this CryptoKeyVersion. Structure is documented below.
 {{% /md %}}</dd>
@@ -475,11 +475,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="public_key_python">
-<a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
+        <span id="public_keys_python">
+<a href="#public_keys_python" style="color: inherit; text-decoration: inherit;">public_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkmscryptokeyversionpublickey">Get<wbr>KMSCrypto<wbr>Key<wbr>Version<wbr>Public<wbr>Key</a></span>
+        <span class="property-type"><a href="#getkmscryptokeyversionpublickey">Sequence[Get<wbr>KMSCrypto<wbr>Key<wbr>Version<wbr>Public<wbr>Key]</a></span>
     </dt>
     <dd>{{% md %}}If the enclosing CryptoKey has purpose `ASYMMETRIC_SIGN` or `ASYMMETRIC_DECRYPT`, this block contains details about the public key associated to this CryptoKeyVersion. Structure is documented below.
 {{% /md %}}</dd>
@@ -524,7 +524,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#GetKMSCryptoKeyVersionPublicKey">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/kms?tab=doc#GetKMSCryptoKeyVersionPublicKey">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Kms.Outputs.GetKMSCryptoKeyVersionPublicKey.html">output</a> API doc for this type.

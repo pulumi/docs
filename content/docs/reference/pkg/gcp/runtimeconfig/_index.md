@@ -27,7 +27,7 @@ Explore the resources and functions of the runtimeconfig module in the GCP packa
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.25.0</dd>
+	<dd>4.0.0</dd>
 </dl>
 
 
@@ -38,7 +38,7 @@ Explore the resources and functions of the runtimeconfig module in the GCP packa
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.RuntimeConfig.html" title="Pulumi.Gcp.RuntimeConfig">Pulumi.Gcp.RuntimeConfig</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/runtimeconfig?tab=doc#" title="gcp/runtimeconfig">gcp/runtimeconfig</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/runtimeconfig?tab=doc#" title="gcp/runtimeconfig">gcp/runtimeconfig</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/runtimeconfig/#" title="@pulumi/gcp/runtimeconfig">@pulumi/gcp/runtimeconfig</a></dd>

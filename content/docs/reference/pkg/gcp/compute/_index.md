@@ -121,6 +121,7 @@ Explore the resources and functions of the compute module in the GCP package.
     <li><a href="getdefaultserviceaccount" title="GetDefaultServiceAccount"><span class="symbol function"></span>GetDefaultServiceAccount</a></li>
     <li><a href="getforwardingrule" title="GetForwardingRule"><span class="symbol function"></span>GetForwardingRule</a></li>
     <li><a href="getglobaladdress" title="GetGlobalAddress"><span class="symbol function"></span>GetGlobalAddress</a></li>
+    <li><a href="getglobalforwardingrule" title="GetGlobalForwardingRule"><span class="symbol function"></span>GetGlobalForwardingRule</a></li>
     <li><a href="getimage" title="GetImage"><span class="symbol function"></span>GetImage</a></li>
     <li><a href="getinstance" title="GetInstance"><span class="symbol function"></span>GetInstance</a></li>
     <li><a href="getinstancegroup" title="GetInstanceGroup"><span class="symbol function"></span>GetInstanceGroup</a></li>
@@ -150,7 +151,7 @@ Explore the resources and functions of the compute module in the GCP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.25.0</dd>
+	<dd>4.0.0</dd>
 </dl>
 
 
@@ -161,7 +162,7 @@ Explore the resources and functions of the compute module in the GCP package.
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.html" title="Pulumi.Gcp.Compute">Pulumi.Gcp.Compute</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#" title="gcp/compute">gcp/compute</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#" title="gcp/compute">gcp/compute</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#" title="@pulumi/gcp/compute">@pulumi/gcp/compute</a></dd>

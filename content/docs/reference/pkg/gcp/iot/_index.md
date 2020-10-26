@@ -24,7 +24,7 @@ Explore the resources and functions of the iot module in the GCP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.25.0</dd>
+	<dd>4.0.0</dd>
 </dl>
 
 
@@ -35,7 +35,7 @@ Explore the resources and functions of the iot module in the GCP package.
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iot.html" title="Pulumi.Gcp.Iot">Pulumi.Gcp.Iot</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot?tab=doc#" title="gcp/iot">gcp/iot</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iot?tab=doc#" title="gcp/iot">gcp/iot</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/iot/#" title="@pulumi/gcp/iot">@pulumi/gcp/iot</a></dd>

@@ -11,6 +11,7 @@ Explore the resources and functions of the dataloss module in the GCP package.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="preventiondeidentifytemplate" title="PreventionDeidentifyTemplate"><span class="symbol resource"></span>PreventionDeidentifyTemplate</a></li>
     <li><a href="preventioninspecttemplate" title="PreventionInspectTemplate"><span class="symbol resource"></span>PreventionInspectTemplate</a></li>
     <li><a href="preventionjobtrigger" title="PreventionJobTrigger"><span class="symbol resource"></span>PreventionJobTrigger</a></li>
     <li><a href="preventionstoredinfotype" title="PreventionStoredInfoType"><span class="symbol resource"></span>PreventionStoredInfoType</a></li>
@@ -25,7 +26,7 @@ Explore the resources and functions of the dataloss module in the GCP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.25.0</dd>
+	<dd>4.0.0</dd>
 </dl>
 
 
@@ -36,7 +37,7 @@ Explore the resources and functions of the dataloss module in the GCP package.
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.html" title="Pulumi.Gcp.DataLoss">Pulumi.Gcp.DataLoss</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataloss?tab=doc#" title="gcp/dataloss">gcp/dataloss</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#" title="gcp/dataloss">gcp/dataloss</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataloss/#" title="@pulumi/gcp/dataloss">@pulumi/gcp/dataloss</a></dd>

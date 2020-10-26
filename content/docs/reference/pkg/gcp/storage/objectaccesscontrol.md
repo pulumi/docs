@@ -44,7 +44,7 @@ To get more information about ObjectAccessControl, see:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#ObjectAccessControl">NewObjectAccessControl</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#ObjectAccessControlArgs">ObjectAccessControlArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#ObjectAccessControl">ObjectAccessControl</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage?tab=doc#ObjectAccessControl">NewObjectAccessControl</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage?tab=doc#ObjectAccessControlArgs">ObjectAccessControlArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage?tab=doc#ObjectAccessControl">ObjectAccessControl</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -118,7 +118,7 @@ To get more information about ObjectAccessControl, see:
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -138,7 +138,7 @@ To get more information about ObjectAccessControl, see:
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#ObjectAccessControlArgs">ObjectAccessControlArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage?tab=doc#ObjectAccessControlArgs">ObjectAccessControlArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -148,7 +148,7 @@ To get more information about ObjectAccessControl, see:
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -519,11 +519,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="projectteam_csharp">
-<a href="#projectteam_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Team</a>
+        <span id="projectteams_csharp">
+<a href="#projectteams_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Teams</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectaccesscontrolprojectteam">Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team</a></span>
+        <span class="property-type"><a href="#objectaccesscontrolprojectteam">List&lt;Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team&gt;</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity
 {{% /md %}}</dd>
@@ -591,11 +591,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="projectteam_go">
-<a href="#projectteam_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Team</a>
+        <span id="projectteams_go">
+<a href="#projectteams_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Teams</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectaccesscontrolprojectteam">Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team</a></span>
+        <span class="property-type"><a href="#objectaccesscontrolprojectteam">[]Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity
 {{% /md %}}</dd>
@@ -663,11 +663,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="projectteam_nodejs">
-<a href="#projectteam_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Team</a>
+        <span id="projectteams_nodejs">
+<a href="#projectteams_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Teams</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectaccesscontrolprojectteam">Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team</a></span>
+        <span class="property-type"><a href="#objectaccesscontrolprojectteam">Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team[]</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity
 {{% /md %}}</dd>
@@ -735,11 +735,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="project_team_python">
-<a href="#project_team_python" style="color: inherit; text-decoration: inherit;">project_<wbr>team</a>
+        <span id="project_teams_python">
+<a href="#project_teams_python" style="color: inherit; text-decoration: inherit;">project_<wbr>teams</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectaccesscontrolprojectteam">Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team</a></span>
+        <span class="property-type"><a href="#objectaccesscontrolprojectteam">Sequence[Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team]</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity
 {{% /md %}}</dd>
@@ -764,11 +764,11 @@ Get an existing ObjectAccessControl resource's state with the given name, ID, an
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entity_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">generation</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">object</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_team</span><span class="p">:</span> <span class="nx">Optional[ObjectAccessControlProjectTeamArgs]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ObjectAccessControl</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entity_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">generation</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">object</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_teams</span><span class="p">:</span> <span class="nx">Optional[Sequence[ObjectAccessControlProjectTeamArgs]]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ObjectAccessControl</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetObjectAccessControl<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#ObjectAccessControlState">ObjectAccessControlState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#ObjectAccessControl">ObjectAccessControl</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetObjectAccessControl<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage?tab=doc#ObjectAccessControlState">ObjectAccessControlState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage?tab=doc#ObjectAccessControl">ObjectAccessControl</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -965,11 +965,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_projectteam_csharp">
-<a href="#state_projectteam_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Team</a>
+        <span id="state_projectteams_csharp">
+<a href="#state_projectteams_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Teams</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectaccesscontrolprojectteam">Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectaccesscontrolprojectteam">List&lt;Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity
 {{% /md %}}</dd>
@@ -1080,11 +1080,11 @@ Possible values are `OWNER` and `READER`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_projectteam_go">
-<a href="#state_projectteam_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Team</a>
+        <span id="state_projectteams_go">
+<a href="#state_projectteams_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Teams</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectaccesscontrolprojectteam">Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team</a></span>
+        <span class="property-type"><a href="#objectaccesscontrolprojectteam">[]Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity
 {{% /md %}}</dd>
@@ -1195,11 +1195,11 @@ Possible values are `OWNER` and `READER`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_projectteam_nodejs">
-<a href="#state_projectteam_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Team</a>
+        <span id="state_projectteams_nodejs">
+<a href="#state_projectteams_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Teams</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectaccesscontrolprojectteam">Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team</a></span>
+        <span class="property-type"><a href="#objectaccesscontrolprojectteam">Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team[]</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity
 {{% /md %}}</dd>
@@ -1310,11 +1310,11 @@ Possible values are `OWNER` and `READER`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_project_team_python">
-<a href="#state_project_team_python" style="color: inherit; text-decoration: inherit;">project_<wbr>team</a>
+        <span id="state_project_teams_python">
+<a href="#state_project_teams_python" style="color: inherit; text-decoration: inherit;">project_<wbr>teams</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectaccesscontrolprojectteam">Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectaccesscontrolprojectteam">Sequence[Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity
 {{% /md %}}</dd>
@@ -1352,7 +1352,7 @@ Possible values are `OWNER` and `READER`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#ObjectAccessControlProjectTeamOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage?tab=doc#ObjectAccessControlProjectTeamOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Outputs.ObjectAccessControlProjectTeam.html">output</a> API doc for this type.

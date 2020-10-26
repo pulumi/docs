@@ -21,6 +21,11 @@ Explore the resources and functions of the pubsub module in the GCP package.
     <li><a href="topiciampolicy" title="TopicIAMPolicy"><span class="symbol resource"></span>TopicIAMPolicy</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="gettopic" title="GetTopic"><span class="symbol function"></span>GetTopic</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -30,7 +35,7 @@ Explore the resources and functions of the pubsub module in the GCP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.25.0</dd>
+	<dd>4.0.0</dd>
 </dl>
 
 
@@ -41,7 +46,7 @@ Explore the resources and functions of the pubsub module in the GCP package.
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.html" title="Pulumi.Gcp.PubSub">Pulumi.Gcp.PubSub</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub?tab=doc#" title="gcp/pubsub">gcp/pubsub</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/pubsub?tab=doc#" title="gcp/pubsub">gcp/pubsub</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/pubsub/#" title="@pulumi/gcp/pubsub">@pulumi/gcp/pubsub</a></dd>

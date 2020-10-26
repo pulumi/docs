@@ -17,6 +17,9 @@ Explore the resources and functions of the bigtable module in the GCP package.
     <li><a href="instanceiammember" title="InstanceIamMember"><span class="symbol resource"></span>InstanceIamMember</a></li>
     <li><a href="instanceiampolicy" title="InstanceIamPolicy"><span class="symbol resource"></span>InstanceIamPolicy</a></li>
     <li><a href="table" title="Table"><span class="symbol resource"></span>Table</a></li>
+    <li><a href="tableiambinding" title="TableIamBinding"><span class="symbol resource"></span>TableIamBinding</a></li>
+    <li><a href="tableiammember" title="TableIamMember"><span class="symbol resource"></span>TableIamMember</a></li>
+    <li><a href="tableiampolicy" title="TableIamPolicy"><span class="symbol resource"></span>TableIamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -28,7 +31,7 @@ Explore the resources and functions of the bigtable module in the GCP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.25.0</dd>
+	<dd>4.0.0</dd>
 </dl>
 
 
@@ -39,7 +42,7 @@ Explore the resources and functions of the bigtable module in the GCP package.
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigTable.html" title="Pulumi.Gcp.BigTable">Pulumi.Gcp.BigTable</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigtable?tab=doc#" title="gcp/bigtable">gcp/bigtable</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigtable?tab=doc#" title="gcp/bigtable">gcp/bigtable</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigtable/#" title="@pulumi/gcp/bigtable">@pulumi/gcp/bigtable</a></dd>

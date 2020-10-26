@@ -28,7 +28,7 @@ information, see Creating VLAN Attachments.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InterconnectAttachment">NewInterconnectAttachment</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InterconnectAttachmentArgs">InterconnectAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InterconnectAttachment">InterconnectAttachment</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#InterconnectAttachment">NewInterconnectAttachment</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#InterconnectAttachmentArgs">InterconnectAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#InterconnectAttachment">InterconnectAttachment</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -102,7 +102,7 @@ information, see Creating VLAN Attachments.
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -122,7 +122,7 @@ information, see Creating VLAN Attachments.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InterconnectAttachmentArgs">InterconnectAttachmentArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#InterconnectAttachmentArgs">InterconnectAttachmentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -132,7 +132,7 @@ information, see Creating VLAN Attachments.
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -968,11 +968,11 @@ layer 3 Partner if they configured BGP on behalf of the customer.
 
     <dt class="property-"
             title="">
-        <span id="privateinterconnectinfo_csharp">
-<a href="#privateinterconnectinfo_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Interconnect<wbr>Info</a>
+        <span id="privateinterconnectinfos_csharp">
+<a href="#privateinterconnectinfos_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Interconnect<wbr>Infos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info</a></span>
+        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">List&lt;Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info&gt;</a></span>
     </dt>
     <dd>{{% md %}}Information specific to an InterconnectAttachment. This property is populated if the interconnect that this is attached
 to is of type DEDICATED.
@@ -1088,11 +1088,11 @@ layer 3 Partner if they configured BGP on behalf of the customer.
 
     <dt class="property-"
             title="">
-        <span id="privateinterconnectinfo_go">
-<a href="#privateinterconnectinfo_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Interconnect<wbr>Info</a>
+        <span id="privateinterconnectinfos_go">
+<a href="#privateinterconnectinfos_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Interconnect<wbr>Infos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info</a></span>
+        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">[]Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information specific to an InterconnectAttachment. This property is populated if the interconnect that this is attached
 to is of type DEDICATED.
@@ -1208,11 +1208,11 @@ layer 3 Partner if they configured BGP on behalf of the customer.
 
     <dt class="property-"
             title="">
-        <span id="privateinterconnectinfo_nodejs">
-<a href="#privateinterconnectinfo_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Interconnect<wbr>Info</a>
+        <span id="privateinterconnectinfos_nodejs">
+<a href="#privateinterconnectinfos_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Interconnect<wbr>Infos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info</a></span>
+        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info[]</a></span>
     </dt>
     <dd>{{% md %}}Information specific to an InterconnectAttachment. This property is populated if the interconnect that this is attached
 to is of type DEDICATED.
@@ -1328,11 +1328,11 @@ layer 3 Partner if they configured BGP on behalf of the customer.
 
     <dt class="property-"
             title="">
-        <span id="private_interconnect_info_python">
-<a href="#private_interconnect_info_python" style="color: inherit; text-decoration: inherit;">private_<wbr>interconnect_<wbr>info</a>
+        <span id="private_interconnect_infos_python">
+<a href="#private_interconnect_infos_python" style="color: inherit; text-decoration: inherit;">private_<wbr>interconnect_<wbr>infos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info</a></span>
+        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">Sequence[Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info]</a></span>
     </dt>
     <dd>{{% md %}}Information specific to an InterconnectAttachment. This property is populated if the interconnect that this is attached
 to is of type DEDICATED.
@@ -1380,11 +1380,11 @@ Get an existing InterconnectAttachment resource's state with the given name, ID,
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">bandwidth</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">candidate_subnets</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">cloud_router_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">customer_router_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">edge_availability_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">google_reference_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">interconnect</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pairing_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partner_asn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_interconnect_info</span><span class="p">:</span> <span class="nx">Optional[InterconnectAttachmentPrivateInterconnectInfoArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">router</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vlan_tag8021q</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> InterconnectAttachment</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">bandwidth</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">candidate_subnets</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">cloud_router_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">customer_router_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">edge_availability_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">google_reference_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">interconnect</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pairing_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partner_asn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_interconnect_infos</span><span class="p">:</span> <span class="nx">Optional[Sequence[InterconnectAttachmentPrivateInterconnectInfoArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">router</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vlan_tag8021q</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> InterconnectAttachment</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInterconnectAttachment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InterconnectAttachmentState">InterconnectAttachmentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InterconnectAttachment">InterconnectAttachment</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInterconnectAttachment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#InterconnectAttachmentState">InterconnectAttachmentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#InterconnectAttachment">InterconnectAttachment</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1666,11 +1666,11 @@ layer 3 Partner if they configured BGP on behalf of the customer.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_privateinterconnectinfo_csharp">
-<a href="#state_privateinterconnectinfo_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Interconnect<wbr>Info</a>
+        <span id="state_privateinterconnectinfos_csharp">
+<a href="#state_privateinterconnectinfos_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Interconnect<wbr>Infos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">List&lt;Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Information specific to an InterconnectAttachment. This property is populated if the interconnect that this is attached
 to is of type DEDICATED.
@@ -1939,11 +1939,11 @@ layer 3 Partner if they configured BGP on behalf of the customer.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_privateinterconnectinfo_go">
-<a href="#state_privateinterconnectinfo_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Interconnect<wbr>Info</a>
+        <span id="state_privateinterconnectinfos_go">
+<a href="#state_privateinterconnectinfos_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Interconnect<wbr>Infos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info</a></span>
+        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">[]Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information specific to an InterconnectAttachment. This property is populated if the interconnect that this is attached
 to is of type DEDICATED.
@@ -2212,11 +2212,11 @@ layer 3 Partner if they configured BGP on behalf of the customer.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_privateinterconnectinfo_nodejs">
-<a href="#state_privateinterconnectinfo_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Interconnect<wbr>Info</a>
+        <span id="state_privateinterconnectinfos_nodejs">
+<a href="#state_privateinterconnectinfos_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Interconnect<wbr>Infos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info</a></span>
+        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info[]</a></span>
     </dt>
     <dd>{{% md %}}Information specific to an InterconnectAttachment. This property is populated if the interconnect that this is attached
 to is of type DEDICATED.
@@ -2485,11 +2485,11 @@ layer 3 Partner if they configured BGP on behalf of the customer.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_private_interconnect_info_python">
-<a href="#state_private_interconnect_info_python" style="color: inherit; text-decoration: inherit;">private_<wbr>interconnect_<wbr>info</a>
+        <span id="state_private_interconnect_infos_python">
+<a href="#state_private_interconnect_infos_python" style="color: inherit; text-decoration: inherit;">private_<wbr>interconnect_<wbr>infos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">Sequence[Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Information specific to an InterconnectAttachment. This property is populated if the interconnect that this is attached
 to is of type DEDICATED.
@@ -2600,7 +2600,7 @@ using PARTNER type this will be managed upstream.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InterconnectAttachmentPrivateInterconnectInfoOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#InterconnectAttachmentPrivateInterconnectInfoOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.InterconnectAttachmentPrivateInterconnectInfo.html">output</a> API doc for this type.

@@ -33,7 +33,7 @@ To get more information about JobTrigger, see:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataloss?tab=doc#PreventionJobTrigger">NewPreventionJobTrigger</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataloss?tab=doc#PreventionJobTriggerArgs">PreventionJobTriggerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataloss?tab=doc#PreventionJobTrigger">PreventionJobTrigger</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTrigger">NewPreventionJobTrigger</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerArgs">PreventionJobTriggerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTrigger">PreventionJobTrigger</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -107,7 +107,7 @@ To get more information about JobTrigger, see:
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -127,7 +127,7 @@ To get more information about JobTrigger, see:
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataloss?tab=doc#PreventionJobTriggerArgs">PreventionJobTriggerArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerArgs">PreventionJobTriggerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -137,7 +137,7 @@ To get more information about JobTrigger, see:
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -697,7 +697,7 @@ Get an existing PreventionJobTrigger resource's state with the given name, ID, a
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPreventionJobTrigger<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataloss?tab=doc#PreventionJobTriggerState">PreventionJobTriggerState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataloss?tab=doc#PreventionJobTrigger">PreventionJobTrigger</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPreventionJobTrigger<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerState">PreventionJobTriggerState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTrigger">PreventionJobTrigger</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1221,7 +1221,7 @@ Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionJobTriggerInspectJobArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionJobTriggerInspectJob.html">output</a> API doc for this type.
@@ -1407,7 +1407,7 @@ Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobActionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionJobTriggerInspectJobActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionJobTriggerInspectJobAction.html">output</a> API doc for this type.
@@ -1501,7 +1501,7 @@ Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobActionSaveFindingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobActionSaveFindingsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobActionSaveFindingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobActionSaveFindingsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionJobTriggerInspectJobActionSaveFindingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionJobTriggerInspectJobActionSaveFindings.html">output</a> API doc for this type.
@@ -1595,7 +1595,7 @@ Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionJobTriggerInspectJobActionSaveFindingsOutputConfig.html">output</a> API doc for this type.
@@ -1761,7 +1761,7 @@ Possible values are `BASIC_COLUMNS`, `GCS_COLUMNS`, `DATASTORE_COLUMNS`, `BIG_QU
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTable.html">output</a> API doc for this type.
@@ -1943,7 +1943,7 @@ Possible values are `BASIC_COLUMNS`, `GCS_COLUMNS`, `DATASTORE_COLUMNS`, `BIG_QU
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionJobTriggerInspectJobStorageConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionJobTriggerInspectJobStorageConfig.html">output</a> API doc for this type.
@@ -2181,7 +2181,7 @@ Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionJobTriggerInspectJobStorageConfigBigQueryOptions.html">output</a> API doc for this type.
@@ -2275,7 +2275,7 @@ Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference.html">output</a> API doc for this type.
@@ -2457,7 +2457,7 @@ Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionJobTriggerInspectJobStorageConfigCloudStorageOptions.html">output</a> API doc for this type.
@@ -2803,7 +2803,7 @@ Possible values are `TOP` and `RANDOM_START`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSet.html">output</a> API doc for this type.
@@ -2957,7 +2957,7 @@ equivalent to `gs://mybucket/*`, and `gs://mybucket/directory/` is equivalent to
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet.html">output</a> API doc for this type.
@@ -3151,7 +3151,7 @@ match all files by default (this is equivalent to including .* in the list)
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionJobTriggerInspectJobStorageConfigDatastoreOptions.html">output</a> API doc for this type.
@@ -3297,7 +3297,7 @@ Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind.html">output</a> API doc for this type.
@@ -3387,7 +3387,7 @@ Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId.html">output</a> API doc for this type.
@@ -3521,7 +3521,7 @@ Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigTimespanConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigTimespanConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionJobTriggerInspectJobStorageConfigTimespanConfig.html">output</a> API doc for this type.
@@ -3755,7 +3755,7 @@ be based on the time of the execution of the last run of the JobTrigger.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField.html">output</a> API doc for this type.
@@ -3845,7 +3845,7 @@ be based on the time of the execution of the last run of the JobTrigger.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataloss?tab=doc#PreventionJobTriggerTriggerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataloss?tab=doc#PreventionJobTriggerTriggerOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerTriggerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerTriggerOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionJobTriggerTriggerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionJobTriggerTrigger.html">output</a> API doc for this type.
@@ -3939,7 +3939,7 @@ Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataloss?tab=doc#PreventionJobTriggerTriggerScheduleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataloss?tab=doc#PreventionJobTriggerTriggerScheduleOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerTriggerScheduleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerTriggerScheduleOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionJobTriggerTriggerScheduleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionJobTriggerTriggerSchedule.html">output</a> API doc for this type.

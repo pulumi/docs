@@ -38,7 +38,7 @@ To get more information about Job, see:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudscheduler?tab=doc#Job">NewJob</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudscheduler?tab=doc#JobArgs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudscheduler?tab=doc#Job">Job</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudscheduler?tab=doc#Job">NewJob</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudscheduler?tab=doc#JobArgs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudscheduler?tab=doc#Job">Job</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -112,7 +112,7 @@ To get more information about Job, see:
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -132,7 +132,7 @@ To get more information about Job, see:
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudscheduler?tab=doc#JobArgs">JobArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudscheduler?tab=doc#JobArgs">JobArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -142,7 +142,7 @@ To get more information about Job, see:
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -234,6 +234,7 @@ execution logs. Cloud Scheduler will retry the job according to the RetryConfig.
 The allowed duration for this deadline is:
 * For HTTP targets, between 15 seconds and 30 minutes.
 * For App Engine HTTP targets, between 15 seconds and 24 hours.
+* **Note**: For PubSub targets, this field is ignored - setting it will introduce an unresolvable diff.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
 {{% /md %}}</dd>
 
@@ -383,6 +384,7 @@ execution logs. Cloud Scheduler will retry the job according to the RetryConfig.
 The allowed duration for this deadline is:
 * For HTTP targets, between 15 seconds and 30 minutes.
 * For App Engine HTTP targets, between 15 seconds and 24 hours.
+* **Note**: For PubSub targets, this field is ignored - setting it will introduce an unresolvable diff.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
 {{% /md %}}</dd>
 
@@ -532,6 +534,7 @@ execution logs. Cloud Scheduler will retry the job according to the RetryConfig.
 The allowed duration for this deadline is:
 * For HTTP targets, between 15 seconds and 30 minutes.
 * For App Engine HTTP targets, between 15 seconds and 24 hours.
+* **Note**: For PubSub targets, this field is ignored - setting it will introduce an unresolvable diff.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
 {{% /md %}}</dd>
 
@@ -681,6 +684,7 @@ execution logs. Cloud Scheduler will retry the job according to the RetryConfig.
 The allowed duration for this deadline is:
 * For HTTP targets, between 15 seconds and 30 minutes.
 * For App Engine HTTP targets, between 15 seconds and 24 hours.
+* **Note**: For PubSub targets, this field is ignored - setting it will introduce an unresolvable diff.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
 {{% /md %}}</dd>
 
@@ -898,7 +902,7 @@ Get an existing Job resource's state with the given name, ID, and optional extra
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudscheduler?tab=doc#JobState">JobState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudscheduler?tab=doc#Job">Job</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudscheduler?tab=doc#JobState">JobState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudscheduler?tab=doc#Job">Job</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1036,6 +1040,7 @@ execution logs. Cloud Scheduler will retry the job according to the RetryConfig.
 The allowed duration for this deadline is:
 * For HTTP targets, between 15 seconds and 30 minutes.
 * For App Engine HTTP targets, between 15 seconds and 24 hours.
+* **Note**: For PubSub targets, this field is ignored - setting it will introduce an unresolvable diff.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
 {{% /md %}}</dd>
 
@@ -1185,6 +1190,7 @@ execution logs. Cloud Scheduler will retry the job according to the RetryConfig.
 The allowed duration for this deadline is:
 * For HTTP targets, between 15 seconds and 30 minutes.
 * For App Engine HTTP targets, between 15 seconds and 24 hours.
+* **Note**: For PubSub targets, this field is ignored - setting it will introduce an unresolvable diff.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
 {{% /md %}}</dd>
 
@@ -1334,6 +1340,7 @@ execution logs. Cloud Scheduler will retry the job according to the RetryConfig.
 The allowed duration for this deadline is:
 * For HTTP targets, between 15 seconds and 30 minutes.
 * For App Engine HTTP targets, between 15 seconds and 24 hours.
+* **Note**: For PubSub targets, this field is ignored - setting it will introduce an unresolvable diff.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
 {{% /md %}}</dd>
 
@@ -1483,6 +1490,7 @@ execution logs. Cloud Scheduler will retry the job according to the RetryConfig.
 The allowed duration for this deadline is:
 * For HTTP targets, between 15 seconds and 30 minutes.
 * For App Engine HTTP targets, between 15 seconds and 24 hours.
+* **Note**: For PubSub targets, this field is ignored - setting it will introduce an unresolvable diff.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
 {{% /md %}}</dd>
 
@@ -1618,7 +1626,7 @@ The value of this field must be a time zone name from the tz database.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudscheduler?tab=doc#JobAppEngineHttpTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudscheduler?tab=doc#JobAppEngineHttpTargetOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudscheduler?tab=doc#JobAppEngineHttpTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudscheduler?tab=doc#JobAppEngineHttpTargetOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudScheduler.Inputs.JobAppEngineHttpTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudScheduler.Outputs.JobAppEngineHttpTarget.html">output</a> API doc for this type.
@@ -1916,7 +1924,7 @@ Repeated headers are not supported, but a header value can contain commas.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudscheduler?tab=doc#JobAppEngineHttpTargetAppEngineRoutingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudscheduler?tab=doc#JobAppEngineHttpTargetAppEngineRoutingOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudscheduler?tab=doc#JobAppEngineHttpTargetAppEngineRoutingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudscheduler?tab=doc#JobAppEngineHttpTargetAppEngineRoutingOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudScheduler.Inputs.JobAppEngineHttpTargetAppEngineRoutingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudScheduler.Outputs.JobAppEngineHttpTargetAppEngineRouting.html">output</a> API doc for this type.
@@ -2106,7 +2114,7 @@ By default, the job is sent to the version which is the default version when the
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudscheduler?tab=doc#JobHttpTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudscheduler?tab=doc#JobHttpTargetOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudscheduler?tab=doc#JobHttpTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudscheduler?tab=doc#JobHttpTargetOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudScheduler.Inputs.JobHttpTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudScheduler.Outputs.JobHttpTarget.html">output</a> API doc for this type.
@@ -2444,7 +2452,7 @@ Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudscheduler?tab=doc#JobHttpTargetOauthTokenArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudscheduler?tab=doc#JobHttpTargetOauthTokenOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudscheduler?tab=doc#JobHttpTargetOauthTokenArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudscheduler?tab=doc#JobHttpTargetOauthTokenOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudScheduler.Inputs.JobHttpTargetOauthTokenArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudScheduler.Outputs.JobHttpTargetOauthToken.html">output</a> API doc for this type.
@@ -2586,7 +2594,7 @@ The service account must be within the same project as the job.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudscheduler?tab=doc#JobHttpTargetOidcTokenArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudscheduler?tab=doc#JobHttpTargetOidcTokenOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudscheduler?tab=doc#JobHttpTargetOidcTokenArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudscheduler?tab=doc#JobHttpTargetOidcTokenOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudScheduler.Inputs.JobHttpTargetOidcTokenArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudScheduler.Outputs.JobHttpTargetOidcToken.html">output</a> API doc for this type.
@@ -2728,7 +2736,7 @@ the URI specified in target will be used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudscheduler?tab=doc#JobPubsubTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudscheduler?tab=doc#JobPubsubTargetOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudscheduler?tab=doc#JobPubsubTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudscheduler?tab=doc#JobPubsubTargetOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudScheduler.Inputs.JobPubsubTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudScheduler.Outputs.JobPubsubTarget.html">output</a> API doc for this type.
@@ -2926,7 +2934,7 @@ Pubsub message must contain either non-empty data, or at least one attribute.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudscheduler?tab=doc#JobRetryConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudscheduler?tab=doc#JobRetryConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudscheduler?tab=doc#JobRetryConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudscheduler?tab=doc#JobRetryConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudScheduler.Inputs.JobRetryConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudScheduler.Outputs.JobRetryConfig.html">output</a> API doc for this type.

@@ -28,11 +28,11 @@ granted to the credentials used with this provider.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/logging/#pulumi_gcp.logging.OrganizationSink">OrganizationSink</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bigquery_options</span><span class="p">:</span> <span class="nx">Optional[OrganizationSinkBigqueryOptionsArgs]</span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">include_children</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">org_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/logging/#pulumi_gcp.logging.OrganizationSink">OrganizationSink</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bigquery_options</span><span class="p">:</span> <span class="nx">Optional[OrganizationSinkBigqueryOptionsArgs]</span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">exclusions</span><span class="p">:</span> <span class="nx">Optional[Sequence[OrganizationSinkExclusionArgs]]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">include_children</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">org_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#OrganizationSink">NewOrganizationSink</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#OrganizationSinkArgs">OrganizationSinkArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#OrganizationSink">OrganizationSink</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/logging?tab=doc#OrganizationSink">NewOrganizationSink</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/logging?tab=doc#OrganizationSinkArgs">OrganizationSinkArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/logging?tab=doc#OrganizationSink">OrganizationSink</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -106,7 +106,7 @@ granted to the credentials used with this provider.
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -126,7 +126,7 @@ granted to the credentials used with this provider.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#OrganizationSinkArgs">OrganizationSinkArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/logging?tab=doc#OrganizationSinkArgs">OrganizationSinkArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -136,7 +136,7 @@ granted to the credentials used with this provider.
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -236,6 +236,18 @@ Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="exclusions_csharp">
+<a href="#exclusions_csharp" style="color: inherit; text-decoration: inherit;">Exclusions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#organizationsinkexclusion">List&lt;Organization<wbr>Sink<wbr>Exclusion<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and
+one of exclusion_filters it will not be exported.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
 </span> 
@@ -309,6 +321,18 @@ Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
         <span class="property-type"><a href="#organizationsinkbigqueryoptions">Organization<wbr>Sink<wbr>Bigquery<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Options that affect sinks exporting data to BigQuery. Structure documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="exclusions_go">
+<a href="#exclusions_go" style="color: inherit; text-decoration: inherit;">Exclusions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#organizationsinkexclusion">[]Organization<wbr>Sink<wbr>Exclusion</a></span>
+    </dt>
+    <dd>{{% md %}}Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and
+one of exclusion_filters it will not be exported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -390,6 +414,18 @@ Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="exclusions_nodejs">
+<a href="#exclusions_nodejs" style="color: inherit; text-decoration: inherit;">exclusions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#organizationsinkexclusion">Organization<wbr>Sink<wbr>Exclusion[]</a></span>
+    </dt>
+    <dd>{{% md %}}Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and
+one of exclusion_filters it will not be exported.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span> 
@@ -463,6 +499,18 @@ Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
         <span class="property-type"><a href="#organizationsinkbigqueryoptions">Organization<wbr>Sink<wbr>Bigquery<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options that affect sinks exporting data to BigQuery. Structure documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="exclusions_python">
+<a href="#exclusions_python" style="color: inherit; text-decoration: inherit;">exclusions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#organizationsinkexclusion">Sequence[Organization<wbr>Sink<wbr>Exclusion<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and
+one of exclusion_filters it will not be exported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -648,11 +696,11 @@ Get an existing OrganizationSink resource's state with the given name, ID, and o
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bigquery_options</span><span class="p">:</span> <span class="nx">Optional[OrganizationSinkBigqueryOptionsArgs]</span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">include_children</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">org_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">writer_identity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> OrganizationSink</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bigquery_options</span><span class="p">:</span> <span class="nx">Optional[OrganizationSinkBigqueryOptionsArgs]</span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">exclusions</span><span class="p">:</span> <span class="nx">Optional[Sequence[OrganizationSinkExclusionArgs]]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">include_children</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">org_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">writer_identity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> OrganizationSink</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetOrganizationSink<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#OrganizationSinkState">OrganizationSinkState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#OrganizationSink">OrganizationSink</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetOrganizationSink<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/logging?tab=doc#OrganizationSinkState">OrganizationSinkState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/logging?tab=doc#OrganizationSink">OrganizationSink</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -787,6 +835,18 @@ Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_exclusions_csharp">
+<a href="#state_exclusions_csharp" style="color: inherit; text-decoration: inherit;">Exclusions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#organizationsinkexclusion">List&lt;Organization<wbr>Sink<wbr>Exclusion<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and
+one of exclusion_filters it will not be exported.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_filter_csharp">
 <a href="#state_filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
 </span> 
@@ -872,6 +932,18 @@ configured `destination`.
     </dt>
     <dd>{{% md %}}The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_exclusions_go">
+<a href="#state_exclusions_go" style="color: inherit; text-decoration: inherit;">Exclusions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#organizationsinkexclusion">[]Organization<wbr>Sink<wbr>Exclusion</a></span>
+    </dt>
+    <dd>{{% md %}}Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and
+one of exclusion_filters it will not be exported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -965,6 +1037,18 @@ Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_exclusions_nodejs">
+<a href="#state_exclusions_nodejs" style="color: inherit; text-decoration: inherit;">exclusions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#organizationsinkexclusion">Organization<wbr>Sink<wbr>Exclusion[]</a></span>
+    </dt>
+    <dd>{{% md %}}Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and
+one of exclusion_filters it will not be exported.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_filter_nodejs">
 <a href="#state_filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span> 
@@ -1054,6 +1138,18 @@ Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_exclusions_python">
+<a href="#state_exclusions_python" style="color: inherit; text-decoration: inherit;">exclusions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#organizationsinkexclusion">Sequence[Organization<wbr>Sink<wbr>Exclusion<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and
+one of exclusion_filters it will not be exported.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_filter_python">
 <a href="#state_filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span> 
@@ -1132,7 +1228,7 @@ configured `destination`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#OrganizationSinkBigqueryOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#OrganizationSinkBigqueryOptionsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/logging?tab=doc#OrganizationSinkBigqueryOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/logging?tab=doc#OrganizationSinkBigqueryOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.Inputs.OrganizationSinkBigqueryOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.Outputs.OrganizationSinkBigqueryOptions.html">output</a> API doc for this type.
@@ -1220,6 +1316,228 @@ By default, Logging creates dated tables based on the log entries' timestamps, e
 tables the date suffix is no longer present and [special query syntax](https://cloud.google.com/bigquery/docs/querying-partitioned-tables)
 has to be used instead. In both cases, tables are sharded based on UTC timezone.
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="organizationsinkexclusion">Organization<wbr>Sink<wbr>Exclusion</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#OrganizationSinkExclusion">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#OrganizationSinkExclusion">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/logging?tab=doc#OrganizationSinkExclusionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/logging?tab=doc#OrganizationSinkExclusionOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.Inputs.OrganizationSinkExclusionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.Outputs.OrganizationSinkExclusion.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filter_csharp">
+<a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
+See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
+write a filter.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the logging sink.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disabled_csharp">
+<a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filter_go">
+<a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
+See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
+write a filter.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the logging sink.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disabled_go">
+<a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filter_nodejs">
+<a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
+See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
+write a filter.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the logging sink.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disabled_nodejs">
+<a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filter_python">
+<a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
+See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
+write a filter.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the logging sink.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disabled_python">
+<a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

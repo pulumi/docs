@@ -23,7 +23,7 @@ Explore the resources and functions of the securitycenter module in the GCP pack
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.25.0</dd>
+	<dd>4.0.0</dd>
 </dl>
 
 
@@ -34,7 +34,7 @@ Explore the resources and functions of the securitycenter module in the GCP pack
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.SecurityCenter.html" title="Pulumi.Gcp.SecurityCenter">Pulumi.Gcp.SecurityCenter</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/securitycenter?tab=doc#" title="gcp/securitycenter">gcp/securitycenter</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/securitycenter?tab=doc#" title="gcp/securitycenter">gcp/securitycenter</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/securitycenter/#" title="@pulumi/gcp/securitycenter">@pulumi/gcp/securitycenter</a></dd>

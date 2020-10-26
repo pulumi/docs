@@ -33,7 +33,7 @@ To get more information about DomainMapping, see:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#DomainMapping">NewDomainMapping</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#DomainMappingArgs">DomainMappingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#DomainMapping">DomainMapping</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudrun?tab=doc#DomainMapping">NewDomainMapping</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudrun?tab=doc#DomainMappingArgs">DomainMappingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudrun?tab=doc#DomainMapping">DomainMapping</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -107,7 +107,7 @@ To get more information about DomainMapping, see:
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -127,7 +127,7 @@ To get more information about DomainMapping, see:
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#DomainMappingArgs">DomainMappingArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudrun?tab=doc#DomainMappingArgs">DomainMappingArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -137,7 +137,7 @@ To get more information about DomainMapping, see:
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -484,11 +484,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="status_csharp">
-<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+        <span id="statuses_csharp">
+<a href="#statuses_csharp" style="color: inherit; text-decoration: inherit;">Statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingstatus">Domain<wbr>Mapping<wbr>Status</a></span>
+        <span class="property-type"><a href="#domainmappingstatus">List&lt;Domain<wbr>Mapping<wbr>Status&gt;</a></span>
     </dt>
     <dd>{{% md %}}The current status of the DomainMapping.
 {{% /md %}}</dd>
@@ -512,11 +512,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="status_go">
-<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+        <span id="statuses_go">
+<a href="#statuses_go" style="color: inherit; text-decoration: inherit;">Statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingstatus">Domain<wbr>Mapping<wbr>Status</a></span>
+        <span class="property-type"><a href="#domainmappingstatus">[]Domain<wbr>Mapping<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The current status of the DomainMapping.
 {{% /md %}}</dd>
@@ -540,11 +540,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="status_nodejs">
-<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+        <span id="statuses_nodejs">
+<a href="#statuses_nodejs" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingstatus">Domain<wbr>Mapping<wbr>Status</a></span>
+        <span class="property-type"><a href="#domainmappingstatus">Domain<wbr>Mapping<wbr>Status[]</a></span>
     </dt>
     <dd>{{% md %}}The current status of the DomainMapping.
 {{% /md %}}</dd>
@@ -568,11 +568,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="status_python">
-<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+        <span id="statuses_python">
+<a href="#statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingstatus">Domain<wbr>Mapping<wbr>Status</a></span>
+        <span class="property-type"><a href="#domainmappingstatus">Sequence[Domain<wbr>Mapping<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}The current status of the DomainMapping.
 {{% /md %}}</dd>
@@ -597,11 +597,11 @@ Get an existing DomainMapping resource's state with the given name, ID, and opti
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[DomainMappingMetadataArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[DomainMappingSpecArgs]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[DomainMappingStatusArgs]</span> = None<span class="p">) -&gt;</span> DomainMapping</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[DomainMappingMetadataArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[DomainMappingSpecArgs]</span> = None<span class="p">, </span><span class="nx">statuses</span><span class="p">:</span> <span class="nx">Optional[Sequence[DomainMappingStatusArgs]]</span> = None<span class="p">) -&gt;</span> DomainMapping</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDomainMapping<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#DomainMappingState">DomainMappingState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#DomainMapping">DomainMapping</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDomainMapping<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudrun?tab=doc#DomainMappingState">DomainMappingState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudrun?tab=doc#DomainMapping">DomainMapping</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -771,11 +771,11 @@ Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_status_csharp">
-<a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+        <span id="state_statuses_csharp">
+<a href="#state_statuses_csharp" style="color: inherit; text-decoration: inherit;">Statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingstatus">Domain<wbr>Mapping<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#domainmappingstatus">List&lt;Domain<wbr>Mapping<wbr>Status<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The current status of the DomainMapping.
 {{% /md %}}</dd>
@@ -847,11 +847,11 @@ Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_status_go">
-<a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+        <span id="state_statuses_go">
+<a href="#state_statuses_go" style="color: inherit; text-decoration: inherit;">Statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingstatus">Domain<wbr>Mapping<wbr>Status</a></span>
+        <span class="property-type"><a href="#domainmappingstatus">[]Domain<wbr>Mapping<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The current status of the DomainMapping.
 {{% /md %}}</dd>
@@ -923,11 +923,11 @@ Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_status_nodejs">
-<a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+        <span id="state_statuses_nodejs">
+<a href="#state_statuses_nodejs" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingstatus">Domain<wbr>Mapping<wbr>Status</a></span>
+        <span class="property-type"><a href="#domainmappingstatus">Domain<wbr>Mapping<wbr>Status[]</a></span>
     </dt>
     <dd>{{% md %}}The current status of the DomainMapping.
 {{% /md %}}</dd>
@@ -999,11 +999,11 @@ Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_status_python">
-<a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
+        <span id="state_statuses_python">
+<a href="#state_statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingstatus">Domain<wbr>Mapping<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#domainmappingstatus">Sequence[Domain<wbr>Mapping<wbr>Status<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The current status of the DomainMapping.
 {{% /md %}}</dd>
@@ -1029,7 +1029,7 @@ Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#DomainMappingMetadataArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#DomainMappingMetadataOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudrun?tab=doc#DomainMappingMetadataArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudrun?tab=doc#DomainMappingMetadataOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Inputs.DomainMappingMetadataArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.DomainMappingMetadata.html">output</a> API doc for this type.
@@ -1455,7 +1455,7 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#DomainMappingSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#DomainMappingSpecOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudrun?tab=doc#DomainMappingSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudrun?tab=doc#DomainMappingSpecOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Inputs.DomainMappingSpecArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.DomainMappingSpec.html">output</a> API doc for this type.
@@ -1657,7 +1657,7 @@ has given such a warning.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#DomainMappingStatusOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudrun?tab=doc#DomainMappingStatusOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.DomainMappingStatus.html">output</a> API doc for this type.
@@ -1863,7 +1863,7 @@ has given such a warning.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#DomainMappingStatusConditionOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudrun?tab=doc#DomainMappingStatusConditionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.DomainMappingStatusCondition.html">output</a> API doc for this type.
@@ -2069,7 +2069,7 @@ has given such a warning.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#DomainMappingStatusResourceRecordOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudrun?tab=doc#DomainMappingStatusResourceRecordOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.DomainMappingStatusResourceRecord.html">output</a> API doc for this type.

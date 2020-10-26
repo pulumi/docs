@@ -28,7 +28,7 @@ Explore the resources and functions of the accesscontextmanager module in the GC
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.25.0</dd>
+	<dd>4.0.0</dd>
 </dl>
 
 
@@ -39,7 +39,7 @@ Explore the resources and functions of the accesscontextmanager module in the GC
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AccessContextManager.html" title="Pulumi.Gcp.AccessContextManager">Pulumi.Gcp.AccessContextManager</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/accesscontextmanager?tab=doc#" title="gcp/accesscontextmanager">gcp/accesscontextmanager</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/accesscontextmanager?tab=doc#" title="gcp/accesscontextmanager">gcp/accesscontextmanager</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/accesscontextmanager/#" title="@pulumi/gcp/accesscontextmanager">@pulumi/gcp/accesscontextmanager</a></dd>
