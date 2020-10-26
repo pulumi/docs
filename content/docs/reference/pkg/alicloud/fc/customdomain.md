@@ -101,10 +101,16 @@ import (
 	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/fc"
 	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		cfg := config.New(ctx, "")
+		name := "tf-testaccalicloudfcservice"
+		if param := cfg.Get("name"); param != "" {
+			name = param
+		}
 		defaultService, err := fc.NewService(ctx, "defaultService", &fc.ServiceArgs{
 			Description: pulumi.String(fmt.Sprintf("%v%v", name, "-description")),
 		})

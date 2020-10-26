@@ -28,16 +28,33 @@ class MyStack : Stack
 {
     public MyStack()
     {
+        var config = new Config();
+        var name = config.Get("name") ?? "polardbClusterconfig";
+        var creation = config.Get("creation") ?? "PolarDB";
+        var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+        {
+            AvailableResourceCreation = creation,
+        }));
+        var defaultNetwork = new AliCloud.Vpc.Network("defaultNetwork", new AliCloud.Vpc.NetworkArgs
+        {
+            CidrBlock = "172.16.0.0/16",
+        });
+        var defaultSwitch = new AliCloud.Vpc.Switch("defaultSwitch", new AliCloud.Vpc.SwitchArgs
+        {
+            VpcId = defaultNetwork.Id,
+            CidrBlock = "172.16.0.0/24",
+            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
+        });
         var cluster = new AliCloud.PolarDB.Cluster("cluster", new AliCloud.PolarDB.ClusterArgs
         {
             DbType = "MySQL",
             DbVersion = "8.0",
             PayType = "PostPaid",
-            DbNodeClass = @var.Clusterclass,
-            VswitchId = "polar.mysql.x4.large",
+            DbNodeClass = "polar.mysql.x4.large",
+            VswitchId = defaultSwitch.Id,
             Description = "testDB",
         });
-        var @default = new AliCloud.PolarDB.Database("default", new AliCloud.PolarDB.DatabaseArgs
+        var defaultDatabase = new AliCloud.PolarDB.Database("defaultDatabase", new AliCloud.PolarDB.DatabaseArgs
         {
             DbClusterId = cluster.Id,
             DbName = "tftestdatabase",
@@ -54,24 +71,57 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud"
 	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/polardb"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		cfg := config.New(ctx, "")
+		name := "polardbClusterconfig"
+		if param := cfg.Get("name"); param != "" {
+			name = param
+		}
+		creation := "PolarDB"
+		if param := cfg.Get("creation"); param != "" {
+			creation = param
+		}
+		opt0 := creation
+		defaultZones, err := alicloud.GetZones(ctx, &alicloud.GetZonesArgs{
+			AvailableResourceCreation: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		defaultNetwork, err := vpc.NewNetwork(ctx, "defaultNetwork", &vpc.NetworkArgs{
+			CidrBlock: pulumi.String("172.16.0.0/16"),
+		})
+		if err != nil {
+			return err
+		}
+		defaultSwitch, err := vpc.NewSwitch(ctx, "defaultSwitch", &vpc.SwitchArgs{
+			VpcId:            defaultNetwork.ID(),
+			CidrBlock:        pulumi.String("172.16.0.0/24"),
+			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
+		})
+		if err != nil {
+			return err
+		}
 		cluster, err := polardb.NewCluster(ctx, "cluster", &polardb.ClusterArgs{
 			DbType:      pulumi.String("MySQL"),
 			DbVersion:   pulumi.String("8.0"),
 			PayType:     pulumi.String("PostPaid"),
-			DbNodeClass: pulumi.Any(_var.Clusterclass),
-			VswitchId:   pulumi.String("polar.mysql.x4.large"),
+			DbNodeClass: pulumi.String("polar.mysql.x4.large"),
+			VswitchId:   defaultSwitch.ID(),
 			Description: pulumi.String("testDB"),
 		})
 		if err != nil {
 			return err
 		}
-		_, err = polardb.NewDatabase(ctx, "_default", &polardb.DatabaseArgs{
+		_, err = polardb.NewDatabase(ctx, "defaultDatabase", &polardb.DatabaseArgs{
 			DbClusterId: cluster.ID(),
 			DbName:      pulumi.String("tftestdatabase"),
 		})
@@ -90,14 +140,27 @@ func main() {
 import pulumi
 import pulumi_alicloud as alicloud
 
+config = pulumi.Config()
+name = config.get("name")
+if name is None:
+    name = "polardbClusterconfig"
+creation = config.get("creation")
+if creation is None:
+    creation = "PolarDB"
+default_zones = alicloud.get_zones(available_resource_creation=creation)
+default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/16")
+default_switch = alicloud.vpc.Switch("defaultSwitch",
+    vpc_id=default_network.id,
+    cidr_block="172.16.0.0/24",
+    availability_zone=default_zones.zones[0].id)
 cluster = alicloud.polardb.Cluster("cluster",
     db_type="MySQL",
     db_version="8.0",
     pay_type="PostPaid",
-    db_node_class=var["clusterclass"],
-    vswitch_id="polar.mysql.x4.large",
+    db_node_class="polar.mysql.x4.large",
+    vswitch_id=default_switch.id,
     description="testDB")
-default = alicloud.polardb.Database("default",
+default_database = alicloud.polardb.Database("defaultDatabase",
     db_cluster_id=cluster.id,
     db_name="tftestdatabase")
 ```
@@ -110,15 +173,27 @@ default = alicloud.polardb.Database("default",
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
+const config = new pulumi.Config();
+const name = config.get("name") || "polardbClusterconfig";
+const creation = config.get("creation") || "PolarDB";
+const defaultZones = alicloud.getZones({
+    availableResourceCreation: creation,
+});
+const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {cidrBlock: "172.16.0.0/16"});
+const defaultSwitch = new alicloud.vpc.Switch("defaultSwitch", {
+    vpcId: defaultNetwork.id,
+    cidrBlock: "172.16.0.0/24",
+    availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
+});
 const cluster = new alicloud.polardb.Cluster("cluster", {
     dbType: "MySQL",
     dbVersion: "8.0",
     payType: "PostPaid",
-    dbNodeClass: _var.clusterclass,
-    vswitchId: "polar.mysql.x4.large",
+    dbNodeClass: "polar.mysql.x4.large",
+    vswitchId: defaultSwitch.id,
     description: "testDB",
 });
-const _default = new alicloud.polardb.Database("default", {
+const defaultDatabase = new alicloud.polardb.Database("defaultDatabase", {
     dbClusterId: cluster.id,
     dbName: "tftestdatabase",
 });
@@ -351,7 +426,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Database description. It cannot begin with https://. It must start with a Chinese character or English letter. It can include Chinese and English characters, underlines (_), hyphens (-), and numbers. The length may be 2-256 characters.
+    <dd>{{% md %}}Database description. It must start with a Chinese character or English letter, cannot start with "http://" or "https://". It can include Chinese and English characters, underlines (_), hyphens (-), and numbers. The length must be 2-256 characters.
 {{% /md %}}</dd>
 
 </dl>
@@ -402,7 +477,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Database description. It cannot begin with https://. It must start with a Chinese character or English letter. It can include Chinese and English characters, underlines (_), hyphens (-), and numbers. The length may be 2-256 characters.
+    <dd>{{% md %}}Database description. It must start with a Chinese character or English letter, cannot start with "http://" or "https://". It can include Chinese and English characters, underlines (_), hyphens (-), and numbers. The length must be 2-256 characters.
 {{% /md %}}</dd>
 
 </dl>
@@ -453,7 +528,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Database description. It cannot begin with https://. It must start with a Chinese character or English letter. It can include Chinese and English characters, underlines (_), hyphens (-), and numbers. The length may be 2-256 characters.
+    <dd>{{% md %}}Database description. It must start with a Chinese character or English letter, cannot start with "http://" or "https://". It can include Chinese and English characters, underlines (_), hyphens (-), and numbers. The length must be 2-256 characters.
 {{% /md %}}</dd>
 
 </dl>
@@ -504,7 +579,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Database description. It cannot begin with https://. It must start with a Chinese character or English letter. It can include Chinese and English characters, underlines (_), hyphens (-), and numbers. The length may be 2-256 characters.
+    <dd>{{% md %}}Database description. It must start with a Chinese character or English letter, cannot start with "http://" or "https://". It can include Chinese and English characters, underlines (_), hyphens (-), and numbers. The length must be 2-256 characters.
 {{% /md %}}</dd>
 
 </dl>
@@ -750,7 +825,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Database description. It cannot begin with https://. It must start with a Chinese character or English letter. It can include Chinese and English characters, underlines (_), hyphens (-), and numbers. The length may be 2-256 characters.
+    <dd>{{% md %}}Database description. It must start with a Chinese character or English letter, cannot start with "http://" or "https://". It can include Chinese and English characters, underlines (_), hyphens (-), and numbers. The length must be 2-256 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -801,7 +876,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Database description. It cannot begin with https://. It must start with a Chinese character or English letter. It can include Chinese and English characters, underlines (_), hyphens (-), and numbers. The length may be 2-256 characters.
+    <dd>{{% md %}}Database description. It must start with a Chinese character or English letter, cannot start with "http://" or "https://". It can include Chinese and English characters, underlines (_), hyphens (-), and numbers. The length must be 2-256 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -852,7 +927,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Database description. It cannot begin with https://. It must start with a Chinese character or English letter. It can include Chinese and English characters, underlines (_), hyphens (-), and numbers. The length may be 2-256 characters.
+    <dd>{{% md %}}Database description. It must start with a Chinese character or English letter, cannot start with "http://" or "https://". It can include Chinese and English characters, underlines (_), hyphens (-), and numbers. The length must be 2-256 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -903,7 +978,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Database description. It cannot begin with https://. It must start with a Chinese character or English letter. It can include Chinese and English characters, underlines (_), hyphens (-), and numbers. The length may be 2-256 characters.
+    <dd>{{% md %}}Database description. It must start with a Chinese character or English letter, cannot start with "http://" or "https://". It can include Chinese and English characters, underlines (_), hyphens (-), and numbers. The length must be 2-256 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

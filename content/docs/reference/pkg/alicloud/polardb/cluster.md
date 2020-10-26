@@ -51,7 +51,7 @@ class MyStack : Stack
         {
             DbType = "MySQL",
             DbVersion = "5.6",
-            DbNodeClass = "rds.mysql.s2.large",
+            DbNodeClass = "polar.mysql.x4.medium",
             PayType = "PostPaid",
             Description = name,
             VswitchId = defaultSwitch.Id,
@@ -72,10 +72,20 @@ import (
 	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/polardb"
 	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		cfg := config.New(ctx, "")
+		name := "polardbClusterconfig"
+		if param := cfg.Get("name"); param != "" {
+			name = param
+		}
+		creation := "PolarDB"
+		if param := cfg.Get("creation"); param != "" {
+			creation = param
+		}
 		opt0 := creation
 		defaultZones, err := alicloud.GetZones(ctx, &alicloud.GetZonesArgs{
 			AvailableResourceCreation: &opt0,
@@ -100,7 +110,7 @@ func main() {
 		_, err = polardb.NewCluster(ctx, "defaultCluster", &polardb.ClusterArgs{
 			DbType:      pulumi.String("MySQL"),
 			DbVersion:   pulumi.String("5.6"),
-			DbNodeClass: pulumi.String("rds.mysql.s2.large"),
+			DbNodeClass: pulumi.String("polar.mysql.x4.medium"),
 			PayType:     pulumi.String("PostPaid"),
 			Description: pulumi.String(name),
 			VswitchId:   defaultSwitch.ID(),
@@ -136,7 +146,7 @@ default_switch = alicloud.vpc.Switch("defaultSwitch",
 default_cluster = alicloud.polardb.Cluster("defaultCluster",
     db_type="MySQL",
     db_version="5.6",
-    db_node_class="rds.mysql.s2.large",
+    db_node_class="polar.mysql.x4.medium",
     pay_type="PostPaid",
     description=name,
     vswitch_id=default_switch.id)
@@ -165,7 +175,7 @@ const defaultSwitch = new alicloud.vpc.Switch("defaultSwitch", {
 const defaultCluster = new alicloud.polardb.Cluster("defaultCluster", {
     dbType: "MySQL",
     dbVersion: "5.6",
-    dbNodeClass: "rds.mysql.s2.large",
+    dbNodeClass: "polar.mysql.x4.medium",
     payType: "PostPaid",
     description: name,
     vswitchId: defaultSwitch.id,

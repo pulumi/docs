@@ -13,6 +13,86 @@ meta_desc: "Explore the GetInstances function of the kvstore module, including e
 The `alicloud.kvstore.getInstances` data source provides a collection of kvstore instances available in Alicloud account.
 Filters support regular expression for the instance name, searches by tags, and other filters which are listed below.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = Output.Create(AliCloud.KVStore.GetInstances.InvokeAsync(new AliCloud.KVStore.GetInstancesArgs
+        {
+            NameRegex = "testname",
+        }));
+        this.FirstInstanceName = @default.Apply(@default => @default.Instances[0].Name);
+    }
+
+    [Output("firstInstanceName")]
+    public Output<string> FirstInstanceName { get; set; }
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/kvstore"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "testname"
+		_default, err := kvstore.GetInstances(ctx, &kvstore.GetInstancesArgs{
+			NameRegex: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstInstanceName", _default.Instances[0].Name)
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+default = alicloud.kvstore.get_instances(name_regex="testname")
+pulumi.export("firstInstanceName", default.instances[0].name)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const default = alicloud.kvstore.getInstances({
+    nameRegex: "testname",
+});
+export const firstInstanceName = _default.then(_default => _default.instances[0].name);
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetInstances {#using}
@@ -26,7 +106,7 @@ Filters support regular expression for the instance name, searches by tags, and 
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instances(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">instance_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstancesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instances(</span><span class="nx">architecture_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">edition_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_details</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expired</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">global_instance</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">instance_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">payment_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">search_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstancesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -53,13 +133,79 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="architecturetype_csharp">
+<a href="#architecturetype_csharp" style="color: inherit; text-decoration: inherit;">Architecture<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the architecture. Valid values: `cluster`, `standard` and `SplitRW`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="editiontype_csharp">
+<a href="#editiontype_csharp" style="color: inherit; text-decoration: inherit;">Edition<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Used to retrieve instances belong to specified `vswitch` resources.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabledetails_csharp">
+<a href="#enabledetails_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Default to `false`. Set it to true can output more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="engineversion_csharp">
+<a href="#engineversion_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The engine version. Valid values: `2.8`, `4.0`, `5.0`, `6.0`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expired_csharp">
+<a href="#expired_csharp" style="color: inherit; text-decoration: inherit;">Expired</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The expiration status of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="globalinstance_csharp">
+<a href="#globalinstance_csharp" style="color: inherit; text-decoration: inherit;">Global<wbr>Instance</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether to create a distributed cache.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="ids_csharp">
 <a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of RKV instance IDs.
+    <dd>{{% md %}}A list of KVStore DBInstance IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -70,8 +216,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of the applied ApsaraDB for Redis instance.
-For more information, see [Instance type table](https://www.alibabacloud.com/help/doc-detail/61135.htm).
+    <dd>{{% md %}}Type of the applied ApsaraDB for Redis instance. For more information, see [Instance type table](https://www.alibabacloud.com/help/doc-detail/61135.htm).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -82,7 +227,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Database type. Options are `Memcache`, and `Redis`. If no value is specified, all types are returned.
+    <dd>{{% md %}}The engine type of the KVStore DBInstance. Options are `Memcache`, and `Redis`. If no value is specified, all types are returned.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -98,6 +243,17 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
 
     <dt class="property-optional"
             title="Optional">
+        <span id="networktype_csharp">
+<a href="#networktype_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the network. Valid values: `CLASSIC`, `VPC`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="outputfile_csharp">
 <a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
 </span> 
@@ -108,13 +264,46 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
 
     <dt class="property-optional"
             title="Optional">
+        <span id="paymenttype_csharp">
+<a href="#paymenttype_csharp" style="color: inherit; text-decoration: inherit;">Payment<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The payment type. Valid values: `PostPaid`, `PrePaid`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcegroupid_csharp">
+<a href="#resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the resource group.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="searchkey_csharp">
+<a href="#searchkey_csharp" style="color: inherit; text-decoration: inherit;">Search<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Status of the instance.
+    <dd>{{% md %}}The status of the KVStore DBInstance. Valid values: `Changing`, `CleaningUpExpiredData`, `Creating`, `Flushing`, `HASwitching`, `Inactive`, `MajorVersionUpgrading`, `Migrating`, `NetworkModifying`, `Normal`, `Rebooting`, `SSLModifying`, `Transforming`, `ZoneMigrating`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -150,6 +339,17 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
     <dd>{{% md %}}Used to retrieve instances belong to specified `vswitch` resources.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zoneid_csharp">
+<a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the zone.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -159,13 +359,79 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
 
     <dt class="property-optional"
             title="Optional">
+        <span id="architecturetype_go">
+<a href="#architecturetype_go" style="color: inherit; text-decoration: inherit;">Architecture<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the architecture. Valid values: `cluster`, `standard` and `SplitRW`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="editiontype_go">
+<a href="#editiontype_go" style="color: inherit; text-decoration: inherit;">Edition<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Used to retrieve instances belong to specified `vswitch` resources.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabledetails_go">
+<a href="#enabledetails_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Default to `false`. Set it to true can output more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="engineversion_go">
+<a href="#engineversion_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The engine version. Valid values: `2.8`, `4.0`, `5.0`, `6.0`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expired_go">
+<a href="#expired_go" style="color: inherit; text-decoration: inherit;">Expired</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The expiration status of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="globalinstance_go">
+<a href="#globalinstance_go" style="color: inherit; text-decoration: inherit;">Global<wbr>Instance</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether to create a distributed cache.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="ids_go">
 <a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of RKV instance IDs.
+    <dd>{{% md %}}A list of KVStore DBInstance IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -176,8 +442,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of the applied ApsaraDB for Redis instance.
-For more information, see [Instance type table](https://www.alibabacloud.com/help/doc-detail/61135.htm).
+    <dd>{{% md %}}Type of the applied ApsaraDB for Redis instance. For more information, see [Instance type table](https://www.alibabacloud.com/help/doc-detail/61135.htm).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -188,7 +453,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Database type. Options are `Memcache`, and `Redis`. If no value is specified, all types are returned.
+    <dd>{{% md %}}The engine type of the KVStore DBInstance. Options are `Memcache`, and `Redis`. If no value is specified, all types are returned.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -204,6 +469,17 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
 
     <dt class="property-optional"
             title="Optional">
+        <span id="networktype_go">
+<a href="#networktype_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the network. Valid values: `CLASSIC`, `VPC`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="outputfile_go">
 <a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
 </span> 
@@ -214,13 +490,46 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
 
     <dt class="property-optional"
             title="Optional">
+        <span id="paymenttype_go">
+<a href="#paymenttype_go" style="color: inherit; text-decoration: inherit;">Payment<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The payment type. Valid values: `PostPaid`, `PrePaid`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcegroupid_go">
+<a href="#resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the resource group.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="searchkey_go">
+<a href="#searchkey_go" style="color: inherit; text-decoration: inherit;">Search<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Status of the instance.
+    <dd>{{% md %}}The status of the KVStore DBInstance. Valid values: `Changing`, `CleaningUpExpiredData`, `Creating`, `Flushing`, `HASwitching`, `Inactive`, `MajorVersionUpgrading`, `Migrating`, `NetworkModifying`, `Normal`, `Rebooting`, `SSLModifying`, `Transforming`, `ZoneMigrating`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -256,6 +565,17 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
     <dd>{{% md %}}Used to retrieve instances belong to specified `vswitch` resources.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zoneid_go">
+<a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the zone.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -265,13 +585,79 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
 
     <dt class="property-optional"
             title="Optional">
+        <span id="architecturetype_nodejs">
+<a href="#architecturetype_nodejs" style="color: inherit; text-decoration: inherit;">architecture<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the architecture. Valid values: `cluster`, `standard` and `SplitRW`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="editiontype_nodejs">
+<a href="#editiontype_nodejs" style="color: inherit; text-decoration: inherit;">edition<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Used to retrieve instances belong to specified `vswitch` resources.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabledetails_nodejs">
+<a href="#enabledetails_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Default to `false`. Set it to true can output more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="engineversion_nodejs">
+<a href="#engineversion_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The engine version. Valid values: `2.8`, `4.0`, `5.0`, `6.0`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expired_nodejs">
+<a href="#expired_nodejs" style="color: inherit; text-decoration: inherit;">expired</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The expiration status of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="globalinstance_nodejs">
+<a href="#globalinstance_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Instance</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Whether to create a distributed cache.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="ids_nodejs">
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of RKV instance IDs.
+    <dd>{{% md %}}A list of KVStore DBInstance IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -282,8 +668,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of the applied ApsaraDB for Redis instance.
-For more information, see [Instance type table](https://www.alibabacloud.com/help/doc-detail/61135.htm).
+    <dd>{{% md %}}Type of the applied ApsaraDB for Redis instance. For more information, see [Instance type table](https://www.alibabacloud.com/help/doc-detail/61135.htm).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -294,7 +679,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Database type. Options are `Memcache`, and `Redis`. If no value is specified, all types are returned.
+    <dd>{{% md %}}The engine type of the KVStore DBInstance. Options are `Memcache`, and `Redis`. If no value is specified, all types are returned.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -310,6 +695,17 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
 
     <dt class="property-optional"
             title="Optional">
+        <span id="networktype_nodejs">
+<a href="#networktype_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the network. Valid values: `CLASSIC`, `VPC`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="outputfile_nodejs">
 <a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
 </span> 
@@ -320,13 +716,46 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
 
     <dt class="property-optional"
             title="Optional">
+        <span id="paymenttype_nodejs">
+<a href="#paymenttype_nodejs" style="color: inherit; text-decoration: inherit;">payment<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The payment type. Valid values: `PostPaid`, `PrePaid`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcegroupid_nodejs">
+<a href="#resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the resource group.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="searchkey_nodejs">
+<a href="#searchkey_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Status of the instance.
+    <dd>{{% md %}}The status of the KVStore DBInstance. Valid values: `Changing`, `CleaningUpExpiredData`, `Creating`, `Flushing`, `HASwitching`, `Inactive`, `MajorVersionUpgrading`, `Migrating`, `NetworkModifying`, `Normal`, `Rebooting`, `SSLModifying`, `Transforming`, `ZoneMigrating`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -362,6 +791,17 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
     <dd>{{% md %}}Used to retrieve instances belong to specified `vswitch` resources.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zoneid_nodejs">
+<a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the zone.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -371,13 +811,79 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
 
     <dt class="property-optional"
             title="Optional">
+        <span id="architecture_type_python">
+<a href="#architecture_type_python" style="color: inherit; text-decoration: inherit;">architecture_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the architecture. Valid values: `cluster`, `standard` and `SplitRW`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="edition_type_python">
+<a href="#edition_type_python" style="color: inherit; text-decoration: inherit;">edition_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Used to retrieve instances belong to specified `vswitch` resources.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_details_python">
+<a href="#enable_details_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Default to `false`. Set it to true can output more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="engine_version_python">
+<a href="#engine_version_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The engine version. Valid values: `2.8`, `4.0`, `5.0`, `6.0`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expired_python">
+<a href="#expired_python" style="color: inherit; text-decoration: inherit;">expired</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The expiration status of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="global_instance_python">
+<a href="#global_instance_python" style="color: inherit; text-decoration: inherit;">global_<wbr>instance</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether to create a distributed cache.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="ids_python">
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of RKV instance IDs.
+    <dd>{{% md %}}A list of KVStore DBInstance IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -388,8 +894,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Type of the applied ApsaraDB for Redis instance.
-For more information, see [Instance type table](https://www.alibabacloud.com/help/doc-detail/61135.htm).
+    <dd>{{% md %}}Type of the applied ApsaraDB for Redis instance. For more information, see [Instance type table](https://www.alibabacloud.com/help/doc-detail/61135.htm).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -400,7 +905,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Database type. Options are `Memcache`, and `Redis`. If no value is specified, all types are returned.
+    <dd>{{% md %}}The engine type of the KVStore DBInstance. Options are `Memcache`, and `Redis`. If no value is specified, all types are returned.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -416,6 +921,17 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
 
     <dt class="property-optional"
             title="Optional">
+        <span id="network_type_python">
+<a href="#network_type_python" style="color: inherit; text-decoration: inherit;">network_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the network. Valid values: `CLASSIC`, `VPC`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="output_file_python">
 <a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
 </span> 
@@ -426,13 +942,46 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
 
     <dt class="property-optional"
             title="Optional">
+        <span id="payment_type_python">
+<a href="#payment_type_python" style="color: inherit; text-decoration: inherit;">payment_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The payment type. Valid values: `PostPaid`, `PrePaid`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resource_group_id_python">
+<a href="#resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the resource group.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="search_key_python">
+<a href="#search_key_python" style="color: inherit; text-decoration: inherit;">search_<wbr>key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Status of the instance.
+    <dd>{{% md %}}The status of the KVStore DBInstance. Valid values: `Changing`, `CleaningUpExpiredData`, `Creating`, `Flushing`, `HASwitching`, `Inactive`, `MajorVersionUpgrading`, `Migrating`, `NetworkModifying`, `Normal`, `Rebooting`, `SSLModifying`, `Transforming`, `ZoneMigrating`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -466,6 +1015,17 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Used to retrieve instances belong to specified `vswitch` resources.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zone_id_python">
+<a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the zone.
 {{% /md %}}</dd>
 
 </dl>
@@ -507,7 +1067,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of RKV instance IDs.
+    <dd>{{% md %}}A list of KVStore Instance IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -518,7 +1078,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancesinstance">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>KVStore.<wbr>Outputs.<wbr>Get<wbr>Instances<wbr>Instance&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of RKV instances. Its every element contains the following attributes:
+    <dd>{{% md %}}A list of KVStore Instances. Its every element contains the following attributes:
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -528,6 +1088,68 @@ The following output properties are available:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of KVStore Instance names.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="architecturetype_csharp">
+<a href="#architecturetype_csharp" style="color: inherit; text-decoration: inherit;">Architecture<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="editiontype_csharp">
+<a href="#editiontype_csharp" style="color: inherit; text-decoration: inherit;">Edition<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="enabledetails_csharp">
+<a href="#enabledetails_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="engineversion_csharp">
+<a href="#engineversion_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The engine version of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="expired_csharp">
+<a href="#expired_csharp" style="color: inherit; text-decoration: inherit;">Expired</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="globalinstance_csharp">
+<a href="#globalinstance_csharp" style="color: inherit; text-decoration: inherit;">Global<wbr>Instance</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -549,8 +1171,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}(Optional) Database type. Options are `Memcache`, and `Redis`. If no value is specified, all types are returned.
-* `instance_class`- (Optional) Type of the applied ApsaraDB for Redis instance.
+    <dd>{{% md %}}(Optional) Database type. Valid Values: `Memcache`, `Redis`. If no value is specified, all types are returned.
+* `instance_class`- (Optional) Type of the applied ApsaraDB for instance.
 For more information, see [Instance type table](https://www.alibabacloud.com/help/doc-detail/61135.htm).
 {{% /md %}}</dd>
 
@@ -566,8 +1188,50 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
 
     <dt class="property-"
             title="">
+        <span id="networktype_csharp">
+<a href="#networktype_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The network type of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="outputfile_csharp">
 <a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="paymenttype_csharp">
+<a href="#paymenttype_csharp" style="color: inherit; text-decoration: inherit;">Payment<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Billing method. Valid Values: `PostPaid` for  Pay-As-You-Go and `PrePaid` for subscription.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="resourcegroupid_csharp">
+<a href="#resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="searchkey_csharp">
+<a href="#searchkey_csharp" style="color: inherit; text-decoration: inherit;">Search<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -617,6 +1281,17 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
     <dd>{{% md %}}VSwitch ID the instance belongs to.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="zoneid_csharp">
+<a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of zone.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -643,7 +1318,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of RKV instance IDs.
+    <dd>{{% md %}}A list of KVStore Instance IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -654,7 +1329,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancesinstance">[]Get<wbr>Instances<wbr>Instance</a></span>
     </dt>
-    <dd>{{% md %}}A list of RKV instances. Its every element contains the following attributes:
+    <dd>{{% md %}}A list of KVStore Instances. Its every element contains the following attributes:
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -664,6 +1339,68 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}A list of KVStore Instance names.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="architecturetype_go">
+<a href="#architecturetype_go" style="color: inherit; text-decoration: inherit;">Architecture<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="editiontype_go">
+<a href="#editiontype_go" style="color: inherit; text-decoration: inherit;">Edition<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="enabledetails_go">
+<a href="#enabledetails_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="engineversion_go">
+<a href="#engineversion_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The engine version of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="expired_go">
+<a href="#expired_go" style="color: inherit; text-decoration: inherit;">Expired</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="globalinstance_go">
+<a href="#globalinstance_go" style="color: inherit; text-decoration: inherit;">Global<wbr>Instance</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -685,8 +1422,8 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Optional) Database type. Options are `Memcache`, and `Redis`. If no value is specified, all types are returned.
-* `instance_class`- (Optional) Type of the applied ApsaraDB for Redis instance.
+    <dd>{{% md %}}(Optional) Database type. Valid Values: `Memcache`, `Redis`. If no value is specified, all types are returned.
+* `instance_class`- (Optional) Type of the applied ApsaraDB for instance.
 For more information, see [Instance type table](https://www.alibabacloud.com/help/doc-detail/61135.htm).
 {{% /md %}}</dd>
 
@@ -702,8 +1439,50 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
 
     <dt class="property-"
             title="">
+        <span id="networktype_go">
+<a href="#networktype_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The network type of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="outputfile_go">
 <a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="paymenttype_go">
+<a href="#paymenttype_go" style="color: inherit; text-decoration: inherit;">Payment<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Billing method. Valid Values: `PostPaid` for  Pay-As-You-Go and `PrePaid` for subscription.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="resourcegroupid_go">
+<a href="#resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="searchkey_go">
+<a href="#searchkey_go" style="color: inherit; text-decoration: inherit;">Search<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -753,6 +1532,17 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
     <dd>{{% md %}}VSwitch ID the instance belongs to.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="zoneid_go">
+<a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of zone.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -779,7 +1569,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of RKV instance IDs.
+    <dd>{{% md %}}A list of KVStore Instance IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -790,7 +1580,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancesinstance">Get<wbr>Instances<wbr>Instance[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of RKV instances. Its every element contains the following attributes:
+    <dd>{{% md %}}A list of KVStore Instances. Its every element contains the following attributes:
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -800,6 +1590,68 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of KVStore Instance names.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="architecturetype_nodejs">
+<a href="#architecturetype_nodejs" style="color: inherit; text-decoration: inherit;">architecture<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="editiontype_nodejs">
+<a href="#editiontype_nodejs" style="color: inherit; text-decoration: inherit;">edition<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="enabledetails_nodejs">
+<a href="#enabledetails_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="engineversion_nodejs">
+<a href="#engineversion_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The engine version of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="expired_nodejs">
+<a href="#expired_nodejs" style="color: inherit; text-decoration: inherit;">expired</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="globalinstance_nodejs">
+<a href="#globalinstance_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Instance</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -821,8 +1673,8 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Optional) Database type. Options are `Memcache`, and `Redis`. If no value is specified, all types are returned.
-* `instance_class`- (Optional) Type of the applied ApsaraDB for Redis instance.
+    <dd>{{% md %}}(Optional) Database type. Valid Values: `Memcache`, `Redis`. If no value is specified, all types are returned.
+* `instance_class`- (Optional) Type of the applied ApsaraDB for instance.
 For more information, see [Instance type table](https://www.alibabacloud.com/help/doc-detail/61135.htm).
 {{% /md %}}</dd>
 
@@ -838,8 +1690,50 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
 
     <dt class="property-"
             title="">
+        <span id="networktype_nodejs">
+<a href="#networktype_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The network type of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="outputfile_nodejs">
 <a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="paymenttype_nodejs">
+<a href="#paymenttype_nodejs" style="color: inherit; text-decoration: inherit;">payment<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Billing method. Valid Values: `PostPaid` for  Pay-As-You-Go and `PrePaid` for subscription.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="resourcegroupid_nodejs">
+<a href="#resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="searchkey_nodejs">
+<a href="#searchkey_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -889,6 +1783,17 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
     <dd>{{% md %}}VSwitch ID the instance belongs to.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="zoneid_nodejs">
+<a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of zone.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -915,7 +1820,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of RKV instance IDs.
+    <dd>{{% md %}}A list of KVStore Instance IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -926,7 +1831,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancesinstance">Sequence[Get<wbr>Instances<wbr>Instance]</a></span>
     </dt>
-    <dd>{{% md %}}A list of RKV instances. Its every element contains the following attributes:
+    <dd>{{% md %}}A list of KVStore Instances. Its every element contains the following attributes:
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -936,6 +1841,68 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of KVStore Instance names.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="architecture_type_python">
+<a href="#architecture_type_python" style="color: inherit; text-decoration: inherit;">architecture_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="edition_type_python">
+<a href="#edition_type_python" style="color: inherit; text-decoration: inherit;">edition_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="enable_details_python">
+<a href="#enable_details_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="engine_version_python">
+<a href="#engine_version_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The engine version of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="expired_python">
+<a href="#expired_python" style="color: inherit; text-decoration: inherit;">expired</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="global_instance_python">
+<a href="#global_instance_python" style="color: inherit; text-decoration: inherit;">global_<wbr>instance</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -957,8 +1924,8 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}(Optional) Database type. Options are `Memcache`, and `Redis`. If no value is specified, all types are returned.
-* `instance_class`- (Optional) Type of the applied ApsaraDB for Redis instance.
+    <dd>{{% md %}}(Optional) Database type. Valid Values: `Memcache`, `Redis`. If no value is specified, all types are returned.
+* `instance_class`- (Optional) Type of the applied ApsaraDB for instance.
 For more information, see [Instance type table](https://www.alibabacloud.com/help/doc-detail/61135.htm).
 {{% /md %}}</dd>
 
@@ -974,8 +1941,50 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
 
     <dt class="property-"
             title="">
+        <span id="network_type_python">
+<a href="#network_type_python" style="color: inherit; text-decoration: inherit;">network_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The network type of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="output_file_python">
 <a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="payment_type_python">
+<a href="#payment_type_python" style="color: inherit; text-decoration: inherit;">payment_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Billing method. Valid Values: `PostPaid` for  Pay-As-You-Go and `PrePaid` for subscription.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="resource_group_id_python">
+<a href="#resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="search_key_python">
+<a href="#search_key_python" style="color: inherit; text-decoration: inherit;">search_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1025,6 +2034,17 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
     <dd>{{% md %}}VSwitch ID the instance belongs to.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="zone_id_python">
+<a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of zone.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1058,13 +2078,44 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
 
     <dt class="property-required"
             title="Required">
+        <span id="architecturetype_csharp">
+<a href="#architecturetype_csharp" style="color: inherit; text-decoration: inherit;">Architecture<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the architecture. Valid values: `cluster`, `standard` and `SplitRW`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="autorenew_csharp">
+<a href="#autorenew_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Renew</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="autorenewperiod_csharp">
+<a href="#autorenewperiod_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Renew<wbr>Period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="availabilityzone_csharp">
 <a href="#availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Availability zone.
+    <dd>{{% md %}}It has been deprecated from provider version 1.101.0 and `zone_id` instead.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1086,7 +2137,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Capacity of the applied ApsaraDB for Redis instance. Unit: MB.
+    <dd>{{% md %}}Capacity of the applied ApsaraDB for the instance. Unit: MB.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1097,7 +2148,18 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Billing method. Value options: `PostPaid` for  Pay-As-You-Go and `PrePaid` for subscription.
+    <dd>{{% md %}}It has been deprecated from provider version 1.101.0 and `payment_type` instead.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="config_csharp">
+<a href="#config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The parameter configuration of the instance.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1108,7 +2170,19 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Instance connection domain (only Intranet access supported).
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="connectionmode_csharp">
+<a href="#connectionmode_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The connection mode of the instance.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1118,7 +2192,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Instance connection quantity limit. Unit: count.
+    <dd>{{% md %}}IIt has been deprecated from provider version 1.101.0 and `max_connections` instead.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1134,13 +2208,79 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
 
     <dt class="property-required"
             title="Required">
+        <span id="dbinstanceid_csharp">
+<a href="#dbinstanceid_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Instance<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="dbinstancename_csharp">
+<a href="#dbinstancename_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Instance<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="destroytime_csharp">
+<a href="#destroytime_csharp" style="color: inherit; text-decoration: inherit;">Destroy<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The time when the instance was destroyed.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endtime_csharp">
+<a href="#endtime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Expiration time. Pay-As-You-Go instances are never expire.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="engineversion_csharp">
+<a href="#engineversion_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The engine version. Valid values: `2.8`, `4.0`, `5.0`, `6.0`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="expiretime_csharp">
 <a href="#expiretime_csharp" style="color: inherit; text-decoration: inherit;">Expire<wbr>Time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Expiration time. Pay-As-You-Go instances are never expire.
+    <dd>{{% md %}}It has been deprecated from provider version 1.101.0 and `end_time` instead.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="hasrenewchangeorder_csharp">
+<a href="#hasrenewchangeorder_csharp" style="color: inherit; text-decoration: inherit;">Has<wbr>Renew<wbr>Change<wbr>Order</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether there was an order of renewal with configuration change that had not taken effect.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1151,7 +2291,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the RKV instance.
+    <dd>{{% md %}}The ID of the instance.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1162,9 +2302,18 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of the applied ApsaraDB for Redis instance.
-For more information, see [Instance type table](https://www.alibabacloud.com/help/doc-detail/61135.htm).
+    <dd>{{% md %}}Type of the applied ApsaraDB for Redis instance. For more information, see [Instance type table](https://www.alibabacloud.com/help/doc-detail/61135.htm).
 {{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="instancereleaseprotection_csharp">
+<a href="#instancereleaseprotection_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Release<wbr>Protection</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1174,7 +2323,49 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Database type. Options are `Memcache`, and `Redis`. If no value is specified, all types are returned.
+    <dd>{{% md %}}The engine type of the KVStore DBInstance. Options are `Memcache`, and `Redis`. If no value is specified, all types are returned.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="isrds_csharp">
+<a href="#isrds_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Rds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the instance is managed by Relational Database Service (RDS).
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maintainendtime_csharp">
+<a href="#maintainendtime_csharp" style="color: inherit; text-decoration: inherit;">Maintain<wbr>End<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maintainstarttime_csharp">
+<a href="#maintainstarttime_csharp" style="color: inherit; text-decoration: inherit;">Maintain<wbr>Start<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxconnections_csharp">
+<a href="#maxconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Connections</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Instance connection quantity limit. Unit: count.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1185,7 +2376,51 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the RKV instance.
+    <dd>{{% md %}}It has been deprecated from provider version 1.101.0 and `db_instance_name` instead.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="networktype_csharp">
+<a href="#networktype_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the network. Valid values: `CLASSIC`, `VPC`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="nodetype_csharp">
+<a href="#nodetype_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The node type of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="packagetype_csharp">
+<a href="#packagetype_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the package.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="paymenttype_csharp">
+<a href="#paymenttype_csharp" style="color: inherit; text-decoration: inherit;">Payment<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The payment type. Valid values: `PostPaid`, `PrePaid`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1196,7 +2431,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Connection port of the instance.
+    <dd>{{% md %}}The service port of the instance.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1212,6 +2447,17 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
 
     <dt class="property-required"
             title="Required">
+        <span id="qps_csharp">
+<a href="#qps_csharp" style="color: inherit; text-decoration: inherit;">Qps</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The queries per second (QPS) supported by the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="regionid_csharp">
 <a href="#regionid_csharp" style="color: inherit; text-decoration: inherit;">Region<wbr>Id</a>
 </span> 
@@ -1223,13 +2469,107 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
 
     <dt class="property-required"
             title="Required">
+        <span id="replacateid_csharp">
+<a href="#replacateid_csharp" style="color: inherit; text-decoration: inherit;">Replacate<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The logical ID of the replica instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcegroupid_csharp">
+<a href="#resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the resource group.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="searchkey_csharp">
+<a href="#searchkey_csharp" style="color: inherit; text-decoration: inherit;">Search<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="securitygroupid_csharp">
+<a href="#securitygroupid_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="securityipgroupattribute_csharp">
+<a href="#securityipgroupattribute_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Ip<wbr>Group<wbr>Attribute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="securityipgroupname_csharp">
+<a href="#securityipgroupname_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Ip<wbr>Group<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="securityips_csharp">
+<a href="#securityips_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sslenable_csharp">
+<a href="#sslenable_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Enable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Status of the instance.
+    <dd>{{% md %}}The status of the KVStore DBInstance. Valid values: `Changing`, `CleaningUpExpiredData`, `Creating`, `Flushing`, `HASwitching`, `Inactive`, `MajorVersionUpgrading`, `Migrating`, `NetworkModifying`, `Normal`, `Rebooting`, `SSLModifying`, `Transforming`, `ZoneMigrating`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Query the instance bound to the tag. The format of the incoming value is `json` string, including `TagKey` and `TagValue`. `TagKey` cannot be null, and `TagValue` can be empty. Format example `{"key1":"value1"}`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1240,7 +2580,29 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
+    <dd>{{% md %}}The username of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="vpcauthmode_csharp">
+<a href="#vpcauthmode_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Auth<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="vpccloudinstanceid_csharp">
+<a href="#vpccloudinstanceid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Cloud<wbr>Instance<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Connection port of the instance.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1264,6 +2626,17 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
     <dd>{{% md %}}Used to retrieve instances belong to specified `vswitch` resources.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span id="zoneid_csharp">
+<a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the zone.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1273,13 +2646,44 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
 
     <dt class="property-required"
             title="Required">
+        <span id="architecturetype_go">
+<a href="#architecturetype_go" style="color: inherit; text-decoration: inherit;">Architecture<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the architecture. Valid values: `cluster`, `standard` and `SplitRW`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="autorenew_go">
+<a href="#autorenew_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Renew</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="autorenewperiod_go">
+<a href="#autorenewperiod_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Renew<wbr>Period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="availabilityzone_go">
 <a href="#availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Availability zone.
+    <dd>{{% md %}}It has been deprecated from provider version 1.101.0 and `zone_id` instead.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1301,7 +2705,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Capacity of the applied ApsaraDB for Redis instance. Unit: MB.
+    <dd>{{% md %}}Capacity of the applied ApsaraDB for the instance. Unit: MB.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1312,7 +2716,18 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Billing method. Value options: `PostPaid` for  Pay-As-You-Go and `PrePaid` for subscription.
+    <dd>{{% md %}}It has been deprecated from provider version 1.101.0 and `payment_type` instead.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="config_go">
+<a href="#config_go" style="color: inherit; text-decoration: inherit;">Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The parameter configuration of the instance.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1323,7 +2738,19 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Instance connection domain (only Intranet access supported).
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="connectionmode_go">
+<a href="#connectionmode_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The connection mode of the instance.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1333,7 +2760,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Instance connection quantity limit. Unit: count.
+    <dd>{{% md %}}IIt has been deprecated from provider version 1.101.0 and `max_connections` instead.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1349,13 +2776,79 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
 
     <dt class="property-required"
             title="Required">
+        <span id="dbinstanceid_go">
+<a href="#dbinstanceid_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Instance<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="dbinstancename_go">
+<a href="#dbinstancename_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Instance<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="destroytime_go">
+<a href="#destroytime_go" style="color: inherit; text-decoration: inherit;">Destroy<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The time when the instance was destroyed.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endtime_go">
+<a href="#endtime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Expiration time. Pay-As-You-Go instances are never expire.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="engineversion_go">
+<a href="#engineversion_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The engine version. Valid values: `2.8`, `4.0`, `5.0`, `6.0`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="expiretime_go">
 <a href="#expiretime_go" style="color: inherit; text-decoration: inherit;">Expire<wbr>Time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Expiration time. Pay-As-You-Go instances are never expire.
+    <dd>{{% md %}}It has been deprecated from provider version 1.101.0 and `end_time` instead.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="hasrenewchangeorder_go">
+<a href="#hasrenewchangeorder_go" style="color: inherit; text-decoration: inherit;">Has<wbr>Renew<wbr>Change<wbr>Order</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether there was an order of renewal with configuration change that had not taken effect.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1366,7 +2859,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the RKV instance.
+    <dd>{{% md %}}The ID of the instance.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1377,9 +2870,18 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of the applied ApsaraDB for Redis instance.
-For more information, see [Instance type table](https://www.alibabacloud.com/help/doc-detail/61135.htm).
+    <dd>{{% md %}}Type of the applied ApsaraDB for Redis instance. For more information, see [Instance type table](https://www.alibabacloud.com/help/doc-detail/61135.htm).
 {{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="instancereleaseprotection_go">
+<a href="#instancereleaseprotection_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Release<wbr>Protection</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1389,7 +2891,49 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Database type. Options are `Memcache`, and `Redis`. If no value is specified, all types are returned.
+    <dd>{{% md %}}The engine type of the KVStore DBInstance. Options are `Memcache`, and `Redis`. If no value is specified, all types are returned.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="isrds_go">
+<a href="#isrds_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Rds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the instance is managed by Relational Database Service (RDS).
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maintainendtime_go">
+<a href="#maintainendtime_go" style="color: inherit; text-decoration: inherit;">Maintain<wbr>End<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maintainstarttime_go">
+<a href="#maintainstarttime_go" style="color: inherit; text-decoration: inherit;">Maintain<wbr>Start<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxconnections_go">
+<a href="#maxconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Connections</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Instance connection quantity limit. Unit: count.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1400,7 +2944,51 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the RKV instance.
+    <dd>{{% md %}}It has been deprecated from provider version 1.101.0 and `db_instance_name` instead.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="networktype_go">
+<a href="#networktype_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the network. Valid values: `CLASSIC`, `VPC`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="nodetype_go">
+<a href="#nodetype_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The node type of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="packagetype_go">
+<a href="#packagetype_go" style="color: inherit; text-decoration: inherit;">Package<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the package.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="paymenttype_go">
+<a href="#paymenttype_go" style="color: inherit; text-decoration: inherit;">Payment<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The payment type. Valid values: `PostPaid`, `PrePaid`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1411,7 +2999,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Connection port of the instance.
+    <dd>{{% md %}}The service port of the instance.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1427,6 +3015,17 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
 
     <dt class="property-required"
             title="Required">
+        <span id="qps_go">
+<a href="#qps_go" style="color: inherit; text-decoration: inherit;">Qps</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The queries per second (QPS) supported by the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="regionid_go">
 <a href="#regionid_go" style="color: inherit; text-decoration: inherit;">Region<wbr>Id</a>
 </span> 
@@ -1438,13 +3037,107 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
 
     <dt class="property-required"
             title="Required">
+        <span id="replacateid_go">
+<a href="#replacateid_go" style="color: inherit; text-decoration: inherit;">Replacate<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The logical ID of the replica instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcegroupid_go">
+<a href="#resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the resource group.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="searchkey_go">
+<a href="#searchkey_go" style="color: inherit; text-decoration: inherit;">Search<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="securitygroupid_go">
+<a href="#securitygroupid_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="securityipgroupattribute_go">
+<a href="#securityipgroupattribute_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Ip<wbr>Group<wbr>Attribute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="securityipgroupname_go">
+<a href="#securityipgroupname_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Ip<wbr>Group<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="securityips_go">
+<a href="#securityips_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sslenable_go">
+<a href="#sslenable_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Enable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Status of the instance.
+    <dd>{{% md %}}The status of the KVStore DBInstance. Valid values: `Changing`, `CleaningUpExpiredData`, `Creating`, `Flushing`, `HASwitching`, `Inactive`, `MajorVersionUpgrading`, `Migrating`, `NetworkModifying`, `Normal`, `Rebooting`, `SSLModifying`, `Transforming`, `ZoneMigrating`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Query the instance bound to the tag. The format of the incoming value is `json` string, including `TagKey` and `TagValue`. `TagKey` cannot be null, and `TagValue` can be empty. Format example `{"key1":"value1"}`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1455,7 +3148,29 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
+    <dd>{{% md %}}The username of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="vpcauthmode_go">
+<a href="#vpcauthmode_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Auth<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="vpccloudinstanceid_go">
+<a href="#vpccloudinstanceid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Cloud<wbr>Instance<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Connection port of the instance.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1479,6 +3194,17 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
     <dd>{{% md %}}Used to retrieve instances belong to specified `vswitch` resources.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span id="zoneid_go">
+<a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the zone.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1488,13 +3214,44 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
 
     <dt class="property-required"
             title="Required">
+        <span id="architecturetype_nodejs">
+<a href="#architecturetype_nodejs" style="color: inherit; text-decoration: inherit;">architecture<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the architecture. Valid values: `cluster`, `standard` and `SplitRW`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="autorenew_nodejs">
+<a href="#autorenew_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Renew</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="autorenewperiod_nodejs">
+<a href="#autorenewperiod_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Renew<wbr>Period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="availabilityzone_nodejs">
 <a href="#availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Availability zone.
+    <dd>{{% md %}}It has been deprecated from provider version 1.101.0 and `zone_id` instead.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1516,7 +3273,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Capacity of the applied ApsaraDB for Redis instance. Unit: MB.
+    <dd>{{% md %}}Capacity of the applied ApsaraDB for the instance. Unit: MB.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1527,7 +3284,18 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Billing method. Value options: `PostPaid` for  Pay-As-You-Go and `PrePaid` for subscription.
+    <dd>{{% md %}}It has been deprecated from provider version 1.101.0 and `payment_type` instead.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="config_nodejs">
+<a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}The parameter configuration of the instance.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1538,7 +3306,19 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Instance connection domain (only Intranet access supported).
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="connectionmode_nodejs">
+<a href="#connectionmode_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The connection mode of the instance.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1548,7 +3328,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Instance connection quantity limit. Unit: count.
+    <dd>{{% md %}}IIt has been deprecated from provider version 1.101.0 and `max_connections` instead.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1564,13 +3344,79 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
 
     <dt class="property-required"
             title="Required">
+        <span id="dbinstanceid_nodejs">
+<a href="#dbinstanceid_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Instance<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="dbinstancename_nodejs">
+<a href="#dbinstancename_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Instance<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="destroytime_nodejs">
+<a href="#destroytime_nodejs" style="color: inherit; text-decoration: inherit;">destroy<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The time when the instance was destroyed.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endtime_nodejs">
+<a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Expiration time. Pay-As-You-Go instances are never expire.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="engineversion_nodejs">
+<a href="#engineversion_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The engine version. Valid values: `2.8`, `4.0`, `5.0`, `6.0`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="expiretime_nodejs">
 <a href="#expiretime_nodejs" style="color: inherit; text-decoration: inherit;">expire<wbr>Time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Expiration time. Pay-As-You-Go instances are never expire.
+    <dd>{{% md %}}It has been deprecated from provider version 1.101.0 and `end_time` instead.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="hasrenewchangeorder_nodejs">
+<a href="#hasrenewchangeorder_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Renew<wbr>Change<wbr>Order</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether there was an order of renewal with configuration change that had not taken effect.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1581,7 +3427,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the RKV instance.
+    <dd>{{% md %}}The ID of the instance.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1592,9 +3438,18 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of the applied ApsaraDB for Redis instance.
-For more information, see [Instance type table](https://www.alibabacloud.com/help/doc-detail/61135.htm).
+    <dd>{{% md %}}Type of the applied ApsaraDB for Redis instance. For more information, see [Instance type table](https://www.alibabacloud.com/help/doc-detail/61135.htm).
 {{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="instancereleaseprotection_nodejs">
+<a href="#instancereleaseprotection_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Release<wbr>Protection</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1604,7 +3459,49 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Database type. Options are `Memcache`, and `Redis`. If no value is specified, all types are returned.
+    <dd>{{% md %}}The engine type of the KVStore DBInstance. Options are `Memcache`, and `Redis`. If no value is specified, all types are returned.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="isrds_nodejs">
+<a href="#isrds_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the instance is managed by Relational Database Service (RDS).
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maintainendtime_nodejs">
+<a href="#maintainendtime_nodejs" style="color: inherit; text-decoration: inherit;">maintain<wbr>End<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maintainstarttime_nodejs">
+<a href="#maintainstarttime_nodejs" style="color: inherit; text-decoration: inherit;">maintain<wbr>Start<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxconnections_nodejs">
+<a href="#maxconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connections</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Instance connection quantity limit. Unit: count.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1615,7 +3512,51 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the RKV instance.
+    <dd>{{% md %}}It has been deprecated from provider version 1.101.0 and `db_instance_name` instead.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="networktype_nodejs">
+<a href="#networktype_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the network. Valid values: `CLASSIC`, `VPC`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="nodetype_nodejs">
+<a href="#nodetype_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The node type of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="packagetype_nodejs">
+<a href="#packagetype_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the package.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="paymenttype_nodejs">
+<a href="#paymenttype_nodejs" style="color: inherit; text-decoration: inherit;">payment<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The payment type. Valid values: `PostPaid`, `PrePaid`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1626,7 +3567,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Connection port of the instance.
+    <dd>{{% md %}}The service port of the instance.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1642,6 +3583,17 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
 
     <dt class="property-required"
             title="Required">
+        <span id="qps_nodejs">
+<a href="#qps_nodejs" style="color: inherit; text-decoration: inherit;">qps</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The queries per second (QPS) supported by the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="regionid_nodejs">
 <a href="#regionid_nodejs" style="color: inherit; text-decoration: inherit;">region<wbr>Id</a>
 </span> 
@@ -1653,13 +3605,107 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
 
     <dt class="property-required"
             title="Required">
+        <span id="replacateid_nodejs">
+<a href="#replacateid_nodejs" style="color: inherit; text-decoration: inherit;">replacate<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The logical ID of the replica instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcegroupid_nodejs">
+<a href="#resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the resource group.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="searchkey_nodejs">
+<a href="#searchkey_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="securitygroupid_nodejs">
+<a href="#securitygroupid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="securityipgroupattribute_nodejs">
+<a href="#securityipgroupattribute_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Ip<wbr>Group<wbr>Attribute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="securityipgroupname_nodejs">
+<a href="#securityipgroupname_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Ip<wbr>Group<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="securityips_nodejs">
+<a href="#securityips_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sslenable_nodejs">
+<a href="#sslenable_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Enable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Status of the instance.
+    <dd>{{% md %}}The status of the KVStore DBInstance. Valid values: `Changing`, `CleaningUpExpiredData`, `Creating`, `Flushing`, `HASwitching`, `Inactive`, `MajorVersionUpgrading`, `Migrating`, `NetworkModifying`, `Normal`, `Rebooting`, `SSLModifying`, `Transforming`, `ZoneMigrating`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Query the instance bound to the tag. The format of the incoming value is `json` string, including `TagKey` and `TagValue`. `TagKey` cannot be null, and `TagValue` can be empty. Format example `{"key1":"value1"}`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1670,7 +3716,29 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
+    <dd>{{% md %}}The username of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="vpcauthmode_nodejs">
+<a href="#vpcauthmode_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Auth<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="vpccloudinstanceid_nodejs">
+<a href="#vpccloudinstanceid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Cloud<wbr>Instance<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Connection port of the instance.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1694,6 +3762,17 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
     <dd>{{% md %}}Used to retrieve instances belong to specified `vswitch` resources.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span id="zoneid_nodejs">
+<a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the zone.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1703,13 +3782,44 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
 
     <dt class="property-required"
             title="Required">
+        <span id="architecture_type_python">
+<a href="#architecture_type_python" style="color: inherit; text-decoration: inherit;">architecture_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the architecture. Valid values: `cluster`, `standard` and `SplitRW`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="auto_renew_python">
+<a href="#auto_renew_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>renew</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="auto_renew_period_python">
+<a href="#auto_renew_period_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>renew_<wbr>period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="availability_zone_python">
 <a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Availability zone.
+    <dd>{{% md %}}It has been deprecated from provider version 1.101.0 and `zone_id` instead.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1731,7 +3841,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}Capacity of the applied ApsaraDB for Redis instance. Unit: MB.
+    <dd>{{% md %}}Capacity of the applied ApsaraDB for the instance. Unit: MB.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1742,7 +3852,18 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Billing method. Value options: `PostPaid` for  Pay-As-You-Go and `PrePaid` for subscription.
+    <dd>{{% md %}}It has been deprecated from provider version 1.101.0 and `payment_type` instead.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="config_python">
+<a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}The parameter configuration of the instance.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1753,7 +3874,19 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Instance connection domain (only Intranet access supported).
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="connection_mode_python">
+<a href="#connection_mode_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The connection mode of the instance.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1763,7 +3896,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}Instance connection quantity limit. Unit: count.
+    <dd>{{% md %}}IIt has been deprecated from provider version 1.101.0 and `max_connections` instead.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1779,13 +3912,79 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
 
     <dt class="property-required"
             title="Required">
+        <span id="db_instance_id_python">
+<a href="#db_instance_id_python" style="color: inherit; text-decoration: inherit;">db_<wbr>instance_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="db_instance_name_python">
+<a href="#db_instance_name_python" style="color: inherit; text-decoration: inherit;">db_<wbr>instance_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="destroy_time_python">
+<a href="#destroy_time_python" style="color: inherit; text-decoration: inherit;">destroy_<wbr>time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The time when the instance was destroyed.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="end_time_python">
+<a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Expiration time. Pay-As-You-Go instances are never expire.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="engine_version_python">
+<a href="#engine_version_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The engine version. Valid values: `2.8`, `4.0`, `5.0`, `6.0`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="expire_time_python">
 <a href="#expire_time_python" style="color: inherit; text-decoration: inherit;">expire_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Expiration time. Pay-As-You-Go instances are never expire.
+    <dd>{{% md %}}It has been deprecated from provider version 1.101.0 and `end_time` instead.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="has_renew_change_order_python">
+<a href="#has_renew_change_order_python" style="color: inherit; text-decoration: inherit;">has_<wbr>renew_<wbr>change_<wbr>order</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether there was an order of renewal with configuration change that had not taken effect.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1796,7 +3995,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the RKV instance.
+    <dd>{{% md %}}The ID of the instance.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1807,9 +4006,18 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Type of the applied ApsaraDB for Redis instance.
-For more information, see [Instance type table](https://www.alibabacloud.com/help/doc-detail/61135.htm).
+    <dd>{{% md %}}Type of the applied ApsaraDB for Redis instance. For more information, see [Instance type table](https://www.alibabacloud.com/help/doc-detail/61135.htm).
 {{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="instance_release_protection_python">
+<a href="#instance_release_protection_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>release_<wbr>protection</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1819,7 +4027,49 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Database type. Options are `Memcache`, and `Redis`. If no value is specified, all types are returned.
+    <dd>{{% md %}}The engine type of the KVStore DBInstance. Options are `Memcache`, and `Redis`. If no value is specified, all types are returned.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="is_rds_python">
+<a href="#is_rds_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the instance is managed by Relational Database Service (RDS).
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maintain_end_time_python">
+<a href="#maintain_end_time_python" style="color: inherit; text-decoration: inherit;">maintain_<wbr>end_<wbr>time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maintain_start_time_python">
+<a href="#maintain_start_time_python" style="color: inherit; text-decoration: inherit;">maintain_<wbr>start_<wbr>time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="max_connections_python">
+<a href="#max_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Instance connection quantity limit. Unit: count.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1830,7 +4080,51 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the RKV instance.
+    <dd>{{% md %}}It has been deprecated from provider version 1.101.0 and `db_instance_name` instead.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="network_type_python">
+<a href="#network_type_python" style="color: inherit; text-decoration: inherit;">network_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the network. Valid values: `CLASSIC`, `VPC`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="node_type_python">
+<a href="#node_type_python" style="color: inherit; text-decoration: inherit;">node_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The node type of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="package_type_python">
+<a href="#package_type_python" style="color: inherit; text-decoration: inherit;">package_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the package.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="payment_type_python">
+<a href="#payment_type_python" style="color: inherit; text-decoration: inherit;">payment_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The payment type. Valid values: `PostPaid`, `PrePaid`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1841,7 +4135,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}Connection port of the instance.
+    <dd>{{% md %}}The service port of the instance.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1857,6 +4151,17 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
 
     <dt class="property-required"
             title="Required">
+        <span id="qps_python">
+<a href="#qps_python" style="color: inherit; text-decoration: inherit;">qps</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The queries per second (QPS) supported by the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="region_id_python">
 <a href="#region_id_python" style="color: inherit; text-decoration: inherit;">region_<wbr>id</a>
 </span> 
@@ -1868,13 +4173,107 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
 
     <dt class="property-required"
             title="Required">
+        <span id="replacate_id_python">
+<a href="#replacate_id_python" style="color: inherit; text-decoration: inherit;">replacate_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The logical ID of the replica instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resource_group_id_python">
+<a href="#resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the resource group.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="search_key_python">
+<a href="#search_key_python" style="color: inherit; text-decoration: inherit;">search_<wbr>key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="security_group_id_python">
+<a href="#security_group_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="security_ip_group_attribute_python">
+<a href="#security_ip_group_attribute_python" style="color: inherit; text-decoration: inherit;">security_<wbr>ip_<wbr>group_<wbr>attribute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="security_ip_group_name_python">
+<a href="#security_ip_group_name_python" style="color: inherit; text-decoration: inherit;">security_<wbr>ip_<wbr>group_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="security_ips_python">
+<a href="#security_ips_python" style="color: inherit; text-decoration: inherit;">security_<wbr>ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ssl_enable_python">
+<a href="#ssl_enable_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>enable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Status of the instance.
+    <dd>{{% md %}}The status of the KVStore DBInstance. Valid values: `Changing`, `CleaningUpExpiredData`, `Creating`, `Flushing`, `HASwitching`, `Inactive`, `MajorVersionUpgrading`, `Migrating`, `NetworkModifying`, `Normal`, `Rebooting`, `SSLModifying`, `Transforming`, `ZoneMigrating`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Query the instance bound to the tag. The format of the incoming value is `json` string, including `TagKey` and `TagValue`. `TagKey` cannot be null, and `TagValue` can be empty. Format example `{"key1":"value1"}`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1885,7 +4284,29 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
+    <dd>{{% md %}}The username of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="vpc_auth_mode_python">
+<a href="#vpc_auth_mode_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>auth_<wbr>mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="vpc_cloud_instance_id_python">
+<a href="#vpc_cloud_instance_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>cloud_<wbr>instance_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Connection port of the instance.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1907,6 +4328,17 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Used to retrieve instances belong to specified `vswitch` resources.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="zone_id_python">
+<a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the zone.
 {{% /md %}}</dd>
 
 </dl>

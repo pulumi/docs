@@ -13,11 +13,13 @@ Explore the resources and functions of the kvstore module in the AliCloud packag
 <ul class="api">
     <li><a href="account" title="Account"><span class="symbol resource"></span>Account</a></li>
     <li><a href="backuppolicy" title="BackupPolicy"><span class="symbol resource"></span>BackupPolicy</a></li>
+    <li><a href="connection" title="Connection"><span class="symbol resource"></span>Connection</a></li>
     <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getconnections" title="GetConnections"><span class="symbol function"></span>GetConnections</a></li>
     <li><a href="getinstanceclasses" title="GetInstanceClasses"><span class="symbol function"></span>GetInstanceClasses</a></li>
     <li><a href="getinstanceengines" title="GetInstanceEngines"><span class="symbol function"></span>GetInstanceEngines</a></li>
     <li><a href="getinstances" title="GetInstances"><span class="symbol function"></span>GetInstances</a></li>
@@ -33,7 +35,7 @@ Explore the resources and functions of the kvstore module in the AliCloud packag
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.21.1</dd>
+	<dd>2.23.0</dd>
 </dl>
 
 

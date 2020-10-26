@@ -49,7 +49,7 @@ Explore the resources and functions of the slb module in the AliCloud package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.21.1</dd>
+	<dd>2.23.0</dd>
 </dl>
 
 

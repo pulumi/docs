@@ -1414,6 +1414,17 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="masterzone_csharp">
+<a href="#masterzone_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Zone</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.101.0+) The master zone of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -1509,6 +1520,28 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Used to retrieve instances belong to specified `vswitch` resources.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="zoneidslavea_csharp">
+<a href="#zoneidslavea_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id<wbr>Slave<wbr>A</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.101.0+) The region ID of the secondary instance if you create a secondary instance. If you set this parameter to the same value as the ZoneId parameter, the instance is deployed in a single zone. Otherwise, the instance is deployed in multiple zones.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="zoneidslaveb_csharp">
+<a href="#zoneidslaveb_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id<wbr>Slave<wbr>B</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.101.0+) The region ID of the log instance if you create a log instance. If you set this parameter to the same value as the ZoneId parameter, the instance is deployed in a single zone. Otherwise, the instance is deployed in multiple zones.
 {{% /md %}}</dd>
 
 </dl>
@@ -1685,6 +1718,17 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="masterzone_go">
+<a href="#masterzone_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Zone</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.101.0+) The master zone of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -1780,6 +1824,28 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Used to retrieve instances belong to specified `vswitch` resources.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="zoneidslavea_go">
+<a href="#zoneidslavea_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id<wbr>Slave<wbr>A</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.101.0+) The region ID of the secondary instance if you create a secondary instance. If you set this parameter to the same value as the ZoneId parameter, the instance is deployed in a single zone. Otherwise, the instance is deployed in multiple zones.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="zoneidslaveb_go">
+<a href="#zoneidslaveb_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id<wbr>Slave<wbr>B</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.101.0+) The region ID of the log instance if you create a log instance. If you set this parameter to the same value as the ZoneId parameter, the instance is deployed in a single zone. Otherwise, the instance is deployed in multiple zones.
 {{% /md %}}</dd>
 
 </dl>
@@ -1956,6 +2022,17 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="masterzone_nodejs">
+<a href="#masterzone_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Zone</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.101.0+) The master zone of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -2051,6 +2128,28 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Used to retrieve instances belong to specified `vswitch` resources.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="zoneidslavea_nodejs">
+<a href="#zoneidslavea_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id<wbr>Slave<wbr>A</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.101.0+) The region ID of the secondary instance if you create a secondary instance. If you set this parameter to the same value as the ZoneId parameter, the instance is deployed in a single zone. Otherwise, the instance is deployed in multiple zones.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="zoneidslaveb_nodejs">
+<a href="#zoneidslaveb_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id<wbr>Slave<wbr>B</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.101.0+) The region ID of the log instance if you create a log instance. If you set this parameter to the same value as the ZoneId parameter, the instance is deployed in a single zone. Otherwise, the instance is deployed in multiple zones.
 {{% /md %}}</dd>
 
 </dl>
@@ -2227,6 +2326,17 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="master_zone_python">
+<a href="#master_zone_python" style="color: inherit; text-decoration: inherit;">master_<wbr>zone</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.101.0+) The master zone of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -2322,6 +2432,28 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Used to retrieve instances belong to specified `vswitch` resources.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="zone_id_slave_a_python">
+<a href="#zone_id_slave_a_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id_<wbr>slave_<wbr>a</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.101.0+) The region ID of the secondary instance if you create a secondary instance. If you set this parameter to the same value as the ZoneId parameter, the instance is deployed in a single zone. Otherwise, the instance is deployed in multiple zones.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="zone_id_slave_b_python">
+<a href="#zone_id_slave_b_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id_<wbr>slave_<wbr>b</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.101.0+) The region ID of the log instance if you create a log instance. If you set this parameter to the same value as the ZoneId parameter, the instance is deployed in a single zone. Otherwise, the instance is deployed in multiple zones.
 {{% /md %}}</dd>
 
 </dl>

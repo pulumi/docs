@@ -76,10 +76,16 @@ import (
 	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
 	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		cfg := config.New(ctx, "")
+		name := "networkInterfaceName"
+		if param := cfg.Get("name"); param != "" {
+			name = param
+		}
 		vpc, err := vpc.NewNetwork(ctx, "vpc", &vpc.NetworkArgs{
 			CidrBlock: pulumi.String("192.168.0.0/24"),
 		})

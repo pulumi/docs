@@ -71,10 +71,13 @@ import (
 	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen"
 	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		cfg := config.New(ctx, "")
+		name := cfg.RequireObject("name")
 		exampleNetworks, err := vpc.GetNetworks(ctx, &vpc.GetNetworksArgs{
 			IsExample: true,
 		}, nil)

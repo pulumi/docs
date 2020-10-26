@@ -81,10 +81,16 @@ package main
 import (
 	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ots"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		cfg := config.New(ctx, "")
+		name := "terraformtest"
+		if param := cfg.Get("name"); param != "" {
+			name = param
+		}
 		foo, err := ots.NewInstance(ctx, "foo", &ots.InstanceArgs{
 			Description: pulumi.String(name),
 			AccessedBy:  pulumi.String("Any"),

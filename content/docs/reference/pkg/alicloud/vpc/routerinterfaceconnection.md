@@ -108,10 +108,20 @@ import (
 
 	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		cfg := config.New(ctx, "")
+		region := "cn-hangzhou"
+		if param := cfg.Get("region"); param != "" {
+			region = param
+		}
+		name := "alicloudRouterInterfaceConnectionBasic"
+		if param := cfg.Get("name"); param != "" {
+			name = param
+		}
 		fooNetwork, err := vpc.NewNetwork(ctx, "fooNetwork", &vpc.NetworkArgs{
 			CidrBlock: pulumi.String("172.16.0.0/12"),
 		})

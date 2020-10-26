@@ -709,6 +709,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="clusternetworktype_csharp">
+<a href="#clusternetworktype_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Network<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="connections_csharp">
 <a href="#connections_csharp" style="color: inherit; text-decoration: inherit;">Connections</a>
 </span> 
@@ -727,6 +737,38 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the node.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="imageid_csharp">
+<a href="#imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="keyname_csharp">
+<a href="#keyname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The keypair of ssh login cluster node, you have to create it first.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="logconfigs_csharp">
+<a href="#logconfigs_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmanagedkubernetesclustersclusterlogconfig">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Inputs.<wbr>Get<wbr>Managed<wbr>Kubernetes<wbr>Clusters<wbr>Cluster<wbr>Log<wbr>Config<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of one element containing information about the associated log store. It contains the following attributes:
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -753,6 +795,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="podcidr_csharp">
+<a href="#podcidr_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Cidr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="securitygroupid_csharp">
 <a href="#securitygroupid_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
 </span> 
@@ -761,6 +813,26 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The ID of security group where the current cluster worker node is located.
 {{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="servicecidr_csharp">
+<a href="#servicecidr_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Cidr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="slbinternetenabled_csharp">
+<a href="#slbinternetenabled_csharp" style="color: inherit; text-decoration: inherit;">Slb<wbr>Internet<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -775,6 +847,97 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="vswitchids_csharp">
+<a href="#vswitchids_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of VSwitches where the current cluster is located.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workerautorenew_csharp">
+<a href="#workerautorenew_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Auto<wbr>Renew</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workerautorenewperiod_csharp">
+<a href="#workerautorenewperiod_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Auto<wbr>Renew<wbr>Period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workerdatadiskcategory_csharp">
+<a href="#workerdatadiskcategory_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Data<wbr>Disk<wbr>Category</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workerdatadisksize_csharp">
+<a href="#workerdatadisksize_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Data<wbr>Disk<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workerdiskcategory_csharp">
+<a href="#workerdiskcategory_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Disk<wbr>Category</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workerdisksize_csharp">
+<a href="#workerdisksize_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Disk<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workerinstancechargetype_csharp">
+<a href="#workerinstancechargetype_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Instance<wbr>Charge<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workerinstancetypes_csharp">
+<a href="#workerinstancetypes_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Instance<wbr>Types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="workernodes_csharp">
 <a href="#workernodes_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Nodes</a>
 </span> 
@@ -783,6 +946,37 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}List of cluster worker nodes. It contains several attributes to `Block Nodes`.
 {{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workernumbers_csharp">
+<a href="#workernumbers_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Numbers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The ECS instance node number in the current container cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workerperiod_csharp">
+<a href="#workerperiod_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workerperiodunit_csharp">
+<a href="#workerperiodunit_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Period<wbr>Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -804,6 +998,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="clusternetworktype_go">
+<a href="#clusternetworktype_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Network<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="connections_go">
 <a href="#connections_go" style="color: inherit; text-decoration: inherit;">Connections</a>
 </span> 
@@ -822,6 +1026,38 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the node.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="imageid_go">
+<a href="#imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="keyname_go">
+<a href="#keyname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The keypair of ssh login cluster node, you have to create it first.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="logconfigs_go">
+<a href="#logconfigs_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmanagedkubernetesclustersclusterlogconfig">[]Get<wbr>Managed<wbr>Kubernetes<wbr>Clusters<wbr>Cluster<wbr>Log<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}A list of one element containing information about the associated log store. It contains the following attributes:
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -848,6 +1084,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="podcidr_go">
+<a href="#podcidr_go" style="color: inherit; text-decoration: inherit;">Pod<wbr>Cidr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="securitygroupid_go">
 <a href="#securitygroupid_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
 </span> 
@@ -856,6 +1102,26 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The ID of security group where the current cluster worker node is located.
 {{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="servicecidr_go">
+<a href="#servicecidr_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Cidr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="slbinternetenabled_go">
+<a href="#slbinternetenabled_go" style="color: inherit; text-decoration: inherit;">Slb<wbr>Internet<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -870,6 +1136,97 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="vswitchids_go">
+<a href="#vswitchids_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of VSwitches where the current cluster is located.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workerautorenew_go">
+<a href="#workerautorenew_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Auto<wbr>Renew</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workerautorenewperiod_go">
+<a href="#workerautorenewperiod_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Auto<wbr>Renew<wbr>Period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workerdatadiskcategory_go">
+<a href="#workerdatadiskcategory_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Data<wbr>Disk<wbr>Category</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workerdatadisksize_go">
+<a href="#workerdatadisksize_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Data<wbr>Disk<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workerdiskcategory_go">
+<a href="#workerdiskcategory_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Disk<wbr>Category</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workerdisksize_go">
+<a href="#workerdisksize_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Disk<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workerinstancechargetype_go">
+<a href="#workerinstancechargetype_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Instance<wbr>Charge<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workerinstancetypes_go">
+<a href="#workerinstancetypes_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Instance<wbr>Types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="workernodes_go">
 <a href="#workernodes_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Nodes</a>
 </span> 
@@ -878,6 +1235,37 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}List of cluster worker nodes. It contains several attributes to `Block Nodes`.
 {{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workernumbers_go">
+<a href="#workernumbers_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Numbers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
+    </dt>
+    <dd>{{% md %}}The ECS instance node number in the current container cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workerperiod_go">
+<a href="#workerperiod_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workerperiodunit_go">
+<a href="#workerperiodunit_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Period<wbr>Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -899,6 +1287,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="clusternetworktype_nodejs">
+<a href="#clusternetworktype_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Network<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="connections_nodejs">
 <a href="#connections_nodejs" style="color: inherit; text-decoration: inherit;">connections</a>
 </span> 
@@ -917,6 +1315,38 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the node.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="imageid_nodejs">
+<a href="#imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="keyname_nodejs">
+<a href="#keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The keypair of ssh login cluster node, you have to create it first.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="logconfigs_nodejs">
+<a href="#logconfigs_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmanagedkubernetesclustersclusterlogconfig">Get<wbr>Managed<wbr>Kubernetes<wbr>Clusters<wbr>Cluster<wbr>Log<wbr>Config[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of one element containing information about the associated log store. It contains the following attributes:
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -943,6 +1373,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="podcidr_nodejs">
+<a href="#podcidr_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Cidr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="securitygroupid_nodejs">
 <a href="#securitygroupid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Id</a>
 </span> 
@@ -951,6 +1391,26 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The ID of security group where the current cluster worker node is located.
 {{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="servicecidr_nodejs">
+<a href="#servicecidr_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Cidr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="slbinternetenabled_nodejs">
+<a href="#slbinternetenabled_nodejs" style="color: inherit; text-decoration: inherit;">slb<wbr>Internet<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -965,6 +1425,97 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="vswitchids_nodejs">
+<a href="#vswitchids_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of VSwitches where the current cluster is located.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workerautorenew_nodejs">
+<a href="#workerautorenew_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Auto<wbr>Renew</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workerautorenewperiod_nodejs">
+<a href="#workerautorenewperiod_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Auto<wbr>Renew<wbr>Period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workerdatadiskcategory_nodejs">
+<a href="#workerdatadiskcategory_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Data<wbr>Disk<wbr>Category</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workerdatadisksize_nodejs">
+<a href="#workerdatadisksize_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Data<wbr>Disk<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workerdiskcategory_nodejs">
+<a href="#workerdiskcategory_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Disk<wbr>Category</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workerdisksize_nodejs">
+<a href="#workerdisksize_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Disk<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workerinstancechargetype_nodejs">
+<a href="#workerinstancechargetype_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Instance<wbr>Charge<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workerinstancetypes_nodejs">
+<a href="#workerinstancetypes_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Instance<wbr>Types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="workernodes_nodejs">
 <a href="#workernodes_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Nodes</a>
 </span> 
@@ -973,6 +1524,37 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}List of cluster worker nodes. It contains several attributes to `Block Nodes`.
 {{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workernumbers_nodejs">
+<a href="#workernumbers_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Numbers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
+    </dt>
+    <dd>{{% md %}}The ECS instance node number in the current container cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workerperiod_nodejs">
+<a href="#workerperiod_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workerperiodunit_nodejs">
+<a href="#workerperiodunit_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Period<wbr>Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -994,6 +1576,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="cluster_network_type_python">
+<a href="#cluster_network_type_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>network_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="connections_python">
 <a href="#connections_python" style="color: inherit; text-decoration: inherit;">connections</a>
 </span> 
@@ -1012,6 +1604,38 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ID of the node.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="image_id_python">
+<a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_name_python">
+<a href="#key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The keypair of ssh login cluster node, you have to create it first.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="log_configs_python">
+<a href="#log_configs_python" style="color: inherit; text-decoration: inherit;">log_<wbr>configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmanagedkubernetesclustersclusterlogconfig">Sequence[Get<wbr>Managed<wbr>Kubernetes<wbr>Clusters<wbr>Cluster<wbr>Log<wbr>Config<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of one element containing information about the associated log store. It contains the following attributes:
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1038,6 +1662,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="pod_cidr_python">
+<a href="#pod_cidr_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>cidr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="security_group_id_python">
 <a href="#security_group_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>id</a>
 </span> 
@@ -1046,6 +1680,26 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The ID of security group where the current cluster worker node is located.
 {{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="service_cidr_python">
+<a href="#service_cidr_python" style="color: inherit; text-decoration: inherit;">service_<wbr>cidr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="slb_internet_enabled_python">
+<a href="#slb_internet_enabled_python" style="color: inherit; text-decoration: inherit;">slb_<wbr>internet_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1060,6 +1714,97 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="vswitch_ids_python">
+<a href="#vswitch_ids_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of VSwitches where the current cluster is located.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="worker_auto_renew_python">
+<a href="#worker_auto_renew_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>auto_<wbr>renew</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="worker_auto_renew_period_python">
+<a href="#worker_auto_renew_period_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>auto_<wbr>renew_<wbr>period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="worker_data_disk_category_python">
+<a href="#worker_data_disk_category_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>data_<wbr>disk_<wbr>category</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="worker_data_disk_size_python">
+<a href="#worker_data_disk_size_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>data_<wbr>disk_<wbr>size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="worker_disk_category_python">
+<a href="#worker_disk_category_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>disk_<wbr>category</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="worker_disk_size_python">
+<a href="#worker_disk_size_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>disk_<wbr>size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="worker_instance_charge_type_python">
+<a href="#worker_instance_charge_type_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>instance_<wbr>charge_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="worker_instance_types_python">
+<a href="#worker_instance_types_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>instance_<wbr>types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="worker_nodes_python">
 <a href="#worker_nodes_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>nodes</a>
 </span> 
@@ -1068,6 +1813,37 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}List of cluster worker nodes. It contains several attributes to `Block Nodes`.
 {{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="worker_numbers_python">
+<a href="#worker_numbers_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>numbers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
+    </dt>
+    <dd>{{% md %}}The ECS instance node number in the current container cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="worker_period_python">
+<a href="#worker_period_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="worker_period_unit_python">
+<a href="#worker_period_unit_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>period_<wbr>unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1289,6 +2065,140 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Service Access Domain.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="getmanagedkubernetesclustersclusterlogconfig">Get<wbr>Managed<wbr>Kubernetes<wbr>Clusters<wbr>Cluster<wbr>Log<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetManagedKubernetesClustersClusterLogConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#GetManagedKubernetesClustersClusterLogConfig">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.Outputs.GetManagedKubernetesClustersClusterLogConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Log Service project name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Type of collecting logs.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Log Service project name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Type of collecting logs.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Log Service project name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Type of collecting logs.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Log Service project name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Type of collecting logs.
 {{% /md %}}</dd>
 
 </dl>
