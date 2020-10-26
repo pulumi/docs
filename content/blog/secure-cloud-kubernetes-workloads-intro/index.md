@@ -72,7 +72,7 @@ Some variant of "machine identity" is offered by all the major cloud providers, 
 
 It's reasonably straightforward to use roles on a virtual machine, but if you're using Kubernetes, an issue arises. Kubernetes worker nodes can be assigned a role, but that role gets shared across all pods running on that node. Suppose your worker nodes are running pods with multiple applications that have different requirements. In that case, you have the unfortunate option of assigning roles to your nodes that have access to _all_ the resources for _all_ your pods, which could present an opportunity for an attacker to pivot quickly.
 
-To mitigate this, many cloud providers offer a solution to push roles all the way down to the Kubernetes pod. I'll introduce those options here, and in subsequent posts show some real world examples of how you're able to leverage these solutions.
+To mitigate this, many cloud providers offer a solution to push roles all the way down to the Kubernetes pod. II'll introduce those options here, and in subsequent posts, I'll show some real-world examples of how you can leverage these solutions.
 
 ### AWS EKS
 
