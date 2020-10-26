@@ -399,8 +399,7 @@ The AccessPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the application the policy is
-associated with.
+    <dd>{{% md %}}The ID of the application the policy is associated with.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -445,7 +444,8 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The account to which the access rule should be added. Conflicts with `zone_id`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -488,8 +488,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The DNS zone to which the access rule should be
-added.
+    <dd>{{% md %}}The DNS zone to which the access rule should be added. Conflicts with `account_id`.
 {{% /md %}}</dd>
 
 </dl>
@@ -507,8 +506,7 @@ added.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the application the policy is
-associated with.
+    <dd>{{% md %}}The ID of the application the policy is associated with.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -553,7 +551,8 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The account to which the access rule should be added. Conflicts with `zone_id`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -596,8 +595,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The DNS zone to which the access rule should be
-added.
+    <dd>{{% md %}}The DNS zone to which the access rule should be added. Conflicts with `account_id`.
 {{% /md %}}</dd>
 
 </dl>
@@ -615,8 +613,7 @@ added.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the application the policy is
-associated with.
+    <dd>{{% md %}}The ID of the application the policy is associated with.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -661,7 +658,8 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The account to which the access rule should be added. Conflicts with `zone_id`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -704,8 +702,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The DNS zone to which the access rule should be
-added.
+    <dd>{{% md %}}The DNS zone to which the access rule should be added. Conflicts with `account_id`.
 {{% /md %}}</dd>
 
 </dl>
@@ -723,8 +720,7 @@ added.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the application the policy is
-associated with.
+    <dd>{{% md %}}The ID of the application the policy is associated with.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -769,7 +765,8 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The account to which the access rule should be added. Conflicts with `zone_id`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -812,8 +809,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The DNS zone to which the access rule should be
-added.
+    <dd>{{% md %}}The DNS zone to which the access rule should be added. Conflicts with `account_id`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1037,7 +1033,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The account to which the access rule should be added. Conflicts with `zone_id`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1047,8 +1044,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the application the policy is
-associated with.
+    <dd>{{% md %}}The ID of the application the policy is associated with.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1126,8 +1122,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The DNS zone to which the access rule should be
-added.
+    <dd>{{% md %}}The DNS zone to which the access rule should be added. Conflicts with `account_id`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1145,7 +1140,8 @@ added.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The account to which the access rule should be added. Conflicts with `zone_id`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1155,8 +1151,7 @@ added.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the application the policy is
-associated with.
+    <dd>{{% md %}}The ID of the application the policy is associated with.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1234,8 +1229,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The DNS zone to which the access rule should be
-added.
+    <dd>{{% md %}}The DNS zone to which the access rule should be added. Conflicts with `account_id`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1253,7 +1247,8 @@ added.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The account to which the access rule should be added. Conflicts with `zone_id`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1263,8 +1258,7 @@ added.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the application the policy is
-associated with.
+    <dd>{{% md %}}The ID of the application the policy is associated with.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1342,8 +1336,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The DNS zone to which the access rule should be
-added.
+    <dd>{{% md %}}The DNS zone to which the access rule should be added. Conflicts with `account_id`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1361,7 +1354,8 @@ added.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The account to which the access rule should be added. Conflicts with `zone_id`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1371,8 +1365,7 @@ added.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the application the policy is
-associated with.
+    <dd>{{% md %}}The ID of the application the policy is associated with.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1450,8 +1443,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The DNS zone to which the access rule should be
-added.
+    <dd>{{% md %}}The DNS zone to which the access rule should be added. Conflicts with `account_id`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1564,6 +1556,16 @@ added.
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="geos_csharp">
+<a href="#geos_csharp" style="color: inherit; text-decoration: inherit;">Geos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1726,6 +1728,16 @@ added.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="geos_go">
+<a href="#geos_go" style="color: inherit; text-decoration: inherit;">Geos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="githubs_go">
 <a href="#githubs_go" style="color: inherit; text-decoration: inherit;">Githubs</a>
 </span> 
@@ -1883,6 +1895,16 @@ added.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="geos_nodejs">
+<a href="#geos_nodejs" style="color: inherit; text-decoration: inherit;">geos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="githubs_nodejs">
 <a href="#githubs_nodejs" style="color: inherit; text-decoration: inherit;">githubs</a>
 </span> 
@@ -2035,6 +2057,16 @@ added.
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="geos_python">
+<a href="#geos_python" style="color: inherit; text-decoration: inherit;">geos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2933,6 +2965,16 @@ added.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="geos_csharp">
+<a href="#geos_csharp" style="color: inherit; text-decoration: inherit;">Geos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="githubs_csharp">
 <a href="#githubs_csharp" style="color: inherit; text-decoration: inherit;">Githubs</a>
 </span> 
@@ -3085,6 +3127,16 @@ added.
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="geos_go">
+<a href="#geos_go" style="color: inherit; text-decoration: inherit;">Geos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3247,6 +3299,16 @@ added.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="geos_nodejs">
+<a href="#geos_nodejs" style="color: inherit; text-decoration: inherit;">geos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="githubs_nodejs">
 <a href="#githubs_nodejs" style="color: inherit; text-decoration: inherit;">githubs</a>
 </span> 
@@ -3399,6 +3461,16 @@ added.
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="geos_python">
+<a href="#geos_python" style="color: inherit; text-decoration: inherit;">geos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4297,6 +4369,16 @@ added.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="geos_csharp">
+<a href="#geos_csharp" style="color: inherit; text-decoration: inherit;">Geos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="githubs_csharp">
 <a href="#githubs_csharp" style="color: inherit; text-decoration: inherit;">Githubs</a>
 </span> 
@@ -4449,6 +4531,16 @@ added.
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="geos_go">
+<a href="#geos_go" style="color: inherit; text-decoration: inherit;">Geos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4611,6 +4703,16 @@ added.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="geos_nodejs">
+<a href="#geos_nodejs" style="color: inherit; text-decoration: inherit;">geos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="githubs_nodejs">
 <a href="#githubs_nodejs" style="color: inherit; text-decoration: inherit;">githubs</a>
 </span> 
@@ -4763,6 +4865,16 @@ added.
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="geos_python">
+<a href="#geos_python" style="color: inherit; text-decoration: inherit;">geos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
