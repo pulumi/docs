@@ -13,6 +13,116 @@ meta_desc: "Explore the LoadBalancer resource of the DigitalOcean package, inclu
 Provides a DigitalOcean Load Balancer resource. This can be used to create,
 modify, and delete Load Balancers.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var web = new DigitalOcean.Droplet("web", new DigitalOcean.DropletArgs
+        {
+            Size = "s-1vcpu-1gb",
+            Image = "ubuntu-18-04-x64",
+            Region = "nyc3",
+        });
+        var @public = new DigitalOcean.LoadBalancer("public", new DigitalOcean.LoadBalancerArgs
+        {
+            Region = "nyc3",
+            ForwardingRules = 
+            {
+                new DigitalOcean.Inputs.LoadBalancerForwardingRuleArgs
+                {
+                    EntryPort = 80,
+                    EntryProtocol = "http",
+                    TargetPort = 80,
+                    TargetProtocol = "http",
+                },
+            },
+            Healthcheck = new DigitalOcean.Inputs.LoadBalancerHealthcheckArgs
+            {
+                Port = 22,
+                Protocol = "tcp",
+            },
+            DropletIds = 
+            {
+                web.Id,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+web = digitalocean.Droplet("web",
+    size="s-1vcpu-1gb",
+    image="ubuntu-18-04-x64",
+    region="nyc3")
+public = digitalocean.LoadBalancer("public",
+    region="nyc3",
+    forwarding_rules=[digitalocean.LoadBalancerForwardingRuleArgs(
+        entry_port=80,
+        entry_protocol="http",
+        target_port=80,
+        target_protocol="http",
+    )],
+    healthcheck=digitalocean.LoadBalancerHealthcheckArgs(
+        port=22,
+        protocol="tcp",
+    ),
+    droplet_ids=[web.id])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const web = new digitalocean.Droplet("web", {
+    size: "s-1vcpu-1gb",
+    image: "ubuntu-18-04-x64",
+    region: "nyc3",
+});
+const _public = new digitalocean.LoadBalancer("public", {
+    region: "nyc3",
+    forwardingRules: [{
+        entryPort: 80,
+        entryProtocol: "http",
+        targetPort: 80,
+        targetProtocol: "http",
+    }],
+    healthcheck: {
+        port: 22,
+        protocol: "tcp",
+    },
+    dropletIds: [web.id],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a LoadBalancer Resource {#create}
@@ -28,7 +138,7 @@ modify, and delete Load Balancers.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#LoadBalancer">NewLoadBalancer</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#LoadBalancerArgs">LoadBalancerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#LoadBalancer">LoadBalancer</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#LoadBalancer">NewLoadBalancer</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#LoadBalancerArgs">LoadBalancerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#LoadBalancer">LoadBalancer</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -102,7 +212,7 @@ modify, and delete Load Balancers.
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -122,7 +232,7 @@ modify, and delete Load Balancers.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#LoadBalancerArgs">LoadBalancerArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#LoadBalancerArgs">LoadBalancerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -132,7 +242,7 @@ modify, and delete Load Balancers.
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1008,7 +1118,7 @@ Get an existing LoadBalancer resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLoadBalancer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#LoadBalancerState">LoadBalancerState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#LoadBalancer">LoadBalancer</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLoadBalancer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#LoadBalancerState">LoadBalancerState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#LoadBalancer">LoadBalancer</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1848,7 +1958,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#LoadBalancerForwardingRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#LoadBalancerForwardingRuleOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#LoadBalancerForwardingRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#LoadBalancerForwardingRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Inputs.LoadBalancerForwardingRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.LoadBalancerForwardingRule.html">output</a> API doc for this type.
@@ -1904,15 +2014,26 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
     <dd>{{% md %}}The protocol used for traffic from the Load Balancer to the backend Droplets. The possible values are: `http`, `https`, `http2` or `tcp`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="certificateid_csharp">
 <a href="#certificateid_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the TLS certificate to be used for SSL termination.
+    <dd>{{% md %}}**Deprecated** The ID of the TLS certificate to be used for SSL termination.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Certificate IDs may change, for example when a Let&#39;s Encrypt certificate is auto-renewed. Please specify &#39;certificate_name&#39; instead.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="certificatename_csharp">
+<a href="#certificatename_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unique name of the TLS certificate to be used for SSL termination.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1977,15 +2098,26 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
     <dd>{{% md %}}The protocol used for traffic from the Load Balancer to the backend Droplets. The possible values are: `http`, `https`, `http2` or `tcp`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="certificateid_go">
 <a href="#certificateid_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the TLS certificate to be used for SSL termination.
+    <dd>{{% md %}}**Deprecated** The ID of the TLS certificate to be used for SSL termination.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Certificate IDs may change, for example when a Let&#39;s Encrypt certificate is auto-renewed. Please specify &#39;certificate_name&#39; instead.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="certificatename_go">
+<a href="#certificatename_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unique name of the TLS certificate to be used for SSL termination.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2050,15 +2182,26 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
     <dd>{{% md %}}The protocol used for traffic from the Load Balancer to the backend Droplets. The possible values are: `http`, `https`, `http2` or `tcp`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="certificateid_nodejs">
 <a href="#certificateid_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the TLS certificate to be used for SSL termination.
+    <dd>{{% md %}}**Deprecated** The ID of the TLS certificate to be used for SSL termination.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Certificate IDs may change, for example when a Let&#39;s Encrypt certificate is auto-renewed. Please specify &#39;certificate_name&#39; instead.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="certificatename_nodejs">
+<a href="#certificatename_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unique name of the TLS certificate to be used for SSL termination.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2123,15 +2266,26 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
     <dd>{{% md %}}The protocol used for traffic from the Load Balancer to the backend Droplets. The possible values are: `http`, `https`, `http2` or `tcp`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="certificate_id_python">
 <a href="#certificate_id_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the TLS certificate to be used for SSL termination.
+    <dd>{{% md %}}**Deprecated** The ID of the TLS certificate to be used for SSL termination.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Certificate IDs may change, for example when a Let&#39;s Encrypt certificate is auto-renewed. Please specify &#39;certificate_name&#39; instead.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="certificate_name_python">
+<a href="#certificate_name_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The unique name of the TLS certificate to be used for SSL termination.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2158,7 +2312,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#LoadBalancerHealthcheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#LoadBalancerHealthcheckOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#LoadBalancerHealthcheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#LoadBalancerHealthcheckOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Inputs.LoadBalancerHealthcheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.LoadBalancerHealthcheck.html">output</a> API doc for this type.
@@ -2512,7 +2666,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#LoadBalancerStickySessionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#LoadBalancerStickySessionsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#LoadBalancerStickySessionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#LoadBalancerStickySessionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Inputs.LoadBalancerStickySessionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.LoadBalancerStickySessions.html">output</a> API doc for this type.

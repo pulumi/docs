@@ -35,9 +35,9 @@ class MyStack : Stack
         var cert = new DigitalOcean.Certificate("cert", new DigitalOcean.CertificateArgs
         {
             Type = "custom",
-            PrivateKey = File.ReadAllText("/Users/myuser/certs/privkey.pem"),
-            LeafCertificate = File.ReadAllText("/Users/myuser/certs/cert.pem"),
-            CertificateChain = File.ReadAllText("/Users/myuser/certs/fullchain.pem"),
+            PrivateKey = File.ReadAllText("/Users/terraform/certs/privkey.pem"),
+            LeafCertificate = File.ReadAllText("/Users/terraform/certs/cert.pem"),
+            CertificateChain = File.ReadAllText("/Users/terraform/certs/fullchain.pem"),
         });
     }
 
@@ -57,9 +57,9 @@ import pulumi_digitalocean as digitalocean
 
 cert = digitalocean.Certificate("cert",
     type="custom",
-    private_key=(lambda path: open(path).read())("/Users/myuser/certs/privkey.pem"),
-    leaf_certificate=(lambda path: open(path).read())("/Users/myuser/certs/cert.pem"),
-    certificate_chain=(lambda path: open(path).read())("/Users/myuser/certs/fullchain.pem"))
+    private_key=(lambda path: open(path).read())("/Users/terraform/certs/privkey.pem"),
+    leaf_certificate=(lambda path: open(path).read())("/Users/terraform/certs/cert.pem"),
+    certificate_chain=(lambda path: open(path).read())("/Users/terraform/certs/fullchain.pem"))
 ```
 
 {{% /example %}}
@@ -73,9 +73,9 @@ import * from "fs";
 
 const cert = new digitalocean.Certificate("cert", {
     type: "custom",
-    privateKey: fs.readFileSync("/Users/myuser/certs/privkey.pem"),
-    leafCertificate: fs.readFileSync("/Users/myuser/certs/cert.pem"),
-    certificateChain: fs.readFileSync("/Users/myuser/certs/fullchain.pem"),
+    privateKey: fs.readFileSync("/Users/terraform/certs/privkey.pem"),
+    leafCertificate: fs.readFileSync("/Users/terraform/certs/cert.pem"),
+    certificateChain: fs.readFileSync("/Users/terraform/certs/fullchain.pem"),
 });
 ```
 
@@ -111,7 +111,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean"
+	"github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -190,7 +190,7 @@ class MyStack : Stack
                     EntryProtocol = "https",
                     TargetPort = 80,
                     TargetProtocol = "http",
-                    CertificateId = cert.Id,
+                    CertificateName = cert.Name,
                 },
             },
         });
@@ -206,7 +206,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean"
+	"github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -226,11 +226,11 @@ func main() {
 			DropletTag: pulumi.String("backend"),
 			ForwardingRules: digitalocean.LoadBalancerForwardingRuleArray{
 				&digitalocean.LoadBalancerForwardingRuleArgs{
-					EntryPort:      pulumi.Int(443),
-					EntryProtocol:  pulumi.String("https"),
-					TargetPort:     pulumi.Int(80),
-					TargetProtocol: pulumi.String("http"),
-					CertificateId:  cert.ID(),
+					EntryPort:       pulumi.Int(443),
+					EntryProtocol:   pulumi.String("https"),
+					TargetPort:      pulumi.Int(80),
+					TargetProtocol:  pulumi.String("http"),
+					CertificateName: cert.Name,
 				},
 			},
 		})
@@ -261,7 +261,7 @@ public = digitalocean.LoadBalancer("public",
         entry_protocol="https",
         target_port=80,
         target_protocol="http",
-        certificate_id=cert.id,
+        certificate_name=cert.name,
     )])
 ```
 
@@ -286,7 +286,7 @@ const _public = new digitalocean.LoadBalancer("public", {
         entryProtocol: "https",
         targetPort: 80,
         targetProtocol: "http",
-        certificateId: cert.id,
+        certificateName: cert.name,
     }],
 });
 ```
@@ -309,7 +309,7 @@ const _public = new digitalocean.LoadBalancer("public", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#Certificate">NewCertificate</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#CertificateArgs">CertificateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#Certificate">Certificate</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#Certificate">NewCertificate</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#CertificateArgs">CertificateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#Certificate">Certificate</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -383,7 +383,7 @@ const _public = new digitalocean.LoadBalancer("public", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -403,7 +403,7 @@ const _public = new digitalocean.LoadBalancer("public", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#CertificateArgs">CertificateArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#CertificateArgs">CertificateArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -413,7 +413,7 @@ const _public = new digitalocean.LoadBalancer("public", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -850,6 +850,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="uuid_csharp">
+<a href="#uuid_csharp" style="color: inherit; text-decoration: inherit;">Uuid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The UUID of the certificate
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -898,6 +909,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="uuid_go">
+<a href="#uuid_go" style="color: inherit; text-decoration: inherit;">Uuid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The UUID of the certificate
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -948,6 +970,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="uuid_nodejs">
+<a href="#uuid_nodejs" style="color: inherit; text-decoration: inherit;">uuid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The UUID of the certificate
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -997,6 +1030,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="uuid_python">
+<a href="#uuid_python" style="color: inherit; text-decoration: inherit;">uuid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The UUID of the certificate
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1017,11 +1061,11 @@ Get an existing Certificate resource's state with the given name, ID, and option
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">certificate_chain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domains</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">leaf_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">not_after</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sha1_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Certificate</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">certificate_chain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domains</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">leaf_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">not_after</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sha1_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">uuid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Certificate</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCertificate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#CertificateState">CertificateState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#Certificate">Certificate</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCertificate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#CertificateState">CertificateState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#Certificate">Certificate</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1236,6 +1280,17 @@ corresponding to the SSL certificate. Only valid when type is `custom`.
 `custom` or `lets_encrypt`. Defaults to `custom`.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_uuid_csharp">
+<a href="#state_uuid_csharp" style="color: inherit; text-decoration: inherit;">Uuid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The UUID of the certificate
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1346,6 +1401,17 @@ corresponding to the SSL certificate. Only valid when type is `custom`.
     </dt>
     <dd>{{% md %}}The type of certificate to provision. Can be either
 `custom` or `lets_encrypt`. Defaults to `custom`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_uuid_go">
+<a href="#state_uuid_go" style="color: inherit; text-decoration: inherit;">Uuid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The UUID of the certificate
 {{% /md %}}</dd>
 
 </dl>
@@ -1460,6 +1526,17 @@ corresponding to the SSL certificate. Only valid when type is `custom`.
 `custom` or `lets_encrypt`. Defaults to `custom`.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_uuid_nodejs">
+<a href="#state_uuid_nodejs" style="color: inherit; text-decoration: inherit;">uuid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The UUID of the certificate
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1570,6 +1647,17 @@ corresponding to the SSL certificate. Only valid when type is `custom`.
     </dt>
     <dd>{{% md %}}The type of certificate to provision. Can be either
 `custom` or `lets_encrypt`. Defaults to `custom`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_uuid_python">
+<a href="#state_uuid_python" style="color: inherit; text-decoration: inherit;">uuid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The UUID of the certificate
 {{% /md %}}</dd>
 
 </dl>

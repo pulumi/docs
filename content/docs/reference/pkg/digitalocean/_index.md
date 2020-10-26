@@ -69,6 +69,7 @@ A Pulumi package for creating and managing Digital Ocean cloud resources.
     <li><a href="getproject" title="GetProject"><span class="symbol function"></span>GetProject</a></li>
     <li><a href="getprojects" title="GetProjects"><span class="symbol function"></span>GetProjects</a></li>
     <li><a href="getrecord" title="GetRecord"><span class="symbol function"></span>GetRecord</a></li>
+    <li><a href="getrecords" title="GetRecords"><span class="symbol function"></span>GetRecords</a></li>
     <li><a href="getregion" title="GetRegion"><span class="symbol function"></span>GetRegion</a></li>
     <li><a href="getregions" title="GetRegions"><span class="symbol function"></span>GetRegions</a></li>
     <li><a href="getsizes" title="GetSizes"><span class="symbol function"></span>GetSizes</a></li>
@@ -93,7 +94,7 @@ A Pulumi package for creating and managing Digital Ocean cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/digitalocean/terraform-provider-digitalocean).</dd>
 	<dt>Version</dt>
-	<dd>2.9.0</dd>
+	<dd>3.0.0</dd>
 </dl>
 
 
@@ -104,7 +105,7 @@ A Pulumi package for creating and managing Digital Ocean cloud resources.
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.html" title="Pulumi.DigitalOcean">Pulumi.DigitalOcean</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#" title="digitalocean">digitalocean</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#" title="digitalocean">digitalocean</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#" title="@pulumi/digitalocean">@pulumi/digitalocean</a></dd>
