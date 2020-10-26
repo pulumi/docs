@@ -51,8 +51,6 @@ jobs:
           go-version: ${{ matrix.goversion }}
       - name: setup node
         uses: actions/setup-node@v1
-        with:
-          node-version: ${{matrix.nodeversion}}
       - name: Setup Python
         uses: actions/setup-python@v1
         with:
@@ -100,7 +98,5 @@ jobs:
         - 3.1.301
         goversion:
         - 1.15.x
-        nodeversion:
-        - 13.x
         pythonversion:
         - "3.7"
