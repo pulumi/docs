@@ -3,7 +3,7 @@ title: "Module ssh"
 title_tag: "Module ssh | Package @pulumi/vault | Node.js SDK"
 linktitle: "ssh"
 meta_desc: "Explore members of the ssh module in the @pulumi/vault package."
-git_sha: "995253ba3523cfba71f69517b1a0966e0a8ffc3e"
+git_sha: "9dcebd2061ea8c3777afa552aff86b3cc4aa6f14"
 block_external_search_index: true
 ---
 
@@ -33,7 +33,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="SecretBackendCa" data-link-title="SecretBackendCa">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendCa.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendCa.ts#L25">
         Resource <strong>SecretBackendCa</strong>
     </a>
 </h3>
@@ -58,7 +58,7 @@ const foo = new vault.ssh.SecretBackendCa("foo", {
 ```
 
 <h4 class="pdoc-member-header" id="SecretBackendCa-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendCa.ts#L68"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendCa.ts#L68"> <b>constructor</b></a>
 </h4>
 
 
@@ -72,7 +72,7 @@ Create a SecretBackendCa resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SecretBackendCa-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendCa.ts#L35">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendCa.ts#L35">method <b>get</b></a>
 </h4>
 
 
@@ -83,14 +83,14 @@ Get an existing SecretBackendCa resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SecretBackendCa-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendCa.ts#L25">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendCa.ts#L25">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SecretBackendCa-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendCa.ts#L46">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendCa.ts#L46">method <b>isInstance</b></a>
 </h4>
 
 
@@ -101,7 +101,7 @@ Returns true if the given object is an instance of SecretBackendCa.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SecretBackendCa-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendCa.ts#L56">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendCa.ts#L56">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -109,7 +109,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The path where the SSH secret backend is mounted. Defaults to 'ssh'
 
 <h4 class="pdoc-member-header" id="SecretBackendCa-generateSigningKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendCa.ts#L60">property <b>generateSigningKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendCa.ts#L60">property <b>generateSigningKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>generateSigningKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -117,7 +117,7 @@ The path where the SSH secret backend is mounted. Defaults to 'ssh'
 Whether Vault should generate the signing key pair internally. Defaults to true
 
 <h4 class="pdoc-member-header" id="SecretBackendCa-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendCa.ts#L25">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendCa.ts#L25">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -126,7 +126,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SecretBackendCa-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendCa.ts#L64">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendCa.ts#L64">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -134,7 +134,7 @@ deployments and may be missing (undefined) during planning phases.
 The private key part the SSH CA key pair; required if generateSigningKey is false.
 
 <h4 class="pdoc-member-header" id="SecretBackendCa-publicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendCa.ts#L68">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendCa.ts#L68">property <b>publicKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>publicKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -142,7 +142,7 @@ The private key part the SSH CA key pair; required if generateSigningKey is fals
 The public key part the SSH CA key pair; required if generateSigningKey is false.
 
 <h4 class="pdoc-member-header" id="SecretBackendCa-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendCa.ts#L25">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendCa.ts#L25">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -151,7 +151,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SecretBackendRole" data-link-title="SecretBackendRole">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L34">
         Resource <strong>SecretBackendRole</strong>
     </a>
 </h3>
@@ -185,7 +185,7 @@ const bar = new vault.ssh.SecretBackendRole("bar", {
 ```
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L141"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L149"> <b>constructor</b></a>
 </h4>
 
 
@@ -199,7 +199,7 @@ Create a SecretBackendRole resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L44">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L44">method <b>get</b></a>
 </h4>
 
 
@@ -210,14 +210,14 @@ Get an existing SecretBackendRole resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L34">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L34">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L55">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L55">method <b>isInstance</b></a>
 </h4>
 
 
@@ -227,8 +227,16 @@ properties used to qualify the lookup.
 Returns true if the given object is an instance of SecretBackendRole.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
+<h4 class="pdoc-member-header" id="SecretBackendRole-algorithmSigner">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L65">property <b>algorithmSigner</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>algorithmSigner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+When supplied, this value specifies a signing algorithm for the key. Possible values: ssh-rsa, rsa-sha2-256, rsa-sha2-512.
+
 <h4 class="pdoc-member-header" id="SecretBackendRole-allowBareDomains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L65">property <b>allowBareDomains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L69">property <b>allowBareDomains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allowBareDomains: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -236,7 +244,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Specifies if host certificates that are requested are allowed to use the base domains listed in `allowedDomains`.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-allowHostCertificates">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L69">property <b>allowHostCertificates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L73">property <b>allowHostCertificates</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allowHostCertificates: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -244,7 +252,7 @@ Specifies if host certificates that are requested are allowed to use the base do
 Specifies if certificates are allowed to be signed for use as a 'host'.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-allowSubdomains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L73">property <b>allowSubdomains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L77">property <b>allowSubdomains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allowSubdomains: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -252,7 +260,7 @@ Specifies if certificates are allowed to be signed for use as a 'host'.
 Specifies if host certificates that are requested are allowed to be subdomains of those listed in `allowedDomains`.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-allowUserCertificates">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L77">property <b>allowUserCertificates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L81">property <b>allowUserCertificates</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allowUserCertificates: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -260,7 +268,7 @@ Specifies if host certificates that are requested are allowed to be subdomains o
 Specifies if certificates are allowed to be signed for use as a 'user'.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-allowUserKeyIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L81">property <b>allowUserKeyIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L85">property <b>allowUserKeyIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allowUserKeyIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -268,7 +276,7 @@ Specifies if certificates are allowed to be signed for use as a 'user'.
 Specifies if users can override the key ID for a signed certificate with the `keyId` field.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-allowedCriticalOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L85">property <b>allowedCriticalOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L89">property <b>allowedCriticalOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allowedCriticalOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -276,7 +284,7 @@ Specifies if users can override the key ID for a signed certificate with the `ke
 Specifies a comma-separated list of critical options that certificates can have when signed.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-allowedDomains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L89">property <b>allowedDomains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L93">property <b>allowedDomains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allowedDomains: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -284,7 +292,7 @@ Specifies a comma-separated list of critical options that certificates can have 
 The list of domains for which a client can request a host certificate.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-allowedExtensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L93">property <b>allowedExtensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L97">property <b>allowedExtensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allowedExtensions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -292,7 +300,7 @@ The list of domains for which a client can request a host certificate.
 Specifies a comma-separated list of extensions that certificates can have when signed.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-allowedUserKeyLengths">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L97">property <b>allowedUserKeyLengths</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L101">property <b>allowedUserKeyLengths</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allowedUserKeyLengths: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -300,15 +308,23 @@ Specifies a comma-separated list of extensions that certificates can have when s
 Specifies a map of ssh key types and their expected sizes which are allowed to be signed by the CA type.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-allowedUsers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L101">property <b>allowedUsers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L105">property <b>allowedUsers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allowedUsers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Specifies a comma-separated list of usernames that are to be allowed, only if certain usernames are to be allowed.
 
+<h4 class="pdoc-member-header" id="SecretBackendRole-allowedUsersTemplate">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L109">property <b>allowedUsersTemplate</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>allowedUsersTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Specifies if `allowedUsers` can be declared using identity template policies. Non-templated users are also permitted.
+
 <h4 class="pdoc-member-header" id="SecretBackendRole-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L105">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L113">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -316,7 +332,7 @@ Specifies a comma-separated list of usernames that are to be allowed, only if ce
 The path where the SSH secret backend is mounted.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-cidrList">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L109">property <b>cidrList</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L117">property <b>cidrList</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cidrList: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -324,7 +340,7 @@ The path where the SSH secret backend is mounted.
 The comma-separated string of CIDR blocks for which this role is applicable.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-defaultCriticalOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L113">property <b>defaultCriticalOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L121">property <b>defaultCriticalOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultCriticalOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -332,7 +348,7 @@ The comma-separated string of CIDR blocks for which this role is applicable.
 Specifies a map of critical options that certificates have when signed.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-defaultExtensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L117">property <b>defaultExtensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L125">property <b>defaultExtensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultExtensions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -340,7 +356,7 @@ Specifies a map of critical options that certificates have when signed.
 Specifies a map of extensions that certificates have when signed.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-defaultUser">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L121">property <b>defaultUser</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L129">property <b>defaultUser</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultUser: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -348,7 +364,7 @@ Specifies a map of extensions that certificates have when signed.
 Specifies the default username for which a credential will be generated.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L34">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L34">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -357,7 +373,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-keyIdFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L125">property <b>keyIdFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L133">property <b>keyIdFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyIdFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -365,7 +381,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies a custom format for the key id of a signed certificate.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-keyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L129">property <b>keyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L137">property <b>keyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -373,7 +389,7 @@ Specifies a custom format for the key id of a signed certificate.
 Specifies the type of credentials generated by this role. This can be either `otp`, `dynamic` or `ca`.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-maxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L133">property <b>maxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L141">property <b>maxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -381,7 +397,7 @@ Specifies the type of credentials generated by this role. This can be either `ot
 Specifies the maximum Time To Live value.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L137">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L145">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -389,7 +405,7 @@ Specifies the maximum Time To Live value.
 Specifies the name of the role to create.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L141">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L149">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -397,7 +413,7 @@ Specifies the name of the role to create.
 Specifies the Time To Live value.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L34">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L34">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -409,7 +425,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="SecretBackendCaArgs" data-link-title="SecretBackendCaArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendCa.ts#L129">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendCa.ts#L129">
         interface <strong>SecretBackendCaArgs</strong>
     </a>
 </h3>
@@ -419,7 +435,7 @@ deployments.
 The set of arguments for constructing a SecretBackendCa resource.
 
 <h4 class="pdoc-member-header" id="SecretBackendCaArgs-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendCa.ts#L133">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendCa.ts#L133">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -427,7 +443,7 @@ The set of arguments for constructing a SecretBackendCa resource.
 The path where the SSH secret backend is mounted. Defaults to 'ssh'
 
 <h4 class="pdoc-member-header" id="SecretBackendCaArgs-generateSigningKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendCa.ts#L137">property <b>generateSigningKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendCa.ts#L137">property <b>generateSigningKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>generateSigningKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -435,7 +451,7 @@ The path where the SSH secret backend is mounted. Defaults to 'ssh'
 Whether Vault should generate the signing key pair internally. Defaults to true
 
 <h4 class="pdoc-member-header" id="SecretBackendCaArgs-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendCa.ts#L141">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendCa.ts#L141">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -443,7 +459,7 @@ Whether Vault should generate the signing key pair internally. Defaults to true
 The private key part the SSH CA key pair; required if generateSigningKey is false.
 
 <h4 class="pdoc-member-header" id="SecretBackendCaArgs-publicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendCa.ts#L145">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendCa.ts#L145">property <b>publicKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -451,7 +467,7 @@ The private key part the SSH CA key pair; required if generateSigningKey is fals
 The public key part the SSH CA key pair; required if generateSigningKey is false.
 
 <h3 class="pdoc-module-header" id="SecretBackendCaState" data-link-title="SecretBackendCaState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendCa.ts#L107">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendCa.ts#L107">
         interface <strong>SecretBackendCaState</strong>
     </a>
 </h3>
@@ -461,7 +477,7 @@ The public key part the SSH CA key pair; required if generateSigningKey is false
 Input properties used for looking up and filtering SecretBackendCa resources.
 
 <h4 class="pdoc-member-header" id="SecretBackendCaState-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendCa.ts#L111">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendCa.ts#L111">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -469,7 +485,7 @@ Input properties used for looking up and filtering SecretBackendCa resources.
 The path where the SSH secret backend is mounted. Defaults to 'ssh'
 
 <h4 class="pdoc-member-header" id="SecretBackendCaState-generateSigningKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendCa.ts#L115">property <b>generateSigningKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendCa.ts#L115">property <b>generateSigningKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>generateSigningKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -477,7 +493,7 @@ The path where the SSH secret backend is mounted. Defaults to 'ssh'
 Whether Vault should generate the signing key pair internally. Defaults to true
 
 <h4 class="pdoc-member-header" id="SecretBackendCaState-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendCa.ts#L119">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendCa.ts#L119">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -485,7 +501,7 @@ Whether Vault should generate the signing key pair internally. Defaults to true
 The private key part the SSH CA key pair; required if generateSigningKey is false.
 
 <h4 class="pdoc-member-header" id="SecretBackendCaState-publicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendCa.ts#L123">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendCa.ts#L123">property <b>publicKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -493,7 +509,7 @@ The private key part the SSH CA key pair; required if generateSigningKey is fals
 The public key part the SSH CA key pair; required if generateSigningKey is false.
 
 <h3 class="pdoc-module-header" id="SecretBackendRoleArgs" data-link-title="SecretBackendRoleArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L304">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L324">
         interface <strong>SecretBackendRoleArgs</strong>
     </a>
 </h3>
@@ -502,8 +518,16 @@ The public key part the SSH CA key pair; required if generateSigningKey is false
 
 The set of arguments for constructing a SecretBackendRole resource.
 
+<h4 class="pdoc-member-header" id="SecretBackendRoleArgs-algorithmSigner">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L328">property <b>algorithmSigner</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>algorithmSigner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+When supplied, this value specifies a signing algorithm for the key. Possible values: ssh-rsa, rsa-sha2-256, rsa-sha2-512.
+
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-allowBareDomains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L308">property <b>allowBareDomains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L332">property <b>allowBareDomains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowBareDomains?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -511,7 +535,7 @@ The set of arguments for constructing a SecretBackendRole resource.
 Specifies if host certificates that are requested are allowed to use the base domains listed in `allowedDomains`.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-allowHostCertificates">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L312">property <b>allowHostCertificates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L336">property <b>allowHostCertificates</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowHostCertificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -519,7 +543,7 @@ Specifies if host certificates that are requested are allowed to use the base do
 Specifies if certificates are allowed to be signed for use as a 'host'.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-allowSubdomains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L316">property <b>allowSubdomains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L340">property <b>allowSubdomains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowSubdomains?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -527,7 +551,7 @@ Specifies if certificates are allowed to be signed for use as a 'host'.
 Specifies if host certificates that are requested are allowed to be subdomains of those listed in `allowedDomains`.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-allowUserCertificates">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L320">property <b>allowUserCertificates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L344">property <b>allowUserCertificates</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowUserCertificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -535,7 +559,7 @@ Specifies if host certificates that are requested are allowed to be subdomains o
 Specifies if certificates are allowed to be signed for use as a 'user'.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-allowUserKeyIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L324">property <b>allowUserKeyIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L348">property <b>allowUserKeyIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowUserKeyIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -543,7 +567,7 @@ Specifies if certificates are allowed to be signed for use as a 'user'.
 Specifies if users can override the key ID for a signed certificate with the `keyId` field.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-allowedCriticalOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L328">property <b>allowedCriticalOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L352">property <b>allowedCriticalOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedCriticalOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -551,7 +575,7 @@ Specifies if users can override the key ID for a signed certificate with the `ke
 Specifies a comma-separated list of critical options that certificates can have when signed.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-allowedDomains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L332">property <b>allowedDomains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L356">property <b>allowedDomains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedDomains?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -559,7 +583,7 @@ Specifies a comma-separated list of critical options that certificates can have 
 The list of domains for which a client can request a host certificate.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-allowedExtensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L336">property <b>allowedExtensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L360">property <b>allowedExtensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedExtensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -567,7 +591,7 @@ The list of domains for which a client can request a host certificate.
 Specifies a comma-separated list of extensions that certificates can have when signed.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-allowedUserKeyLengths">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L340">property <b>allowedUserKeyLengths</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L364">property <b>allowedUserKeyLengths</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedUserKeyLengths?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -575,15 +599,23 @@ Specifies a comma-separated list of extensions that certificates can have when s
 Specifies a map of ssh key types and their expected sizes which are allowed to be signed by the CA type.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-allowedUsers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L344">property <b>allowedUsers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L368">property <b>allowedUsers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedUsers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 Specifies a comma-separated list of usernames that are to be allowed, only if certain usernames are to be allowed.
 
+<h4 class="pdoc-member-header" id="SecretBackendRoleArgs-allowedUsersTemplate">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L372">property <b>allowedUsersTemplate</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>allowedUsersTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Specifies if `allowedUsers` can be declared using identity template policies. Non-templated users are also permitted.
+
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L348">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L376">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -591,7 +623,7 @@ Specifies a comma-separated list of usernames that are to be allowed, only if ce
 The path where the SSH secret backend is mounted.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-cidrList">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L352">property <b>cidrList</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L380">property <b>cidrList</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cidrList?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -599,7 +631,7 @@ The path where the SSH secret backend is mounted.
 The comma-separated string of CIDR blocks for which this role is applicable.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-defaultCriticalOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L356">property <b>defaultCriticalOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L384">property <b>defaultCriticalOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultCriticalOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -607,7 +639,7 @@ The comma-separated string of CIDR blocks for which this role is applicable.
 Specifies a map of critical options that certificates have when signed.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-defaultExtensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L360">property <b>defaultExtensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L388">property <b>defaultExtensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultExtensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -615,7 +647,7 @@ Specifies a map of critical options that certificates have when signed.
 Specifies a map of extensions that certificates have when signed.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-defaultUser">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L364">property <b>defaultUser</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L392">property <b>defaultUser</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultUser?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -623,7 +655,7 @@ Specifies a map of extensions that certificates have when signed.
 Specifies the default username for which a credential will be generated.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-keyIdFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L368">property <b>keyIdFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L396">property <b>keyIdFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyIdFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -631,7 +663,7 @@ Specifies the default username for which a credential will be generated.
 Specifies a custom format for the key id of a signed certificate.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-keyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L372">property <b>keyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L400">property <b>keyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -639,7 +671,7 @@ Specifies a custom format for the key id of a signed certificate.
 Specifies the type of credentials generated by this role. This can be either `otp`, `dynamic` or `ca`.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-maxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L376">property <b>maxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L404">property <b>maxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -647,7 +679,7 @@ Specifies the type of credentials generated by this role. This can be either `ot
 Specifies the maximum Time To Live value.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L380">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L408">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -655,7 +687,7 @@ Specifies the maximum Time To Live value.
 Specifies the name of the role to create.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L384">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L412">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -663,7 +695,7 @@ Specifies the name of the role to create.
 Specifies the Time To Live value.
 
 <h3 class="pdoc-module-header" id="SecretBackendRoleState" data-link-title="SecretBackendRoleState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L218">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L230">
         interface <strong>SecretBackendRoleState</strong>
     </a>
 </h3>
@@ -672,8 +704,16 @@ Specifies the Time To Live value.
 
 Input properties used for looking up and filtering SecretBackendRole resources.
 
+<h4 class="pdoc-member-header" id="SecretBackendRoleState-algorithmSigner">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L234">property <b>algorithmSigner</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>algorithmSigner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+When supplied, this value specifies a signing algorithm for the key. Possible values: ssh-rsa, rsa-sha2-256, rsa-sha2-512.
+
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-allowBareDomains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L222">property <b>allowBareDomains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L238">property <b>allowBareDomains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowBareDomains?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -681,7 +721,7 @@ Input properties used for looking up and filtering SecretBackendRole resources.
 Specifies if host certificates that are requested are allowed to use the base domains listed in `allowedDomains`.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-allowHostCertificates">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L226">property <b>allowHostCertificates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L242">property <b>allowHostCertificates</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowHostCertificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -689,7 +729,7 @@ Specifies if host certificates that are requested are allowed to use the base do
 Specifies if certificates are allowed to be signed for use as a 'host'.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-allowSubdomains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L230">property <b>allowSubdomains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L246">property <b>allowSubdomains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowSubdomains?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -697,7 +737,7 @@ Specifies if certificates are allowed to be signed for use as a 'host'.
 Specifies if host certificates that are requested are allowed to be subdomains of those listed in `allowedDomains`.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-allowUserCertificates">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L234">property <b>allowUserCertificates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L250">property <b>allowUserCertificates</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowUserCertificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -705,7 +745,7 @@ Specifies if host certificates that are requested are allowed to be subdomains o
 Specifies if certificates are allowed to be signed for use as a 'user'.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-allowUserKeyIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L238">property <b>allowUserKeyIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L254">property <b>allowUserKeyIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowUserKeyIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -713,7 +753,7 @@ Specifies if certificates are allowed to be signed for use as a 'user'.
 Specifies if users can override the key ID for a signed certificate with the `keyId` field.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-allowedCriticalOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L242">property <b>allowedCriticalOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L258">property <b>allowedCriticalOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedCriticalOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -721,7 +761,7 @@ Specifies if users can override the key ID for a signed certificate with the `ke
 Specifies a comma-separated list of critical options that certificates can have when signed.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-allowedDomains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L246">property <b>allowedDomains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L262">property <b>allowedDomains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedDomains?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -729,7 +769,7 @@ Specifies a comma-separated list of critical options that certificates can have 
 The list of domains for which a client can request a host certificate.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-allowedExtensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L250">property <b>allowedExtensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L266">property <b>allowedExtensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedExtensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -737,7 +777,7 @@ The list of domains for which a client can request a host certificate.
 Specifies a comma-separated list of extensions that certificates can have when signed.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-allowedUserKeyLengths">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L254">property <b>allowedUserKeyLengths</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L270">property <b>allowedUserKeyLengths</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedUserKeyLengths?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -745,15 +785,23 @@ Specifies a comma-separated list of extensions that certificates can have when s
 Specifies a map of ssh key types and their expected sizes which are allowed to be signed by the CA type.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-allowedUsers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L258">property <b>allowedUsers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L274">property <b>allowedUsers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedUsers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 Specifies a comma-separated list of usernames that are to be allowed, only if certain usernames are to be allowed.
 
+<h4 class="pdoc-member-header" id="SecretBackendRoleState-allowedUsersTemplate">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L278">property <b>allowedUsersTemplate</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>allowedUsersTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Specifies if `allowedUsers` can be declared using identity template policies. Non-templated users are also permitted.
+
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L262">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L282">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -761,7 +809,7 @@ Specifies a comma-separated list of usernames that are to be allowed, only if ce
 The path where the SSH secret backend is mounted.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-cidrList">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L266">property <b>cidrList</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L286">property <b>cidrList</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cidrList?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -769,7 +817,7 @@ The path where the SSH secret backend is mounted.
 The comma-separated string of CIDR blocks for which this role is applicable.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-defaultCriticalOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L270">property <b>defaultCriticalOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L290">property <b>defaultCriticalOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultCriticalOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -777,7 +825,7 @@ The comma-separated string of CIDR blocks for which this role is applicable.
 Specifies a map of critical options that certificates have when signed.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-defaultExtensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L274">property <b>defaultExtensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L294">property <b>defaultExtensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultExtensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -785,7 +833,7 @@ Specifies a map of critical options that certificates have when signed.
 Specifies a map of extensions that certificates have when signed.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-defaultUser">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L278">property <b>defaultUser</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L298">property <b>defaultUser</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultUser?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -793,7 +841,7 @@ Specifies a map of extensions that certificates have when signed.
 Specifies the default username for which a credential will be generated.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-keyIdFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L282">property <b>keyIdFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L302">property <b>keyIdFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyIdFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -801,7 +849,7 @@ Specifies the default username for which a credential will be generated.
 Specifies a custom format for the key id of a signed certificate.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-keyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L286">property <b>keyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L306">property <b>keyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -809,7 +857,7 @@ Specifies a custom format for the key id of a signed certificate.
 Specifies the type of credentials generated by this role. This can be either `otp`, `dynamic` or `ca`.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-maxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L290">property <b>maxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L310">property <b>maxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -817,7 +865,7 @@ Specifies the type of credentials generated by this role. This can be either `ot
 Specifies the maximum Time To Live value.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L294">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L314">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -825,7 +873,7 @@ Specifies the maximum Time To Live value.
 Specifies the name of the role to create.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/ssh/secretBackendRole.ts#L298">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/ssh/secretBackendRole.ts#L318">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

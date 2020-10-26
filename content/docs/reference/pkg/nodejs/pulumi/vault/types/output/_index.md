@@ -3,7 +3,7 @@ title: "Module types/output"
 title_tag: "Module types/output | Package @pulumi/vault | Node.js SDK"
 linktitle: "output"
 meta_desc: "Explore members of the output module in the @pulumi/vault package."
-git_sha: "995253ba3523cfba71f69517b1a0966e0a8ffc3e"
+git_sha: "9dcebd2061ea8c3777afa552aff86b3cc4aa6f14"
 block_external_search_index: true
 ---
 
@@ -80,94 +80,94 @@ block_external_search_index: true
 
 <h2 id="azure" data-link-title="azure">namespace <strong>azure</strong></h2>
 <h3 class="pdoc-module-header" id="BackendRoleAzureRole" data-link-title="BackendRoleAzureRole">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L126">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L126">
         interface <strong>BackendRoleAzureRole</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BackendRoleAzureRole</span></code></pre>
 <h4 class="pdoc-member-header" id="BackendRoleAzureRole-roleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L127">property <b>roleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L127">property <b>roleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="BackendRoleAzureRole-roleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L128">property <b>roleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L128">property <b>roleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="BackendRoleAzureRole-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L129">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L129">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scope: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h2 id="config" data-link-title="config">namespace <strong>config</strong></h2>
 <h3 class="pdoc-module-header" id="AuthLogins" data-link-title="AuthLogins">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L134">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L134">
         interface <strong>AuthLogins</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>AuthLogins</span></code></pre>
 <h4 class="pdoc-member-header" id="AuthLogins-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L135">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L135">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespace?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="AuthLogins-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L136">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L136">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="AuthLogins-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L137">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L137">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ClientAuths" data-link-title="ClientAuths">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L140">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L140">
         interface <strong>ClientAuths</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ClientAuths</span></code></pre>
 <h4 class="pdoc-member-header" id="ClientAuths-certFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L141">property <b>certFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L141">property <b>certFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certFile: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuths-keyFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L142">property <b>keyFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L142">property <b>keyFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyFile: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="Headers" data-link-title="Headers">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L145">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L145">
         interface <strong>Headers</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Headers</span></code></pre>
 <h4 class="pdoc-member-header" id="Headers-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L146">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L146">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="Headers-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L147">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L147">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h2 id="database" data-link-title="database">namespace <strong>database</strong></h2>
 <h3 class="pdoc-module-header" id="SecretBackendConnectionCassandra" data-link-title="SecretBackendConnectionCassandra">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L152">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L152">
         interface <strong>SecretBackendConnectionCassandra</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>SecretBackendConnectionCassandra</span></code></pre>
 <h4 class="pdoc-member-header" id="SecretBackendConnectionCassandra-connectTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L157">property <b>connectTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L157">property <b>connectTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectTimeout?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -176,7 +176,7 @@ The number of seconds to use as a connection
 timeout.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionCassandra-hosts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L161">property <b>hosts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L161">property <b>hosts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hosts?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -184,7 +184,7 @@ timeout.
 The hosts to connect to.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionCassandra-insecureTls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L166">property <b>insecureTls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L166">property <b>insecureTls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>insecureTls?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -193,7 +193,7 @@ Whether to skip verification of the server
 certificate when using TLS.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionCassandra-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L170">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L170">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -201,7 +201,7 @@ certificate when using TLS.
 The password to be used in the connection.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionCassandra-pemBundle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L175">property <b>pemBundle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L175">property <b>pemBundle</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pemBundle?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -210,7 +210,7 @@ Concatenated PEM blocks configuring the certificate
 chain.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionCassandra-pemJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L179">property <b>pemJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L179">property <b>pemJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pemJson?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -218,7 +218,7 @@ chain.
 A JSON structure configuring the certificate chain.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionCassandra-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L184">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L184">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -227,7 +227,7 @@ The default port to connect to if no port is specified as
 part of the host.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionCassandra-protocolVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L188">property <b>protocolVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L188">property <b>protocolVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocolVersion?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -235,7 +235,7 @@ part of the host.
 The CQL protocol version to use.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionCassandra-tls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L192">property <b>tls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L192">property <b>tls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tls?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -243,7 +243,7 @@ The CQL protocol version to use.
 Whether to use TLS when connecting to Cassandra.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionCassandra-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L196">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L196">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -251,14 +251,14 @@ Whether to use TLS when connecting to Cassandra.
 The username to be used in the connection.
 
 <h3 class="pdoc-module-header" id="SecretBackendConnectionElasticsearch" data-link-title="SecretBackendConnectionElasticsearch">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L199">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L199">
         interface <strong>SecretBackendConnectionElasticsearch</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>SecretBackendConnectionElasticsearch</span></code></pre>
 <h4 class="pdoc-member-header" id="SecretBackendConnectionElasticsearch-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L203">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L203">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -266,7 +266,7 @@ The username to be used in the connection.
 The password to be used in the connection.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionElasticsearch-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L208">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L208">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -275,7 +275,7 @@ The URL for Elasticsearch's API. https requires certificate
 by trusted CA if used.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionElasticsearch-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L212">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L212">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -283,14 +283,14 @@ by trusted CA if used.
 The username to be used in the connection.
 
 <h3 class="pdoc-module-header" id="SecretBackendConnectionHana" data-link-title="SecretBackendConnectionHana">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L215">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L215">
         interface <strong>SecretBackendConnectionHana</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>SecretBackendConnectionHana</span></code></pre>
 <h4 class="pdoc-member-header" id="SecretBackendConnectionHana-connectionUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L222">property <b>connectionUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L222">property <b>connectionUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionUrl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -301,7 +301,7 @@ docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-p
 for an example.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionHana-maxConnectionLifetime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L227">property <b>maxConnectionLifetime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L227">property <b>maxConnectionLifetime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxConnectionLifetime?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -310,7 +310,7 @@ The maximum number of seconds to keep
 a connection alive for.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionHana-maxIdleConnections">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L232">property <b>maxIdleConnections</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L232">property <b>maxIdleConnections</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxIdleConnections?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -319,7 +319,7 @@ The maximum number of idle connections to
 maintain.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionHana-maxOpenConnections">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L237">property <b>maxOpenConnections</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L237">property <b>maxOpenConnections</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxOpenConnections?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -328,14 +328,14 @@ The maximum number of open connections to
 use.
 
 <h3 class="pdoc-module-header" id="SecretBackendConnectionMongodb" data-link-title="SecretBackendConnectionMongodb">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L240">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L240">
         interface <strong>SecretBackendConnectionMongodb</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>SecretBackendConnectionMongodb</span></code></pre>
 <h4 class="pdoc-member-header" id="SecretBackendConnectionMongodb-connectionUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L247">property <b>connectionUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L247">property <b>connectionUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionUrl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -346,7 +346,7 @@ docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-p
 for an example.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionMongodb-maxConnectionLifetime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L252">property <b>maxConnectionLifetime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L252">property <b>maxConnectionLifetime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxConnectionLifetime?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -355,7 +355,7 @@ The maximum number of seconds to keep
 a connection alive for.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionMongodb-maxIdleConnections">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L257">property <b>maxIdleConnections</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L257">property <b>maxIdleConnections</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxIdleConnections?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -364,7 +364,7 @@ The maximum number of idle connections to
 maintain.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionMongodb-maxOpenConnections">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L262">property <b>maxOpenConnections</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L262">property <b>maxOpenConnections</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxOpenConnections?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -373,36 +373,36 @@ The maximum number of open connections to
 use.
 
 <h3 class="pdoc-module-header" id="SecretBackendConnectionMongodbatlas" data-link-title="SecretBackendConnectionMongodbatlas">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L265">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L265">
         interface <strong>SecretBackendConnectionMongodbatlas</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>SecretBackendConnectionMongodbatlas</span></code></pre>
 <h4 class="pdoc-member-header" id="SecretBackendConnectionMongodbatlas-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L266">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L266">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="SecretBackendConnectionMongodbatlas-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L267">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L267">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="SecretBackendConnectionMongodbatlas-publicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L268">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L268">property <b>publicKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="SecretBackendConnectionMssql" data-link-title="SecretBackendConnectionMssql">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L271">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L271">
         interface <strong>SecretBackendConnectionMssql</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>SecretBackendConnectionMssql</span></code></pre>
 <h4 class="pdoc-member-header" id="SecretBackendConnectionMssql-connectionUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L278">property <b>connectionUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L278">property <b>connectionUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionUrl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -413,7 +413,7 @@ docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-p
 for an example.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionMssql-maxConnectionLifetime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L283">property <b>maxConnectionLifetime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L283">property <b>maxConnectionLifetime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxConnectionLifetime?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -422,7 +422,7 @@ The maximum number of seconds to keep
 a connection alive for.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionMssql-maxIdleConnections">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L288">property <b>maxIdleConnections</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L288">property <b>maxIdleConnections</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxIdleConnections?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -431,7 +431,7 @@ The maximum number of idle connections to
 maintain.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionMssql-maxOpenConnections">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L293">property <b>maxOpenConnections</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L293">property <b>maxOpenConnections</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxOpenConnections?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -440,14 +440,14 @@ The maximum number of open connections to
 use.
 
 <h3 class="pdoc-module-header" id="SecretBackendConnectionMysql" data-link-title="SecretBackendConnectionMysql">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L296">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L296">
         interface <strong>SecretBackendConnectionMysql</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>SecretBackendConnectionMysql</span></code></pre>
 <h4 class="pdoc-member-header" id="SecretBackendConnectionMysql-connectionUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L303">property <b>connectionUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L303">property <b>connectionUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionUrl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -458,7 +458,7 @@ docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-p
 for an example.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionMysql-maxConnectionLifetime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L308">property <b>maxConnectionLifetime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L308">property <b>maxConnectionLifetime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxConnectionLifetime?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -467,7 +467,7 @@ The maximum number of seconds to keep
 a connection alive for.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionMysql-maxIdleConnections">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L313">property <b>maxIdleConnections</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L313">property <b>maxIdleConnections</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxIdleConnections?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -476,7 +476,7 @@ The maximum number of idle connections to
 maintain.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionMysql-maxOpenConnections">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L318">property <b>maxOpenConnections</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L318">property <b>maxOpenConnections</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxOpenConnections?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -485,14 +485,14 @@ The maximum number of open connections to
 use.
 
 <h3 class="pdoc-module-header" id="SecretBackendConnectionMysqlAurora" data-link-title="SecretBackendConnectionMysqlAurora">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L321">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L321">
         interface <strong>SecretBackendConnectionMysqlAurora</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>SecretBackendConnectionMysqlAurora</span></code></pre>
 <h4 class="pdoc-member-header" id="SecretBackendConnectionMysqlAurora-connectionUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L328">property <b>connectionUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L328">property <b>connectionUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionUrl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -503,7 +503,7 @@ docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-p
 for an example.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionMysqlAurora-maxConnectionLifetime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L333">property <b>maxConnectionLifetime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L333">property <b>maxConnectionLifetime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxConnectionLifetime?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -512,7 +512,7 @@ The maximum number of seconds to keep
 a connection alive for.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionMysqlAurora-maxIdleConnections">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L338">property <b>maxIdleConnections</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L338">property <b>maxIdleConnections</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxIdleConnections?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -521,7 +521,7 @@ The maximum number of idle connections to
 maintain.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionMysqlAurora-maxOpenConnections">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L343">property <b>maxOpenConnections</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L343">property <b>maxOpenConnections</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxOpenConnections?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -530,14 +530,14 @@ The maximum number of open connections to
 use.
 
 <h3 class="pdoc-module-header" id="SecretBackendConnectionMysqlLegacy" data-link-title="SecretBackendConnectionMysqlLegacy">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L346">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L346">
         interface <strong>SecretBackendConnectionMysqlLegacy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>SecretBackendConnectionMysqlLegacy</span></code></pre>
 <h4 class="pdoc-member-header" id="SecretBackendConnectionMysqlLegacy-connectionUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L353">property <b>connectionUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L353">property <b>connectionUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionUrl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -548,7 +548,7 @@ docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-p
 for an example.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionMysqlLegacy-maxConnectionLifetime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L358">property <b>maxConnectionLifetime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L358">property <b>maxConnectionLifetime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxConnectionLifetime?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -557,7 +557,7 @@ The maximum number of seconds to keep
 a connection alive for.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionMysqlLegacy-maxIdleConnections">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L363">property <b>maxIdleConnections</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L363">property <b>maxIdleConnections</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxIdleConnections?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -566,7 +566,7 @@ The maximum number of idle connections to
 maintain.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionMysqlLegacy-maxOpenConnections">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L368">property <b>maxOpenConnections</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L368">property <b>maxOpenConnections</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxOpenConnections?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -575,14 +575,14 @@ The maximum number of open connections to
 use.
 
 <h3 class="pdoc-module-header" id="SecretBackendConnectionMysqlRds" data-link-title="SecretBackendConnectionMysqlRds">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L371">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L371">
         interface <strong>SecretBackendConnectionMysqlRds</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>SecretBackendConnectionMysqlRds</span></code></pre>
 <h4 class="pdoc-member-header" id="SecretBackendConnectionMysqlRds-connectionUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L378">property <b>connectionUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L378">property <b>connectionUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionUrl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -593,7 +593,7 @@ docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-p
 for an example.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionMysqlRds-maxConnectionLifetime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L383">property <b>maxConnectionLifetime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L383">property <b>maxConnectionLifetime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxConnectionLifetime?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -602,7 +602,7 @@ The maximum number of seconds to keep
 a connection alive for.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionMysqlRds-maxIdleConnections">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L388">property <b>maxIdleConnections</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L388">property <b>maxIdleConnections</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxIdleConnections?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -611,7 +611,7 @@ The maximum number of idle connections to
 maintain.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionMysqlRds-maxOpenConnections">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L393">property <b>maxOpenConnections</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L393">property <b>maxOpenConnections</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxOpenConnections?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -620,14 +620,14 @@ The maximum number of open connections to
 use.
 
 <h3 class="pdoc-module-header" id="SecretBackendConnectionOracle" data-link-title="SecretBackendConnectionOracle">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L396">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L396">
         interface <strong>SecretBackendConnectionOracle</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>SecretBackendConnectionOracle</span></code></pre>
 <h4 class="pdoc-member-header" id="SecretBackendConnectionOracle-connectionUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L403">property <b>connectionUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L403">property <b>connectionUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionUrl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -638,7 +638,7 @@ docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-p
 for an example.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionOracle-maxConnectionLifetime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L408">property <b>maxConnectionLifetime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L408">property <b>maxConnectionLifetime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxConnectionLifetime?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -647,7 +647,7 @@ The maximum number of seconds to keep
 a connection alive for.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionOracle-maxIdleConnections">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L413">property <b>maxIdleConnections</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L413">property <b>maxIdleConnections</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxIdleConnections?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -656,7 +656,7 @@ The maximum number of idle connections to
 maintain.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionOracle-maxOpenConnections">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L418">property <b>maxOpenConnections</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L418">property <b>maxOpenConnections</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxOpenConnections?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -665,14 +665,14 @@ The maximum number of open connections to
 use.
 
 <h3 class="pdoc-module-header" id="SecretBackendConnectionPostgresql" data-link-title="SecretBackendConnectionPostgresql">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L421">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L421">
         interface <strong>SecretBackendConnectionPostgresql</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>SecretBackendConnectionPostgresql</span></code></pre>
 <h4 class="pdoc-member-header" id="SecretBackendConnectionPostgresql-connectionUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L428">property <b>connectionUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L428">property <b>connectionUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionUrl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -683,7 +683,7 @@ docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-p
 for an example.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionPostgresql-maxConnectionLifetime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L433">property <b>maxConnectionLifetime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L433">property <b>maxConnectionLifetime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxConnectionLifetime?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -692,7 +692,7 @@ The maximum number of seconds to keep
 a connection alive for.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionPostgresql-maxIdleConnections">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L438">property <b>maxIdleConnections</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L438">property <b>maxIdleConnections</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxIdleConnections?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -701,7 +701,7 @@ The maximum number of idle connections to
 maintain.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionPostgresql-maxOpenConnections">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L443">property <b>maxOpenConnections</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L443">property <b>maxOpenConnections</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxOpenConnections?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -711,14 +711,14 @@ use.
 
 <h2 id="gcp" data-link-title="gcp">namespace <strong>gcp</strong></h2>
 <h3 class="pdoc-module-header" id="SecretRolesetBinding" data-link-title="SecretRolesetBinding">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L448">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L448">
         interface <strong>SecretRolesetBinding</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>SecretRolesetBinding</span></code></pre>
 <h4 class="pdoc-member-header" id="SecretRolesetBinding-resource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L452">property <b>resource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L452">property <b>resource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resource: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -726,7 +726,7 @@ use.
 Resource or resource path for which IAM policy information will be bound. The resource path may be specified in a few different [formats](https://www.vaultproject.io/docs/secrets/gcp/index.html#roleset-bindings).
 
 <h4 class="pdoc-member-header" id="SecretRolesetBinding-roles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L456">property <b>roles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L456">property <b>roles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roles: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -735,14 +735,14 @@ List of [GCP IAM roles](https://cloud.google.com/iam/docs/understanding-roles) f
 
 <h2 id="github" data-link-title="github">namespace <strong>github</strong></h2>
 <h3 class="pdoc-module-header" id="AuthBackendTune" data-link-title="AuthBackendTune">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L461">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L461">
         interface <strong>AuthBackendTune</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>AuthBackendTune</span></code></pre>
 <h4 class="pdoc-member-header" id="AuthBackendTune-allowedResponseHeaders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L466">property <b>allowedResponseHeaders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L466">property <b>allowedResponseHeaders</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedResponseHeaders?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -751,7 +751,7 @@ List of headers to whitelist and allowing
 a plugin to include them in the response.
 
 <h4 class="pdoc-member-header" id="AuthBackendTune-auditNonHmacRequestKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L471">property <b>auditNonHmacRequestKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L471">property <b>auditNonHmacRequestKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>auditNonHmacRequestKeys?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -760,7 +760,7 @@ Specifies the list of keys that will
 not be HMAC'd by audit devices in the request data object.
 
 <h4 class="pdoc-member-header" id="AuthBackendTune-auditNonHmacResponseKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L476">property <b>auditNonHmacResponseKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L476">property <b>auditNonHmacResponseKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>auditNonHmacResponseKeys?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -769,7 +769,7 @@ Specifies the list of keys that will
 not be HMAC'd by audit devices in the response data object.
 
 <h4 class="pdoc-member-header" id="AuthBackendTune-defaultLeaseTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L482">property <b>defaultLeaseTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L482">property <b>defaultLeaseTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultLeaseTtl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -779,7 +779,7 @@ If set, this overrides the global default.
 Must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration)
 
 <h4 class="pdoc-member-header" id="AuthBackendTune-listingVisibility">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L487">property <b>listingVisibility</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L487">property <b>listingVisibility</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>listingVisibility?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -788,7 +788,7 @@ Specifies whether to show this mount in
 the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 
 <h4 class="pdoc-member-header" id="AuthBackendTune-maxLeaseTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L493">property <b>maxLeaseTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L493">property <b>maxLeaseTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxLeaseTtl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -798,7 +798,7 @@ If set, this overrides the global default.
 Must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration)
 
 <h4 class="pdoc-member-header" id="AuthBackendTune-passthroughRequestHeaders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L498">property <b>passthroughRequestHeaders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L498">property <b>passthroughRequestHeaders</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passthroughRequestHeaders?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -807,7 +807,7 @@ List of headers to whitelist and
 pass from the request to the backend.
 
 <h4 class="pdoc-member-header" id="AuthBackendTune-tokenType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L503">property <b>tokenType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L503">property <b>tokenType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -817,14 +817,14 @@ the mount. Valid values are "default-service", "default-batch", "service", "batc
 
 <h2 id="identity" data-link-title="identity">namespace <strong>identity</strong></h2>
 <h3 class="pdoc-module-header" id="GetEntityAlias" data-link-title="GetEntityAlias">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L508">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L508">
         interface <strong>GetEntityAlias</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetEntityAlias</span></code></pre>
 <h4 class="pdoc-member-header" id="GetEntityAlias-canonicalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L512">property <b>canonicalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L512">property <b>canonicalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>canonicalId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -832,7 +832,7 @@ the mount. Valid values are "default-service", "default-batch", "service", "batc
 Canonical ID of the Alias
 
 <h4 class="pdoc-member-header" id="GetEntityAlias-creationTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L516">property <b>creationTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L516">property <b>creationTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>creationTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -840,7 +840,7 @@ Canonical ID of the Alias
 Creation time of the Alias
 
 <h4 class="pdoc-member-header" id="GetEntityAlias-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L520">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L520">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -848,7 +848,7 @@ Creation time of the Alias
 ID of the alias
 
 <h4 class="pdoc-member-header" id="GetEntityAlias-lastUpdateTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L524">property <b>lastUpdateTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L524">property <b>lastUpdateTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastUpdateTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -856,7 +856,7 @@ ID of the alias
 Last update time of the alias
 
 <h4 class="pdoc-member-header" id="GetEntityAlias-mergedFromCanonicalIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L528">property <b>mergedFromCanonicalIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L528">property <b>mergedFromCanonicalIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mergedFromCanonicalIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -864,7 +864,7 @@ Last update time of the alias
 List of canonical IDs merged with this alias
 
 <h4 class="pdoc-member-header" id="GetEntityAlias-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L532">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L532">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -872,7 +872,7 @@ List of canonical IDs merged with this alias
 Arbitrary metadata
 
 <h4 class="pdoc-member-header" id="GetEntityAlias-mountAccessor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L536">property <b>mountAccessor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L536">property <b>mountAccessor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mountAccessor: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -880,7 +880,7 @@ Arbitrary metadata
 Authentication mount acccessor which this alias belongs to
 
 <h4 class="pdoc-member-header" id="GetEntityAlias-mountPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L540">property <b>mountPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L540">property <b>mountPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mountPath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -888,7 +888,7 @@ Authentication mount acccessor which this alias belongs to
 Authentication mount path which this alias belongs to
 
 <h4 class="pdoc-member-header" id="GetEntityAlias-mountType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L544">property <b>mountType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L544">property <b>mountType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mountType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -896,7 +896,7 @@ Authentication mount path which this alias belongs to
 Authentication mount type which this alias belongs to
 
 <h4 class="pdoc-member-header" id="GetEntityAlias-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L548">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L548">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -905,14 +905,14 @@ Name of the alias
 
 <h2 id="jwt" data-link-title="jwt">namespace <strong>jwt</strong></h2>
 <h3 class="pdoc-module-header" id="AuthBackendTune" data-link-title="AuthBackendTune">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L553">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L553">
         interface <strong>AuthBackendTune</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>AuthBackendTune</span></code></pre>
 <h4 class="pdoc-member-header" id="AuthBackendTune-allowedResponseHeaders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L558">property <b>allowedResponseHeaders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L558">property <b>allowedResponseHeaders</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedResponseHeaders?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -921,7 +921,7 @@ List of headers to whitelist and allowing
 a plugin to include them in the response.
 
 <h4 class="pdoc-member-header" id="AuthBackendTune-auditNonHmacRequestKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L563">property <b>auditNonHmacRequestKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L563">property <b>auditNonHmacRequestKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>auditNonHmacRequestKeys?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -930,7 +930,7 @@ Specifies the list of keys that will
 not be HMAC'd by audit devices in the request data object.
 
 <h4 class="pdoc-member-header" id="AuthBackendTune-auditNonHmacResponseKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L568">property <b>auditNonHmacResponseKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L568">property <b>auditNonHmacResponseKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>auditNonHmacResponseKeys?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -939,7 +939,7 @@ Specifies the list of keys that will
 not be HMAC'd by audit devices in the response data object.
 
 <h4 class="pdoc-member-header" id="AuthBackendTune-defaultLeaseTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L574">property <b>defaultLeaseTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L574">property <b>defaultLeaseTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultLeaseTtl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -949,7 +949,7 @@ If set, this overrides the global default.
 Must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration)
 
 <h4 class="pdoc-member-header" id="AuthBackendTune-listingVisibility">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L579">property <b>listingVisibility</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L579">property <b>listingVisibility</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>listingVisibility?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -958,7 +958,7 @@ Specifies whether to show this mount in
 the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 
 <h4 class="pdoc-member-header" id="AuthBackendTune-maxLeaseTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L585">property <b>maxLeaseTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L585">property <b>maxLeaseTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxLeaseTtl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -968,7 +968,7 @@ If set, this overrides the global default.
 Must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration)
 
 <h4 class="pdoc-member-header" id="AuthBackendTune-passthroughRequestHeaders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L590">property <b>passthroughRequestHeaders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L590">property <b>passthroughRequestHeaders</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passthroughRequestHeaders?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -977,7 +977,7 @@ List of headers to whitelist and
 pass from the request to the backend.
 
 <h4 class="pdoc-member-header" id="AuthBackendTune-tokenType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L595">property <b>tokenType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L595">property <b>tokenType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -987,14 +987,14 @@ the mount. Valid values are "default-service", "default-batch", "service", "batc
 
 <h2 id="okta" data-link-title="okta">namespace <strong>okta</strong></h2>
 <h3 class="pdoc-module-header" id="AuthBackendGroup" data-link-title="AuthBackendGroup">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L600">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L600">
         interface <strong>AuthBackendGroup</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>AuthBackendGroup</span></code></pre>
 <h4 class="pdoc-member-header" id="AuthBackendGroup-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L604">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L604">property <b>groupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1002,7 +1002,7 @@ the mount. Valid values are "default-service", "default-batch", "service", "batc
 Name of the group within the Okta
 
 <h4 class="pdoc-member-header" id="AuthBackendGroup-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L608">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L608">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policies: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1010,14 +1010,14 @@ Name of the group within the Okta
 List of Vault policies to associate with this user
 
 <h3 class="pdoc-module-header" id="AuthBackendUser" data-link-title="AuthBackendUser">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L611">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L611">
         interface <strong>AuthBackendUser</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>AuthBackendUser</span></code></pre>
 <h4 class="pdoc-member-header" id="AuthBackendUser-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L615">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L615">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groups: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1025,7 +1025,7 @@ List of Vault policies to associate with this user
 List of Okta groups to associate with this user
 
 <h4 class="pdoc-member-header" id="AuthBackendUser-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L619">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L619">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policies?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1033,7 +1033,7 @@ List of Okta groups to associate with this user
 List of Vault policies to associate with this user
 
 <h4 class="pdoc-member-header" id="AuthBackendUser-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L623">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L623">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1042,29 +1042,29 @@ Name of the user within Okta
 
 <h2 id="rabbitMq" data-link-title="rabbitMq">namespace <strong>rabbitMq</strong></h2>
 <h3 class="pdoc-module-header" id="SecretBackendRoleVhost" data-link-title="SecretBackendRoleVhost">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L628">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L628">
         interface <strong>SecretBackendRoleVhost</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>SecretBackendRoleVhost</span></code></pre>
 <h4 class="pdoc-member-header" id="SecretBackendRoleVhost-configure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L629">property <b>configure</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L629">property <b>configure</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>configure: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="SecretBackendRoleVhost-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L630">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L630">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>host: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="SecretBackendRoleVhost-read">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L631">property <b>read</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L631">property <b>read</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>read: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="SecretBackendRoleVhost-write">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L632">property <b>write</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L632">property <b>write</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>write: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1073,14 +1073,14 @@ Name of the user within Okta
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="AuthBackendTune" data-link-title="AuthBackendTune">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L8">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L8">
         interface <strong>AuthBackendTune</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>AuthBackendTune</span></code></pre>
 <h4 class="pdoc-member-header" id="AuthBackendTune-allowedResponseHeaders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L13">property <b>allowedResponseHeaders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L13">property <b>allowedResponseHeaders</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedResponseHeaders?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1089,7 +1089,7 @@ List of headers to whitelist and allowing
 a plugin to include them in the response.
 
 <h4 class="pdoc-member-header" id="AuthBackendTune-auditNonHmacRequestKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L18">property <b>auditNonHmacRequestKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L18">property <b>auditNonHmacRequestKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>auditNonHmacRequestKeys?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1098,7 +1098,7 @@ Specifies the list of keys that will
 not be HMAC'd by audit devices in the request data object.
 
 <h4 class="pdoc-member-header" id="AuthBackendTune-auditNonHmacResponseKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L23">property <b>auditNonHmacResponseKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L23">property <b>auditNonHmacResponseKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>auditNonHmacResponseKeys?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1107,7 +1107,7 @@ Specifies the list of keys that will
 not be HMAC'd by audit devices in the response data object.
 
 <h4 class="pdoc-member-header" id="AuthBackendTune-defaultLeaseTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L29">property <b>defaultLeaseTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L29">property <b>defaultLeaseTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultLeaseTtl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1117,7 +1117,7 @@ If set, this overrides the global default.
 Must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration)
 
 <h4 class="pdoc-member-header" id="AuthBackendTune-listingVisibility">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L34">property <b>listingVisibility</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L34">property <b>listingVisibility</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>listingVisibility?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1126,7 +1126,7 @@ Specifies whether to show this mount in
 the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 
 <h4 class="pdoc-member-header" id="AuthBackendTune-maxLeaseTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L40">property <b>maxLeaseTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L40">property <b>maxLeaseTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxLeaseTtl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1136,7 +1136,7 @@ If set, this overrides the global default.
 Must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration)
 
 <h4 class="pdoc-member-header" id="AuthBackendTune-passthroughRequestHeaders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L45">property <b>passthroughRequestHeaders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L45">property <b>passthroughRequestHeaders</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passthroughRequestHeaders?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1145,7 +1145,7 @@ List of headers to whitelist and
 pass from the request to the backend.
 
 <h4 class="pdoc-member-header" id="AuthBackendTune-tokenType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L50">property <b>tokenType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L50">property <b>tokenType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1154,14 +1154,14 @@ Specifies the type of tokens that should be returned by
 the mount. Valid values are "default-service", "default-batch", "service", "batch".
 
 <h3 class="pdoc-module-header" id="GetPolicyDocumentRule" data-link-title="GetPolicyDocumentRule">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L53">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L53">
         interface <strong>GetPolicyDocumentRule</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetPolicyDocumentRule</span></code></pre>
 <h4 class="pdoc-member-header" id="GetPolicyDocumentRule-allowedParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L57">property <b>allowedParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L57">property <b>allowedParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedParameters?: <a href='#GetPolicyDocumentRuleAllowedParameter'>GetPolicyDocumentRuleAllowedParameter</a>[];</code></pre>
@@ -1169,7 +1169,7 @@ the mount. Valid values are "default-service", "default-batch", "service", "batc
 Whitelists a list of keys and values that are permitted on the given path. See Parameters below.
 
 <h4 class="pdoc-member-header" id="GetPolicyDocumentRule-capabilities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L61">property <b>capabilities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L61">property <b>capabilities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>capabilities: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1177,7 +1177,7 @@ Whitelists a list of keys and values that are permitted on the given path. See P
 A list of capabilities that this rule apply to `path`. For example, ["read", "write"].
 
 <h4 class="pdoc-member-header" id="GetPolicyDocumentRule-deniedParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L65">property <b>deniedParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L65">property <b>deniedParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deniedParameters?: <a href='#GetPolicyDocumentRuleDeniedParameter'>GetPolicyDocumentRuleDeniedParameter</a>[];</code></pre>
@@ -1185,7 +1185,7 @@ A list of capabilities that this rule apply to `path`. For example, ["read", "wr
 Blacklists a list of parameter and values. Any values specified here take precedence over `allowedParameter`. See Parameters below.
 
 <h4 class="pdoc-member-header" id="GetPolicyDocumentRule-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L69">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L69">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1193,7 +1193,7 @@ Blacklists a list of parameter and values. Any values specified here take preced
 Description of the rule. Will be added as a commend to rendered rule.
 
 <h4 class="pdoc-member-header" id="GetPolicyDocumentRule-maxWrappingTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L73">property <b>maxWrappingTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L73">property <b>maxWrappingTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxWrappingTtl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1201,7 +1201,7 @@ Description of the rule. Will be added as a commend to rendered rule.
 The maximum allowed TTL that clients can specify for a wrapped response.
 
 <h4 class="pdoc-member-header" id="GetPolicyDocumentRule-minWrappingTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L77">property <b>minWrappingTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L77">property <b>minWrappingTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minWrappingTtl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1209,7 +1209,7 @@ The maximum allowed TTL that clients can specify for a wrapped response.
 The minimum allowed TTL that clients can specify for a wrapped response.
 
 <h4 class="pdoc-member-header" id="GetPolicyDocumentRule-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L81">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L81">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1217,7 +1217,7 @@ The minimum allowed TTL that clients can specify for a wrapped response.
 A path in Vault that this rule applies to.
 
 <h4 class="pdoc-member-header" id="GetPolicyDocumentRule-requiredParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L85">property <b>requiredParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L85">property <b>requiredParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requiredParameters?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1225,14 +1225,14 @@ A path in Vault that this rule applies to.
 A list of parameters that must be specified.
 
 <h3 class="pdoc-module-header" id="GetPolicyDocumentRuleAllowedParameter" data-link-title="GetPolicyDocumentRuleAllowedParameter">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L88">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L88">
         interface <strong>GetPolicyDocumentRuleAllowedParameter</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetPolicyDocumentRuleAllowedParameter</span></code></pre>
 <h4 class="pdoc-member-header" id="GetPolicyDocumentRuleAllowedParameter-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L92">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L92">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1240,7 +1240,7 @@ A list of parameters that must be specified.
 name of permitted or denied parameter.
 
 <h4 class="pdoc-member-header" id="GetPolicyDocumentRuleAllowedParameter-values">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L96">property <b>values</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L96">property <b>values</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>values: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1248,14 +1248,14 @@ name of permitted or denied parameter.
 list of values what are permitted or denied by policy rule.
 
 <h3 class="pdoc-module-header" id="GetPolicyDocumentRuleDeniedParameter" data-link-title="GetPolicyDocumentRuleDeniedParameter">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L99">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L99">
         interface <strong>GetPolicyDocumentRuleDeniedParameter</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetPolicyDocumentRuleDeniedParameter</span></code></pre>
 <h4 class="pdoc-member-header" id="GetPolicyDocumentRuleDeniedParameter-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L103">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L103">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1263,7 +1263,7 @@ list of values what are permitted or denied by policy rule.
 name of permitted or denied parameter.
 
 <h4 class="pdoc-member-header" id="GetPolicyDocumentRuleDeniedParameter-values">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L107">property <b>values</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L107">property <b>values</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>values: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1271,58 +1271,58 @@ name of permitted or denied parameter.
 list of values what are permitted or denied by policy rule.
 
 <h3 class="pdoc-module-header" id="ProviderAuthLogin" data-link-title="ProviderAuthLogin">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L110">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L110">
         interface <strong>ProviderAuthLogin</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ProviderAuthLogin</span></code></pre>
 <h4 class="pdoc-member-header" id="ProviderAuthLogin-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L111">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L111">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespace?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderAuthLogin-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L112">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L112">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="ProviderAuthLogin-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L113">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L113">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ProviderClientAuth" data-link-title="ProviderClientAuth">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L116">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L116">
         interface <strong>ProviderClientAuth</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ProviderClientAuth</span></code></pre>
 <h4 class="pdoc-member-header" id="ProviderClientAuth-certFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L117">property <b>certFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L117">property <b>certFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderClientAuth-keyFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L118">property <b>keyFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L118">property <b>keyFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ProviderHeader" data-link-title="ProviderHeader">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L121">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L121">
         interface <strong>ProviderHeader</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ProviderHeader</span></code></pre>
 <h4 class="pdoc-member-header" id="ProviderHeader-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L122">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L122">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderHeader-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/types/output.ts#L123">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/types/output.ts#L123">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>

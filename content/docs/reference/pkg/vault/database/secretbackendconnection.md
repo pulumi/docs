@@ -22,11 +22,11 @@ meta_desc: "Explore the SecretBackendConnection resource of the database module,
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_vault/database/#pulumi_vault.database.SecretBackendConnection">SecretBackendConnection</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allowed_roles</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cassandra</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionCassandra]]</span> = None<span class="p">, </span><span class="nx">data</span><span class="p">:</span> <span class="nx">Optional[Dict[str, Any]]</span> = None<span class="p">, </span><span class="nx">elasticsearch</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionElasticsearch]]</span> = None<span class="p">, </span><span class="nx">hana</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionHana]]</span> = None<span class="p">, </span><span class="nx">mongodb</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionMongodb]]</span> = None<span class="p">, </span><span class="nx">mongodbatlas</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionMongodbatlas]]</span> = None<span class="p">, </span><span class="nx">mssql</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionMssql]]</span> = None<span class="p">, </span><span class="nx">mysql</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionMysql]]</span> = None<span class="p">, </span><span class="nx">mysql_aurora</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionMysqlAurora]]</span> = None<span class="p">, </span><span class="nx">mysql_legacy</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionMysqlLegacy]]</span> = None<span class="p">, </span><span class="nx">mysql_rds</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionMysqlRds]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oracle</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionOracle]]</span> = None<span class="p">, </span><span class="nx">postgresql</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionPostgresql]]</span> = None<span class="p">, </span><span class="nx">root_rotation_statements</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">verify_connection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_vault/database/#pulumi_vault.database.SecretBackendConnection">SecretBackendConnection</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allowed_roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cassandra</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionCassandraArgs]</span> = None<span class="p">, </span><span class="nx">data</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">elasticsearch</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionElasticsearchArgs]</span> = None<span class="p">, </span><span class="nx">hana</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionHanaArgs]</span> = None<span class="p">, </span><span class="nx">mongodb</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMongodbArgs]</span> = None<span class="p">, </span><span class="nx">mongodbatlas</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMongodbatlasArgs]</span> = None<span class="p">, </span><span class="nx">mssql</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMssqlArgs]</span> = None<span class="p">, </span><span class="nx">mysql</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMysqlArgs]</span> = None<span class="p">, </span><span class="nx">mysql_aurora</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMysqlAuroraArgs]</span> = None<span class="p">, </span><span class="nx">mysql_legacy</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMysqlLegacyArgs]</span> = None<span class="p">, </span><span class="nx">mysql_rds</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMysqlRdsArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oracle</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionOracleArgs]</span> = None<span class="p">, </span><span class="nx">postgresql</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionPostgresqlArgs]</span> = None<span class="p">, </span><span class="nx">root_rotation_statements</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">verify_connection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/database?tab=doc#SecretBackendConnection">NewSecretBackendConnection</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/database?tab=doc#SecretBackendConnectionArgs">SecretBackendConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/database?tab=doc#SecretBackendConnection">SecretBackendConnection</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnection">NewSecretBackendConnection</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionArgs">SecretBackendConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnection">SecretBackendConnection</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -100,7 +100,7 @@ meta_desc: "Explore the SecretBackendConnection resource of the database module,
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -120,7 +120,7 @@ meta_desc: "Explore the SecretBackendConnection resource of the database module,
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/database?tab=doc#SecretBackendConnectionArgs">SecretBackendConnectionArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionArgs">SecretBackendConnectionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -130,7 +130,7 @@ meta_desc: "Explore the SecretBackendConnection resource of the database module,
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -832,7 +832,7 @@ initial configuration or not.
 <a href="#allowed_roles_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of roles that are allowed to use this
 connection.
@@ -844,7 +844,7 @@ connection.
 <a href="#cassandra_python" style="color: inherit; text-decoration: inherit;">cassandra</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectioncassandra">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Cassandra]</a></span>
+        <span class="property-type"><a href="#secretbackendconnectioncassandra">Secret<wbr>Backend<wbr>Connection<wbr>Cassandra<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Cassandra connections.
 {{% /md %}}</dd>
@@ -855,7 +855,7 @@ connection.
 <a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of sensitive data to pass to the endpoint. Useful for templated connection strings.
 {{% /md %}}</dd>
@@ -866,7 +866,7 @@ connection.
 <a href="#elasticsearch_python" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionelasticsearch">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Elasticsearch]</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionelasticsearch">Secret<wbr>Backend<wbr>Connection<wbr>Elasticsearch<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Elasticsearch connections.
 {{% /md %}}</dd>
@@ -877,7 +877,7 @@ connection.
 <a href="#hana_python" style="color: inherit; text-decoration: inherit;">hana</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionhana">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Hana]</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionhana">Secret<wbr>Backend<wbr>Connection<wbr>Hana<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for SAP HanaDB connections.
 {{% /md %}}</dd>
@@ -888,7 +888,7 @@ connection.
 <a href="#mongodb_python" style="color: inherit; text-decoration: inherit;">mongodb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmongodb">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Mongodb]</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmongodb">Secret<wbr>Backend<wbr>Connection<wbr>Mongodb<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MongoDB connections.
 {{% /md %}}</dd>
@@ -899,7 +899,7 @@ connection.
 <a href="#mongodbatlas_python" style="color: inherit; text-decoration: inherit;">mongodbatlas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmongodbatlas">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Mongodbatlas]</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmongodbatlas">Secret<wbr>Backend<wbr>Connection<wbr>Mongodbatlas<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection parameters for the mongodbatlas-database-plugin plugin.
 {{% /md %}}</dd>
@@ -910,7 +910,7 @@ connection.
 <a href="#mssql_python" style="color: inherit; text-decoration: inherit;">mssql</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmssql">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Mssql]</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmssql">Secret<wbr>Backend<wbr>Connection<wbr>Mssql<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MSSQL connections.
 {{% /md %}}</dd>
@@ -921,7 +921,7 @@ connection.
 <a href="#mysql_python" style="color: inherit; text-decoration: inherit;">mysql</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmysql">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Mysql]</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmysql">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MySQL connections.
 {{% /md %}}</dd>
@@ -932,7 +932,7 @@ connection.
 <a href="#mysql_aurora_python" style="color: inherit; text-decoration: inherit;">mysql_<wbr>aurora</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmysqlaurora">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Aurora]</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmysqlaurora">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Aurora<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Aurora MySQL connections.
 {{% /md %}}</dd>
@@ -943,7 +943,7 @@ connection.
 <a href="#mysql_legacy_python" style="color: inherit; text-decoration: inherit;">mysql_<wbr>legacy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmysqllegacy">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Legacy]</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmysqllegacy">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Legacy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for legacy MySQL connections.
 {{% /md %}}</dd>
@@ -954,7 +954,7 @@ connection.
 <a href="#mysql_rds_python" style="color: inherit; text-decoration: inherit;">mysql_<wbr>rds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmysqlrds">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Rds]</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmysqlrds">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Rds<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for RDS MySQL connections.
 {{% /md %}}</dd>
@@ -976,7 +976,7 @@ connection.
 <a href="#oracle_python" style="color: inherit; text-decoration: inherit;">oracle</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionoracle">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Oracle]</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionoracle">Secret<wbr>Backend<wbr>Connection<wbr>Oracle<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Oracle connections.
 {{% /md %}}</dd>
@@ -987,7 +987,7 @@ connection.
 <a href="#postgresql_python" style="color: inherit; text-decoration: inherit;">postgresql</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionpostgresql">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Postgresql]</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionpostgresql">Secret<wbr>Backend<wbr>Connection<wbr>Postgresql<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for PostgreSQL connections.
 {{% /md %}}</dd>
@@ -998,7 +998,7 @@ connection.
 <a href="#root_rotation_statements_python" style="color: inherit; text-decoration: inherit;">root_<wbr>rotation_<wbr>statements</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of database statements to be executed to rotate the root user's credentials.
 {{% /md %}}</dd>
@@ -1114,11 +1114,11 @@ Get an existing SecretBackendConnection resource's state with the given name, ID
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allowed_roles</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cassandra</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionCassandra]]</span> = None<span class="p">, </span><span class="nx">data</span><span class="p">:</span> <span class="nx">Optional[Dict[str, Any]]</span> = None<span class="p">, </span><span class="nx">elasticsearch</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionElasticsearch]]</span> = None<span class="p">, </span><span class="nx">hana</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionHana]]</span> = None<span class="p">, </span><span class="nx">mongodb</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionMongodb]]</span> = None<span class="p">, </span><span class="nx">mongodbatlas</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionMongodbatlas]]</span> = None<span class="p">, </span><span class="nx">mssql</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionMssql]]</span> = None<span class="p">, </span><span class="nx">mysql</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionMysql]]</span> = None<span class="p">, </span><span class="nx">mysql_aurora</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionMysqlAurora]]</span> = None<span class="p">, </span><span class="nx">mysql_legacy</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionMysqlLegacy]]</span> = None<span class="p">, </span><span class="nx">mysql_rds</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionMysqlRds]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oracle</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionOracle]]</span> = None<span class="p">, </span><span class="nx">postgresql</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionPostgresql]]</span> = None<span class="p">, </span><span class="nx">root_rotation_statements</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">verify_connection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> SecretBackendConnection</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allowed_roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cassandra</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionCassandraArgs]</span> = None<span class="p">, </span><span class="nx">data</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">elasticsearch</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionElasticsearchArgs]</span> = None<span class="p">, </span><span class="nx">hana</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionHanaArgs]</span> = None<span class="p">, </span><span class="nx">mongodb</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMongodbArgs]</span> = None<span class="p">, </span><span class="nx">mongodbatlas</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMongodbatlasArgs]</span> = None<span class="p">, </span><span class="nx">mssql</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMssqlArgs]</span> = None<span class="p">, </span><span class="nx">mysql</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMysqlArgs]</span> = None<span class="p">, </span><span class="nx">mysql_aurora</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMysqlAuroraArgs]</span> = None<span class="p">, </span><span class="nx">mysql_legacy</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMysqlLegacyArgs]</span> = None<span class="p">, </span><span class="nx">mysql_rds</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMysqlRdsArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oracle</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionOracleArgs]</span> = None<span class="p">, </span><span class="nx">postgresql</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionPostgresqlArgs]</span> = None<span class="p">, </span><span class="nx">root_rotation_statements</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">verify_connection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> SecretBackendConnection</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecretBackendConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/database?tab=doc#SecretBackendConnectionState">SecretBackendConnectionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/database?tab=doc#SecretBackendConnection">SecretBackendConnection</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecretBackendConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionState">SecretBackendConnectionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnection">SecretBackendConnection</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1855,7 +1855,7 @@ initial configuration or not.
 <a href="#state_allowed_roles_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of roles that are allowed to use this
 connection.
@@ -1878,7 +1878,7 @@ connection.
 <a href="#state_cassandra_python" style="color: inherit; text-decoration: inherit;">cassandra</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectioncassandra">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Cassandra]</a></span>
+        <span class="property-type"><a href="#secretbackendconnectioncassandra">Secret<wbr>Backend<wbr>Connection<wbr>Cassandra<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Cassandra connections.
 {{% /md %}}</dd>
@@ -1889,7 +1889,7 @@ connection.
 <a href="#state_data_python" style="color: inherit; text-decoration: inherit;">data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of sensitive data to pass to the endpoint. Useful for templated connection strings.
 {{% /md %}}</dd>
@@ -1900,7 +1900,7 @@ connection.
 <a href="#state_elasticsearch_python" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionelasticsearch">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Elasticsearch]</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionelasticsearch">Secret<wbr>Backend<wbr>Connection<wbr>Elasticsearch<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Elasticsearch connections.
 {{% /md %}}</dd>
@@ -1911,7 +1911,7 @@ connection.
 <a href="#state_hana_python" style="color: inherit; text-decoration: inherit;">hana</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionhana">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Hana]</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionhana">Secret<wbr>Backend<wbr>Connection<wbr>Hana<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for SAP HanaDB connections.
 {{% /md %}}</dd>
@@ -1922,7 +1922,7 @@ connection.
 <a href="#state_mongodb_python" style="color: inherit; text-decoration: inherit;">mongodb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmongodb">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Mongodb]</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmongodb">Secret<wbr>Backend<wbr>Connection<wbr>Mongodb<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MongoDB connections.
 {{% /md %}}</dd>
@@ -1933,7 +1933,7 @@ connection.
 <a href="#state_mongodbatlas_python" style="color: inherit; text-decoration: inherit;">mongodbatlas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmongodbatlas">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Mongodbatlas]</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmongodbatlas">Secret<wbr>Backend<wbr>Connection<wbr>Mongodbatlas<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection parameters for the mongodbatlas-database-plugin plugin.
 {{% /md %}}</dd>
@@ -1944,7 +1944,7 @@ connection.
 <a href="#state_mssql_python" style="color: inherit; text-decoration: inherit;">mssql</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmssql">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Mssql]</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmssql">Secret<wbr>Backend<wbr>Connection<wbr>Mssql<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MSSQL connections.
 {{% /md %}}</dd>
@@ -1955,7 +1955,7 @@ connection.
 <a href="#state_mysql_python" style="color: inherit; text-decoration: inherit;">mysql</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmysql">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Mysql]</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmysql">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MySQL connections.
 {{% /md %}}</dd>
@@ -1966,7 +1966,7 @@ connection.
 <a href="#state_mysql_aurora_python" style="color: inherit; text-decoration: inherit;">mysql_<wbr>aurora</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmysqlaurora">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Aurora]</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmysqlaurora">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Aurora<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Aurora MySQL connections.
 {{% /md %}}</dd>
@@ -1977,7 +1977,7 @@ connection.
 <a href="#state_mysql_legacy_python" style="color: inherit; text-decoration: inherit;">mysql_<wbr>legacy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmysqllegacy">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Legacy]</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmysqllegacy">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Legacy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for legacy MySQL connections.
 {{% /md %}}</dd>
@@ -1988,7 +1988,7 @@ connection.
 <a href="#state_mysql_rds_python" style="color: inherit; text-decoration: inherit;">mysql_<wbr>rds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmysqlrds">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Rds]</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmysqlrds">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Rds<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for RDS MySQL connections.
 {{% /md %}}</dd>
@@ -2010,7 +2010,7 @@ connection.
 <a href="#state_oracle_python" style="color: inherit; text-decoration: inherit;">oracle</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionoracle">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Oracle]</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionoracle">Secret<wbr>Backend<wbr>Connection<wbr>Oracle<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Oracle connections.
 {{% /md %}}</dd>
@@ -2021,7 +2021,7 @@ connection.
 <a href="#state_postgresql_python" style="color: inherit; text-decoration: inherit;">postgresql</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionpostgresql">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Postgresql]</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionpostgresql">Secret<wbr>Backend<wbr>Connection<wbr>Postgresql<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for PostgreSQL connections.
 {{% /md %}}</dd>
@@ -2032,7 +2032,7 @@ connection.
 <a href="#state_root_rotation_statements_python" style="color: inherit; text-decoration: inherit;">root_<wbr>rotation_<wbr>statements</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of database statements to be executed to rotate the root user's credentials.
 {{% /md %}}</dd>
@@ -2070,7 +2070,7 @@ initial configuration or not.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/database?tab=doc#SecretBackendConnectionCassandraArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/database?tab=doc#SecretBackendConnectionCassandraOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionCassandraArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionCassandraOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Inputs.SecretBackendConnectionCassandraArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Outputs.SecretBackendConnectionCassandra.html">output</a> API doc for this type.
@@ -2447,8 +2447,8 @@ part of the host.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connecttimeout_python">
-<a href="#connecttimeout_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Timeout</a>
+        <span id="connect_timeout_python">
+<a href="#connect_timeout_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2463,7 +2463,7 @@ timeout.
 <a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The hosts to connect to.
 {{% /md %}}</dd>
@@ -2493,17 +2493,6 @@ certificate when using TLS.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pemjson_python">
-<a href="#pemjson_python" style="color: inherit; text-decoration: inherit;">pem<wbr>Json</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}A JSON structure configuring the certificate chain.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="pem_bundle_python">
 <a href="#pem_bundle_python" style="color: inherit; text-decoration: inherit;">pem_<wbr>bundle</a>
 </span> 
@@ -2512,6 +2501,17 @@ certificate when using TLS.
     </dt>
     <dd>{{% md %}}Concatenated PEM blocks configuring the certificate
 chain.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pem_json_python">
+<a href="#pem_json_python" style="color: inherit; text-decoration: inherit;">pem_<wbr>json</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A JSON structure configuring the certificate chain.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2528,8 +2528,8 @@ part of the host.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="protocolversion_python">
-<a href="#protocolversion_python" style="color: inherit; text-decoration: inherit;">protocol<wbr>Version</a>
+        <span id="protocol_version_python">
+<a href="#protocol_version_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2572,7 +2572,7 @@ part of the host.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/database?tab=doc#SecretBackendConnectionElasticsearchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/database?tab=doc#SecretBackendConnectionElasticsearchOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionElasticsearchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionElasticsearchOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Inputs.SecretBackendConnectionElasticsearchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Outputs.SecretBackendConnectionElasticsearch.html">output</a> API doc for this type.
@@ -2754,7 +2754,7 @@ by trusted CA if used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/database?tab=doc#SecretBackendConnectionHanaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/database?tab=doc#SecretBackendConnectionHanaOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionHanaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionHanaOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Inputs.SecretBackendConnectionHanaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Outputs.SecretBackendConnectionHana.html">output</a> API doc for this type.
@@ -2939,8 +2939,8 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectionurl_python">
-<a href="#connectionurl_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
+        <span id="connection_url_python">
+<a href="#connection_url_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2953,8 +2953,8 @@ for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxconnectionlifetime_python">
-<a href="#maxconnectionlifetime_python" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
+        <span id="max_connection_lifetime_python">
+<a href="#max_connection_lifetime_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connection_<wbr>lifetime</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2965,8 +2965,8 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxidleconnections_python">
-<a href="#maxidleconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
+        <span id="max_idle_connections_python">
+<a href="#max_idle_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>idle_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2977,8 +2977,8 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxopenconnections_python">
-<a href="#maxopenconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
+        <span id="max_open_connections_python">
+<a href="#max_open_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>open_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3000,7 +3000,7 @@ use.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/database?tab=doc#SecretBackendConnectionMongodbArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/database?tab=doc#SecretBackendConnectionMongodbOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionMongodbArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionMongodbOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Inputs.SecretBackendConnectionMongodbArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Outputs.SecretBackendConnectionMongodb.html">output</a> API doc for this type.
@@ -3185,8 +3185,8 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectionurl_python">
-<a href="#connectionurl_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
+        <span id="connection_url_python">
+<a href="#connection_url_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3199,8 +3199,8 @@ for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxconnectionlifetime_python">
-<a href="#maxconnectionlifetime_python" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
+        <span id="max_connection_lifetime_python">
+<a href="#max_connection_lifetime_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connection_<wbr>lifetime</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3211,8 +3211,8 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxidleconnections_python">
-<a href="#maxidleconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
+        <span id="max_idle_connections_python">
+<a href="#max_idle_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>idle_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3223,8 +3223,8 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxopenconnections_python">
-<a href="#maxopenconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
+        <span id="max_open_connections_python">
+<a href="#max_open_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>open_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3246,7 +3246,7 @@ use.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/database?tab=doc#SecretBackendConnectionMongodbatlasArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/database?tab=doc#SecretBackendConnectionMongodbatlasOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionMongodbatlasArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionMongodbatlasOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Inputs.SecretBackendConnectionMongodbatlasArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Outputs.SecretBackendConnectionMongodbatlas.html">output</a> API doc for this type.
@@ -3412,7 +3412,7 @@ use.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/database?tab=doc#SecretBackendConnectionMssqlArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/database?tab=doc#SecretBackendConnectionMssqlOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionMssqlArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionMssqlOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Inputs.SecretBackendConnectionMssqlArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Outputs.SecretBackendConnectionMssql.html">output</a> API doc for this type.
@@ -3597,8 +3597,8 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectionurl_python">
-<a href="#connectionurl_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
+        <span id="connection_url_python">
+<a href="#connection_url_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3611,8 +3611,8 @@ for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxconnectionlifetime_python">
-<a href="#maxconnectionlifetime_python" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
+        <span id="max_connection_lifetime_python">
+<a href="#max_connection_lifetime_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connection_<wbr>lifetime</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3623,8 +3623,8 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxidleconnections_python">
-<a href="#maxidleconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
+        <span id="max_idle_connections_python">
+<a href="#max_idle_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>idle_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3635,8 +3635,8 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxopenconnections_python">
-<a href="#maxopenconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
+        <span id="max_open_connections_python">
+<a href="#max_open_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>open_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3658,7 +3658,7 @@ use.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/database?tab=doc#SecretBackendConnectionMysqlArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/database?tab=doc#SecretBackendConnectionMysqlOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionMysqlArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionMysqlOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Inputs.SecretBackendConnectionMysqlArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Outputs.SecretBackendConnectionMysql.html">output</a> API doc for this type.
@@ -3843,8 +3843,8 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectionurl_python">
-<a href="#connectionurl_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
+        <span id="connection_url_python">
+<a href="#connection_url_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3857,8 +3857,8 @@ for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxconnectionlifetime_python">
-<a href="#maxconnectionlifetime_python" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
+        <span id="max_connection_lifetime_python">
+<a href="#max_connection_lifetime_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connection_<wbr>lifetime</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3869,8 +3869,8 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxidleconnections_python">
-<a href="#maxidleconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
+        <span id="max_idle_connections_python">
+<a href="#max_idle_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>idle_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3881,8 +3881,8 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxopenconnections_python">
-<a href="#maxopenconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
+        <span id="max_open_connections_python">
+<a href="#max_open_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>open_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3904,7 +3904,7 @@ use.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/database?tab=doc#SecretBackendConnectionMysqlAuroraArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/database?tab=doc#SecretBackendConnectionMysqlAuroraOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionMysqlAuroraArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionMysqlAuroraOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Inputs.SecretBackendConnectionMysqlAuroraArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Outputs.SecretBackendConnectionMysqlAurora.html">output</a> API doc for this type.
@@ -4089,8 +4089,8 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectionurl_python">
-<a href="#connectionurl_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
+        <span id="connection_url_python">
+<a href="#connection_url_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4103,8 +4103,8 @@ for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxconnectionlifetime_python">
-<a href="#maxconnectionlifetime_python" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
+        <span id="max_connection_lifetime_python">
+<a href="#max_connection_lifetime_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connection_<wbr>lifetime</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4115,8 +4115,8 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxidleconnections_python">
-<a href="#maxidleconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
+        <span id="max_idle_connections_python">
+<a href="#max_idle_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>idle_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4127,8 +4127,8 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxopenconnections_python">
-<a href="#maxopenconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
+        <span id="max_open_connections_python">
+<a href="#max_open_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>open_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4150,7 +4150,7 @@ use.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/database?tab=doc#SecretBackendConnectionMysqlLegacyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/database?tab=doc#SecretBackendConnectionMysqlLegacyOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionMysqlLegacyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionMysqlLegacyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Inputs.SecretBackendConnectionMysqlLegacyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Outputs.SecretBackendConnectionMysqlLegacy.html">output</a> API doc for this type.
@@ -4335,8 +4335,8 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectionurl_python">
-<a href="#connectionurl_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
+        <span id="connection_url_python">
+<a href="#connection_url_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4349,8 +4349,8 @@ for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxconnectionlifetime_python">
-<a href="#maxconnectionlifetime_python" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
+        <span id="max_connection_lifetime_python">
+<a href="#max_connection_lifetime_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connection_<wbr>lifetime</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4361,8 +4361,8 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxidleconnections_python">
-<a href="#maxidleconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
+        <span id="max_idle_connections_python">
+<a href="#max_idle_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>idle_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4373,8 +4373,8 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxopenconnections_python">
-<a href="#maxopenconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
+        <span id="max_open_connections_python">
+<a href="#max_open_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>open_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4396,7 +4396,7 @@ use.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/database?tab=doc#SecretBackendConnectionMysqlRdsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/database?tab=doc#SecretBackendConnectionMysqlRdsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionMysqlRdsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionMysqlRdsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Inputs.SecretBackendConnectionMysqlRdsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Outputs.SecretBackendConnectionMysqlRds.html">output</a> API doc for this type.
@@ -4581,8 +4581,8 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectionurl_python">
-<a href="#connectionurl_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
+        <span id="connection_url_python">
+<a href="#connection_url_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4595,8 +4595,8 @@ for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxconnectionlifetime_python">
-<a href="#maxconnectionlifetime_python" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
+        <span id="max_connection_lifetime_python">
+<a href="#max_connection_lifetime_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connection_<wbr>lifetime</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4607,8 +4607,8 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxidleconnections_python">
-<a href="#maxidleconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
+        <span id="max_idle_connections_python">
+<a href="#max_idle_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>idle_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4619,8 +4619,8 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxopenconnections_python">
-<a href="#maxopenconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
+        <span id="max_open_connections_python">
+<a href="#max_open_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>open_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4642,7 +4642,7 @@ use.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/database?tab=doc#SecretBackendConnectionOracleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/database?tab=doc#SecretBackendConnectionOracleOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionOracleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionOracleOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Inputs.SecretBackendConnectionOracleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Outputs.SecretBackendConnectionOracle.html">output</a> API doc for this type.
@@ -4827,8 +4827,8 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectionurl_python">
-<a href="#connectionurl_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
+        <span id="connection_url_python">
+<a href="#connection_url_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4841,8 +4841,8 @@ for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxconnectionlifetime_python">
-<a href="#maxconnectionlifetime_python" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
+        <span id="max_connection_lifetime_python">
+<a href="#max_connection_lifetime_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connection_<wbr>lifetime</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4853,8 +4853,8 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxidleconnections_python">
-<a href="#maxidleconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
+        <span id="max_idle_connections_python">
+<a href="#max_idle_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>idle_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4865,8 +4865,8 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxopenconnections_python">
-<a href="#maxopenconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
+        <span id="max_open_connections_python">
+<a href="#max_open_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>open_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4888,7 +4888,7 @@ use.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/database?tab=doc#SecretBackendConnectionPostgresqlArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/database?tab=doc#SecretBackendConnectionPostgresqlOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionPostgresqlArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionPostgresqlOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Inputs.SecretBackendConnectionPostgresqlArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Outputs.SecretBackendConnectionPostgresql.html">output</a> API doc for this type.
@@ -5073,8 +5073,8 @@ use.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectionurl_python">
-<a href="#connectionurl_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
+        <span id="connection_url_python">
+<a href="#connection_url_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5087,8 +5087,8 @@ for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxconnectionlifetime_python">
-<a href="#maxconnectionlifetime_python" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
+        <span id="max_connection_lifetime_python">
+<a href="#max_connection_lifetime_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connection_<wbr>lifetime</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -5099,8 +5099,8 @@ a connection alive for.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxidleconnections_python">
-<a href="#maxidleconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
+        <span id="max_idle_connections_python">
+<a href="#max_idle_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>idle_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -5111,8 +5111,8 @@ maintain.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxopenconnections_python">
-<a href="#maxopenconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
+        <span id="max_open_connections_python">
+<a href="#max_open_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>open_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>

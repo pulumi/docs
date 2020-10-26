@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/vault | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/vault package."
-git_sha: "995253ba3523cfba71f69517b1a0966e0a8ffc3e"
+git_sha: "9dcebd2061ea8c3777afa552aff86b3cc4aa6f14"
 block_external_search_index: true
 ---
 
@@ -39,7 +39,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="addAddressToEnv" data-link-title="addAddressToEnv">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/config/vars.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/config/vars.ts#L14">
         let <strong>addAddressToEnv</strong>
     </a>
 </h3>
@@ -49,7 +49,7 @@ block_external_search_index: true
 If true, adds the value of the `address` argument to the Terraform process environment.
 
 <h3 class="pdoc-module-header" id="address" data-link-title="address">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/config/vars.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/config/vars.ts#L18">
         let <strong>address</strong>
     </a>
 </h3>
@@ -59,7 +59,7 @@ If true, adds the value of the `address` argument to the Terraform process envir
 URL of the root of the target Vault server.
 
 <h3 class="pdoc-module-header" id="authLogins" data-link-title="authLogins">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/config/vars.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/config/vars.ts#L22">
         let <strong>authLogins</strong>
     </a>
 </h3>
@@ -69,7 +69,7 @@ URL of the root of the target Vault server.
 Login to vault with an existing auth method using auth/<mount>/login
 
 <h3 class="pdoc-module-header" id="caCertDir" data-link-title="caCertDir">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/config/vars.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/config/vars.ts#L26">
         let <strong>caCertDir</strong>
     </a>
 </h3>
@@ -79,7 +79,7 @@ Login to vault with an existing auth method using auth/<mount>/login
 Path to directory containing CA certificate files to validate the server's certificate.
 
 <h3 class="pdoc-module-header" id="caCertFile" data-link-title="caCertFile">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/config/vars.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/config/vars.ts#L30">
         let <strong>caCertFile</strong>
     </a>
 </h3>
@@ -89,7 +89,7 @@ Path to directory containing CA certificate files to validate the server's certi
 Path to a CA certificate file to validate the server's certificate.
 
 <h3 class="pdoc-module-header" id="clientAuths" data-link-title="clientAuths">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/config/vars.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/config/vars.ts#L34">
         let <strong>clientAuths</strong>
     </a>
 </h3>
@@ -99,7 +99,7 @@ Path to a CA certificate file to validate the server's certificate.
 Client authentication credentials.
 
 <h3 class="pdoc-module-header" id="headers" data-link-title="headers">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/config/vars.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/config/vars.ts#L38">
         let <strong>headers</strong>
     </a>
 </h3>
@@ -109,7 +109,7 @@ Client authentication credentials.
 The headers to send with each Vault request.
 
 <h3 class="pdoc-module-header" id="maxLeaseTtlSeconds" data-link-title="maxLeaseTtlSeconds">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/config/vars.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/config/vars.ts#L42">
         let <strong>maxLeaseTtlSeconds</strong>
     </a>
 </h3>
@@ -119,7 +119,7 @@ The headers to send with each Vault request.
 Maximum TTL for secret leases requested by this provider
 
 <h3 class="pdoc-module-header" id="maxRetries" data-link-title="maxRetries">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/config/vars.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/config/vars.ts#L46">
         let <strong>maxRetries</strong>
     </a>
 </h3>
@@ -129,7 +129,7 @@ Maximum TTL for secret leases requested by this provider
 Maximum number of retries when a 5xx error code is encountered.
 
 <h3 class="pdoc-module-header" id="namespace" data-link-title="namespace">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/config/vars.ts#L50">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/config/vars.ts#L50">
         let <strong>namespace</strong>
     </a>
 </h3>
@@ -139,7 +139,7 @@ Maximum number of retries when a 5xx error code is encountered.
 The namespace to use. Available only for Vault Enterprise
 
 <h3 class="pdoc-module-header" id="skipTlsVerify" data-link-title="skipTlsVerify">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/config/vars.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/config/vars.ts#L54">
         let <strong>skipTlsVerify</strong>
     </a>
 </h3>
@@ -149,7 +149,7 @@ The namespace to use. Available only for Vault Enterprise
 Set this to true only if the target Vault server is an insecure development instance.
 
 <h3 class="pdoc-module-header" id="token" data-link-title="token">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/config/vars.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/config/vars.ts#L58">
         let <strong>token</strong>
     </a>
 </h3>
@@ -159,7 +159,7 @@ Set this to true only if the target Vault server is an insecure development inst
 Token to use to authenticate to Vault.
 
 <h3 class="pdoc-module-header" id="tokenName" data-link-title="tokenName">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/995253ba3523cfba71f69517b1a0966e0a8ffc3e/sdk/nodejs/config/vars.ts#L62">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/9dcebd2061ea8c3777afa552aff86b3cc4aa6f14/sdk/nodejs/config/vars.ts#L62">
         let <strong>tokenName</strong>
     </a>
 </h3>

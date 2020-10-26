@@ -26,7 +26,7 @@ meta_desc: "Explore the Backend resource of the azure module, including examples
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/azure?tab=doc#Backend">NewBackend</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/azure?tab=doc#BackendArgs">BackendArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/azure?tab=doc#Backend">Backend</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/azure?tab=doc#Backend">NewBackend</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/azure?tab=doc#BackendArgs">BackendArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/azure?tab=doc#Backend">Backend</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -100,7 +100,7 @@ meta_desc: "Explore the Backend resource of the azure module, including examples
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -120,7 +120,7 @@ meta_desc: "Explore the Backend resource of the azure module, including examples
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/azure?tab=doc#BackendArgs">BackendArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/azure?tab=doc#BackendArgs">BackendArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -130,7 +130,7 @@ meta_desc: "Explore the Backend resource of the azure module, including examples
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -202,7 +202,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The subscription id for the Azure Active Directory.
+    <dd>{{% md %}}- The subscription id for the Azure Active Directory.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -213,7 +213,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The tenant id for the Azure Active Directory organization.
+    <dd>{{% md %}}- The tenant id for the Azure Active Directory.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -224,8 +224,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The client id for credentials to query the Azure APIs. Currently read permissions to query compute resources are
-required.
+    <dd>{{% md %}}- The OAuth2 client id to connect to Azure.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -236,7 +235,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The client secret for credentials to query the Azure APIs
+    <dd>{{% md %}}- The OAuth2 client secret to connect to Azure.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -258,7 +257,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Azure cloud environment. Valid values: AzurePublicCloud, AzureUSGovernmentCloud, AzureChinaCloud, AzureGermanCloud.
+    <dd>{{% md %}}- The Azure environment.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -269,7 +268,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Path to mount the backend at.
+    <dd>{{% md %}}- The unique path this backend should be mounted at. Defaults to `azure`.
 {{% /md %}}</dd>
 
 </dl>
@@ -287,7 +286,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The subscription id for the Azure Active Directory.
+    <dd>{{% md %}}- The subscription id for the Azure Active Directory.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -298,7 +297,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The tenant id for the Azure Active Directory organization.
+    <dd>{{% md %}}- The tenant id for the Azure Active Directory.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -309,8 +308,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The client id for credentials to query the Azure APIs. Currently read permissions to query compute resources are
-required.
+    <dd>{{% md %}}- The OAuth2 client id to connect to Azure.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -321,7 +319,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The client secret for credentials to query the Azure APIs
+    <dd>{{% md %}}- The OAuth2 client secret to connect to Azure.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -343,7 +341,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Azure cloud environment. Valid values: AzurePublicCloud, AzureUSGovernmentCloud, AzureChinaCloud, AzureGermanCloud.
+    <dd>{{% md %}}- The Azure environment.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -354,7 +352,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Path to mount the backend at.
+    <dd>{{% md %}}- The unique path this backend should be mounted at. Defaults to `azure`.
 {{% /md %}}</dd>
 
 </dl>
@@ -372,7 +370,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The subscription id for the Azure Active Directory.
+    <dd>{{% md %}}- The subscription id for the Azure Active Directory.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -383,7 +381,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The tenant id for the Azure Active Directory organization.
+    <dd>{{% md %}}- The tenant id for the Azure Active Directory.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -394,8 +392,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The client id for credentials to query the Azure APIs. Currently read permissions to query compute resources are
-required.
+    <dd>{{% md %}}- The OAuth2 client id to connect to Azure.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -406,7 +403,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The client secret for credentials to query the Azure APIs
+    <dd>{{% md %}}- The OAuth2 client secret to connect to Azure.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -428,7 +425,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Azure cloud environment. Valid values: AzurePublicCloud, AzureUSGovernmentCloud, AzureChinaCloud, AzureGermanCloud.
+    <dd>{{% md %}}- The Azure environment.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -439,7 +436,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Path to mount the backend at.
+    <dd>{{% md %}}- The unique path this backend should be mounted at. Defaults to `azure`.
 {{% /md %}}</dd>
 
 </dl>
@@ -457,7 +454,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The subscription id for the Azure Active Directory.
+    <dd>{{% md %}}- The subscription id for the Azure Active Directory.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -468,7 +465,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The tenant id for the Azure Active Directory organization.
+    <dd>{{% md %}}- The tenant id for the Azure Active Directory.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -479,8 +476,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The client id for credentials to query the Azure APIs. Currently read permissions to query compute resources are
-required.
+    <dd>{{% md %}}- The OAuth2 client id to connect to Azure.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -491,7 +487,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The client secret for credentials to query the Azure APIs
+    <dd>{{% md %}}- The OAuth2 client secret to connect to Azure.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -513,7 +509,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Azure cloud environment. Valid values: AzurePublicCloud, AzureUSGovernmentCloud, AzureChinaCloud, AzureGermanCloud.
+    <dd>{{% md %}}- The Azure environment.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -524,7 +520,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Path to mount the backend at.
+    <dd>{{% md %}}- The unique path this backend should be mounted at. Defaults to `azure`.
 {{% /md %}}</dd>
 
 </dl>
@@ -630,7 +626,7 @@ Get an existing Backend resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBackend<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/azure?tab=doc#BackendState">BackendState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/azure?tab=doc#Backend">Backend</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBackend<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/azure?tab=doc#BackendState">BackendState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/azure?tab=doc#Backend">Backend</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -748,8 +744,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The client id for credentials to query the Azure APIs. Currently read permissions to query compute resources are
-required.
+    <dd>{{% md %}}- The OAuth2 client id to connect to Azure.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -760,7 +755,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The client secret for credentials to query the Azure APIs
+    <dd>{{% md %}}- The OAuth2 client secret to connect to Azure.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -782,7 +777,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Azure cloud environment. Valid values: AzurePublicCloud, AzureUSGovernmentCloud, AzureChinaCloud, AzureGermanCloud.
+    <dd>{{% md %}}- The Azure environment.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -793,7 +788,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Path to mount the backend at.
+    <dd>{{% md %}}- The unique path this backend should be mounted at. Defaults to `azure`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -804,7 +799,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The subscription id for the Azure Active Directory.
+    <dd>{{% md %}}- The subscription id for the Azure Active Directory.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -815,7 +810,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The tenant id for the Azure Active Directory organization.
+    <dd>{{% md %}}- The tenant id for the Azure Active Directory.
 {{% /md %}}</dd>
 
 </dl>
@@ -833,8 +828,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The client id for credentials to query the Azure APIs. Currently read permissions to query compute resources are
-required.
+    <dd>{{% md %}}- The OAuth2 client id to connect to Azure.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -845,7 +839,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The client secret for credentials to query the Azure APIs
+    <dd>{{% md %}}- The OAuth2 client secret to connect to Azure.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -867,7 +861,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Azure cloud environment. Valid values: AzurePublicCloud, AzureUSGovernmentCloud, AzureChinaCloud, AzureGermanCloud.
+    <dd>{{% md %}}- The Azure environment.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -878,7 +872,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Path to mount the backend at.
+    <dd>{{% md %}}- The unique path this backend should be mounted at. Defaults to `azure`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -889,7 +883,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The subscription id for the Azure Active Directory.
+    <dd>{{% md %}}- The subscription id for the Azure Active Directory.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -900,7 +894,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The tenant id for the Azure Active Directory organization.
+    <dd>{{% md %}}- The tenant id for the Azure Active Directory.
 {{% /md %}}</dd>
 
 </dl>
@@ -918,8 +912,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The client id for credentials to query the Azure APIs. Currently read permissions to query compute resources are
-required.
+    <dd>{{% md %}}- The OAuth2 client id to connect to Azure.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -930,7 +923,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The client secret for credentials to query the Azure APIs
+    <dd>{{% md %}}- The OAuth2 client secret to connect to Azure.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -952,7 +945,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Azure cloud environment. Valid values: AzurePublicCloud, AzureUSGovernmentCloud, AzureChinaCloud, AzureGermanCloud.
+    <dd>{{% md %}}- The Azure environment.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -963,7 +956,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Path to mount the backend at.
+    <dd>{{% md %}}- The unique path this backend should be mounted at. Defaults to `azure`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -974,7 +967,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The subscription id for the Azure Active Directory.
+    <dd>{{% md %}}- The subscription id for the Azure Active Directory.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -985,7 +978,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The tenant id for the Azure Active Directory organization.
+    <dd>{{% md %}}- The tenant id for the Azure Active Directory.
 {{% /md %}}</dd>
 
 </dl>
@@ -1003,8 +996,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The client id for credentials to query the Azure APIs. Currently read permissions to query compute resources are
-required.
+    <dd>{{% md %}}- The OAuth2 client id to connect to Azure.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1015,7 +1007,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The client secret for credentials to query the Azure APIs
+    <dd>{{% md %}}- The OAuth2 client secret to connect to Azure.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1037,7 +1029,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Azure cloud environment. Valid values: AzurePublicCloud, AzureUSGovernmentCloud, AzureChinaCloud, AzureGermanCloud.
+    <dd>{{% md %}}- The Azure environment.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1048,7 +1040,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Path to mount the backend at.
+    <dd>{{% md %}}- The unique path this backend should be mounted at. Defaults to `azure`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1059,7 +1051,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The subscription id for the Azure Active Directory.
+    <dd>{{% md %}}- The subscription id for the Azure Active Directory.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1070,7 +1062,7 @@ required.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The tenant id for the Azure Active Directory organization.
+    <dd>{{% md %}}- The tenant id for the Azure Active Directory.
 {{% /md %}}</dd>
 
 </dl>
