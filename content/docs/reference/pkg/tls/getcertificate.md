@@ -59,8 +59,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/eks"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/eks"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
 	"github.com/pulumi/pulumi-tls/sdk/v2/go/tls"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
@@ -101,11 +101,11 @@ import pulumi_aws as aws
 import pulumi_tls as tls
 
 example_cluster = aws.eks.Cluster("exampleCluster")
-example_certificate = example_cluster.identities.apply(lambda identities: tls.get_certificate(url=identities[0]["oidcs"][0]["issuer"]))
+example_certificate = example_cluster.identities.apply(lambda identities: tls.get_certificate(url=identities[0].oidcs[0].issuer))
 example_open_id_connect_provider = aws.iam.OpenIdConnectProvider("exampleOpenIdConnectProvider",
     client_id_lists=["sts.amazonaws.com"],
     thumbprint_lists=[example_certificate.certificates[0].sha1_fingerprint],
-    url=example_cluster.identities[0]["oidcs"][0]["issuer"])
+    url=example_cluster.identities[0].oidcs[0].issuer)
 ```
 
 {{% /example %}}
@@ -496,7 +496,7 @@ function can be used to convert this base 10 number into other bases, such as he
 <a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificate">List[Get<wbr>Certificate<wbr>Certificate]</a></span>
+        <span class="property-type"><a href="#getcertificatecertificate">Sequence[Get<wbr>Certificate<wbr>Certificate]</a></span>
     </dt>
     <dd>{{% md %}}The certificates protecting the site, with the root of the chain first.
 * `certificates.#.not_after` - The time until which the certificate is invalid, as an
@@ -995,7 +995,7 @@ function can be used to convert this base 10 number into other bases, such as he
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

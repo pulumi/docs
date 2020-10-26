@@ -3,7 +3,7 @@ title: "Module types"
 title_tag: "Module types | Package @pulumi/tls | Node.js SDK"
 linktitle: "types"
 meta_desc: "Explore members of the types module in the @pulumi/tls package."
-git_sha: "e25649ba09faaec2ffeef654072eab56c2dacf8c"
+git_sha: "e207524c5fbe1e48ea7e82aa52e5fc1655cd66a9"
 block_external_search_index: true
 ---
 
