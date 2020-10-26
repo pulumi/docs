@@ -507,7 +507,7 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The metadata for the policy assignment. This is a json object representing additional metadata that should be stored with the policy assignment.
+    <dd>{{% md %}}The metadata for the policy assignment. This is a JSON string representing additional metadata that should be stored with the policy assignment.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -540,7 +540,7 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Parameters for the policy definition. This field is a JSON object that maps to the Parameters field from the Policy Definition. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Parameters for the policy definition. This field is a JSON string that maps to the Parameters field from the Policy Definition. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
 </dl>
@@ -635,7 +635,7 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The metadata for the policy assignment. This is a json object representing additional metadata that should be stored with the policy assignment.
+    <dd>{{% md %}}The metadata for the policy assignment. This is a JSON string representing additional metadata that should be stored with the policy assignment.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -668,7 +668,7 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Parameters for the policy definition. This field is a JSON object that maps to the Parameters field from the Policy Definition. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Parameters for the policy definition. This field is a JSON string that maps to the Parameters field from the Policy Definition. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
 </dl>
@@ -763,7 +763,7 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The metadata for the policy assignment. This is a json object representing additional metadata that should be stored with the policy assignment.
+    <dd>{{% md %}}The metadata for the policy assignment. This is a JSON string representing additional metadata that should be stored with the policy assignment.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -796,7 +796,7 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Parameters for the policy definition. This field is a JSON object that maps to the Parameters field from the Policy Definition. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Parameters for the policy definition. This field is a JSON string that maps to the Parameters field from the Policy Definition. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
 </dl>
@@ -891,7 +891,7 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The metadata for the policy assignment. This is a json object representing additional metadata that should be stored with the policy assignment.
+    <dd>{{% md %}}The metadata for the policy assignment. This is a JSON string representing additional metadata that should be stored with the policy assignment.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -924,7 +924,7 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Parameters for the policy definition. This field is a JSON object that maps to the Parameters field from the Policy Definition. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Parameters for the policy definition. This field is a JSON string that maps to the Parameters field from the Policy Definition. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
 </dl>
@@ -1203,7 +1203,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The metadata for the policy assignment. This is a json object representing additional metadata that should be stored with the policy assignment.
+    <dd>{{% md %}}The metadata for the policy assignment. This is a JSON string representing additional metadata that should be stored with the policy assignment.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1236,7 +1236,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Parameters for the policy definition. This field is a JSON object that maps to the Parameters field from the Policy Definition. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Parameters for the policy definition. This field is a JSON string that maps to the Parameters field from the Policy Definition. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1331,7 +1331,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The metadata for the policy assignment. This is a json object representing additional metadata that should be stored with the policy assignment.
+    <dd>{{% md %}}The metadata for the policy assignment. This is a JSON string representing additional metadata that should be stored with the policy assignment.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1364,7 +1364,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Parameters for the policy definition. This field is a JSON object that maps to the Parameters field from the Policy Definition. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Parameters for the policy definition. This field is a JSON string that maps to the Parameters field from the Policy Definition. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1459,7 +1459,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The metadata for the policy assignment. This is a json object representing additional metadata that should be stored with the policy assignment.
+    <dd>{{% md %}}The metadata for the policy assignment. This is a JSON string representing additional metadata that should be stored with the policy assignment.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1492,7 +1492,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Parameters for the policy definition. This field is a JSON object that maps to the Parameters field from the Policy Definition. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Parameters for the policy definition. This field is a JSON string that maps to the Parameters field from the Policy Definition. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1587,7 +1587,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The metadata for the policy assignment. This is a json object representing additional metadata that should be stored with the policy assignment.
+    <dd>{{% md %}}The metadata for the policy assignment. This is a JSON string representing additional metadata that should be stored with the policy assignment.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1620,7 +1620,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Parameters for the policy definition. This field is a JSON object that maps to the Parameters field from the Policy Definition. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Parameters for the policy definition. This field is a JSON string that maps to the Parameters field from the Policy Definition. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

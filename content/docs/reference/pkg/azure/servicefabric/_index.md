@@ -13,6 +13,9 @@ Explore the resources and functions of the servicefabric module in the Azure pac
 <ul class="api">
     <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
     <li><a href="meshapplication" title="MeshApplication"><span class="symbol resource"></span>MeshApplication</a></li>
+    <li><a href="meshlocalnetwork" title="MeshLocalNetwork"><span class="symbol resource"></span>MeshLocalNetwork</a></li>
+    <li><a href="meshsecret" title="MeshSecret"><span class="symbol resource"></span>MeshSecret</a></li>
+    <li><a href="meshsecretvalue" title="MeshSecretValue"><span class="symbol resource"></span>MeshSecretValue</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -24,7 +27,7 @@ Explore the resources and functions of the servicefabric module in the Azure pac
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.25.0</dd>
+	<dd>3.28.0</dd>
 </dl>
 
 
