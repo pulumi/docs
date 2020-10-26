@@ -237,7 +237,7 @@ uTnQyuOqPuHbnN83d/2l1NSYKCbHt24o`,
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.AccessIdentityProvider">AccessIdentityProvider</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessIdentityProviderConfigArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.AccessIdentityProvider">AccessIdentityProvider</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessIdentityProviderConfigArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -411,16 +411,6 @@ The AccessIdentityProvider resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span id="accountid_csharp">
-<a href="#accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -445,6 +435,17 @@ The AccessIdentityProvider resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
+        <span id="accountid_csharp">
+<a href="#accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The account ID the provider should be associated with. Conflicts with `zone_id`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="configs_csharp">
 <a href="#configs_csharp" style="color: inherit; text-decoration: inherit;">Configs</a>
 </span> 
@@ -454,22 +455,23 @@ The AccessIdentityProvider resource accepts the following [input]({{< relref "/d
     <dd>{{% md %}}Provider configuration from the [developer documentation][access_identity_provider_guide].
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zoneid_csharp">
+<a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The zone ID the provider should be associated with. Conflicts with `account_id`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="accountid_go">
-<a href="#accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -497,6 +499,17 @@ The AccessIdentityProvider resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
+        <span id="accountid_go">
+<a href="#accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The account ID the provider should be associated with. Conflicts with `zone_id`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="configs_go">
 <a href="#configs_go" style="color: inherit; text-decoration: inherit;">Configs</a>
 </span> 
@@ -506,22 +519,23 @@ The AccessIdentityProvider resource accepts the following [input]({{< relref "/d
     <dd>{{% md %}}Provider configuration from the [developer documentation][access_identity_provider_guide].
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zoneid_go">
+<a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The zone ID the provider should be associated with. Conflicts with `account_id`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="accountid_nodejs">
-<a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -549,6 +563,17 @@ The AccessIdentityProvider resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
+        <span id="accountid_nodejs">
+<a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The account ID the provider should be associated with. Conflicts with `zone_id`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="configs_nodejs">
 <a href="#configs_nodejs" style="color: inherit; text-decoration: inherit;">configs</a>
 </span> 
@@ -558,22 +583,23 @@ The AccessIdentityProvider resource accepts the following [input]({{< relref "/d
     <dd>{{% md %}}Provider configuration from the [developer documentation][access_identity_provider_guide].
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zoneid_nodejs">
+<a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The zone ID the provider should be associated with. Conflicts with `account_id`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="account_id_python">
-<a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -601,6 +627,17 @@ The AccessIdentityProvider resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
+        <span id="account_id_python">
+<a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The account ID the provider should be associated with. Conflicts with `zone_id`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="configs_python">
 <a href="#configs_python" style="color: inherit; text-decoration: inherit;">configs</a>
 </span> 
@@ -608,6 +645,17 @@ The AccessIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#accessidentityproviderconfig">Sequence[Access<wbr>Identity<wbr>Provider<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Provider configuration from the [developer documentation][access_identity_provider_guide].
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zone_id_python">
+<a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The zone ID the provider should be associated with. Conflicts with `account_id`.
 {{% /md %}}</dd>
 
 </dl>
@@ -709,7 +757,7 @@ Get an existing AccessIdentityProvider resource's state with the given name, ID,
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessIdentityProviderConfigArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AccessIdentityProvider</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessIdentityProviderConfigArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AccessIdentityProvider</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -831,7 +879,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The account ID the provider should be associated with. Conflicts with `zone_id`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -868,6 +917,17 @@ The following state arguments are supported:
 `"linkedin"`, `"azureAD"`, `"okta"`, `"onetimepin"`, `"onelogin"`, `"yandex"`.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_zoneid_csharp">
+<a href="#state_zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The zone ID the provider should be associated with. Conflicts with `account_id`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -883,7 +943,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The account ID the provider should be associated with. Conflicts with `zone_id`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -920,6 +981,17 @@ The following state arguments are supported:
 `"linkedin"`, `"azureAD"`, `"okta"`, `"onetimepin"`, `"onelogin"`, `"yandex"`.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_zoneid_go">
+<a href="#state_zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The zone ID the provider should be associated with. Conflicts with `account_id`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -935,7 +1007,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The account ID the provider should be associated with. Conflicts with `zone_id`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -972,6 +1045,17 @@ The following state arguments are supported:
 `"linkedin"`, `"azureAD"`, `"okta"`, `"onetimepin"`, `"onelogin"`, `"yandex"`.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_zoneid_nodejs">
+<a href="#state_zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The zone ID the provider should be associated with. Conflicts with `account_id`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -987,7 +1071,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The account ID the provider should be associated with. Conflicts with `zone_id`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1022,6 +1107,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The provider type to use. Must be one of: `"centrify"`,
 `"facebook"`, `"google-apps"`, `"oidc"`, `"github"`, `"google"`, `"saml"`,
 `"linkedin"`, `"azureAD"`, `"okta"`, `"onetimepin"`, `"onelogin"`, `"yandex"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_zone_id_python">
+<a href="#state_zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The zone ID the provider should be associated with. Conflicts with `account_id`.
 {{% /md %}}</dd>
 
 </dl>

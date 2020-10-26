@@ -55,10 +55,16 @@ package main
 import (
 	"github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		cfg := config.New(ctx, "")
+		cloudflareZoneId := "1d5fdc9e88c8a8c4518b068cd94331fe"
+		if param := cfg.Get("cloudflareZoneId"); param != "" {
+			cloudflareZoneId = param
+		}
 		_, err := cloudflare.NewCustomSsl(ctx, "foossl", &cloudflare.CustomSslArgs{
 			CustomSslOptions: &cloudflare.CustomSslCustomSslOptionsArgs{
 				Bundle_method:    pulumi.String("ubiquitous"),

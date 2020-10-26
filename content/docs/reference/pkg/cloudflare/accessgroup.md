@@ -37,6 +37,7 @@ requests. Example: `everyone = true`
 * `auth_method` - (Optional) A string identifying the authentication
 method code. The list of codes are listed here: https://tools.ietf.org/html/rfc8176#section-2.
 Custom values are also supported.
+* `geo` - (Optional) A list of country codes. Example: `geo = ["US"]`
 * `gsuite` - (Optional) Use GSuite as the authentication mechanism. Example:
   
   ```hcl
@@ -277,7 +278,7 @@ const testGroupIndex_accessGroupAccessGroup = new cloudflare.AccessGroup("testGr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.AccessGroup">AccessGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">excludes</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessGroupExcludeArgs]]</span> = None<span class="p">, </span><span class="nx">includes</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessGroupIncludeArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">requires</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessGroupRequireArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.AccessGroup">AccessGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">excludes</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessGroupExcludeArgs]]</span> = None<span class="p">, </span><span class="nx">includes</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessGroupIncludeArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">requires</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessGroupRequireArgs]]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -451,18 +452,6 @@ The AccessGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span id="accountid_csharp">
-<a href="#accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the account the group is
-associated with.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="includes_csharp">
 <a href="#includes_csharp" style="color: inherit; text-decoration: inherit;">Includes</a>
 </span> 
@@ -482,6 +471,17 @@ full list.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Group.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accountid_csharp">
+<a href="#accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the account the group is associated with. Conflicts with `zone_id`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -508,24 +508,23 @@ full list.
 full list.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zoneid_csharp">
+<a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the zone the group is associated with. Conflicts with `account_id`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="accountid_go">
-<a href="#accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the account the group is
-associated with.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -552,6 +551,17 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="accountid_go">
+<a href="#accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the account the group is associated with. Conflicts with `zone_id`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="excludes_go">
 <a href="#excludes_go" style="color: inherit; text-decoration: inherit;">Excludes</a>
 </span> 
@@ -574,24 +584,23 @@ full list.
 full list.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zoneid_go">
+<a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the zone the group is associated with. Conflicts with `account_id`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="accountid_nodejs">
-<a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the account the group is
-associated with.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -618,6 +627,17 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="accountid_nodejs">
+<a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the account the group is associated with. Conflicts with `zone_id`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="excludes_nodejs">
 <a href="#excludes_nodejs" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span> 
@@ -640,24 +660,23 @@ full list.
 full list.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zoneid_nodejs">
+<a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the zone the group is associated with. Conflicts with `account_id`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="account_id_python">
-<a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the account the group is
-associated with.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -684,6 +703,17 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="account_id_python">
+<a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the account the group is associated with. Conflicts with `zone_id`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="excludes_python">
 <a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span> 
@@ -704,6 +734,17 @@ full list.
     </dt>
     <dd>{{% md %}}A series of access conditions, see below for
 full list.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zone_id_python">
+<a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the zone the group is associated with. Conflicts with `account_id`.
 {{% /md %}}</dd>
 
 </dl>
@@ -805,7 +846,7 @@ Get an existing AccessGroup resource's state with the given name, ID, and option
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">excludes</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessGroupExcludeArgs]]</span> = None<span class="p">, </span><span class="nx">includes</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessGroupIncludeArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">requires</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessGroupRequireArgs]]</span> = None<span class="p">) -&gt;</span> AccessGroup</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">excludes</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessGroupExcludeArgs]]</span> = None<span class="p">, </span><span class="nx">includes</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessGroupIncludeArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">requires</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessGroupRequireArgs]]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AccessGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -927,8 +968,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the account the group is
-associated with.
+    <dd>{{% md %}}The ID of the account the group is associated with. Conflicts with `zone_id`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -978,6 +1018,17 @@ full list.
 full list.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_zoneid_csharp">
+<a href="#state_zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the zone the group is associated with. Conflicts with `account_id`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -993,8 +1044,7 @@ full list.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the account the group is
-associated with.
+    <dd>{{% md %}}The ID of the account the group is associated with. Conflicts with `zone_id`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1044,6 +1094,17 @@ full list.
 full list.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_zoneid_go">
+<a href="#state_zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the zone the group is associated with. Conflicts with `account_id`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1059,8 +1120,7 @@ full list.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the account the group is
-associated with.
+    <dd>{{% md %}}The ID of the account the group is associated with. Conflicts with `zone_id`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1110,6 +1170,17 @@ full list.
 full list.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_zoneid_nodejs">
+<a href="#state_zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the zone the group is associated with. Conflicts with `account_id`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1125,8 +1196,7 @@ full list.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the account the group is
-associated with.
+    <dd>{{% md %}}The ID of the account the group is associated with. Conflicts with `zone_id`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1174,6 +1244,17 @@ full list.
     </dt>
     <dd>{{% md %}}A series of access conditions, see below for
 full list.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_zone_id_python">
+<a href="#state_zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the zone the group is associated with. Conflicts with `account_id`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1286,6 +1367,16 @@ full list.
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="geos_csharp">
+<a href="#geos_csharp" style="color: inherit; text-decoration: inherit;">Geos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1448,6 +1539,16 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="geos_go">
+<a href="#geos_go" style="color: inherit; text-decoration: inherit;">Geos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="githubs_go">
 <a href="#githubs_go" style="color: inherit; text-decoration: inherit;">Githubs</a>
 </span> 
@@ -1605,6 +1706,16 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="geos_nodejs">
+<a href="#geos_nodejs" style="color: inherit; text-decoration: inherit;">geos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="githubs_nodejs">
 <a href="#githubs_nodejs" style="color: inherit; text-decoration: inherit;">githubs</a>
 </span> 
@@ -1757,6 +1868,16 @@ full list.
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="geos_python">
+<a href="#geos_python" style="color: inherit; text-decoration: inherit;">geos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2655,6 +2776,16 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="geos_csharp">
+<a href="#geos_csharp" style="color: inherit; text-decoration: inherit;">Geos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="githubs_csharp">
 <a href="#githubs_csharp" style="color: inherit; text-decoration: inherit;">Githubs</a>
 </span> 
@@ -2807,6 +2938,16 @@ full list.
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="geos_go">
+<a href="#geos_go" style="color: inherit; text-decoration: inherit;">Geos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2969,6 +3110,16 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="geos_nodejs">
+<a href="#geos_nodejs" style="color: inherit; text-decoration: inherit;">geos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="githubs_nodejs">
 <a href="#githubs_nodejs" style="color: inherit; text-decoration: inherit;">githubs</a>
 </span> 
@@ -3121,6 +3272,16 @@ full list.
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="geos_python">
+<a href="#geos_python" style="color: inherit; text-decoration: inherit;">geos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4019,6 +4180,16 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="geos_csharp">
+<a href="#geos_csharp" style="color: inherit; text-decoration: inherit;">Geos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="githubs_csharp">
 <a href="#githubs_csharp" style="color: inherit; text-decoration: inherit;">Githubs</a>
 </span> 
@@ -4171,6 +4342,16 @@ full list.
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="geos_go">
+<a href="#geos_go" style="color: inherit; text-decoration: inherit;">Geos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4333,6 +4514,16 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="geos_nodejs">
+<a href="#geos_nodejs" style="color: inherit; text-decoration: inherit;">geos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="githubs_nodejs">
 <a href="#githubs_nodejs" style="color: inherit; text-decoration: inherit;">githubs</a>
 </span> 
@@ -4485,6 +4676,16 @@ full list.
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="geos_python">
+<a href="#geos_python" style="color: inherit; text-decoration: inherit;">geos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
