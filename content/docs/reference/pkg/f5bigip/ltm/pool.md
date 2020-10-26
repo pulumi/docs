@@ -14,6 +14,116 @@ meta_desc: "Explore the Pool resource of the ltm module, including examples, inp
 
 Resources should be named with their "full path". The full path is the combination of the partition + name of the resource. For example /Common/my-pool.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using F5BigIP = Pulumi.F5BigIP;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var monitor = new F5BigIP.Ltm.Monitor("monitor", new F5BigIP.Ltm.MonitorArgs
+        {
+            Name = "/Common/terraform_monitor",
+            Parent = "/Common/http",
+        });
+        var pool = new F5BigIP.Ltm.Pool("pool", new F5BigIP.Ltm.PoolArgs
+        {
+            Name = "/Common/Axiom_Environment_APP1_Pool",
+            LoadBalancingMode = "round-robin",
+            MinimumActiveMembers = 1,
+            Monitors = 
+            {
+                monitor.Name,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		monitor, err := ltm.NewMonitor(ctx, "monitor", &ltm.MonitorArgs{
+			Name:   pulumi.String("/Common/terraform_monitor"),
+			Parent: pulumi.String("/Common/http"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = ltm.NewPool(ctx, "pool", &ltm.PoolArgs{
+			Name:                 pulumi.String("/Common/Axiom_Environment_APP1_Pool"),
+			LoadBalancingMode:    pulumi.String("round-robin"),
+			MinimumActiveMembers: pulumi.Int(1),
+			Monitors: pulumi.StringArray{
+				monitor.Name,
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_f5bigip as f5bigip
+
+monitor = f5bigip.ltm.Monitor("monitor",
+    name="/Common/terraform_monitor",
+    parent="/Common/http")
+pool = f5bigip.ltm.Pool("pool",
+    name="/Common/Axiom_Environment_APP1_Pool",
+    load_balancing_mode="round-robin",
+    minimum_active_members=1,
+    monitors=[monitor.name])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as f5bigip from "@pulumi/f5bigip";
+
+const monitor = new f5bigip.ltm.Monitor("monitor", {
+    name: "/Common/terraform_monitor",
+    parent: "/Common/http",
+});
+const pool = new f5bigip.ltm.Pool("pool", {
+    name: "/Common/Axiom_Environment_APP1_Pool",
+    loadBalancingMode: "round-robin",
+    minimumActiveMembers: 1,
+    monitors: [monitor.name],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Pool Resource {#create}
@@ -25,7 +135,7 @@ Resources should be named with their "full path". The full path is the combinati
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_f5bigip/ltm/#pulumi_f5bigip.ltm.Pool">Pool</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_nat</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allow_snat</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancing_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitors</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reselect_tries</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">service_down_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slow_ramp_time</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_f5bigip/ltm/#pulumi_f5bigip.ltm.Pool">Pool</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_nat</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allow_snat</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancing_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">minimum_active_members</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">monitors</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reselect_tries</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">service_down_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slow_ramp_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -205,7 +315,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the pool
+    <dd>{{% md %}}Name of the pool,it should be "full path".The full path is the combination of the partition + name of the pool.(For example `/Common/my-pool`)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -216,7 +326,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Allow NAT
+    <dd>{{% md %}}Specifies whether NATs are automatically enabled or disabled for any connections using this pool, [ Default : `yes`, Possible Values `yes` or `no`].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -227,7 +337,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Allow SNAT
+    <dd>{{% md %}}Specifies whether SNATs are automatically enabled or disabled for any connections using this pool,[ Default : `yes`, Possible Values `yes` or `no`].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -238,7 +348,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Userdefined value to describe the pool
+    <dd>{{% md %}}Specifies descriptive text that identifies the pool.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -249,7 +359,18 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Possible values: round-robin, ...
+    <dd>{{% md %}}Specifies the load balancing method. The default is Round Robin.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minimumactivemembers_csharp">
+<a href="#minimumactivemembers_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Active<wbr>Members</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the system load balances traffic according to the priority number assigned to the pool member,Default Value is `0` meaning `disabled`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -271,7 +392,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Number of times the system tries to select a new pool member after a failure.
+    <dd>{{% md %}}Specifies the number of times the system tries to contact a new pool member after a passive failure.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -282,7 +403,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Possible values: none, reset, reselect, drop
+    <dd>{{% md %}}Specifies how the system should respond when the target pool member becomes unavailable. The default is `None`, Possible values: `[none, reset, reselect, drop]`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -293,7 +414,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Slow ramp time for pool members
+    <dd>{{% md %}}Specifies the duration during which the system sends less traffic to a newly-enabled pool member.
 {{% /md %}}</dd>
 
 </dl>
@@ -311,7 +432,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the pool
+    <dd>{{% md %}}Name of the pool,it should be "full path".The full path is the combination of the partition + name of the pool.(For example `/Common/my-pool`)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -322,7 +443,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Allow NAT
+    <dd>{{% md %}}Specifies whether NATs are automatically enabled or disabled for any connections using this pool, [ Default : `yes`, Possible Values `yes` or `no`].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -333,7 +454,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Allow SNAT
+    <dd>{{% md %}}Specifies whether SNATs are automatically enabled or disabled for any connections using this pool,[ Default : `yes`, Possible Values `yes` or `no`].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -344,7 +465,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Userdefined value to describe the pool
+    <dd>{{% md %}}Specifies descriptive text that identifies the pool.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -355,7 +476,18 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Possible values: round-robin, ...
+    <dd>{{% md %}}Specifies the load balancing method. The default is Round Robin.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minimumactivemembers_go">
+<a href="#minimumactivemembers_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Active<wbr>Members</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the system load balances traffic according to the priority number assigned to the pool member,Default Value is `0` meaning `disabled`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -377,7 +509,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Number of times the system tries to select a new pool member after a failure.
+    <dd>{{% md %}}Specifies the number of times the system tries to contact a new pool member after a passive failure.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -388,7 +520,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Possible values: none, reset, reselect, drop
+    <dd>{{% md %}}Specifies how the system should respond when the target pool member becomes unavailable. The default is `None`, Possible values: `[none, reset, reselect, drop]`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -399,7 +531,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Slow ramp time for pool members
+    <dd>{{% md %}}Specifies the duration during which the system sends less traffic to a newly-enabled pool member.
 {{% /md %}}</dd>
 
 </dl>
@@ -417,7 +549,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the pool
+    <dd>{{% md %}}Name of the pool,it should be "full path".The full path is the combination of the partition + name of the pool.(For example `/Common/my-pool`)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -428,7 +560,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Allow NAT
+    <dd>{{% md %}}Specifies whether NATs are automatically enabled or disabled for any connections using this pool, [ Default : `yes`, Possible Values `yes` or `no`].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -439,7 +571,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Allow SNAT
+    <dd>{{% md %}}Specifies whether SNATs are automatically enabled or disabled for any connections using this pool,[ Default : `yes`, Possible Values `yes` or `no`].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -450,7 +582,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Userdefined value to describe the pool
+    <dd>{{% md %}}Specifies descriptive text that identifies the pool.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -461,7 +593,18 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Possible values: round-robin, ...
+    <dd>{{% md %}}Specifies the load balancing method. The default is Round Robin.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minimumactivemembers_nodejs">
+<a href="#minimumactivemembers_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Active<wbr>Members</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the system load balances traffic according to the priority number assigned to the pool member,Default Value is `0` meaning `disabled`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -483,7 +626,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Number of times the system tries to select a new pool member after a failure.
+    <dd>{{% md %}}Specifies the number of times the system tries to contact a new pool member after a passive failure.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -494,7 +637,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Possible values: none, reset, reselect, drop
+    <dd>{{% md %}}Specifies how the system should respond when the target pool member becomes unavailable. The default is `None`, Possible values: `[none, reset, reselect, drop]`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -505,7 +648,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Slow ramp time for pool members
+    <dd>{{% md %}}Specifies the duration during which the system sends less traffic to a newly-enabled pool member.
 {{% /md %}}</dd>
 
 </dl>
@@ -523,7 +666,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the pool
+    <dd>{{% md %}}Name of the pool,it should be "full path".The full path is the combination of the partition + name of the pool.(For example `/Common/my-pool`)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -534,7 +677,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Allow NAT
+    <dd>{{% md %}}Specifies whether NATs are automatically enabled or disabled for any connections using this pool, [ Default : `yes`, Possible Values `yes` or `no`].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -545,7 +688,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Allow SNAT
+    <dd>{{% md %}}Specifies whether SNATs are automatically enabled or disabled for any connections using this pool,[ Default : `yes`, Possible Values `yes` or `no`].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -556,7 +699,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Userdefined value to describe the pool
+    <dd>{{% md %}}Specifies descriptive text that identifies the pool.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -567,7 +710,18 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Possible values: round-robin, ...
+    <dd>{{% md %}}Specifies the load balancing method. The default is Round Robin.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minimum_active_members_python">
+<a href="#minimum_active_members_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>active_<wbr>members</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the system load balances traffic according to the priority number assigned to the pool member,Default Value is `0` meaning `disabled`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -576,7 +730,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#monitors_python" style="color: inherit; text-decoration: inherit;">monitors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of monitor names to associate with the pool
 {{% /md %}}</dd>
@@ -587,9 +741,9 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#reselect_tries_python" style="color: inherit; text-decoration: inherit;">reselect_<wbr>tries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}Number of times the system tries to select a new pool member after a failure.
+    <dd>{{% md %}}Specifies the number of times the system tries to contact a new pool member after a passive failure.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -600,7 +754,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Possible values: none, reset, reselect, drop
+    <dd>{{% md %}}Specifies how the system should respond when the target pool member becomes unavailable. The default is `None`, Possible values: `[none, reset, reselect, drop]`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -609,9 +763,9 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#slow_ramp_time_python" style="color: inherit; text-decoration: inherit;">slow_<wbr>ramp_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}Slow ramp time for pool members
+    <dd>{{% md %}}Specifies the duration during which the system sends less traffic to a newly-enabled pool member.
 {{% /md %}}</dd>
 
 </dl>
@@ -713,7 +867,7 @@ Get an existing Pool resource's state with the given name, ID, and optional extr
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_nat</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allow_snat</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancing_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitors</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reselect_tries</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">service_down_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slow_ramp_time</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">) -&gt;</span> Pool</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_nat</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allow_snat</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancing_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">minimum_active_members</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">monitors</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reselect_tries</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">service_down_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slow_ramp_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> Pool</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -835,7 +989,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Allow NAT
+    <dd>{{% md %}}Specifies whether NATs are automatically enabled or disabled for any connections using this pool, [ Default : `yes`, Possible Values `yes` or `no`].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -846,7 +1000,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Allow SNAT
+    <dd>{{% md %}}Specifies whether SNATs are automatically enabled or disabled for any connections using this pool,[ Default : `yes`, Possible Values `yes` or `no`].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -857,7 +1011,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Userdefined value to describe the pool
+    <dd>{{% md %}}Specifies descriptive text that identifies the pool.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -868,7 +1022,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Possible values: round-robin, ...
+    <dd>{{% md %}}Specifies the load balancing method. The default is Round Robin.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_minimumactivemembers_csharp">
+<a href="#state_minimumactivemembers_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Active<wbr>Members</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the system load balances traffic according to the priority number assigned to the pool member,Default Value is `0` meaning `disabled`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -890,7 +1055,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the pool
+    <dd>{{% md %}}Name of the pool,it should be "full path".The full path is the combination of the partition + name of the pool.(For example `/Common/my-pool`)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -901,7 +1066,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Number of times the system tries to select a new pool member after a failure.
+    <dd>{{% md %}}Specifies the number of times the system tries to contact a new pool member after a passive failure.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -912,7 +1077,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Possible values: none, reset, reselect, drop
+    <dd>{{% md %}}Specifies how the system should respond when the target pool member becomes unavailable. The default is `None`, Possible values: `[none, reset, reselect, drop]`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -923,7 +1088,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Slow ramp time for pool members
+    <dd>{{% md %}}Specifies the duration during which the system sends less traffic to a newly-enabled pool member.
 {{% /md %}}</dd>
 
 </dl>
@@ -941,7 +1106,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Allow NAT
+    <dd>{{% md %}}Specifies whether NATs are automatically enabled or disabled for any connections using this pool, [ Default : `yes`, Possible Values `yes` or `no`].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -952,7 +1117,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Allow SNAT
+    <dd>{{% md %}}Specifies whether SNATs are automatically enabled or disabled for any connections using this pool,[ Default : `yes`, Possible Values `yes` or `no`].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -963,7 +1128,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Userdefined value to describe the pool
+    <dd>{{% md %}}Specifies descriptive text that identifies the pool.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -974,7 +1139,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Possible values: round-robin, ...
+    <dd>{{% md %}}Specifies the load balancing method. The default is Round Robin.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_minimumactivemembers_go">
+<a href="#state_minimumactivemembers_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Active<wbr>Members</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the system load balances traffic according to the priority number assigned to the pool member,Default Value is `0` meaning `disabled`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -996,7 +1172,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the pool
+    <dd>{{% md %}}Name of the pool,it should be "full path".The full path is the combination of the partition + name of the pool.(For example `/Common/my-pool`)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1007,7 +1183,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Number of times the system tries to select a new pool member after a failure.
+    <dd>{{% md %}}Specifies the number of times the system tries to contact a new pool member after a passive failure.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1018,7 +1194,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Possible values: none, reset, reselect, drop
+    <dd>{{% md %}}Specifies how the system should respond when the target pool member becomes unavailable. The default is `None`, Possible values: `[none, reset, reselect, drop]`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1029,7 +1205,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Slow ramp time for pool members
+    <dd>{{% md %}}Specifies the duration during which the system sends less traffic to a newly-enabled pool member.
 {{% /md %}}</dd>
 
 </dl>
@@ -1047,7 +1223,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Allow NAT
+    <dd>{{% md %}}Specifies whether NATs are automatically enabled or disabled for any connections using this pool, [ Default : `yes`, Possible Values `yes` or `no`].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1058,7 +1234,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Allow SNAT
+    <dd>{{% md %}}Specifies whether SNATs are automatically enabled or disabled for any connections using this pool,[ Default : `yes`, Possible Values `yes` or `no`].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1069,7 +1245,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Userdefined value to describe the pool
+    <dd>{{% md %}}Specifies descriptive text that identifies the pool.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1080,7 +1256,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Possible values: round-robin, ...
+    <dd>{{% md %}}Specifies the load balancing method. The default is Round Robin.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_minimumactivemembers_nodejs">
+<a href="#state_minimumactivemembers_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Active<wbr>Members</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the system load balances traffic according to the priority number assigned to the pool member,Default Value is `0` meaning `disabled`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1102,7 +1289,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the pool
+    <dd>{{% md %}}Name of the pool,it should be "full path".The full path is the combination of the partition + name of the pool.(For example `/Common/my-pool`)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1113,7 +1300,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Number of times the system tries to select a new pool member after a failure.
+    <dd>{{% md %}}Specifies the number of times the system tries to contact a new pool member after a passive failure.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1124,7 +1311,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Possible values: none, reset, reselect, drop
+    <dd>{{% md %}}Specifies how the system should respond when the target pool member becomes unavailable. The default is `None`, Possible values: `[none, reset, reselect, drop]`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1135,7 +1322,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Slow ramp time for pool members
+    <dd>{{% md %}}Specifies the duration during which the system sends less traffic to a newly-enabled pool member.
 {{% /md %}}</dd>
 
 </dl>
@@ -1153,7 +1340,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Allow NAT
+    <dd>{{% md %}}Specifies whether NATs are automatically enabled or disabled for any connections using this pool, [ Default : `yes`, Possible Values `yes` or `no`].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1164,7 +1351,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Allow SNAT
+    <dd>{{% md %}}Specifies whether SNATs are automatically enabled or disabled for any connections using this pool,[ Default : `yes`, Possible Values `yes` or `no`].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1175,7 +1362,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Userdefined value to describe the pool
+    <dd>{{% md %}}Specifies descriptive text that identifies the pool.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1186,7 +1373,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Possible values: round-robin, ...
+    <dd>{{% md %}}Specifies the load balancing method. The default is Round Robin.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_minimum_active_members_python">
+<a href="#state_minimum_active_members_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>active_<wbr>members</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the system load balances traffic according to the priority number assigned to the pool member,Default Value is `0` meaning `disabled`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1195,7 +1393,7 @@ The following state arguments are supported:
 <a href="#state_monitors_python" style="color: inherit; text-decoration: inherit;">monitors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of monitor names to associate with the pool
 {{% /md %}}</dd>
@@ -1208,7 +1406,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the pool
+    <dd>{{% md %}}Name of the pool,it should be "full path".The full path is the combination of the partition + name of the pool.(For example `/Common/my-pool`)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1217,9 +1415,9 @@ The following state arguments are supported:
 <a href="#state_reselect_tries_python" style="color: inherit; text-decoration: inherit;">reselect_<wbr>tries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}Number of times the system tries to select a new pool member after a failure.
+    <dd>{{% md %}}Specifies the number of times the system tries to contact a new pool member after a passive failure.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1230,7 +1428,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Possible values: none, reset, reselect, drop
+    <dd>{{% md %}}Specifies how the system should respond when the target pool member becomes unavailable. The default is `None`, Possible values: `[none, reset, reselect, drop]`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1239,9 +1437,9 @@ The following state arguments are supported:
 <a href="#state_slow_ramp_time_python" style="color: inherit; text-decoration: inherit;">slow_<wbr>ramp_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}Slow ramp time for pool members
+    <dd>{{% md %}}Specifies the duration during which the system sends less traffic to a newly-enabled pool member.
 {{% /md %}}</dd>
 
 </dl>
@@ -1264,6 +1462,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/terraform-providers/terraform-provider-bigip).</dd>
+	<dd>This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/F5Networks/terraform-provider-bigip).</dd>
 </dl>
 

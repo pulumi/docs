@@ -125,7 +125,7 @@ const vlan1 = new f5bigip.net.Vlan("vlan1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_f5bigip/net/#pulumi_f5bigip.net.Vlan">Vlan</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">interfaces</span><span class="p">:</span> <span class="nx">Optional[List[VlanInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tag</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_f5bigip/net/#pulumi_f5bigip.net.Vlan">Vlan</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[VlanInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tag</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -434,7 +434,7 @@ The Vlan resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#interfaces_python" style="color: inherit; text-decoration: inherit;">interfaces</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vlaninterface">List[Vlan<wbr>Interface<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vlaninterface">Sequence[Vlan<wbr>Interface<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies which interfaces you want this VLAN to use for traffic management.
 {{% /md %}}</dd>
@@ -445,7 +445,7 @@ The Vlan resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies a number that the system adds into the header of any frame passing through the VLAN.
 {{% /md %}}</dd>
@@ -549,7 +549,7 @@ Get an existing Vlan resource's state with the given name, ID, and optional extr
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">interfaces</span><span class="p">:</span> <span class="nx">Optional[List[VlanInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tag</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">) -&gt;</span> Vlan</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[VlanInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tag</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> Vlan</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -789,7 +789,7 @@ The following state arguments are supported:
 <a href="#state_interfaces_python" style="color: inherit; text-decoration: inherit;">interfaces</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vlaninterface">List[Vlan<wbr>Interface<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vlaninterface">Sequence[Vlan<wbr>Interface<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies which interfaces you want this VLAN to use for traffic management.
 {{% /md %}}</dd>
@@ -811,7 +811,7 @@ The following state arguments are supported:
 <a href="#state_tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies a number that the system adds into the header of any frame passing through the VLAN.
 {{% /md %}}</dd>
@@ -976,6 +976,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/terraform-providers/terraform-provider-bigip).</dd>
+	<dd>This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/F5Networks/terraform-provider-bigip).</dd>
 </dl>
 

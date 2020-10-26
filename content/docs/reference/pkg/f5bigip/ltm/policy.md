@@ -30,13 +30,12 @@ class MyStack : Stack
     {
         var test_policy = new F5BigIP.Ltm.Policy("test-policy", new F5BigIP.Ltm.PolicyArgs
         {
-            Name = "my_policy",
-            Strategy = "first-match",
+            Name = "test-policy",
+            Strategy = "/Common/first-match",
             Requires = 
             {
                 "http",
             },
-            PublishedCopy = "Drafts/my_policy",
             Controls = 
             {
                 "forwarding",
@@ -50,9 +49,8 @@ class MyStack : Stack
                     {
                         new F5BigIP.Ltm.Inputs.PolicyRuleActionArgs
                         {
-                            TmName = "20",
                             Forward = true,
-                            Pool = "/Common/mypool",
+                            Pool = bigip_ltm_pool.Pool.Name,
                         },
                     },
                 },
@@ -83,12 +81,11 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := ltm.NewPolicy(ctx, "test_policy", &ltm.PolicyArgs{
-			Name:     pulumi.String("my_policy"),
-			Strategy: pulumi.String("first-match"),
+			Name:     pulumi.String("test-policy"),
+			Strategy: pulumi.String("/Common/first-match"),
 			Requires: pulumi.StringArray{
 				pulumi.String("http"),
 			},
-			PublishedCopy: pulumi.String("Drafts/my_policy"),
 			Controls: pulumi.StringArray{
 				pulumi.String("forwarding"),
 			},
@@ -97,9 +94,8 @@ func main() {
 					Name: pulumi.String("rule6"),
 					Actions: ltm.PolicyRuleActionArray{
 						&ltm.PolicyRuleActionArgs{
-							TmName:  pulumi.String("20"),
 							Forward: pulumi.Bool(true),
-							Pool:    pulumi.String("/Common/mypool"),
+							Pool:    pulumi.Any(bigip_ltm_pool.Pool.Name),
 						},
 					},
 				},
@@ -123,17 +119,15 @@ import pulumi
 import pulumi_f5bigip as f5bigip
 
 test_policy = f5bigip.ltm.Policy("test-policy",
-    name="my_policy",
-    strategy="first-match",
+    name="test-policy",
+    strategy="/Common/first-match",
     requires=["http"],
-    published_copy="Drafts/my_policy",
     controls=["forwarding"],
     rules=[f5bigip.ltm.PolicyRuleArgs(
         name="rule6",
         actions=[f5bigip.ltm.PolicyRuleActionArgs(
-            tm_name="20",
             forward=True,
-            pool="/Common/mypool",
+            pool=bigip_ltm_pool["pool"]["name"],
         )],
     )],
     opts=ResourceOptions(depends_on=[bigip_ltm_pool["mypool"]]))
@@ -148,17 +142,15 @@ import * as pulumi from "@pulumi/pulumi";
 import * as f5bigip from "@pulumi/f5bigip";
 
 const test_policy = new f5bigip.ltm.Policy("test-policy", {
-    name: "my_policy",
-    strategy: "first-match",
+    name: "test-policy",
+    strategy: "/Common/first-match",
     requires: ["http"],
-    publishedCopy: "Drafts/my_policy",
     controls: ["forwarding"],
     rules: [{
         name: "rule6",
         actions: [{
-            tmName: "20",
             forward: true,
-            pool: "/Common/mypool",
+            pool: bigip_ltm_pool.pool.name,
         }],
     }],
 }, {
@@ -180,7 +172,7 @@ const test_policy = new f5bigip.ltm.Policy("test-policy", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_f5bigip/ltm/#pulumi_f5bigip.ltm.Policy">Policy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">controls</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">published_copy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">requires</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[PolicyRuleArgs]]</span> = None<span class="p">, </span><span class="nx">strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_f5bigip/ltm/#pulumi_f5bigip.ltm.Policy">Policy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">controls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">published_copy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">requires</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[PolicyRuleArgs]]</span> = None<span class="p">, </span><span class="nx">strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -588,7 +580,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#controls_python" style="color: inherit; text-decoration: inherit;">controls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the controls
 {{% /md %}}</dd>
@@ -610,7 +602,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#requires_python" style="color: inherit; text-decoration: inherit;">requires</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the protocol
 {{% /md %}}</dd>
@@ -621,7 +613,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyrule">List[Policy<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#policyrule">Sequence[Policy<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Rules can be applied using the policy
 {{% /md %}}</dd>
@@ -736,7 +728,7 @@ Get an existing Policy resource's state with the given name, ID, and optional ex
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">controls</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">published_copy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">requires</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[PolicyRuleArgs]]</span> = None<span class="p">, </span><span class="nx">strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Policy</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">controls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">published_copy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">requires</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[PolicyRuleArgs]]</span> = None<span class="p">, </span><span class="nx">strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Policy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1075,7 +1067,7 @@ The following state arguments are supported:
 <a href="#state_controls_python" style="color: inherit; text-decoration: inherit;">controls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the controls
 {{% /md %}}</dd>
@@ -1108,7 +1100,7 @@ The following state arguments are supported:
 <a href="#state_requires_python" style="color: inherit; text-decoration: inherit;">requires</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the protocol
 {{% /md %}}</dd>
@@ -1119,7 +1111,7 @@ The following state arguments are supported:
 <a href="#state_rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyrule">List[Policy<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#policyrule">Sequence[Policy<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Rules can be applied using the policy
 {{% /md %}}</dd>
@@ -1299,7 +1291,7 @@ The following state arguments are supported:
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyruleaction">List[Policy<wbr>Rule<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#policyruleaction">Sequence[Policy<wbr>Rule<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1309,7 +1301,7 @@ The following state arguments are supported:
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyrulecondition">List[Policy<wbr>Rule<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#policyrulecondition">Sequence[Policy<wbr>Rule<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4524,7 +4516,7 @@ The following state arguments are supported:
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4664,7 +4656,7 @@ The following state arguments are supported:
 <a href="#expiry_secs_python" style="color: inherit; text-decoration: inherit;">expiry_<wbr>secs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4895,7 +4887,7 @@ The following state arguments are supported:
 <a href="#length_python" style="color: inherit; text-decoration: inherit;">length</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4985,7 +4977,7 @@ The following state arguments are supported:
 <a href="#offset_python" style="color: inherit; text-decoration: inherit;">offset</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5056,7 +5048,7 @@ The following state arguments are supported:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5316,7 +5308,7 @@ The following state arguments are supported:
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5356,7 +5348,7 @@ The following state arguments are supported:
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5427,7 +5419,7 @@ The following state arguments are supported:
 <a href="#vlan_id_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8606,7 +8598,7 @@ The following state arguments are supported:
 <a href="#index_python" style="color: inherit; text-decoration: inherit;">index</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9067,7 +9059,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9119,6 +9111,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/terraform-providers/terraform-provider-bigip).</dd>
+	<dd>This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/F5Networks/terraform-provider-bigip).</dd>
 </dl>
 

@@ -129,7 +129,7 @@ import * as pulumi from "@pulumi/pulumi";
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_f5bigip/sys/#pulumi_f5bigip.sys.IApp">IApp</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">devicegroup</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">execute_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inherited_devicegroup</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inherited_traffic_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">jsonfile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lists</span><span class="p">:</span> <span class="nx">Optional[List[IAppListArgs]]</span> = None<span class="p">, </span><span class="nx">metadatas</span><span class="p">:</span> <span class="nx">Optional[List[IAppMetadataArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">strict_updates</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tables</span><span class="p">:</span> <span class="nx">Optional[List[IAppTableArgs]]</span> = None<span class="p">, </span><span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_modified</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_prerequisite_errors</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">traffic_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[List[IAppVariableArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_f5bigip/sys/#pulumi_f5bigip.sys.IApp">IApp</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">devicegroup</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">execute_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inherited_devicegroup</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inherited_traffic_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">jsonfile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[IAppListArgs]]</span> = None<span class="p">, </span><span class="nx">metadatas</span><span class="p">:</span> <span class="nx">Optional[Sequence[IAppMetadataArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">strict_updates</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tables</span><span class="p">:</span> <span class="nx">Optional[Sequence[IAppTableArgs]]</span> = None<span class="p">, </span><span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_modified</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_prerequisite_errors</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">traffic_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[IAppVariableArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -943,7 +943,7 @@ The IApp resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#lists_python" style="color: inherit; text-decoration: inherit;">lists</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iapplist">List[IApp<wbr>List<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iapplist">Sequence[IApp<wbr>List<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -953,7 +953,7 @@ The IApp resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#metadatas_python" style="color: inherit; text-decoration: inherit;">metadatas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iappmetadata">List[IApp<wbr>Metadata<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iappmetadata">Sequence[IApp<wbr>Metadata<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -996,7 +996,7 @@ The IApp resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#tables_python" style="color: inherit; text-decoration: inherit;">tables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iapptable">List[IApp<wbr>Table<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iapptable">Sequence[IApp<wbr>Table<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1050,7 +1050,7 @@ The IApp resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#variables_python" style="color: inherit; text-decoration: inherit;">variables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iappvariable">List[IApp<wbr>Variable<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iappvariable">Sequence[IApp<wbr>Variable<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1153,7 +1153,7 @@ Get an existing IApp resource's state with the given name, ID, and optional extr
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">devicegroup</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">execute_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inherited_devicegroup</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inherited_traffic_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">jsonfile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lists</span><span class="p">:</span> <span class="nx">Optional[List[IAppListArgs]]</span> = None<span class="p">, </span><span class="nx">metadatas</span><span class="p">:</span> <span class="nx">Optional[List[IAppMetadataArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">strict_updates</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tables</span><span class="p">:</span> <span class="nx">Optional[List[IAppTableArgs]]</span> = None<span class="p">, </span><span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_modified</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_prerequisite_errors</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">traffic_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[List[IAppVariableArgs]]</span> = None<span class="p">) -&gt;</span> IApp</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">devicegroup</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">execute_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inherited_devicegroup</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inherited_traffic_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">jsonfile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[IAppListArgs]]</span> = None<span class="p">, </span><span class="nx">metadatas</span><span class="p">:</span> <span class="nx">Optional[Sequence[IAppMetadataArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">strict_updates</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tables</span><span class="p">:</span> <span class="nx">Optional[Sequence[IAppTableArgs]]</span> = None<span class="p">, </span><span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_modified</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_prerequisite_errors</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">traffic_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[IAppVariableArgs]]</span> = None<span class="p">) -&gt;</span> IApp</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1909,7 +1909,7 @@ The following state arguments are supported:
 <a href="#state_lists_python" style="color: inherit; text-decoration: inherit;">lists</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iapplist">List[IApp<wbr>List<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iapplist">Sequence[IApp<wbr>List<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1919,7 +1919,7 @@ The following state arguments are supported:
 <a href="#state_metadatas_python" style="color: inherit; text-decoration: inherit;">metadatas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iappmetadata">List[IApp<wbr>Metadata<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iappmetadata">Sequence[IApp<wbr>Metadata<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1962,7 +1962,7 @@ The following state arguments are supported:
 <a href="#state_tables_python" style="color: inherit; text-decoration: inherit;">tables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iapptable">List[IApp<wbr>Table<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iapptable">Sequence[IApp<wbr>Table<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2016,7 +2016,7 @@ The following state arguments are supported:
 <a href="#state_variables_python" style="color: inherit; text-decoration: inherit;">variables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iappvariable">List[IApp<wbr>Variable<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iappvariable">Sequence[IApp<wbr>Variable<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2455,7 +2455,7 @@ The following state arguments are supported:
 <a href="#column_names_python" style="color: inherit; text-decoration: inherit;">column_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2486,7 +2486,7 @@ The following state arguments are supported:
 <a href="#rows_python" style="color: inherit; text-decoration: inherit;">rows</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iapptablerow">List[IApp<wbr>Table<wbr>Row<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iapptablerow">Sequence[IApp<wbr>Table<wbr>Row<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2572,7 +2572,7 @@ The following state arguments are supported:
 <a href="#rows_python" style="color: inherit; text-decoration: inherit;">rows</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2764,6 +2764,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/terraform-providers/terraform-provider-bigip).</dd>
+	<dd>This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/F5Networks/terraform-provider-bigip).</dd>
 </dl>
 

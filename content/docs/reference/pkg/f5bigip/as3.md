@@ -29,8 +29,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
+        // Example Usage for json file
+        var as3_example1As3 = new F5BigIP.As3("as3-example1As3", new F5BigIP.As3Args
+        {
+            As3Json = File.ReadAllText("example1.json"),
+        });
         // Example Usage for json file with tenant filter
-        var as3_example1 = new F5BigIP.As3("as3-example1", new F5BigIP.As3Args
+        var as3_example1Index_as3As3 = new F5BigIP.As3("as3-example1Index/as3As3", new F5BigIP.As3Args
         {
             As3Json = File.ReadAllText("example2.json"),
             TenantFilter = "Sample_03",
@@ -51,8 +56,10 @@ Coming soon!
 import pulumi
 import pulumi_f5bigip as f5bigip
 
+# Example Usage for json file
+as3_example1_as3 = f5bigip.As3("as3-example1As3", as3_json=(lambda path: open(path).read())("example1.json"))
 # Example Usage for json file with tenant filter
-as3_example1 = f5bigip.As3("as3-example1",
+as3_example1_index_as3_as3 = f5bigip.As3("as3-example1Index/as3As3",
     as3_json=(lambda path: open(path).read())("example2.json"),
     tenant_filter="Sample_03")
 ```
@@ -64,11 +71,13 @@ as3_example1 = f5bigip.As3("as3-example1",
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as f5bigip from "@pulumi/f5bigip";
-import * as fs from "fs";
+import * from "fs";
 
+// Example Usage for json file
+const as3_example1As3 = new f5bigip.As3("as3-example1As3", {as3Json: fs.readFileSync("example1.json")});
 // Example Usage for json file with tenant filter
-const as3_example1 = new f5bigip.As3("as3-example1", {
-    as3Json: fs.readFileSync("example2.json", "utf-8"),
+const as3_example1Index_as3As3 = new f5bigip.As3("as3-example1Index/as3As3", {
+    as3Json: fs.readFileSync("example2.json"),
     tenantFilter: "Sample_03",
 });
 ```
@@ -974,6 +983,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/terraform-providers/terraform-provider-bigip).</dd>
+	<dd>This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/F5Networks/terraform-provider-bigip).</dd>
 </dl>
 

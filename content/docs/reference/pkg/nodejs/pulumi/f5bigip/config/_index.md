@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/f5bigip | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/f5bigip package."
-git_sha: "8b55f5296a18571ca9ad77618a8ba7e4f16f67a4"
+git_sha: "56393db822a2b0f207469fbcbaf3ddb6a9ea1f57"
 block_external_search_index: true
 ---
 
@@ -33,7 +33,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="address" data-link-title="address">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/8b55f5296a18571ca9ad77618a8ba7e4f16f67a4/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/56393db822a2b0f207469fbcbaf3ddb6a9ea1f57/sdk/nodejs/config/vars.ts#L12">
         let <strong>address</strong>
     </a>
 </h3>
@@ -43,7 +43,7 @@ block_external_search_index: true
 Domain name/IP of the BigIP
 
 <h3 class="pdoc-module-header" id="loginRef" data-link-title="loginRef">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/8b55f5296a18571ca9ad77618a8ba7e4f16f67a4/sdk/nodejs/config/vars.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/56393db822a2b0f207469fbcbaf3ddb6a9ea1f57/sdk/nodejs/config/vars.ts#L16">
         let <strong>loginRef</strong>
     </a>
 </h3>
@@ -53,7 +53,7 @@ Domain name/IP of the BigIP
 Login reference for token authentication (see BIG-IP REST docs for details)
 
 <h3 class="pdoc-module-header" id="password" data-link-title="password">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/8b55f5296a18571ca9ad77618a8ba7e4f16f67a4/sdk/nodejs/config/vars.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/56393db822a2b0f207469fbcbaf3ddb6a9ea1f57/sdk/nodejs/config/vars.ts#L20">
         let <strong>password</strong>
     </a>
 </h3>
@@ -63,7 +63,7 @@ Login reference for token authentication (see BIG-IP REST docs for details)
 The user's password
 
 <h3 class="pdoc-module-header" id="port" data-link-title="port">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/8b55f5296a18571ca9ad77618a8ba7e4f16f67a4/sdk/nodejs/config/vars.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/56393db822a2b0f207469fbcbaf3ddb6a9ea1f57/sdk/nodejs/config/vars.ts#L24">
         let <strong>port</strong>
     </a>
 </h3>
@@ -73,7 +73,7 @@ The user's password
 Management Port to connect to Bigip
 
 <h3 class="pdoc-module-header" id="teemDisable" data-link-title="teemDisable">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/8b55f5296a18571ca9ad77618a8ba7e4f16f67a4/sdk/nodejs/config/vars.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/56393db822a2b0f207469fbcbaf3ddb6a9ea1f57/sdk/nodejs/config/vars.ts#L28">
         let <strong>teemDisable</strong>
     </a>
 </h3>
@@ -83,7 +83,7 @@ Management Port to connect to Bigip
 If this flag set to true,sending telemetry data to TEEM will be disabled
 
 <h3 class="pdoc-module-header" id="tokenAuth" data-link-title="tokenAuth">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/8b55f5296a18571ca9ad77618a8ba7e4f16f67a4/sdk/nodejs/config/vars.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/56393db822a2b0f207469fbcbaf3ddb6a9ea1f57/sdk/nodejs/config/vars.ts#L32">
         let <strong>tokenAuth</strong>
     </a>
 </h3>
@@ -93,7 +93,7 @@ If this flag set to true,sending telemetry data to TEEM will be disabled
 Enable to use an external authentication source (LDAP, TACACS, etc)
 
 <h3 class="pdoc-module-header" id="username" data-link-title="username">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/8b55f5296a18571ca9ad77618a8ba7e4f16f67a4/sdk/nodejs/config/vars.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/56393db822a2b0f207469fbcbaf3ddb6a9ea1f57/sdk/nodejs/config/vars.ts#L36">
         let <strong>username</strong>
     </a>
 </h3>
