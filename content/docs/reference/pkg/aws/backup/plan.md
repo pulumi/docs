@@ -37,6 +37,17 @@ class MyStack : Stack
                     Schedule = "cron(0 12 * * ? *)",
                 },
             },
+            AdvancedBackupSettings = 
+            {
+                new Aws.Backup.Inputs.PlanAdvancedBackupSettingArgs
+                {
+                    BackupOptions = 
+                    {
+                        { "WindowsVSS", "enabled" },
+                    },
+                    ResourceType = "EC2",
+                },
+            },
         });
     }
 
@@ -64,6 +75,14 @@ func main() {
 					Schedule:        pulumi.String("cron(0 12 * * ? *)"),
 				},
 			},
+			AdvancedBackupSettings: backup.PlanAdvancedBackupSettingArray{
+				&backup.PlanAdvancedBackupSettingArgs{
+					BackupOptions: pulumi.StringMap{
+						"WindowsVSS": pulumi.String("enabled"),
+					},
+					ResourceType: pulumi.String("EC2"),
+				},
+			},
 		})
 		if err != nil {
 			return err
@@ -80,11 +99,18 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-example = aws.backup.Plan("example", rules=[aws.backup.PlanRuleArgs(
-    rule_name="tf_example_backup_rule",
-    target_vault_name=aws_backup_vault["test"]["name"],
-    schedule="cron(0 12 * * ? *)",
-)])
+example = aws.backup.Plan("example",
+    rules=[aws.backup.PlanRuleArgs(
+        rule_name="tf_example_backup_rule",
+        target_vault_name=aws_backup_vault["test"]["name"],
+        schedule="cron(0 12 * * ? *)",
+    )],
+    advanced_backup_settings=[aws.backup.PlanAdvancedBackupSettingArgs(
+        backup_options={
+            "WindowsVSS": "enabled",
+        },
+        resource_type="EC2",
+    )])
 ```
 
 {{% /example %}}
@@ -95,11 +121,19 @@ example = aws.backup.Plan("example", rules=[aws.backup.PlanRuleArgs(
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = new aws.backup.Plan("example", {rules: [{
-    ruleName: "tf_example_backup_rule",
-    targetVaultName: aws_backup_vault.test.name,
-    schedule: "cron(0 12 * * ? *)",
-}]});
+const example = new aws.backup.Plan("example", {
+    rules: [{
+        ruleName: "tf_example_backup_rule",
+        targetVaultName: aws_backup_vault.test.name,
+        schedule: "cron(0 12 * * ? *)",
+    }],
+    advancedBackupSettings: [{
+        backupOptions: {
+            WindowsVSS: "enabled",
+        },
+        resourceType: "EC2",
+    }],
+});
 ```
 
 {{% /example %}}
@@ -116,7 +150,7 @@ const example = new aws.backup.Plan("example", {rules: [{
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/backup/#pulumi_aws.backup.Plan">Plan</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[PlanRuleArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/backup/#pulumi_aws.backup.Plan">Plan</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">advanced_backup_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[PlanAdvancedBackupSettingArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[PlanRuleArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -301,6 +335,17 @@ The Plan resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
+        <span id="advancedbackupsettings_csharp">
+<a href="#advancedbackupsettings_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Backup<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#planadvancedbackupsetting">List&lt;Plan<wbr>Advanced<wbr>Backup<wbr>Setting<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An object that specifies backup options for each resource type.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -337,6 +382,17 @@ The Plan resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type"><a href="#planrule">[]Plan<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}A rule object that specifies a scheduled task that is used to back up a selection of resources.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="advancedbackupsettings_go">
+<a href="#advancedbackupsettings_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Backup<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#planadvancedbackupsetting">[]Plan<wbr>Advanced<wbr>Backup<wbr>Setting</a></span>
+    </dt>
+    <dd>{{% md %}}An object that specifies backup options for each resource type.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -381,6 +437,17 @@ The Plan resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
+        <span id="advancedbackupsettings_nodejs">
+<a href="#advancedbackupsettings_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Backup<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#planadvancedbackupsetting">Plan<wbr>Advanced<wbr>Backup<wbr>Setting[]</a></span>
+    </dt>
+    <dd>{{% md %}}An object that specifies backup options for each resource type.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -417,6 +484,17 @@ The Plan resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type"><a href="#planrule">Sequence[Plan<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A rule object that specifies a scheduled task that is used to back up a selection of resources.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="advanced_backup_settings_python">
+<a href="#advanced_backup_settings_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>backup_<wbr>settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#planadvancedbackupsetting">Sequence[Plan<wbr>Advanced<wbr>Backup<wbr>Setting<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}An object that specifies backup options for each resource type.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -628,7 +706,7 @@ Get an existing Plan resource's state with the given name, ID, and optional extr
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[PlanRuleArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Plan</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">advanced_backup_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[PlanAdvancedBackupSettingArgs]]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[PlanRuleArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Plan</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -744,6 +822,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_advancedbackupsettings_csharp">
+<a href="#state_advancedbackupsettings_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Backup<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#planadvancedbackupsetting">List&lt;Plan<wbr>Advanced<wbr>Backup<wbr>Setting<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An object that specifies backup options for each resource type.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
 </span> 
@@ -803,6 +892,17 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_advancedbackupsettings_go">
+<a href="#state_advancedbackupsettings_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Backup<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#planadvancedbackupsetting">[]Plan<wbr>Advanced<wbr>Backup<wbr>Setting</a></span>
+    </dt>
+    <dd>{{% md %}}An object that specifies backup options for each resource type.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -868,6 +968,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_advancedbackupsettings_nodejs">
+<a href="#state_advancedbackupsettings_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Backup<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#planadvancedbackupsetting">Plan<wbr>Advanced<wbr>Backup<wbr>Setting[]</a></span>
+    </dt>
+    <dd>{{% md %}}An object that specifies backup options for each resource type.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span> 
@@ -927,6 +1038,17 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_advanced_backup_settings_python">
+<a href="#state_advanced_backup_settings_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>backup_<wbr>settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#planadvancedbackupsetting">Sequence[Plan<wbr>Advanced<wbr>Backup<wbr>Setting<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}An object that specifies backup options for each resource type.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -996,6 +1118,140 @@ The following state arguments are supported:
 
 
 ## Supporting Types
+
+
+<h4 id="planadvancedbackupsetting">Plan<wbr>Advanced<wbr>Backup<wbr>Setting</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PlanAdvancedBackupSetting">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PlanAdvancedBackupSetting">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/backup?tab=doc#PlanAdvancedBackupSettingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/backup?tab=doc#PlanAdvancedBackupSettingOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Backup.Inputs.PlanAdvancedBackupSettingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Backup.Outputs.PlanAdvancedBackupSetting.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupoptions_csharp">
+<a href="#backupoptions_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Specifies the backup option for a selected resource. This option is only available for Windows VSS backup jobs. Set to `{ WindowsVSS = "enabled" }` to enable Windows VSS backup option and create a VSS Windows backup.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcetype_csharp">
+<a href="#resourcetype_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of AWS resource to be backed up. For VSS Windows backups, the only supported resource type is Amazon EC2. Valid values: `EC2`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupoptions_go">
+<a href="#backupoptions_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the backup option for a selected resource. This option is only available for Windows VSS backup jobs. Set to `{ WindowsVSS = "enabled" }` to enable Windows VSS backup option and create a VSS Windows backup.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcetype_go">
+<a href="#resourcetype_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of AWS resource to be backed up. For VSS Windows backups, the only supported resource type is Amazon EC2. Valid values: `EC2`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupoptions_nodejs">
+<a href="#backupoptions_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Specifies the backup option for a selected resource. This option is only available for Windows VSS backup jobs. Set to `{ WindowsVSS = "enabled" }` to enable Windows VSS backup option and create a VSS Windows backup.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcetype_nodejs">
+<a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of AWS resource to be backed up. For VSS Windows backups, the only supported resource type is Amazon EC2. Valid values: `EC2`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backup_options_python">
+<a href="#backup_options_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Specifies the backup option for a selected resource. This option is only available for Windows VSS backup jobs. Set to `{ WindowsVSS = "enabled" }` to enable Windows VSS backup option and create a VSS Windows backup.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resource_type_python">
+<a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of AWS resource to be backed up. For VSS Windows backups, the only supported resource type is Amazon EC2. Valid values: `EC2`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
 
 
 <h4 id="planrule">Plan<wbr>Rule</h4>

@@ -26,6 +26,7 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
     <li><a href="appsync/" title="appsync"><span class="symbol module"></span>appsync</a></li>
     <li><a href="athena/" title="athena"><span class="symbol module"></span>athena</a></li>
     <li><a href="autoscaling/" title="autoscaling"><span class="symbol module"></span>autoscaling</a></li>
+    <li><a href="autoscalingplans/" title="autoscalingplans"><span class="symbol module"></span>autoscalingplans</a></li>
     <li><a href="backup/" title="backup"><span class="symbol module"></span>backup</a></li>
     <li><a href="batch/" title="batch"><span class="symbol module"></span>batch</a></li>
     <li><a href="budgets/" title="budgets"><span class="symbol module"></span>budgets</a></li>
@@ -81,6 +82,7 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
     <li><a href="inspector/" title="inspector"><span class="symbol module"></span>inspector</a></li>
     <li><a href="iot/" title="iot"><span class="symbol module"></span>iot</a></li>
     <li><a href="kinesis/" title="kinesis"><span class="symbol module"></span>kinesis</a></li>
+    <li><a href="kinesisanalyticsv2/" title="kinesisanalyticsv2"><span class="symbol module"></span>kinesisanalyticsv2</a></li>
     <li><a href="kms/" title="kms"><span class="symbol module"></span>kms</a></li>
     <li><a href="lambda/" title="lambda"><span class="symbol module"></span>lambda</a></li>
     <li><a href="lb/" title="lb"><span class="symbol module"></span>lb</a></li>
@@ -164,7 +166,7 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.7.0</dd>
+	<dd>3.10.0</dd>
 </dl>
 
 

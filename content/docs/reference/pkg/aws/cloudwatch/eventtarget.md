@@ -2934,6 +2934,9 @@ that is used for extracting part of the matched event when passing it to the tar
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key value pairs specified in the form of JSONPath (for example, time = $.time)
+* You can have as many as 10 key-value pairs.
+* You must use JSON dot notation, not bracket notation.
+* The keys can't start with "AWS".
 {{% /md %}}</dd>
 
 </dl>
@@ -2963,6 +2966,9 @@ that is used for extracting part of the matched event when passing it to the tar
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key value pairs specified in the form of JSONPath (for example, time = $.time)
+* You can have as many as 10 key-value pairs.
+* You must use JSON dot notation, not bracket notation.
+* The keys can't start with "AWS".
 {{% /md %}}</dd>
 
 </dl>
@@ -2992,6 +2998,9 @@ that is used for extracting part of the matched event when passing it to the tar
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key value pairs specified in the form of JSONPath (for example, time = $.time)
+* You can have as many as 10 key-value pairs.
+* You must use JSON dot notation, not bracket notation.
+* The keys can't start with "AWS".
 {{% /md %}}</dd>
 
 </dl>
@@ -3021,6 +3030,9 @@ that is used for extracting part of the matched event when passing it to the tar
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs specified in the form of JSONPath (for example, time = $.time)
+* You can have as many as 10 key-value pairs.
+* You must use JSON dot notation, not bracket notation.
+* The keys can't start with "AWS".
 {{% /md %}}</dd>
 
 </dl>
