@@ -1511,7 +1511,7 @@ Either this or destination_exchange must be specified but not both.
 <a href="#prefetch_count_python" style="color: inherit; text-decoration: inherit;">prefetch_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of unacknowledged messages copied over a shovel at any one time.
 Defaults to `1000`.
@@ -1523,7 +1523,7 @@ Defaults to `1000`.
 <a href="#reconnect_delay_python" style="color: inherit; text-decoration: inherit;">reconnect_<wbr>delay</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The duration in seconds to reconnect to a broker after disconnected.
 Defaults to `1`.

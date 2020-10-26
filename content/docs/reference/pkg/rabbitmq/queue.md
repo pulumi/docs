@@ -207,10 +207,16 @@ import (
 
 	"github.com/pulumi/pulumi-rabbitmq/sdk/v2/go/rabbitmq"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		cfg := config.New(ctx, "")
+		arguments := fmt.Sprintf("%v%v%v%v", "{\n", "  \"x-message-ttl\": 5000\n", "}\n", "\n")
+		if param := cfg.Get("arguments"); param != "" {
+			arguments = param
+		}
 		testVHost, err := rabbitmq.NewVHost(ctx, "testVHost", nil)
 		if err != nil {
 			return err
