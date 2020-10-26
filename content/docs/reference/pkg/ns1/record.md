@@ -27,7 +27,7 @@ Provides a NS1 Record resource. This can be used to create, modify, and delete r
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_ns1/#pulumi_ns1.Record">Record</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">answers</span><span class="p">:</span> <span class="nx">Optional[List[RecordAnswerArgs]]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[RecordFilterArgs]]</span> = None<span class="p">, </span><span class="nx">link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">meta</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">regions</span><span class="p">:</span> <span class="nx">Optional[List[RecordRegionArgs]]</span> = None<span class="p">, </span><span class="nx">short_answers</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_client_subnet</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_ns1/#pulumi_ns1.Record">Record</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">answers</span><span class="p">:</span> <span class="nx">Optional[Sequence[RecordAnswerArgs]]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[RecordFilterArgs]]</span> = None<span class="p">, </span><span class="nx">link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">meta</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">regions</span><span class="p">:</span> <span class="nx">Optional[Sequence[RecordRegionArgs]]</span> = None<span class="p">, </span><span class="nx">short_answers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_client_subnet</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -651,7 +651,7 @@ trailing dots (".") - see the example above and `FQDN formatting` below.
 <a href="#answers_python" style="color: inherit; text-decoration: inherit;">answers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordanswer">List[Record<wbr>Answer<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recordanswer">Sequence[Record<wbr>Answer<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more NS1 answers for the records' specified type.
 Answers are documented below.
@@ -663,7 +663,7 @@ Answers are documented below.
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordfilter">List[Record<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recordfilter">Sequence[Record<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more NS1 filters for the record(order matters).
 Filters are documented below.
@@ -697,7 +697,7 @@ Filters are documented below.
 <a href="#regions_python" style="color: inherit; text-decoration: inherit;">regions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordregion">List[Record<wbr>Region<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recordregion">Sequence[Record<wbr>Region<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more "regions" for the record. These are really
 just groupings based on metadata, and are called "Answer Groups" in the NS1 UI,
@@ -711,7 +711,7 @@ documented below. Please note the ordering requirement!
 <a href="#short_answers_python" style="color: inherit; text-decoration: inherit;">short_<wbr>answers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release. It is suggested to migrate to a regular &#34;answers&#34; block.{{% /md %}}</p></dd>
 
@@ -721,7 +721,7 @@ documented below. Please note the ordering requirement!
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The records' time to live (in seconds).
 {{% /md %}}</dd>
@@ -839,7 +839,7 @@ Get an existing Record resource's state with the given name, ID, and optional ex
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">answers</span><span class="p">:</span> <span class="nx">Optional[List[RecordAnswerArgs]]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[RecordFilterArgs]]</span> = None<span class="p">, </span><span class="nx">link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">meta</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">regions</span><span class="p">:</span> <span class="nx">Optional[List[RecordRegionArgs]]</span> = None<span class="p">, </span><span class="nx">short_answers</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_client_subnet</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Record</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">answers</span><span class="p">:</span> <span class="nx">Optional[Sequence[RecordAnswerArgs]]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[RecordFilterArgs]]</span> = None<span class="p">, </span><span class="nx">link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">meta</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">regions</span><span class="p">:</span> <span class="nx">Optional[Sequence[RecordRegionArgs]]</span> = None<span class="p">, </span><span class="nx">short_answers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_client_subnet</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Record</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1370,7 +1370,7 @@ trailing dots (".") - see the example above and `FQDN formatting` below.
 <a href="#state_answers_python" style="color: inherit; text-decoration: inherit;">answers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordanswer">List[Record<wbr>Answer<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recordanswer">Sequence[Record<wbr>Answer<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more NS1 answers for the records' specified type.
 Answers are documented below.
@@ -1394,7 +1394,7 @@ dots - see the example above and `FQDN formatting` below.
 <a href="#state_filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordfilter">List[Record<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recordfilter">Sequence[Record<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more NS1 filters for the record(order matters).
 Filters are documented below.
@@ -1428,7 +1428,7 @@ Filters are documented below.
 <a href="#state_regions_python" style="color: inherit; text-decoration: inherit;">regions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordregion">List[Record<wbr>Region<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recordregion">Sequence[Record<wbr>Region<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more "regions" for the record. These are really
 just groupings based on metadata, and are called "Answer Groups" in the NS1 UI,
@@ -1442,7 +1442,7 @@ documented below. Please note the ordering requirement!
 <a href="#state_short_answers_python" style="color: inherit; text-decoration: inherit;">short_<wbr>answers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release. It is suggested to migrate to a regular &#34;answers&#34; block.{{% /md %}}</p></dd>
 
@@ -1452,7 +1452,7 @@ documented below. Please note the ordering requirement!
 <a href="#state_ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The records' time to live (in seconds).
 {{% /md %}}</dd>

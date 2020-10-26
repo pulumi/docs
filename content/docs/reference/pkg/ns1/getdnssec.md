@@ -578,7 +578,7 @@ below.
 <a href="#dnskeys_python" style="color: inherit; text-decoration: inherit;">dnskeys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdnssecdelegationdnskey">List[Get<wbr>DNSSec<wbr>Delegation<wbr>Dnskey<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getdnssecdelegationdnskey">Sequence[Get<wbr>DNSSec<wbr>Delegation<wbr>Dnskey<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(Computed) List of Keys. Key is documented below.
 {{% /md %}}</dd>
@@ -589,7 +589,7 @@ below.
 <a href="#ds_python" style="color: inherit; text-decoration: inherit;">ds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdnssecdelegationd">List[Get<wbr>DNSSec<wbr>Delegation<wbr>DArgs]</a></span>
+        <span class="property-type"><a href="#getdnssecdelegationd">Sequence[Get<wbr>DNSSec<wbr>Delegation<wbr>DArgs]</a></span>
     </dt>
     <dd>{{% md %}}(Computed) List of Keys. Key is documented below.
 {{% /md %}}</dd>
@@ -600,7 +600,7 @@ below.
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}(Computed) TTL for the Keys (int).
 {{% /md %}}</dd>
@@ -1167,7 +1167,7 @@ below.
 <a href="#dnskeys_python" style="color: inherit; text-decoration: inherit;">dnskeys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdnsseckeysdnskey">List[Get<wbr>DNSSec<wbr>Keys<wbr>Dnskey<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getdnsseckeysdnskey">Sequence[Get<wbr>DNSSec<wbr>Keys<wbr>Dnskey<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(Computed) List of Keys. Key is documented below.
 {{% /md %}}</dd>
@@ -1178,7 +1178,7 @@ below.
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}(Computed) TTL for the Keys (int).
 {{% /md %}}</dd>

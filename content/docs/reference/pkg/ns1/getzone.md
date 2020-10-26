@@ -101,7 +101,7 @@ const example = pulumi.output(ns1.getZone({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_zone(</span><span class="nx">additional_primaries</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetZoneResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_zone(</span><span class="nx">additional_primaries</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetZoneResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -235,7 +235,7 @@ zone.
 <a href="#additional_primaries_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>primaries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of additional IPv4 addresses for the primary
 zone.
@@ -811,7 +811,7 @@ zone.
 <a href="#expiry_python" style="color: inherit; text-decoration: inherit;">expiry</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The SOA Expiry.
 {{% /md %}}</dd>
@@ -855,7 +855,7 @@ zone.
 <a href="#networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}List of network IDs (`int`) for which the zone should be made
 available. Default is network 0, the primary NSONE Global Network.
@@ -867,7 +867,7 @@ available. Default is network 0, the primary NSONE Global Network.
 <a href="#nx_ttl_python" style="color: inherit; text-decoration: inherit;">nx_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The SOA NX TTL.
 {{% /md %}}</dd>
@@ -889,7 +889,7 @@ available. Default is network 0, the primary NSONE Global Network.
 <a href="#refresh_python" style="color: inherit; text-decoration: inherit;">refresh</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The SOA Refresh.
 {{% /md %}}</dd>
@@ -900,7 +900,7 @@ available. Default is network 0, the primary NSONE Global Network.
 <a href="#retry_python" style="color: inherit; text-decoration: inherit;">retry</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The SOA Retry.
 {{% /md %}}</dd>
@@ -911,7 +911,7 @@ available. Default is network 0, the primary NSONE Global Network.
 <a href="#secondaries_python" style="color: inherit; text-decoration: inherit;">secondaries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getzonesecondary">List[Get<wbr>Zone<wbr>Secondary]</a></span>
+        <span class="property-type"><a href="#getzonesecondary">Sequence[Get<wbr>Zone<wbr>Secondary]</a></span>
     </dt>
     <dd>{{% md %}}List of secondary servers. Secondaries is
 documented below.
@@ -923,7 +923,7 @@ documented below.
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The SOA TTL.
 {{% /md %}}</dd>
@@ -944,7 +944,7 @@ documented below.
 <a href="#additional_primaries_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>primaries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of additional IPv4 addresses for the primary
 zone.
@@ -1157,7 +1157,7 @@ when the zone changes. Default `false`.
 <a href="#networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}List of network IDs (`int`) for which the zone should be made
 available. Default is network 0, the primary NSONE Global Network.
@@ -1181,7 +1181,7 @@ when the zone changes. Default `false`.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Port of the the secondary server. Default `53`.
 {{% /md %}}</dd>
