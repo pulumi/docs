@@ -454,7 +454,7 @@ const example = new spotinst.gcp.Elastigroup("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/gcp/#pulumi_spotinst.gcp.Elastigroup">Elastigroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_healing</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">backend_services</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupBackendServiceArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupDiskArgs]]</span> = None<span class="p">, </span><span class="nx">draining_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">fallback_to_ondemand</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gpu</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupGpuArgs]]</span> = None<span class="p">, </span><span class="nx">health_check_grace_period</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">health_check_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_customs</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupInstanceTypesCustomArgs]]</span> = None<span class="p">, </span><span class="nx">instance_types_ondemand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_preemptibles</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">integration_docker_swarm</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationDockerSwarmArgs]</span> = None<span class="p">, </span><span class="nx">integration_gke</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationGkeArgs]</span> = None<span class="p">, </span><span class="nx">ip_forwarding</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupLabelArgs]]</span> = None<span class="p">, </span><span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">metadatas</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupMetadataArgs]]</span> = None<span class="p">, </span><span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">ondemand_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">preemptible_percentage</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupScalingDownPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_up_policies</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupScalingUpPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupScheduledTaskArgs]]</span> = None<span class="p">, </span><span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shutdown_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">startup_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnets</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupSubnetArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">unhealthy_duration</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/gcp/#pulumi_spotinst.gcp.Elastigroup">Elastigroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_healing</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">backend_services</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupBackendServiceArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupDiskArgs]]</span> = None<span class="p">, </span><span class="nx">draining_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">fallback_to_ondemand</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gpu</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupGpuArgs]]</span> = None<span class="p">, </span><span class="nx">health_check_grace_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">health_check_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_customs</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupInstanceTypesCustomArgs]]</span> = None<span class="p">, </span><span class="nx">instance_types_ondemand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_preemptibles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">integration_docker_swarm</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationDockerSwarmArgs]</span> = None<span class="p">, </span><span class="nx">integration_gke</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationGkeArgs]</span> = None<span class="p">, </span><span class="nx">ip_forwarding</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupLabelArgs]]</span> = None<span class="p">, </span><span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">metadatas</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupMetadataArgs]]</span> = None<span class="p">, </span><span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">ondemand_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">preemptible_percentage</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingDownPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_up_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingUpPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScheduledTaskArgs]]</span> = None<span class="p">, </span><span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shutdown_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">startup_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnets</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupSubnetArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">unhealthy_duration</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1730,7 +1730,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#desired_capacity_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The desired number of instances the group should have at any time.
 {{% /md %}}</dd>
@@ -1751,7 +1751,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#availability_zones_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zones</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of availability zones for the group.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field will soon be handled by Region in Subnets{{% /md %}}</p></dd>
@@ -1762,7 +1762,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#backend_services_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupbackendservice">List[Elastigroup<wbr>Backend<wbr>Service<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupbackendservice">Sequence[Elastigroup<wbr>Backend<wbr>Service<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1783,7 +1783,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#disks_python" style="color: inherit; text-decoration: inherit;">disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupdisk">List[Elastigroup<wbr>Disk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupdisk">Sequence[Elastigroup<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1793,7 +1793,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#draining_timeout_python" style="color: inherit; text-decoration: inherit;">draining_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Time (seconds) the instance is allowed to run after it is detached from the group. This is to allow the instance time to drain all the current TCP connections before terminating it.
 {{% /md %}}</dd>
@@ -1815,7 +1815,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#gpu_python" style="color: inherit; text-decoration: inherit;">gpu</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupgpu">List[Elastigroup<wbr>Gpu<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupgpu">Sequence[Elastigroup<wbr>Gpu<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1825,7 +1825,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#health_check_grace_period_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>grace_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1845,7 +1845,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#instance_types_customs_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>types_<wbr>customs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupinstancetypescustom">List[Elastigroup<wbr>Instance<wbr>Types<wbr>Custom<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupinstancetypescustom">Sequence[Elastigroup<wbr>Instance<wbr>Types<wbr>Custom<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Defines a set of custom instance types. Required if instance_types_preemptible and instance_types_ondemand are not set.
 {{% /md %}}</dd>
@@ -1867,7 +1867,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#instance_types_preemptibles_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>types_<wbr>preemptibles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The preemptible VMs instance type. To maximize cost savings and market availability, select as many types as possible. Required if instance_types_ondemand is not set.
 {{% /md %}}</dd>
@@ -1908,7 +1908,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigrouplabel">List[Elastigroup<wbr>Label<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigrouplabel">Sequence[Elastigroup<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of objects with key-value pairs.
 {{% /md %}}</dd>
@@ -1919,7 +1919,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#max_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of instances the group should have at any time.
 {{% /md %}}</dd>
@@ -1930,7 +1930,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#metadatas_python" style="color: inherit; text-decoration: inherit;">metadatas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupmetadata">List[Elastigroup<wbr>Metadata<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupmetadata">Sequence[Elastigroup<wbr>Metadata<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of objects with key-value pairs.
 {{% /md %}}</dd>
@@ -1941,7 +1941,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#min_size_python" style="color: inherit; text-decoration: inherit;">min_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of instances the group should have at any time.
 {{% /md %}}</dd>
@@ -1963,7 +1963,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupnetworkinterface">List[Elastigroup<wbr>Network<wbr>Interface<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupnetworkinterface">Sequence[Elastigroup<wbr>Network<wbr>Interface<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1973,7 +1973,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#ondemand_count_python" style="color: inherit; text-decoration: inherit;">ondemand_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1983,7 +1983,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#preemptible_percentage_python" style="color: inherit; text-decoration: inherit;">preemptible_<wbr>percentage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Percentage of Preemptible VMs to spin up from the "desired_capacity".
 {{% /md %}}</dd>
@@ -1994,7 +1994,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#scaling_down_policies_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>down_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalingdownpolicy">List[Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupscalingdownpolicy">Sequence[Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2004,7 +2004,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#scaling_up_policies_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>up_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalinguppolicy">List[Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupscalinguppolicy">Sequence[Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2014,7 +2014,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#scheduled_tasks_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>tasks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscheduledtask">List[Elastigroup<wbr>Scheduled<wbr>Task<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupscheduledtask">Sequence[Elastigroup<wbr>Scheduled<wbr>Task<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2057,7 +2057,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupsubnet">List[Elastigroup<wbr>Subnet<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupsubnet">Sequence[Elastigroup<wbr>Subnet<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of regions and subnets.
 {{% /md %}}</dd>
@@ -2068,7 +2068,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Tags to mark created instances.
 {{% /md %}}</dd>
@@ -2079,7 +2079,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#unhealthy_duration_python" style="color: inherit; text-decoration: inherit;">unhealthy_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2182,7 +2182,7 @@ Get an existing Elastigroup resource's state with the given name, ID, and option
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_healing</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">backend_services</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupBackendServiceArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupDiskArgs]]</span> = None<span class="p">, </span><span class="nx">draining_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">fallback_to_ondemand</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gpu</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupGpuArgs]]</span> = None<span class="p">, </span><span class="nx">health_check_grace_period</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">health_check_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_customs</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupInstanceTypesCustomArgs]]</span> = None<span class="p">, </span><span class="nx">instance_types_ondemand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_preemptibles</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">integration_docker_swarm</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationDockerSwarmArgs]</span> = None<span class="p">, </span><span class="nx">integration_gke</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationGkeArgs]</span> = None<span class="p">, </span><span class="nx">ip_forwarding</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupLabelArgs]]</span> = None<span class="p">, </span><span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">metadatas</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupMetadataArgs]]</span> = None<span class="p">, </span><span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">ondemand_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">preemptible_percentage</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupScalingDownPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_up_policies</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupScalingUpPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupScheduledTaskArgs]]</span> = None<span class="p">, </span><span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shutdown_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">startup_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnets</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupSubnetArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">unhealthy_duration</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">) -&gt;</span> Elastigroup</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_healing</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">backend_services</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupBackendServiceArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupDiskArgs]]</span> = None<span class="p">, </span><span class="nx">draining_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">fallback_to_ondemand</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gpu</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupGpuArgs]]</span> = None<span class="p">, </span><span class="nx">health_check_grace_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">health_check_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_customs</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupInstanceTypesCustomArgs]]</span> = None<span class="p">, </span><span class="nx">instance_types_ondemand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_preemptibles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">integration_docker_swarm</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationDockerSwarmArgs]</span> = None<span class="p">, </span><span class="nx">integration_gke</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationGkeArgs]</span> = None<span class="p">, </span><span class="nx">ip_forwarding</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupLabelArgs]]</span> = None<span class="p">, </span><span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">metadatas</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupMetadataArgs]]</span> = None<span class="p">, </span><span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">ondemand_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">preemptible_percentage</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingDownPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_up_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingUpPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScheduledTaskArgs]]</span> = None<span class="p">, </span><span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shutdown_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">startup_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnets</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupSubnetArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">unhealthy_duration</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> Elastigroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3410,7 +3410,7 @@ The following state arguments are supported:
 <a href="#state_availability_zones_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zones</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of availability zones for the group.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field will soon be handled by Region in Subnets{{% /md %}}</p></dd>
@@ -3421,7 +3421,7 @@ The following state arguments are supported:
 <a href="#state_backend_services_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupbackendservice">List[Elastigroup<wbr>Backend<wbr>Service<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupbackendservice">Sequence[Elastigroup<wbr>Backend<wbr>Service<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3442,7 +3442,7 @@ The following state arguments are supported:
 <a href="#state_desired_capacity_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The desired number of instances the group should have at any time.
 {{% /md %}}</dd>
@@ -3453,7 +3453,7 @@ The following state arguments are supported:
 <a href="#state_disks_python" style="color: inherit; text-decoration: inherit;">disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupdisk">List[Elastigroup<wbr>Disk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupdisk">Sequence[Elastigroup<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3463,7 +3463,7 @@ The following state arguments are supported:
 <a href="#state_draining_timeout_python" style="color: inherit; text-decoration: inherit;">draining_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Time (seconds) the instance is allowed to run after it is detached from the group. This is to allow the instance time to drain all the current TCP connections before terminating it.
 {{% /md %}}</dd>
@@ -3485,7 +3485,7 @@ The following state arguments are supported:
 <a href="#state_gpu_python" style="color: inherit; text-decoration: inherit;">gpu</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupgpu">List[Elastigroup<wbr>Gpu<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupgpu">Sequence[Elastigroup<wbr>Gpu<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3495,7 +3495,7 @@ The following state arguments are supported:
 <a href="#state_health_check_grace_period_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>grace_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3515,7 +3515,7 @@ The following state arguments are supported:
 <a href="#state_instance_types_customs_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>types_<wbr>customs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupinstancetypescustom">List[Elastigroup<wbr>Instance<wbr>Types<wbr>Custom<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupinstancetypescustom">Sequence[Elastigroup<wbr>Instance<wbr>Types<wbr>Custom<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Defines a set of custom instance types. Required if instance_types_preemptible and instance_types_ondemand are not set.
 {{% /md %}}</dd>
@@ -3537,7 +3537,7 @@ The following state arguments are supported:
 <a href="#state_instance_types_preemptibles_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>types_<wbr>preemptibles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The preemptible VMs instance type. To maximize cost savings and market availability, select as many types as possible. Required if instance_types_ondemand is not set.
 {{% /md %}}</dd>
@@ -3578,7 +3578,7 @@ The following state arguments are supported:
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigrouplabel">List[Elastigroup<wbr>Label<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigrouplabel">Sequence[Elastigroup<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of objects with key-value pairs.
 {{% /md %}}</dd>
@@ -3589,7 +3589,7 @@ The following state arguments are supported:
 <a href="#state_max_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of instances the group should have at any time.
 {{% /md %}}</dd>
@@ -3600,7 +3600,7 @@ The following state arguments are supported:
 <a href="#state_metadatas_python" style="color: inherit; text-decoration: inherit;">metadatas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupmetadata">List[Elastigroup<wbr>Metadata<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupmetadata">Sequence[Elastigroup<wbr>Metadata<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of objects with key-value pairs.
 {{% /md %}}</dd>
@@ -3611,7 +3611,7 @@ The following state arguments are supported:
 <a href="#state_min_size_python" style="color: inherit; text-decoration: inherit;">min_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of instances the group should have at any time.
 {{% /md %}}</dd>
@@ -3633,7 +3633,7 @@ The following state arguments are supported:
 <a href="#state_network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupnetworkinterface">List[Elastigroup<wbr>Network<wbr>Interface<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupnetworkinterface">Sequence[Elastigroup<wbr>Network<wbr>Interface<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3643,7 +3643,7 @@ The following state arguments are supported:
 <a href="#state_ondemand_count_python" style="color: inherit; text-decoration: inherit;">ondemand_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3653,7 +3653,7 @@ The following state arguments are supported:
 <a href="#state_preemptible_percentage_python" style="color: inherit; text-decoration: inherit;">preemptible_<wbr>percentage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Percentage of Preemptible VMs to spin up from the "desired_capacity".
 {{% /md %}}</dd>
@@ -3664,7 +3664,7 @@ The following state arguments are supported:
 <a href="#state_scaling_down_policies_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>down_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalingdownpolicy">List[Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupscalingdownpolicy">Sequence[Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3674,7 +3674,7 @@ The following state arguments are supported:
 <a href="#state_scaling_up_policies_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>up_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalinguppolicy">List[Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupscalinguppolicy">Sequence[Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3684,7 +3684,7 @@ The following state arguments are supported:
 <a href="#state_scheduled_tasks_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>tasks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscheduledtask">List[Elastigroup<wbr>Scheduled<wbr>Task<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupscheduledtask">Sequence[Elastigroup<wbr>Scheduled<wbr>Task<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3727,7 +3727,7 @@ The following state arguments are supported:
 <a href="#state_subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupsubnet">List[Elastigroup<wbr>Subnet<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupsubnet">Sequence[Elastigroup<wbr>Subnet<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of regions and subnets.
 {{% /md %}}</dd>
@@ -3738,7 +3738,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Tags to mark created instances.
 {{% /md %}}</dd>
@@ -3749,7 +3749,7 @@ The following state arguments are supported:
 <a href="#state_unhealthy_duration_python" style="color: inherit; text-decoration: inherit;">unhealthy_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3953,7 +3953,7 @@ The following state arguments are supported:
 <a href="#named_ports_python" style="color: inherit; text-decoration: inherit;">named_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupbackendservicenamedport">List[Elastigroup<wbr>Backend<wbr>Service<wbr>Named<wbr>Port<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupbackendservicenamedport">Sequence[Elastigroup<wbr>Backend<wbr>Service<wbr>Named<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4093,7 +4093,7 @@ The following state arguments are supported:
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4419,7 +4419,7 @@ The following state arguments are supported:
 <a href="#initialize_params_python" style="color: inherit; text-decoration: inherit;">initialize_<wbr>params</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupdiskinitializeparam">List[Elastigroup<wbr>Disk<wbr>Initialize<wbr>Param<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupdiskinitializeparam">Sequence[Elastigroup<wbr>Disk<wbr>Initialize<wbr>Param<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4741,7 +4741,7 @@ The following state arguments are supported:
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4870,7 +4870,7 @@ The following state arguments are supported:
 <a href="#memory_gib_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>gib</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The memory (in GiB) in the custom instance types. GCP has a number of limitations on accepted memory values.For more information, see the GCP documentation (here.)[https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#specifications]
 {{% /md %}}</dd>
@@ -4881,7 +4881,7 @@ The following state arguments are supported:
 <a href="#vcpu_python" style="color: inherit; text-decoration: inherit;">vcpu</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5007,7 +5007,7 @@ The following state arguments are supported:
 <a href="#master_port_python" style="color: inherit; text-decoration: inherit;">master_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5343,7 +5343,7 @@ The following state arguments are supported:
 <a href="#autoscale_cooldown_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>cooldown</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5393,7 +5393,7 @@ The following state arguments are supported:
 <a href="#autoscale_labels_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationgkeautoscalelabel">List[Elastigroup<wbr>Integration<wbr>Gke<wbr>Autoscale<wbr>Label<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationgkeautoscalelabel">Sequence[Elastigroup<wbr>Integration<wbr>Gke<wbr>Autoscale<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5499,7 +5499,7 @@ The following state arguments are supported:
 <a href="#evaluation_periods_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>periods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5645,7 +5645,7 @@ The following state arguments are supported:
 <a href="#cpu_per_unit_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>per_<wbr>unit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5655,7 +5655,7 @@ The following state arguments are supported:
 <a href="#memory_per_unit_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>per_<wbr>unit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5665,7 +5665,7 @@ The following state arguments are supported:
 <a href="#num_of_units_python" style="color: inherit; text-decoration: inherit;">num_<wbr>of_<wbr>units</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6223,7 +6223,7 @@ The following state arguments are supported:
 <a href="#access_configs_python" style="color: inherit; text-decoration: inherit;">access_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupnetworkinterfaceaccessconfig">List[Elastigroup<wbr>Network<wbr>Interface<wbr>Access<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupnetworkinterfaceaccessconfig">Sequence[Elastigroup<wbr>Network<wbr>Interface<wbr>Access<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6233,7 +6233,7 @@ The following state arguments are supported:
 <a href="#alias_ip_ranges_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>ip_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupnetworkinterfacealiasiprange">List[Elastigroup<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupnetworkinterfacealiasiprange">Sequence[Elastigroup<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7025,7 +7025,7 @@ The following state arguments are supported:
 <a href="#adjustment_python" style="color: inherit; text-decoration: inherit;">adjustment</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7035,7 +7035,7 @@ The following state arguments are supported:
 <a href="#cooldown_python" style="color: inherit; text-decoration: inherit;">cooldown</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7045,7 +7045,7 @@ The following state arguments are supported:
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalingdownpolicydimension">List[Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Dimension<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupscalingdownpolicydimension">Sequence[Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Dimension<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7055,7 +7055,7 @@ The following state arguments are supported:
 <a href="#evaluation_periods_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>periods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7075,7 +7075,7 @@ The following state arguments are supported:
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7765,7 +7765,7 @@ The following state arguments are supported:
 <a href="#adjustment_python" style="color: inherit; text-decoration: inherit;">adjustment</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7775,7 +7775,7 @@ The following state arguments are supported:
 <a href="#cooldown_python" style="color: inherit; text-decoration: inherit;">cooldown</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7785,7 +7785,7 @@ The following state arguments are supported:
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalinguppolicydimension">List[Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Dimension<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupscalinguppolicydimension">Sequence[Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Dimension<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7795,7 +7795,7 @@ The following state arguments are supported:
 <a href="#evaluation_periods_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>periods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7815,7 +7815,7 @@ The following state arguments are supported:
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8388,7 +8388,7 @@ The following state arguments are supported:
 <a href="#subnet_names_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The names of the subnets in the region.
 {{% /md %}}</dd>

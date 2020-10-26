@@ -22,7 +22,7 @@ meta_desc: "Explore the Elastigroup resource of the aws module, including exampl
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/aws/#pulumi_spotinst.aws.Elastigroup">Elastigroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">block_devices_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">capacity_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_credits</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">draining_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupEbsBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">elastic_ips</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">elastic_load_balancers</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">enable_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ephemeral_block_devices</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupEphemeralBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">fallback_to_ondemand</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">health_check_grace_period</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">health_check_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_check_unhealthy_duration_before_replacement</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_ondemand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_preferred_spots</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">instance_types_spots</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">instance_types_weights</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupInstanceTypesWeightArgs]]</span> = None<span class="p">, </span><span class="nx">integration_beanstalk</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationBeanstalkArgs]</span> = None<span class="p">, </span><span class="nx">integration_codedeploy</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationCodedeployArgs]</span> = None<span class="p">, </span><span class="nx">integration_docker_swarm</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationDockerSwarmArgs]</span> = None<span class="p">, </span><span class="nx">integration_ecs</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationEcsArgs]</span> = None<span class="p">, </span><span class="nx">integration_gitlab</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationGitlabArgs]</span> = None<span class="p">, </span><span class="nx">integration_kubernetes</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationKubernetesArgs]</span> = None<span class="p">, </span><span class="nx">integration_mesosphere</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationMesosphereArgs]</span> = None<span class="p">, </span><span class="nx">integration_multai_runtime</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationMultaiRuntimeArgs]</span> = None<span class="p">, </span><span class="nx">integration_nomad</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationNomadArgs]</span> = None<span class="p">, </span><span class="nx">integration_rancher</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationRancherArgs]</span> = None<span class="p">, </span><span class="nx">integration_route53</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationRoute53Args]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lifetime_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">multai_target_sets</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupMultaiTargetSetArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">ondemand_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">orientation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">persist_block_devices</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">persist_private_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">persist_root_device</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">placement_tenancy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preferred_availability_zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">private_ips</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">product</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revert_to_spot</span><span class="p">:</span> <span class="nx">Optional[ElastigroupRevertToSpotArgs]</span> = None<span class="p">, </span><span class="nx">scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupScalingDownPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_strategies</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupScalingStrategyArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_target_policies</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupScalingTargetPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_up_policies</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupScalingUpPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupScheduledTaskArgs]]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">shutdown_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">signals</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupSignalArgs]]</span> = None<span class="p">, </span><span class="nx">spot_percentage</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">stateful_deallocation</span><span class="p">:</span> <span class="nx">Optional[ElastigroupStatefulDeallocationArgs]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupTagArgs]]</span> = None<span class="p">, </span><span class="nx">target_group_arns</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">update_policy</span><span class="p">:</span> <span class="nx">Optional[ElastigroupUpdatePolicyArgs]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">utilize_reserved_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">wait_for_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">wait_for_capacity_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/aws/#pulumi_spotinst.aws.Elastigroup">Elastigroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">block_devices_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">capacity_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_credits</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">draining_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupEbsBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">elastic_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">elastic_load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">enable_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ephemeral_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupEphemeralBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">fallback_to_ondemand</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">health_check_grace_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">health_check_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_check_unhealthy_duration_before_replacement</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_ondemand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_preferred_spots</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">instance_types_spots</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">instance_types_weights</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupInstanceTypesWeightArgs]]</span> = None<span class="p">, </span><span class="nx">integration_beanstalk</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationBeanstalkArgs]</span> = None<span class="p">, </span><span class="nx">integration_codedeploy</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationCodedeployArgs]</span> = None<span class="p">, </span><span class="nx">integration_docker_swarm</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationDockerSwarmArgs]</span> = None<span class="p">, </span><span class="nx">integration_ecs</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationEcsArgs]</span> = None<span class="p">, </span><span class="nx">integration_gitlab</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationGitlabArgs]</span> = None<span class="p">, </span><span class="nx">integration_kubernetes</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationKubernetesArgs]</span> = None<span class="p">, </span><span class="nx">integration_mesosphere</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationMesosphereArgs]</span> = None<span class="p">, </span><span class="nx">integration_multai_runtime</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationMultaiRuntimeArgs]</span> = None<span class="p">, </span><span class="nx">integration_nomad</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationNomadArgs]</span> = None<span class="p">, </span><span class="nx">integration_rancher</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationRancherArgs]</span> = None<span class="p">, </span><span class="nx">integration_route53</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationRoute53Args]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lifetime_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">multai_target_sets</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupMultaiTargetSetArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">ondemand_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">orientation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">persist_block_devices</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">persist_private_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">persist_root_device</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">placement_tenancy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preferred_availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">private_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">product</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revert_to_spot</span><span class="p">:</span> <span class="nx">Optional[ElastigroupRevertToSpotArgs]</span> = None<span class="p">, </span><span class="nx">scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingDownPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_strategies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingStrategyArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_target_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingTargetPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_up_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingUpPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScheduledTaskArgs]]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">shutdown_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">signals</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupSignalArgs]]</span> = None<span class="p">, </span><span class="nx">spot_percentage</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">stateful_deallocation</span><span class="p">:</span> <span class="nx">Optional[ElastigroupStatefulDeallocationArgs]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupTagArgs]]</span> = None<span class="p">, </span><span class="nx">target_group_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">update_policy</span><span class="p">:</span> <span class="nx">Optional[ElastigroupUpdatePolicyArgs]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">utilize_reserved_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">wait_for_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">wait_for_capacity_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2481,7 +2481,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#instance_types_spots_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>types_<wbr>spots</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}One or more instance types.
 {{% /md %}}</dd>
@@ -2515,7 +2515,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 <a href="#security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of associated security group IDS.
 {{% /md %}}</dd>
@@ -2526,7 +2526,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 <a href="#availability_zones_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zones</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of Strings of availability zones. When this parameter is set, `subnet_ids` should be left unused.
 Note: `availability_zones` naming syntax follows the convention `availability-zone:subnet:placement-group-name`. For example, to set an AZ in `us-east-1` with subnet `subnet-123456` and placement group `ClusterI03`, you would set:
@@ -2582,7 +2582,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#desired_capacity_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The desired number of instances the group should have at any time.
 {{% /md %}}</dd>
@@ -2593,7 +2593,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#draining_timeout_python" style="color: inherit; text-decoration: inherit;">draining_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The time in seconds, the instance is allowed to run while detached from the ELB. This is to allow the instance time to be drained from incoming TCP connections before terminating it, during a scale down operation.
 {{% /md %}}</dd>
@@ -2604,7 +2604,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#ebs_block_devices_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>block_<wbr>devices</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupebsblockdevice">List[Elastigroup<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupebsblockdevice">Sequence[Elastigroup<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2625,7 +2625,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#elastic_ips_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of [AWS Elastic IP](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html) allocation IDs to associate to the group instances.
 {{% /md %}}</dd>
@@ -2636,7 +2636,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#elastic_load_balancers_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>load_<wbr>balancers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2657,7 +2657,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#ephemeral_block_devices_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>block_<wbr>devices</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupephemeralblockdevice">List[Elastigroup<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupephemeralblockdevice">Sequence[Elastigroup<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2667,7 +2667,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#health_check_grace_period_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>grace_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to starts and check its health.
 {{% /md %}}</dd>
@@ -2689,7 +2689,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#health_check_unhealthy_duration_before_replacement_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>unhealthy_<wbr>duration_<wbr>before_<wbr>replacement</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, that we will wait before replacing an instance that is running and became unhealthy (this is only applicable for instances that were once healthy).
 {{% /md %}}</dd>
@@ -2722,7 +2722,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#instance_types_preferred_spots_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>types_<wbr>preferred_<wbr>spots</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Prioritize a subset of spot instance types. Must be a subset of the selected spot instance types.
 {{% /md %}}</dd>
@@ -2733,7 +2733,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#instance_types_weights_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>types_<wbr>weights</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupinstancetypesweight">List[Elastigroup<wbr>Instance<wbr>Types<wbr>Weight<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupinstancetypesweight">Sequence[Elastigroup<wbr>Instance<wbr>Types<wbr>Weight<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of weights per instance type for weighted groups. Each object in the list should have the following attributes:
 {{% /md %}}</dd>
@@ -2875,7 +2875,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#max_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of instances the group should have at any time.
 {{% /md %}}</dd>
@@ -2886,7 +2886,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#min_size_python" style="color: inherit; text-decoration: inherit;">min_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of instances the group should have at any time.
 {{% /md %}}</dd>
@@ -2897,7 +2897,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#multai_target_sets_python" style="color: inherit; text-decoration: inherit;">multai_<wbr>target_<wbr>sets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupmultaitargetset">List[Elastigroup<wbr>Multai<wbr>Target<wbr>Set<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupmultaitargetset">Sequence[Elastigroup<wbr>Multai<wbr>Target<wbr>Set<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2918,7 +2918,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupnetworkinterface">List[Elastigroup<wbr>Network<wbr>Interface<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupnetworkinterface">Sequence[Elastigroup<wbr>Network<wbr>Interface<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2928,7 +2928,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#ondemand_count_python" style="color: inherit; text-decoration: inherit;">ondemand_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of on demand instances to launch in the group. All other instances will be spot instances. When this parameter is set the `spot_percentage` parameter is being ignored.
 {{% /md %}}</dd>
@@ -2980,7 +2980,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#preferred_availability_zones_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>availability_<wbr>zones</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The AZs to prioritize when launching Spot instances. If no markets are available in the Preferred AZs, Spot instances are launched in the non-preferred AZs. 
 Note: Must be a sublist of `availability_zones` and `orientation` value must not be `"equalAzDistribution"`.
@@ -2992,7 +2992,7 @@ Note: Must be a sublist of `availability_zones` and `orientation` value must not
 <a href="#private_ips_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3025,7 +3025,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#scaling_down_policies_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>down_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalingdownpolicy">List[Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupscalingdownpolicy">Sequence[Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3035,7 +3035,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#scaling_strategies_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>strategies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalingstrategy">List[Elastigroup<wbr>Scaling<wbr>Strategy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupscalingstrategy">Sequence[Elastigroup<wbr>Scaling<wbr>Strategy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set termination policy.
 {{% /md %}}</dd>
@@ -3046,7 +3046,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#scaling_target_policies_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>target_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalingtargetpolicy">List[Elastigroup<wbr>Scaling<wbr>Target<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupscalingtargetpolicy">Sequence[Elastigroup<wbr>Scaling<wbr>Target<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3056,7 +3056,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#scaling_up_policies_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>up_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalinguppolicy">List[Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupscalinguppolicy">Sequence[Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3066,7 +3066,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#scheduled_tasks_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>tasks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscheduledtask">List[Elastigroup<wbr>Scheduled<wbr>Task<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupscheduledtask">Sequence[Elastigroup<wbr>Scheduled<wbr>Task<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3087,7 +3087,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#signals_python" style="color: inherit; text-decoration: inherit;">signals</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupsignal">List[Elastigroup<wbr>Signal<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupsignal">Sequence[Elastigroup<wbr>Signal<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3118,7 +3118,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#subnet_ids_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of Strings of subnet identifiers.
 Note: When this parameter is set, `availability_zones` should be left unused.
@@ -3130,7 +3130,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigrouptag">List[Elastigroup<wbr>Tag<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigrouptag">Sequence[Elastigroup<wbr>Tag<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -3141,7 +3141,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#target_group_arns_python" style="color: inherit; text-decoration: inherit;">target_<wbr>group_<wbr>arns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3183,7 +3183,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#wait_for_capacity_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum number of instances in a 'HEALTHY' status that is required before continuing. This is ignored when updating with blue/green deployment. Cannot exceed `desired_capacity`.
 {{% /md %}}</dd>
@@ -3194,7 +3194,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#wait_for_capacity_timeout_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>capacity_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Time (seconds) to wait for instances to report a 'HEALTHY' status. Useful for plans with multiple dependencies that take some time to initialize. Leave undefined or set to `0` to indicate no wait. This is ignored when updating with blue/green deployment.
 {{% /md %}}</dd>
@@ -3298,7 +3298,7 @@ Get an existing Elastigroup resource's state with the given name, ID, and option
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">block_devices_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">capacity_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_credits</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">draining_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupEbsBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">elastic_ips</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">elastic_load_balancers</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">enable_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ephemeral_block_devices</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupEphemeralBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">fallback_to_ondemand</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">health_check_grace_period</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">health_check_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_check_unhealthy_duration_before_replacement</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_ondemand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_preferred_spots</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">instance_types_spots</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">instance_types_weights</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupInstanceTypesWeightArgs]]</span> = None<span class="p">, </span><span class="nx">integration_beanstalk</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationBeanstalkArgs]</span> = None<span class="p">, </span><span class="nx">integration_codedeploy</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationCodedeployArgs]</span> = None<span class="p">, </span><span class="nx">integration_docker_swarm</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationDockerSwarmArgs]</span> = None<span class="p">, </span><span class="nx">integration_ecs</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationEcsArgs]</span> = None<span class="p">, </span><span class="nx">integration_gitlab</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationGitlabArgs]</span> = None<span class="p">, </span><span class="nx">integration_kubernetes</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationKubernetesArgs]</span> = None<span class="p">, </span><span class="nx">integration_mesosphere</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationMesosphereArgs]</span> = None<span class="p">, </span><span class="nx">integration_multai_runtime</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationMultaiRuntimeArgs]</span> = None<span class="p">, </span><span class="nx">integration_nomad</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationNomadArgs]</span> = None<span class="p">, </span><span class="nx">integration_rancher</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationRancherArgs]</span> = None<span class="p">, </span><span class="nx">integration_route53</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationRoute53Args]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lifetime_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">multai_target_sets</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupMultaiTargetSetArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">ondemand_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">orientation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">persist_block_devices</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">persist_private_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">persist_root_device</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">placement_tenancy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preferred_availability_zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">private_ips</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">product</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revert_to_spot</span><span class="p">:</span> <span class="nx">Optional[ElastigroupRevertToSpotArgs]</span> = None<span class="p">, </span><span class="nx">scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupScalingDownPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_strategies</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupScalingStrategyArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_target_policies</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupScalingTargetPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_up_policies</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupScalingUpPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupScheduledTaskArgs]]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">shutdown_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">signals</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupSignalArgs]]</span> = None<span class="p">, </span><span class="nx">spot_percentage</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">stateful_deallocation</span><span class="p">:</span> <span class="nx">Optional[ElastigroupStatefulDeallocationArgs]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupTagArgs]]</span> = None<span class="p">, </span><span class="nx">target_group_arns</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">update_policy</span><span class="p">:</span> <span class="nx">Optional[ElastigroupUpdatePolicyArgs]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">utilize_reserved_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">wait_for_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">wait_for_capacity_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">) -&gt;</span> Elastigroup</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">block_devices_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">capacity_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_credits</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">draining_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupEbsBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">elastic_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">elastic_load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">enable_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ephemeral_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupEphemeralBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">fallback_to_ondemand</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">health_check_grace_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">health_check_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_check_unhealthy_duration_before_replacement</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_ondemand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_preferred_spots</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">instance_types_spots</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">instance_types_weights</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupInstanceTypesWeightArgs]]</span> = None<span class="p">, </span><span class="nx">integration_beanstalk</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationBeanstalkArgs]</span> = None<span class="p">, </span><span class="nx">integration_codedeploy</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationCodedeployArgs]</span> = None<span class="p">, </span><span class="nx">integration_docker_swarm</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationDockerSwarmArgs]</span> = None<span class="p">, </span><span class="nx">integration_ecs</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationEcsArgs]</span> = None<span class="p">, </span><span class="nx">integration_gitlab</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationGitlabArgs]</span> = None<span class="p">, </span><span class="nx">integration_kubernetes</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationKubernetesArgs]</span> = None<span class="p">, </span><span class="nx">integration_mesosphere</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationMesosphereArgs]</span> = None<span class="p">, </span><span class="nx">integration_multai_runtime</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationMultaiRuntimeArgs]</span> = None<span class="p">, </span><span class="nx">integration_nomad</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationNomadArgs]</span> = None<span class="p">, </span><span class="nx">integration_rancher</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationRancherArgs]</span> = None<span class="p">, </span><span class="nx">integration_route53</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationRoute53Args]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lifetime_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">multai_target_sets</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupMultaiTargetSetArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">ondemand_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">orientation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">persist_block_devices</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">persist_private_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">persist_root_device</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">placement_tenancy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preferred_availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">private_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">product</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revert_to_spot</span><span class="p">:</span> <span class="nx">Optional[ElastigroupRevertToSpotArgs]</span> = None<span class="p">, </span><span class="nx">scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingDownPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_strategies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingStrategyArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_target_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingTargetPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_up_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingUpPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScheduledTaskArgs]]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">shutdown_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">signals</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupSignalArgs]]</span> = None<span class="p">, </span><span class="nx">spot_percentage</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">stateful_deallocation</span><span class="p">:</span> <span class="nx">Optional[ElastigroupStatefulDeallocationArgs]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupTagArgs]]</span> = None<span class="p">, </span><span class="nx">target_group_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">update_policy</span><span class="p">:</span> <span class="nx">Optional[ElastigroupUpdatePolicyArgs]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">utilize_reserved_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">wait_for_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">wait_for_capacity_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> Elastigroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -5677,7 +5677,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#state_availability_zones_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zones</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of Strings of availability zones. When this parameter is set, `subnet_ids` should be left unused.
 Note: `availability_zones` naming syntax follows the convention `availability-zone:subnet:placement-group-name`. For example, to set an AZ in `us-east-1` with subnet `subnet-123456` and placement group `ClusterI03`, you would set:
@@ -5733,7 +5733,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_desired_capacity_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The desired number of instances the group should have at any time.
 {{% /md %}}</dd>
@@ -5744,7 +5744,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_draining_timeout_python" style="color: inherit; text-decoration: inherit;">draining_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The time in seconds, the instance is allowed to run while detached from the ELB. This is to allow the instance time to be drained from incoming TCP connections before terminating it, during a scale down operation.
 {{% /md %}}</dd>
@@ -5755,7 +5755,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_ebs_block_devices_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>block_<wbr>devices</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupebsblockdevice">List[Elastigroup<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupebsblockdevice">Sequence[Elastigroup<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5776,7 +5776,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_elastic_ips_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of [AWS Elastic IP](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html) allocation IDs to associate to the group instances.
 {{% /md %}}</dd>
@@ -5787,7 +5787,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_elastic_load_balancers_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>load_<wbr>balancers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5808,7 +5808,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_ephemeral_block_devices_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>block_<wbr>devices</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupephemeralblockdevice">List[Elastigroup<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupephemeralblockdevice">Sequence[Elastigroup<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5829,7 +5829,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_health_check_grace_period_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>grace_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to starts and check its health.
 {{% /md %}}</dd>
@@ -5851,7 +5851,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_health_check_unhealthy_duration_before_replacement_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>unhealthy_<wbr>duration_<wbr>before_<wbr>replacement</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, that we will wait before replacing an instance that is running and became unhealthy (this is only applicable for instances that were once healthy).
 {{% /md %}}</dd>
@@ -5895,7 +5895,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_instance_types_preferred_spots_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>types_<wbr>preferred_<wbr>spots</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Prioritize a subset of spot instance types. Must be a subset of the selected spot instance types.
 {{% /md %}}</dd>
@@ -5906,7 +5906,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_instance_types_spots_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>types_<wbr>spots</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}One or more instance types.
 {{% /md %}}</dd>
@@ -5917,7 +5917,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_instance_types_weights_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>types_<wbr>weights</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupinstancetypesweight">List[Elastigroup<wbr>Instance<wbr>Types<wbr>Weight<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupinstancetypesweight">Sequence[Elastigroup<wbr>Instance<wbr>Types<wbr>Weight<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of weights per instance type for weighted groups. Each object in the list should have the following attributes:
 {{% /md %}}</dd>
@@ -6059,7 +6059,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_max_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of instances the group should have at any time.
 {{% /md %}}</dd>
@@ -6070,7 +6070,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_min_size_python" style="color: inherit; text-decoration: inherit;">min_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of instances the group should have at any time.
 {{% /md %}}</dd>
@@ -6081,7 +6081,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_multai_target_sets_python" style="color: inherit; text-decoration: inherit;">multai_<wbr>target_<wbr>sets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupmultaitargetset">List[Elastigroup<wbr>Multai<wbr>Target<wbr>Set<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupmultaitargetset">Sequence[Elastigroup<wbr>Multai<wbr>Target<wbr>Set<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6102,7 +6102,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupnetworkinterface">List[Elastigroup<wbr>Network<wbr>Interface<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupnetworkinterface">Sequence[Elastigroup<wbr>Network<wbr>Interface<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6112,7 +6112,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_ondemand_count_python" style="color: inherit; text-decoration: inherit;">ondemand_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of on demand instances to launch in the group. All other instances will be spot instances. When this parameter is set the `spot_percentage` parameter is being ignored.
 {{% /md %}}</dd>
@@ -6175,7 +6175,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_preferred_availability_zones_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>availability_<wbr>zones</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The AZs to prioritize when launching Spot instances. If no markets are available in the Preferred AZs, Spot instances are launched in the non-preferred AZs. 
 Note: Must be a sublist of `availability_zones` and `orientation` value must not be `"equalAzDistribution"`.
@@ -6187,7 +6187,7 @@ Note: Must be a sublist of `availability_zones` and `orientation` value must not
 <a href="#state_private_ips_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6232,7 +6232,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#state_scaling_down_policies_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>down_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalingdownpolicy">List[Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupscalingdownpolicy">Sequence[Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6242,7 +6242,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#state_scaling_strategies_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>strategies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalingstrategy">List[Elastigroup<wbr>Scaling<wbr>Strategy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupscalingstrategy">Sequence[Elastigroup<wbr>Scaling<wbr>Strategy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set termination policy.
 {{% /md %}}</dd>
@@ -6253,7 +6253,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#state_scaling_target_policies_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>target_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalingtargetpolicy">List[Elastigroup<wbr>Scaling<wbr>Target<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupscalingtargetpolicy">Sequence[Elastigroup<wbr>Scaling<wbr>Target<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6263,7 +6263,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#state_scaling_up_policies_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>up_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalinguppolicy">List[Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupscalinguppolicy">Sequence[Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6273,7 +6273,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#state_scheduled_tasks_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>tasks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscheduledtask">List[Elastigroup<wbr>Scheduled<wbr>Task<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupscheduledtask">Sequence[Elastigroup<wbr>Scheduled<wbr>Task<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6283,7 +6283,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#state_security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of associated security group IDS.
 {{% /md %}}</dd>
@@ -6305,7 +6305,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#state_signals_python" style="color: inherit; text-decoration: inherit;">signals</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupsignal">List[Elastigroup<wbr>Signal<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupsignal">Sequence[Elastigroup<wbr>Signal<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6336,7 +6336,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#state_subnet_ids_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of Strings of subnet identifiers.
 Note: When this parameter is set, `availability_zones` should be left unused.
@@ -6348,7 +6348,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigrouptag">List[Elastigroup<wbr>Tag<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigrouptag">Sequence[Elastigroup<wbr>Tag<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -6359,7 +6359,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#state_target_group_arns_python" style="color: inherit; text-decoration: inherit;">target_<wbr>group_<wbr>arns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6401,7 +6401,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#state_wait_for_capacity_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum number of instances in a 'HEALTHY' status that is required before continuing. This is ignored when updating with blue/green deployment. Cannot exceed `desired_capacity`.
 {{% /md %}}</dd>
@@ -6412,7 +6412,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#state_wait_for_capacity_timeout_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>capacity_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Time (seconds) to wait for instances to report a 'HEALTHY' status. Useful for plans with multiple dependencies that take some time to initialize. Leave undefined or set to `0` to indicate no wait. This is ignored when updating with blue/green deployment.
 {{% /md %}}</dd>
@@ -6747,7 +6747,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#iops_python" style="color: inherit; text-decoration: inherit;">iops</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6777,7 +6777,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7046,7 +7046,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Weight per instance type (Integer).
 {{% /md %}}</dd>
@@ -7399,7 +7399,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#batch_size_percentage_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size_<wbr>percentage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7409,7 +7409,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#grace_period_python" style="color: inherit; text-decoration: inherit;">grace_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7957,7 +7957,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#deployment_groups_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationcodedeploydeploymentgroup">List[Elastigroup<wbr>Integration<wbr>Codedeploy<wbr>Deployment<wbr>Group<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationcodedeploydeploymentgroup">Sequence[Elastigroup<wbr>Integration<wbr>Codedeploy<wbr>Deployment<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8339,7 +8339,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#master_port_python" style="color: inherit; text-decoration: inherit;">master_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8349,7 +8349,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#autoscale_cooldown_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>cooldown</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8465,7 +8465,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#evaluation_periods_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>periods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8611,7 +8611,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#cpu_per_unit_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>per_<wbr>unit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8621,7 +8621,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#memory_per_unit_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>per_<wbr>unit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8631,7 +8631,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#num_of_units_python" style="color: inherit; text-decoration: inherit;">num_<wbr>of_<wbr>units</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8937,7 +8937,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#autoscale_attributes_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>attributes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationecsautoscaleattribute">List[Elastigroup<wbr>Integration<wbr>Ecs<wbr>Autoscale<wbr>Attribute<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationecsautoscaleattribute">Sequence[Elastigroup<wbr>Integration<wbr>Ecs<wbr>Autoscale<wbr>Attribute<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8947,7 +8947,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#autoscale_cooldown_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>cooldown</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9239,7 +9239,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#evaluation_periods_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>periods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9395,7 +9395,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#cpu_per_unit_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>per_<wbr>unit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9405,7 +9405,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#memory_per_unit_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>per_<wbr>unit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9415,7 +9415,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#num_of_units_python" style="color: inherit; text-decoration: inherit;">num_<wbr>of_<wbr>units</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9953,7 +9953,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#autoscale_cooldown_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>cooldown</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10003,7 +10003,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#autoscale_labels_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationkubernetesautoscalelabel">List[Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Autoscale<wbr>Label<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationkubernetesautoscalelabel">Sequence[Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Autoscale<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10119,7 +10119,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#evaluation_periods_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>periods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10265,7 +10265,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#cpu_per_unit_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>per_<wbr>unit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10275,7 +10275,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#memory_per_unit_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>per_<wbr>unit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10285,7 +10285,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#num_of_units_python" style="color: inherit; text-decoration: inherit;">num_<wbr>of_<wbr>units</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10889,7 +10889,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#master_port_python" style="color: inherit; text-decoration: inherit;">master_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10909,7 +10909,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#autoscale_constraints_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>constraints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationnomadautoscaleconstraint">List[Elastigroup<wbr>Integration<wbr>Nomad<wbr>Autoscale<wbr>Constraint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationnomadautoscaleconstraint">Sequence[Elastigroup<wbr>Integration<wbr>Nomad<wbr>Autoscale<wbr>Constraint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10919,7 +10919,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#autoscale_cooldown_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>cooldown</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11161,7 +11161,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#evaluation_periods_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>periods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11307,7 +11307,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#cpu_per_unit_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>per_<wbr>unit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11317,7 +11317,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#memory_per_unit_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>per_<wbr>unit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11327,7 +11327,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#num_of_units_python" style="color: inherit; text-decoration: inherit;">num_<wbr>of_<wbr>units</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11619,7 +11619,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#domains_python" style="color: inherit; text-decoration: inherit;">domains</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationroute53domain">List[Elastigroup<wbr>Integration<wbr>Route53Domain<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationroute53domain">Sequence[Elastigroup<wbr>Integration<wbr>Route53Domain<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11805,7 +11805,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#record_sets_python" style="color: inherit; text-decoration: inherit;">record_<wbr>sets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationroute53domainrecordset">List[Elastigroup<wbr>Integration<wbr>Route53Domain<wbr>Record<wbr>Set<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationroute53domainrecordset">Sequence[Elastigroup<wbr>Integration<wbr>Route53Domain<wbr>Record<wbr>Set<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12624,7 +12624,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#time_windows_python" style="color: inherit; text-decoration: inherit;">time_<wbr>windows</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specify a list of time windows for to execute revertToSpot strategy. Time window format: `ddd:hh:mm-ddd:hh:mm`. Example: `Mon:03:00-Wed:02:30`
 {{% /md %}}</dd>
@@ -13351,7 +13351,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#cooldown_python" style="color: inherit; text-decoration: inherit;">cooldown</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -13361,7 +13361,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalingdownpolicydimension">List[Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Dimension<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupscalingdownpolicydimension">Sequence[Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Dimension<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -13371,7 +13371,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#evaluation_periods_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>periods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -13441,7 +13441,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -14171,7 +14171,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#cooldown_python" style="color: inherit; text-decoration: inherit;">cooldown</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -14181,7 +14181,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalingtargetpolicydimension">List[Elastigroup<wbr>Scaling<wbr>Target<wbr>Policy<wbr>Dimension<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupscalingtargetpolicydimension">Sequence[Elastigroup<wbr>Scaling<wbr>Target<wbr>Policy<wbr>Dimension<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -15077,7 +15077,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#cooldown_python" style="color: inherit; text-decoration: inherit;">cooldown</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -15087,7 +15087,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalinguppolicydimension">List[Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Dimension<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elastigroupscalinguppolicydimension">Sequence[Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Dimension<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -15097,7 +15097,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#evaluation_periods_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>periods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -15167,7 +15167,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -16103,7 +16103,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -16880,7 +16880,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#batch_size_percentage_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size_<wbr>percentage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -16890,7 +16890,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#grace_period_python" style="color: inherit; text-decoration: inherit;">grace_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -16921,7 +16921,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#wait_for_roll_percentage_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>roll_<wbr>percentage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -16931,7 +16931,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#wait_for_roll_timeout_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>roll_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -17117,7 +17117,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#batch_min_healthy_percentage_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>min_<wbr>healthy_<wbr>percentage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -17356,7 +17356,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#batch_num_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>num</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -17366,7 +17366,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#draining_timeout_python" style="color: inherit; text-decoration: inherit;">draining_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The time in seconds, the instance is allowed to run while detached from the ELB. This is to allow the instance time to be drained from incoming TCP connections before terminating it, during a scale down operation.
 {{% /md %}}</dd>
