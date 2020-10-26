@@ -28,7 +28,7 @@ class MyStack : Stack
     {
         var example = Output.Create(Okta.Idp.GetMetadataSaml.InvokeAsync(new Okta.Idp.GetMetadataSamlArgs
         {
-            Id = "<idp id>",
+            IdpId = "<idp id>",
         }));
     }
 
@@ -48,8 +48,9 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "<idp id>"
 		_, err := idp.GetMetadataSaml(ctx, &idp.GetMetadataSamlArgs{
-			Id: "<idp id>",
+			IdpId: &opt0,
 		}, nil)
 		if err != nil {
 			return err
@@ -66,7 +67,7 @@ func main() {
 import pulumi
 import pulumi_okta as okta
 
-example = okta.idp.get_metadata_saml(id="<idp id>")
+example = okta.idp.get_metadata_saml(idp_id="<idp id>")
 ```
 
 {{% /example %}}
@@ -78,7 +79,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
 
 const example = pulumi.output(okta.idp.getMetadataSaml({
-    id: "<idp id>",
+    idpId: "<idp id>",
 }, { async: true }));
 ```
 
