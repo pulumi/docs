@@ -13,6 +13,16 @@ dl {
             dd {
                 @apply w-2/3;
             }
+
+            &.tabular-5-col {
+                dt {
+                    @apply w-2/5;
+                }
+
+                dd {
+                    @apply w-3/5;
+                }
+            }
         }
 
         dt {
