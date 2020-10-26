@@ -50,7 +50,7 @@ jobs:
         with:
           go-version: ${{ matrix.goversion }}
       - name: setup node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2-beta
       - name: Setup Python
         uses: actions/setup-python@v1
         with:
