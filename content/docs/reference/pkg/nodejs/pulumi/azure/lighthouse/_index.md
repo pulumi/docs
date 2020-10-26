@@ -3,7 +3,7 @@ title: "Module lighthouse"
 title_tag: "Module lighthouse | Package @pulumi/azure | Node.js SDK"
 linktitle: "lighthouse"
 meta_desc: "Explore members of the lighthouse module in the @pulumi/azure package."
-git_sha: "b0ec8640c580f1cb329731746f254b47a6e7a245"
+git_sha: "f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf"
 block_external_search_index: true
 ---
 
@@ -33,7 +33,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Assignment" data-link-title="Assignment">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/assignment.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/assignment.ts#L22">
         Resource <strong>Assignment</strong>
     </a>
 </h3>
@@ -55,7 +55,7 @@ const example = new azure.lighthouse.Assignment("example", {
 ```
 
 <h4 class="pdoc-member-header" id="Assignment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/assignment.ts#L61"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/assignment.ts#L61"> <b>constructor</b></a>
 </h4>
 
 
@@ -69,7 +69,7 @@ Create a Assignment resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Assignment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/assignment.ts#L32">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/assignment.ts#L32">method <b>get</b></a>
 </h4>
 
 
@@ -80,14 +80,14 @@ Get an existing Assignment resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Assignment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/assignment.ts#L22">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/assignment.ts#L22">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Assignment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/assignment.ts#L43">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/assignment.ts#L43">method <b>isInstance</b></a>
 </h4>
 
 
@@ -98,7 +98,7 @@ Returns true if the given object is an instance of Assignment.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Assignment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/assignment.ts#L22">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/assignment.ts#L22">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -107,7 +107,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Assignment-lighthouseDefinitionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/assignment.ts#L53">property <b>lighthouseDefinitionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/assignment.ts#L53">property <b>lighthouseDefinitionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lighthouseDefinitionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -115,7 +115,7 @@ deployments and may be missing (undefined) during planning phases.
 A Fully qualified path of the lighthouse definition, such as `/subscriptions/0afefe50-734e-4610-8c82-a144aff49dea/providers/Microsoft.ManagedServices/registrationDefinitions/26c128c2-fefa-4340-9bb1-8e081c90ada2`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Assignment-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/assignment.ts#L57">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/assignment.ts#L57">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -123,7 +123,7 @@ A Fully qualified path of the lighthouse definition, such as `/subscriptions/0af
 A unique UUID/GUID which identifies this lighthouse assignment- one will be generated if not specified. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Assignment-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/assignment.ts#L61">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/assignment.ts#L61">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -131,7 +131,7 @@ A unique UUID/GUID which identifies this lighthouse assignment- one will be gene
 The scope at which the Lighthouse Assignment applies too, such as `/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333` or `/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Assignment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/assignment.ts#L22">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/assignment.ts#L22">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -140,7 +140,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Definition" data-link-title="Definition">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/definition.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/definition.ts#L31">
         Resource <strong>Definition</strong>
     </a>
 </h3>
@@ -169,7 +169,7 @@ const example = new azure.lighthouse.Definition("example", {
 ```
 
 <h4 class="pdoc-member-header" id="Definition-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/definition.ts#L79"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/definition.ts#L79"> <b>constructor</b></a>
 </h4>
 
 
@@ -183,7 +183,7 @@ Create a Definition resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Definition-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/definition.ts#L41">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/definition.ts#L41">method <b>get</b></a>
 </h4>
 
 
@@ -194,14 +194,14 @@ Get an existing Definition resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Definition-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/definition.ts#L31">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/definition.ts#L31">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Definition-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/definition.ts#L52">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/definition.ts#L52">method <b>isInstance</b></a>
 </h4>
 
 
@@ -212,7 +212,7 @@ Returns true if the given object is an instance of Definition.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Definition-authorizations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/definition.ts#L62">property <b>authorizations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/definition.ts#L62">property <b>authorizations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authorizations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DefinitionAuthorization'>DefinitionAuthorization</a>[]&gt;;</code></pre>
@@ -220,7 +220,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 An authorization block as defined below.
 
 <h4 class="pdoc-member-header" id="Definition-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/definition.ts#L66">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/definition.ts#L66">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -228,7 +228,7 @@ An authorization block as defined below.
 A description of the Lighthouse Definition.
 
 <h4 class="pdoc-member-header" id="Definition-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/definition.ts#L31">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/definition.ts#L31">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -237,7 +237,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Definition-lighthouseDefinitionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/definition.ts#L70">property <b>lighthouseDefinitionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/definition.ts#L70">property <b>lighthouseDefinitionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lighthouseDefinitionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -245,7 +245,7 @@ deployments and may be missing (undefined) during planning phases.
 A unique UUID/GUID which identifies this lighthouse definition - one will be generated if not specified. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Definition-managingTenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/definition.ts#L74">property <b>managingTenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/definition.ts#L74">property <b>managingTenantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>managingTenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -253,7 +253,7 @@ A unique UUID/GUID which identifies this lighthouse definition - one will be gen
 The ID of the managing tenant.
 
 <h4 class="pdoc-member-header" id="Definition-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/definition.ts#L78">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/definition.ts#L78">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -261,12 +261,12 @@ The ID of the managing tenant.
 The name of the Lighthouse Definition.
 
 <h4 class="pdoc-member-header" id="Definition-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/definition.ts#L79">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/definition.ts#L79">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Definition-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/definition.ts#L31">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/definition.ts#L31">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -278,7 +278,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AssignmentArgs" data-link-title="AssignmentArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/assignment.ts#L122">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/assignment.ts#L122">
         interface <strong>AssignmentArgs</strong>
     </a>
 </h3>
@@ -288,7 +288,7 @@ deployments.
 The set of arguments for constructing a Assignment resource.
 
 <h4 class="pdoc-member-header" id="AssignmentArgs-lighthouseDefinitionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/assignment.ts#L126">property <b>lighthouseDefinitionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/assignment.ts#L126">property <b>lighthouseDefinitionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lighthouseDefinitionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -296,7 +296,7 @@ The set of arguments for constructing a Assignment resource.
 A Fully qualified path of the lighthouse definition, such as `/subscriptions/0afefe50-734e-4610-8c82-a144aff49dea/providers/Microsoft.ManagedServices/registrationDefinitions/26c128c2-fefa-4340-9bb1-8e081c90ada2`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AssignmentArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/assignment.ts#L130">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/assignment.ts#L130">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -304,7 +304,7 @@ A Fully qualified path of the lighthouse definition, such as `/subscriptions/0af
 A unique UUID/GUID which identifies this lighthouse assignment- one will be generated if not specified. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AssignmentArgs-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/assignment.ts#L134">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/assignment.ts#L134">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -312,7 +312,7 @@ A unique UUID/GUID which identifies this lighthouse assignment- one will be gene
 The scope at which the Lighthouse Assignment applies too, such as `/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333` or `/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup`. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="AssignmentState" data-link-title="AssignmentState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/assignment.ts#L104">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/assignment.ts#L104">
         interface <strong>AssignmentState</strong>
     </a>
 </h3>
@@ -322,7 +322,7 @@ The scope at which the Lighthouse Assignment applies too, such as `/subscription
 Input properties used for looking up and filtering Assignment resources.
 
 <h4 class="pdoc-member-header" id="AssignmentState-lighthouseDefinitionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/assignment.ts#L108">property <b>lighthouseDefinitionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/assignment.ts#L108">property <b>lighthouseDefinitionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lighthouseDefinitionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -330,7 +330,7 @@ Input properties used for looking up and filtering Assignment resources.
 A Fully qualified path of the lighthouse definition, such as `/subscriptions/0afefe50-734e-4610-8c82-a144aff49dea/providers/Microsoft.ManagedServices/registrationDefinitions/26c128c2-fefa-4340-9bb1-8e081c90ada2`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AssignmentState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/assignment.ts#L112">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/assignment.ts#L112">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -338,7 +338,7 @@ A Fully qualified path of the lighthouse definition, such as `/subscriptions/0af
 A unique UUID/GUID which identifies this lighthouse assignment- one will be generated if not specified. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AssignmentState-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/assignment.ts#L116">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/assignment.ts#L116">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -346,7 +346,7 @@ A unique UUID/GUID which identifies this lighthouse assignment- one will be gene
 The scope at which the Lighthouse Assignment applies too, such as `/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333` or `/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup`. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="DefinitionArgs" data-link-title="DefinitionArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/definition.ts#L158">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/definition.ts#L158">
         interface <strong>DefinitionArgs</strong>
     </a>
 </h3>
@@ -356,7 +356,7 @@ The scope at which the Lighthouse Assignment applies too, such as `/subscription
 The set of arguments for constructing a Definition resource.
 
 <h4 class="pdoc-member-header" id="DefinitionArgs-authorizations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/definition.ts#L162">property <b>authorizations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/definition.ts#L162">property <b>authorizations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DefinitionAuthorization'>DefinitionAuthorization</a>&gt;[]&gt;;</code></pre>
@@ -364,7 +364,7 @@ The set of arguments for constructing a Definition resource.
 An authorization block as defined below.
 
 <h4 class="pdoc-member-header" id="DefinitionArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/definition.ts#L166">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/definition.ts#L166">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -372,7 +372,7 @@ An authorization block as defined below.
 A description of the Lighthouse Definition.
 
 <h4 class="pdoc-member-header" id="DefinitionArgs-lighthouseDefinitionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/definition.ts#L170">property <b>lighthouseDefinitionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/definition.ts#L170">property <b>lighthouseDefinitionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lighthouseDefinitionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -380,7 +380,7 @@ A description of the Lighthouse Definition.
 A unique UUID/GUID which identifies this lighthouse definition - one will be generated if not specified. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DefinitionArgs-managingTenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/definition.ts#L174">property <b>managingTenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/definition.ts#L174">property <b>managingTenantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>managingTenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -388,7 +388,7 @@ A unique UUID/GUID which identifies this lighthouse definition - one will be gen
 The ID of the managing tenant.
 
 <h4 class="pdoc-member-header" id="DefinitionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/definition.ts#L178">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/definition.ts#L178">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -396,12 +396,12 @@ The ID of the managing tenant.
 The name of the Lighthouse Definition.
 
 <h4 class="pdoc-member-header" id="DefinitionArgs-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/definition.ts#L179">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/definition.ts#L179">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DefinitionState" data-link-title="DefinitionState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/definition.ts#L131">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/definition.ts#L131">
         interface <strong>DefinitionState</strong>
     </a>
 </h3>
@@ -411,7 +411,7 @@ The name of the Lighthouse Definition.
 Input properties used for looking up and filtering Definition resources.
 
 <h4 class="pdoc-member-header" id="DefinitionState-authorizations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/definition.ts#L135">property <b>authorizations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/definition.ts#L135">property <b>authorizations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DefinitionAuthorization'>DefinitionAuthorization</a>&gt;[]&gt;;</code></pre>
@@ -419,7 +419,7 @@ Input properties used for looking up and filtering Definition resources.
 An authorization block as defined below.
 
 <h4 class="pdoc-member-header" id="DefinitionState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/definition.ts#L139">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/definition.ts#L139">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -427,7 +427,7 @@ An authorization block as defined below.
 A description of the Lighthouse Definition.
 
 <h4 class="pdoc-member-header" id="DefinitionState-lighthouseDefinitionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/definition.ts#L143">property <b>lighthouseDefinitionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/definition.ts#L143">property <b>lighthouseDefinitionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lighthouseDefinitionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -435,7 +435,7 @@ A description of the Lighthouse Definition.
 A unique UUID/GUID which identifies this lighthouse definition - one will be generated if not specified. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DefinitionState-managingTenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/definition.ts#L147">property <b>managingTenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/definition.ts#L147">property <b>managingTenantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>managingTenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -443,7 +443,7 @@ A unique UUID/GUID which identifies this lighthouse definition - one will be gen
 The ID of the managing tenant.
 
 <h4 class="pdoc-member-header" id="DefinitionState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/definition.ts#L151">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/definition.ts#L151">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -451,7 +451,7 @@ The ID of the managing tenant.
 The name of the Lighthouse Definition.
 
 <h4 class="pdoc-member-header" id="DefinitionState-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/lighthouse/definition.ts#L152">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/lighthouse/definition.ts#L152">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

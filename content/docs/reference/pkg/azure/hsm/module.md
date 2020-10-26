@@ -618,17 +618,6 @@ The Module resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}The sku name of the dedicated hardware security module. Changing this forces a new Dedicated Hardware Security Module to be created.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="stampid_csharp">
-<a href="#stampid_csharp" style="color: inherit; text-decoration: inherit;">Stamp<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the stamp. Possible values are `stamp1` or `stamp2`. Changing this forces a new Dedicated Hardware Security Module to be created.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
@@ -649,6 +638,17 @@ The Module resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Dedicated Hardware Security Module. Changing this forces a new Dedicated Hardware Security Module to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stampid_csharp">
+<a href="#stampid_csharp" style="color: inherit; text-decoration: inherit;">Stamp<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the stamp. Possible values are `stamp1` or `stamp2`. Changing this forces a new Dedicated Hardware Security Module to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -713,17 +713,6 @@ The Module resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}The sku name of the dedicated hardware security module. Changing this forces a new Dedicated Hardware Security Module to be created.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="stampid_go">
-<a href="#stampid_go" style="color: inherit; text-decoration: inherit;">Stamp<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the stamp. Possible values are `stamp1` or `stamp2`. Changing this forces a new Dedicated Hardware Security Module to be created.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_go">
@@ -744,6 +733,17 @@ The Module resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Dedicated Hardware Security Module. Changing this forces a new Dedicated Hardware Security Module to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stampid_go">
+<a href="#stampid_go" style="color: inherit; text-decoration: inherit;">Stamp<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the stamp. Possible values are `stamp1` or `stamp2`. Changing this forces a new Dedicated Hardware Security Module to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -808,17 +808,6 @@ The Module resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}The sku name of the dedicated hardware security module. Changing this forces a new Dedicated Hardware Security Module to be created.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="stampid_nodejs">
-<a href="#stampid_nodejs" style="color: inherit; text-decoration: inherit;">stamp<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the stamp. Possible values are `stamp1` or `stamp2`. Changing this forces a new Dedicated Hardware Security Module to be created.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
@@ -839,6 +828,17 @@ The Module resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Dedicated Hardware Security Module. Changing this forces a new Dedicated Hardware Security Module to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stampid_nodejs">
+<a href="#stampid_nodejs" style="color: inherit; text-decoration: inherit;">stamp<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the stamp. Possible values are `stamp1` or `stamp2`. Changing this forces a new Dedicated Hardware Security Module to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -903,17 +903,6 @@ The Module resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}The sku name of the dedicated hardware security module. Changing this forces a new Dedicated Hardware Security Module to be created.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="stamp_id_python">
-<a href="#stamp_id_python" style="color: inherit; text-decoration: inherit;">stamp_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the stamp. Possible values are `stamp1` or `stamp2`. Changing this forces a new Dedicated Hardware Security Module to be created.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_python">
@@ -934,6 +923,17 @@ The Module resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Dedicated Hardware Security Module. Changing this forces a new Dedicated Hardware Security Module to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stamp_id_python">
+<a href="#stamp_id_python" style="color: inherit; text-decoration: inherit;">stamp_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the stamp. Possible values are `stamp1` or `stamp2`. Changing this forces a new Dedicated Hardware Security Module to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

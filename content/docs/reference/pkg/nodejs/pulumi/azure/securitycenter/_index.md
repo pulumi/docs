@@ -3,7 +3,7 @@ title: "Module securitycenter"
 title_tag: "Module securitycenter | Package @pulumi/azure | Node.js SDK"
 linktitle: "securitycenter"
 meta_desc: "Explore members of the securitycenter module in the @pulumi/azure package."
-git_sha: "b0ec8640c580f1cb329731746f254b47a6e7a245"
+git_sha: "f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf"
 block_external_search_index: true
 ---
 
@@ -19,6 +19,7 @@ block_external_search_index: true
 <ul class="api">
     <li><a href="#AdvancedThreatProtection"><span class="symbol resource"></span>AdvancedThreatProtection</a></li>
     <li><a href="#Contact"><span class="symbol resource"></span>Contact</a></li>
+    <li><a href="#Setting"><span class="symbol resource"></span>Setting</a></li>
     <li><a href="#SubscriptionPricing"><span class="symbol resource"></span>SubscriptionPricing</a></li>
     <li><a href="#Workspace"><span class="symbol resource"></span>Workspace</a></li>
 </ul>
@@ -30,6 +31,8 @@ block_external_search_index: true
     <li><a href="#AdvancedThreatProtectionState"><span class="symbol api"></span>AdvancedThreatProtectionState</a></li>
     <li><a href="#ContactArgs"><span class="symbol api"></span>ContactArgs</a></li>
     <li><a href="#ContactState"><span class="symbol api"></span>ContactState</a></li>
+    <li><a href="#SettingArgs"><span class="symbol api"></span>SettingArgs</a></li>
+    <li><a href="#SettingState"><span class="symbol api"></span>SettingState</a></li>
     <li><a href="#SubscriptionPricingArgs"><span class="symbol api"></span>SubscriptionPricingArgs</a></li>
     <li><a href="#SubscriptionPricingState"><span class="symbol api"></span>SubscriptionPricingState</a></li>
     <li><a href="#WorkspaceArgs"><span class="symbol api"></span>WorkspaceArgs</a></li>
@@ -39,7 +42,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="AdvancedThreatProtection" data-link-title="AdvancedThreatProtection">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/advancedThreatProtection.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/advancedThreatProtection.ts#L32">
         Resource <strong>AdvancedThreatProtection</strong>
     </a>
 </h3>
@@ -71,7 +74,7 @@ const exampleAdvancedThreatProtection = new azure.securitycenter.AdvancedThreatP
 ```
 
 <h4 class="pdoc-member-header" id="AdvancedThreatProtection-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/advancedThreatProtection.ts#L67"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/advancedThreatProtection.ts#L67"> <b>constructor</b></a>
 </h4>
 
 
@@ -85,7 +88,7 @@ Create a AdvancedThreatProtection resource with the given unique name, arguments
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AdvancedThreatProtection-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/advancedThreatProtection.ts#L42">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/advancedThreatProtection.ts#L42">method <b>get</b></a>
 </h4>
 
 
@@ -96,14 +99,14 @@ Get an existing AdvancedThreatProtection resource's state with the given name, I
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AdvancedThreatProtection-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/advancedThreatProtection.ts#L32">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/advancedThreatProtection.ts#L32">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AdvancedThreatProtection-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/advancedThreatProtection.ts#L53">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/advancedThreatProtection.ts#L53">method <b>isInstance</b></a>
 </h4>
 
 
@@ -114,7 +117,7 @@ Returns true if the given object is an instance of AdvancedThreatProtection.  Th
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AdvancedThreatProtection-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/advancedThreatProtection.ts#L63">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/advancedThreatProtection.ts#L63">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -122,7 +125,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Should Advanced Threat Protection be enabled on this resource?
 
 <h4 class="pdoc-member-header" id="AdvancedThreatProtection-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/advancedThreatProtection.ts#L32">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/advancedThreatProtection.ts#L32">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -131,7 +134,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AdvancedThreatProtection-targetResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/advancedThreatProtection.ts#L67">property <b>targetResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/advancedThreatProtection.ts#L67">property <b>targetResourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetResourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -139,7 +142,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the Azure Resource which to enable Advanced Threat Protection on. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AdvancedThreatProtection-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/advancedThreatProtection.ts#L32">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/advancedThreatProtection.ts#L32">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -148,7 +151,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Contact" data-link-title="Contact">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/contact.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/contact.ts#L26">
         Resource <strong>Contact</strong>
     </a>
 </h3>
@@ -174,7 +177,7 @@ const example = new azure.securitycenter.Contact("example", {
 ```
 
 <h4 class="pdoc-member-header" id="Contact-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/contact.ts#L69"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/contact.ts#L69"> <b>constructor</b></a>
 </h4>
 
 
@@ -188,7 +191,7 @@ Create a Contact resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Contact-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/contact.ts#L36">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/contact.ts#L36">method <b>get</b></a>
 </h4>
 
 
@@ -199,14 +202,14 @@ Get an existing Contact resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Contact-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/contact.ts#L26">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/contact.ts#L26">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Contact-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/contact.ts#L47">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/contact.ts#L47">method <b>isInstance</b></a>
 </h4>
 
 
@@ -217,7 +220,7 @@ Returns true if the given object is an instance of Contact.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Contact-alertNotifications">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/contact.ts#L57">property <b>alertNotifications</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/contact.ts#L57">property <b>alertNotifications</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>alertNotifications: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -225,7 +228,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Whether to send security alerts notifications to the security contact.
 
 <h4 class="pdoc-member-header" id="Contact-alertsToAdmins">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/contact.ts#L61">property <b>alertsToAdmins</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/contact.ts#L61">property <b>alertsToAdmins</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>alertsToAdmins: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -233,7 +236,7 @@ Whether to send security alerts notifications to the security contact.
 Whether to send security alerts notifications to subscription admins.
 
 <h4 class="pdoc-member-header" id="Contact-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/contact.ts#L65">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/contact.ts#L65">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>email: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -241,7 +244,7 @@ Whether to send security alerts notifications to subscription admins.
 The email of the Security Center Contact.
 
 <h4 class="pdoc-member-header" id="Contact-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/contact.ts#L26">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/contact.ts#L26">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -250,7 +253,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Contact-phone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/contact.ts#L69">property <b>phone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/contact.ts#L69">property <b>phone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>phone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -258,7 +261,110 @@ deployments and may be missing (undefined) during planning phases.
 The phone number of the Security Center Contact.
 
 <h4 class="pdoc-member-header" id="Contact-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/contact.ts#L26">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/contact.ts#L26">property <b>urn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h3 class="pdoc-module-header" id="Setting" data-link-title="Setting">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/setting.ts#L26">
+        Resource <strong>Setting</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Setting</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+
+Manages the Data Access Settings for Azure Security Center.
+
+> **NOTE:** This resource requires the `Owner` permission on the Subscription.
+
+> **NOTE:** Deletion of this resource does not change or reset the data access settings
+
+#### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = new azure.securitycenter.Setting("example", {
+    enabled: true,
+    settingName: "MCAS",
+});
+```
+
+<h4 class="pdoc-member-header" id="Setting-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/setting.ts#L61"> <b>constructor</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> Setting(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#SettingArgs'>SettingArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
+
+
+Create a Setting resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h4 class="pdoc-member-header" id="Setting-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/setting.ts#L36">method <b>get</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#SettingState'>SettingState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Setting'>Setting</a></code></pre>
+
+
+Get an existing Setting resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h4 class="pdoc-member-header" id="Setting-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/setting.ts#L26">method <b>getProvider</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
+
+<h4 class="pdoc-member-header" id="Setting-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/setting.ts#L47">method <b>isInstance</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Setting</code></pre>
+
+
+Returns true if the given object is an instance of Setting.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h4 class="pdoc-member-header" id="Setting-enabled">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/setting.ts#L57">property <b>enabled</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Boolean flag to enable/disable data access.
+
+<h4 class="pdoc-member-header" id="Setting-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/setting.ts#L26">property <b>id</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h4 class="pdoc-member-header" id="Setting-settingName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/setting.ts#L61">property <b>settingName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>settingName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The setting to manage. Possible values are `MCAS` and `WDATP`.
+
+<h4 class="pdoc-member-header" id="Setting-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/setting.ts#L26">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -267,7 +373,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SubscriptionPricing" data-link-title="SubscriptionPricing">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/subscriptionPricing.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/subscriptionPricing.ts#L26">
         Resource <strong>SubscriptionPricing</strong>
     </a>
 </h3>
@@ -293,7 +399,7 @@ const example = new azure.securitycenter.SubscriptionPricing("example", {
 ```
 
 <h4 class="pdoc-member-header" id="SubscriptionPricing-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/subscriptionPricing.ts#L61"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/subscriptionPricing.ts#L61"> <b>constructor</b></a>
 </h4>
 
 
@@ -307,7 +413,7 @@ Create a SubscriptionPricing resource with the given unique name, arguments, and
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SubscriptionPricing-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/subscriptionPricing.ts#L36">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/subscriptionPricing.ts#L36">method <b>get</b></a>
 </h4>
 
 
@@ -318,14 +424,14 @@ Get an existing SubscriptionPricing resource's state with the given name, ID, an
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SubscriptionPricing-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/subscriptionPricing.ts#L26">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/subscriptionPricing.ts#L26">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SubscriptionPricing-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/subscriptionPricing.ts#L47">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/subscriptionPricing.ts#L47">method <b>isInstance</b></a>
 </h4>
 
 
@@ -336,7 +442,7 @@ Returns true if the given object is an instance of SubscriptionPricing.  This is
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SubscriptionPricing-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/subscriptionPricing.ts#L26">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/subscriptionPricing.ts#L26">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -345,7 +451,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SubscriptionPricing-resourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/subscriptionPricing.ts#L57">property <b>resourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/subscriptionPricing.ts#L57">property <b>resourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -353,7 +459,7 @@ deployments and may be missing (undefined) during planning phases.
 The resource type this setting affects. Possible values are `AppServices`, `ContainerRegistry`, `KeyVaults`, `KubernetesService`, `SqlServers`, `SqlServerVirtualMachines`, `StorageAccounts`, and `VirtualMachines`.
 
 <h4 class="pdoc-member-header" id="SubscriptionPricing-tier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/subscriptionPricing.ts#L61">property <b>tier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/subscriptionPricing.ts#L61">property <b>tier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -361,7 +467,7 @@ The resource type this setting affects. Possible values are `AppServices`, `Cont
 The pricing tier to use. Possible values are `Free` and `Standard`.
 
 <h4 class="pdoc-member-header" id="SubscriptionPricing-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/subscriptionPricing.ts#L26">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/subscriptionPricing.ts#L26">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -370,7 +476,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Workspace" data-link-title="Workspace">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/workspace.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/workspace.ts#L32">
         Resource <strong>Workspace</strong>
     </a>
 </h3>
@@ -402,7 +508,7 @@ const exampleWorkspace = new azure.securitycenter.Workspace("exampleWorkspace", 
 ```
 
 <h4 class="pdoc-member-header" id="Workspace-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/workspace.ts#L67"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/workspace.ts#L67"> <b>constructor</b></a>
 </h4>
 
 
@@ -416,7 +522,7 @@ Create a Workspace resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Workspace-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/workspace.ts#L42">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/workspace.ts#L42">method <b>get</b></a>
 </h4>
 
 
@@ -427,14 +533,14 @@ Get an existing Workspace resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Workspace-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/workspace.ts#L32">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/workspace.ts#L32">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Workspace-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/workspace.ts#L53">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/workspace.ts#L53">method <b>isInstance</b></a>
 </h4>
 
 
@@ -445,7 +551,7 @@ Returns true if the given object is an instance of Workspace.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Workspace-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/workspace.ts#L32">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/workspace.ts#L32">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -454,7 +560,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Workspace-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/workspace.ts#L63">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/workspace.ts#L63">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -462,7 +568,7 @@ deployments and may be missing (undefined) during planning phases.
 The scope of VMs to send their security data to the desired workspace, unless overridden by a setting with more specific scope.
 
 <h4 class="pdoc-member-header" id="Workspace-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/workspace.ts#L32">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/workspace.ts#L32">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -471,7 +577,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Workspace-workspaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/workspace.ts#L67">property <b>workspaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/workspace.ts#L67">property <b>workspaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workspaceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -482,7 +588,7 @@ The ID of the Log Analytics Workspace to save the data in.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AdvancedThreatProtectionArgs" data-link-title="AdvancedThreatProtectionArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/advancedThreatProtection.ts#L122">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/advancedThreatProtection.ts#L122">
         interface <strong>AdvancedThreatProtectionArgs</strong>
     </a>
 </h3>
@@ -492,7 +598,7 @@ The ID of the Log Analytics Workspace to save the data in.
 The set of arguments for constructing a AdvancedThreatProtection resource.
 
 <h4 class="pdoc-member-header" id="AdvancedThreatProtectionArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/advancedThreatProtection.ts#L126">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/advancedThreatProtection.ts#L126">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -500,7 +606,7 @@ The set of arguments for constructing a AdvancedThreatProtection resource.
 Should Advanced Threat Protection be enabled on this resource?
 
 <h4 class="pdoc-member-header" id="AdvancedThreatProtectionArgs-targetResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/advancedThreatProtection.ts#L130">property <b>targetResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/advancedThreatProtection.ts#L130">property <b>targetResourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetResourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -508,7 +614,7 @@ Should Advanced Threat Protection be enabled on this resource?
 The ID of the Azure Resource which to enable Advanced Threat Protection on. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="AdvancedThreatProtectionState" data-link-title="AdvancedThreatProtectionState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/advancedThreatProtection.ts#L108">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/advancedThreatProtection.ts#L108">
         interface <strong>AdvancedThreatProtectionState</strong>
     </a>
 </h3>
@@ -518,7 +624,7 @@ The ID of the Azure Resource which to enable Advanced Threat Protection on. Chan
 Input properties used for looking up and filtering AdvancedThreatProtection resources.
 
 <h4 class="pdoc-member-header" id="AdvancedThreatProtectionState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/advancedThreatProtection.ts#L112">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/advancedThreatProtection.ts#L112">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -526,7 +632,7 @@ Input properties used for looking up and filtering AdvancedThreatProtection reso
 Should Advanced Threat Protection be enabled on this resource?
 
 <h4 class="pdoc-member-header" id="AdvancedThreatProtectionState-targetResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/advancedThreatProtection.ts#L116">property <b>targetResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/advancedThreatProtection.ts#L116">property <b>targetResourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetResourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -534,7 +640,7 @@ Should Advanced Threat Protection be enabled on this resource?
 The ID of the Azure Resource which to enable Advanced Threat Protection on. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="ContactArgs" data-link-title="ContactArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/contact.ts#L139">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/contact.ts#L139">
         interface <strong>ContactArgs</strong>
     </a>
 </h3>
@@ -544,7 +650,7 @@ The ID of the Azure Resource which to enable Advanced Threat Protection on. Chan
 The set of arguments for constructing a Contact resource.
 
 <h4 class="pdoc-member-header" id="ContactArgs-alertNotifications">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/contact.ts#L143">property <b>alertNotifications</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/contact.ts#L143">property <b>alertNotifications</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alertNotifications: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -552,7 +658,7 @@ The set of arguments for constructing a Contact resource.
 Whether to send security alerts notifications to the security contact.
 
 <h4 class="pdoc-member-header" id="ContactArgs-alertsToAdmins">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/contact.ts#L147">property <b>alertsToAdmins</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/contact.ts#L147">property <b>alertsToAdmins</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alertsToAdmins: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -560,7 +666,7 @@ Whether to send security alerts notifications to the security contact.
 Whether to send security alerts notifications to subscription admins.
 
 <h4 class="pdoc-member-header" id="ContactArgs-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/contact.ts#L151">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/contact.ts#L151">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -568,7 +674,7 @@ Whether to send security alerts notifications to subscription admins.
 The email of the Security Center Contact.
 
 <h4 class="pdoc-member-header" id="ContactArgs-phone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/contact.ts#L155">property <b>phone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/contact.ts#L155">property <b>phone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>phone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -576,7 +682,7 @@ The email of the Security Center Contact.
 The phone number of the Security Center Contact.
 
 <h3 class="pdoc-module-header" id="ContactState" data-link-title="ContactState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/contact.ts#L117">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/contact.ts#L117">
         interface <strong>ContactState</strong>
     </a>
 </h3>
@@ -586,7 +692,7 @@ The phone number of the Security Center Contact.
 Input properties used for looking up and filtering Contact resources.
 
 <h4 class="pdoc-member-header" id="ContactState-alertNotifications">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/contact.ts#L121">property <b>alertNotifications</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/contact.ts#L121">property <b>alertNotifications</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alertNotifications?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -594,7 +700,7 @@ Input properties used for looking up and filtering Contact resources.
 Whether to send security alerts notifications to the security contact.
 
 <h4 class="pdoc-member-header" id="ContactState-alertsToAdmins">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/contact.ts#L125">property <b>alertsToAdmins</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/contact.ts#L125">property <b>alertsToAdmins</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alertsToAdmins?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -602,7 +708,7 @@ Whether to send security alerts notifications to the security contact.
 Whether to send security alerts notifications to subscription admins.
 
 <h4 class="pdoc-member-header" id="ContactState-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/contact.ts#L129">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/contact.ts#L129">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -610,15 +716,67 @@ Whether to send security alerts notifications to subscription admins.
 The email of the Security Center Contact.
 
 <h4 class="pdoc-member-header" id="ContactState-phone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/contact.ts#L133">property <b>phone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/contact.ts#L133">property <b>phone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>phone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The phone number of the Security Center Contact.
 
+<h3 class="pdoc-module-header" id="SettingArgs" data-link-title="SettingArgs">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/setting.ts#L116">
+        interface <strong>SettingArgs</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>SettingArgs</span></code></pre>
+
+The set of arguments for constructing a Setting resource.
+
+<h4 class="pdoc-member-header" id="SettingArgs-enabled">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/setting.ts#L120">property <b>enabled</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Boolean flag to enable/disable data access.
+
+<h4 class="pdoc-member-header" id="SettingArgs-settingName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/setting.ts#L124">property <b>settingName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>settingName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The setting to manage. Possible values are `MCAS` and `WDATP`.
+
+<h3 class="pdoc-module-header" id="SettingState" data-link-title="SettingState">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/setting.ts#L102">
+        interface <strong>SettingState</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>SettingState</span></code></pre>
+
+Input properties used for looking up and filtering Setting resources.
+
+<h4 class="pdoc-member-header" id="SettingState-enabled">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/setting.ts#L106">property <b>enabled</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Boolean flag to enable/disable data access.
+
+<h4 class="pdoc-member-header" id="SettingState-settingName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/setting.ts#L110">property <b>settingName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>settingName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The setting to manage. Possible values are `MCAS` and `WDATP`.
+
 <h3 class="pdoc-module-header" id="SubscriptionPricingArgs" data-link-title="SubscriptionPricingArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/subscriptionPricing.ts#L113">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/subscriptionPricing.ts#L113">
         interface <strong>SubscriptionPricingArgs</strong>
     </a>
 </h3>
@@ -628,7 +786,7 @@ The phone number of the Security Center Contact.
 The set of arguments for constructing a SubscriptionPricing resource.
 
 <h4 class="pdoc-member-header" id="SubscriptionPricingArgs-resourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/subscriptionPricing.ts#L117">property <b>resourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/subscriptionPricing.ts#L117">property <b>resourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -636,7 +794,7 @@ The set of arguments for constructing a SubscriptionPricing resource.
 The resource type this setting affects. Possible values are `AppServices`, `ContainerRegistry`, `KeyVaults`, `KubernetesService`, `SqlServers`, `SqlServerVirtualMachines`, `StorageAccounts`, and `VirtualMachines`.
 
 <h4 class="pdoc-member-header" id="SubscriptionPricingArgs-tier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/subscriptionPricing.ts#L121">property <b>tier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/subscriptionPricing.ts#L121">property <b>tier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -644,7 +802,7 @@ The resource type this setting affects. Possible values are `AppServices`, `Cont
 The pricing tier to use. Possible values are `Free` and `Standard`.
 
 <h3 class="pdoc-module-header" id="SubscriptionPricingState" data-link-title="SubscriptionPricingState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/subscriptionPricing.ts#L99">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/subscriptionPricing.ts#L99">
         interface <strong>SubscriptionPricingState</strong>
     </a>
 </h3>
@@ -654,7 +812,7 @@ The pricing tier to use. Possible values are `Free` and `Standard`.
 Input properties used for looking up and filtering SubscriptionPricing resources.
 
 <h4 class="pdoc-member-header" id="SubscriptionPricingState-resourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/subscriptionPricing.ts#L103">property <b>resourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/subscriptionPricing.ts#L103">property <b>resourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -662,7 +820,7 @@ Input properties used for looking up and filtering SubscriptionPricing resources
 The resource type this setting affects. Possible values are `AppServices`, `ContainerRegistry`, `KeyVaults`, `KubernetesService`, `SqlServers`, `SqlServerVirtualMachines`, `StorageAccounts`, and `VirtualMachines`.
 
 <h4 class="pdoc-member-header" id="SubscriptionPricingState-tier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/subscriptionPricing.ts#L107">property <b>tier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/subscriptionPricing.ts#L107">property <b>tier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -670,7 +828,7 @@ The resource type this setting affects. Possible values are `AppServices`, `Cont
 The pricing tier to use. Possible values are `Free` and `Standard`.
 
 <h3 class="pdoc-module-header" id="WorkspaceArgs" data-link-title="WorkspaceArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/workspace.ts#L122">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/workspace.ts#L122">
         interface <strong>WorkspaceArgs</strong>
     </a>
 </h3>
@@ -680,7 +838,7 @@ The pricing tier to use. Possible values are `Free` and `Standard`.
 The set of arguments for constructing a Workspace resource.
 
 <h4 class="pdoc-member-header" id="WorkspaceArgs-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/workspace.ts#L126">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/workspace.ts#L126">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -688,7 +846,7 @@ The set of arguments for constructing a Workspace resource.
 The scope of VMs to send their security data to the desired workspace, unless overridden by a setting with more specific scope.
 
 <h4 class="pdoc-member-header" id="WorkspaceArgs-workspaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/workspace.ts#L130">property <b>workspaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/workspace.ts#L130">property <b>workspaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workspaceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -696,7 +854,7 @@ The scope of VMs to send their security data to the desired workspace, unless ov
 The ID of the Log Analytics Workspace to save the data in.
 
 <h3 class="pdoc-module-header" id="WorkspaceState" data-link-title="WorkspaceState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/workspace.ts#L108">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/workspace.ts#L108">
         interface <strong>WorkspaceState</strong>
     </a>
 </h3>
@@ -706,7 +864,7 @@ The ID of the Log Analytics Workspace to save the data in.
 Input properties used for looking up and filtering Workspace resources.
 
 <h4 class="pdoc-member-header" id="WorkspaceState-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/workspace.ts#L112">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/workspace.ts#L112">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -714,7 +872,7 @@ Input properties used for looking up and filtering Workspace resources.
 The scope of VMs to send their security data to the desired workspace, unless overridden by a setting with more specific scope.
 
 <h4 class="pdoc-member-header" id="WorkspaceState-workspaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b0ec8640c580f1cb329731746f254b47a6e7a245/sdk/nodejs/securitycenter/workspace.ts#L116">property <b>workspaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/f7fd70ad8b14ce6f95bd1f1a9dfe88c91be943bf/sdk/nodejs/securitycenter/workspace.ts#L116">property <b>workspaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workspaceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
