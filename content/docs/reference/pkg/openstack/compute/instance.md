@@ -3900,6 +3900,16 @@ network. Changing this creates a new server.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="floatingip_csharp">
+<a href="#floatingip_csharp" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="mac_csharp">
 <a href="#mac_csharp" style="color: inherit; text-decoration: inherit;">Mac</a>
 </span> 
@@ -3979,6 +3989,16 @@ network. Changing this creates a new server.
             title="Optional">
         <span id="fixedipv6_go">
 <a href="#fixedipv6_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Ip<wbr>V6</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="floatingip_go">
+<a href="#floatingip_go" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -4074,6 +4094,16 @@ network. Changing this creates a new server.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="floatingip_nodejs">
+<a href="#floatingip_nodejs" style="color: inherit; text-decoration: inherit;">floating<wbr>Ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="mac_nodejs">
 <a href="#mac_nodejs" style="color: inherit; text-decoration: inherit;">mac</a>
 </span> 
@@ -4153,6 +4183,16 @@ network. Changing this creates a new server.
             title="Optional">
         <span id="fixed_ip_v6_python">
 <a href="#fixed_ip_v6_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>ip_<wbr>v6</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="floating_ip_python">
+<a href="#floating_ip_python" style="color: inherit; text-decoration: inherit;">floating_<wbr>ip</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
