@@ -16,7 +16,7 @@ hero:
   image: /icons/containers.svg
 main:
   title: Azure Infrastructure as Code Workshop
-  sortable_date: 2020-10-29T07:00:00.000-04:00
+  sortable_date: 2020-10-29T07:00:00.000-07:00
   duration: 2 1/2 hours
   datetime: Thu Oct 29, 2020 AT 07:00AM PT
   description: >-
